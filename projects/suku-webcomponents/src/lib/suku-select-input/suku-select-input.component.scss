@@ -1,0 +1,49 @@
+.custom-select {
+  font-family: 'Encode Sans', sans-serif !important;
+  font-size: 12px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.43;
+  letter-spacing: -0.01px;
+  color: #3e3e3e;
+  text-transform: uppercase;
+  background-color: #f2f2f2 !important;
+}
+
+
+.sort-by {
+  font-family: 'Poppins', sans-serif;
+  font-size: 15px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: -0.3px;
+  color: #b6b6b6;
+  text-transform: uppercase;
+}
+
+.optionsBox {
+  font-family: 'Encode Sans', sans-serif !important;
+  font-size: 14px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.43;
+  letter-spacing: -0.4px;
+  color: black;
+  height: 36px !important;
+  text-transform: lowercase;
+  border-radius: 0px;
+  border-color: #cdcdcd;
+}
+
+.default {
+  width: 281px;
+}
+
+.custom-select:focus {
+  outline: none;
+  box-shadow: none;
+}

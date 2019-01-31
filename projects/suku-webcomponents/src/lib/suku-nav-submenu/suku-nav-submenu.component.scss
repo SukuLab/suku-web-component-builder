@@ -1,0 +1,117 @@
+/* nav-bar: submenu css */
+
+/*  */
+
+
+.header-main .sub-menu-bar {
+  width: 100%;
+  height: 62px;
+  float: left;
+  background: #2b3034;
+  position: relative;
+}
+
+.header-main .sub-menu {
+  float: left;
+}
+
+.header-main .sub-menu nav {
+  float: left;
+  padding: 0;
+  margin: 0;
+}
+
+.header-main .sub-menu nav ul {
+  height: 47px;
+  float: left;
+  padding: 0;
+  margin: 0;
+}
+
+.header-main .sub-menu nav ul li {
+  height: 30px;
+  float: left;
+  font-family: 'Poppins', sans-serif;
+  font-size: 15px;
+  color: rgba(255, 255, 255, 0.5);
+  line-height: 2px;
+  letter-spacing: 0.01em;
+  position: relative;
+  padding: 0;
+  border-radius: 15px 50px 50px;
+
+  margin: 0 10px 0 0;
+}
+
+.header-main .sub-menu nav ul li:before {
+  display: none;
+}
+
+.header-main .sub-menu nav ul li a {
+  height: 30px;
+  float: left;
+  color: rgba(255, 255, 255, 0.5);
+  text-decoration: none;
+  position: relative;
+  padding: 22px 37px 20px 37px;
+  border-radius: 28px 76px 63px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.header-main .sub-menu nav ul li a:before {
+  content: "";
+  width: 0;
+  height: 0;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
+  background: none;
+  border-radius: 15px 50px 50px;
+  border-radius: 0;
+  position: absolute;
+  top: 0;
+  opacity: 0;
+}
+
+.header-main .sub-menu nav ul li a:after {
+  content: "";
+  width: 0;
+  height: 0;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
+  background: none;
+  border-radius: 15px 50px 50px;
+  position: absolute;
+  top: 0;
+  opacity: 0;
+}
+
+.header-main .sub-menu nav ul li:hover a,
+.header-main .sub-menu nav ul li.active a {
+  color: rgba(255, 255, 255, 1) !important;
+  background: #17181a !important;
+}
+
+.header-main .sub-menu nav ul li:hover a:before,
+.header-main .sub-menu nav ul li:hover a:after,
+.header-main .sub-menu nav ul li.active a:before,
+.header-main .sub-menu nav ul li.active a:after {
+  opacity: 1;
+  border-radius: 15px 50px 50px;
+}
+
+.sub-menu-style {
+  background: #2b3034;
+  color: white
+}
+
+ul#subMenu {
+  list-style: none;
+}
+
+.c-pointer {
+  cursor: pointer;
+}

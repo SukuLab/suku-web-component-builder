@@ -1,0 +1,35 @@
+<table class="col-sm-6 offset-sm-3">
+  <tr class="pt-3">
+    <td class="{{progressStyleOne}} text-center">
+      <i *ngIf="(progressStyleOne == 'progressCompleted')" class="fa fa-check tickSign"></i>
+      <span *ngIf="!(progressStyleOne == 'progressCompleted')">1</span>
+    </td>
+    <td>
+      <hr class="hrLine">
+    </td>
+    <td class="{{progressStyleTwo}} text-center">
+      <i *ngIf="(progressStyleTwo == 'progressCompleted')" class="fa fa-check tickSign"></i>
+      <span *ngIf="!(progressStyleTwo == 'progressCompleted')">2</span>
+    </td>
+    <td>
+      <hr class="hrLine">
+    </td>
+    <td class="{{progressStyleThree}} text-center">
+      <i *ngIf="(progressStyleThree == 'progressCompleted')" class="fa fa-check tickSign"></i>
+      <span *ngIf="!(progressStyleThree == 'progressCompleted')">3</span>
+    </td>
+  </tr>
+</table>
+<table class="col-sm-8 offset-sm-2 text-center">
+  <tr id="txt">
+    <td class="{{customHeadingOneClass}} progressTitle pt-3">
+      {{headingOne}}
+    </td>
+    <td class="{{customHeadingTwoClass}} progressTitle pt-3">
+      {{headingTwo}}
+    </td>
+    <td class="{{customHeadingThreeClass}} progressTitle pt-3">
+      {{headingThree}}
+    </td>
+  </tr>
+</table>

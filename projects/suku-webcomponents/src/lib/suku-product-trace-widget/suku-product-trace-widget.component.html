@@ -1,0 +1,42 @@
+<span [formGroup]="form">
+  <div class=" product-boxContent">
+    <div class="col-sm-12 prizeHead pl-0">
+      {{headName}}
+    </div>
+    <div class="col-sm-12 prizesubHead pl-0">
+      {{subHeadName}}
+    </div>
+  </div>
+  <div class="col-sm-12 mt-2 pt-4 pb-4 RectangleBorder">
+    <div class="col-sm-12 productName pb-3">
+      {{name}}
+    </div>
+    <div class="col-sm-12 pb-2 pl-3 p-0 searchBorderBox">
+      <input type="text" #search class="searchBorderStyles" formControlName="{{control}}" name="{{control}}"
+        placeholder="search" (keyup)="searchFun.emit(isSearch)">
+      <span class="m-1"><i class="fa fa-search" style="font-size:22px;color:#b6b6b6;"></i></span>
+    </div>
+    <p class="resultCount" *ngIf="_result == 'true'">{{productdetails?.length}} products found with the above number.
+    </p>
+    <div *ngIf="_visible == 'false'">
+      <p class="responseInfo" *ngIf="productdetails?.length > 0 ? true : false ">please select one</p>
+      <div class="heightTab" id="scrollDiv">
+        <div class="col" *ngFor="let products of productdetails">
+          <mat-radio-button color="primary" class="searchData f13" value="2" (click)="selectproducts.emit(products)"
+            (click)="showSelectedPro(products)">{{products.product.description}}<br>
+            {{products.product.name}}<br></mat-radio-button>
+          <hr>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-12 mb-2 text-center pt-3 mt-3 pb-1">
+      <span class="pt-2">
+        <a *ngIf="_visible == 'true'" id="searchForProduct" class="trackBtn btn-info f14" (click)="searchByProduct.emit()">
+          Search for product </a>
+        <a *ngIf="_visible == 'false'" [ngClass]="{'disabled': _disableBtn =='false' }" id="tracetheProduct" class="trackBtn btn-info f14"
+          (click)="traceproduct.emit(1)"> trace the
+          product </a>
+      </span>
+    </div>
+  </div>
+</span>

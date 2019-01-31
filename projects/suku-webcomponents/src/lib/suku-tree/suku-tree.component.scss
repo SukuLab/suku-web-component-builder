@@ -1,0 +1,19 @@
+/deep/.node text {
+  font-size: 16px;
+  font-family: 'Encode Sans', sans-serif;
+  fill: rgb(170, 170, 170);
+}
+
+/deep/#tree {
+  width: 100%;
+  overflow-x: scroll !important;
+  direction: rtl !important;
+}
+
+/deep/svg {
+  overflow-x: scroll !important;
+}
+
+/deep/rect.dot {
+  cursor: pointer !important;
+}

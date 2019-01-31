@@ -1,0 +1,40 @@
+.profileBox {
+    width: 187.656px;
+    border-radius: 0 0 30px 30px;
+    background-color: #fff;
+    box-shadow: 0 6px 8px 0 rgba(0, 0, 0, .09);
+  }
+  
+  .circle {
+    background-color: gray;
+    height: 150px;
+    width: 150px;
+    border-radius: 100%;
+  }
+  
+  .bLine{
+    opacity: 0.09;
+    border: solid 1px #979797;
+  }
+  
+  .userName {
+    font-family: Poppins-Regular, Arial;
+    font-size: 20px;
+    font-weight: 700;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: -.2px;
+    color: #1d1d1d;
+    color: var(--black);
+    word-break: break-all !important;
+  }
+  
+  .create-interest-listing {
+    font-family: abelregular, Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    color: #b6b6b6;
+    line-height: 18px;
+    letter-spacing: .01em;
+    word-break: break-all !important;
+  }
