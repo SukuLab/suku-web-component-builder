@@ -31,7 +31,7 @@
     </div>
     <div class="col-sm-12 mb-2 text-center pt-3 mt-3 pb-1">
       <span class="pt-2">
-        <a *ngIf="_visible == 'true'" id="searchForProduct" class="trackBtn btn-info f14" (click)="searchByProduct.emit()">
+        <a *ngIf="_visible == 'true'" id="{{searchId}}" class="trackBtn btn-info f14" (click)="searchByProduct.emit()">
           Search for product </a>
         <a *ngIf="_visible == 'false'" [ngClass]="{'disabled': _disableBtn =='false' }" id="tracetheProduct" class="trackBtn btn-info f14"
           (click)="traceproduct.emit(1)"> trace the

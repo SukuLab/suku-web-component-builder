@@ -17,7 +17,7 @@ export class SukuRatingStarComponent implements OnInit {
 	}
 	callOfStarts(e) {
 		switch (true) {
-			case e === 0:
+			case e == 0:
 				this.myHTML = `
       <span class="fa fa-star-o f22"></span>
       <span class="fa fa-star-o f22"></span>

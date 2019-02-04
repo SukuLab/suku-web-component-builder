@@ -57,7 +57,7 @@ export class SukuTreeComponent implements OnChanges {
 			}
 		});
 		this.width = (this.max + 1) * 270 - this.margin.left - this.margin.right;
-		this.height = (this.maxHeight + 1) * 90 - this.margin.top - this.margin.bottom;
+		this.height = (this.maxHeight + 1) * 120 - this.margin.top - this.margin.bottom;
 		console.log('width', this.width);
 		this.i = 0;
 		this.testd = 0;
