@@ -31,6 +31,7 @@ export class SukuTreeComponent implements OnChanges {
 	maxHeight: any = 0;
 	dataUID;
 	svgNOde: any;
+	j: any;
 
 	ngOnChanges() {
 		if (this.treeDataFromApi) {
@@ -61,6 +62,7 @@ export class SukuTreeComponent implements OnChanges {
 		this.height = (this.maxHeight + 1) * 120 - this.margin.top - this.margin.bottom;
 		console.log('width', this.width);
 		this.i = 0;
+		this.j = 0;
 		this.testd = 0;
 		if (treeData) {
 			this.tree = d3.layout
@@ -138,7 +140,7 @@ export class SukuTreeComponent implements OnChanges {
 			.attr('y2', (d) => {
 				console.log('d.length', d.product.name.length);
 				if (d.product.name.length > 50) {
-					return this.boxHeight / 2 + 35;
+					return this.boxHeight / 2 + 30;
 				}
 				if (d.product.name.length > 40) {
 					return this.boxHeight / 2 + 30;
@@ -236,7 +238,24 @@ export class SukuTreeComponent implements OnChanges {
 			.insert('rect')
 			.attr('class', 'dot')
 			.attr('x', '60')
-			.attr('y', '15')
+			.attr('y',  (d) => {
+				console.log('d.length', d.product.name.length);
+				if (d.product.name.length > 50) {
+					return 45;
+				}
+				if (d.product.name.length > 40) {
+					return 30;
+				}
+				if (d.product.name.length > 20) {
+					return 23;
+				}
+				if (d.product.name.length > 0) {
+					return 15;
+				}
+			})
+			.attr('id', (d) => {
+				return 'asset' + ++this.j;
+			})
 			.attr('height', '10')
 			.attr('width', '25')
 			.attr('fill', 'transparent')
@@ -251,7 +270,7 @@ export class SukuTreeComponent implements OnChanges {
 		this.svgNOde = node
 			.append('text')
 			.attr('x', (d) => {
-				return -(this.boxWidth / 10) - 80;
+				return -(this.boxWidth / 10) - 60;
 			})
 			.attr('y', (d) => {
 				return -(this.boxWidth / 35);
@@ -276,7 +295,7 @@ export class SukuTreeComponent implements OnChanges {
 					const x = text.attr('x');
 					const y = text.attr('y');
 					const dy = 0; // parseFloat(text.attr("dy")),
-					let tspan = text.text(null).append('tspan').attr('x', x).attr('y', y).attr('dy', dy + 'em');
+					let tspan = text.text(null).append('tspan').attr('x', x).attr('y', y).attr('dy', dy + 'em').style('text-anchor', 'start');
 					while ((word = words.pop())) {
 						console.log('word', word);
 						line.push(word);
@@ -290,6 +309,7 @@ export class SukuTreeComponent implements OnChanges {
 								.attr('x', x)
 								.attr('y', y)
 								.attr('dy', ++lineNumber * lineHeight + dy + 'em')
+								.style('text-anchor', 'start')
 								.text(word);
 						}
 					}
@@ -328,10 +348,10 @@ export class SukuTreeComponent implements OnChanges {
 					targetY
 				);
 			});
+
 	}
 
 	actionFun(val) {
 		this.action.emit(val);
 	}
-
 }

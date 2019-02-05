@@ -70,7 +70,8 @@ import { SukuProductTraceWidgetComponent } from './suku-product-trace-widget/suk
 import { SukuTreeComponent } from './suku-tree/suku-tree.component';
 import { SukuRatingStarComponent } from './suku-rating-star/suku-rating-star.component';
 import { SukuCardTitleComponent } from './suku-card-title/suku-card-title.component';
-
+import {SukuShippingWidgetComponent} from './suku-shipping-widget/suku-shipping-widget.component';
+import { SukuResponseComponent } from './suku-response/suku-response.component';
 @NgModule({
   declarations: [
     SukuBidTagComponent,
@@ -104,7 +105,9 @@ import { SukuCardTitleComponent } from './suku-card-title/suku-card-title.compon
     SukuProductTraceWidgetComponent,
     SukuTreeComponent,
     SukuCardTitleComponent,
-    SukuRatingStarComponent
+    SukuRatingStarComponent,
+    SukuShippingWidgetComponent,
+    SukuResponseComponent
   ],
   imports: [
     CommonModule,
@@ -178,6 +181,8 @@ import { SukuCardTitleComponent } from './suku-card-title/suku-card-title.compon
     SukuTreeComponent,
     SukuRatingStarComponent,
     SukuCardTitleComponent,
+    SukuShippingWidgetComponent,
+    SukuResponseComponent,
     RouterModule
   ]
 })

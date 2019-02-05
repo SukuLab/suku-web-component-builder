@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import html2canvas from 'html2canvas';
 import * as jspdf from 'jspdf';
+import { Observable, Observer } from 'rxjs';
 @Component({
 	selector: 'app-root',
 	templateUrl: './app.component.html',
@@ -8,13 +9,14 @@ import * as jspdf from 'jspdf';
 })
 export class AppComponent {
 	title = 'suku-lib';
+	base64Image;
 	treeDataApi = [
 		{
 			uid: 'Lx1000',
 			timestamp: '2019-01-21T11:41:31.921Z',
 			product: {
 				id: '1000',
-				name: 'HP Pavilion DV6 dual core ',
+				name: 'HP Pavilion DV6 dual core HP Pavilion DV6 dual core  ',
 				description: 'HP Laptop'
 			},
 			parent: '',
@@ -952,6 +954,47 @@ export class AppComponent {
 		}
 	];
 
+
+	constructor() {
+		const imageUrl =
+		'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQOuon9Cl1lIwDhwfwdNxTAa-H3b0dhuMUt6NdxchZz4bO4yZ2A';
+	this.getBase64ImageFromURL(imageUrl).subscribe((base64data) => {
+		this.base64Image = 'data:image/jpg;base64,' + base64data;
+	});
+	}
+
+	getBase64ImageFromURL(url: string) {
+		return Observable.create((observer: Observer<string>) => {
+			const img = new Image();
+			img.crossOrigin = 'Anonymous';
+			img.src = url;
+			img.src = url;
+			if (!img.complete) {
+				img.onload = () => {
+					observer.next(this.getBase64Image(img));
+					observer.complete();
+				};
+				img.onerror = (err) => {
+					observer.error(err);
+				};
+			} else {
+				observer.next(this.getBase64Image(img));
+				observer.complete();
+			}
+		});
+	}
+
+	getBase64Image(img: HTMLImageElement) {
+		const canvas = document.createElement('canvas');
+		canvas.width = img.width;
+		canvas.height = img.height;
+		const ctx = canvas.getContext('2d');
+		ctx.drawImage(img, 0, 0);
+		const dataURL = canvas.toDataURL('image/png');
+		console.log(dataURL);
+		return dataURL.replace(/^data:image\/(png|jpg);base64,/, '');
+	}
+
 	download() {
 		const data = document.getElementById('treedata');
 		html2canvas(data).then((canvas) => {
@@ -971,7 +1014,8 @@ export class AppComponent {
 
 	downloadPdf() {
     const data = (<SVGSVGElement><unknown>document.getElementById('treedata'));
-    console.log('response', '<p>' + data + '</p>' );
+	console.log('response', '<p>' + data + '</p>' );
+
 		html2canvas(data).then((canvas) => {
 			const imgWidth = 208;
 			const pageHeight = 150;
