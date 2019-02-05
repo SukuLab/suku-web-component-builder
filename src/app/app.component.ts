@@ -14,7 +14,7 @@ export class AppComponent {
 			timestamp: '2019-01-21T11:41:31.921Z',
 			product: {
 				id: '1000',
-				name: 'HP Pavilion DV6',
+				name: 'HP Pavilion DV6 dual core ',
 				description: 'HP Laptop'
 			},
 			parent: '',
@@ -49,7 +49,7 @@ export class AppComponent {
 					uid: 'Lx1003',
 					product: {
 						id: '1003',
-						name: 'Intel CPU Cooler',
+						name: 'Intel CPU Cooler dual core',
 						description: 'CPU Cooler'
 					},
 					links: [
@@ -104,7 +104,7 @@ export class AppComponent {
 					uid: 'Lx1002',
 					product: {
 						id: '1002',
-						name: 'Intel I5 CPU Chip',
+						name: 'Intel I5 CPU Chip dual core',
 						description: 'CPU Chip'
 					},
 					links: [
@@ -126,7 +126,7 @@ export class AppComponent {
 					uid: 'Lx1001',
 					product: {
 						id: '1001',
-						name: 'Intel I5 CPU',
+						name: 'Intel I5 CPU Chip dual core',
 						description: 'HP Laptop'
 					},
 					links: [
@@ -157,7 +157,7 @@ export class AppComponent {
 							uid: 'Lx1002',
 							product: {
 								id: '1002',
-								name: 'Intel I5 CPU Chip',
+								name: 'Intel I5 CPU Chip Chip dual core',
 								description: 'CPU Chip'
 							},
 							links: [
@@ -179,7 +179,7 @@ export class AppComponent {
 							uid: 'Lx1003',
 							product: {
 								id: '1003',
-								name: 'Intel CPU Cooler',
+								name: 'Intel CPU Cooler Chip dual core',
 								description: 'CPU Cooler'
 							},
 							links: [
@@ -210,7 +210,7 @@ export class AppComponent {
 									uid: 'Lx1004',
 									product: {
 										id: '1004',
-										name: 'CPU HeatSink',
+										name: 'CPU HeatSink Chip dual core',
 										description: 'HeatSink'
 									},
 									links: [
@@ -232,7 +232,7 @@ export class AppComponent {
 									uid: 'Lx1005',
 									product: {
 										id: '1005',
-										name: 'CPU Fan',
+										name: 'CPU CPU Chip dual core',
 										description: 'Fan'
 									},
 									links: [
@@ -268,7 +268,7 @@ export class AppComponent {
 											uid: 'Lx1006',
 											product: {
 												id: '1006',
-												name: 'Fan Blade',
+												name: 'Fan Blade CPU Chip dual core',
 												description: 'Fan Blade'
 											},
 											links: [
@@ -340,7 +340,7 @@ export class AppComponent {
 					uid: 'Lx2000',
 					product: {
 						id: '2000',
-						name: 'WD HDD 1B',
+						name: 'WD HDD 1B CPU Chip dual core',
 						description: 'Western Digital Darddisk'
 					},
 					links: [
@@ -371,7 +371,7 @@ export class AppComponent {
 							uid: 'Lx2001',
 							product: {
 								id: '2001',
-								name: 'Platter',
+								name: 'Platter CPU Chip dual core',
 								description: 'platter Disk'
 							},
 							links: [
@@ -393,7 +393,7 @@ export class AppComponent {
 							uid: 'Lx2002',
 							product: {
 								id: '2002',
-								name: 'RW Arm assembly',
+								name: 'RW Arm assembly CPU Chip dual core',
 								description: 'RW Arm assembly'
 							},
 							links: [
@@ -461,7 +461,7 @@ export class AppComponent {
 					uid: 'Lx1004',
 					product: {
 						id: '1004',
-						name: 'CPU HeatSink',
+						name: 'CPU HeatSink CPU Chip dual core',
 						description: 'HeatSink'
 					},
 					links: [
@@ -541,7 +541,7 @@ export class AppComponent {
 							uid: 'Lx1006',
 							product: {
 								id: '1006',
-								name: 'Fan Blade',
+								name: 'Fan Blade CPU Chip dual core',
 								description: 'Fan Blade'
 							},
 							links: [
@@ -609,7 +609,7 @@ export class AppComponent {
 					uid: 'Lx1006',
 					product: {
 						id: '1006',
-						name: 'Fan Blade',
+						name: 'Fan Blade CPU Chip dual core',
 						description: 'Fan Blade'
 					},
 					links: [
@@ -645,7 +645,7 @@ export class AppComponent {
 					uid: 'Lx1001',
 					product: {
 						id: '1001',
-						name: 'Intel I5 CPU',
+						name: 'Intel I5 CPU CPU Chip dual core',
 						description: 'HP Laptop'
 					},
 					links: [
@@ -676,7 +676,7 @@ export class AppComponent {
 							uid: 'Lx1002',
 							product: {
 								id: '1002',
-								name: 'Intel I5 CPU Chip',
+								name: 'Intel I5 CPU Chip CPU Chip dual core',
 								description: 'CPU Chip'
 							},
 							links: [
@@ -698,7 +698,7 @@ export class AppComponent {
 							uid: 'Lx1003',
 							product: {
 								id: '1003',
-								name: 'Intel CPU Cooler',
+								name: 'Intel CPU Cooler CPU Chip dual core',
 								description: 'CPU Cooler'
 							},
 							links: [
@@ -792,7 +792,7 @@ export class AppComponent {
 					uid: 'Lx2000',
 					product: {
 						id: '2000',
-						name: 'WD HDD 1B',
+						name: 'WD HDD 1B CPU Chip dual core',
 						description: 'Western Digital Darddisk'
 					},
 					links: [

@@ -10,7 +10,8 @@ export class SukuInlineDropdownComponent implements OnInit {
 	@Input() color = '#757575';
 	@Input() weight = '600';
 	@Input() id = '';
-	@Input() customClass = 'pr-2 c-pointer';
+	@Input() customclass = 'row';
+	@Input() customcontentclass = 'pr-2 c-pointer';
 	@Output() action = new EventEmitter();
 
   constructor() { }

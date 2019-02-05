@@ -6,8 +6,12 @@ h2 {
   font-stretch: normal;
   line-height: normal;
   letter-spacing: -0.4px;
-  color: #b6b6b6;
+  color: #bcbcbce3 !important;
   word-break: break-all !important;
+}
+
+h2:hover {
+  color: #a8a8a8 !important;
 }
 
 .f17 {

@@ -30,6 +30,7 @@ export class SukuTreeComponent implements OnChanges {
 	tree1: any;
 	maxHeight: any = 0;
 	dataUID;
+	svgNOde: any;
 
 	ngOnChanges() {
 		if (this.treeDataFromApi) {
@@ -57,7 +58,7 @@ export class SukuTreeComponent implements OnChanges {
 			}
 		});
 		this.width = (this.max + 1) * 270 - this.margin.left - this.margin.right;
-		this.height = (this.maxHeight + 1) * 90 - this.margin.top - this.margin.bottom;
+		this.height = (this.maxHeight + 1) * 120 - this.margin.top - this.margin.bottom;
 		console.log('width', this.width);
 		this.i = 0;
 		this.testd = 0;
@@ -111,19 +112,44 @@ export class SukuTreeComponent implements OnChanges {
 				if (d.depth === 0) {
 					return '#6f3bda';
 				} else {
-				// if (d.depth === 1) {
-				// 	return '#3fdbef';
-				// }
-				// if (d.depth === 2) {
-				// 	return '#b8ce2b';
-				// }
+					// if (d.depth === 1) {
+					// 	return '#3fdbef';
+					// }
+					// if (d.depth === 2) {
+					// 	return '#b8ce2b';
+					// }
 					return '#3fdbef';
 				}
 			})
 			.attr('x1', -(this.boxWidth / 2))
-			.attr('y1', -(this.boxHeight / 2))
+			.attr('y1', (d) => {
+				console.log('d.length', d.product.name.length);
+				if (d.product.name.length > 50) {
+					return -(this.boxHeight / 2);
+				}
+				if (d.product.name.length > 20) {
+					return -(this.boxHeight / 2);
+				}
+				if (d.product.name.length > 0) {
+					return -(this.boxHeight / 2);
+				}
+			})
 			.attr('x2', -(this.boxWidth / 2))
-			.attr('y2', this.boxHeight / 2)
+			.attr('y2', (d) => {
+				console.log('d.length', d.product.name.length);
+				if (d.product.name.length > 50) {
+					return this.boxHeight / 2 + 35;
+				}
+				if (d.product.name.length > 40) {
+					return this.boxHeight / 2 + 30;
+				}
+				if (d.product.name.length > 20) {
+					return this.boxHeight / 2 + 10;
+				}
+				if (d.product.name.length > 0) {
+					return this.boxHeight / 2;
+				}
+			})
 			.attr('stroke-width', '10');
 
 		// append rect into svg
@@ -134,7 +160,15 @@ export class SukuTreeComponent implements OnChanges {
 				x: -(this.boxWidth / 2),
 				y: -(this.boxHeight / 2),
 				width: this.boxWidth,
-				height: this.boxHeight
+				height: (d) => {
+					if (d.product.name.length > 40) {
+						return this.boxHeight + 30;
+					} else if (d.product.name.length > 20) {
+						return this.boxHeight + 10;
+					} else {
+						return this.boxHeight;
+					}
+				}
 			})
 			.attr('fill', 'white')
 			.attr('stroke-width', '.9')
@@ -142,26 +176,60 @@ export class SukuTreeComponent implements OnChanges {
 
 		node.insert('g', 'g').attr('class', 'dot');
 		// append dots to rect
+		// node.append('g').attr('class', 'dot')
 		this.svg
 			.selectAll('g.dot')
 			.insert('circle')
 			.attr('r', 2.2)
-			.attr('cx', 66)
-			.attr('cy', 19)
+			.attr('cx', 65)
+			.attr('cy', (d) => {
+				if (d.product.name.length > 50) {
+					return 50;
+				}
+				if (d.product.name.length > 40) {
+					return 48;
+				} else if (d.product.name.length > 20) {
+					return 28;
+				} else {
+					return 17;
+				}
+			})
 			.attr('fill', '#b6b6b6');
 		this.svg
 			.selectAll('g.dot')
 			.insert('circle')
 			.attr('r', 2.2)
 			.attr('cx', 72)
-			.attr('cy', 19)
+			.attr('cy', (d) => {
+				if (d.product.name.length > 50) {
+					return 50;
+				}
+				if (d.product.name.length > 40) {
+					return 48;
+				} else if (d.product.name.length > 20) {
+					return 28;
+				} else {
+					return 17;
+				}
+			})
 			.attr('fill', '#b6b6b6');
 		this.svg
 			.selectAll('g.dot')
 			.insert('circle')
 			.attr('r', 2.2)
-			.attr('cx', 78)
-			.attr('cy', 19)
+			.attr('cx', 79)
+			.attr('cy', (d) => {
+				if (d.product.name.length > 50) {
+					return 50;
+				}
+				if (d.product.name.length > 40) {
+					return 48;
+				} else if (d.product.name.length > 20) {
+					return 28;
+				} else {
+					return 17;
+				}
+			})
 			.attr('fill', '#b6b6b6');
 		this.svg
 			.selectAll('g.dot')
@@ -180,26 +248,52 @@ export class SukuTreeComponent implements OnChanges {
 				}
 			});
 
-		node
+		this.svgNOde = node
 			.append('text')
 			.attr('x', (d) => {
-				return -(this.boxWidth / 20);
+				return -(this.boxWidth / 10) - 80;
 			})
 			.attr('y', (d) => {
-				return this.boxWidth / 60;
+				return -(this.boxWidth / 35);
 			})
 			.style('text-anchor', 'middle')
 			.style('fill', '#aaaaaa')
 			.attr('font-family', 'sans-serif')
-			.on('click', (d) => {
-				if (d.uid) {
-					console.log('d', d.uid);
-					this.dataUID = d.uid;
-					this.action.emit(d.uid);
-				}
-			})
 			.text((d) => {
 				return d.product.name;
+			})
+			.call(function wrap(text, width) {
+				text.each(function() {
+					console.log('word tezt infor each', d3.select(this));
+					// tslint:disable-next-line:prefer-const
+					// tslint:disable-next-line:no-shadowed-variable
+					const text = d3.select(this);
+					const words = text.text().split(/\s+/).reverse();
+					let word;
+					let line = [];
+					let lineNumber = 0;
+					const lineHeight = 1.3; // ems
+					const x = text.attr('x');
+					const y = text.attr('y');
+					const dy = 0; // parseFloat(text.attr("dy")),
+					let tspan = text.text(null).append('tspan').attr('x', x).attr('y', y).attr('dy', dy + 'em');
+					while ((word = words.pop())) {
+						console.log('word', word);
+						line.push(word);
+						tspan.text(line.join(' '));
+						if (tspan.node().getComputedTextLength() > 170) {
+							line.pop();
+							tspan.text(line.join(' '));
+							line = [ word ];
+							tspan = text
+								.append('tspan')
+								.attr('x', x)
+								.attr('y', y)
+								.attr('dy', ++lineNumber * lineHeight + dy + 'em')
+								.text(word);
+						}
+					}
+				});
 			});
 
 		const link = this.svg.selectAll('path.link').data(links, (d) => {
@@ -239,4 +333,5 @@ export class SukuTreeComponent implements OnChanges {
 	actionFun(val) {
 		this.action.emit(val);
 	}
+
 }
