@@ -6,7 +6,7 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 	styleUrls: [ './suku-add-widget.component.scss' ]
 })
 export class SukuAddWidgetComponent implements OnInit {
-	@Input() image = '../../assets/images/map-pin.svg';
+	@Input() image = '../../assets/images/plus-icon-gold.png';
 	@Input() size;
 	@Input() color;
 	@Input() weight;
