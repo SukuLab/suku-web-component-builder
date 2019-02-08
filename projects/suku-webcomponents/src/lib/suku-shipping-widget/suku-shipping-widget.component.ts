@@ -13,7 +13,7 @@ export class SukuShippingWidgetComponent implements OnInit {
   @Input('shipped-icon') shippedIcon = '../assets/img/shipped.png';
 	@Input('msg-Payment-Status') msgPaymentStatus = 'Paid';
 	@Input('msg-Shipment-Status') msgShipmentStatus = 'shipped';
-	@Input('customclass') customclass = 'customclass';
+	@Input('customclass') customclass = 'customclass imgsize';
 	@Input('custom-iconclass') customIconclass = 'text-right';
 	@Input() bgColor = '';
 
