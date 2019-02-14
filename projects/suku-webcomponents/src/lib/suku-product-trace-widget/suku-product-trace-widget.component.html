@@ -10,7 +10,7 @@
   <div class="col-sm-12 mt-2 pt-4 pb-4 RectangleBorder">
     <div class="col-sm-12 productName pb-3">
       {{name}}
-    </div>
+    </div> 
     <div class="col-sm-12 pb-2 pl-3 p-0 searchBorderBox">
       <input type="text" #search class="searchBorderStyles" formControlName="{{control}}" name="{{control}}"
         placeholder="search" (keyup)="searchFun.emit(isSearch)">
@@ -21,19 +21,19 @@
     <div *ngIf="_visible == 'false'">
       <p class="responseInfo" *ngIf="productdetails?.length > 0 ? true : false ">please select one</p>
       <div class="heightTab" id="scrollDiv">
-        <div class="col" *ngFor="let products of productdetails;let i= index">
-          <mat-radio-button color="primary" id="{{traceMethodRadio}}{{i}}" class="searchData f13" value="2" (click)="selectproducts.emit(products)"
-            (click)="showSelectedPro(products)">{{products.product.description}}<br>
-            {{products.product.name}}<br></mat-radio-button>
+        <div class="col" *ngFor="let products of productdetails">
+          <mat-radio-button color="primary" class="searchData f13" value="2" (click)="selectproducts.emit(products)"
+            (click)="showSelectedPro(products)">{{products.asset.description}}<br>
+            {{products.asset.name}}<br></mat-radio-button>
           <hr>
         </div>
       </div>
     </div>
     <div class="col-sm-12 mb-2 text-center pt-3 mt-3 pb-1">
       <span class="pt-2">
-        <a *ngIf="_visible == 'true'" id="{{searchId}}" class="trackBtn btn-info f14" (click)="searchByProduct.emit()">
+        <a *ngIf="_visible == 'true'" id="searchForProduct" class="trackBtn btn-info f14" (click)="searchByProduct.emit()">
           Search for product </a>
-        <a *ngIf="_visible == 'false'" [ngClass]="{'disabled': _disableBtn =='false' }" id="{{productId}}" class="trackBtn btn-info f14"
+        <a *ngIf="_visible == 'false'" [ngClass]="{'disabled': _disableBtn =='false' }" id="tracetheProduct" class="trackBtn btn-info f14"
           (click)="traceproduct.emit(1)"> trace the
           product </a>
       </span>
