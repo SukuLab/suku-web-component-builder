@@ -145,13 +145,7 @@ export class SukuTreeComponent implements OnChanges {
 				if (d.depth === 0) {
 					return '#6f3bda';
 				} else {
-					// if (d.depth === 1) {
-					// 	return '#3fdbef';
-					// }
-					// if (d.depth === 2) {
-					// 	return '#b8ce2b';
-					// }
-					if (this.relation == 0) {
+					if (this.relation == 1) {
 						return '#3fdbef';
 					} else {
 						return '#b8ce2b';
@@ -160,28 +154,28 @@ export class SukuTreeComponent implements OnChanges {
 			})
 			.attr('x1', -(this.boxWidth / 2))
 			.attr('y1', (d) => {
-				if (d.asset.name.length > 50) {
+				if (d.assetName.length > 50) {
 					return -(this.boxHeight / 2);
 				}
-				if (d.asset.name.length > 23) {
+				if (d.assetName.length > 23) {
 					return -(this.boxHeight / 2);
 				}
-				if (d.asset.name.length > 0) {
+				if (d.assetName.length > 0) {
 					return -(this.boxHeight / 2);
 				}
 			})
 			.attr('x2', -(this.boxWidth / 2))
 			.attr('y2', (d) => {
-				if (d.asset.name.length > 50) {
+				if (d.assetName.length > 50) {
 					return this.boxHeight / 2 + 30;
 				}
-				if (d.asset.name.length > 40) {
+				if (d.assetName.length > 40) {
 					return this.boxHeight / 2 + 30;
 				}
-				if (d.asset.name.length > 23) {
+				if (d.assetName.length > 23) {
 					return this.boxHeight / 2 + 10;
 				}
-				if (d.asset.name.length > 0) {
+				if (d.assetName.length > 0) {
 					return this.boxHeight / 2;
 				}
 			})
@@ -196,9 +190,9 @@ export class SukuTreeComponent implements OnChanges {
 				y: -(this.boxHeight / 2),
 				width: this.boxWidth,
 				height: (d) => {
-					if (d.asset.name.length > 40) {
+					if (d.assetName.length > 40) {
 						return this.boxHeight + 30;
-					} else if (d.asset.name.length > 23) {
+					} else if (d.assetName.length > 23) {
 						return this.boxHeight + 10;
 					} else {
 						return this.boxHeight;
@@ -217,12 +211,12 @@ export class SukuTreeComponent implements OnChanges {
 			.attr('r', 2.2)
 			.attr('cx', 65)
 			.attr('cy', (d) => {
-				if (d.asset.name.length > 50) {
+				if (d.assetName.length > 50) {
 					return 50;
 				}
-				if (d.asset.name.length > 40) {
+				if (d.assetName.length > 40) {
 					return 48;
-				} else if (d.asset.name.length > 23) {
+				} else if (d.assetName.length > 23) {
 					return 28;
 				} else {
 					return 17;
@@ -235,12 +229,12 @@ export class SukuTreeComponent implements OnChanges {
 			.attr('r', 2.2)
 			.attr('cx', 72)
 			.attr('cy', (d) => {
-				if (d.asset.name.length > 50) {
+				if (d.assetName.length > 50) {
 					return 50;
 				}
-				if (d.asset.name.length > 40) {
+				if (d.assetName.length > 40) {
 					return 48;
-				} else if (d.asset.name.length > 23) {
+				} else if (d.assetName.length > 23) {
 					return 28;
 				} else {
 					return 17;
@@ -253,12 +247,12 @@ export class SukuTreeComponent implements OnChanges {
 			.attr('r', 2.2)
 			.attr('cx', 79)
 			.attr('cy', (d) => {
-				if (d.asset.name.length > 50) {
+				if (d.assetName.length > 50) {
 					return 50;
 				}
-				if (d.asset.name.length > 40) {
+				if (d.assetName.length > 40) {
 					return 48;
-				} else if (d.asset.name.length > 23) {
+				} else if (d.assetName.length > 23) {
 					return 28;
 				} else {
 					return 17;
@@ -271,16 +265,16 @@ export class SukuTreeComponent implements OnChanges {
 			.attr('class', 'dot')
 			.attr('x', '60')
 			.attr('y',  (d) => {
-				if (d.asset.name.length > 50) {
+				if (d.assetName.length > 50) {
 					return 45;
 				}
-				if (d.asset.name.length > 40) {
+				if (d.assetName.length > 40) {
 					return 30;
 				}
-				if (d.asset.name.length > 23) {
+				if (d.assetName.length > 23) {
 					return 23;
 				}
-				if (d.asset.name.length > 0) {
+				if (d.assetName.length > 0) {
 					return 15;
 				}
 			})
@@ -310,7 +304,7 @@ export class SukuTreeComponent implements OnChanges {
 			.style('fill', '#aaaaaa')
 			.attr('font-family', 'sans-serif')
 			.text((d) => {
-				return d.asset.name;
+				return d.assetName;
 			})
 			.call(function wrap(text, width) {
 				text.each(function() {
@@ -360,7 +354,7 @@ export class SukuTreeComponent implements OnChanges {
 			.attr('fill', 'none')
 			.attr('stroke', '#c2c1c1')
 			.attr('stroke-width', '2')
-			.attr('shape-rendering', 'crispEdges')
+			.attr('shape-rendering', 'geometricPrecision ')
 			.attr('d', (d) => {
 				const sourceX = d.source.x,
 					sourceY = d.source.y + this.boxWidth / 2,
