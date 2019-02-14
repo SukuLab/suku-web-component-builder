@@ -10,89 +10,316 @@ import { Observable, Observer } from 'rxjs';
 export class AppComponent {
 	title = 'suku-lib';
 	base64Image;
+	response = [];
 	treeDataApi = [
 		{
-			uid: 'Lx1000',
-			timestamp: '2019-01-21T11:41:31.921Z',
+			uid: '1000',
 			product: {
 				id: '1000',
-				name: 'HP Pavilion DV6 dual core HP Pavilion DV6 dual core  ',
-				description: 'HP Laptop'
+				name: 'item Ax1000',
+				description: 'item A'
 			},
 			parent: '',
-			children: [ 'Lx1001', 'Lx2000' ],
+			children: [ '1002', '1003' ],
 			graphLinks: [
 				{
-					_id: '5c45c0a07bccff62b4c83e63',
-					timestamp: '2019-01-21T11:41:31.921Z',
+					_id: '5c41e554bd81f31d5d778b42',
 					children: [],
-					uid: 'Lx1008',
+					uid: '1008',
 					product: {
 						id: '1008',
-						name: 'Fan Speed Controller Board',
-						description: 'Motor Board'
+						name: 'item Hx1008',
+						description: 'item H'
 					},
 					links: [
 						{
-							_id: '5c45c0a07bccff62b4c83e64',
-							uid: 'Lx1005',
+							uid: '1007',
 							type: 'usedIn'
 						}
 					],
-					parent: 'Lx1005',
-					__v: 0,
+					parent: '1007',
 					depth: 3,
 					relations: []
 				},
 				{
-					_id: '5c45bf897bccff62b4c83e54',
-					timestamp: '2019-01-21T11:41:31.921Z',
-					children: [ 'Lx1004', 'Lx1005' ],
-					uid: 'Lx1003',
+					_id: '5c4b1ec969f7e00047f5f1b5',
+					timestamp: '2019-01-25T10:50:50.097Z',
+					children: [],
+					uid: '1013',
 					product: {
-						id: '1003',
-						name: 'Intel CPU Cooler dual core',
-						description: 'CPU Cooler'
+						id: '1013',
+						name: '0xA1013',
+						description: 'sample decription'
 					},
 					links: [
 						{
-							_id: '5c45bf897bccff62b4c83e55',
-							uid: 'Lx1001',
+							_id: '5c4b1ec969f7e00047f5f1b6',
+							uid: '1004',
+							type: 'usedIn'
+						}
+					],
+					parent: '1004',
+					__v: 0,
+					depth: 2,
+					relations: []
+				},
+				{
+					_id: '5c41e554bd81f31d5d778b3e',
+					children: [],
+					uid: '1005',
+					product: {
+						id: '1005',
+						name: 'item Ex1005',
+						description: 'item E'
+					},
+					links: [
+						{
+							uid: '1003',
+							type: 'usedIn'
+						}
+					],
+					parent: '1003',
+					depth: 1,
+					relations: []
+				},
+				{
+					_id: '5c41e554bd81f31d5d778b3c',
+					children: [],
+					uid: '1002',
+					product: {
+						id: '1002',
+						name: 'item Bx1002',
+						description: 'item B'
+					},
+					links: [
+						{
+							uid: '1001',
+							type: 'usedIn'
+						}
+					],
+					parent: '1001',
+					depth: 0,
+					relations: []
+				},
+				{
+					_id: '5c41e554bd81f31d5d778b3f',
+					children: [ '1006', '1007', '1009', '1010', '1011', '1012', '1013' ],
+					uid: '1004',
+					product: {
+						id: '1004',
+						name: 'item Dx1004',
+						description: 'item D'
+					},
+					links: [
+						{
+							uid: '1003',
 							type: 'usedIn'
 						},
 						{
-							_id: '5c45bfc47bccff62b4c83e59',
-							uid: 'Lx1004',
+							uid: '1006',
 							type: 'composedOf'
 						},
 						{
-							_id: '5c45bfe67bccff62b4c83e5c',
-							uid: 'Lx1005',
+							uid: '1007',
+							type: 'composedOf'
+						},
+						{
+							_id: '5c4b1e5169f7e00047f5f1ab',
+							uid: '1009',
+							type: 'composedOf'
+						},
+						{
+							_id: '5c4b1e7e69f7e00047f5f1ae',
+							uid: '1010',
+							type: 'composedOf'
+						},
+						{
+							_id: '5c4b1e9f69f7e00047f5f1b1',
+							uid: '1011',
+							type: 'composedOf'
+						},
+						{
+							_id: '5c4b1eba69f7e00047f5f1b4',
+							uid: '1012',
+							type: 'composedOf'
+						},
+						{
+							_id: '5c4b1ec969f7e00047f5f1b7',
+							uid: '1013',
 							type: 'composedOf'
 						}
 					],
-					parent: 'Lx1001',
-					__v: 0,
+					parent: '1003',
 					depth: 1,
 					relations: [
 						{
-							_id: '5c45bfc47bccff62b4c83e57',
-							timestamp: '2019-01-21T11:41:31.921Z',
+							_id: '5c41e554bd81f31d5d778b40',
 							children: [],
-							uid: 'Lx1004',
+							uid: '1006',
 							product: {
-								id: '1004',
-								name: 'CPU HeatSink',
-								description: 'HeatSink'
+								id: '1006',
+								name: 'item Fx1006',
+								description: 'item F'
 							},
 							links: [
 								{
-									_id: '5c45bfc47bccff62b4c83e58',
-									uid: 'Lx1003',
+									uid: '1004',
 									type: 'usedIn'
 								}
 							],
-							parent: 'Lx1003',
+							parent: '1004',
+							depth: 2,
+							relations: []
+						},
+						{
+							_id: '5c41e554bd81f31d5d778b41',
+							children: [ '1008' ],
+							uid: '1007',
+							product: {
+								id: '1007',
+								name: 'item Gx1007',
+								description: 'item G'
+							},
+							links: [
+								{
+									uid: '1004',
+									type: 'usedIn'
+								},
+								{
+									uid: '1008',
+									type: 'composedOf'
+								}
+							],
+							parent: '1004',
+							depth: 2,
+							relations: [
+								{
+									_id: '5c41e554bd81f31d5d778b42',
+									children: [],
+									uid: '1008',
+									product: {
+										id: '1008',
+										name: 'item Hx1008',
+										description: 'item H'
+									},
+									links: [
+										{
+											uid: '1007',
+											type: 'usedIn'
+										}
+									],
+									parent: '1007',
+									depth: 3,
+									relations: []
+								}
+							]
+						},
+						{
+							_id: '5c4b1e5169f7e00047f5f1a9',
+							timestamp: '2019-01-25T10:50:50.097Z',
+							children: [],
+							uid: '1009',
+							product: {
+								id: '1009',
+								name: '0xA1009',
+								description: 'sample decription'
+							},
+							links: [
+								{
+									_id: '5c4b1e5169f7e00047f5f1aa',
+									uid: '1004',
+									type: 'usedIn'
+								}
+							],
+							parent: '1004',
+							__v: 0,
+							depth: 2,
+							relations: []
+						},
+						{
+							_id: '5c4b1e7e69f7e00047f5f1ac',
+							timestamp: '2019-01-25T10:50:50.097Z',
+							children: [],
+							uid: '1010',
+							product: {
+								id: '1010',
+								name: '0xA1010',
+								description: 'sample decription'
+							},
+							links: [
+								{
+									_id: '5c4b1e7e69f7e00047f5f1ad',
+									uid: '1004',
+									type: 'usedIn'
+								}
+							],
+							parent: '1004',
+							__v: 0,
+							depth: 2,
+							relations: []
+						},
+						{
+							_id: '5c4b1e9f69f7e00047f5f1af',
+							timestamp: '2019-01-25T10:50:50.097Z',
+							children: [],
+							uid: '1011',
+							product: {
+								id: '1011',
+								name: '0xA1011',
+								description: 'sample decription'
+							},
+							links: [
+								{
+									_id: '5c4b1e9f69f7e00047f5f1b0',
+									uid: '1004',
+									type: 'usedIn'
+								}
+							],
+							parent: '1004',
+							__v: 0,
+							depth: 2,
+							relations: []
+						},
+						{
+							_id: '5c4b1eba69f7e00047f5f1b2',
+							timestamp: '2019-01-25T10:50:50.097Z',
+							children: [],
+							uid: '1012',
+							product: {
+								id: '1012',
+								name: '0xA1012',
+								description: 'sample decription'
+							},
+							links: [
+								{
+									_id: '5c4b1eba69f7e00047f5f1b3',
+									uid: '1004',
+									type: 'usedIn'
+								}
+							],
+							parent: '1004',
+							__v: 0,
+							depth: 2,
+							relations: []
+						},
+						{
+							_id: '5c4b1ec969f7e00047f5f1b5',
+							timestamp: '2019-01-25T10:50:50.097Z',
+							children: [],
+							uid: '1013',
+							product: {
+								id: '1013',
+								name: '0xA1013',
+								description: 'sample decription'
+							},
+							links: [
+								{
+									_id: '5c4b1ec969f7e00047f5f1b6',
+									uid: '1004',
+									type: 'usedIn'
+								}
+							],
+							parent: '1004',
 							__v: 0,
 							depth: 2,
 							relations: []
@@ -100,686 +327,965 @@ export class AppComponent {
 					]
 				},
 				{
-					_id: '5c45bf6a7bccff62b4c83e51',
-					timestamp: '2019-01-21T11:41:31.921Z',
+					_id: '5c4b1e7e69f7e00047f5f1ac',
+					timestamp: '2019-01-25T10:50:50.097Z',
 					children: [],
-					uid: 'Lx1002',
+					uid: '1010',
 					product: {
-						id: '1002',
-						name: 'Intel I5 CPU Chip dual core',
-						description: 'CPU Chip'
+						id: '1010',
+						name: '0xA1010',
+						description: 'sample decription'
 					},
 					links: [
 						{
-							_id: '5c45bf6a7bccff62b4c83e52',
-							uid: 'Lx1001',
+							_id: '5c4b1e7e69f7e00047f5f1ad',
+							uid: '1004',
 							type: 'usedIn'
 						}
 					],
-					parent: 'Lx1001',
+					parent: '1004',
 					__v: 0,
-					depth: 1,
+					depth: 2,
 					relations: []
 				},
 				{
-					_id: '5c45b8d37bccff62b4c83e4e',
-					timestamp: '2019-01-21T11:41:31.921Z',
-					children: [ 'Lx1002', 'Lx1003' ],
-					uid: 'Lx1001',
+					_id: '5c4b1e9f69f7e00047f5f1af',
+					timestamp: '2019-01-25T10:50:50.097Z',
+					children: [],
+					uid: '1011',
 					product: {
-						id: '1001',
-						name: 'Intel I5 CPU Chip dual core',
-						description: 'HP Laptop'
+						id: '1011',
+						name: '0xA1011',
+						description: 'sample decription'
 					},
 					links: [
 						{
-							_id: '5c45b8d37bccff62b4c83e4f',
-							uid: 'Lx1000',
+							_id: '5c4b1e9f69f7e00047f5f1b0',
+							uid: '1004',
+							type: 'usedIn'
+						}
+					],
+					parent: '1004',
+					__v: 0,
+					depth: 2,
+					relations: []
+				},
+				{
+					_id: '5c41e554bd81f31d5d778b3d',
+					children: [ '1004', '1005' ],
+					uid: '1003',
+					product: {
+						id: '1003',
+						name: 'item Cx1003',
+						description: 'item C'
+					},
+					links: [
+						{
+							uid: '1001',
 							type: 'usedIn'
 						},
 						{
-							_id: '5c45bf6b7bccff62b4c83e53',
-							uid: 'Lx1002',
+							uid: '1004',
 							type: 'composedOf'
 						},
 						{
-							_id: '5c45bf8a7bccff62b4c83e56',
-							uid: 'Lx1003',
+							uid: '1005',
 							type: 'composedOf'
 						}
 					],
-					parent: 'Lx1000',
-					__v: 0,
+					parent: '1001',
 					depth: 0,
 					relations: [
 						{
-							_id: '5c45bf6a7bccff62b4c83e51',
-							timestamp: '2019-01-21T11:41:31.921Z',
-							children: [],
-							uid: 'Lx1002',
+							_id: '5c41e554bd81f31d5d778b3f',
+							children: [ '1006', '1007', '1009', '1010', '1011', '1012', '1013' ],
+							uid: '1004',
 							product: {
-								id: '1002',
-								name: 'Intel I5 CPU Chip Chip dual core',
-								description: 'CPU Chip'
+								id: '1004',
+								name: 'item Dx1004',
+								description: 'item D'
 							},
 							links: [
 								{
-									_id: '5c45bf6a7bccff62b4c83e52',
-									uid: 'Lx1001',
-									type: 'usedIn'
-								}
-							],
-							parent: 'Lx1001',
-							__v: 0,
-							depth: 1,
-							relations: []
-						},
-						{
-							_id: '5c45bf897bccff62b4c83e54',
-							timestamp: '2019-01-21T11:41:31.921Z',
-							children: [ 'Lx1004', 'Lx1005' ],
-							uid: 'Lx1003',
-							product: {
-								id: '1003',
-								name: 'Intel CPU Cooler Chip dual core',
-								description: 'CPU Cooler'
-							},
-							links: [
-								{
-									_id: '5c45bf897bccff62b4c83e55',
-									uid: 'Lx1001',
+									uid: '1003',
 									type: 'usedIn'
 								},
 								{
-									_id: '5c45bfc47bccff62b4c83e59',
-									uid: 'Lx1004',
+									uid: '1006',
 									type: 'composedOf'
 								},
 								{
-									_id: '5c45bfe67bccff62b4c83e5c',
-									uid: 'Lx1005',
+									uid: '1007',
+									type: 'composedOf'
+								},
+								{
+									_id: '5c4b1e5169f7e00047f5f1ab',
+									uid: '1009',
+									type: 'composedOf'
+								},
+								{
+									_id: '5c4b1e7e69f7e00047f5f1ae',
+									uid: '1010',
+									type: 'composedOf'
+								},
+								{
+									_id: '5c4b1e9f69f7e00047f5f1b1',
+									uid: '1011',
+									type: 'composedOf'
+								},
+								{
+									_id: '5c4b1eba69f7e00047f5f1b4',
+									uid: '1012',
+									type: 'composedOf'
+								},
+								{
+									_id: '5c4b1ec969f7e00047f5f1b7',
+									uid: '1013',
 									type: 'composedOf'
 								}
 							],
-							parent: 'Lx1001',
-							__v: 0,
+							parent: '1003',
 							depth: 1,
 							relations: [
 								{
-									_id: '5c45bfc47bccff62b4c83e57',
-									timestamp: '2019-01-21T11:41:31.921Z',
+									_id: '5c41e554bd81f31d5d778b40',
 									children: [],
-									uid: 'Lx1004',
+									uid: '1006',
 									product: {
-										id: '1004',
-										name: 'CPU HeatSink Chip dual core',
-										description: 'HeatSink'
+										id: '1006',
+										name: 'item Fx1006',
+										description: 'item F'
 									},
 									links: [
 										{
-											_id: '5c45bfc47bccff62b4c83e58',
-											uid: 'Lx1003',
+											uid: '1004',
 											type: 'usedIn'
 										}
 									],
-									parent: 'Lx1003',
+									parent: '1004',
+									depth: 2,
+									relations: []
+								},
+								{
+									_id: '5c41e554bd81f31d5d778b41',
+									children: [ '1008' ],
+									uid: '1007',
+									product: {
+										id: '1007',
+										name: 'item Gx1007',
+										description: 'item G'
+									},
+									links: [
+										{
+											uid: '1004',
+											type: 'usedIn'
+										},
+										{
+											uid: '1008',
+											type: 'composedOf'
+										}
+									],
+									parent: '1004',
+									depth: 2,
+									relations: [
+										{
+											_id: '5c41e554bd81f31d5d778b42',
+											children: [],
+											uid: '1008',
+											product: {
+												id: '1008',
+												name: 'item Hx1008',
+												description: 'item H'
+											},
+											links: [
+												{
+													uid: '1007',
+													type: 'usedIn'
+												}
+											],
+											parent: '1007',
+											depth: 3,
+											relations: []
+										}
+									]
+								},
+								{
+									_id: '5c4b1e5169f7e00047f5f1a9',
+									timestamp: '2019-01-25T10:50:50.097Z',
+									children: [],
+									uid: '1009',
+									product: {
+										id: '1009',
+										name: '0xA1009',
+										description: 'sample decription'
+									},
+									links: [
+										{
+											_id: '5c4b1e5169f7e00047f5f1aa',
+											uid: '1004',
+											type: 'usedIn'
+										}
+									],
+									parent: '1004',
 									__v: 0,
 									depth: 2,
 									relations: []
 								},
 								{
-									_id: '5c45bfe67bccff62b4c83e5a',
-									timestamp: '2019-01-21T11:41:31.921Z',
-									children: [ 'Lx1006', 'Lx1007', 'Lx1008' ],
-									uid: 'Lx1005',
+									_id: '5c4b1e7e69f7e00047f5f1ac',
+									timestamp: '2019-01-25T10:50:50.097Z',
+									children: [],
+									uid: '1010',
 									product: {
-										id: '1005',
-										name: 'CPU CPU Chip dual core',
-										description: 'Fan'
+										id: '1010',
+										name: '0xA1010',
+										description: 'sample decription'
 									},
 									links: [
 										{
-											_id: '5c45bfe67bccff62b4c83e5b',
-											uid: 'Lx1003',
+											_id: '5c4b1e7e69f7e00047f5f1ad',
+											uid: '1004',
 											type: 'usedIn'
-										},
-										{
-											_id: '5c45c0177bccff62b4c83e5f',
-											uid: 'Lx1006',
-											type: 'composedOf'
-										},
-										{
-											_id: '5c45c0657bccff62b4c83e62',
-											uid: 'Lx1007',
-											type: 'composedOf'
-										},
-										{
-											_id: '5c45c0a07bccff62b4c83e65',
-											uid: 'Lx1008',
-											type: 'composedOf'
 										}
 									],
-									parent: 'Lx1003',
+									parent: '1004',
 									__v: 0,
 									depth: 2,
-									relations: [
+									relations: []
+								},
+								{
+									_id: '5c4b1e9f69f7e00047f5f1af',
+									timestamp: '2019-01-25T10:50:50.097Z',
+									children: [],
+									uid: '1011',
+									product: {
+										id: '1011',
+										name: '0xA1011',
+										description: 'sample decription'
+									},
+									links: [
 										{
-											_id: '5c45c0177bccff62b4c83e5d',
-											timestamp: '2019-01-21T11:41:31.921Z',
-											children: [],
-											uid: 'Lx1006',
-											product: {
-												id: '1006',
-												name: 'Fan Blade CPU Chip dual core',
-												description: 'Fan Blade'
-											},
-											links: [
-												{
-													_id: '5c45c0177bccff62b4c83e5e',
-													uid: 'Lx1005',
-													type: 'usedIn'
-												}
-											],
-											parent: 'Lx1005',
-											__v: 0,
-											depth: 3,
-											relations: []
-										},
-										{
-											_id: '5c45c0647bccff62b4c83e60',
-											timestamp: '2019-01-21T11:41:31.921Z',
-											children: [],
-											uid: 'Lx1007',
-											product: {
-												id: '1007',
-												name: 'Brushless DC Motor',
-												description: 'DC Motor'
-											},
-											links: [
-												{
-													_id: '5c45c0647bccff62b4c83e61',
-													uid: 'Lx1005',
-													type: 'usedIn'
-												}
-											],
-											parent: 'Lx1005',
-											__v: 0,
-											depth: 3,
-											relations: []
-										},
-										{
-											_id: '5c45c0a07bccff62b4c83e63',
-											timestamp: '2019-01-21T11:41:31.921Z',
-											children: [],
-											uid: 'Lx1008',
-											product: {
-												id: '1008',
-												name: 'Fan Speed Controller Board',
-												description: 'Motor Board'
-											},
-											links: [
-												{
-													_id: '5c45c0a07bccff62b4c83e64',
-													uid: 'Lx1005',
-													type: 'usedIn'
-												}
-											],
-											parent: 'Lx1005',
-											__v: 0,
-											depth: 3,
-											relations: []
+											_id: '5c4b1e9f69f7e00047f5f1b0',
+											uid: '1004',
+											type: 'usedIn'
 										}
-									]
+									],
+									parent: '1004',
+									__v: 0,
+									depth: 2,
+									relations: []
+								},
+								{
+									_id: '5c4b1eba69f7e00047f5f1b2',
+									timestamp: '2019-01-25T10:50:50.097Z',
+									children: [],
+									uid: '1012',
+									product: {
+										id: '1012',
+										name: '0xA1012',
+										description: 'sample decription'
+									},
+									links: [
+										{
+											_id: '5c4b1eba69f7e00047f5f1b3',
+											uid: '1004',
+											type: 'usedIn'
+										}
+									],
+									parent: '1004',
+									__v: 0,
+									depth: 2,
+									relations: []
+								},
+								{
+									_id: '5c4b1ec969f7e00047f5f1b5',
+									timestamp: '2019-01-25T10:50:50.097Z',
+									children: [],
+									uid: '1013',
+									product: {
+										id: '1013',
+										name: '0xA1013',
+										description: 'sample decription'
+									},
+									links: [
+										{
+											_id: '5c4b1ec969f7e00047f5f1b6',
+											uid: '1004',
+											type: 'usedIn'
+										}
+									],
+									parent: '1004',
+									__v: 0,
+									depth: 2,
+									relations: []
 								}
 							]
-						}
-					]
-				},
-				{
-					_id: '5c45c1ba7bccff62b4c83e66',
-					timestamp: '2019-01-21T11:41:31.921Z',
-					children: [ 'Lx2001', 'Lx2002' ],
-					uid: 'Lx2000',
-					product: {
-						id: '2000',
-						name: 'WD HDD 1B CPU Chip dual core',
-						description: 'Western Digital Darddisk'
-					},
-					links: [
-						{
-							_id: '5c45c1ba7bccff62b4c83e67',
-							uid: 'Lx1000',
-							type: 'usedIn'
 						},
 						{
-							_id: '5c45c3777bccff62b4c83e6b',
-							uid: 'Lx2001',
-							type: 'composedOf'
-						},
-						{
-							_id: '5c45c3a87bccff62b4c83e6e',
-							uid: 'Lx2002',
-							type: 'composedOf'
-						}
-					],
-					parent: 'Lx1000',
-					__v: 0,
-					depth: 0,
-					relations: [
-						{
-							_id: '5c45c3777bccff62b4c83e69',
-							timestamp: '2019-01-21T11:41:31.921Z',
+							_id: '5c41e554bd81f31d5d778b3e',
 							children: [],
-							uid: 'Lx2001',
+							uid: '1005',
 							product: {
-								id: '2001',
-								name: 'Platter CPU Chip dual core',
-								description: 'platter Disk'
+								id: '1005',
+								name: 'item Ex1005',
+								description: 'item E'
 							},
 							links: [
 								{
-									_id: '5c45c3777bccff62b4c83e6a',
-									uid: 'Lx2000',
+									uid: '1003',
 									type: 'usedIn'
 								}
 							],
-							parent: 'Lx2000',
-							__v: 0,
-							depth: 1,
-							relations: []
-						},
-						{
-							_id: '5c45c3a87bccff62b4c83e6c',
-							timestamp: '2019-01-21T11:41:31.921Z',
-							children: [],
-							uid: 'Lx2002',
-							product: {
-								id: '2002',
-								name: 'RW Arm assembly CPU Chip dual core',
-								description: 'RW Arm assembly'
-							},
-							links: [
-								{
-									_id: '5c45c3a87bccff62b4c83e6d',
-									uid: 'Lx2000',
-									type: 'usedIn'
-								}
-							],
-							parent: 'Lx2000',
-							__v: 0,
+							parent: '1003',
 							depth: 1,
 							relations: []
 						}
 					]
 				},
 				{
-					_id: '5c45c3a87bccff62b4c83e6c',
-					timestamp: '2019-01-21T11:41:31.921Z',
+					_id: '5c41e554bd81f31d5d778b40',
 					children: [],
-					uid: 'Lx2002',
-					product: {
-						id: '2002',
-						name: 'RW Arm assembly',
-						description: 'RW Arm assembly'
-					},
-					links: [
-						{
-							_id: '5c45c3a87bccff62b4c83e6d',
-							uid: 'Lx2000',
-							type: 'usedIn'
-						}
-					],
-					parent: 'Lx2000',
-					__v: 0,
-					depth: 1,
-					relations: []
-				},
-				{
-					_id: '5c45c3777bccff62b4c83e69',
-					timestamp: '2019-01-21T11:41:31.921Z',
-					children: [],
-					uid: 'Lx2001',
-					product: {
-						id: '2001',
-						name: 'Platter',
-						description: 'platter Disk'
-					},
-					links: [
-						{
-							_id: '5c45c3777bccff62b4c83e6a',
-							uid: 'Lx2000',
-							type: 'usedIn'
-						}
-					],
-					parent: 'Lx2000',
-					__v: 0,
-					depth: 1,
-					relations: []
-				},
-				{
-					_id: '5c45bfc47bccff62b4c83e57',
-					timestamp: '2019-01-21T11:41:31.921Z',
-					children: [],
-					uid: 'Lx1004',
-					product: {
-						id: '1004',
-						name: 'CPU HeatSink CPU Chip dual core',
-						description: 'HeatSink'
-					},
-					links: [
-						{
-							_id: '5c45bfc47bccff62b4c83e58',
-							uid: 'Lx1003',
-							type: 'usedIn'
-						}
-					],
-					parent: 'Lx1003',
-					__v: 0,
-					depth: 2,
-					relations: []
-				},
-				{
-					_id: '5c45c0647bccff62b4c83e60',
-					timestamp: '2019-01-21T11:41:31.921Z',
-					children: [],
-					uid: 'Lx1007',
-					product: {
-						id: '1007',
-						name: 'Brushless DC Motor',
-						description: 'DC Motor'
-					},
-					links: [
-						{
-							_id: '5c45c0647bccff62b4c83e61',
-							uid: 'Lx1005',
-							type: 'usedIn'
-						}
-					],
-					parent: 'Lx1005',
-					__v: 0,
-					depth: 3,
-					relations: []
-				},
-				{
-					_id: '5c45bfe67bccff62b4c83e5a',
-					timestamp: '2019-01-21T11:41:31.921Z',
-					children: [ 'Lx1006', 'Lx1007', 'Lx1008' ],
-					uid: 'Lx1005',
-					product: {
-						id: '1005',
-						name: 'CPU Fan',
-						description: 'Fan'
-					},
-					links: [
-						{
-							_id: '5c45bfe67bccff62b4c83e5b',
-							uid: 'Lx1003',
-							type: 'usedIn'
-						},
-						{
-							_id: '5c45c0177bccff62b4c83e5f',
-							uid: 'Lx1006',
-							type: 'composedOf'
-						},
-						{
-							_id: '5c45c0657bccff62b4c83e62',
-							uid: 'Lx1007',
-							type: 'composedOf'
-						},
-						{
-							_id: '5c45c0a07bccff62b4c83e65',
-							uid: 'Lx1008',
-							type: 'composedOf'
-						}
-					],
-					parent: 'Lx1003',
-					__v: 0,
-					depth: 2,
-					relations: [
-						{
-							_id: '5c45c0177bccff62b4c83e5d',
-							timestamp: '2019-01-21T11:41:31.921Z',
-							children: [],
-							uid: 'Lx1006',
-							product: {
-								id: '1006',
-								name: 'Fan Blade CPU Chip dual core',
-								description: 'Fan Blade'
-							},
-							links: [
-								{
-									_id: '5c45c0177bccff62b4c83e5e',
-									uid: 'Lx1005',
-									type: 'usedIn'
-								}
-							],
-							parent: 'Lx1005',
-							__v: 0,
-							depth: 3,
-							relations: []
-						},
-						{
-							_id: '5c45c0647bccff62b4c83e60',
-							timestamp: '2019-01-21T11:41:31.921Z',
-							children: [],
-							uid: 'Lx1007',
-							product: {
-								id: '1007',
-								name: 'Brushless DC Motor',
-								description: 'DC Motor'
-							},
-							links: [
-								{
-									_id: '5c45c0647bccff62b4c83e61',
-									uid: 'Lx1005',
-									type: 'usedIn'
-								}
-							],
-							parent: 'Lx1005',
-							__v: 0,
-							depth: 3,
-							relations: []
-						},
-						{
-							_id: '5c45c0a07bccff62b4c83e63',
-							timestamp: '2019-01-21T11:41:31.921Z',
-							children: [],
-							uid: 'Lx1008',
-							product: {
-								id: '1008',
-								name: 'Fan Speed Controller Board',
-								description: 'Motor Board'
-							},
-							links: [
-								{
-									_id: '5c45c0a07bccff62b4c83e64',
-									uid: 'Lx1005',
-									type: 'usedIn'
-								}
-							],
-							parent: 'Lx1005',
-							__v: 0,
-							depth: 3,
-							relations: []
-						}
-					]
-				},
-				{
-					_id: '5c45c0177bccff62b4c83e5d',
-					timestamp: '2019-01-21T11:41:31.921Z',
-					children: [],
-					uid: 'Lx1006',
+					uid: '1006',
 					product: {
 						id: '1006',
-						name: 'Fan Blade CPU Chip dual core',
-						description: 'Fan Blade'
+						name: 'item Fx1006',
+						description: 'item F'
 					},
 					links: [
 						{
-							_id: '5c45c0177bccff62b4c83e5e',
-							uid: 'Lx1005',
+							uid: '1004',
 							type: 'usedIn'
 						}
 					],
-					parent: 'Lx1005',
+					parent: '1004',
+					depth: 2,
+					relations: []
+				},
+				{
+					_id: '5c41e554bd81f31d5d778b41',
+					children: [ '1008' ],
+					uid: '1007',
+					product: {
+						id: '1007',
+						name: 'item Gx1007',
+						description: 'item G'
+					},
+					links: [
+						{
+							uid: '1004',
+							type: 'usedIn'
+						},
+						{
+							uid: '1008',
+							type: 'composedOf'
+						}
+					],
+					parent: '1004',
+					depth: 2,
+					relations: [
+						{
+							_id: '5c41e554bd81f31d5d778b42',
+							children: [],
+							uid: '1008',
+							product: {
+								id: '1008',
+								name: 'item Hx1008',
+								description: 'item H'
+							},
+							links: [
+								{
+									uid: '1007',
+									type: 'usedIn'
+								}
+							],
+							parent: '1007',
+							depth: 3,
+							relations: []
+						}
+					]
+				},
+				{
+					_id: '5c4b1e5169f7e00047f5f1a9',
+					timestamp: '2019-01-25T10:50:50.097Z',
+					children: [],
+					uid: '1009',
+					product: {
+						id: '1009',
+						name: '0xA1009',
+						description: 'sample decription'
+					},
+					links: [
+						{
+							_id: '5c4b1e5169f7e00047f5f1aa',
+							uid: '1004',
+							type: 'usedIn'
+						}
+					],
+					parent: '1004',
 					__v: 0,
-					depth: 3,
+					depth: 2,
+					relations: []
+				},
+				{
+					_id: '5c4b1eba69f7e00047f5f1b2',
+					timestamp: '2019-01-25T10:50:50.097Z',
+					children: [],
+					uid: '1012',
+					product: {
+						id: '1012',
+						name: '0xA1012',
+						description: 'sample decription'
+					},
+					links: [
+						{
+							_id: '5c4b1eba69f7e00047f5f1b3',
+							uid: '1004',
+							type: 'usedIn'
+						}
+					],
+					parent: '1004',
+					__v: 0,
+					depth: 2,
 					relations: []
 				}
 			],
 			links: [
 				{
-					_id: '5c45b8d37bccff62b4c83e50',
-					uid: 'Lx1001',
+					uid: '1002',
 					type: 'composedOf'
 				},
 				{
-					_id: '5c45c1ba7bccff62b4c83e68',
-					uid: 'Lx2000',
+					uid: '1003',
 					type: 'composedOf'
 				}
 			],
 			relations: [
 				{
-					_id: '5c45b8d37bccff62b4c83e4e',
-					timestamp: '2019-01-21T11:41:31.921Z',
-					children: [ 'Lx1002', 'Lx1003' ],
-					uid: 'Lx1001',
+					_id: '5c41e554bd81f31d5d778b3c',
+					children: [],
+					uid: '1002',
 					product: {
-						id: '1001',
-						name: 'Intel I5 CPU CPU Chip dual core',
-						description: 'HP Laptop'
+						id: '1002',
+						name: 'item Bx1002',
+						description: 'item B'
 					},
 					links: [
 						{
-							_id: '5c45b8d37bccff62b4c83e4f',
-							uid: 'Lx1000',
+							uid: '1001',
+							type: 'usedIn'
+						}
+					],
+					parent: '1001',
+					depth: 0,
+					relations: []
+				},
+				{
+					_id: '5c41e554bd81f31d5d778b3d',
+					children: [ '1004', '1005' ],
+					uid: '1003',
+					product: {
+						id: '1003',
+						name: 'item Cx1003',
+						description: 'item C'
+					},
+					links: [
+						{
+							uid: '1001',
 							type: 'usedIn'
 						},
 						{
-							_id: '5c45bf6b7bccff62b4c83e53',
-							uid: 'Lx1002',
+							uid: '1004',
 							type: 'composedOf'
 						},
 						{
-							_id: '5c45bf8a7bccff62b4c83e56',
-							uid: 'Lx1003',
+							uid: '1005',
 							type: 'composedOf'
 						}
 					],
-					parent: 'Lx1000',
-					__v: 0,
+					parent: '1001',
 					depth: 0,
 					relations: [
 						{
-							_id: '5c45bf6a7bccff62b4c83e51',
-							timestamp: '2019-01-21T11:41:31.921Z',
-							children: [],
-							uid: 'Lx1002',
+							_id: '5c41e554bd81f31d5d778b3f',
+							children: [ '1006', '1007', '1009', '1010', '1011', '1012', '1013' ],
+							uid: '1004',
 							product: {
-								id: '1002',
-								name: 'Intel I5 CPU Chip CPU Chip dual core',
-								description: 'CPU Chip'
+								id: '1004',
+								name: 'item Dx1004',
+								description: 'item D'
 							},
 							links: [
 								{
-									_id: '5c45bf6a7bccff62b4c83e52',
-									uid: 'Lx1001',
-									type: 'usedIn'
-								}
-							],
-							parent: 'Lx1001',
-							__v: 0,
-							depth: 1,
-							relations: []
-						},
-						{
-							_id: '5c45bf897bccff62b4c83e54',
-							timestamp: '2019-01-21T11:41:31.921Z',
-							children: [ 'Lx1004', 'Lx1005' ],
-							uid: 'Lx1003',
-							product: {
-								id: '1003',
-								name: 'Intel CPU Cooler CPU Chip dual core',
-								description: 'CPU Cooler'
-							},
-							links: [
-								{
-									_id: '5c45bf897bccff62b4c83e55',
-									uid: 'Lx1001',
+									uid: '1003',
 									type: 'usedIn'
 								},
 								{
-									_id: '5c45bfc47bccff62b4c83e59',
-									uid: 'Lx1004',
+									uid: '1006',
 									type: 'composedOf'
 								},
 								{
-									_id: '5c45bfe67bccff62b4c83e5c',
-									uid: 'Lx1005',
+									uid: '1007',
+									type: 'composedOf'
+								},
+								{
+									_id: '5c4b1e5169f7e00047f5f1ab',
+									uid: '1009',
+									type: 'composedOf'
+								},
+								{
+									_id: '5c4b1e7e69f7e00047f5f1ae',
+									uid: '1010',
+									type: 'composedOf'
+								},
+								{
+									_id: '5c4b1e9f69f7e00047f5f1b1',
+									uid: '1011',
+									type: 'composedOf'
+								},
+								{
+									_id: '5c4b1eba69f7e00047f5f1b4',
+									uid: '1012',
+									type: 'composedOf'
+								},
+								{
+									_id: '5c4b1ec969f7e00047f5f1b7',
+									uid: '1013',
 									type: 'composedOf'
 								}
 							],
-							parent: 'Lx1001',
-							__v: 0,
+							parent: '1003',
 							depth: 1,
 							relations: [
 								{
-									_id: '5c45bfc47bccff62b4c83e57',
-									timestamp: '2019-01-21T11:41:31.921Z',
+									_id: '5c41e554bd81f31d5d778b40',
 									children: [],
-									uid: 'Lx1004',
+									uid: '1006',
 									product: {
-										id: '1004',
-										name: 'CPU HeatSink',
-										description: 'HeatSink'
+										id: '1006',
+										name: 'item Fx1006',
+										description: 'item F'
 									},
 									links: [
 										{
-											_id: '5c45bfc47bccff62b4c83e58',
-											uid: 'Lx1003',
+											uid: '1004',
 											type: 'usedIn'
 										}
 									],
-									parent: 'Lx1003',
+									parent: '1004',
+									depth: 2,
+									relations: []
+								},
+								{
+									_id: '5c41e554bd81f31d5d778b41',
+									children: [ '1008' ],
+									uid: '1007',
+									product: {
+										id: '1007',
+										name: 'item Gx1007',
+										description: 'item G'
+									},
+									links: [
+										{
+											uid: '1004',
+											type: 'usedIn'
+										},
+										{
+											uid: '1008',
+											type: 'composedOf'
+										}
+									],
+									parent: '1004',
+									depth: 2,
+									relations: [
+										{
+											_id: '5c41e554bd81f31d5d778b42',
+											children: [],
+											uid: '1008',
+											product: {
+												id: '1008',
+												name: 'item Hx1008',
+												description: 'item H'
+											},
+											links: [
+												{
+													uid: '1007',
+													type: 'usedIn'
+												}
+											],
+											parent: '1007',
+											depth: 3,
+											relations: []
+										}
+									]
+								},
+								{
+									_id: '5c4b1e5169f7e00047f5f1a9',
+									timestamp: '2019-01-25T10:50:50.097Z',
+									children: [],
+									uid: '1009',
+									product: {
+										id: '1009',
+										name: '0xA1009',
+										description: 'sample decription'
+									},
+									links: [
+										{
+											_id: '5c4b1e5169f7e00047f5f1aa',
+											uid: '1004',
+											type: 'usedIn'
+										}
+									],
+									parent: '1004',
 									__v: 0,
 									depth: 2,
 									relations: []
 								},
 								{
-									_id: '5c45bfe67bccff62b4c83e5a',
-									timestamp: '2019-01-21T11:41:31.921Z',
-									children: [ 'Lx1006', 'Lx1007', 'Lx1008' ],
-									uid: 'Lx1005',
+									_id: '5c4b1e7e69f7e00047f5f1ac',
+									timestamp: '2019-01-25T10:50:50.097Z',
+									children: [],
+									uid: '1010',
 									product: {
-										id: '1005',
-										name: 'CPU Fan',
-										description: 'Fan'
+										id: '1010',
+										name: '0xA1010',
+										description: 'sample decription'
 									},
 									links: [
 										{
-											_id: '5c45bfe67bccff62b4c83e5b',
-											uid: 'Lx1003',
+											_id: '5c4b1e7e69f7e00047f5f1ad',
+											uid: '1004',
+											type: 'usedIn'
+										}
+									],
+									parent: '1004',
+									__v: 0,
+									depth: 2,
+									relations: []
+								},
+								{
+									_id: '5c4b1e9f69f7e00047f5f1af',
+									timestamp: '2019-01-25T10:50:50.097Z',
+									children: [],
+									uid: '1011',
+									product: {
+										id: '1011',
+										name: '0xA1011',
+										description: 'sample decription'
+									},
+									links: [
+										{
+											_id: '5c4b1e9f69f7e00047f5f1b0',
+											uid: '1004',
+											type: 'usedIn'
+										}
+									],
+									parent: '1004',
+									__v: 0,
+									depth: 2,
+									relations: []
+								},
+								{
+									_id: '5c4b1eba69f7e00047f5f1b2',
+									timestamp: '2019-01-25T10:50:50.097Z',
+									children: [],
+									uid: '1012',
+									product: {
+										id: '1012',
+										name: '0xA1012',
+										description: 'sample decription'
+									},
+									links: [
+										{
+											_id: '5c4b1eba69f7e00047f5f1b3',
+											uid: '1004',
+											type: 'usedIn'
+										}
+									],
+									parent: '1004',
+									__v: 0,
+									depth: 2,
+									relations: []
+								},
+								{
+									_id: '5c4b1ec969f7e00047f5f1b5',
+									timestamp: '2019-01-25T10:50:50.097Z',
+									children: [],
+									uid: '1013',
+									product: {
+										id: '1013',
+										name: '0xA1013',
+										description: 'sample decription'
+									},
+									links: [
+										{
+											_id: '5c4b1ec969f7e00047f5f1b6',
+											uid: '1004',
+											type: 'usedIn'
+										}
+									],
+									parent: '1004',
+									__v: 0,
+									depth: 2,
+									relations: []
+								}
+							]
+						},
+						{
+							_id: '5c41e554bd81f31d5d778b3e',
+							children: [],
+							uid: '1005',
+							product: {
+								id: '1005',
+								name: 'item Ex1005',
+								description: 'item E'
+							},
+							links: [
+								{
+									uid: '1003',
+									type: 'usedIn'
+								}
+							],
+							parent: '1003',
+							depth: 1,
+							relations: []
+						}
+					]
+				}
+			],
+			depth: -1
+		}
+	];
+	parentPayload = [
+		{
+			uid: '1007',
+			product: {
+				id: '1007',
+				name: 'item Gx1007',
+				description: 'item G'
+			},
+			parent: '1004',
+			children: [ '1008' ],
+			graphLinks: [
+				{
+					_id: '5c41e554bd81f31d5d778b3d',
+					children: [ '1004', '1005' ],
+					uid: '1003',
+					product: {
+						id: '1003',
+						name: 'item Cx1003',
+						description: 'item C'
+					},
+					links: [
+						{
+							uid: '1001',
+							type: 'usedIn'
+						},
+						{
+							uid: '1004',
+							type: 'composedOf'
+						},
+						{
+							uid: '1005',
+							type: 'composedOf'
+						}
+					],
+					parent: '1001',
+					depth: 1,
+					relations: []
+				},
+				{
+					_id: '5c41e554bd81f31d5d778b3f',
+					children: [ '1006', '1007', '1009', '1010', '1011', '1012', '1013' ],
+					uid: '1004',
+					product: {
+						id: '1004',
+						name: 'item Dx1004',
+						description: 'item D'
+					},
+					links: [
+						{
+							uid: '1003',
+							type: 'usedIn'
+						},
+						{
+							uid: '1006',
+							type: 'composedOf'
+						},
+						{
+							uid: '1007',
+							type: 'composedOf'
+						},
+						{
+							_id: '5c4b1e5169f7e00047f5f1ab',
+							uid: '1009',
+							type: 'composedOf'
+						},
+						{
+							_id: '5c4b1e7e69f7e00047f5f1ae',
+							uid: '1010',
+							type: 'composedOf'
+						},
+						{
+							_id: '5c4b1e9f69f7e00047f5f1b1',
+							uid: '1011',
+							type: 'composedOf'
+						},
+						{
+							_id: '5c4b1eba69f7e00047f5f1b4',
+							uid: '1012',
+							type: 'composedOf'
+						},
+						{
+							_id: '5c4b1ec969f7e00047f5f1b7',
+							uid: '1013',
+							type: 'composedOf'
+						}
+					],
+					parent: '1003',
+					depth: 0,
+					relations: [
+						{
+							_id: '5c41e554bd81f31d5d778b3d',
+							children: [ '1004', '1005' ],
+							uid: '1003',
+							product: {
+								id: '1003',
+								name: 'item Cx1003',
+								description: 'item C'
+							},
+							links: [
+								{
+									uid: '1001',
+									type: 'usedIn'
+								},
+								{
+									uid: '1004',
+									type: 'composedOf'
+								},
+								{
+									uid: '1005',
+									type: 'composedOf'
+								}
+							],
+							parent: '1001',
+							depth: 1,
+							relations: []
+						}
+					]
+				}
+			],
+			links: [
+				{
+					uid: '1004',
+					type: 'usedIn'
+				},
+				{
+					uid: '1008',
+					type: 'composedOf'
+				}
+			],
+			relations: [
+				{
+					_id: '5c41e554bd81f31d5d778b3f',
+					children: [ '1006', '1007', '1009', '1010', '1011', '1012', '1013' ],
+					uid: '1004',
+					product: {
+						id: '1004',
+						name: 'item Dx1004',
+						description: 'item D'
+					},
+					links: [
+						{
+							uid: '1003',
+							type: 'usedIn'
+						},
+						{
+							uid: '1006',
+							type: 'composedOf'
+						},
+						{
+							uid: '1007',
+							type: 'composedOf'
+						},
+						{
+							_id: '5c4b1e5169f7e00047f5f1ab',
+							uid: '1009',
+							type: 'composedOf'
+						},
+						{
+							_id: '5c4b1e7e69f7e00047f5f1ae',
+							uid: '1010',
+							type: 'composedOf'
+						},
+						{
+							_id: '5c4b1e9f69f7e00047f5f1b1',
+							uid: '1011',
+							type: 'composedOf'
+						},
+						{
+							_id: '5c4b1eba69f7e00047f5f1b4',
+							uid: '1012',
+							type: 'composedOf'
+						},
+						{
+							_id: '5c4b1ec969f7e00047f5f1b7',
+							uid: '1013',
+							type: 'composedOf'
+						}
+					],
+					parent: '1003',
+					depth: 0,
+					relations: [
+						{
+							_id: '5c41e554bd81f31d5d778b3d',
+							children: [ '1004', '1005' ],
+							uid: '1003',
+							product: {
+								id: '1003',
+								name: 'item Cx1003',
+								description: 'item C'
+							},
+							links: [
+								{
+									uid: '1001',
+									type: 'usedIn'
+								},
+								{
+									uid: '1004',
+									type: 'composedOf'
+								},
+								{
+									uid: '1005',
+									type: 'composedOf'
+								}
+							],
+							parent: '1001',
+							depth: 1,
+							relations: [
+								{
+									_id: '5c41e554bd81f31d5d778b3d',
+									children: [ '1004', '1005' ],
+									uid: '1003',
+									product: {
+										id: '1003',
+										name: 'item Cx1005',
+										description: 'item C'
+									},
+									links: [
+										{
+											uid: '1001',
 											type: 'usedIn'
 										},
 										{
-											_id: '5c45c0177bccff62b4c83e5f',
-											uid: 'Lx1006',
+											uid: '1004',
 											type: 'composedOf'
 										},
 										{
-											_id: '5c45c0657bccff62b4c83e62',
-											uid: 'Lx1007',
-											type: 'composedOf'
-										},
-										{
-											_id: '5c45c0a07bccff62b4c83e65',
-											uid: 'Lx1008',
+											uid: '1005',
 											type: 'composedOf'
 										}
 									],
-									parent: 'Lx1003',
-									__v: 0,
+									parent: '1001',
 									depth: 2,
 									relations: []
 								}
@@ -788,164 +1294,218 @@ export class AppComponent {
 					]
 				},
 				{
-					_id: '5c45c1ba7bccff62b4c83e66',
-					timestamp: '2019-01-21T11:41:31.921Z',
-					children: [ 'Lx2001', 'Lx2002' ],
-					uid: 'Lx2000',
+					_id: '5c41e554bd81f31d5d778b3f',
+					children: [ '1006', '1007', '1009', '1010', '1011', '1012', '1013' ],
+					uid: '1004',
 					product: {
-						id: '2000',
-						name: 'WD HDD 1B CPU Chip dual core',
-						description: 'Western Digital Darddisk'
+						id: '1004',
+						name: 'item Dx1004',
+						description: 'item D'
 					},
 					links: [
 						{
-							_id: '5c45c1ba7bccff62b4c83e67',
-							uid: 'Lx1000',
+							uid: '1003',
 							type: 'usedIn'
 						},
 						{
-							_id: '5c45c3777bccff62b4c83e6b',
-							uid: 'Lx2001',
+							uid: '1006',
 							type: 'composedOf'
 						},
 						{
-							_id: '5c45c3a87bccff62b4c83e6e',
-							uid: 'Lx2002',
+							uid: '1007',
+							type: 'composedOf'
+						},
+						{
+							_id: '5c4b1e5169f7e00047f5f1ab',
+							uid: '1009',
+							type: 'composedOf'
+						},
+						{
+							_id: '5c4b1e7e69f7e00047f5f1ae',
+							uid: '1010',
+							type: 'composedOf'
+						},
+						{
+							_id: '5c4b1e9f69f7e00047f5f1b1',
+							uid: '1011',
+							type: 'composedOf'
+						},
+						{
+							_id: '5c4b1eba69f7e00047f5f1b4',
+							uid: '1012',
+							type: 'composedOf'
+						},
+						{
+							_id: '5c4b1ec969f7e00047f5f1b7',
+							uid: '1013',
 							type: 'composedOf'
 						}
 					],
-					parent: 'Lx1000',
-					__v: 0,
+					parent: '1003',
 					depth: 0,
 					relations: [
 						{
-							_id: '5c45c3777bccff62b4c83e69',
-							timestamp: '2019-01-21T11:41:31.921Z',
-							children: [],
-							uid: 'Lx2001',
+							_id: '5c41e554bd81f31d5d778b3d',
+							children: [ '1004', '1005' ],
+							uid: '1003',
 							product: {
-								id: '2001',
-								name: 'Platter',
-								description: 'platter Disk'
+								id: '1003',
+								name: 'item Cx1003',
+								description: 'item C'
 							},
 							links: [
 								{
-									_id: '5c45c3777bccff62b4c83e6a',
-									uid: 'Lx2000',
+									uid: '1001',
 									type: 'usedIn'
+								},
+								{
+									uid: '1004',
+									type: 'composedOf'
+								},
+								{
+									uid: '1005',
+									type: 'composedOf'
 								}
 							],
-							parent: 'Lx2000',
-							__v: 0,
+							parent: '1001',
 							depth: 1,
-							relations: []
+							relations: [
+								{
+									_id: '5c41e554bd81f31d5d778b3d',
+									children: [ '1004', '1005' ],
+									uid: '1003',
+									product: {
+										id: '1003',
+										name: 'item Cx1005',
+										description: 'item C'
+									},
+									links: [
+										{
+											uid: '1001',
+											type: 'usedIn'
+										},
+										{
+											uid: '1004',
+											type: 'composedOf'
+										},
+										{
+											uid: '1005',
+											type: 'composedOf'
+										}
+									],
+									parent: '1001',
+									depth: 2,
+									relations: []
+								}
+							]
+						}
+					]
+				},
+				{
+					_id: '5c41e554bd81f31d5d778b3f',
+					children: [ '1006', '1007', '1009', '1010', '1011', '1012', '1013' ],
+					uid: '1004',
+					product: {
+						id: '1004',
+						name: 'item Dx1004',
+						description: 'item D'
+					},
+					links: [
+						{
+							uid: '1003',
+							type: 'usedIn'
 						},
 						{
-							_id: '5c45c3777bccff62b4c83e69',
-							timestamp: '2019-01-21T11:41:31.921Z',
-							children: [],
-							uid: 'Lx2001',
-							product: {
-								id: '2001',
-								name: 'Platter',
-								description: 'platter Disk'
-							},
-							links: [
-								{
-									_id: '5c45c3777bccff62b4c83e6a',
-									uid: 'Lx2000',
-									type: 'usedIn'
-								}
-							],
-							parent: 'Lx2000',
-							__v: 0,
-							depth: 1,
-							relations: []
+							uid: '1006',
+							type: 'composedOf'
 						},
 						{
-							_id: '5c45c3a87bccff62b4c83e6c',
-							timestamp: '2019-01-21T11:41:31.921Z',
-							children: [],
-							uid: 'Lx2002',
+							uid: '1007',
+							type: 'composedOf'
+						},
+						{
+							_id: '5c4b1e5169f7e00047f5f1ab',
+							uid: '1009',
+							type: 'composedOf'
+						},
+						{
+							_id: '5c4b1e7e69f7e00047f5f1ae',
+							uid: '1010',
+							type: 'composedOf'
+						},
+						{
+							_id: '5c4b1e9f69f7e00047f5f1b1',
+							uid: '1011',
+							type: 'composedOf'
+						},
+						{
+							_id: '5c4b1eba69f7e00047f5f1b4',
+							uid: '1012',
+							type: 'composedOf'
+						},
+						{
+							_id: '5c4b1ec969f7e00047f5f1b7',
+							uid: '1013',
+							type: 'composedOf'
+						}
+					],
+					parent: '1003',
+					depth: 0,
+					relations: [
+						{
+							_id: '5c41e554bd81f31d5d778b3d',
+							children: [ '1004', '1005' ],
+							uid: '1003',
 							product: {
-								id: '2002',
-								name: 'RW Arm assembly',
-								description: 'RW Arm assembly'
+								id: '1003',
+								name: 'item Cx1003',
+								description: 'item C'
 							},
 							links: [
 								{
-									_id: '5c45c3a87bccff62b4c83e6d',
-									uid: 'Lx2000',
+									uid: '1001',
 									type: 'usedIn'
+								},
+								{
+									uid: '1004',
+									type: 'composedOf'
+								},
+								{
+									uid: '1005',
+									type: 'composedOf'
 								}
 							],
-							parent: 'Lx2000',
-							__v: 0,
+							parent: '1001',
 							depth: 1,
-							relations: [{
-                _id: '5c45c3a87bccff62b4c83e6c',
-                timestamp: '2019-01-21T11:41:31.921Z',
-                children: [],
-                uid: 'Lx2002',
-                product: {
-                  id: '2002',
-                  name: 'RW Arm assembly',
-                  description: 'RW Arm assembly'
-                },
-                links: [
-                  {
-                    _id: '5c45c3a87bccff62b4c83e6d',
-                    uid: 'Lx2000',
-                    type: 'usedIn'
-                  }
-                ],
-                parent: 'Lx2000',
-                __v: 0,
-                depth: 1,
-                relations: [{
-                  _id: '5c45c3a87bccff62b4c83e6c',
-                  timestamp: '2019-01-21T11:41:31.921Z',
-                  children: [],
-                  uid: 'Lx2002',
-                  product: {
-                    id: '2002',
-                    name: 'RW Arm assembly',
-                    description: 'RW Arm assembly'
-                  },
-                  links: [
-                    {
-                      _id: '5c45c3a87bccff62b4c83e6d',
-                      uid: 'Lx2000',
-                      type: 'usedIn'
-                    }
-                  ],
-                  parent: 'Lx2000',
-                  __v: 0,
-                  depth: 1,
-                  relations: [{
-                    _id: '5c45c3a87bccff62b4c83e6c',
-                    timestamp: '2019-01-21T11:41:31.921Z',
-                    children: [],
-                    uid: 'Lx2002',
-                    product: {
-                      id: '2002',
-                      name: 'RW Arm assembly',
-                      description: 'RW Arm assembly'
-                    },
-                    links: [
-                      {
-                        _id: '5c45c3a87bccff62b4c83e6d',
-                        uid: 'Lx2000',
-                        type: 'usedIn'
-                      }
-                    ],
-                    parent: 'Lx2000',
-                    __v: 0,
-                    depth: 1,
-                    relations: []
-                  }]
-                }]
-              }]
+							relations: [
+								{
+									_id: '5c41e554bd81f31d5d778b3d',
+									children: [ '1004', '1005' ],
+									uid: '1003',
+									product: {
+										id: '1003',
+										name: 'item Cx1005',
+										description: 'item C'
+									},
+									links: [
+										{
+											uid: '1001',
+											type: 'usedIn'
+										},
+										{
+											uid: '1004',
+											type: 'composedOf'
+										},
+										{
+											uid: '1005',
+											type: 'composedOf'
+										}
+									],
+									parent: '1001',
+									depth: 2,
+									relations: []
+								}
+							]
 						}
 					]
 				}
@@ -954,13 +1514,842 @@ export class AppComponent {
 		}
 	];
 
+	composedOf = [
+		{
+			uid: '1065cbf6-46e2-ea12-3095-14e6bc8208ad',
+			timestamp: '2019-02-12T10:57:12.662Z',
+			asset: {
+				id: '1000',
+				name: 'HP Pavilion dv6 laptop',
+				description: 'I5 2ng gen laptop'
+			},
+			graphLinks: [
+				{
+					_id: '5c63c62bdf01a8158c9afdf7',
+					links: {
+						usedIn: [ 'a92359c2-d15f-d7e4-fd4c-10c1f98299b3' ],
+						composedOf: []
+					},
+					timestamp: '2019-02-13T07:14:12.028Z',
+					assetModel: 'any',
+					tagId: '1012',
+					asset: {
+						id: '1012',
+						name: 'sub asset',
+						description: 'sub asset'
+					},
+					uid: '26a8140a-298a-ba45-bba0-07eb046f34e9',
+					linksInfo: [],
+					location: [],
+					__v: 0,
+					depth: 1,
+					relations: []
+				},
+				{
+					_id: '5c62b91b77894b36bae2475c',
+					links: {
+						usedIn: [ '1065cbf6-46e2-ea12-3095-14e6bc8208ad' ],
+						composedOf: []
+					},
+					timestamp: '2019-02-12T12:13:33.953Z',
+					tagId: '114',
+					asset: {
+						id: '1004',
+						name: 'Nvidia Graphics MX150 8GB',
+						description: 'Nvidia MX150'
+					},
+					uid: '67e21c29-2712-580f-0e9a-dd96fe24747d',
+					linksInfo: [],
+					__v: 0,
+					depth: 0,
+					relations: [	{
+						_id: '5c62b91b77894b36bae2475c',
+						links: {
+							usedIn: [ '1065cbf6-46e2-ea12-3095-14e6bc8208ad' ],
+							composedOf: []
+						},
+						timestamp: '2019-02-12T12:13:33.953Z',
+						tagId: '114',
+						asset: {
+							id: '1004',
+							name: 'Nvidia Graphics MX150 8GB',
+							description: 'Nvidia MX150'
+						},
+						uid: '67e21c29-2712-580f-0e9a-dd96fe24747d',
+						linksInfo: [],
+						__v: 0,
+						depth: 0,
+						relations: []
+					}]
+				},
+				{
+					_id: '5c62b8b453f4c836b4f9fa09',
+					links: {
+						usedIn: [ '1065cbf6-46e2-ea12-3095-14e6bc8208ad' ],
+						composedOf: []
+					},
+					timestamp: '2019-02-12T12:13:33.905Z',
+					tagId: '113',
+					asset: {
+						id: '1003',
+						name: 'Intel i7 cpu',
+						description: '8 gen, Quad core'
+					},
+					uid: 'c7b3d3dc-0588-b266-0110-12d0db43c150',
+					linksInfo: [],
+					__v: 0,
+					depth: 0,
+					relations: []
+				},
+				{
+					_id: '5c62b5ecad0f4f34cba6b5d4',
+					links: {
+						usedIn: [ '1065cbf6-46e2-ea12-3095-14e6bc8208ad' ],
+						composedOf: [ '26a8140a-298a-ba45-bba0-07eb046f34e9' ]
+					},
+					timestamp: '2019-02-12T12:02:30.362Z',
+					tagId: '112',
+					asset: {
+						id: '1002',
+						name: 'Samsung ddr3 ram 8gb',
+						description: 'ddr3'
+					},
+					uid: 'a92359c2-d15f-d7e4-fd4c-10c1f98299b3',
+					linksInfo: [],
+					__v: 0,
+					depth: 0,
+					relations: [
+						{
+							_id: '5c63c62bdf01a8158c9afdf7',
+							links: {
+								usedIn: [ 'a92359c2-d15f-d7e4-fd4c-10c1f98299b3' ],
+								composedOf: []
+							},
+							timestamp: '2019-02-13T07:14:12.028Z',
+							assetModel: 'any',
+							tagId: '1012',
+							asset: {
+								id: '1012',
+								name: 'sub asset',
+								description: 'sub asset'
+							},
+							uid: '26a8140a-298a-ba45-bba0-07eb046f34e9',
+							linksInfo: [],
+							location: [],
+							__v: 0,
+							depth: 1,
+							relations: []
+						}
+					]
+				}
+			],
+			links: {
+				usedIn: [
+					'a8db0626-028f-03ef-3e60-572988873a41',
+					'bd764cf0-c5af-017c-087c-c930e3bd9a5b',
+					'a289d350-f44a-6b8e-9316-630803b3ed2f',
+					'a74cb15f-c184-b3c5-a67f-7e87e9c9d9f0'
+				],
+				composedOf: [
+					'a92359c2-d15f-d7e4-fd4c-10c1f98299b3',
+					'c7b3d3dc-0588-b266-0110-12d0db43c150',
+					'67e21c29-2712-580f-0e9a-dd96fe24747d'
+				]
+			},
+			relations: [
+				{
+					_id: '5c62b5ecad0f4f34cba6b5d4',
+					links: {
+						usedIn: [ '1065cbf6-46e2-ea12-3095-14e6bc8208ad' ],
+						composedOf: [ '26a8140a-298a-ba45-bba0-07eb046f34e9' ]
+					},
+					timestamp: '2019-02-12T12:02:30.362Z',
+					tagId: '112',
+					asset: {
+						id: '1002',
+						name: 'Samsung ddr3 ram 8gb',
+						description: 'ddr3'
+					},
+					uid: 'a92359c2-d15f-d7e4-fd4c-10c1f98299b3',
+					linksInfo: [],
+					__v: 0,
+					depth: 0,
+					relations: [
+						{
+							_id: '5c63c62bdf01a8158c9afdf7',
+							links: {
+								usedIn: [ 'a92359c2-d15f-d7e4-fd4c-10c1f98299b3' ],
+								composedOf: []
+							},
+							timestamp: '2019-02-13T07:14:12.028Z',
+							assetModel: 'any',
+							tagId: '1012',
+							asset: {
+								id: '1012',
+								name: 'sub asset',
+								description: 'sub asset'
+							},
+							uid: '26a8140a-298a-ba45-bba0-07eb046f34e9',
+							linksInfo: [],
+							location: [],
+							__v: 0,
+							depth: 1,
+							relations: [{
+								_id: '5c62b5ecad0f4f34cba6b5d4',
+								links: {
+									usedIn: [ '1065cbf6-46e2-ea12-3095-14e6bc8208ad' ],
+									composedOf: [ '26a8140a-298a-ba45-bba0-07eb046f34e9' ]
+								},
+								timestamp: '2019-02-12T12:02:30.362Z',
+								tagId: '112',
+								asset: {
+									id: '1002',
+									name: 'Samsung ddr3 ram 8gb',
+									description: 'ddr3'
+								},
+								uid: 'a92359c2-d15f-d7e4-fd4c-10c1f98299b3',
+								linksInfo: [],
+								__v: 0,
+								depth: 0,
+								relations: [
+									{
+										_id: '5c63c62bdf01a8158c9afdf7',
+										links: {
+											usedIn: [ 'a92359c2-d15f-d7e4-fd4c-10c1f98299b3' ],
+											composedOf: []
+										},
+										timestamp: '2019-02-13T07:14:12.028Z',
+										assetModel: 'any',
+										tagId: '1012',
+										asset: {
+											id: '1012',
+											name: 'sub asset',
+											description: 'sub asset'
+										},
+										uid: '26a8140a-298a-ba45-bba0-07eb046f34e9',
+										linksInfo: [],
+										location: [],
+										__v: 0,
+										depth: 1,
+										relations: []
+									}
+								]
+							}]
+						}
+					]
+				},
+				{
+					_id: '5c62b8b453f4c836b4f9fa09',
+					links: {
+						usedIn: [ '1065cbf6-46e2-ea12-3095-14e6bc8208ad' ],
+						composedOf: []
+					},
+					timestamp: '2019-02-12T12:13:33.905Z',
+					tagId: '113',
+					asset: {
+						id: '1003',
+						name: 'Intel i7 cpu',
+						description: '8 gen, Quad core'
+					},
+					uid: 'c7b3d3dc-0588-b266-0110-12d0db43c150',
+					linksInfo: [],
+					__v: 0,
+					depth: 0,
+					relations: [{
+						_id: '5c62b5ecad0f4f34cba6b5d4',
+						links: {
+							usedIn: [ '1065cbf6-46e2-ea12-3095-14e6bc8208ad' ],
+							composedOf: [ '26a8140a-298a-ba45-bba0-07eb046f34e9' ]
+						},
+						timestamp: '2019-02-12T12:02:30.362Z',
+						tagId: '112',
+						asset: {
+							id: '1002',
+							name: 'Samsung ddr3 ram 8gb',
+							description: 'ddr3'
+						},
+						uid: 'a92359c2-d15f-d7e4-fd4c-10c1f98299b3',
+						linksInfo: [],
+						__v: 0,
+						depth: 0,
+						relations: [
+							{
+								_id: '5c63c62bdf01a8158c9afdf7',
+								links: {
+									usedIn: [ 'a92359c2-d15f-d7e4-fd4c-10c1f98299b3' ],
+									composedOf: []
+								},
+								timestamp: '2019-02-13T07:14:12.028Z',
+								assetModel: 'any',
+								tagId: '1012',
+								asset: {
+									id: '1012',
+									name: 'sub asset',
+									description: 'sub asset'
+								},
+								uid: '26a8140a-298a-ba45-bba0-07eb046f34e9',
+								linksInfo: [],
+								location: [],
+								__v: 0,
+								depth: 1,
+								relations: []
+							}
+						]
+					},
+					{
+						_id: '5c62b5ecad0f4f34cba6b5d4',
+						links: {
+							usedIn: [ '1065cbf6-46e2-ea12-3095-14e6bc8208ad' ],
+							composedOf: [ '26a8140a-298a-ba45-bba0-07eb046f34e9' ]
+						},
+						timestamp: '2019-02-12T12:02:30.362Z',
+						tagId: '112',
+						asset: {
+							id: '1002',
+							name: 'Samsung ddr3 ram 8gb',
+							description: 'ddr3'
+						},
+						uid: 'a92359c2-d15f-d7e4-fd4c-10c1f98299b3',
+						linksInfo: [],
+						__v: 0,
+						depth: 0,
+						relations: [
+							{
+								_id: '5c63c62bdf01a8158c9afdf7',
+								links: {
+									usedIn: [ 'a92359c2-d15f-d7e4-fd4c-10c1f98299b3' ],
+									composedOf: []
+								},
+								timestamp: '2019-02-13T07:14:12.028Z',
+								assetModel: 'any',
+								tagId: '1012',
+								asset: {
+									id: '1012',
+									name: 'sub asset',
+									description: 'sub asset'
+								},
+								uid: '26a8140a-298a-ba45-bba0-07eb046f34e9',
+								linksInfo: [],
+								location: [],
+								__v: 0,
+								depth: 1,
+								relations: []
+							}
+						]
+					},
+					{
+						_id: '5c62b5ecad0f4f34cba6b5d4',
+						links: {
+							usedIn: [ '1065cbf6-46e2-ea12-3095-14e6bc8208ad' ],
+							composedOf: [ '26a8140a-298a-ba45-bba0-07eb046f34e9' ]
+						},
+						timestamp: '2019-02-12T12:02:30.362Z',
+						tagId: '112',
+						asset: {
+							id: '1002',
+							name: 'Samsung ddr3 ram 8gb',
+							description: 'ddr3'
+						},
+						uid: 'a92359c2-d15f-d7e4-fd4c-10c1f98299b3',
+						linksInfo: [],
+						__v: 0,
+						depth: 0,
+						relations: [
+							{
+								_id: '5c63c62bdf01a8158c9afdf7',
+								links: {
+									usedIn: [ 'a92359c2-d15f-d7e4-fd4c-10c1f98299b3' ],
+									composedOf: []
+								},
+								timestamp: '2019-02-13T07:14:12.028Z',
+								assetModel: 'any',
+								tagId: '1012',
+								asset: {
+									id: '1012',
+									name: 'sub asset',
+									description: 'sub asset'
+								},
+								uid: '26a8140a-298a-ba45-bba0-07eb046f34e9',
+								linksInfo: [],
+								location: [],
+								__v: 0,
+								depth: 1,
+								relations: []
+							}
+						]
+					},
+					{
+						_id: '5c62b5ecad0f4f34cba6b5d4',
+						links: {
+							usedIn: [ '1065cbf6-46e2-ea12-3095-14e6bc8208ad' ],
+							composedOf: [ '26a8140a-298a-ba45-bba0-07eb046f34e9' ]
+						},
+						timestamp: '2019-02-12T12:02:30.362Z',
+						tagId: '112',
+						asset: {
+							id: '1002',
+							name: 'Samsung ddr3 ram 8gb',
+							description: 'ddr3'
+						},
+						uid: 'a92359c2-d15f-d7e4-fd4c-10c1f98299b3',
+						linksInfo: [],
+						__v: 0,
+						depth: 0,
+						relations: [
+							{
+								_id: '5c63c62bdf01a8158c9afdf7',
+								links: {
+									usedIn: [ 'a92359c2-d15f-d7e4-fd4c-10c1f98299b3' ],
+									composedOf: []
+								},
+								timestamp: '2019-02-13T07:14:12.028Z',
+								assetModel: 'any',
+								tagId: '1012',
+								asset: {
+									id: '1012',
+									name: 'sub asset',
+									description: 'sub asset'
+								},
+								uid: '26a8140a-298a-ba45-bba0-07eb046f34e9',
+								linksInfo: [],
+								location: [],
+								__v: 0,
+								depth: 1,
+								relations: []
+							}
+						]
+					}]
+				},
+				{
+					_id: '5c62b91b77894b36bae2475c',
+					links: {
+						usedIn: [ '1065cbf6-46e2-ea12-3095-14e6bc8208ad' ],
+						composedOf: []
+					},
+					timestamp: '2019-02-12T12:13:33.953Z',
+					tagId: '114',
+					asset: {
+						id: '1004',
+						name: 'Nvidia Graphics MX150 8GB',
+						description: 'Nvidia MX150'
+					},
+					uid: '67e21c29-2712-580f-0e9a-dd96fe24747d',
+					linksInfo: [],
+					__v: 0,
+					depth: 0,
+					relations: []
+				},
+				{
+					_id: '5c62b91b77894b36bae2475c',
+					links: {
+						usedIn: [ '1065cbf6-46e2-ea12-3095-14e6bc8208ad' ],
+						composedOf: []
+					},
+					timestamp: '2019-02-12T12:13:33.953Z',
+					tagId: '114',
+					asset: {
+						id: '1004',
+						name: 'Nvidia Graphics MX150 8GB',
+						description: 'Nvidia MX150'
+					},
+					uid: '67e21c29-2712-580f-0e9a-dd96fe24747d',
+					linksInfo: [],
+					__v: 0,
+					depth: 0,
+					relations: [{
+						_id: '5c62b91b77894b36bae2475c',
+						links: {
+							usedIn: [ '1065cbf6-46e2-ea12-3095-14e6bc8208ad' ],
+							composedOf: []
+						},
+						timestamp: '2019-02-12T12:13:33.953Z',
+						tagId: '114',
+						asset: {
+							id: '1004',
+							name: 'Nvidia Graphics MX150 8GB',
+							description: 'Nvidia MX150'
+						},
+						uid: '67e21c29-2712-580f-0e9a-dd96fe24747d',
+						linksInfo: [],
+						__v: 0,
+						depth: 0,
+						relations: []
+					},{
+						_id: '5c62b91b77894b36bae2475c',
+						links: {
+							usedIn: [ '1065cbf6-46e2-ea12-3095-14e6bc8208ad' ],
+							composedOf: []
+						},
+						timestamp: '2019-02-12T12:13:33.953Z',
+						tagId: '114',
+						asset: {
+							id: '1004',
+							name: 'Nvidia Graphics MX150 8GB',
+							description: 'Nvidia MX150'
+						},
+						uid: '67e21c29-2712-580f-0e9a-dd96fe24747d',
+						linksInfo: [],
+						__v: 0,
+						depth: 0,
+						relations: []
+					}]
+				},
+				{
+					_id: '5c62b91b77894b36bae2475c',
+					links: {
+						usedIn: [ '1065cbf6-46e2-ea12-3095-14e6bc8208ad' ],
+						composedOf: []
+					},
+					timestamp: '2019-02-12T12:13:33.953Z',
+					tagId: '114',
+					asset: {
+						id: '1004',
+						name: 'Nvidia Graphics MX150 8GB',
+						description: 'Nvidia MX150'
+					},
+					uid: '67e21c29-2712-580f-0e9a-dd96fe24747d',
+					linksInfo: [],
+					__v: 0,
+					depth: 0,
+					relations: [{
+						_id: '5c62b91b77894b36bae2475c',
+						links: {
+							usedIn: [ '1065cbf6-46e2-ea12-3095-14e6bc8208ad' ],
+							composedOf: []
+						},
+						timestamp: '2019-02-12T12:13:33.953Z',
+						tagId: '114',
+						asset: {
+							id: '1004',
+							name: 'Nvidia Graphics MX150 8GB',
+							description: 'Nvidia MX150'
+						},
+						uid: '67e21c29-2712-580f-0e9a-dd96fe24747d',
+						linksInfo: [],
+						__v: 0,
+						depth: 0,
+						relations: []
+					},{
+						_id: '5c62b91b77894b36bae2475c',
+						links: {
+							usedIn: [ '1065cbf6-46e2-ea12-3095-14e6bc8208ad' ],
+							composedOf: []
+						},
+						timestamp: '2019-02-12T12:13:33.953Z',
+						tagId: '114',
+						asset: {
+							id: '1004',
+							name: 'Nvidia Graphics MX150 8GB',
+							description: 'Nvidia MX150'
+						},
+						uid: '67e21c29-2712-580f-0e9a-dd96fe24747d',
+						linksInfo: [],
+						__v: 0,
+						depth: 0,
+						relations: []
+					},
+					{
+						_id: '5c62b91b77894b36bae2475c',
+						links: {
+							usedIn: [ '1065cbf6-46e2-ea12-3095-14e6bc8208ad' ],
+							composedOf: []
+						},
+						timestamp: '2019-02-12T12:13:33.953Z',
+						tagId: '114',
+						asset: {
+							id: '1004',
+							name: 'Nvidia Graphics MX150 8GB',
+							description: 'Nvidia MX150'
+						},
+						uid: '67e21c29-2712-580f-0e9a-dd96fe24747d',
+						linksInfo: [],
+						__v: 0,
+						depth: 0,
+						relations: [{
+							_id: '5c62b91b77894b36bae2475c',
+							links: {
+								usedIn: [ '1065cbf6-46e2-ea12-3095-14e6bc8208ad' ],
+								composedOf: []
+							},
+							timestamp: '2019-02-12T12:13:33.953Z',
+							tagId: '114',
+							asset: {
+								id: '1004',
+								name: 'Nvidia Graphics MX150 8GB',
+								description: 'Nvidia MX150'
+							},
+							uid: '67e21c29-2712-580f-0e9a-dd96fe24747d',
+							linksInfo: [],
+							__v: 0,
+							depth: 0,
+							relations: []
+						}]
+					},
+					{
+						_id: '5c62b91b77894b36bae2475c',
+						links: {
+							usedIn: [ '1065cbf6-46e2-ea12-3095-14e6bc8208ad' ],
+							composedOf: []
+						},
+						timestamp: '2019-02-12T12:13:33.953Z',
+						tagId: '114',
+						asset: {
+							id: '1004',
+							name: 'Nvidia Graphics MX150 8GB',
+							description: 'Nvidia MX150'
+						},
+						uid: '67e21c29-2712-580f-0e9a-dd96fe24747d',
+						linksInfo: [],
+						__v: 0,
+						depth: 0,
+						relations: [{
+							_id: '5c62b91b77894b36bae2475c',
+							links: {
+								usedIn: [ '1065cbf6-46e2-ea12-3095-14e6bc8208ad' ],
+								composedOf: []
+							},
+							timestamp: '2019-02-12T12:13:33.953Z',
+							tagId: '114',
+							asset: {
+								id: '1004',
+								name: 'Nvidia Graphics MX150 8GB',
+								description: 'Nvidia MX150'
+							},
+							uid: '67e21c29-2712-580f-0e9a-dd96fe24747d',
+							linksInfo: [],
+							__v: 0,
+							depth: 0,
+							relations: []
+						}]
+					}]
+				}
+			],
+			depth: -1
+		}
+	];
+	usedIn = [
+		{
+			uid: '1065cbf6-46e2-ea12-3095-14e6bc8208ad',
+			timestamp: '2019-02-12T10:57:12.662Z',
+			asset: {
+				id: '1000',
+				name: 'HP Pavilion dv6 laptop',
+				description: 'I5 2ng gen laptop'
+			},
+			graphLinks: [
+				{
+					_id: '5c63ba81370ed30ec707bc2b',
+					links: {
+						usedIn: [],
+						composedOf: [ '1065cbf6-46e2-ea12-3095-14e6bc8208ad' ]
+					},
+					timestamp: '2019-02-13T06:33:09.359Z',
+					assetModel: 'any',
+					tagId: '996',
+					asset: {
+						id: '96',
+						name: 'Laptop Batch4',
+						description: 'Batch4'
+					},
+					uid: 'a74cb15f-c184-b3c5-a67f-7e87e9c9d9f0',
+					linksInfo: [],
+					location: [],
+					__v: 0,
+					depth: 0,
+					relations: []
+				},
+				{
+					_id: '5c62c2b98618aa39899f5e08',
+					links: {
+						usedIn: [],
+						composedOf: [ '1065cbf6-46e2-ea12-3095-14e6bc8208ad' ]
+					},
+					timestamp: '2019-02-12T12:55:25.600Z',
+					tagId: '98',
+					asset: {
+						id: '998',
+						name: 'Laptop Batch2',
+						description: 'Batch2'
+					},
+					uid: 'bd764cf0-c5af-017c-087c-c930e3bd9a5b',
+					linksInfo: [],
+					__v: 0,
+					depth: 0,
+					relations: []
+				},
+				{
+					_id: '5c62c2cacc058f39838175d7',
+					links: {
+						usedIn: [],
+						composedOf: [ '1065cbf6-46e2-ea12-3095-14e6bc8208ad' ]
+					},
+					timestamp: '2019-02-12T12:55:25.761Z',
+					tagId: '99',
+					asset: {
+						id: '999',
+						name: 'Laptop Batch3',
+						description: 'Batch3'
+					},
+					uid: 'a289d350-f44a-6b8e-9316-630803b3ed2f',
+					linksInfo: [],
+					__v: 0,
+					depth: 0,
+					relations: []
+				},
+				{
+					_id: '5c62c26f7164663997d79713',
+					links: {
+						usedIn: [],
+						composedOf: [ '1065cbf6-46e2-ea12-3095-14e6bc8208ad' ]
+					},
+					timestamp: '2019-02-12T12:55:25.323Z',
+					tagId: '97',
+					asset: {
+						id: '997',
+						name: 'Laptop Batch1',
+						description: 'Batch1'
+					},
+					uid: 'a8db0626-028f-03ef-3e60-572988873a41',
+					linksInfo: [],
+					__v: 0,
+					depth: 0,
+					relations: []
+				}
+			],
+			links: {
+				usedIn: [
+					'a8db0626-028f-03ef-3e60-572988873a41',
+					'bd764cf0-c5af-017c-087c-c930e3bd9a5b',
+					'a289d350-f44a-6b8e-9316-630803b3ed2f',
+					'a74cb15f-c184-b3c5-a67f-7e87e9c9d9f0'
+				],
+				composedOf: [
+					'a92359c2-d15f-d7e4-fd4c-10c1f98299b3',
+					'c7b3d3dc-0588-b266-0110-12d0db43c150',
+					'67e21c29-2712-580f-0e9a-dd96fe24747d'
+				]
+			},
+			relations: [
+				{
+					_id: '5c62c26f7164663997d79713',
+					links: {
+						usedIn: [],
+						composedOf: [ '1065cbf6-46e2-ea12-3095-14e6bc8208ad' ]
+					},
+					timestamp: '2019-02-12T12:55:25.323Z',
+					tagId: '97',
+					asset: {
+						id: '997',
+						name: 'Laptop Batch1',
+						description: 'Batch1'
+					},
+					uid: 'a8db0626-028f-03ef-3e60-572988873a41',
+					linksInfo: [],
+					__v: 0,
+					depth: 0,
+					relations: []
+				},
+				{
+					_id: '5c62c2b98618aa39899f5e08',
+					links: {
+						usedIn: [],
+						composedOf: [ '1065cbf6-46e2-ea12-3095-14e6bc8208ad' ]
+					},
+					timestamp: '2019-02-12T12:55:25.600Z',
+					tagId: '98',
+					asset: {
+						id: '998',
+						name: 'Laptop Batch2',
+						description: 'Batch2'
+					},
+					uid: 'bd764cf0-c5af-017c-087c-c930e3bd9a5b',
+					linksInfo: [],
+					__v: 0,
+					depth: 0,
+					relations: []
+				},
+				{
+					_id: '5c62c2cacc058f39838175d7',
+					links: {
+						usedIn: [],
+						composedOf: [ '1065cbf6-46e2-ea12-3095-14e6bc8208ad' ]
+					},
+					timestamp: '2019-02-12T12:55:25.761Z',
+					tagId: '99',
+					asset: {
+						id: '999',
+						name: 'Laptop Batch3',
+						description: 'Batch3'
+					},
+					uid: 'a289d350-f44a-6b8e-9316-630803b3ed2f',
+					linksInfo: [],
+					__v: 0,
+					depth: 0,
+					relations: []
+				},
+				{
+					_id: '5c63ba81370ed30ec707bc2b',
+					links: {
+						usedIn: [],
+						composedOf: [ '1065cbf6-46e2-ea12-3095-14e6bc8208ad' ]
+					},
+					timestamp: '2019-02-13T06:33:09.359Z',
+					assetModel: 'any',
+					tagId: '996',
+					asset: {
+						id: '96',
+						name: 'Laptop Batch4',
+						description: 'Batch4'
+					},
+					uid: 'a74cb15f-c184-b3c5-a67f-7e87e9c9d9f0',
+					linksInfo: [],
+					location: [],
+					__v: 0,
+					depth: 0,
+					relations: []
+				}
+			],
+			depth: -1
+		}
+	];
+	selected = '1';
+	options = [
+		{
+			name: 'Composed of',
+			id: 'ComposedOf',
+			value: '0'
+		},
+		{
+			name: 'Used In',
+			id: 'UsedIn',
+			value: '1'
+		},
+		{
+			name: 'Both',
+			id: 'Both',
+			value: '2'
+		}
+	];
+	relation: any;
 
 	constructor() {
 		const imageUrl =
-		'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQOuon9Cl1lIwDhwfwdNxTAa-H3b0dhuMUt6NdxchZz4bO4yZ2A';
-	this.getBase64ImageFromURL(imageUrl).subscribe((base64data) => {
-		this.base64Image = 'data:image/jpg;base64,' + base64data;
-	});
+			'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQOuon9Cl1lIwDhwfwdNxTAa-H3b0dhuMUt6NdxchZz4bO4yZ2A';
+		this.getBase64ImageFromURL(imageUrl).subscribe((base64data) => {
+			this.base64Image = 'data:image/jpg;base64,' + base64data;
+		});
+		this.action(1);
+	}
+
+	action(e) {
+		console.log('data', e);
+		this.relation = e;
+		if (e == 0) {
+			this.response = this.composedOf;
+		}
+		if (e == 1) {
+			this.response = this.usedIn;
+		}
 	}
 
 	getBase64ImageFromURL(url: string) {
@@ -1013,8 +2402,8 @@ export class AppComponent {
 	}
 
 	downloadPdf() {
-    const data = (<SVGSVGElement><unknown>document.getElementById('treedata'));
-	console.log('response', '<p>' + data + '</p>' );
+		const data = <SVGSVGElement>(<unknown>document.getElementById('treedata'));
+		console.log('response', '<p>' + data + '</p>');
 
 		html2canvas(data).then((canvas) => {
 			const imgWidth = 208;
@@ -1039,17 +2428,7 @@ export class AppComponent {
 			const imgHeight = canvas.height * imgWidth / canvas.width;
 			const heightLeft = imgHeight;
 			const contentDataURL = canvas.toDataURL('image/png');
-			// const myWindow = window.open('', '', 'width=700, height=800');
-			// console.log('response', '<img src=" ' + contentDataURL + '">' );
 			const dataVal = '<img src=" ' + contentDataURL + '">';
-			// myWindow.document.write('<table> ' + dataVal + '</table>');
-			// myWindow.print();
-			// const WinPrint = window.open('', '', '');
-			// WinPrint.document.write('<p> ' + dataVal + '</p>');
-			// // WinPrint.document.close();
-			// // WinPrint.focus();
-			// WinPrint.print();
-			// WinPrint.close();
 			const WinPrint = window.open('', '', 'left=0,top=0,width=384,height=900,toolbar=0,scrollbars=0,status=0');
 			WinPrint.document.write('<html><head>');
 			WinPrint.document.write('<link rel="stylesheet" href="assets/css/print/normalize.css">');

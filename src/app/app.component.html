@@ -1,10 +1,12 @@
 <!--The content below is only a placeholder and can be replaced.-->
-<!-- <suku-tree [tree-data]="treeDataApi"></suku-tree>
-<span class=" fadownload mb-2 fa fa-download c-pointer" (click)="downloadPdf()"></span>
-<span class=" fadownload mb-2 fa fa-print c-pointer"  (click)="print()"></span> -->
-<suku-response></suku-response>
-<div class="col-sm-12">
-    <suku-add-widget>ADD WIDGET</suku-add-widget>
-    <suku-address-widget>ADDRESS WIDGET</suku-address-widget>
-    <suku-mail-widget>ADDRESS WIDGET</suku-mail-widget>
+<!-- <suku-select-input [options]="options" (sort)="action($event)"></suku-select-input> -->
+<div class="col d-flex justify-content-end" id="treeSelectOption">
+    <mat-form-field>
+        <mat-select id="treeOptions" [(value)]="selected" #temp (selectionChange)="action(temp.value)">
+            <mat-option id="{{option.id}}" value="{{option.value}}" *ngFor="let option of options;let i= index">{{option.name}}</mat-option>
+        </mat-select>
+    </mat-form-field>
+</div>
+<div class="col-sm-8">
+    <suku-tree [tree-data]="response" [relation]="relation"></suku-tree>
 </div>

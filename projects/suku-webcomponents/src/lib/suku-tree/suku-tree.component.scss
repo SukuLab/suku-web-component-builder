@@ -1,3 +1,4 @@
+
 /deep/.node text {
   font-size: 16px;
   font-family: 'Encode Sans', sans-serif;
@@ -10,6 +11,12 @@
   direction: rtl !important;
 }
 
+// /deep/.treeltr {
+//   width: 100%;
+//   overflow-x: scroll !important;
+//   direction: ltr !important;
+// }
+
 /deep/svg {
   overflow-x: scroll !important;
 }
@@ -17,3 +24,11 @@
 /deep/rect.dot {
   cursor: pointer !important;
 }
+
+// /deep/tspanrtl {
+//   text-anchor: end !important;
+// }
+
+// /deep/tspanltr {
+//   text-anchor: end !important;
+// }
