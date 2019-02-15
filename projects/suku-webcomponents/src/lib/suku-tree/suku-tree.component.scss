@@ -11,12 +11,6 @@
   direction: rtl !important;
 }
 
-// /deep/.treeltr {
-//   width: 100%;
-//   overflow-x: scroll !important;
-//   direction: ltr !important;
-// }
-
 /deep/svg {
   overflow-x: scroll !important;
 }
@@ -25,10 +19,3 @@
   cursor: pointer !important;
 }
 
-// /deep/tspanrtl {
-//   text-anchor: end !important;
-// }
-
-// /deep/tspanltr {
-//   text-anchor: end !important;
-// }
