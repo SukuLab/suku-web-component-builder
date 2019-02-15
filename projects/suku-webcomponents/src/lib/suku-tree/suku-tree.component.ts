@@ -200,8 +200,8 @@ export class SukuTreeComponent implements OnChanges {
 				}
 			})
 			.attr('fill', 'white')
-			.attr('stroke-width', '.9')
-			.attr('stroke', '#f2f2f2');
+			.attr('stroke-width', '.5')
+			.attr('stroke', '#c2c1c1ab');
 
 		node.insert('g', 'g').attr('class', 'dot');
 		// append dots to rect
