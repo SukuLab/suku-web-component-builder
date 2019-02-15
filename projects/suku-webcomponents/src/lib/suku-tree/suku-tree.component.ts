@@ -354,7 +354,7 @@ export class SukuTreeComponent implements OnChanges {
 			.attr('fill', 'none')
 			.attr('stroke', '#c2c1c1')
 			.attr('stroke-width', '2')
-			.attr('shape-rendering', 'crispEdges')
+			.attr('shape-rendering', 'geometricPrecision ')
 			.attr('d', (d) => {
 				const sourceX = d.source.x,
 					sourceY = d.source.y + this.boxWidth / 2,

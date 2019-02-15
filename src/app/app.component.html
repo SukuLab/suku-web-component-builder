@@ -6,6 +6,11 @@
             <mat-option id="{{option.id}}" value="{{option.value}}" *ngFor="let option of options;let i= index">{{option.name}}</mat-option>
         </mat-select>
     </mat-form-field>
+    <!-- <mat-slide-toggle
+          class="example-margin"
+          >
+        Slide me!
+     </mat-slide-toggle> -->
 </div>
 <div class="col-sm-8">
     <suku-tree [tree-data]="response" [relation]="relation"></suku-tree>
