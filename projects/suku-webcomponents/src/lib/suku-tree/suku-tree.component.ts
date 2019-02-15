@@ -69,7 +69,7 @@ export class SukuTreeComponent implements OnChanges {
 					}
 				}
 			});
-			this.width = (this.max + 1) * 300 - this.margin.left - this.margin.right;
+			this.width = (this.max + 1) * 320 - this.margin.left - this.margin.right;
 			this.height = (this.maxHeight + 1) * 155 - this.margin.top - this.margin.bottom;
 		} else {
 			nodes.forEach((d) => {
@@ -121,7 +121,7 @@ export class SukuTreeComponent implements OnChanges {
 
 		if (this.relation == 1) {
 			nodes.forEach((d) => {
-				d.y = this.width - (this.max + 1) * 180 - d.depth * -270; // reverse tree
+				d.y = this.width - (this.max + 1) * 250 - d.depth * -270; // reverse tree
 			});
 		} else {
 			nodes.forEach((d) => {

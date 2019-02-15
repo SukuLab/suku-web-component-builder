@@ -1562,25 +1562,27 @@ export class AppComponent {
 					linksInfo: [],
 					__v: 0,
 					depth: 0,
-					relations: [	{
-						_id: '5c62b91b77894b36bae2475c',
-						links: {
-							usedIn: [ '1065cbf6-46e2-ea12-3095-14e6bc8208ad' ],
-							composedOf: []
-						},
-						timestamp: '2019-02-12T12:13:33.953Z',
-						tagId: '114',
-						asset: {
-							id: '1004',
-							name: 'Nvidia Graphics MX150 8GB',
-							description: 'Nvidia MX150'
-						},
-						uid: '67e21c29-2712-580f-0e9a-dd96fe24747d',
-						linksInfo: [],
-						__v: 0,
-						depth: 0,
-						relations: []
-					}]
+					relations: [
+						{
+							_id: '5c62b91b77894b36bae2475c',
+							links: {
+								usedIn: [ '1065cbf6-46e2-ea12-3095-14e6bc8208ad' ],
+								composedOf: []
+							},
+							timestamp: '2019-02-12T12:13:33.953Z',
+							tagId: '114',
+							asset: {
+								id: '1004',
+								name: 'Nvidia Graphics MX150 8GB',
+								description: 'Nvidia MX150'
+							},
+							uid: '67e21c29-2712-580f-0e9a-dd96fe24747d',
+							linksInfo: [],
+							__v: 0,
+							depth: 0,
+							relations: []
+						}
+					]
 				},
 				{
 					_id: '5c62b8b453f4c836b4f9fa09',
@@ -1694,47 +1696,49 @@ export class AppComponent {
 							location: [],
 							__v: 0,
 							depth: 1,
-							relations: [{
-								_id: '5c62b5ecad0f4f34cba6b5d4',
-								links: {
-									usedIn: [ '1065cbf6-46e2-ea12-3095-14e6bc8208ad' ],
-									composedOf: [ '26a8140a-298a-ba45-bba0-07eb046f34e9' ]
-								},
-								timestamp: '2019-02-12T12:02:30.362Z',
-								tagId: '112',
-								asset: {
-									id: '1002',
-									name: 'Samsung ddr3 ram 8gb',
-									description: 'ddr3'
-								},
-								uid: 'a92359c2-d15f-d7e4-fd4c-10c1f98299b3',
-								linksInfo: [],
-								__v: 0,
-								depth: 0,
-								relations: [
-									{
-										_id: '5c63c62bdf01a8158c9afdf7',
-										links: {
-											usedIn: [ 'a92359c2-d15f-d7e4-fd4c-10c1f98299b3' ],
-											composedOf: []
-										},
-										timestamp: '2019-02-13T07:14:12.028Z',
-										assetModel: 'any',
-										tagId: '1012',
-										asset: {
-											id: '1012',
-											name: 'sub asset',
-											description: 'sub asset'
-										},
-										uid: '26a8140a-298a-ba45-bba0-07eb046f34e9',
-										linksInfo: [],
-										location: [],
-										__v: 0,
-										depth: 1,
-										relations: []
-									}
-								]
-							}]
+							relations: [
+								{
+									_id: '5c62b5ecad0f4f34cba6b5d4',
+									links: {
+										usedIn: [ '1065cbf6-46e2-ea12-3095-14e6bc8208ad' ],
+										composedOf: [ '26a8140a-298a-ba45-bba0-07eb046f34e9' ]
+									},
+									timestamp: '2019-02-12T12:02:30.362Z',
+									tagId: '112',
+									asset: {
+										id: '1002',
+										name: 'Samsung ddr3 ram 8gb',
+										description: 'ddr3'
+									},
+									uid: 'a92359c2-d15f-d7e4-fd4c-10c1f98299b3',
+									linksInfo: [],
+									__v: 0,
+									depth: 0,
+									relations: [
+										{
+											_id: '5c63c62bdf01a8158c9afdf7',
+											links: {
+												usedIn: [ 'a92359c2-d15f-d7e4-fd4c-10c1f98299b3' ],
+												composedOf: []
+											},
+											timestamp: '2019-02-13T07:14:12.028Z',
+											assetModel: 'any',
+											tagId: '1012',
+											asset: {
+												id: '1012',
+												name: 'sub asset',
+												description: 'sub asset'
+											},
+											uid: '26a8140a-298a-ba45-bba0-07eb046f34e9',
+											linksInfo: [],
+											location: [],
+											__v: 0,
+											depth: 1,
+											relations: []
+										}
+									]
+								}
+							]
 						}
 					]
 				},
@@ -1755,170 +1759,172 @@ export class AppComponent {
 					linksInfo: [],
 					__v: 0,
 					depth: 0,
-					relations: [{
-						_id: '5c62b5ecad0f4f34cba6b5d4',
-						links: {
-							usedIn: [ '1065cbf6-46e2-ea12-3095-14e6bc8208ad' ],
-							composedOf: [ '26a8140a-298a-ba45-bba0-07eb046f34e9' ]
+					relations: [
+						{
+							_id: '5c62b5ecad0f4f34cba6b5d4',
+							links: {
+								usedIn: [ '1065cbf6-46e2-ea12-3095-14e6bc8208ad' ],
+								composedOf: [ '26a8140a-298a-ba45-bba0-07eb046f34e9' ]
+							},
+							timestamp: '2019-02-12T12:02:30.362Z',
+							tagId: '112',
+							asset: {
+								id: '1002',
+								name: 'Samsung ddr3 ram 8gb',
+								description: 'ddr3'
+							},
+							uid: 'a92359c2-d15f-d7e4-fd4c-10c1f98299b3',
+							linksInfo: [],
+							__v: 0,
+							depth: 0,
+							relations: [
+								{
+									_id: '5c63c62bdf01a8158c9afdf7',
+									links: {
+										usedIn: [ 'a92359c2-d15f-d7e4-fd4c-10c1f98299b3' ],
+										composedOf: []
+									},
+									timestamp: '2019-02-13T07:14:12.028Z',
+									assetModel: 'any',
+									tagId: '1012',
+									asset: {
+										id: '1012',
+										name: 'sub asset',
+										description: 'sub asset'
+									},
+									uid: '26a8140a-298a-ba45-bba0-07eb046f34e9',
+									linksInfo: [],
+									location: [],
+									__v: 0,
+									depth: 1,
+									relations: []
+								}
+							]
 						},
-						timestamp: '2019-02-12T12:02:30.362Z',
-						tagId: '112',
-						asset: {
-							id: '1002',
-							name: 'Samsung ddr3 ram 8gb',
-							description: 'ddr3'
+						{
+							_id: '5c62b5ecad0f4f34cba6b5d4',
+							links: {
+								usedIn: [ '1065cbf6-46e2-ea12-3095-14e6bc8208ad' ],
+								composedOf: [ '26a8140a-298a-ba45-bba0-07eb046f34e9' ]
+							},
+							timestamp: '2019-02-12T12:02:30.362Z',
+							tagId: '112',
+							asset: {
+								id: '1002',
+								name: 'Samsung ddr3 ram 8gb',
+								description: 'ddr3'
+							},
+							uid: 'a92359c2-d15f-d7e4-fd4c-10c1f98299b3',
+							linksInfo: [],
+							__v: 0,
+							depth: 0,
+							relations: [
+								{
+									_id: '5c63c62bdf01a8158c9afdf7',
+									links: {
+										usedIn: [ 'a92359c2-d15f-d7e4-fd4c-10c1f98299b3' ],
+										composedOf: []
+									},
+									timestamp: '2019-02-13T07:14:12.028Z',
+									assetModel: 'any',
+									tagId: '1012',
+									asset: {
+										id: '1012',
+										name: 'sub asset',
+										description: 'sub asset'
+									},
+									uid: '26a8140a-298a-ba45-bba0-07eb046f34e9',
+									linksInfo: [],
+									location: [],
+									__v: 0,
+									depth: 1,
+									relations: []
+								}
+							]
 						},
-						uid: 'a92359c2-d15f-d7e4-fd4c-10c1f98299b3',
-						linksInfo: [],
-						__v: 0,
-						depth: 0,
-						relations: [
-							{
-								_id: '5c63c62bdf01a8158c9afdf7',
-								links: {
-									usedIn: [ 'a92359c2-d15f-d7e4-fd4c-10c1f98299b3' ],
-									composedOf: []
-								},
-								timestamp: '2019-02-13T07:14:12.028Z',
-								assetModel: 'any',
-								tagId: '1012',
-								asset: {
-									id: '1012',
-									name: 'sub asset',
-									description: 'sub asset'
-								},
-								uid: '26a8140a-298a-ba45-bba0-07eb046f34e9',
-								linksInfo: [],
-								location: [],
-								__v: 0,
-								depth: 1,
-								relations: []
-							}
-						]
-					},
-					{
-						_id: '5c62b5ecad0f4f34cba6b5d4',
-						links: {
-							usedIn: [ '1065cbf6-46e2-ea12-3095-14e6bc8208ad' ],
-							composedOf: [ '26a8140a-298a-ba45-bba0-07eb046f34e9' ]
+						{
+							_id: '5c62b5ecad0f4f34cba6b5d4',
+							links: {
+								usedIn: [ '1065cbf6-46e2-ea12-3095-14e6bc8208ad' ],
+								composedOf: [ '26a8140a-298a-ba45-bba0-07eb046f34e9' ]
+							},
+							timestamp: '2019-02-12T12:02:30.362Z',
+							tagId: '112',
+							asset: {
+								id: '1002',
+								name: 'Samsung ddr3 ram 8gb',
+								description: 'ddr3'
+							},
+							uid: 'a92359c2-d15f-d7e4-fd4c-10c1f98299b3',
+							linksInfo: [],
+							__v: 0,
+							depth: 0,
+							relations: [
+								{
+									_id: '5c63c62bdf01a8158c9afdf7',
+									links: {
+										usedIn: [ 'a92359c2-d15f-d7e4-fd4c-10c1f98299b3' ],
+										composedOf: []
+									},
+									timestamp: '2019-02-13T07:14:12.028Z',
+									assetModel: 'any',
+									tagId: '1012',
+									asset: {
+										id: '1012',
+										name: 'sub asset',
+										description: 'sub asset'
+									},
+									uid: '26a8140a-298a-ba45-bba0-07eb046f34e9',
+									linksInfo: [],
+									location: [],
+									__v: 0,
+									depth: 1,
+									relations: []
+								}
+							]
 						},
-						timestamp: '2019-02-12T12:02:30.362Z',
-						tagId: '112',
-						asset: {
-							id: '1002',
-							name: 'Samsung ddr3 ram 8gb',
-							description: 'ddr3'
-						},
-						uid: 'a92359c2-d15f-d7e4-fd4c-10c1f98299b3',
-						linksInfo: [],
-						__v: 0,
-						depth: 0,
-						relations: [
-							{
-								_id: '5c63c62bdf01a8158c9afdf7',
-								links: {
-									usedIn: [ 'a92359c2-d15f-d7e4-fd4c-10c1f98299b3' ],
-									composedOf: []
-								},
-								timestamp: '2019-02-13T07:14:12.028Z',
-								assetModel: 'any',
-								tagId: '1012',
-								asset: {
-									id: '1012',
-									name: 'sub asset',
-									description: 'sub asset'
-								},
-								uid: '26a8140a-298a-ba45-bba0-07eb046f34e9',
-								linksInfo: [],
-								location: [],
-								__v: 0,
-								depth: 1,
-								relations: []
-							}
-						]
-					},
-					{
-						_id: '5c62b5ecad0f4f34cba6b5d4',
-						links: {
-							usedIn: [ '1065cbf6-46e2-ea12-3095-14e6bc8208ad' ],
-							composedOf: [ '26a8140a-298a-ba45-bba0-07eb046f34e9' ]
-						},
-						timestamp: '2019-02-12T12:02:30.362Z',
-						tagId: '112',
-						asset: {
-							id: '1002',
-							name: 'Samsung ddr3 ram 8gb',
-							description: 'ddr3'
-						},
-						uid: 'a92359c2-d15f-d7e4-fd4c-10c1f98299b3',
-						linksInfo: [],
-						__v: 0,
-						depth: 0,
-						relations: [
-							{
-								_id: '5c63c62bdf01a8158c9afdf7',
-								links: {
-									usedIn: [ 'a92359c2-d15f-d7e4-fd4c-10c1f98299b3' ],
-									composedOf: []
-								},
-								timestamp: '2019-02-13T07:14:12.028Z',
-								assetModel: 'any',
-								tagId: '1012',
-								asset: {
-									id: '1012',
-									name: 'sub asset',
-									description: 'sub asset'
-								},
-								uid: '26a8140a-298a-ba45-bba0-07eb046f34e9',
-								linksInfo: [],
-								location: [],
-								__v: 0,
-								depth: 1,
-								relations: []
-							}
-						]
-					},
-					{
-						_id: '5c62b5ecad0f4f34cba6b5d4',
-						links: {
-							usedIn: [ '1065cbf6-46e2-ea12-3095-14e6bc8208ad' ],
-							composedOf: [ '26a8140a-298a-ba45-bba0-07eb046f34e9' ]
-						},
-						timestamp: '2019-02-12T12:02:30.362Z',
-						tagId: '112',
-						asset: {
-							id: '1002',
-							name: 'Samsung ddr3 ram 8gb',
-							description: 'ddr3'
-						},
-						uid: 'a92359c2-d15f-d7e4-fd4c-10c1f98299b3',
-						linksInfo: [],
-						__v: 0,
-						depth: 0,
-						relations: [
-							{
-								_id: '5c63c62bdf01a8158c9afdf7',
-								links: {
-									usedIn: [ 'a92359c2-d15f-d7e4-fd4c-10c1f98299b3' ],
-									composedOf: []
-								},
-								timestamp: '2019-02-13T07:14:12.028Z',
-								assetModel: 'any',
-								tagId: '1012',
-								asset: {
-									id: '1012',
-									name: 'sub asset',
-									description: 'sub asset'
-								},
-								uid: '26a8140a-298a-ba45-bba0-07eb046f34e9',
-								linksInfo: [],
-								location: [],
-								__v: 0,
-								depth: 1,
-								relations: []
-							}
-						]
-					}]
+						{
+							_id: '5c62b5ecad0f4f34cba6b5d4',
+							links: {
+								usedIn: [ '1065cbf6-46e2-ea12-3095-14e6bc8208ad' ],
+								composedOf: [ '26a8140a-298a-ba45-bba0-07eb046f34e9' ]
+							},
+							timestamp: '2019-02-12T12:02:30.362Z',
+							tagId: '112',
+							asset: {
+								id: '1002',
+								name: 'Samsung ddr3 ram 8gb',
+								description: 'ddr3'
+							},
+							uid: 'a92359c2-d15f-d7e4-fd4c-10c1f98299b3',
+							linksInfo: [],
+							__v: 0,
+							depth: 0,
+							relations: [
+								{
+									_id: '5c63c62bdf01a8158c9afdf7',
+									links: {
+										usedIn: [ 'a92359c2-d15f-d7e4-fd4c-10c1f98299b3' ],
+										composedOf: []
+									},
+									timestamp: '2019-02-13T07:14:12.028Z',
+									assetModel: 'any',
+									tagId: '1012',
+									asset: {
+										id: '1012',
+										name: 'sub asset',
+										description: 'sub asset'
+									},
+									uid: '26a8140a-298a-ba45-bba0-07eb046f34e9',
+									linksInfo: [],
+									location: [],
+									__v: 0,
+									depth: 1,
+									relations: []
+								}
+							]
+						}
+					]
 				},
 				{
 					_id: '5c62b91b77894b36bae2475c',
@@ -1956,43 +1962,46 @@ export class AppComponent {
 					linksInfo: [],
 					__v: 0,
 					depth: 0,
-					relations: [{
-						_id: '5c62b91b77894b36bae2475c',
-						links: {
-							usedIn: [ '1065cbf6-46e2-ea12-3095-14e6bc8208ad' ],
-							composedOf: []
+					relations: [
+						{
+							_id: '5c62b91b77894b36bae2475c',
+							links: {
+								usedIn: [ '1065cbf6-46e2-ea12-3095-14e6bc8208ad' ],
+								composedOf: []
+							},
+							timestamp: '2019-02-12T12:13:33.953Z',
+							tagId: '114',
+							asset: {
+								id: '1004',
+								name: 'Nvidia Graphics MX150 8GB',
+								description: 'Nvidia MX150'
+							},
+							uid: '67e21c29-2712-580f-0e9a-dd96fe24747d',
+							linksInfo: [],
+							__v: 0,
+							depth: 0,
+							relations: []
 						},
-						timestamp: '2019-02-12T12:13:33.953Z',
-						tagId: '114',
-						asset: {
-							id: '1004',
-							name: 'Nvidia Graphics MX150 8GB',
-							description: 'Nvidia MX150'
-						},
-						uid: '67e21c29-2712-580f-0e9a-dd96fe24747d',
-						linksInfo: [],
-						__v: 0,
-						depth: 0,
-						relations: []
-					},{
-						_id: '5c62b91b77894b36bae2475c',
-						links: {
-							usedIn: [ '1065cbf6-46e2-ea12-3095-14e6bc8208ad' ],
-							composedOf: []
-						},
-						timestamp: '2019-02-12T12:13:33.953Z',
-						tagId: '114',
-						asset: {
-							id: '1004',
-							name: 'Nvidia Graphics MX150 8GB',
-							description: 'Nvidia MX150'
-						},
-						uid: '67e21c29-2712-580f-0e9a-dd96fe24747d',
-						linksInfo: [],
-						__v: 0,
-						depth: 0,
-						relations: []
-					}]
+						{
+							_id: '5c62b91b77894b36bae2475c',
+							links: {
+								usedIn: [ '1065cbf6-46e2-ea12-3095-14e6bc8208ad' ],
+								composedOf: []
+							},
+							timestamp: '2019-02-12T12:13:33.953Z',
+							tagId: '114',
+							asset: {
+								id: '1004',
+								name: 'Nvidia Graphics MX150 8GB',
+								description: 'Nvidia MX150'
+							},
+							uid: '67e21c29-2712-580f-0e9a-dd96fe24747d',
+							linksInfo: [],
+							__v: 0,
+							depth: 0,
+							relations: []
+						}
+					]
 				},
 				{
 					_id: '5c62b91b77894b36bae2475c',
@@ -2011,61 +2020,8 @@ export class AppComponent {
 					linksInfo: [],
 					__v: 0,
 					depth: 0,
-					relations: [{
-						_id: '5c62b91b77894b36bae2475c',
-						links: {
-							usedIn: [ '1065cbf6-46e2-ea12-3095-14e6bc8208ad' ],
-							composedOf: []
-						},
-						timestamp: '2019-02-12T12:13:33.953Z',
-						tagId: '114',
-						asset: {
-							id: '1004',
-							name: 'Nvidia Graphics MX150 8GB',
-							description: 'Nvidia MX150'
-						},
-						uid: '67e21c29-2712-580f-0e9a-dd96fe24747d',
-						linksInfo: [],
-						__v: 0,
-						depth: 0,
-						relations: []
-					},{
-						_id: '5c62b91b77894b36bae2475c',
-						links: {
-							usedIn: [ '1065cbf6-46e2-ea12-3095-14e6bc8208ad' ],
-							composedOf: []
-						},
-						timestamp: '2019-02-12T12:13:33.953Z',
-						tagId: '114',
-						asset: {
-							id: '1004',
-							name: 'Nvidia Graphics MX150 8GB',
-							description: 'Nvidia MX150'
-						},
-						uid: '67e21c29-2712-580f-0e9a-dd96fe24747d',
-						linksInfo: [],
-						__v: 0,
-						depth: 0,
-						relations: []
-					},
-					{
-						_id: '5c62b91b77894b36bae2475c',
-						links: {
-							usedIn: [ '1065cbf6-46e2-ea12-3095-14e6bc8208ad' ],
-							composedOf: []
-						},
-						timestamp: '2019-02-12T12:13:33.953Z',
-						tagId: '114',
-						asset: {
-							id: '1004',
-							name: 'Nvidia Graphics MX150 8GB',
-							description: 'Nvidia MX150'
-						},
-						uid: '67e21c29-2712-580f-0e9a-dd96fe24747d',
-						linksInfo: [],
-						__v: 0,
-						depth: 0,
-						relations: [{
+					relations: [
+						{
 							_id: '5c62b91b77894b36bae2475c',
 							links: {
 								usedIn: [ '1065cbf6-46e2-ea12-3095-14e6bc8208ad' ],
@@ -2083,26 +2039,8 @@ export class AppComponent {
 							__v: 0,
 							depth: 0,
 							relations: []
-						}]
-					},
-					{
-						_id: '5c62b91b77894b36bae2475c',
-						links: {
-							usedIn: [ '1065cbf6-46e2-ea12-3095-14e6bc8208ad' ],
-							composedOf: []
 						},
-						timestamp: '2019-02-12T12:13:33.953Z',
-						tagId: '114',
-						asset: {
-							id: '1004',
-							name: 'Nvidia Graphics MX150 8GB',
-							description: 'Nvidia MX150'
-						},
-						uid: '67e21c29-2712-580f-0e9a-dd96fe24747d',
-						linksInfo: [],
-						__v: 0,
-						depth: 0,
-						relations: [{
+						{
 							_id: '5c62b91b77894b36bae2475c',
 							links: {
 								usedIn: [ '1065cbf6-46e2-ea12-3095-14e6bc8208ad' ],
@@ -2120,8 +2058,86 @@ export class AppComponent {
 							__v: 0,
 							depth: 0,
 							relations: []
-						}]
-					}]
+						},
+						{
+							_id: '5c62b91b77894b36bae2475c',
+							links: {
+								usedIn: [ '1065cbf6-46e2-ea12-3095-14e6bc8208ad' ],
+								composedOf: []
+							},
+							timestamp: '2019-02-12T12:13:33.953Z',
+							tagId: '114',
+							asset: {
+								id: '1004',
+								name: 'Nvidia Graphics MX150 8GB',
+								description: 'Nvidia MX150'
+							},
+							uid: '67e21c29-2712-580f-0e9a-dd96fe24747d',
+							linksInfo: [],
+							__v: 0,
+							depth: 0,
+							relations: [
+								{
+									_id: '5c62b91b77894b36bae2475c',
+									links: {
+										usedIn: [ '1065cbf6-46e2-ea12-3095-14e6bc8208ad' ],
+										composedOf: []
+									},
+									timestamp: '2019-02-12T12:13:33.953Z',
+									tagId: '114',
+									asset: {
+										id: '1004',
+										name: 'Nvidia Graphics MX150 8GB',
+										description: 'Nvidia MX150'
+									},
+									uid: '67e21c29-2712-580f-0e9a-dd96fe24747d',
+									linksInfo: [],
+									__v: 0,
+									depth: 0,
+									relations: []
+								}
+							]
+						},
+						{
+							_id: '5c62b91b77894b36bae2475c',
+							links: {
+								usedIn: [ '1065cbf6-46e2-ea12-3095-14e6bc8208ad' ],
+								composedOf: []
+							},
+							timestamp: '2019-02-12T12:13:33.953Z',
+							tagId: '114',
+							asset: {
+								id: '1004',
+								name: 'Nvidia Graphics MX150 8GB',
+								description: 'Nvidia MX150'
+							},
+							uid: '67e21c29-2712-580f-0e9a-dd96fe24747d',
+							linksInfo: [],
+							__v: 0,
+							depth: 0,
+							relations: [
+								{
+									_id: '5c62b91b77894b36bae2475c',
+									links: {
+										usedIn: [ '1065cbf6-46e2-ea12-3095-14e6bc8208ad' ],
+										composedOf: []
+									},
+									timestamp: '2019-02-12T12:13:33.953Z',
+									tagId: '114',
+									asset: {
+										id: '1004',
+										name: 'Nvidia Graphics MX150 8GB',
+										description: 'Nvidia MX150'
+									},
+									uid: '67e21c29-2712-580f-0e9a-dd96fe24747d',
+									linksInfo: [],
+									__v: 0,
+									depth: 0,
+									relations: []
+								}
+							]
+						}
+					]
 				}
 			],
 			depth: -1
@@ -2129,184 +2145,255 @@ export class AppComponent {
 	];
 	usedIn = [
 		{
-			uid: '1065cbf6-46e2-ea12-3095-14e6bc8208ad',
-			timestamp: '2019-02-12T10:57:12.662Z',
+			uid: '88c172bf-8c62-5c3d-8c70-59ca36b0a7f5',
+			timestamp: '2019-02-15T17:59:18.142Z',
 			asset: {
-				id: '1000',
-				name: 'HP Pavilion dv6 laptop',
-				description: 'I5 2ng gen laptop'
+				name: 'DDR4',
+				description: 'external po asset',
+				transactionId: '5654',
+				txnDate: '2019-01-31T18:30:00.000Z',
+				lotNumber: 21654,
+				qty: 100
 			},
 			graphLinks: [
 				{
-					_id: '5c63ba81370ed30ec707bc2b',
+					_id: '5c66fe9972cf280047c605ff',
 					links: {
 						usedIn: [],
-						composedOf: [ '1065cbf6-46e2-ea12-3095-14e6bc8208ad' ]
+						composedOf: [
+							'c3f4c2cd-7e41-e409-9dcf-411b7175dbdc',
+							'2eee9268-0621-c3a0-dfa0-b6995c1f9672',
+							'9325590b-33ad-29dc-2aa1-89a80b0831b9',
+							'9627c43d-d9e6-992d-a542-679b8feff45c'
+						]
 					},
-					timestamp: '2019-02-13T06:33:09.359Z',
+					timestamp: '2019-02-15T17:59:18.142Z',
 					assetModel: 'any',
-					tagId: '996',
 					asset: {
-						id: '96',
-						name: 'Laptop Batch4',
-						description: 'Batch4'
+						id: '1277',
+						name: 'Dell Laptop ',
+						description:
+							'\nProcessor\nUp to 8th Generation Intel® Core™ i7-8550U Processor\nOperating System\nUp to Windows 10 Home Plus Single Language\nVideo Card\nUp to Intel® UHD Graphics 620\nDisplay\nUp to 13.3-in. touch display\nHard Drive\nUp to 512GB PCIe Solid State Drive\nMemory\nUp to 16GB LPDDR3 2133MHz\n\n'
 					},
-					uid: 'a74cb15f-c184-b3c5-a67f-7e87e9c9d9f0',
+					uid: 'b2a32a00-f338-99ce-67f0-9422e36c7962',
+					linksInfo: [],
+					location: [],
+					__v: 0,
+					depth: 1,
+					assetName: 'Dell Laptop ',
+					relations: []
+				},
+				{
+					_id: '5c66feb972cf280047c60600',
+					links: {
+						usedIn: [ 'b2a32a00-f338-99ce-67f0-9422e36c7962' ],
+						composedOf: [ '88c172bf-8c62-5c3d-8c70-59ca36b0a7f5' ]
+					},
+					timestamp: '2019-02-15T17:59:18.142Z',
+					assetModel: 'externalPO',
+					asset: {
+						name: 'DDR1',
+						description: 'external po asset',
+						transactionId: '56165',
+						txnDate: '2019-01-31T18:30:00.000Z',
+						lotNumber: 216516,
+						qty: 100
+					},
+					uid: 'c3f4c2cd-7e41-e409-9dcf-411b7175dbdc',
 					linksInfo: [],
 					location: [],
 					__v: 0,
 					depth: 0,
-					relations: []
-				},
-				{
-					_id: '5c62c2b98618aa39899f5e08',
-					links: {
-						usedIn: [],
-						composedOf: [ '1065cbf6-46e2-ea12-3095-14e6bc8208ad' ]
-					},
-					timestamp: '2019-02-12T12:55:25.600Z',
-					tagId: '98',
-					asset: {
-						id: '998',
-						name: 'Laptop Batch2',
-						description: 'Batch2'
-					},
-					uid: 'bd764cf0-c5af-017c-087c-c930e3bd9a5b',
-					linksInfo: [],
-					__v: 0,
-					depth: 0,
-					relations: []
-				},
-				{
-					_id: '5c62c2cacc058f39838175d7',
-					links: {
-						usedIn: [],
-						composedOf: [ '1065cbf6-46e2-ea12-3095-14e6bc8208ad' ]
-					},
-					timestamp: '2019-02-12T12:55:25.761Z',
-					tagId: '99',
-					asset: {
-						id: '999',
-						name: 'Laptop Batch3',
-						description: 'Batch3'
-					},
-					uid: 'a289d350-f44a-6b8e-9316-630803b3ed2f',
-					linksInfo: [],
-					__v: 0,
-					depth: 0,
-					relations: []
-				},
-				{
-					_id: '5c62c26f7164663997d79713',
-					links: {
-						usedIn: [],
-						composedOf: [ '1065cbf6-46e2-ea12-3095-14e6bc8208ad' ]
-					},
-					timestamp: '2019-02-12T12:55:25.323Z',
-					tagId: '97',
-					asset: {
-						id: '997',
-						name: 'Laptop Batch1',
-						description: 'Batch1'
-					},
-					uid: 'a8db0626-028f-03ef-3e60-572988873a41',
-					linksInfo: [],
-					__v: 0,
-					depth: 0,
-					relations: []
+					assetName: 'DDR1',
+					relations: [
+						{
+							_id: '5c66fe9972cf280047c605ff',
+							links: {
+								usedIn: [],
+								composedOf: [
+									'c3f4c2cd-7e41-e409-9dcf-411b7175dbdc',
+									'2eee9268-0621-c3a0-dfa0-b6995c1f9672',
+									'9325590b-33ad-29dc-2aa1-89a80b0831b9',
+									'9627c43d-d9e6-992d-a542-679b8feff45c'
+								]
+							},
+							timestamp: '2019-02-15T17:59:18.142Z',
+							assetModel: 'any',
+							asset: {
+								id: '1277',
+								name: 'Dell Laptop ',
+								description:
+									'\nProcessor\nUp to 8th Generation Intel® Core™ i7-8550U Processor\nOperating System\nUp to Windows 10 Home Plus Single Language\nVideo Card\nUp to Intel® UHD Graphics 620\nDisplay\nUp to 13.3-in. touch display\nHard Drive\nUp to 512GB PCIe Solid State Drive\nMemory\nUp to 16GB LPDDR3 2133MHz\n\n'
+							},
+							uid: 'b2a32a00-f338-99ce-67f0-9422e36c7962',
+							linksInfo: [],
+							location: [],
+							__v: 0,
+							depth: 1,
+							assetName: 'Dell Laptop ',
+							relations: []
+						}
+					]
 				}
 			],
-			links: {
-				usedIn: [
-					'a8db0626-028f-03ef-3e60-572988873a41',
-					'bd764cf0-c5af-017c-087c-c930e3bd9a5b',
-					'a289d350-f44a-6b8e-9316-630803b3ed2f',
-					'a74cb15f-c184-b3c5-a67f-7e87e9c9d9f0'
-				],
-				composedOf: [
-					'a92359c2-d15f-d7e4-fd4c-10c1f98299b3',
-					'c7b3d3dc-0588-b266-0110-12d0db43c150',
-					'67e21c29-2712-580f-0e9a-dd96fe24747d'
-				]
-			},
+			links: { usedIn: [ 'c3f4c2cd-7e41-e409-9dcf-411b7175dbdc' ], composedOf: [] },
+			assetName: 'DDR4',
 			relations: [
 				{
-					_id: '5c62c26f7164663997d79713',
+					_id: '5c66feb972cf280047c60600',
 					links: {
-						usedIn: [],
-						composedOf: [ '1065cbf6-46e2-ea12-3095-14e6bc8208ad' ]
+						usedIn: [ 'b2a32a00-f338-99ce-67f0-9422e36c7962' ],
+						composedOf: [ '88c172bf-8c62-5c3d-8c70-59ca36b0a7f5' ]
 					},
-					timestamp: '2019-02-12T12:55:25.323Z',
-					tagId: '97',
+					timestamp: '2019-02-15T17:59:18.142Z',
+					assetModel: 'externalPO',
 					asset: {
-						id: '997',
-						name: 'Laptop Batch1',
-						description: 'Batch1'
+						name: 'DDR1',
+						description: 'external po asset',
+						transactionId: '56165',
+						txnDate: '2019-01-31T18:30:00.000Z',
+						lotNumber: 216516,
+						qty: 100
 					},
-					uid: 'a8db0626-028f-03ef-3e60-572988873a41',
-					linksInfo: [],
-					__v: 0,
-					depth: 0,
-					relations: []
-				},
-				{
-					_id: '5c62c2b98618aa39899f5e08',
-					links: {
-						usedIn: [],
-						composedOf: [ '1065cbf6-46e2-ea12-3095-14e6bc8208ad' ]
-					},
-					timestamp: '2019-02-12T12:55:25.600Z',
-					tagId: '98',
-					asset: {
-						id: '998',
-						name: 'Laptop Batch2',
-						description: 'Batch2'
-					},
-					uid: 'bd764cf0-c5af-017c-087c-c930e3bd9a5b',
-					linksInfo: [],
-					__v: 0,
-					depth: 0,
-					relations: []
-				},
-				{
-					_id: '5c62c2cacc058f39838175d7',
-					links: {
-						usedIn: [],
-						composedOf: [ '1065cbf6-46e2-ea12-3095-14e6bc8208ad' ]
-					},
-					timestamp: '2019-02-12T12:55:25.761Z',
-					tagId: '99',
-					asset: {
-						id: '999',
-						name: 'Laptop Batch3',
-						description: 'Batch3'
-					},
-					uid: 'a289d350-f44a-6b8e-9316-630803b3ed2f',
-					linksInfo: [],
-					__v: 0,
-					depth: 0,
-					relations: []
-				},
-				{
-					_id: '5c63ba81370ed30ec707bc2b',
-					links: {
-						usedIn: [],
-						composedOf: [ '1065cbf6-46e2-ea12-3095-14e6bc8208ad' ]
-					},
-					timestamp: '2019-02-13T06:33:09.359Z',
-					assetModel: 'any',
-					tagId: '996',
-					asset: {
-						id: '96',
-						name: 'Laptop Batch4',
-						description: 'Batch4'
-					},
-					uid: 'a74cb15f-c184-b3c5-a67f-7e87e9c9d9f0',
+					uid: 'c3f4c2cd-7e41-e409-9dcf-411b7175dbdc',
 					linksInfo: [],
 					location: [],
 					__v: 0,
 					depth: 0,
-					relations: []
+					assetName: 'DDR1',
+					relations: [
+						{
+							_id: '5c66fe9972cf280047c605ff',
+							links: {
+								usedIn: [],
+								composedOf: [
+									'c3f4c2cd-7e41-e409-9dcf-411b7175dbdc',
+									'2eee9268-0621-c3a0-dfa0-b6995c1f9672',
+									'9325590b-33ad-29dc-2aa1-89a80b0831b9',
+									'9627c43d-d9e6-992d-a542-679b8feff45c'
+								]
+							},
+							timestamp: '2019-02-15T17:59:18.142Z',
+							assetModel: 'any',
+							asset: {
+								id: '1277',
+								name: 'Dell Laptop ',
+								description:
+									'\nProcessor\nUp to 8th Generation Intel® Core™ i7-8550U Processor\nOperating System\nUp to Windows 10 Home Plus Single Language\nVideo Card\nUp to Intel® UHD Graphics 620\nDisplay\nUp to 13.3-in. touch display\nHard Drive\nUp to 512GB PCIe Solid State Drive\nMemory\nUp to 16GB LPDDR3 2133MHz\n\n'
+							},
+							uid: 'b2a32a00-f338-99ce-67f0-9422e36c7962',
+							linksInfo: [],
+							location: [],
+							__v: 0,
+							depth: 1,
+							assetName: 'Dell Laptop ',
+							relations: []
+						},{
+							_id: '5c66fe9972cf280047c605ff',
+							links: {
+								usedIn: [],
+								composedOf: [
+									'c3f4c2cd-7e41-e409-9dcf-411b7175dbdc',
+									'2eee9268-0621-c3a0-dfa0-b6995c1f9672',
+									'9325590b-33ad-29dc-2aa1-89a80b0831b9',
+									'9627c43d-d9e6-992d-a542-679b8feff45c'
+								]
+							},
+							timestamp: '2019-02-15T17:59:18.142Z',
+							assetModel: 'any',
+							asset: {
+								id: '1277',
+								name: 'Dell Laptop ',
+								description:
+									'\nProcessor\nUp to 8th Generation Intel® Core™ i7-8550U Processor\nOperating System\nUp to Windows 10 Home Plus Single Language\nVideo Card\nUp to Intel® UHD Graphics 620\nDisplay\nUp to 13.3-in. touch display\nHard Drive\nUp to 512GB PCIe Solid State Drive\nMemory\nUp to 16GB LPDDR3 2133MHz\n\n'
+							},
+							uid: 'b2a32a00-f338-99ce-67f0-9422e36c7962',
+							linksInfo: [],
+							location: [],
+							__v: 0,
+							depth: 1,
+							assetName: 'Dell Laptop ',
+							relations: [{
+								_id: '5c66fe9972cf280047c605ff',
+								links: {
+									usedIn: [],
+									composedOf: [
+										'c3f4c2cd-7e41-e409-9dcf-411b7175dbdc',
+										'2eee9268-0621-c3a0-dfa0-b6995c1f9672',
+										'9325590b-33ad-29dc-2aa1-89a80b0831b9',
+										'9627c43d-d9e6-992d-a542-679b8feff45c'
+									]
+								},
+								timestamp: '2019-02-15T17:59:18.142Z',
+								assetModel: 'any',
+								asset: {
+									id: '1277',
+									name: 'Dell Laptop ',
+									description:
+										'\nProcessor\nUp to 8th Generation Intel® Core™ i7-8550U Processor\nOperating System\nUp to Windows 10 Home Plus Single Language\nVideo Card\nUp to Intel® UHD Graphics 620\nDisplay\nUp to 13.3-in. touch display\nHard Drive\nUp to 512GB PCIe Solid State Drive\nMemory\nUp to 16GB LPDDR3 2133MHz\n\n'
+								},
+								uid: 'b2a32a00-f338-99ce-67f0-9422e36c7962',
+								linksInfo: [],
+								location: [],
+								__v: 0,
+								depth: 1,
+								assetName: 'Dell Laptop ',
+								relations: [{
+									_id: '5c66fe9972cf280047c605ff',
+									links: {
+										usedIn: [],
+										composedOf: [
+											'c3f4c2cd-7e41-e409-9dcf-411b7175dbdc',
+											'2eee9268-0621-c3a0-dfa0-b6995c1f9672',
+											'9325590b-33ad-29dc-2aa1-89a80b0831b9',
+											'9627c43d-d9e6-992d-a542-679b8feff45c'
+										]
+									},
+									timestamp: '2019-02-15T17:59:18.142Z',
+									assetModel: 'any',
+									asset: {
+										id: '1277',
+										name: 'Dell Laptop ',
+										description:
+											'\nProcessor\nUp to 8th Generation Intel® Core™ i7-8550U Processor\nOperating System\nUp to Windows 10 Home Plus Single Language\nVideo Card\nUp to Intel® UHD Graphics 620\nDisplay\nUp to 13.3-in. touch display\nHard Drive\nUp to 512GB PCIe Solid State Drive\nMemory\nUp to 16GB LPDDR3 2133MHz\n\n'
+									},
+									uid: 'b2a32a00-f338-99ce-67f0-9422e36c7962',
+									linksInfo: [],
+									location: [],
+									__v: 0,
+									depth: 1,
+									assetName: 'Dell Laptop ',
+									relations: [{
+										_id: '5c66fe9972cf280047c605ff',
+										links: {
+											usedIn: [],
+											composedOf: [
+												'c3f4c2cd-7e41-e409-9dcf-411b7175dbdc',
+												'2eee9268-0621-c3a0-dfa0-b6995c1f9672',
+												'9325590b-33ad-29dc-2aa1-89a80b0831b9',
+												'9627c43d-d9e6-992d-a542-679b8feff45c'
+											]
+										},
+										timestamp: '2019-02-15T17:59:18.142Z',
+										assetModel: 'any',
+										asset: {
+											id: '1277',
+											name: 'Dell Laptop ',
+											description:
+												'\nProcessor\nUp to 8th Generation Intel® Core™ i7-8550U Processor\nOperating System\nUp to Windows 10 Home Plus Single Language\nVideo Card\nUp to Intel® UHD Graphics 620\nDisplay\nUp to 13.3-in. touch display\nHard Drive\nUp to 512GB PCIe Solid State Drive\nMemory\nUp to 16GB LPDDR3 2133MHz\n\n'
+										},
+										uid: 'b2a32a00-f338-99ce-67f0-9422e36c7962',
+										linksInfo: [],
+										location: [],
+										__v: 0,
+										depth: 1,
+										assetName: 'Dell Laptop ',
+										relations: []
+									}]
+								}]
+							}]
+						}
+					]
 				}
 			],
 			depth: -1
@@ -2345,7 +2432,7 @@ export class AppComponent {
 		console.log('data', e);
 		this.relation = e;
 		if (e == 0) {
-			this.response = this.composedOf;
+			this.response = this.usedIn;
 		}
 		if (e == 1) {
 			this.response = this.usedIn;
