@@ -5,7 +5,7 @@
   <div class="collapse-filter collapse" id="collapse-filter">
     <div class="box">
       <div class="filter-list">
-        <h2 [style.font-size.px]="size" class="unreadNotifications">{{filterHeading}}</h2>
+        <h2 [style.font-size.px]="size" id="filterHeading" class="unreadNotifications">{{filterHeading}}</h2>
         <div class="options pl-3">
           <div *ngFor="let status of statusTypesDynamic; let l = index">
             <mat-checkbox color="primary" id="parentCheckbox{{l}}" [checked]="status.checked" (change)="(status.checked = $event.checked); filterOnChange.emit($event);">
