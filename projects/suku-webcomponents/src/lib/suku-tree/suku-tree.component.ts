@@ -62,6 +62,7 @@ export class SukuTreeComponent implements OnChanges {
 			nodes.forEach((d) => {
 				if (d.depth > this.max) {
 					this.max = d.depth;
+					console.log("depth", this.max);
 				}
 				if (d.children) {
 					if (d.children.length > this.maxHeight) {
@@ -121,7 +122,11 @@ export class SukuTreeComponent implements OnChanges {
 
 		if (this.relation == 1) {
 			nodes.forEach((d) => {
-				d.y = this.width - (this.max + 1) * 250 - d.depth * -270; // reverse tree
+				if(this.max == 0) {
+					d.y = this.width - (this.max + 1 ) * 220 - d.depth * -270; // reverse tree
+				} else {
+					d.y = this.width - (this.max + 1 ) * 250 - d.depth * -270; // reverse tree
+				}
 			});
 		} else {
 			nodes.forEach((d) => {

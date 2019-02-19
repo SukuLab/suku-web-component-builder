@@ -2145,261 +2145,925 @@ export class AppComponent {
 	];
 	usedIn = [
 		{
-			uid: '88c172bf-8c62-5c3d-8c70-59ca36b0a7f5',
-			timestamp: '2019-02-15T17:59:18.142Z',
-			asset: {
-				name: 'DDR4',
-				description: 'external po asset',
-				transactionId: '5654',
-				txnDate: '2019-01-31T18:30:00.000Z',
-				lotNumber: 21654,
-				qty: 100
+		  "uid": "61f11f9e-7040-a5a8-1a90-615c2fde4eda",
+		  "timestamp": "2019-02-18T11:14:31.836Z",
+		  "asset": {
+			"id": "1035",
+			"name": "ssd 11",
+			"description": "safas"
+		  },
+		  "graphLinks": [
+			{
+			  "_id": "5c6b9b6da20186237cb2b844",
+			  "links": {
+				"usedIn": [],
+				"composedOf": [
+				  "a5401d12-2b5d-0cb6-4813-237cc6025c8c",
+				  "231610f3-46fe-a430-fb38-4dcb22dc8383"
+				]
+			  },
+			  "timestamp": "2019-02-19T04:31:30.599Z",
+			  "assetModel": "any",
+			  "asset": {
+				"id": "1038",
+				"name": "SOny note Model 1902",
+				"description": "16gb ram"
+			  },
+			  "uid": "faa27ca8-e0ea-e29d-bbc9-3f9c776f34e3",
+			  "linksInfo": [],
+			  "location": [],
+			  "__v": 0,
+			  "depth": 3,
+			  "assetName": "SOny note Model 1902",
+			  "relations": []
 			},
-			graphLinks: [
+			{
+			  "_id": "5c6b9a15a20186237cb2b842",
+			  "links": {
+				"usedIn": [],
+				"composedOf": [
+				  "e01d6fb8-59c5-bd50-9518-cad3576c2fa7",
+				  "231610f3-46fe-a430-fb38-4dcb22dc8383",
+				  "2fcea72c-bce8-0fdf-233e-d8616296d8c8"
+				]
+			  },
+			  "timestamp": "2019-02-19T04:31:30.599Z",
+			  "assetModel": "any",
+			  "asset": {
+				"id": "1037",
+				"name": "Hp Model 1602",
+				"description": "16gb ram"
+			  },
+			  "uid": "72b2b15a-784b-9c9e-962b-f03917a4ffc0",
+			  "linksInfo": [],
+			  "location": [],
+			  "__v": 0,
+			  "depth": 3,
+			  "assetName": "Hp Model 1602",
+			  "relations": []
+			},
+			{
+			  "_id": "5c67d401373bbf1308176e97",
+			  "links": {
+				"usedIn": [],
+				"composedOf": [
+				  "231610f3-46fe-a430-fb38-4dcb22dc8383",
+				  "5dc05ec5-0856-dec3-0ef6-d8bf7bab912b",
+				  "59fc5bd5-eaa1-d586-8191-713ca53ba44b"
+				]
+			  },
+			  "timestamp": "2019-02-16T06:18:45.551Z",
+			  "assetModel": "any",
+			  "asset": {
+				"id": "1033",
+				"name": "Thinkpad Model 1602",
+				"description": "16gb ram"
+			  },
+			  "uid": "49640f04-8710-8c0c-7d4a-767f20ee9306",
+			  "linksInfo": [],
+			  "location": [],
+			  "__v": 0,
+			  "depth": 3,
+			  "assetName": "Thinkpad Model 1602",
+			  "relations": []
+			},
+			{
+			  "_id": "5c67c6c3373bbf1308176e96",
+			  "links": {
+				"usedIn": [
+				  "72b2b15a-784b-9c9e-962b-f03917a4ffc0"
+				],
+				"composedOf": [
+				  "857cfc8c-c793-8fcf-076e-715c6bec962d",
+				  "231610f3-46fe-a430-fb38-4dcb22dc8383"
+				]
+			  },
+			  "timestamp": "2019-02-16T06:18:45.551Z",
+			  "assetModel": "any",
+			  "asset": {
+				"id": "1032",
+				"name": "Hp Castro 1602",
+				"description": "16gb ram"
+			  },
+			  "uid": "2fcea72c-bce8-0fdf-233e-d8616296d8c8",
+			  "linksInfo": [],
+			  "location": [],
+			  "__v": 0,
+			  "depth": 3,
+			  "assetName": "Hp Castro 1602",
+			  "relations": [
 				{
-					_id: '5c66fe9972cf280047c605ff',
-					links: {
-						usedIn: [],
-						composedOf: [
-							'c3f4c2cd-7e41-e409-9dcf-411b7175dbdc',
-							'2eee9268-0621-c3a0-dfa0-b6995c1f9672',
-							'9325590b-33ad-29dc-2aa1-89a80b0831b9',
-							'9627c43d-d9e6-992d-a542-679b8feff45c'
+				  "_id": "5c6b9a15a20186237cb2b842",
+				  "links": {
+					"usedIn": [],
+					"composedOf": [
+					  "e01d6fb8-59c5-bd50-9518-cad3576c2fa7",
+					  "231610f3-46fe-a430-fb38-4dcb22dc8383",
+					  "2fcea72c-bce8-0fdf-233e-d8616296d8c8"
+					]
+				  },
+				  "timestamp": "2019-02-19T04:31:30.599Z",
+				  "assetModel": "any",
+				  "asset": {
+					"id": "1037",
+					"name": "Hp Model 1602",
+					"description": "16gb ram"
+				  },
+				  "uid": "72b2b15a-784b-9c9e-962b-f03917a4ffc0",
+				  "linksInfo": [],
+				  "location": [],
+				  "__v": 0,
+				  "depth": 3,
+				  "assetName": "Hp Model 1602",
+				  "relations": []
+				}
+			  ]
+			},
+			{
+			  "_id": "5c6a9b7a737ff329ec202c78",
+			  "links": {
+				"usedIn": [
+				  "231610f3-46fe-a430-fb38-4dcb22dc8383"
+				],
+				"composedOf": [
+				  "95afd652-7aeb-28e9-b667-167af413d297",
+				  "3b8945c3-38ca-a5c7-fcfa-91eb7e23773e"
+				]
+			  },
+			  "timestamp": "2019-02-18T11:14:31.836Z",
+			  "assetModel": "any",
+			  "asset": {
+				"id": "1036",
+				"name": "dell 11",
+				"description": "dcsd"
+			  },
+			  "uid": "e370ae7b-567f-f4b5-5ee2-9a03fac6ce14",
+			  "linksInfo": [],
+			  "location": [],
+			  "__v": 0,
+			  "depth": 1,
+			  "assetName": "dell 11",
+			  "relations": [
+				{
+				  "_id": "5c67c03b373bbf1308176e94",
+				  "links": {
+					"usedIn": [
+					  "2fcea72c-bce8-0fdf-233e-d8616296d8c8",
+					  "49640f04-8710-8c0c-7d4a-767f20ee9306",
+					  "72b2b15a-784b-9c9e-962b-f03917a4ffc0",
+					  "faa27ca8-e0ea-e29d-bbc9-3f9c776f34e3"
+					],
+					"composedOf": [
+					  "e370ae7b-567f-f4b5-5ee2-9a03fac6ce14"
+					]
+				  },
+				  "timestamp": "2019-02-16T06:18:45.551Z",
+				  "assetModel": "any",
+				  "asset": {
+					"id": "1030",
+					"name": "SSDX Model  1602",
+					"description": "256 gb SSD",
+					"bidId": "1003",
+					"transactionId": "1005"
+				  },
+				  "uid": "231610f3-46fe-a430-fb38-4dcb22dc8383",
+				  "linksInfo": [],
+				  "location": [],
+				  "__v": 0,
+				  "depth": 2,
+				  "assetName": "SSDX Model  1602",
+				  "relations": [
+					{
+					  "_id": "5c67c6c3373bbf1308176e96",
+					  "links": {
+						"usedIn": [
+						  "72b2b15a-784b-9c9e-962b-f03917a4ffc0"
+						],
+						"composedOf": [
+						  "857cfc8c-c793-8fcf-076e-715c6bec962d",
+						  "231610f3-46fe-a430-fb38-4dcb22dc8383"
 						]
+					  },
+					  "timestamp": "2019-02-16T06:18:45.551Z",
+					  "assetModel": "any",
+					  "asset": {
+						"id": "1032",
+						"name": "Hp Castro 1602",
+						"description": "16gb ram"
+					  },
+					  "uid": "2fcea72c-bce8-0fdf-233e-d8616296d8c8",
+					  "linksInfo": [],
+					  "location": [],
+					  "__v": 0,
+					  "depth": 3,
+					  "assetName": "Hp Castro 1602",
+					  "relations": [
+						{
+						  "_id": "5c6b9a15a20186237cb2b842",
+						  "links": {
+							"usedIn": [],
+							"composedOf": [
+							  "e01d6fb8-59c5-bd50-9518-cad3576c2fa7",
+							  "231610f3-46fe-a430-fb38-4dcb22dc8383",
+							  "2fcea72c-bce8-0fdf-233e-d8616296d8c8"
+							]
+						  },
+						  "timestamp": "2019-02-19T04:31:30.599Z",
+						  "assetModel": "any",
+						  "asset": {
+							"id": "1037",
+							"name": "Hp Model 1602",
+							"description": "16gb ram"
+						  },
+						  "uid": "72b2b15a-784b-9c9e-962b-f03917a4ffc0",
+						  "linksInfo": [],
+						  "location": [],
+						  "__v": 0,
+						  "depth": 3,
+						  "assetName": "Hp Model 1602",
+						  "relations": []
+						}
+					  ]
 					},
-					timestamp: '2019-02-15T17:59:18.142Z',
-					assetModel: 'any',
-					asset: {
-						id: '1277',
-						name: 'Dell Laptop ',
-						description:
-							'\nProcessor\nUp to 8th Generation Intel® Core™ i7-8550U Processor\nOperating System\nUp to Windows 10 Home Plus Single Language\nVideo Card\nUp to Intel® UHD Graphics 620\nDisplay\nUp to 13.3-in. touch display\nHard Drive\nUp to 512GB PCIe Solid State Drive\nMemory\nUp to 16GB LPDDR3 2133MHz\n\n'
+					{
+					  "_id": "5c67d401373bbf1308176e97",
+					  "links": {
+						"usedIn": [],
+						"composedOf": [
+						  "231610f3-46fe-a430-fb38-4dcb22dc8383",
+						  "5dc05ec5-0856-dec3-0ef6-d8bf7bab912b",
+						  "59fc5bd5-eaa1-d586-8191-713ca53ba44b"
+						]
+					  },
+					  "timestamp": "2019-02-16T06:18:45.551Z",
+					  "assetModel": "any",
+					  "asset": {
+						"id": "1033",
+						"name": "Thinkpad Model 1602",
+						"description": "16gb ram"
+					  },
+					  "uid": "49640f04-8710-8c0c-7d4a-767f20ee9306",
+					  "linksInfo": [],
+					  "location": [],
+					  "__v": 0,
+					  "depth": 3,
+					  "assetName": "Thinkpad Model 1602",
+					  "relations": []
 					},
-					uid: 'b2a32a00-f338-99ce-67f0-9422e36c7962',
-					linksInfo: [],
-					location: [],
-					__v: 0,
-					depth: 1,
-					assetName: 'Dell Laptop ',
-					relations: []
+					{
+					  "_id": "5c6b9a15a20186237cb2b842",
+					  "links": {
+						"usedIn": [],
+						"composedOf": [
+						  "e01d6fb8-59c5-bd50-9518-cad3576c2fa7",
+						  "231610f3-46fe-a430-fb38-4dcb22dc8383",
+						  "2fcea72c-bce8-0fdf-233e-d8616296d8c8"
+						]
+					  },
+					  "timestamp": "2019-02-19T04:31:30.599Z",
+					  "assetModel": "any",
+					  "asset": {
+						"id": "1037",
+						"name": "Hp Model 1602",
+						"description": "16gb ram"
+					  },
+					  "uid": "72b2b15a-784b-9c9e-962b-f03917a4ffc0",
+					  "linksInfo": [],
+					  "location": [],
+					  "__v": 0,
+					  "depth": 3,
+					  "assetName": "Hp Model 1602",
+					  "relations": []
+					},
+					{
+					  "_id": "5c6b9b6da20186237cb2b844",
+					  "links": {
+						"usedIn": [],
+						"composedOf": [
+						  "a5401d12-2b5d-0cb6-4813-237cc6025c8c",
+						  "231610f3-46fe-a430-fb38-4dcb22dc8383"
+						]
+					  },
+					  "timestamp": "2019-02-19T04:31:30.599Z",
+					  "assetModel": "any",
+					  "asset": {
+						"id": "1038",
+						"name": "SOny note Model 1902",
+						"description": "16gb ram"
+					  },
+					  "uid": "faa27ca8-e0ea-e29d-bbc9-3f9c776f34e3",
+					  "linksInfo": [],
+					  "location": [],
+					  "__v": 0,
+					  "depth": 3,
+					  "assetName": "SOny note Model 1902",
+					  "relations": []
+					}
+				  ]
+				}
+			  ]
+			},
+			{
+			  "_id": "5c67c03b373bbf1308176e94",
+			  "links": {
+				"usedIn": [
+				  "2fcea72c-bce8-0fdf-233e-d8616296d8c8",
+				  "49640f04-8710-8c0c-7d4a-767f20ee9306",
+				  "72b2b15a-784b-9c9e-962b-f03917a4ffc0",
+				  "faa27ca8-e0ea-e29d-bbc9-3f9c776f34e3"
+				],
+				"composedOf": [
+				  "e370ae7b-567f-f4b5-5ee2-9a03fac6ce14"
+				]
+			  },
+			  "timestamp": "2019-02-16T06:18:45.551Z",
+			  "assetModel": "any",
+			  "asset": {
+				"id": "1030",
+				"name": "SSDX Model  1602",
+				"description": "256 gb SSD",
+				"bidId": "1003",
+				"transactionId": "1005"
+			  },
+			  "uid": "231610f3-46fe-a430-fb38-4dcb22dc8383",
+			  "linksInfo": [],
+			  "location": [],
+			  "__v": 0,
+			  "depth": 2,
+			  "assetName": "SSDX Model  1602",
+			  "relations": [
+				{
+				  "_id": "5c67c6c3373bbf1308176e96",
+				  "links": {
+					"usedIn": [
+					  "72b2b15a-784b-9c9e-962b-f03917a4ffc0"
+					],
+					"composedOf": [
+					  "857cfc8c-c793-8fcf-076e-715c6bec962d",
+					  "231610f3-46fe-a430-fb38-4dcb22dc8383"
+					]
+				  },
+				  "timestamp": "2019-02-16T06:18:45.551Z",
+				  "assetModel": "any",
+				  "asset": {
+					"id": "1032",
+					"name": "Hp Castro 1602",
+					"description": "16gb ram"
+				  },
+				  "uid": "2fcea72c-bce8-0fdf-233e-d8616296d8c8",
+				  "linksInfo": [],
+				  "location": [],
+				  "__v": 0,
+				  "depth": 3,
+				  "assetName": "Hp Castro 1602",
+				  "relations": [
+					{
+					  "_id": "5c6b9a15a20186237cb2b842",
+					  "links": {
+						"usedIn": [],
+						"composedOf": [
+						  "e01d6fb8-59c5-bd50-9518-cad3576c2fa7",
+						  "231610f3-46fe-a430-fb38-4dcb22dc8383",
+						  "2fcea72c-bce8-0fdf-233e-d8616296d8c8"
+						]
+					  },
+					  "timestamp": "2019-02-19T04:31:30.599Z",
+					  "assetModel": "any",
+					  "asset": {
+						"id": "1037",
+						"name": "Hp Model 1602",
+						"description": "16gb ram"
+					  },
+					  "uid": "72b2b15a-784b-9c9e-962b-f03917a4ffc0",
+					  "linksInfo": [],
+					  "location": [],
+					  "__v": 0,
+					  "depth": 3,
+					  "assetName": "Hp Model 1602",
+					  "relations": []
+					}
+				  ]
 				},
 				{
-					_id: '5c66feb972cf280047c60600',
-					links: {
-						usedIn: [ 'b2a32a00-f338-99ce-67f0-9422e36c7962' ],
-						composedOf: [ '88c172bf-8c62-5c3d-8c70-59ca36b0a7f5' ]
-					},
-					timestamp: '2019-02-15T17:59:18.142Z',
-					assetModel: 'externalPO',
-					asset: {
-						name: 'DDR1',
-						description: 'external po asset',
-						transactionId: '56165',
-						txnDate: '2019-01-31T18:30:00.000Z',
-						lotNumber: 216516,
-						qty: 100
-					},
-					uid: 'c3f4c2cd-7e41-e409-9dcf-411b7175dbdc',
-					linksInfo: [],
-					location: [],
-					__v: 0,
-					depth: 0,
-					assetName: 'DDR1',
-					relations: [
-						{
-							_id: '5c66fe9972cf280047c605ff',
-							links: {
-								usedIn: [],
-								composedOf: [
-									'c3f4c2cd-7e41-e409-9dcf-411b7175dbdc',
-									'2eee9268-0621-c3a0-dfa0-b6995c1f9672',
-									'9325590b-33ad-29dc-2aa1-89a80b0831b9',
-									'9627c43d-d9e6-992d-a542-679b8feff45c'
-								]
-							},
-							timestamp: '2019-02-15T17:59:18.142Z',
-							assetModel: 'any',
-							asset: {
-								id: '1277',
-								name: 'Dell Laptop ',
-								description:
-									'\nProcessor\nUp to 8th Generation Intel® Core™ i7-8550U Processor\nOperating System\nUp to Windows 10 Home Plus Single Language\nVideo Card\nUp to Intel® UHD Graphics 620\nDisplay\nUp to 13.3-in. touch display\nHard Drive\nUp to 512GB PCIe Solid State Drive\nMemory\nUp to 16GB LPDDR3 2133MHz\n\n'
-							},
-							uid: 'b2a32a00-f338-99ce-67f0-9422e36c7962',
-							linksInfo: [],
-							location: [],
-							__v: 0,
-							depth: 1,
-							assetName: 'Dell Laptop ',
-							relations: []
-						}
+				  "_id": "5c67d401373bbf1308176e97",
+				  "links": {
+					"usedIn": [],
+					"composedOf": [
+					  "231610f3-46fe-a430-fb38-4dcb22dc8383",
+					  "5dc05ec5-0856-dec3-0ef6-d8bf7bab912b",
+					  "59fc5bd5-eaa1-d586-8191-713ca53ba44b"
 					]
-				}
-			],
-			links: { usedIn: [ 'c3f4c2cd-7e41-e409-9dcf-411b7175dbdc' ], composedOf: [] },
-			assetName: 'DDR4',
-			relations: [
+				  },
+				  "timestamp": "2019-02-16T06:18:45.551Z",
+				  "assetModel": "any",
+				  "asset": {
+					"id": "1033",
+					"name": "Thinkpad Model 1602",
+					"description": "16gb ram"
+				  },
+				  "uid": "49640f04-8710-8c0c-7d4a-767f20ee9306",
+				  "linksInfo": [],
+				  "location": [],
+				  "__v": 0,
+				  "depth": 3,
+				  "assetName": "Thinkpad Model 1602",
+				  "relations": []
+				},
 				{
-					_id: '5c66feb972cf280047c60600',
-					links: {
-						usedIn: [ 'b2a32a00-f338-99ce-67f0-9422e36c7962' ],
-						composedOf: [ '88c172bf-8c62-5c3d-8c70-59ca36b0a7f5' ]
-					},
-					timestamp: '2019-02-15T17:59:18.142Z',
-					assetModel: 'externalPO',
-					asset: {
-						name: 'DDR1',
-						description: 'external po asset',
-						transactionId: '56165',
-						txnDate: '2019-01-31T18:30:00.000Z',
-						lotNumber: 216516,
-						qty: 100
-					},
-					uid: 'c3f4c2cd-7e41-e409-9dcf-411b7175dbdc',
-					linksInfo: [],
-					location: [],
-					__v: 0,
-					depth: 0,
-					assetName: 'DDR1',
-					relations: [
-						{
-							_id: '5c66fe9972cf280047c605ff',
-							links: {
-								usedIn: [],
-								composedOf: [
-									'c3f4c2cd-7e41-e409-9dcf-411b7175dbdc',
-									'2eee9268-0621-c3a0-dfa0-b6995c1f9672',
-									'9325590b-33ad-29dc-2aa1-89a80b0831b9',
-									'9627c43d-d9e6-992d-a542-679b8feff45c'
-								]
-							},
-							timestamp: '2019-02-15T17:59:18.142Z',
-							assetModel: 'any',
-							asset: {
-								id: '1277',
-								name: 'Dell Laptop ',
-								description:
-									'\nProcessor\nUp to 8th Generation Intel® Core™ i7-8550U Processor\nOperating System\nUp to Windows 10 Home Plus Single Language\nVideo Card\nUp to Intel® UHD Graphics 620\nDisplay\nUp to 13.3-in. touch display\nHard Drive\nUp to 512GB PCIe Solid State Drive\nMemory\nUp to 16GB LPDDR3 2133MHz\n\n'
-							},
-							uid: 'b2a32a00-f338-99ce-67f0-9422e36c7962',
-							linksInfo: [],
-							location: [],
-							__v: 0,
-							depth: 1,
-							assetName: 'Dell Laptop ',
-							relations: []
-						},{
-							_id: '5c66fe9972cf280047c605ff',
-							links: {
-								usedIn: [],
-								composedOf: [
-									'c3f4c2cd-7e41-e409-9dcf-411b7175dbdc',
-									'2eee9268-0621-c3a0-dfa0-b6995c1f9672',
-									'9325590b-33ad-29dc-2aa1-89a80b0831b9',
-									'9627c43d-d9e6-992d-a542-679b8feff45c'
-								]
-							},
-							timestamp: '2019-02-15T17:59:18.142Z',
-							assetModel: 'any',
-							asset: {
-								id: '1277',
-								name: 'Dell Laptop ',
-								description:
-									'\nProcessor\nUp to 8th Generation Intel® Core™ i7-8550U Processor\nOperating System\nUp to Windows 10 Home Plus Single Language\nVideo Card\nUp to Intel® UHD Graphics 620\nDisplay\nUp to 13.3-in. touch display\nHard Drive\nUp to 512GB PCIe Solid State Drive\nMemory\nUp to 16GB LPDDR3 2133MHz\n\n'
-							},
-							uid: 'b2a32a00-f338-99ce-67f0-9422e36c7962',
-							linksInfo: [],
-							location: [],
-							__v: 0,
-							depth: 1,
-							assetName: 'Dell Laptop ',
-							relations: [{
-								_id: '5c66fe9972cf280047c605ff',
-								links: {
-									usedIn: [],
-									composedOf: [
-										'c3f4c2cd-7e41-e409-9dcf-411b7175dbdc',
-										'2eee9268-0621-c3a0-dfa0-b6995c1f9672',
-										'9325590b-33ad-29dc-2aa1-89a80b0831b9',
-										'9627c43d-d9e6-992d-a542-679b8feff45c'
-									]
-								},
-								timestamp: '2019-02-15T17:59:18.142Z',
-								assetModel: 'any',
-								asset: {
-									id: '1277',
-									name: 'Dell Laptop ',
-									description:
-										'\nProcessor\nUp to 8th Generation Intel® Core™ i7-8550U Processor\nOperating System\nUp to Windows 10 Home Plus Single Language\nVideo Card\nUp to Intel® UHD Graphics 620\nDisplay\nUp to 13.3-in. touch display\nHard Drive\nUp to 512GB PCIe Solid State Drive\nMemory\nUp to 16GB LPDDR3 2133MHz\n\n'
-								},
-								uid: 'b2a32a00-f338-99ce-67f0-9422e36c7962',
-								linksInfo: [],
-								location: [],
-								__v: 0,
-								depth: 1,
-								assetName: 'Dell Laptop ',
-								relations: [{
-									_id: '5c66fe9972cf280047c605ff',
-									links: {
-										usedIn: [],
-										composedOf: [
-											'c3f4c2cd-7e41-e409-9dcf-411b7175dbdc',
-											'2eee9268-0621-c3a0-dfa0-b6995c1f9672',
-											'9325590b-33ad-29dc-2aa1-89a80b0831b9',
-											'9627c43d-d9e6-992d-a542-679b8feff45c'
-										]
-									},
-									timestamp: '2019-02-15T17:59:18.142Z',
-									assetModel: 'any',
-									asset: {
-										id: '1277',
-										name: 'Dell Laptop ',
-										description:
-											'\nProcessor\nUp to 8th Generation Intel® Core™ i7-8550U Processor\nOperating System\nUp to Windows 10 Home Plus Single Language\nVideo Card\nUp to Intel® UHD Graphics 620\nDisplay\nUp to 13.3-in. touch display\nHard Drive\nUp to 512GB PCIe Solid State Drive\nMemory\nUp to 16GB LPDDR3 2133MHz\n\n'
-									},
-									uid: 'b2a32a00-f338-99ce-67f0-9422e36c7962',
-									linksInfo: [],
-									location: [],
-									__v: 0,
-									depth: 1,
-									assetName: 'Dell Laptop ',
-									relations: [{
-										_id: '5c66fe9972cf280047c605ff',
-										links: {
-											usedIn: [],
-											composedOf: [
-												'c3f4c2cd-7e41-e409-9dcf-411b7175dbdc',
-												'2eee9268-0621-c3a0-dfa0-b6995c1f9672',
-												'9325590b-33ad-29dc-2aa1-89a80b0831b9',
-												'9627c43d-d9e6-992d-a542-679b8feff45c'
-											]
-										},
-										timestamp: '2019-02-15T17:59:18.142Z',
-										assetModel: 'any',
-										asset: {
-											id: '1277',
-											name: 'Dell Laptop ',
-											description:
-												'\nProcessor\nUp to 8th Generation Intel® Core™ i7-8550U Processor\nOperating System\nUp to Windows 10 Home Plus Single Language\nVideo Card\nUp to Intel® UHD Graphics 620\nDisplay\nUp to 13.3-in. touch display\nHard Drive\nUp to 512GB PCIe Solid State Drive\nMemory\nUp to 16GB LPDDR3 2133MHz\n\n'
-										},
-										uid: 'b2a32a00-f338-99ce-67f0-9422e36c7962',
-										linksInfo: [],
-										location: [],
-										__v: 0,
-										depth: 1,
-										assetName: 'Dell Laptop ',
-										relations: []
-									}]
-								}]
-							}]
-						}
+				  "_id": "5c6b9a15a20186237cb2b842",
+				  "links": {
+					"usedIn": [],
+					"composedOf": [
+					  "e01d6fb8-59c5-bd50-9518-cad3576c2fa7",
+					  "231610f3-46fe-a430-fb38-4dcb22dc8383",
+					  "2fcea72c-bce8-0fdf-233e-d8616296d8c8"
 					]
+				  },
+				  "timestamp": "2019-02-19T04:31:30.599Z",
+				  "assetModel": "any",
+				  "asset": {
+					"id": "1037",
+					"name": "Hp Model 1602",
+					"description": "16gb ram"
+				  },
+				  "uid": "72b2b15a-784b-9c9e-962b-f03917a4ffc0",
+				  "linksInfo": [],
+				  "location": [],
+				  "__v": 0,
+				  "depth": 3,
+				  "assetName": "Hp Model 1602",
+				  "relations": []
+				},
+				{
+				  "_id": "5c6b9b6da20186237cb2b844",
+				  "links": {
+					"usedIn": [],
+					"composedOf": [
+					  "a5401d12-2b5d-0cb6-4813-237cc6025c8c",
+					  "231610f3-46fe-a430-fb38-4dcb22dc8383"
+					]
+				  },
+				  "timestamp": "2019-02-19T04:31:30.599Z",
+				  "assetModel": "any",
+				  "asset": {
+					"id": "1038",
+					"name": "SOny note Model 1902",
+					"description": "16gb ram"
+				  },
+				  "uid": "faa27ca8-e0ea-e29d-bbc9-3f9c776f34e3",
+				  "linksInfo": [],
+				  "location": [],
+				  "__v": 0,
+				  "depth": 3,
+				  "assetName": "SOny note Model 1902",
+				  "relations": []
 				}
+			  ]
+			},
+			{
+			  "_id": "5c6a992a737ff329ec202c74",
+			  "links": {
+				"usedIn": [
+				  "e370ae7b-567f-f4b5-5ee2-9a03fac6ce14"
+				],
+				"composedOf": [
+				  "a4ce7289-0887-f090-dfe8-0c59827b4dcf",
+				  "61f11f9e-7040-a5a8-1a90-615c2fde4eda",
+				  "857cfc8c-c793-8fcf-076e-715c6bec962d"
+				]
+			  },
+			  "timestamp": "2019-02-18T11:14:31.836Z",
+			  "assetModel": "any",
+			  "asset": {
+				"id": "1034",
+				"name": "ram 11",
+				"description": "fsfda",
+				"bidId": "1004",
+				"transactionId": "1006"
+			  },
+			  "uid": "3b8945c3-38ca-a5c7-fcfa-91eb7e23773e",
+			  "linksInfo": [],
+			  "location": [],
+			  "__v": 0,
+			  "depth": 0,
+			  "assetName": "ram 11",
+			  "relations": [
+				{
+				  "_id": "5c6a9b7a737ff329ec202c78",
+				  "links": {
+					"usedIn": [
+					  "231610f3-46fe-a430-fb38-4dcb22dc8383"
+					],
+					"composedOf": [
+					  "95afd652-7aeb-28e9-b667-167af413d297",
+					  "3b8945c3-38ca-a5c7-fcfa-91eb7e23773e"
+					]
+				  },
+				  "timestamp": "2019-02-18T11:14:31.836Z",
+				  "assetModel": "any",
+				  "asset": {
+					"id": "1036",
+					"name": "dell 11",
+					"description": "dcsd"
+				  },
+				  "uid": "e370ae7b-567f-f4b5-5ee2-9a03fac6ce14",
+				  "linksInfo": [],
+				  "location": [],
+				  "__v": 0,
+				  "depth": 1,
+				  "assetName": "dell 11",
+				  "relations": [
+					{
+					  "_id": "5c67c03b373bbf1308176e94",
+					  "links": {
+						"usedIn": [
+						  "2fcea72c-bce8-0fdf-233e-d8616296d8c8",
+						  "49640f04-8710-8c0c-7d4a-767f20ee9306",
+						  "72b2b15a-784b-9c9e-962b-f03917a4ffc0",
+						  "faa27ca8-e0ea-e29d-bbc9-3f9c776f34e3"
+						],
+						"composedOf": [
+						  "e370ae7b-567f-f4b5-5ee2-9a03fac6ce14"
+						]
+					  },
+					  "timestamp": "2019-02-16T06:18:45.551Z",
+					  "assetModel": "any",
+					  "asset": {
+						"id": "1030",
+						"name": "SSDX Model  1602",
+						"description": "256 gb SSD",
+						"bidId": "1003",
+						"transactionId": "1005"
+					  },
+					  "uid": "231610f3-46fe-a430-fb38-4dcb22dc8383",
+					  "linksInfo": [],
+					  "location": [],
+					  "__v": 0,
+					  "depth": 2,
+					  "assetName": "SSDX Model  1602",
+					  "relations": [
+						{
+						  "_id": "5c67c6c3373bbf1308176e96",
+						  "links": {
+							"usedIn": [
+							  "72b2b15a-784b-9c9e-962b-f03917a4ffc0"
+							],
+							"composedOf": [
+							  "857cfc8c-c793-8fcf-076e-715c6bec962d",
+							  "231610f3-46fe-a430-fb38-4dcb22dc8383"
+							]
+						  },
+						  "timestamp": "2019-02-16T06:18:45.551Z",
+						  "assetModel": "any",
+						  "asset": {
+							"id": "1032",
+							"name": "Hp Castro 1602",
+							"description": "16gb ram"
+						  },
+						  "uid": "2fcea72c-bce8-0fdf-233e-d8616296d8c8",
+						  "linksInfo": [],
+						  "location": [],
+						  "__v": 0,
+						  "depth": 3,
+						  "assetName": "Hp Castro 1602",
+						  "relations": [
+							{
+							  "_id": "5c6b9a15a20186237cb2b842",
+							  "links": {
+								"usedIn": [],
+								"composedOf": [
+								  "e01d6fb8-59c5-bd50-9518-cad3576c2fa7",
+								  "231610f3-46fe-a430-fb38-4dcb22dc8383",
+								  "2fcea72c-bce8-0fdf-233e-d8616296d8c8"
+								]
+							  },
+							  "timestamp": "2019-02-19T04:31:30.599Z",
+							  "assetModel": "any",
+							  "asset": {
+								"id": "1037",
+								"name": "Hp Model 1602",
+								"description": "16gb ram"
+							  },
+							  "uid": "72b2b15a-784b-9c9e-962b-f03917a4ffc0",
+							  "linksInfo": [],
+							  "location": [],
+							  "__v": 0,
+							  "depth": 3,
+							  "assetName": "Hp Model 1602",
+							  "relations": []
+							}
+						  ]
+						},
+						{
+						  "_id": "5c67d401373bbf1308176e97",
+						  "links": {
+							"usedIn": [],
+							"composedOf": [
+							  "231610f3-46fe-a430-fb38-4dcb22dc8383",
+							  "5dc05ec5-0856-dec3-0ef6-d8bf7bab912b",
+							  "59fc5bd5-eaa1-d586-8191-713ca53ba44b"
+							]
+						  },
+						  "timestamp": "2019-02-16T06:18:45.551Z",
+						  "assetModel": "any",
+						  "asset": {
+							"id": "1033",
+							"name": "Thinkpad Model 1602",
+							"description": "16gb ram"
+						  },
+						  "uid": "49640f04-8710-8c0c-7d4a-767f20ee9306",
+						  "linksInfo": [],
+						  "location": [],
+						  "__v": 0,
+						  "depth": 3,
+						  "assetName": "Thinkpad Model 1602",
+						  "relations": []
+						},
+						{
+						  "_id": "5c6b9a15a20186237cb2b842",
+						  "links": {
+							"usedIn": [],
+							"composedOf": [
+							  "e01d6fb8-59c5-bd50-9518-cad3576c2fa7",
+							  "231610f3-46fe-a430-fb38-4dcb22dc8383",
+							  "2fcea72c-bce8-0fdf-233e-d8616296d8c8"
+							]
+						  },
+						  "timestamp": "2019-02-19T04:31:30.599Z",
+						  "assetModel": "any",
+						  "asset": {
+							"id": "1037",
+							"name": "Hp Model 1602",
+							"description": "16gb ram"
+						  },
+						  "uid": "72b2b15a-784b-9c9e-962b-f03917a4ffc0",
+						  "linksInfo": [],
+						  "location": [],
+						  "__v": 0,
+						  "depth": 3,
+						  "assetName": "Hp Model 1602",
+						  "relations": []
+						},
+						{
+						  "_id": "5c6b9b6da20186237cb2b844",
+						  "links": {
+							"usedIn": [],
+							"composedOf": [
+							  "a5401d12-2b5d-0cb6-4813-237cc6025c8c",
+							  "231610f3-46fe-a430-fb38-4dcb22dc8383"
+							]
+						  },
+						  "timestamp": "2019-02-19T04:31:30.599Z",
+						  "assetModel": "any",
+						  "asset": {
+							"id": "1038",
+							"name": "SOny note Model 1902",
+							"description": "16gb ram"
+						  },
+						  "uid": "faa27ca8-e0ea-e29d-bbc9-3f9c776f34e3",
+						  "linksInfo": [],
+						  "location": [],
+						  "__v": 0,
+						  "depth": 3,
+						  "assetName": "SOny note Model 1902",
+						  "relations": []
+						}
+					  ]
+					}
+				  ]
+				}
+			  ]
+			}
+		  ],
+		  "links": {
+			"usedIn": [
+			  "3b8945c3-38ca-a5c7-fcfa-91eb7e23773e"
 			],
-			depth: -1
+			"composedOf": [
+			  "95afd652-7aeb-28e9-b667-167af413d297"
+			]
+		  },
+		  "assetName": "ssd 11",
+		  "relations": [
+			{
+			  "_id": "5c6a992a737ff329ec202c74",
+			  "links": {
+				"usedIn": [
+				  "e370ae7b-567f-f4b5-5ee2-9a03fac6ce14"
+				],
+				"composedOf": [
+				  "a4ce7289-0887-f090-dfe8-0c59827b4dcf",
+				  "61f11f9e-7040-a5a8-1a90-615c2fde4eda",
+				  "857cfc8c-c793-8fcf-076e-715c6bec962d"
+				]
+			  },
+			  "timestamp": "2019-02-18T11:14:31.836Z",
+			  "assetModel": "any",
+			  "asset": {
+				"id": "1034",
+				"name": "ram 11",
+				"description": "fsfda",
+				"bidId": "1004",
+				"transactionId": "1006"
+			  },
+			  "uid": "3b8945c3-38ca-a5c7-fcfa-91eb7e23773e",
+			  "linksInfo": [],
+			  "location": [],
+			  "__v": 0,
+			  "depth": 0,
+			  "assetName": "ram 11",
+			  "relations": [
+				{
+				  "_id": "5c6a9b7a737ff329ec202c78",
+				  "links": {
+					"usedIn": [
+					  "231610f3-46fe-a430-fb38-4dcb22dc8383"
+					],
+					"composedOf": [
+					  "95afd652-7aeb-28e9-b667-167af413d297",
+					  "3b8945c3-38ca-a5c7-fcfa-91eb7e23773e"
+					]
+				  },
+				  "timestamp": "2019-02-18T11:14:31.836Z",
+				  "assetModel": "any",
+				  "asset": {
+					"id": "1036",
+					"name": "dell 11",
+					"description": "dcsd"
+				  },
+				  "uid": "e370ae7b-567f-f4b5-5ee2-9a03fac6ce14",
+				  "linksInfo": [],
+				  "location": [],
+				  "__v": 0,
+				  "depth": 1,
+				  "assetName": "dell 11",
+				  "relations": [
+					{
+					  "_id": "5c67c03b373bbf1308176e94",
+					  "links": {
+						"usedIn": [
+						  "2fcea72c-bce8-0fdf-233e-d8616296d8c8",
+						  "49640f04-8710-8c0c-7d4a-767f20ee9306",
+						  "72b2b15a-784b-9c9e-962b-f03917a4ffc0",
+						  "faa27ca8-e0ea-e29d-bbc9-3f9c776f34e3"
+						],
+						"composedOf": [
+						  "e370ae7b-567f-f4b5-5ee2-9a03fac6ce14"
+						]
+					  },
+					  "timestamp": "2019-02-16T06:18:45.551Z",
+					  "assetModel": "any",
+					  "asset": {
+						"id": "1030",
+						"name": "SSDX Model  1602",
+						"description": "256 gb SSD",
+						"bidId": "1003",
+						"transactionId": "1005"
+					  },
+					  "uid": "231610f3-46fe-a430-fb38-4dcb22dc8383",
+					  "linksInfo": [],
+					  "location": [],
+					  "__v": 0,
+					  "depth": 2,
+					  "assetName": "SSDX Model  1602",
+					  "relations": [
+						{
+						  "_id": "5c67c6c3373bbf1308176e96",
+						  "links": {
+							"usedIn": [
+							  "72b2b15a-784b-9c9e-962b-f03917a4ffc0"
+							],
+							"composedOf": [
+							  "857cfc8c-c793-8fcf-076e-715c6bec962d",
+							  "231610f3-46fe-a430-fb38-4dcb22dc8383"
+							]
+						  },
+						  "timestamp": "2019-02-16T06:18:45.551Z",
+						  "assetModel": "any",
+						  "asset": {
+							"id": "1032",
+							"name": "Hp Castro 1602",
+							"description": "16gb ram"
+						  },
+						  "uid": "2fcea72c-bce8-0fdf-233e-d8616296d8c8",
+						  "linksInfo": [],
+						  "location": [],
+						  "__v": 0,
+						  "depth": 3,
+						  "assetName": "Hp Castro 1602",
+						  "relations": [
+							{
+							  "_id": "5c6b9a15a20186237cb2b842",
+							  "links": {
+								"usedIn": [],
+								"composedOf": [
+								  "e01d6fb8-59c5-bd50-9518-cad3576c2fa7",
+								  "231610f3-46fe-a430-fb38-4dcb22dc8383",
+								  "2fcea72c-bce8-0fdf-233e-d8616296d8c8"
+								]
+							  },
+							  "timestamp": "2019-02-19T04:31:30.599Z",
+							  "assetModel": "any",
+							  "asset": {
+								"id": "1037",
+								"name": "Hp Model 1602",
+								"description": "16gb ram"
+							  },
+							  "uid": "72b2b15a-784b-9c9e-962b-f03917a4ffc0",
+							  "linksInfo": [],
+							  "location": [],
+							  "__v": 0,
+							  "depth": 3,
+							  "assetName": "Hp Model 1602",
+							  "relations": []
+							}
+						  ]
+						},
+						{
+						  "_id": "5c67d401373bbf1308176e97",
+						  "links": {
+							"usedIn": [],
+							"composedOf": [
+							  "231610f3-46fe-a430-fb38-4dcb22dc8383",
+							  "5dc05ec5-0856-dec3-0ef6-d8bf7bab912b",
+							  "59fc5bd5-eaa1-d586-8191-713ca53ba44b"
+							]
+						  },
+						  "timestamp": "2019-02-16T06:18:45.551Z",
+						  "assetModel": "any",
+						  "asset": {
+							"id": "1033",
+							"name": "Thinkpad Model 1602",
+							"description": "16gb ram"
+						  },
+						  "uid": "49640f04-8710-8c0c-7d4a-767f20ee9306",
+						  "linksInfo": [],
+						  "location": [],
+						  "__v": 0,
+						  "depth": 3,
+						  "assetName": "Thinkpad Model 1602",
+						  "relations": []
+						},
+						{
+						  "_id": "5c6b9a15a20186237cb2b842",
+						  "links": {
+							"usedIn": [],
+							"composedOf": [
+							  "e01d6fb8-59c5-bd50-9518-cad3576c2fa7",
+							  "231610f3-46fe-a430-fb38-4dcb22dc8383",
+							  "2fcea72c-bce8-0fdf-233e-d8616296d8c8"
+							]
+						  },
+						  "timestamp": "2019-02-19T04:31:30.599Z",
+						  "assetModel": "any",
+						  "asset": {
+							"id": "1037",
+							"name": "Hp Model 1602",
+							"description": "16gb ram"
+						  },
+						  "uid": "72b2b15a-784b-9c9e-962b-f03917a4ffc0",
+						  "linksInfo": [],
+						  "location": [],
+						  "__v": 0,
+						  "depth": 3,
+						  "assetName": "Hp Model 1602",
+						  "relations": []
+						},
+						{
+						  "_id": "5c6b9b6da20186237cb2b844",
+						  "links": {
+							"usedIn": [],
+							"composedOf": [
+							  "a5401d12-2b5d-0cb6-4813-237cc6025c8c",
+							  "231610f3-46fe-a430-fb38-4dcb22dc8383"
+							]
+						  },
+						  "timestamp": "2019-02-19T04:31:30.599Z",
+						  "assetModel": "any",
+						  "asset": {
+							"id": "1038",
+							"name": "SOny note Model 1902",
+							"description": "16gb ram"
+						  },
+						  "uid": "faa27ca8-e0ea-e29d-bbc9-3f9c776f34e3",
+						  "linksInfo": [],
+						  "location": [],
+						  "__v": 0,
+						  "depth": 3,
+						  "assetName": "SOny note Model 1902",
+						  "relations": []
+						}
+					  ]
+					}
+				  ]
+				}
+			  ]
+			}
+		  ],
+		  "depth": -1
 		}
-	];
-	selected = '1';
+	  ]
+	  selected = '1';
 	options = [
 		{
 			name: 'Composed of',
