@@ -1,0 +1,111 @@
+.cancelText {
+    font-size: 12px;
+    color: red;
+}
+
+.outgoing {
+    color: rgb(175, 10, 10)
+}
+
+.incoming {
+    color: black;
+}
+
+.falied {
+    color: red;
+}
+
+.add-btn a i {
+    width: 33px;
+    height: 33px;
+    float: none;
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 12px;
+    color: #d4c5a0;
+    text-align: center;
+    line-height: 31px;
+    border: 1px solid #76767bb3;
+    border-radius: 33px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+  }
+  
+  .add-btn a:hover {
+    text-decoration: underline;
+  }
+  
+  .defaultDiv{
+      background-color: #d8fc40;
+      border-radius: 30px;
+  }
+
+  .dangerBtn {
+      background-color: rgb(241, 48, 48);
+      color: white;
+  }
+
+  .bankDiv {
+    background-color: #f0f4f5;
+    border-radius: 30px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: gray;
+  }
+
+  .mT-35 {
+      margin-top: 18%;
+  }
+
+  #sailorTableArea{
+    max-height: 300px;
+    overflow-x: auto;
+    overflow-y: auto;
+}
+#sailorTable{
+    white-space: nowrap;
+}
+
+.fontPoppins {
+    font-family: 'Poppins';
+}
+
+.btn {
+    border: solid 2px #a7bf2e;
+    border-radius: 28px 76px 63px;
+    background-color: white;
+    color: black;
+    padding: .375rem .75rem;
+    font-size: 10px;
+    font-weight: bold;
+    font-family: 'Poppins'
+  }
+
+  .btnCancel {
+    border: solid 2px #a7bf2e;
+    border-radius: 28px 76px 63px;
+    background-color: white;
+    color: red;
+    padding: .375rem .75rem;
+    font-size: 10px;
+    font-weight: bold;
+    font-family: 'Poppins'
+  }
+  
+  .btn:hover {
+    border: solid 2px #a7bf2e;
+    border-radius: 28px 76px 63px;
+    background-color: #a7bf2e;
+    color: white;
+  }
+
+  .btn:focus {
+      outline: none !important;
+      box-shadow: none !important;
+  }
+
+  .tableBg {
+      background-color: white;
+  }

@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { Routes, RouterModule, CanActivate } from '@angular/router';
 import { SukuACHSettingsComponent } from '../lib/suku-achsettings/suku-achsettings.component';
+import { SukuTransactionHistoryComponent } from '../lib/suku-transaction-history/suku-transaction-history.component';
 import {
   MatAutocompleteModule,
   MatBadgeModule,
@@ -109,7 +110,8 @@ import { SukuResponseComponent } from './suku-response/suku-response.component';
     SukuRatingStarComponent,
     SukuShippingWidgetComponent,
     SukuResponseComponent,
-    SukuACHSettingsComponent
+    SukuACHSettingsComponent,
+    SukuTransactionHistoryComponent
   ],
   imports: [
     CommonModule,
@@ -186,6 +188,7 @@ import { SukuResponseComponent } from './suku-response/suku-response.component';
     SukuShippingWidgetComponent,
     SukuResponseComponent,
     SukuACHSettingsComponent,
+    SukuTransactionHistoryComponent,
     RouterModule
   ]
 })
