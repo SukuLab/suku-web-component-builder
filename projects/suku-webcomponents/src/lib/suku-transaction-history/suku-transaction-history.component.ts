@@ -18,7 +18,7 @@ export class SukuTransactionHistoryComponent implements OnInit {
   @Input() amountId = 'AmountId';
   @Input() statusId = 'statusId';
   @Input() status = 'Status';
-  @Input() dateCreate = 'Date Created';
+  @Input() dateCreated = 'Date Created';
   @Input() dateCreatedId = 'dateCreatedId';
   @Input() paymentManagementId = 'paymentManagementId';
   @Input() paymentManagement = 'Payment Management';
