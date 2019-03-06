@@ -1,0 +1,50 @@
+.redText {
+    color: red;
+    font-size: 12px;
+}
+
+.font12 {
+    font-size: 12px;
+}
+
+.textBold {
+    font-weight: bold;
+}
+
+/*color: #1c1c1c;*/
+.Rectangle-2 {
+    border-radius: 0 0 41px 41px;
+    background-color: #ffffff;
+    box-shadow: 0 12px 14px 0 rgba(0, 0, 0, 0.05);
+  }
+
+.poppinsFont {
+    font-family: 'Poppins';
+}
+
+.btn {
+    border: solid 2px #a7bf2e;
+    border-radius: 28px 76px 63px;
+    background-color: white;
+    color: black;
+    padding: .375rem .75rem;
+    font-size: 10px;
+    font-weight: bold;
+    font-family: 'Poppins'
+  }
+  
+  .btn:hover {
+    border: solid 2px #a7bf2e;
+    border-radius: 28px 76px 63px;
+    background-color: #a7bf2e;
+    color: white;
+  }
+
+  .btn:focus {
+      outline: none !important;
+      box-shadow: none !important;
+  }
+
+  .font20 {
+      font-size: 25px;
+  }
