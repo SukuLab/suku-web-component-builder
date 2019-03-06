@@ -14,6 +14,9 @@ export class SukuACHSettingsComponent implements OnInit {
  @Input() paymentButtonId = 'SetupACHPayments';
  @Input() lowerText = 'please setup your ACH payment profile below';
  @Input() upperText = 'ACH Payment Profile Not Complete';
+ @Input() upperTextId = 'upperTextId';
+ @Input() lowerTextId = 'lowerTextId';
+ @Input() subtitleId = 'subtitleId';
  @Output() action = new EventEmitter();
   constructor() { }
 

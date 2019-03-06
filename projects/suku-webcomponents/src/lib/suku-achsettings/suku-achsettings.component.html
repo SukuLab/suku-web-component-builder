@@ -5,11 +5,11 @@
   <div class="col-sm-12 mt-4">
     <div class="form-group col-xs-12 col Rectangle-2 p-3">
     <div class="col-sm-12 text-center">
-      {{subTitle}}<br>
-      <span class="redText">{{upperText}}</span>
+     <span id="{{subtitleId}}"> {{subTitle}}</span><br>
+      <span class="redText" id="{{upperTextId}}">{{upperText}}</span>
     </div>
     <div class="col-sm-12 text-center mt-3">
-     <i> <span class="font12">{{lowerText}} </span> </i> 
+     <i> <span class="font12" id="{{lowerTextId}}">{{lowerText}} </span> </i> 
     </div>
     <div class="col-sm-12 mt-4 text-center">
       <button class=" btn textBold" id="{{paymentButtonId}}" (click)="action.emit()">{{SetupACHPaymentsBtnText}}</button>
