@@ -75,6 +75,7 @@ import { SukuRatingStarComponent } from './suku-rating-star/suku-rating-star.com
 import { SukuCardTitleComponent } from './suku-card-title/suku-card-title.component';
 import {SukuShippingWidgetComponent} from './suku-shipping-widget/suku-shipping-widget.component';
 import { SukuResponseComponent } from './suku-response/suku-response.component';
+import { SukuCreateCustomerComponent } from './suku-create-customer/suku-create-customer.component';
 @NgModule({
   declarations: [
     SukuBidTagComponent,
@@ -113,8 +114,9 @@ import { SukuResponseComponent } from './suku-response/suku-response.component';
     SukuResponseComponent,
     SukuACHSettingsComponent,
     SukuTransactionHistoryComponent,
-    SukuFundingSourceComponent
+    SukuFundingSourceComponent,
 
+    SukuCreateCustomerComponent
   ],
   imports: [
     CommonModule,
@@ -193,7 +195,8 @@ import { SukuResponseComponent } from './suku-response/suku-response.component';
     SukuACHSettingsComponent,
     SukuTransactionHistoryComponent,
     RouterModule,
-    SukuFundingSourceComponent
+    SukuFundingSourceComponent,
+    SukuCreateCustomerComponent
   ]
 })
 export class SukuWebcomponentsModule { }
