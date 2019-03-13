@@ -6,7 +6,10 @@
 }
 
 .side-bar .filter-title {
+  // height: 40px;
   color: #c5af79;
+  // padding: 20px 0 0 0;
+  // margin: 0 0 15px 0;
 }
 
 .side-bar .filter-title a {
@@ -482,4 +485,11 @@ fieldset[disabled] .btn-info.focus {
   color: #1d1d1d;
   text-decoration: underline;
   text-transform: uppercase
+}
+
+
+.mat-checkbox-label {
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  font-size: 17px;
+  letter-spacing: 0.2px;
 }

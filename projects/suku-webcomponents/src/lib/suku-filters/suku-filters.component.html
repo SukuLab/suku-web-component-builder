@@ -5,14 +5,18 @@
   <div class="collapse-filter collapse" id="collapse-filter">
     <div class="box">
       <div class="filter-list">
-        <h2 [style.font-size.px]="size" id="filterHeading" class="unreadNotifications">{{filterHeading}}</h2>
+        <h2 [style.font-size.px]="size" class="unreadNotifications">{{filterHeading}}</h2>
         <div class="options pl-3">
           <div *ngFor="let status of statusTypesDynamic; let l = index">
-            <mat-checkbox color="primary" id="parentCheckbox{{l}}" [checked]="status.checked" (change)="(status.checked = $event.checked); filterOnChange.emit($event);">
+            <mat-checkbox *ngIf="!status?.label" color="primary" [checked]="status.checked" (change)="(status.checked = $event.checked); filterOnChange.emit($event);">
               {{status.displayName}}</mat-checkbox>
-            <div *ngIf="status.hasSub && status.checked">
-              <div class="col-sm-12" *ngFor="let subStatus of status.sub; let sk = index">
-                <mat-checkbox [checked]="subStatus.checked" id="childCheckbox{{sk}}" (change)="(subStatus.checked = $event.checked); filterOnChange.emit($event);"
+            <div *ngIf="status?.label" class="mat-checkbox-label pb-2">
+              {{status.displayName}}
+            </div>
+            <!-- *ngIf="status.hasSub && status.checked" -->
+            <div class="p-0">
+              <div class="col-sm-12 pl-3" *ngFor="let subStatus of status.sub; let sk = index">
+                <mat-checkbox [checked]="subStatus.checked" (change)="(subStatus.checked = $event.checked); filterOnChange.emit($event);"
                   color="primary"> {{subStatus.displayName}}</mat-checkbox>
               </div>
             </div>
@@ -37,13 +41,13 @@
         </div>
       </div>
       <div class="p-3 pb-4 pl-5 pr-5">
-        <button type="button" id="applyFilter" class=" btn btn-info btn-lg btn-block" (click)="applyFilter.emit()"> Apply
+        <button type="button" class=" btn btn-info btn-lg btn-block" (click)="applyFilter.emit()"> Apply
           Filters</button>
       </div>
       <div class="filter-links">
         <p>
-          <a id="selectAll" (click)="selectAll.emit();">SELECT ALL</a>
-          <a id="clearAll" (click)="deselectAll.emit();">CLEAR ALL</a>
+          <a (click)="selectAll.emit();">SELECT ALL</a>
+          <a (click)="deselectAll.emit();">CLEAR ALL</a>
         </p>
       </div>
     </div>
