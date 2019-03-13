@@ -1,0 +1,293 @@
+<!-- method one -->
+<!-- <form [formGroup]="form">
+  <div class="col">
+    <label class="titleClass"><strong>{{title}}</strong></label>
+    <div class="col bg pl-5 pr-5 pt-5 pb-3 mb-5">
+      <div class="col p-0" formArrayName="{{arrayControlName}}" id="beneficialOwnerBlock">
+        <div class="col p-0" *ngFor="let detail of form.get(arrayControlName)['controls']; let i=index" [formGroupName]="i">
+          <div class="col card-line mt-3 mb-2 c-pointer" data-toggle="collapse" [attr.data-target]="'#ownerBlock' + i"
+            (click)="active(i)">
+            <div class="row">
+              <label class="m-2 pl-3 owner c-pointer">
+                Beneficial Owner {{i+1}}
+              </label>
+              <label class="d-flex justify-content-end col pl-0 c-pointer">
+                <span class="pt-1 pr-2 icon" [ngClass]="{'d-none': selected[i] != i}">
+                  <i class="fa fa-arrow-circle-down icon"></i>
+                </span>
+                <span class="pt-1 pr-2 icon" [ngClass]="{'d-none': selected[i] == i}">
+                  <i class="fa fa-arrow-circle-up icon"></i>
+                </span>
+              </label>
+            </div>
+          </div>
+          <div class="col mt-4 collapse" data-parent="#beneficialOwnerBlock" id="ownerBlock{{i}}">
+            <div class="row">
+              <div class="col">
+                <mat-form-field class="fullwidth">
+                  <input matInput placeholder="First Name" id="firstname" formControlName="firstName" name="firstName">
+                </mat-form-field>
+              </div>
+              <div class="col">
+                <mat-form-field class="fullwidth">
+                  <input matInput placeholder="Last Name" id="lastname" formControlName="lastName" name="lastName">
+                </mat-form-field>
+              </div>
+              <div class="col">
+                <mat-form-field>
+                  <input matInput [matDatepicker]="myDatepicker" id="dob" placeholder="Date of birth" formControlName="dateOfBirth"
+                    name="dateOfBirth">
+                  <mat-datepicker-toggle matSuffix [for]="myDatepicker"></mat-datepicker-toggle>
+                  <mat-datepicker #myDatepicker></mat-datepicker>
+                </mat-form-field>
+              </div>
+              <div class="col">
+                <mat-form-field class="fullwidth">
+                  <input matInput placeholder="SSN" id="ssn" formControlName="ssn" name="ssn">
+                  <mat-hint>hint: 1234-12-123</mat-hint>
+                </mat-form-field>
+              </div>
+            </div>
+            <div class="col p-0" formGroupName="address">
+              <div class="col p-0">
+                <mat-form-field class="fullwidth">
+                  <input matInput placeholder="Address 1" id="address1" formControlName="address1" name="address1">
+                </mat-form-field>
+              </div>
+              <div class="col p-0">
+                <mat-form-field class="fullwidth">
+                  <input matInput placeholder="Address 2" id="address2" formControlName="address2" name="address2">
+                </mat-form-field>
+              </div>
+              <div class="col p-0">
+                <div class="row">
+                  <div class="col">
+                    <mat-form-field class="fullwidth">
+                      <mat-select #t (selectionChange)="countrySelectAction(t.value,i)" id="country" formControlName="country"
+                        name="country" placeholder="country">
+                        <mat-option value="">Select Country</mat-option>
+                        <mat-option *ngFor="let item of countriesList; let i = index" value="{{ item | json }}">
+                          {{ item.countryName }}</mat-option>
+                      </mat-select>
+                    </mat-form-field>
+                  </div>
+                  <div class="col">
+                    <mat-form-field class="fullwidth">
+                      <mat-select #s (selectionChange)="stateSelect.emit(s.value)" formControlName="stateProvinceRegion"
+                        id="stateProvinceRegion" name="stateProvinceRegion" placeholder="state">
+                        <mat-option value="">Select State</mat-option>
+                        <mat-option *ngFor="let item of statesList; let i = index" value="{{ item.stateShortName }}">{{
+                          item.stateName }}</mat-option>
+                      </mat-select>
+                    </mat-form-field>
+                  </div>
+                  <div class="col">
+                    <mat-form-field class="fullwidth">
+                      <input matInput placeholder="City" id="city" formControlName="city" name="city">
+                    </mat-form-field>
+                  </div>
+                  <div class="col">
+                    <mat-form-field class="fullwidth">
+                      <input matInput #postalcode maxlength="5" placeholder="Postal Code" id="postalCode"
+                        formControlName="postalCode" name="postalCode">
+                    </mat-form-field>
+                  </div>
+                </div>
+                <div class="col p-3">
+                  <div class="row">
+                    <div class="col-sm-8 p-0">
+                      <label class="upload-doc-title">
+                        <b>
+                          Upload a driver license or passport.
+                        </b>
+                      </label>
+                    </div>
+                    <div class="col-sm-4">
+                      <div class="col border-dot rounded-0 bg-light d-flex justify-content-center">
+                        <span class="fa fa-cloud-upload mt-3 upload-icon display-2 text-muted">
+                        </span>
+                        <input type="file" class="upload" name="document" formControlName="document" (change)="upload.emit($event.target.files)" />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="col mt-5">
+          <div class="row">
+            <span>
+              <mat-checkbox color="primary" type="checkbox" (change)="action()" id="agree" formControlName="{{control}}"
+                name="{{control}}">
+              </mat-checkbox>
+            </span>
+            <span class="col terms">{{content}}
+            </span>
+          </div>
+        </div>
+        <div class="col d-flex justify-content-center mt-4 mb-3">
+          <button class="btn btn-info" [ngClass]="{'disabled': formValid}" (click)="agree()" [disabled]="formValid">Agree
+            & Continue</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</form> -->
+
+
+
+
+<!-- method two -->
+
+<form [formGroup]="form">
+  <div class="col">
+    <label class="titleClass"><strong>{{title}}</strong></label>
+    <div class="col bg pl-5 pr-5 pt-5 pb-3 mb-5">
+      <div class="col p-0" formArrayName="{{arrayControlName}}" id="beneficialOwnerBlock">
+        <div class="col p-0" *ngFor="let detail of form.get(arrayControlName)['controls']; let i=index" [formGroupName]="i">
+          <div class="col card-line mt-3 mb-4 c-pointer" data-toggle="collapse" [attr.data-target]="'#ownerBlock' + i"
+            (click)="active(i)">
+            <div class="row">
+              <label class="m-2 pl-3 owner c-pointer">
+                Beneficial Owner {{i+1}}
+              </label>
+              <label class="d-flex justify-content-end col pl-0 c-pointer">
+                <span class="pt-1 pr-2 icon" [ngClass]="{'d-none': selected[i] != i}">
+                  <i class="fa fa-arrow-circle-down icon"></i>
+                </span>
+                <span class="pt-1 pr-2 icon" [ngClass]="{'d-none': selected[i] == i}">
+                  <i class="fa fa-arrow-circle-up icon"></i>
+                </span>
+              </label>
+            </div>
+          </div>
+          <div class="col mt-4 collapse" [ngClass]="{'show': i == 0 }" data-parent="#beneficialOwnerBlock" id="ownerBlock{{i}}">
+            <div class="row">
+              <div class="col">
+                <mat-form-field class="fullwidth">
+                  <input matInput placeholder="First Name" id="firstname" formControlName="firstName" name="firstName">
+                </mat-form-field>
+              </div>
+              <div class="col">
+                <mat-form-field class="fullwidth">
+                  <input matInput placeholder="Last Name" id="lastname" formControlName="lastName" name="lastName">
+                </mat-form-field>
+              </div>
+              <div class="col">
+                <mat-form-field>
+                  <input matInput [matDatepicker]="myDatepicker" id="dob" placeholder="Date of birth" formControlName="dateOfBirth"
+                    name="dateOfBirth">
+                  <mat-datepicker-toggle matSuffix [for]="myDatepicker"></mat-datepicker-toggle>
+                  <mat-datepicker #myDatepicker></mat-datepicker>
+                </mat-form-field>
+              </div>
+              <div class="col">
+                <mat-form-field class="fullwidth">
+                  <input matInput placeholder="SSN" id="ssn" formControlName="ssn" name="ssn">
+                  <mat-hint>hint: 1234-12-123</mat-hint>
+                </mat-form-field>
+              </div>
+            </div>
+            <div class="col p-0" formGroupName="address">
+              <div class="col p-0">
+                <mat-form-field class="fullwidth">
+                  <input matInput placeholder="Address 1" id="address1" formControlName="address1" name="address1">
+                </mat-form-field>
+              </div>
+              <div class="col p-0">
+                <mat-form-field class="fullwidth">
+                  <input matInput placeholder="Address 2" id="address2" formControlName="address2" name="address2">
+                </mat-form-field>
+              </div>
+              <div class="col p-0">
+                <div class="row">
+                  <div class="col">
+                    <mat-form-field class="fullwidth">
+                      <mat-select #t (selectionChange)="countrySelectAction(t.value,i)" id="country" formControlName="country"
+                        name="country" placeholder="country">
+                        <mat-option value="">Select Country</mat-option>
+                        <mat-option *ngFor="let item of countriesList; let i = index" value="{{ item | json }}">
+                          {{ item.countryName }}</mat-option>
+                      </mat-select>
+                    </mat-form-field>
+                  </div>
+                  <div class="col">
+                    <mat-form-field class="fullwidth">
+                      <mat-select #s (selectionChange)="stateSelect.emit(s.value)" formControlName="stateProvinceRegion"
+                        id="stateProvinceRegion" name="stateProvinceRegion" placeholder="state">
+                        <mat-option value="">Select State</mat-option>
+                        <mat-option *ngFor="let item of statesList; let i = index" value="{{ item.stateShortName  }}">{{
+                          item.stateName }}</mat-option>
+                      </mat-select>
+                    </mat-form-field>
+                  </div>
+                  <div class="col">
+                    <mat-form-field class="fullwidth">
+                      <input matInput placeholder="City" id="city" formControlName="city" name="city">
+                    </mat-form-field>
+                  </div>
+                  <div class="col">
+                    <mat-form-field class="fullwidth">
+                      <input matInput #postalcode maxlength="5" placeholder="Postal Code" id="postalCode"
+                        formControlName="postalCode" name="postalCode">
+                    </mat-form-field>
+                  </div>
+                </div>
+                <div class="col p-3">
+                  <div class="row">
+                    <div class="col-sm-8 p-0">
+                      <label class="upload-doc-title">
+                        <b>
+                          Upload a driver license or passport.
+                        </b>
+                      </label>
+                    </div>
+                    <div class="col-sm-4">
+                      <div class="col border-dot rounded-0 bg-light d-flex justify-content-center">
+                        <span class="fa fa-cloud-upload mt-3 upload-icon display-2 text-muted">
+                        </span>
+                        <input type="file" class="upload" name="document" formControlName="document" (change)="upload.emit($event.target.files)" />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col mt-5 mb-3">
+        <div class="row">
+          <div class="col mt-3 mb-2">
+            <span class="add c-pointer" (click)="add.emit()"><i class="fa fa-plus-circle pr-3 icon"></i>Add New
+              Beneficial
+              Owner</span>
+          </div>
+          <div class="col d-flex justify-content-end  mt-3 mb-3">
+            <button class="btn btn-info" (click)="agree()">Submit Beneficial Owner</button>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="col mt-5">
+          <div class="row">
+            <span>
+              <mat-checkbox color="primary" type="checkbox" (change)="action()" id="agree" formControlName="{{control}}"
+                name="{{control}}">
+              </mat-checkbox>
+            </span>
+            <span class="col terms">{{content}}
+            </span>
+          </div>
+        </div>
+        <div class="col d-flex justify-content-center mt-4 mb-3">
+          <button class="btn btn-info" [ngClass]="{'disabled': formValid}" (click)="submitData.emit()" [disabled]="formValid">Agree
+            & Continue</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</form>

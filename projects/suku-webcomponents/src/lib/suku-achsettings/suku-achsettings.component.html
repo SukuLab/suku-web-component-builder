@@ -1,19 +1,23 @@
-<div class="col poppinsFont">
+<div class="col poppinsFont p-0">
   <div class="col-sm-12 text-center">
-   <span class="font20" id="{{titleId}}">{{title}}</span>
+    <span class="font20" id="{{titleId}}">{{title}}</span>
   </div>
   <div class="col-sm-12 mt-4">
     <div class="form-group col-xs-12 col Rectangle-2 p-3">
-    <div class="col-sm-12 text-center">
-     <span id="{{subtitleId}}"> {{subTitle}}</span><br>
-      <span class="redText" id="{{upperTextId}}">{{upperText}}</span>
-    </div>
-    <div class="col-sm-12 text-center mt-3">
-     <i> <span class="font12" id="{{lowerTextId}}">{{lowerText}} </span> </i> 
-    </div>
-    <div class="col-sm-12 mt-4 text-center">
-      <button class=" btn textBold" id="{{paymentButtonId}}" (click)="action.emit()">{{SetupACHPaymentsBtnText}}</button>
-    </div>
+      <div class="col-sm-12 text-center">
+        <div class="col">
+          <span class="text-center subTitle" id="{{subtitleId}}"> {{subTitle}}</span>
+          <br>
+          <p class="text-center mt-2 mb-2" id="{{subContentId}}">Customer status: <b class="status">{{subContent}}</b></p>
+        </div>
+        <span class="redText" id="{{upperTextId}}">{{upperText}}</span>
+      </div>
+      <div class="col-sm-12 text-center mt-2">
+        <i> <span class="font12" id="{{lowerTextId}}">{{lowerText}} </span> </i>
+      </div>
+      <div class="col-sm-12 mt-4 mb-3 text-center">
+        <button class=" btn textBold" id="{{paymentButtonId}}" (click)="action.emit()">{{SetupACHPaymentsBtnText}}</button>
+      </div>
     </div>
   </div>
-  </div>
+</div>

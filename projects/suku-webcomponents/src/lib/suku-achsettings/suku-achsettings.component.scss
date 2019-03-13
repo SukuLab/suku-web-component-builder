@@ -22,16 +22,16 @@
     font-family: 'Poppins';
 }
 
-.btn {
+.btn{
     border: solid 2px #a7bf2e;
     border-radius: 28px 76px 63px;
     background-color: white;
     color: black;
-    padding: .375rem .75rem;
-    font-size: 10px;
+    padding: 0.775rem 1.85rem;
+    font-size: 12px;
     font-weight: bold;
-    font-family: 'Poppins'
-  }
+    font-family: "Poppins";
+ }
   
   .btn:hover {
     border: solid 2px #a7bf2e;
@@ -47,4 +47,13 @@
 
   .font20 {
       font-size: 25px;
+  }
+
+  .subTitle {
+    font-weight: bold !important;
+    font-family: 'Poppins', sans-serif !important;
+  }
+
+  .status {
+   color: red;
   }
