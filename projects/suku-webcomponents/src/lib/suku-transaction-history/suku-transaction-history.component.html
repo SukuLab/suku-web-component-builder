@@ -1,34 +1,35 @@
 <div class="col-sm-12 fontPoppins pT-5 d-flex">
-    <div class="form-group col-12 Rectangle-2 p-3">
-      <div class="col-sm-12 text-center mb-2">
-        {{transactionHistory}}
-      </div>
-      <div class="col-sm-12 table-responsive mB-4" id="sailorTableArea">
-        <table class="col-sm-12  table table-bordered tableBg" id="sailorTable" style="overflow-x:auto;">
-          <thead>
-            <tr *ngFor="let heading of headings">
-              <th scope="col" class="text-center" id="{{typeId}}">{{heading.type}}</th>
-              <th scope="col" class="text-center" id="{{myAccountId}}">{{heading.myAccount}}</th>
-              <th scope="col" class="text-center" id="{{counterPartyId}}">{{heading.counterparty}}</th>
-              <th scope="col" class="text-center" id="{{amountId}}">{{heading.amount}}</th>
-              <th scope="col" class="text-center" id="{{statusId}}">{{heading.status}}</th>
-              <th scope="col" class="text-center" id="{{dateCreatedId}}">{{heading.dateCreated}}</th>
-              <th scope="col" class="text-center" id="{{paymentManagementId}}">{{heading.paymentManagement}}</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr id="{{transactionDetailsId}}" *ngFor="let transaction of transactionDetails">
-              <td scope="row" class="text-center {{( (transaction?.type) == 'outgoing') ? 'outgoing' : 'incoming'}}">
-                {{transaction?.type}}</td>
-              <td scope="row" class="text-center">{{transaction?.accountName}}</td>
-              <td scope="row" class="text-center">{{transaction?.counterParty}}</td>
-              <td scope="row" class="text-center">{{transaction?.amount}}</td>
-              <td scope="row" class="text-center {{( (transaction.status) == 'Failed') ? 'falied' : 'incoming'}}">{{transaction?.status}}</td>
-              <td scope="row" class="text-center">{{transaction?.created}}</td>
-              <td class="text-center"><button *ngIf="transaction?.status=='Pending'" id="{{cancelId}}" (click)="action.emit(transaction);" class="btn  btnCancel">{{cancel}}</button></td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
+  <div class="form-group col-12 Rectangle-2 p-3">
+    <div class="col-sm-12 text-center mb-2">
+      {{transactionHistory}}
+    </div>
+    <div class="col-sm-12 table-responsive mB-4" id="sailorTableArea">
+      <table class="col-sm-12  table table-bordered tableBg" id="sailorTable" style="overflow-x:auto;">
+        <thead>
+          <tr *ngFor="let heading of headings">
+            <th scope="col" class="text-center" id="{{typeId}}">{{heading.type}}</th>
+            <th scope="col" class="text-center" id="{{myAccountId}}">{{heading.myAccount}}</th>
+            <th scope="col" class="text-center" id="{{counterPartyId}}">{{heading.counterparty}}</th>
+            <th scope="col" class="text-center" id="{{amountId}}">{{heading.amount}}</th>
+            <th scope="col" class="text-center" id="{{statusId}}">{{heading.status}}</th>
+            <th scope="col" class="text-center" id="{{dateCreatedId}}">{{heading.dateCreated}}</th>
+            <th scope="col" class="text-center" id="{{paymentManagementId}}">{{heading.paymentManagement}}</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr id="{{transactionDetailsId}}" *ngFor="let transaction of transactionDetails">
+            <td scope="row" class="text-center {{( (transaction?.type) == 'outgoing') ? 'outgoing' : 'incoming'}}">
+              {{transaction?.type}}</td>
+            <td scope="row" class="text-center">{{transaction?.accountName}}</td>
+            <td scope="row" class="text-center">{{transaction?.counterParty}}</td>
+            <td scope="row" class="text-center">{{transaction?.amount}}</td>
+            <td scope="row" class="text-center {{( (transaction.status) == 'Failed') ? 'falied' : 'incoming'}}">{{transaction?.status}}</td>
+            <td scope="row" class="text-center">{{transaction?.created}}</td>
+            <td class="text-center"><button *ngIf="transaction?.status=='Pending'" id="{{cancelId}}" (click)="action.emit(transaction);"
+                class="btn  btnCancel">{{cancel}}</button></td>
+          </tr>
+        </tbody>
+      </table>
     </div>
   </div>
+</div>

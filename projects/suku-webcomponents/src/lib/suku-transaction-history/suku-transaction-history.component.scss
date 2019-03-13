@@ -2,19 +2,15 @@
     font-size: 12px;
     color: red;
 }
-
 .outgoing {
     color: rgb(175, 10, 10)
 }
-
 .incoming {
     color: black;
 }
-
 .falied {
     color: red;
 }
-
 .add-btn a i {
     width: 33px;
     height: 33px;
@@ -41,12 +37,10 @@
       background-color: #d8fc40;
       border-radius: 30px;
   }
-
   .dangerBtn {
       background-color: rgb(241, 48, 48);
       color: white;
   }
-
   .bankDiv {
     background-color: #f0f4f5;
     border-radius: 30px;
@@ -54,11 +48,9 @@
     border-width: 1px;
     border-color: gray;
   }
-
   .mT-35 {
       margin-top: 18%;
   }
-
   #sailorTableArea{
     max-height: 300px;
     overflow-x: auto;
@@ -67,11 +59,9 @@
 #sailorTable{
     white-space: nowrap;
 }
-
 .fontPoppins {
     font-family: 'Poppins';
 }
-
 .btn {
     border: solid 2px #a7bf2e;
     border-radius: 28px 76px 63px;
@@ -82,7 +72,6 @@
     font-weight: bold;
     font-family: 'Poppins'
   }
-
   .btnCancel {
     border: solid 2px #a7bf2e;
     border-radius: 28px 76px 63px;
@@ -100,16 +89,13 @@
     background-color: #a7bf2e;
     color: white;
   }
-
   .btn:focus {
       outline: none !important;
       box-shadow: none !important;
   }
-
   .tableBg {
       background-color: white;
   }
-
   .pT-5 {
       padding-top: 2%
   }

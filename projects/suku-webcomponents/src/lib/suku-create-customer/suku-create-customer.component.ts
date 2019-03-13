@@ -81,35 +81,13 @@ validateTypeFun(type) {
   }
 }
 action1() {
-  const controlName = this.DwollaTOScontrol;
-  if (this.form.get(controlName).value) {
-    this.DwollaTOSformValid = false;
-  } else {
-    this.DwollaTOSformValid = true;
-  }
-}
-
-action2() {
-  const controlName = this.CitizensReserveTOScontrol;
-  if (this.form.get(controlName).value) {
+  const controlName1 = this.CitizensReserveTOScontrol;
+  const controlName2 = this.DwollaTOScontrol;
+  if (this.form.get(controlName1).value && this.form.get(controlName2).value ) {
     this.CitizensReserveTOSformValid = false;
   } else {
     this.CitizensReserveTOSformValid = true;
   }
 }
-// isFieldValid(field: string) {
-//   console.log("dhdfhdffd : " + field);
-//   console.log("fdfdfd : " + this.asssas.get(field))
-// //  console.log(this.form.get(controlName).get('lastName'));
-//   // console.log("the data: "  + JSON.stringify(maindata));
-//   // console.log("the data: "  + JSON.stringify(maindata.get(field)));
-//   // console.log("this is form : "  + this.form);
-//   // console.log("this is form : "  + this.formArrayNameValue);
-//   // console.log("this.form.get(controlName) : "  + this.form.get(controlName));
-//   // return (
-//   //   (!this.form.get(controlName).get(field).valid && this.form.get(controlName).get(field).touched) ||
-//   //   (this.form.get(controlName).get(field).untouched)
-//   // );
-// }
 
 }

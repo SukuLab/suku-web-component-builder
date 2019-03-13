@@ -1,13 +1,13 @@
-<div class="form-group col-12 Rectangle-2 p-3 poppinsFont">
-  <div class="col-sm-12 text-center mb-2 row">
-    <div class="col-sm-6">
-      <div class="col-sm-12 row  mb-6">
-        <div class="col-sm-2">
+<div class="col-sm-12 d-flex pt-4">
+  <div class="Rectangle-2 col mB-2">
+    <div class="col-sm-12">
+      <div class="row" (click)="addSource.emit()">
+        <div class="col-sm-1">
           {{headerOneTxt}} <br>
           {{headerTwoText}}
         </div>
         <div class="col-sm-10">
-          <div class="add-btn p-2 text-left">
+          <div class="add-btn p-2 text-left" *ngIf="fundingDetails.length !== 8">
             <a>
               <i class="fa fa-plus-circle plusIcon"></i>
             </a>
@@ -15,62 +15,68 @@
         </div>
       </div>
     </div>
-  </div>
-  <div class="col-sm-12" >
-    <div class="col-sm-12 row">
-      <div class="jumbotron col-xs-12 col-sm-3  container defaultDiv samBoxStyle boxShadowStyle jumbotron_cus2">
-        <div class="col-sm-12 p-3 mt-2">
-          <div class="col-sm-12 text-center">
-            <b>{{defaultText}}</b>
-          </div>
-          <div class="col-sm-12 text-center mt-4">
-            {{defaultbankName}}
-          </div>
-          <div class="col-sm-12 text-center">
-            {{DefaultaccountNumber}}
-          </div>
-          <div class="col-sm-12 text-center mT-18">
-            <button class="btnDanger col-sm-12 btnFnt" (click)='removeDefault.emit()' id="{{defaultRemoveBtnId}}">{{defaultRemoveBtnTxt}}</button>
-          </div>
-        </div>
-      </div>
-      <div class="jumbotron col-xs-12 col-sm-3 container defaultDiv samBoxStyle boxShadowStyle jumbotron_cus2" 
-      *ngFor="let item of arrayOne; let i = index;">
-        <div class="col-sm-12  p-3  mt-2">
-          <div class="col-sm-12 text-center mt-35">
-            {{item.name}}
-          </div>
-          <div class="col-sm-12 text-center pt8">
-            {{item.chaseAccountNumber}}
-          </div>
-          <div class="matBoxStyle">
-          <div class="col-sm-12 text-center pt13">
-            <div class="col-sm-10  offset-sm-1">
-              <button class="btn btn-info mb9 col-sm-12 btnFnt" (click)="makeDefaultAction.emit();" id="{{defaultBtnId}}">{{defaultBtnTxt}}</button>
-              <button class="btnDanger  col-sm-12 mt-1 btnFnt" (click)="removeSourceAction.emit();" id="{{removeBtnId}}">{{removeBtnTxt}}</button>
+    <div class="col-sm-12">
+      <div class="row">
+        <div class="col-sm-4 mt-3 pr-5 pl-5">
+          <div class="jumbotron col m-6  container defaultDiv samBoxStyle boxShadowStyle jumbotron_cus2">
+            <div class="col-sm-12 p-3 mt-2">
+              <div class="col-sm-12 text-center">
+                <b>{{defaultText}}</b>
+              </div>
+              <div class="col-sm-12 text-center mt-4">
+                {{defaultbankName}}
+              </div>
+              <div class="col-sm-12 text-center">
+                {{DefaultaccountNumber}}
+              </div>
+              <div class="col-sm-12 text-center mT-22">
+                <button class="btnDanger col-sm-8 btnFnt" (click)='removeDefault.emit()' id="{{defaultRemoveBtnId}}">{{defaultRemoveBtnTxt}}</button>
+              </div>
             </div>
           </div>
         </div>
-        </div>
-      </div>
-      <div class="jumbotron col-xs-12 col-sm-3  container defaultDiv samBoxStyle boxShadowStyle jumbotron_cus2">
-        <div class="col-sm-12  p-3  mt-2">
-          <div class="col-sm-12 text-center pb10">
-            {{achWalletTxt}}
-          </div>
-          <div class="col-sm-12 text-center">
-            {{balanceLblTxt}}:
-          </div>
-          <div class="col-sm-12 text-center pb9">
-          ${{WalletBalance}}
-          </div>
-          <div class=" matBoxStyle">
-          <div class="col-sm-12 text-center pt8">
-            <div class="col-sm-10 offset-sm-1 mt-12">
-              <button class="btn btn-info  col-sm-12 mt-1" (click)="achMakeDefaultAction.emit()" id="{{achMakeDefaultBtnId}}">{{achMakeDefaultBtnText}}</button>
+        <div class="col-sm-4 mt-3 pr-5 pl-5" *ngFor="let item of fundingDetails; let i = index;">
+          <div class="jumbotron m-6 justify-content-center container defaultDiv
+          samBoxStyle boxShadowStyle jumbotron_cus2">
+            <div class="col-sm-12  p-3  mt-2 ">
+              <div class="col-sm-12 text-center mt-35">
+                {{item.name}}
+              </div>
+              <div class="col-sm-12 text-center pt8">
+                XXXXXX{{item.id | slice:-4}}
+              </div>
+              <div class="matBoxStyle">
+                <div class="col-sm-12 text-center pt13">
+                  <div class="col-sm-10  offset-sm-1">
+                    <button class="btn btn-info mb9 col-sm-12 btnFnt" (click)="makeDefaultAction.emit();" id="{{defaultBtnId}}">{{defaultBtnTxt}}</button>
+                    <button class="btnDanger  col-sm-12 mt-1 btnFnt" (click)="removeSourceAction.emit(item);" id="{{removeBtnId}}">{{removeBtnTxt}}</button>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
+        <div class="col-sm-4 mt-3 pr-5 pl-5">
+          <div class="jumbotron  m-6 container defaultDiv samBoxStyle boxShadowStyle jumbotron_cus2">
+            <div class="col-sm-12  p-3  mt-2">
+              <div class="col-sm-12 text-center pb10">
+                {{achWalletTxt}}
+              </div>
+              <div class="col-sm-12 text-center">
+                {{balanceLblTxt}}:
+              </div>
+              <div class="col-sm-12 text-center">
+                ${{WalletBalance}}
+              </div>
+              <div class=" matBoxStyle">
+                <div class="col-sm-12 text-center pt8 mT-15">
+                  <div class="col-sm-10 offset-sm-1 mt-12">
+                    <button class="btn btn-info  col-sm-12 mt-1" (click)="achMakeDefaultAction.emit()" id="{{achMakeDefaultBtnId}}">{{achMakeDefaultBtnText}}</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
