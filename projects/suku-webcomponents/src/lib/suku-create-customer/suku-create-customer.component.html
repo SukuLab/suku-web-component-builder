@@ -252,7 +252,7 @@
               <div class="col-sm-12 form-group">
                 <div class="col flexCol p-0">
                   <mat-form-field>
-                    <input matInput [matDatepicker]="picker" [min]="2001-12-6" [readonly]="validateType" placeholder="Date of Birth"
+                    <input matInput [matDatepicker]="picker" [max]="maxDate" [readonly]="validateType" placeholder="Date of Birth"
                       id="dateOfBirth" formControlName="dateOfBirth">
                     <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
                     <mat-datepicker #picker></mat-datepicker>

@@ -7,7 +7,9 @@ import { FormGroup, FormBuilder, FormsModule, FormControl, Validators } from '@a
   styleUrls: ['./suku-creation-customer-fileupload.component.scss']
 })
 export class SukuCreationCustomerFileuploadComponent implements OnInit {
-
+  imagepath;
+  showMessage;
+  showPdfErrorMsg;
   @Output() onFileChange = new EventEmitter();
   @Output() submitData = new EventEmitter();
 
