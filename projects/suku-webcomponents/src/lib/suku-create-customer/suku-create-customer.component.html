@@ -423,7 +423,7 @@
             & Continue</button>
         </div> -->
       <div class="col d-flex justify-content-center mt-4 mb-3  pB40">
-        <button class="btn btn-info" [disabled]="CitizensReserveTOSformValid" [ngClass]="{'disabled': CitizensReserveTOSformValid}"
+        <button class="btn btn-info" id="customerCreationAgreeBtn" [disabled]="CitizensReserveTOSformValid" [ngClass]="{'disabled': CitizensReserveTOSformValid}"
           (click)="submitData.emit(); onSubmit.emit();">Agree
           & Continue</button>
       </div>
