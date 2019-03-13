@@ -208,7 +208,7 @@
                 <div class="col flexCol p-0">
                   <mat-form-field>
                     <input matInput type="text" [readonly]="validateType" name="firstName" formControlName="firstName"
-                      id="firstName" placeholder="First name">
+                      id="controllerFirstName" placeholder="First name">
                   </mat-form-field>
                   <mat-error>
                     <span *ngIf="getControl.get('controller').get('firstName').touched">
@@ -222,7 +222,7 @@
               <div class="col-sm-12 form-group">
                 <div class="col flexCol p-0">
                   <mat-form-field>
-                    <input matInput type="text" [readonly]="validateType" name="lastName" formControlName="lastName" id="lastName"
+                    <input matInput type="text" [readonly]="validateType" name="lastName" formControlName="lastName" id="controllerLastName"
                       placeholder="Last name">
                   </mat-form-field>
                   <mat-error>
@@ -284,7 +284,7 @@
                   <div class="col flexCol p-0">
                     <mat-form-field>
                       <input matInput type="text" [readonly]="validateType" name="address1" formControlName="address1"
-                        id="address1" placeholder="Address-1">
+                        id="controllerAddress1" placeholder="Address-1">
                     </mat-form-field>
                     <mat-error>
                       <span *ngIf="getControl.get('controller').get('address').get('address1').touched">
@@ -304,7 +304,7 @@
                     <mat-error>
                       <span *ngIf="getControl.get('controller').get('address').get('address2').touched">
                         <span *ngIf="getControl.get('controller').get('address').hasError('pattern',['address2'])">
-                          Invalid address2
+                          Invalid address-2
                         </span>
                       </span>
                     </mat-error>
@@ -335,7 +335,7 @@
                 <div class="col-sm-12 form-group">
                   <div class="col flexCol p-0">
                     <mat-form-field>
-                      <input matInput type="text" [readonly]="validateType" name="city" formControlName="city" id="city"
+                      <input matInput type="text" [readonly]="validateType" name="city" formControlName="city" id="controllerCity"
                         placeholder="City">
                     </mat-form-field>
                     <mat-error>
@@ -351,7 +351,7 @@
                   <div class="col flexCol p-0">
                     <mat-form-field>
                       <input matInput type="text" [readonly]="validateType" name="postalCode" formControlName="postalCode"
-                        id="postalCode" placeholder="Postal-code">
+                        id="controllerPostalCode" placeholder="Postal-code">
                     </mat-form-field>
                     <mat-error>
                       <span *ngIf="getControl.get('controller').get('address').get('postalCode').touched">

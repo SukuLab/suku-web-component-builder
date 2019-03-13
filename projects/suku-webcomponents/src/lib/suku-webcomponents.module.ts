@@ -76,15 +76,12 @@ import { SukuCardTitleComponent } from './suku-card-title/suku-card-title.compon
 import {SukuShippingWidgetComponent} from './suku-shipping-widget/suku-shipping-widget.component';
 import { SukuResponseComponent } from './suku-response/suku-response.component';
 import { SukuCreateCustomerComponent } from './suku-create-customer/suku-create-customer.component';
-<<<<<<< HEAD
 import { SukuBeneficialOwnerComponent } from './suku-beneficial-owner/suku-beneficial-owner.component';
 import { SukuDwollaFundingAgreementComponent } from './suku-dwolla-funding-agreement/suku-dwolla-funding-agreement.component';
 import { SukuDwollaFundingSourceComponent } from './suku-dwolla-funding-source/suku-dwolla-funding-source.component';
 import { SukuCreationCustomerFileuploadComponent } from './suku-creation-customer-fileupload/suku-creation-customer-fileupload.component';
-=======
 import { SukuPaymentPortalHelpComponent } from './suku-payment-portal-help/suku-payment-portal-help.component';
 
->>>>>>> e2c587ec0ce313375c18bb093bd1fb3d2c01298f
 @NgModule({
   declarations: [
     SukuBidTagComponent,
@@ -125,14 +122,11 @@ import { SukuPaymentPortalHelpComponent } from './suku-payment-portal-help/suku-
     SukuTransactionHistoryComponent,
     SukuFundingSourceComponent,
     SukuCreateCustomerComponent,
-<<<<<<< HEAD
     SukuBeneficialOwnerComponent,
     SukuDwollaFundingAgreementComponent,
     SukuDwollaFundingSourceComponent,
-    SukuCreationCustomerFileuploadComponent
-=======
+    SukuCreationCustomerFileuploadComponent,
     SukuPaymentPortalHelpComponent
->>>>>>> e2c587ec0ce313375c18bb093bd1fb3d2c01298f
   ],
   imports: [
     CommonModule,
@@ -213,14 +207,11 @@ import { SukuPaymentPortalHelpComponent } from './suku-payment-portal-help/suku-
     RouterModule,
     SukuFundingSourceComponent,
     SukuCreateCustomerComponent,
-<<<<<<< HEAD
     SukuBeneficialOwnerComponent,
     SukuDwollaFundingAgreementComponent,
     SukuDwollaFundingSourceComponent,
-    SukuCreationCustomerFileuploadComponent
-=======
-    SukuPaymentPortalHelpComponent
->>>>>>> e2c587ec0ce313375c18bb093bd1fb3d2c01298f
+    SukuCreationCustomerFileuploadComponent,
+    SukuPaymentPortalHelpComponent,
   ]
 })
 export class SukuWebcomponentsModule { }
