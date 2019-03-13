@@ -923,3 +923,140 @@
 .terms {
     font-family: 'Encode Sans'
 }
+
+/* upload box css */
+
+.display-2 {
+    font-size: 5.2rem !important;
+    line-height: 1.5 !important;
+}
+
+.border-dot {
+    border-style: dashed !important;
+    border-color: #6a68689e;
+    border-radius: 1px;
+    border-width: 2px;
+}
+
+.upload {
+    opacity: 0;
+    width: 277px !important;
+    position: relative;
+    height: 120px;
+}
+
+.upload:hover {
+    cursor: pointer !important;
+}
+
+.upload-icon {
+    position: absolute;
+}
+
+.icon {
+    font-size: 2.2rem !important;
+    color: #ccda5c !important;
+}
+
+/* button css */
+
+.btn {
+    border: solid 2px #a7bf2e;
+    padding: 10px 32px 10px 32px;
+    background-color: white;
+    color: black;
+    border-radius: 29px 77px 61px;
+    font-weight: 900;
+    font-family:'Poppins', sans-serif !important;
+    font-size: 1.5rem;
+}
+
+
+.btn-info {
+    border: solid 2px #a7bf2e;
+    padding: 10px 32px 10px 32px;
+    background-color: white;
+    color: #00000099;
+}
+
+.btn-info:hover {
+    border: solid 2px #a7bf2e;
+    padding: 10px 32px 10px 32px;
+    background-color: #a7bf2e;
+    color: white;
+}
+
+
+.btn-info:active {
+    border: solid 2px #a7bf2e;
+    padding: 10px 32px 10px 32px;
+    background-color: #a7bf2e;
+    color: white;
+}
+
+.btn-info.disabled {
+    border: solid 2px #a7bf2e;
+    padding: 10px 32px 10px 32px;
+    background-color: white;
+    color: grey;
+}
+
+.btn-info.disabled:hover,
+.btn-info[disabled]:hover,
+fieldset[disabled] .btn-info:hover,
+.btn-info.disabled:focus,
+.btn-info[disabled]:focus,
+fieldset[disabled] .btn-info:focus,
+.btn-info.disabled.focus,
+.btn-info[disabled].focus,
+fieldset[disabled] .btn-info.focus {
+    border: solid 2px #a7bf2e;
+    padding: 10px 32px 10px 32px;
+    background-color: white !important;
+    color: grey;
+    box-shadow: none !important;
+}
+
+.btn-info:focus,
+.btn-info.focus {
+    border: solid 2px #a7bf2e;
+    padding: 10px 32px 10px 32px;
+    background-color: #a7bf2e;
+    color: white;
+    box-shadow: none !important;
+}
+
+.btn-info:active:hover,
+.btn-info.active:hover,
+.open>.dropdown-toggle.btn-info:hover,
+.btn-info:active:focus,
+.btn-info.active:focus,
+.open>.dropdown-toggle .btn-info:focus,
+.btn-info:active.focus,
+.btn-info.active.focus,
+.open>.dropdown-toggle .btn-info.focus {
+    border: solid 2px #a7bf2e;
+    padding: 10px 32px 10px 32px;
+    background-color: #a7bf2e;
+    color: white;
+    box-shadow: none !important;
+}
+
+
+.disabled {
+    cursor: not-allowed !important;
+}
+
+.add {
+    font-family: 'Poppins', sans-serif !important;
+    font-size: 1.7rem;
+    font-weight: 400;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: 0.3px;
+    color: #ccda5c;
+}
+.add:hover {
+    font-weight: 600; 
+}

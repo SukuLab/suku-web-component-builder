@@ -8,7 +8,7 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 export class SukuFundingSourceComponent implements OnInit {
 
   constructor() { }
-  @Input() arrayOne = [];
+  @Input() fundingDetails = [];
   @Input() defaultText = 'Default';
   @Input() defaultbankName = 'Bank Name';
   @Input() headerOneTxt = 'FUNDING';
@@ -28,7 +28,8 @@ export class SukuFundingSourceComponent implements OnInit {
   @Output() removeDefault = new EventEmitter();
   @Output() makeDefaultAction = new EventEmitter();
   @Output() removeSourceAction = new EventEmitter();
-  @Output() achMakeDefaultAction =  new EventEmitter();
+  @Output() achMakeDefaultAction = new EventEmitter();
+  @Output() addSource = new EventEmitter();
   ngOnInit() {
   }
 

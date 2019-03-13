@@ -76,6 +76,10 @@ import { SukuCardTitleComponent } from './suku-card-title/suku-card-title.compon
 import {SukuShippingWidgetComponent} from './suku-shipping-widget/suku-shipping-widget.component';
 import { SukuResponseComponent } from './suku-response/suku-response.component';
 import { SukuCreateCustomerComponent } from './suku-create-customer/suku-create-customer.component';
+import { SukuBeneficialOwnerComponent } from './suku-beneficial-owner/suku-beneficial-owner.component';
+import { SukuDwollaFundingAgreementComponent } from './suku-dwolla-funding-agreement/suku-dwolla-funding-agreement.component';
+import { SukuDwollaFundingSourceComponent } from './suku-dwolla-funding-source/suku-dwolla-funding-source.component';
+import { SukuCreationCustomerFileuploadComponent } from './suku-creation-customer-fileupload/suku-creation-customer-fileupload.component';
 import { SukuPaymentPortalHelpComponent } from './suku-payment-portal-help/suku-payment-portal-help.component';
 
 @NgModule({
@@ -118,6 +122,10 @@ import { SukuPaymentPortalHelpComponent } from './suku-payment-portal-help/suku-
     SukuTransactionHistoryComponent,
     SukuFundingSourceComponent,
     SukuCreateCustomerComponent,
+    SukuBeneficialOwnerComponent,
+    SukuDwollaFundingAgreementComponent,
+    SukuDwollaFundingSourceComponent,
+    SukuCreationCustomerFileuploadComponent,
     SukuPaymentPortalHelpComponent
   ],
   imports: [
@@ -199,7 +207,11 @@ import { SukuPaymentPortalHelpComponent } from './suku-payment-portal-help/suku-
     RouterModule,
     SukuFundingSourceComponent,
     SukuCreateCustomerComponent,
-    SukuPaymentPortalHelpComponent
+    SukuBeneficialOwnerComponent,
+    SukuDwollaFundingAgreementComponent,
+    SukuDwollaFundingSourceComponent,
+    SukuCreationCustomerFileuploadComponent,
+    SukuPaymentPortalHelpComponent,
   ]
 })
 export class SukuWebcomponentsModule { }

@@ -4,427 +4,428 @@
     </div>
   </div>
   <br>
-  <div class="col-sm-8 offset-sm-2 pL0 textdev">
+  <div class="col-sm-12 pL0 textdev">
     <span class="Account-Setup">Customer Creation</span>
   </div>
   <br>
-  <div class="form-group col-xs-12 col-sm-8 col-md-8 col-lg-8 pL0R0 offset-sm-2 Rectangle-2">
-    <div class="col-sm-12 pT5">
-      <div class="row">
-        <div class="col-sm-5 offset-sm-1">
-          <span class="header pL30">Business Information</span>
-        </div>
-        <div class="col-sm-6">
-          <span class="header pL30">Controller Information</span>
-        </div>
-      </div>
-    </div>
-    <div class="col-sm-12 pT5">
-      <div class="col-sm-4 pL43">
-        <span class="hide-details pT5 pL40 pL30">ACCOUNT ADMIN</span>
-      </div>
-    </div>
-    <div class="col-sm-10 col-xs-12 offset-sm-1 noPadding ">
-      <div class="row">
-        <div class="col-sm-6 form-group">
-          <div class="col flexCol p-0">
-            <mat-form-field>
-              <input matInput type="text" name="{{firstName}}" formControlName="{{firstName}}" id="{{firstName}}"
-                placeholder="first name">
-              <!-- <mat-error *ngIf="isFieldValid('firstName')">
-                  <span *ngIf="home.hasError('required',['firstName'])">Cannot be blank.</span>
-                </mat-error> -->
-            </mat-form-field>
-          </div>
-        </div>
-        <div class="col-sm-6 form-group">
-          <div class="col flexCol p-0">
-            <mat-form-field>
-              <input matInput type="text" name="{{controllerFirstName}}" formControlName="{{controllerFirstName}}" id="{{controllerFirstName}}"
-                placeholder="first name">
-              <!-- <mat-error *ngIf="isFieldValid('controllerFirstName')">
-                  <span *ngIf="home.hasError('required',['controllerFirstName'])">Cannot be blank.</span>
-                </mat-error> -->
-            </mat-form-field>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="col-sm-10 col-xs-12 offset-sm-1 noPadding ">
-      <div class="row">
-        <div class="col-sm-6 form-group">
-          <div class="col flexCol p-0">
-            <mat-form-field>
-              <input matInput type="text" name="{{lastName}}" formControlName="{{lastName}}" id="{{lastName}}"
-                placeholder="last name">
-              <!-- <mat-error *ngIf="isFieldValid('lastName')">
-                  <span *ngIf="home.hasError('required',['lastName'])">Cannot be blank.</span>
-                </mat-error> -->
-            </mat-form-field>
-          </div>
-        </div>
-        <div class="col-sm-6 form-group">
-          <div class="col flexCol p-0">
-            <mat-form-field>
-              <input matInput type="text" name="{{controllerLastName}}" formControlName="{{controllerLastName}}" id="{{controllerLastName}}"
-                placeholder="last name">
-              <!-- <mat-error *ngIf="isFieldValid('controllerLastName')">
-                  <span *ngIf="home.hasError('required',['controllerLastName'])">Cannot be blank.</span>
-                </mat-error> -->
-            </mat-form-field>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="col-sm-10 col-xs-12 offset-sm-1 noPadding ">
-      <div class="row">
-        <div class="col-sm-6 form-group">
-          <div class="col flexCol p-0">
-            <mat-form-field>
-              <input matInput type="text" name="{{email}}" formControlName="{{email}}" id="{{email}}" placeholder="email">
-              <!-- <mat-error *ngIf="isFieldValid('email')">
-                  <span *ngIf="home.hasError('required',['email'])">Cannot be blank.</span>
-                  <span *ngIf="home.get('email').touched || home.get('email').dirty">
-                    <span class="err_style" *ngIf="home.hasError('pattern',['email'])">Invalid email Name.</span>
-                  </span>
-                </mat-error> -->
-            </mat-form-field>
-          </div>
-        </div>
-        <div class="col-sm-6 form-group">
-          <div class="col flexCol p-0">
-            <mat-form-field>
-              <input matInput type="text" name="{{title}}" formControlName="{{title}}" id="{{title}}" placeholder="title">
-              <!-- <mat-error *ngIf="isFieldValid('title')">
-                  <span *ngIf="home.hasError('required',['title'])">Cannot be blank.</span>
-                </mat-error> -->
-            </mat-form-field>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="col-sm-10 col-xs-12 offset-sm-1 noPadding ">
-      <div class="row">
-        <div class="col-sm-6 form-group">
-          <div class="col flexCol p-0">
-            <mat-form-field>
-              <input matInput type="text" name="{{Address}}" formControlName="{{Address}}" id="{{Address}}" placeholder="address">
-              <!-- <mat-error *ngIf="isFieldValid('Address')">
-                  <span *ngIf="home.hasError('required',['Address'])">Cannot be blank.</span>
-                </mat-error> -->
-            </mat-form-field>
-          </div>
-        </div>
-        <div class="col-sm-6 form-group">
-          <div class="col flexCol p-0">
-            <mat-form-field>
-              <input matInput [matDatepicker]="picker" placeholder="date of birth" id="{{dob}}" formControlName="{{dob}}">
-              <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
-              <mat-datepicker #picker></mat-datepicker>
-              <!-- <mat-error *ngIf="isFieldValid('dob')">
-                  <span *ngIf="home.hasError('required',['dob'])">Cannot be blank.</span>
-                </mat-error> -->
-            </mat-form-field>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="col-sm-10 col-xs-12 offset-sm-1 noPadding ">
-      <div class="row">
-        <div class="col-sm-6 form-group">
-          <div class="col flexCol p-0">
-            <mat-form-field>
-              <input matInput type="text" name="{{city}}" formControlName="{{city}}" id="{{city}}" placeholder="city">
-              <!-- <mat-error *ngIf="isFieldValid('city')">
-                  <span *ngIf="home.hasError('required',['city'])">Cannot be blank.</span>
-                  <span *ngIf="home.get('city').touched || home.get('city').dirty">
-                    <span class="err_style" *ngIf="home.hasError('pattern',['city'])">Invalid City Name.</span>
-                  </span>
-                </mat-error> -->
-            </mat-form-field>
-          </div>
-        </div>
-        <div class="col-sm-6 form-group">
-          <div class="col flexCol p-0">
-            <mat-form-field>
-              <input matInput type="text" name="{{SSN}}" formControlName="{{SSN}}" id="{{SSN}}" placeholder="last 4 digits of SSN">
-              <!-- <mat-error *ngIf="isFieldValid('SSN')">
-                  <span *ngIf="home.hasError('required',['SSN'])">Cannot be blank.</span>
-                  <span *ngIf="home.get('SSN').touched || home.get('SSN').dirty">
-                    <span class="err_style" *ngIf="home.hasError('pattern',['SSN'])">Invalid
-                      digits.</span>
-                  </span>
-                </mat-error> -->
-            </mat-form-field>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="col-sm-12">
-      <div class="col-sm-6 offset-sm-6">
-        <span class="hide-details pL30">ADDRESS</span>
-      </div>
-    </div>
-    <div class="col-sm-10 col-xs-12 offset-sm-1 noPadding ">
-      <div class="row">
-        <div class="col-sm-6 form-group">
-          <div class="col flexCol p-0">
-            <mat-form-field>
-              <!-- <mat-select #t (selectionChange)="stateSelect.emit(t.value)" name="state" formControlName="{{state}}" id="{{state}}"
-                placeholder="state">
-                <mat-option *ngFor="let item of statesList; let i = index" value="{{ item.stateName }}">{{
-                  item.stateName }}</mat-option>
-              </mat-select> -->
-              <input matInput type="text" name="{{state}}" formControlName="{{state}}" id="{{state}}" placeholder="State">
-              <!-- <mat-error *ngIf="isFieldValid('state')">
-                  <div class="err_style text-left" *ngIf="home.hasError('required',['state'])">*Can't be blank.</div>
-                </mat-error> -->
-            </mat-form-field>
-          </div>
-        </div>
-        <div class="col-sm-6 form-group">
-          <div class="col flexCol p-0">
-            <mat-form-field>
-              <input matInput type="text" name="{{addressOne}}" formControlName="{{addressOne}}" id="{{addressOne}}"
-                placeholder="address 1">
-              <!-- <mat-error *ngIf="isFieldValid('addressOne')">
-                  <span *ngIf="home.hasError('required',['addressOne'])">Cannot be blank.</span>
-                </mat-error> -->
-            </mat-form-field>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="col-sm-10 col-xs-12 offset-sm-1 noPadding ">
-      <div class="row">
-        <div class="col-sm-6 form-group">
-          <div class="col flexCol p-0">
-            <mat-form-field>
-
-              <input matInput type="text" name="{{postalCode}}" formControlName="{{postalCode}}" id="{{postalCode}}"
-                placeholder="postal code">
-              <!-- <mat-error *ngIf="isFieldValid('postalCode')">
-                  <span *ngIf="home.hasError('required',['postalCode'])">Cannot be blank.</span>
-                </mat-error> -->
-            </mat-form-field>
-          </div>
-        </div>
-        <div class="col-sm-6 form-group">
-          <div class="col flexCol p-0">
-            <mat-form-field>
-              <input matInput type="text" name="{{addressTwo}}" formControlName="{{addressTwo}}" id="{{addressTwo}}"
-                placeholder="address 2">
-              <!-- <mat-error *ngIf="isFieldValid('addressTwo')">
-                  <span *ngIf="home.hasError('required',['addressTwo'])">Cannot be blank.</span>
-                </mat-error> -->
-            </mat-form-field>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="col-sm-12">
-      <div class="col-sm-6 pL43">
-        <span class="hide-details pL40 pL30">INDUSTRY</span>
-      </div>
-    </div>
-    <div class="col-sm-10 col-xs-12 offset-sm-1 noPadding ">
-      <div class="row">
-        <div class="col-sm-6 form-group">
-          <div class="col flexCol p-0">
-            <mat-form-field>
-              <mat-select id="{{industryType}}" formControlName="{{industryType}}" name="industryType" placeholder="industryType">
-                <mat-option value="">Select Industry</mat-option>
-                <mat-option *ngFor="let industry of industryTypeValue; let i = index" value="{{industry.id}}">
-                  {{industry.name}}</mat-option>
-              </mat-select>
-            </mat-form-field>
-          </div>
-        </div>
-        <div class="col-sm-6 form-group">
-          <div class="col flexCol p-0">
-            <mat-form-field>
-              <mat-select #t (selectionChange)="countrySelect.emit(t.value)" name="country" formControlName="{{country}}"
-                id="{{country}}" placeholder="country">
-                <mat-option *ngFor="let item of countriesList; let i = index" value="{{ item.countryId }}">{{
-                  item.countryName }}</mat-option>
-              </mat-select>
-
-              <!-- <mat-error *ngIf="isFieldValid('cityOne')">
-                  <span *ngIf="home.hasError('required',['cityOne'])">Cannot be blank.</span>
-                  <span *ngIf="home.get('cityOne').touched || home.get('cityOne').dirty">
-                    <span class="err_style" *ngIf="home.hasError('pattern',['cityOne'])">Invalid City Name.</span>
-                  </span>
-                </mat-error> -->
-            </mat-form-field>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="col-sm-10 col-xs-12 offset-sm-1 noPadding ">
-      <div class="row">
-        <div class="col-sm-6 form-group">
-          <div class="col flexCol p-0">
-            <mat-form-field>
-              <input matInput type="text" id="{{businessName}}" formControlName="{{businessName}}" name="{{businessName}}"
-                placeholder="business name">
-              <!-- <mat-error *ngIf="isFieldValid('businessName')">
-                  <span *ngIf="home.hasError('required',['businessName'])">Cannot be blank.</span>
-                </mat-error> -->
-            </mat-form-field>
-          </div>
-        </div>
-        <div class="col-sm-6 form-group">
-          <div class="col flexCol p-0">
-            <mat-form-field>
-              <mat-select name="stateOne" formControlName="{{stateOne}}" id="{{stateOne}}" placeholder="state">
-                <mat-option *ngFor="let item of statesList; let i = index" value="{{ item.stateName }}">{{
-                  item.stateName }}</mat-option>
-              </mat-select>
-              <!-- <mat-error *ngIf="isFieldValid('stateOne')">
-                  <div class="err_style text-left" *ngIf="home.hasError('required',['stateOne'])">*Can't be blank.</div>
-                </mat-error> -->
-            </mat-form-field>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="col-sm-10 col-xs-12 offset-sm-1 noPadding ">
-      <div class="row">
-        <div class="col-sm-6 form-group">
-          <div class="col flexCol p-0">
-            <mat-form-field>
-              <mat-select id="{{businessType}}" formControlName="{{businessType}}" name="businessType" placeholder="business type">
-                <mat-option value="">Select businessType</mat-option>
-                <mat-option *ngFor="let business of businessTypeValue ; let i = index" value="{{business.id}}">
-                  {{business.name}}</mat-option>
-              </mat-select>
-            </mat-form-field>
-          </div>
-        </div>
-        <div class="col-sm-6 form-group">
-          <div class="col flexCol p-0">
-            <mat-form-field>
-
-              <input matInput type="text" name="{{cityOne}}" formControlName="{{cityOne}}" id="{{cityOne}}" placeholder="city">
-              <!-- <mat-error *ngIf="isFieldValid('postalCodeOne')">
-                  <span *ngIf="home.hasError('required',['postalCodeOne'])">Cannot be blank.</span>
-                </mat-error> -->
-            </mat-form-field>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="col-sm-10 col-xs-12 offset-sm-1 pB25 noPadding ">
-      <div class="row">
-        <div class="col-sm-6 form-group">
-          <div class="col flexCol p-0">
-            <mat-form-field>
-              <input matInput type="text" name="{{ein}}" formControlName="{{ein}}" id="{{ein}}" placeholder="ein">
-              <!-- <mat-error *ngIf="isFieldValid('ein')">
-                  <span *ngIf="home.hasError('required',['ein'])">Cannot be blank.</span>
-                </mat-error> -->
-            </mat-form-field>
-          </div>
-        </div>
-        <div class="col-sm-6 form-group">
-          <div class="col flexCol p-0">
-            <mat-form-field>
-              <!-- <mat-select #t (selectionChange)="countrySelect.emit(t.value)" name="country" formControlName="{{country}}" id="{{country}}"
-                  placeholder="country">
-                  <mat-option *ngFor="let item of countriesList; let i = index" value="{{ item.countryId }}">{{
-                    item.countryName }}</mat-option>
-                </mat-select> -->
-              <input matInput type="text" name="{{postalCodeOne}}" formControlName="{{postalCodeOne}}" id="{{postalCodeOne}}"
-                placeholder="postal code">
-              <!-- <mat-error *ngIf="isFieldValid('country')">
-                  <span *ngIf="home.hasError('required',['country'])">Cannot be blank.</span>
-                </mat-error> -->
-            </mat-form-field>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="col p-3 pT25 col-xs-12 offset-sm-1 noPadding ">
-      <div class="row">
-        <div class="col-sm-5 form-group">
-          <div class="col flexCol p-0">
-            <div class="col-sm-10 pL0 f14 textdev">
-              <span class="poppins">Upload the following Documents:</span>
+  <div class="col Rectangle-2">
+    <div formArrayName="{{formArrayNameValue}}">
+      <div class="form-group col-xs-12 col-sm-12 col-md-12 col-lg-12 pL0R0  " *ngFor="let detail of form.get(formArrayNameValue)['controls']; let i=index"
+        [formGroupName]="i">
+        <div class="col-sm-12 pT5">
+          <div class="row">
+            <div class="col-sm-5 offset-sm-1">
+              <span class="header pL30">Business Information</span>
             </div>
-            <div class="col-sm-12 pL0 textdev">
-              <p class="mB-0 Spring-Cases txtFlow"> 1. Controller’s Driver’s License:</p>
-              <p class="mB-0 Spring-Cases txtFlow"> 2. EIN documentation (IRS-issued SS4 confirmation letter)</p>
+            <div class="col-sm-6">
+              <span class="header pL30">Controller Information</span>
             </div>
           </div>
         </div>
-        <div class="col-sm-5 pL63 form-group">
-          <div class="col flexCol p-0">
-            <div class=" col-sm-10 border-dot rounded-0 bg-light d-flex justify-content-center text-center pT-4 pB-56">
-              <div class="col-sm-5 col-xs-4 padtop50 ">
-                <a onclick="document.getElementById('myFileInput').click()" class=" fa fa-cloud-upload f60 center-block  pT9 "
-                  id="saleTwoUpload" style="width: 100%"> </a>
-                <input type="file" placeholder={{imagepath}} id="myFileInput" accept="application/msword,application/pdf,application/vnd.openxmlformats-officedocument.wordprocessingml.document"
-                  name="uploadDocument" #fileInput (change)="onFileChange.emit($event)" />
-                <input type="file" placeholder={{imagepath}} id="myFileInput" name="uploadDocument" />
-                <input type="file" placeholder="previewName" id="myFileInput" accept="application/msword,application/pdf,application/vnd.openxmlformats-officedocument.wordprocessingml.document"
-                  name="uploadDocument" #fileInput (change)="onFileChange.emit($event)" multiple />
+        <div class="col-sm-12 pT5">
+          <div class="col-sm-4 pL43">
+            <span class="hide-details pT5 pL40 pL30">ACCOUNT ADMIN</span>
+          </div>
+        </div>
+        <div class="col-sm-10 col-xs-12 offset-sm-1 noPadding ">
+          <div class="row">
+            <div class="col-sm-6 p-0">
+              <div class="col-sm-12 form-group">
+                <div class="col flexCol p-0">
+                  <mat-form-field>
+                    <input matInput type="text" name="firstName" formControlName="firstName" id="firstName" placeholder="First name">
+                  </mat-form-field>
+                  <mat-error>
+                    <span *ngIf="getControl.get('firstName').touched">
+                      <span *ngIf="getControl.hasError('pattern',['firstName'])">
+                        Invalid firstName
+                      </span>
+                    </span>
+                  </mat-error>
+                </div>
               </div>
-              <div class="col-sm-8 err_style " *ngIf="showPdfErrorMsg" id="uploadcanExceed">The file type pdf/doc/docx
-                files
-                are allowed! </div>
-              <div class="col-sm-8 err_style " *ngIf="showMessage" id="uploadcanExceed">The file size cannot exceed 10
-                MB</div>
+              <div class="col-sm-12 form-group">
+                <div class="col flexCol p-0">
+                  <mat-form-field>
+                    <input matInput type="text" name="lastName" formControlName="lastName" id="lastName" placeholder="Last name">
+                  </mat-form-field>
+                  <mat-error>
+                    <span *ngIf="getControl.get('lastName').touched">
+                      <span *ngIf="getControl.hasError('pattern',['lastName'])">
+                        Invalid lastName
+                      </span>
+                    </span>
+                  </mat-error>
+                </div>
+              </div>
+              <div class="col-sm-12 form-group">
+                <div class="col flexCol p-0">
+                  <mat-form-field>
+                    <input matInput type="text" name="email" formControlName="email" id="email" placeholder="e-mail">
+                  </mat-form-field>
+
+                  <mat-error>
+                    <span *ngIf="getControl.get('email').touched">
+                      <span *ngIf="getControl.hasError('pattern',['email'])">
+                        Invalid email
+                      </span>
+                    </span>
+                  </mat-error>
+                </div>
+              </div>
+              <div class="col-sm-12 form-group">
+                <div class="col flexCol p-0">
+                  <mat-form-field>
+                    <input matInput type="text" name="address1" formControlName="address1" id="address1" placeholder="Address">
+                  </mat-form-field>
+                  <mat-error>
+                    <span *ngIf="getControl.get('address1').touched">
+                      <span *ngIf="getControl.hasError('pattern',['address1'])">
+                        Invalid Address
+                      </span>
+                    </span>
+                  </mat-error>
+                </div>
+              </div>
+              <div class="col-sm-12 form-group">
+                <div class="col flexCol p-0">
+                  <mat-form-field>
+                    <input matInput type="text" name="city" formControlName="city" id="city" placeholder="City">
+                  </mat-form-field>
+                  <mat-error>
+                    <span *ngIf="getControl.get('city').touched">
+                      <span *ngIf="getControl.hasError('pattern',['city'])">
+                        Invalid City
+                      </span>
+                    </span>
+                  </mat-error>
+                </div>
+              </div>
+              <div class="col-sm-12 form-group">
+                <div class="col flexCol p-0">
+                  <mat-form-field>
+                    <input matInput type="text" name="state" formControlName="state" id="state" placeholder="State">
+                  </mat-form-field>
+                  <mat-error>
+                    <span *ngIf="getControl.get('state').touched">
+                      <span *ngIf="getControl.hasError('pattern',['state'])">
+                        Invalid State
+                      </span>
+                    </span>
+                  </mat-error>
+                </div>
+              </div>
+              <div class="col-sm-12 form-group">
+                <div class="col flexCol p-0">
+                  <mat-form-field>
+                    <input matInput type="text" name="postalCode" formControlName="postalCode" id="postalCode"
+                      placeholder="Postal-code">
+                  </mat-form-field>
+                  <mat-error>
+                    <span *ngIf="getControl.get('postalCode').touched">
+                      <span *ngIf="getControl.hasError('pattern',['postalCode'])">
+                        Invalid postalCode
+                      </span>
+                    </span>
+                  </mat-error>
+                </div>
+              </div>
+              <div class="col-sm-12">
+                <div class="col-sm-6 p-0">
+                  <span class="hide-details">INDUSTRY</span>
+                </div>
+              </div>
+              <div class="col-sm-12 form-group">
+                <div class="col flexCol p-0">
+                  <mat-form-field>
+                    <mat-select id="type" #x (selectionChange)="industryTypeFunAction(x.value)" formControlName="type"
+                      name="type" placeholder="Industry type">
+                      <mat-option value="">Select Industry</mat-option>
+                      <mat-option *ngFor="let industry of industryTypeValue; let i = index" value="{{industry | json}}">
+                        {{industry.name}}</mat-option>
+                    </mat-select>
+                  </mat-form-field>
+                </div>
+              </div>
+              <div class="col-sm-12 form-group">
+                <div class="col flexCol p-0">
+                  <mat-form-field>
+                    <mat-select id="businessClassification" formControlName="businessClassification" name="businessClassification"
+                      placeholder="Business Classification">
+                      <mat-option value="">Select business Classification</mat-option>
+                      <mat-option *ngFor="let businessClassification of businessClassificationValue ; let i = index"
+                        value="{{businessClassification.id}}">
+                        {{businessClassification.name}}</mat-option>
+                    </mat-select>
+                  </mat-form-field>
+                </div>
+              </div>
+              <div class="col-sm-12 form-group">
+                <div class="col flexCol p-0">
+                  <mat-form-field>
+                    <input matInput type="text" id="businessName" formControlName="businessName" name="businessName"
+                      placeholder="Business name">
+                  </mat-form-field>
+                  <mat-error>
+                    <span *ngIf="getControl.get('businessName').touched">
+                      <span *ngIf="getControl.hasError('pattern',['businessName'])">
+                        Invalid Business Name
+                      </span>
+                    </span>
+                  </mat-error>
+                </div>
+              </div>
+              <div class="col-sm-12 form-group">
+                <div class="col flexCol p-0">
+                  <mat-form-field>
+                    <mat-select id="businessType" #z (selectionChange)="businessTypeFunAction(z.value)" formControlName="businessType"
+                      name="businessType" placeholder="Business type">
+                      <mat-option value="">Select businessType</mat-option>
+                      <mat-option *ngFor="let business of businessTypeValue ; let i = index" value="{{business.value}}">
+                        {{business.name}}</mat-option>
+                    </mat-select>
+                  </mat-form-field>
+                </div>
+              </div>
+              <div class="col-sm-12 form-group">
+                <div class="col flexCol p-0">
+                  <mat-form-field>
+                    <input matInput type="text" name="ein" formControlName="ein" id="ein" placeholder="EIN">
+                  </mat-form-field>
+                  <mat-error>
+                    <span *ngIf="getControl.get('ein').touched">
+                      <span *ngIf="getControl.hasError('pattern',['ein'])">
+                        Invalid EIN
+                      </span>
+                    </span>
+                  </mat-error>
+                </div>
+              </div>
+            </div>
+            <!-- hjhjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjdf -->
+            <div class="col-sm-6 p-0" formGroupName="controller">
+              <div class="col-sm-12 form-group">
+                <div class="col flexCol p-0">
+                  <mat-form-field>
+                    <input matInput type="text" [readonly]="validateType" name="firstName" formControlName="firstName"
+                      id="controllerFirstName" placeholder="First name">
+                  </mat-form-field>
+                  <mat-error>
+                    <span *ngIf="getControl.get('controller').get('firstName').touched">
+                      <span *ngIf="getControl.get('controller').hasError('pattern',['firstName'])">
+                        Invalid FirstName
+                      </span>
+                    </span>
+                  </mat-error>
+                </div>
+              </div>
+              <div class="col-sm-12 form-group">
+                <div class="col flexCol p-0">
+                  <mat-form-field>
+                    <input matInput type="text" [readonly]="validateType" name="lastName" formControlName="lastName" id="controllerLastName"
+                      placeholder="Last name">
+                  </mat-form-field>
+                  <mat-error>
+                    <span *ngIf="getControl.get('controller').get('lastName').touched">
+                      <span *ngIf="getControl.get('controller').hasError('pattern',['lastName'])">
+                        Invalid LastName
+                      </span>
+                    </span>
+                  </mat-error>
+                </div>
+              </div>
+              <div class="col-sm-12 form-group">
+                <div class="col flexCol p-0">
+                  <mat-form-field>
+                    <input matInput type="text" [readonly]="validateType" name="title" formControlName="title" id="title"
+                      placeholder="Title">
+                  </mat-form-field>
+                  <mat-error>
+                    <span *ngIf="getControl.get('controller').get('title').touched">
+                      <span *ngIf="getControl.get('controller').hasError('pattern',['title'])">
+                        Invalid title
+                      </span>
+                    </span>
+                  </mat-error>
+                </div>
+              </div>
+              <div class="col-sm-12 form-group">
+                <div class="col flexCol p-0">
+                  <mat-form-field>
+                    <input matInput [matDatepicker]="picker" [max]="maxDate" [readonly]="validateType" placeholder="Date of Birth"
+                      id="dateOfBirth" formControlName="dateOfBirth">
+                    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                    <mat-datepicker #picker></mat-datepicker>
+                  </mat-form-field>
+                </div>
+              </div>
+              <div class="col-sm-12 form-group">
+                <div class="col flexCol p-0">
+                  <mat-form-field>
+                    <input matInput type="text" [readonly]="validateType" name="ssn" formControlName="ssn" id="ssn"
+                      placeholder="Last 4 digits of SSN">
+                  </mat-form-field>
+                  <mat-error>
+                    <span *ngIf="getControl.get('controller').get('ssn').touched">
+                      <span *ngIf="getControl.get('controller').hasError('pattern',['ssn'])">
+                        Invalid SSN
+                      </span>
+                    </span>
+                  </mat-error>
+                </div>
+              </div>
+              <div class="col-sm-12 ">
+                <div class="col-sm-6 p-0">
+                  <span class="hide-details ">ADDRESS</span>
+                </div>
+              </div>
+              <div formGroupName="address">
+                <div class="col-sm-12 form-group">
+                  <div class="col flexCol p-0">
+                    <mat-form-field>
+                      <input matInput type="text" [readonly]="validateType" name="address1" formControlName="address1"
+                        id="controllerAddress1" placeholder="Address-1">
+                    </mat-form-field>
+                    <mat-error>
+                      <span *ngIf="getControl.get('controller').get('address').get('address1').touched">
+                        <span *ngIf="getControl.get('controller').get('address').hasError('pattern',['address1'])">
+                          Invalid address1
+                        </span>
+                      </span>
+                    </mat-error>
+                  </div>
+                </div>
+                <div class="col-sm-12 form-group">
+                  <div class="col flexCol p-0">
+                    <mat-form-field>
+                      <input matInput type="text" [readonly]="validateType" name="address2" formControlName="address2"
+                        id="address2" placeholder="Address-2">
+                    </mat-form-field>
+                    <mat-error>
+                      <span *ngIf="getControl.get('controller').get('address').get('address2').touched">
+                        <span *ngIf="getControl.get('controller').get('address').hasError('pattern',['address2'])">
+                          Invalid address-2
+                        </span>
+                      </span>
+                    </mat-error>
+                  </div>
+                </div>
+                <div class="col-sm-12 form-group">
+                  <div class="col flexCol p-0">
+                    <mat-form-field>
+                      <mat-select #t [disabled]="validateType" (selectionChange)="countrySelectAction(t.value)" name="country"
+                        formControlName="country" id="country" placeholder="Country">
+                        <mat-option *ngFor="let item of countriesList; let i = index" value="{{item | json}}">
+                          {{item.countryName }}</mat-option>
+                      </mat-select>
+                    </mat-form-field>
+                  </div>
+                </div>
+                <div class="col-sm-12 form-group">
+                  <div class="col flexCol p-0">
+                    <mat-form-field>
+                      <mat-select name="stateProvinceRegion" [disabled]="validateType" formControlName="stateProvinceRegion"
+                        id="stateProvinceRegion" placeholder="State">
+                        <mat-option *ngFor="let item of statesList; let i = index" value="{{ item.stateShortName }}">{{
+                          item.stateName }}</mat-option>
+                      </mat-select>
+                    </mat-form-field>
+                  </div>
+                </div>
+                <div class="col-sm-12 form-group">
+                  <div class="col flexCol p-0">
+                    <mat-form-field>
+                      <input matInput type="text" [readonly]="validateType" name="city" formControlName="city" id="controllerCity"
+                        placeholder="City">
+                    </mat-form-field>
+                    <mat-error>
+                      <span *ngIf="getControl.get('controller').get('address').get('city').touched">
+                        <span *ngIf="getControl.get('controller').get('address').hasError('pattern',['city'])">
+                          Invalid city
+                        </span>
+                      </span>
+                    </mat-error>
+                  </div>
+                </div>
+                <div class="col-sm-12 form-group">
+                  <div class="col flexCol p-0">
+                    <mat-form-field>
+                      <input matInput type="text" [readonly]="validateType" name="postalCode" formControlName="postalCode"
+                        id="controllerPostalCode" placeholder="Postal-code">
+                    </mat-form-field>
+                    <mat-error>
+                      <span *ngIf="getControl.get('controller').get('address').get('postalCode').touched">
+                        <span *ngIf="getControl.get('controller').get('address').hasError('pattern',['postalCode'])">
+                          Invalid postalCode
+                        </span>
+                      </span>
+                    </mat-error>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-    <div class="col-sm-10 col-xs-12 pT25 offset-sm-1 noPadding">
-      <p class="Spring-Cases txtFlow justify-content-center">
-        In order to use the payment functionality of our application,
-        you must open a "Dwolla Platform" account provided by Dwolla,
-        Inc. and you must accept the <a href="https://www.dwolla.com/legal/tos/" target="_blank">Dwolla Terms of
-          Service</a> and
-        <a href="https://www.dwolla.com/legal/privacy/" target="_blank">Privacy Policy.</a>
-        Any funds held in the Dwolla account are held by Dwolla's financial institution partners as set out in the
-        <a href="https://www.dwolla.com/legal/tos/" target="_blank">Dwolla Terms of Service.</a> You authorize Citizens
-        Reserve, Inc.
-        to share your identity and account data with Dwolla for the
-        purposes of opening and supporting your Dwolla account,
-        and you are responsible for the accuracy and completeness of that data.
-        You understand that you will access and manage your Dwolla account through Citizens Reserve’s
-        application, and Dwolla account notifications will be sent by Citizens Reserve, not Dwolla.
-        Citizens Reserve will provide customer support for your Dwolla account activity,
-        and can be reached at suku.world, support@suku.world and/or (317) 690-5477.</p>
-    </div>
-    <div class="form-group offset-sm-1  col-sm-12 col-xs-12 pL0">
-      <div class=" col-sm-12 pt-4 col-xs-12 noPadding">
-        <span>
-          <mat-checkbox color="primary" type="checkbox" id="{{checkbox}}" formControlName="{{checkbox}}" name="{{checkbox}}">
-          </mat-checkbox>
-        </span>
-        <span class="col terms f15">I Agree to Dwolla TOS and Privacy Policy.
-        </span>
+    <div class="form-group col-xs-12 col-sm-12 col-md-12 col-lg-12 pL0R0 ">
+      <div class="col-sm-10 col-xs-12 pT25 offset-sm-1 noPadding">
+        <p class="Spring-Cases txtFlow justify-content-center">
+          In order to use the payment functionality of our application,
+          you must open a "Dwolla Platform" account provided by Dwolla,
+          Inc. and you must accept the <a href="https://www.dwolla.com/legal/tos/" target="_blank">Dwolla Terms of
+            Service</a> and
+          <a href="https://www.dwolla.com/legal/privacy/" target="_blank">Privacy Policy.</a>
+          Any funds held in the Dwolla account are held by Dwolla's financial institution partners as set out in the
+          <a href="https://www.dwolla.com/legal/tos/" target="_blank">Dwolla Terms of Service.</a> You authorize
+          Citizens
+          Reserve, Inc.
+          to share your identity and account data with Dwolla for the
+          purposes of opening and supporting your Dwolla account,
+          and you are responsible for the accuracy and completeness of that data.
+          You understand that you will access and manage your Dwolla account through Citizens Reserve’s
+          application, and Dwolla account notifications will be sent by Citizens Reserve, not Dwolla.
+          Citizens Reserve will provide customer support for your Dwolla account activity,
+          and can be reached at suku.world, support@suku.world and/or (317) 690-5477.</p>
       </div>
-    </div>
-    <div class="col-sm-10 col-xs-12 offset-sm-1 pL-15 ">
-      <p class="Spring-Cases txtFlow">
-        Write up here about Citizens Reserve’s TOS and Privacy Policy.
-      </p>
-    </div>
-    <div class="form-group offset-sm-1 col-sm-12 col-xs-12 pL0">
-      <div class=" col-sm-12 pt-4 col-xs-12 noPadding">
-        <span>
-          <mat-checkbox color="primary" type="checkbox" id="{{checkboxOne}}" formControlName="{{checkboxOne}}" name="{{checkboxOne}}">
-          </mat-checkbox>
-        </span>
-        <span class="col terms f15">I Agree to Citizens Reserve TOS and Privacy Policy.
-        </span>
+      <div class="form-group offset-sm-1  col-sm-12 col-xs-12 pL0">
+        <div class=" col-sm-12 pt-4 col-xs-12 noPadding">
+          <span>
+            <!-- <mat-checkbox color="primary" type="checkbox" id="checkbox" formControlName="checkbox" name="checkbox">
+            </mat-checkbox> -->
+            <mat-checkbox color="primary" type="checkbox" (change)="action1()" id="{{DwollaTOScontrol}}"
+              formControlName="{{DwollaTOScontrol}}" name="{{DwollaTOScontrol}}">
+            </mat-checkbox>
+          </span>
+          <span class="col terms f15">I Agree to Dwolla TOS and Privacy Policy.
+          </span>
+        </div>
       </div>
-    </div>
-    <div class="col-sm-12  pB40 d-flex justify-content-center mt-5">
-      <button class="btn btn-info f18" (click)="submit.emit(); onSubmit.emit();">Agree
-        & Continue</button>
+      <div class="col-sm-10 col-xs-12 offset-sm-1 pL-15 ">
+        <p class="Spring-Cases txtFlow">
+          Write up here about Citizens Reserve’s TOS and Privacy Policy.
+        </p>
+      </div>
+      <div class="form-group offset-sm-1 col-sm-12 col-xs-12 pL0">
+        <div class=" col-sm-12 pt-4 col-xs-12 noPadding">
+          <span>
+            <mat-checkbox color="primary" type="checkbox" (change)="action1()" id="{{CitizensReserveTOScontrol}}" formControlName="{{CitizensReserveTOScontrol}}"
+              name="{{CitizensReserveTOScontrol}}">
+            </mat-checkbox>
+          </span>
+          <span class="col terms f15">I Agree to Citizens Reserve TOS and Privacy Policy.
+          </span>
+        </div>
+      </div>
+      <!-- <div class="col-sm-12  pB40 d-flex justify-content-center mt-5">
+          <button class="btn btn-info f18" (click)=" onSubmit.emit();">Agree
+            & Continue</button>
+        </div> -->
+      <div class="col d-flex justify-content-center mt-4 mb-3  pB40">
+        <button class="btn btn-info" id="customerCreationAgreeBtn" [disabled]="CitizensReserveTOSformValid" [ngClass]="{'disabled': CitizensReserveTOSformValid}"
+          (click)="submitData.emit(); onSubmit.emit();">Agree
+          & Continue</button>
+      </div>
     </div>
   </div>
 </form>
