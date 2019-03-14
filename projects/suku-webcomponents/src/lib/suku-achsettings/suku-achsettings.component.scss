@@ -41,6 +41,14 @@
   }
 
   .btn:focus {
+    border: solid 2px #a7bf2e;
+    border-radius: 28px 76px 63px;
+    background-color: #a7bf2e;
+    color: white;
+  }
+
+
+  .btn:focus {
       outline: none !important;
       box-shadow: none !important;
   }

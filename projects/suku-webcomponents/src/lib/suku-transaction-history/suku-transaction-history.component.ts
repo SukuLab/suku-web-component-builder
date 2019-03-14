@@ -28,7 +28,7 @@ export class SukuTransactionHistoryComponent implements OnInit {
       'myAccount': 'My Account',
       'counterparty': 'Counter Party',
       'amount': 'Amount',
-      'status': 'Stataus',
+      'status': 'Status',
       'dateCreated': 'Date Created',
       'paymentManagement': 'Payment Management'
     }]

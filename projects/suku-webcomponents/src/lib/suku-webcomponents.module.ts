@@ -81,6 +81,7 @@ import { SukuDwollaFundingAgreementComponent } from './suku-dwolla-funding-agree
 import { SukuDwollaFundingSourceComponent } from './suku-dwolla-funding-source/suku-dwolla-funding-source.component';
 import { SukuCreationCustomerFileuploadComponent } from './suku-creation-customer-fileupload/suku-creation-customer-fileupload.component';
 import { SukuPaymentPortalHelpComponent } from './suku-payment-portal-help/suku-payment-portal-help.component';
+import { SukuTermsAndConditionsComponent } from './suku-terms-and-conditions/suku-terms-and-conditions.component';
 
 @NgModule({
   declarations: [
@@ -126,7 +127,8 @@ import { SukuPaymentPortalHelpComponent } from './suku-payment-portal-help/suku-
     SukuDwollaFundingAgreementComponent,
     SukuDwollaFundingSourceComponent,
     SukuCreationCustomerFileuploadComponent,
-    SukuPaymentPortalHelpComponent
+    SukuPaymentPortalHelpComponent,
+    SukuTermsAndConditionsComponent
   ],
   imports: [
     CommonModule,
@@ -212,6 +214,7 @@ import { SukuPaymentPortalHelpComponent } from './suku-payment-portal-help/suku-
     SukuDwollaFundingSourceComponent,
     SukuCreationCustomerFileuploadComponent,
     SukuPaymentPortalHelpComponent,
+    SukuTermsAndConditionsComponent,
   ]
 })
 export class SukuWebcomponentsModule { }

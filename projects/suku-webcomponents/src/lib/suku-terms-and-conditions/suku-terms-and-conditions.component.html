@@ -1,0 +1,15 @@
+<form [formGroup]="termsandcondition">
+    <div class=" container-fluid  d-flex flex-column justify-content-center py-3">
+      <div class="text-center "><b>Contract Terms & Conditions</b></div>
+      <div class="d-flex flex-row">
+        <mat-checkbox color="primary" type="checkbox" #t (change)="action1()" id="contractTerms" 
+        formControlName="contractTerms" name="contractTerms">
+        </mat-checkbox>
+        <span class="col Spring-Cases txtFlow termsAndConditions"> I Accept the terms and conditions and authorize
+          this transaction.
+          <a class="link ws" href="https://citizensreserve.com/legal" target="_blank">LEGAL</a>
+          <a class="link ws" href="https://citizensreserve.com/privacy" target="_blank">PRIVACY</a>
+        </span>
+      </div>
+    </div>
+  </form>

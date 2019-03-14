@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 declare var dwolla: any;
 import { MatSnackBar } from '@angular/material';
 @Component({
@@ -8,14 +8,21 @@ import { MatSnackBar } from '@angular/material';
 })
 export class SukuDwollaFundingSourceComponent implements OnInit {
   @Input('iav-token') iavtoken = 'hZ29TKB3CRpZ6z2MBPmMFYKKTbdbXLWAYUOt3A5niEoQs8mvqw' ;
-
+  @Output() action = new EventEmitter();
   constructor(private snackBar: MatSnackBar) { }
 
   ngOnInit() {
   }
 
   getDwollaHtml() {
-    console.log('triggered');
+    (<HTMLInputElement>document.getElementById('start')).disabled = true;
+    if (document.getElementById('iavContainer')) {
+      const list = document.getElementById('iavContainer');
+      while (list.hasChildNodes()) {
+        list.removeChild(list.firstChild);
+      }
+    }
+    console.log('triggered', this.iavtoken);
       dwolla.configure('sandbox');
       dwolla.iav.start(this.iavtoken, {
       container: 'iavContainer',
@@ -25,20 +32,13 @@ export class SukuDwollaFundingSourceComponent implements OnInit {
       microDeposits: true,
       backButton: true,
       fallbackToMicroDeposits: true
-    }, function(err, res) {
+    }, (err, res) =>  {
       console.log('Error: ' + JSON.stringify(err) + ' -- Response: ' + JSON.stringify(res));
-      if(err) {
-        // this.snackbar(err.message);
+      if (err) {
+        console.log('failed');
+        (<HTMLInputElement>document.getElementById('start')).disabled = false;
       }
     });
   }
-
-  // snackbar(msg) {
-	// 	this.snackBar.open(msg, 'close', {
-	// 		verticalPosition: 'bottom',
-	// 		horizontalPosition: 'right',
-// 		duration: 3500
-	// 	});
-	// }
 
 }
