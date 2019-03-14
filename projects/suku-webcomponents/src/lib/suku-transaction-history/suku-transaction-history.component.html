@@ -12,7 +12,7 @@
             <th scope="col" class="text-center" id="{{counterPartyId}}">{{heading.counterparty}}</th>
             <th scope="col" class="text-center" id="{{amountId}}">{{heading.amount}}</th>
             <th scope="col" class="text-center" id="{{statusId}}">{{heading.status}}</th>
-            <th scope="col" class="text-center" id="{{dateCreatedId}}">{{heading.dateCreated | 'short'}}</th>
+            <th scope="col" class="text-center" id="{{dateCreatedId}}">{{heading.dateCreated}}</th>
             <th scope="col" class="text-center" id="{{paymentManagementId}}">{{heading.paymentManagement}}</th>
           </tr>
         </thead>
@@ -23,9 +23,9 @@
             <td scope="row" class="text-center">{{transaction?.accountName}}</td>
             <td scope="row" class="text-center">{{transaction?.counterParty}}</td>
             <td scope="row" class="text-center">{{transaction?.amount}}</td>
-            <td scope="row" class="text-center {{( (transaction.status) == 'Failed') ? 'falied' : 'incoming'}}">{{transaction?.status}}</td>
+            <td scope="row" class="text-center {{( (transaction.status) == 'failed') ? 'falied' : 'incoming'}}">{{transaction?.status}}</td>
             <td scope="row" class="text-center">{{transaction?.created}}</td>
-            <td class="text-center"><button *ngIf="transaction?.status=='Pending'" id="{{cancelId}}" (click)="action.emit(transaction);"
+            <td class="text-center"><button *ngIf="transaction?.status=='pending'" id="{{cancelId}}" (click)="action.emit(transaction);"
                 class="btn  btnCancel">{{cancel}}</button></td>
           </tr>
         </tbody>
