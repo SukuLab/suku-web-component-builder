@@ -16,6 +16,7 @@ export class SukuDwollaFundingAgreementComponent implements OnInit {
   @Input() contentSize = '1.5';
   @Input(' btn-text-size') btnTextSize = '1.5';
   @Output() submit = new EventEmitter();
+  @Output() verify = new EventEmitter();
   formValid: Boolean = true;
 
   constructor() { }
@@ -27,7 +28,8 @@ export class SukuDwollaFundingAgreementComponent implements OnInit {
   action() {
     const controlName = this.control;
     if (this.form.get(controlName).value) {
-    	this.formValid = false;
+      this.formValid = false;
+      this.verify.emit();
 			} else {
 				this.formValid = true;
 			}

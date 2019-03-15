@@ -24,6 +24,7 @@ export class SukuBeneficialOwnerComponent implements OnInit {
 	@Output() submitOwner = new EventEmitter();
 	@Output() add = new EventEmitter();
 	@Output() submitData = new EventEmitter();
+	@Output() verify = new EventEmitter();
 	selected = [];
 	toggle = [];
 	customClass;
@@ -61,6 +62,7 @@ export class SukuBeneficialOwnerComponent implements OnInit {
 		const controlName = this.control;
 		if (this.form.get(controlName).value) {
 			this.formValid = false;
+			this.verify.emit();
 		} else {
 			this.formValid = true;
 		}
