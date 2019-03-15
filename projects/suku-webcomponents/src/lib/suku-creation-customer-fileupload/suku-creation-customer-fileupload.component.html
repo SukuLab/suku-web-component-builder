@@ -20,10 +20,10 @@
                 <a onclick="document.getElementById('myFileInput').click()" class=" fa fa-cloud-upload f60 center-block  pT9 "
                   id="saleTwoUpload" style="width: 100%"> </a>
                 <input type="file" placeholder={{imagepath}} id="myFileInput" accept="application/msword,application/pdf,application/vnd.openxmlformats-officedocument.wordprocessingml.document"
-                  name="uploadDocument" #fileInput (change)="onFileChange.emit($event)" />
+                  name="uploadDocument" #fileInput (change)="fileupload($event)" />
                 <input type="file" placeholder={{imagepath}} id="myFileInput" name="uploadDocument" />
-                <input type="file" placeholder="previewName" id="myFileInput" accept="application/msword,application/pdf,application/vnd.openxmlformats-officedocument.wordprocessingml.document"
-                  name="uploadDocument" #fileInput (change)="onFileChange.emit($event)" multiple />
+                <!-- <input type="file" placeholder="previewName" id="myFileInput" accept="application/msword,application/pdf,application/vnd.openxmlformats-officedocument.wordprocessingml.document"
+                  name="uploadDocument" #fileInput (change)="onFileChange.emit($event)" multiple /> -->
               </div>
               <div class="col-sm-8 err_style " *ngIf="showPdfErrorMsg" id="uploadcanExceed">The file type
                 pdf/doc/docx
