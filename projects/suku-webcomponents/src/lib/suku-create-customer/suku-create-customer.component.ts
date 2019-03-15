@@ -23,6 +23,7 @@ export class SukuCreateCustomerComponent implements OnInit {
   @Output() stateSelect = new EventEmitter();
   @Output() industryTypeFun = new EventEmitter();
   @Output() businessTypeFun = new EventEmitter();
+  @Input() ssnLimit;
   @Input() businessTypeValue;
   @Input() industryTypeValue;
   @Input() businessClassificationValue;

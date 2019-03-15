@@ -266,7 +266,7 @@
                 <div class="col flexCol p-0">
                   <mat-form-field>
                     <input matInput type="text" [readonly]="validateType" name="ssn" formControlName="ssn" id="ssn"
-                      placeholder="Last 4 digits of SSN">
+                      placeholder="Last {{ssnLimit}} digits of SSN">
                   </mat-form-field>
                   <mat-error>
                     <span *ngIf="getControl.get('controller').get('ssn').touched">
