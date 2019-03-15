@@ -1,183 +1,189 @@
 .btnDanger {
-    border-width: 2px;
-    border-style: solid;
-    border-color: red;
-    border-radius: 28px 76px 63px;
-    display: inline-block;
-    font-weight: 400;
-    text-align: center;
-    white-space: nowrap;
-    vertical-align: middle;
-    user-select: none;
-    padding: .375rem .75rem;
-    font-size: 1rem;
-    line-height: 1.5;
-    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
-    background-color: white;
+  border-width: 2px;
+  border-style: solid;
+  border-color: red;
+  border-radius: 28px 76px 63px;
+  display: inline-block;
+  font-weight: 400;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  user-select: none;
+  padding: 0.375rem 0.75rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out,
+    box-shadow 0.15s ease-in-out;
+  background-color: white;
 }
 .btnDanger:hover {
-    background-color: red;
-    color: white;
-}   
+  background-color: red;
+  color: white;
+}
 .jumbotron_cus1 {
-    padding: 10px;
-    margin-bottom: 15px;
-    padding-left: 5px;
-    margin-left: 10px;
-    padding-right: 5px;
-  }  
-  .jumbotron_cus2 {
-    padding-bottom: 15px;
-    padding-top: 15px;
-    padding-right: 15px;
-    padding-left: 15px;
-    margin-bottom: 15px;
-    margin-right: 15px;
-  } 
-  .samBoxStyle {
-    margin-bottom: 17px;
-    background-color: #f5f5f58c;
-    border-top: 3px solid #a7bf2e;
-    border-radius: 41px 45px 11px 14px;
-    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.5);
-  }
-  .boxShadowStyle{
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  }
-  .matBoxStyle {
-    border-radius: 25px;
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,.1), 0 6px 20px 0 rgba(0,0,0,.1);
-    background-color: #fff;
+  padding: 10px;
+  margin-bottom: 15px;
+  padding-left: 5px;
+  margin-left: 10px;
+  padding-right: 5px;
 }
-.mb9{
-    margin-bottom: 9px;
+.jumbotron_cus2 {
+  padding-bottom: 15px;
+  padding-top: 15px;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-bottom: 15px;
+  margin-right: 15px;
 }
-.pl34{
-    padding-left: 34px;
+.samBoxStyle {
+  margin-bottom: 17px;
+  background-color: #f5f5f58c;
+  border-top: 3px solid #a7bf2e;
+  border-radius: 41px 45px 11px 14px;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.5);
 }
-.pt25{
- padding-top: 25px;
+.boxShadowStyle {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
-.borderBtm{
- border-bottom: 5px solid #a7bf2e;  
-    }
-    .mb40{
-        margin-bottom: 40px;
-    }
-    .progressTxt {
-        font-family: 'Encode Sans', sans-serif !important;
-        font-size: 14px;
-        font-weight: 1;
-        text-align: center;
-        color: #b6b6b6;
-    }
-    .pl60{
-        padding-left: 60px;
-    }
-    .Rectangle-2{
-        background-color: #ffffff;
-        border-radius:0 0 42px 42px;
-        padding-top: 15px;
-        padding-bottom: 10px;
-    }
-    .pl49{
-        padding-left: 49px;
-    }
-    .Pl0{
-        padding-left:0px !important;
-        font-size: 20px;
-    }
-    .pt37{
-        padding-top: 37px;
-    }
-    .cancelTxt{
-        font-size: 20px;
-        font-weight: bold;
-    }
-    .border{
-        border-radius: 0 0 42px 42px;
-        border-top: 3px solid #b6b6b6;
-    }
-    .pb70{
-        padding-bottom: 70px;
-    }
-    .pt37{
-        padding-top: 37px;
-        padding-left: 55px;
-    }
-.pb9{
-    padding-bottom: 9px;
+.matBoxStyle {
+  border-radius: 25px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.1);
+  background-color: #fff;
 }
-.pb10{
-    padding-bottom: 10px;
+.mb9 {
+  margin-bottom: 9px;
 }
-.pt8{
-    padding-top: 8px;
-    padding-bottom: 9px;
+.pl34 {
+  padding-left: 34px;
 }
-.pt13{
-    padding-top: 13px;
-    padding-bottom: 13px;
+.pt25 {
+  padding-top: 25px;
+}
+.borderBtm {
+  border-bottom: 5px solid #a7bf2e;
+}
+.mb40 {
+  margin-bottom: 40px;
+}
+.progressTxt {
+  font-family: "Encode Sans", sans-serif !important;
+  font-size: 14px;
+  font-weight: 1;
+  text-align: center;
+  color: #b6b6b6;
+}
+.pl60 {
+  padding-left: 60px;
+}
+.Rectangle-2 {
+  background-color: #ffffff;
+  border-radius: 0 0 42px 42px;
+  padding-top: 15px;
+  padding-bottom: 10px;
+}
+.pl49 {
+  padding-left: 49px;
+}
+.Pl0 {
+  padding-left: 0px !important;
+  font-size: 20px;
+}
+.pt37 {
+  padding-top: 37px;
+}
+.cancelTxt {
+  font-size: 20px;
+  font-weight: bold;
+}
+.border {
+  border-radius: 0 0 42px 42px;
+  border-top: 3px solid #b6b6b6;
+}
+.pb70 {
+  padding-bottom: 70px;
+}
+.pt37 {
+  padding-top: 37px;
+  padding-left: 55px;
+}
+.pb9 {
+  padding-bottom: 9px;
+}
+.pb10 {
+  padding-bottom: 10px;
+}
+.pt8 {
+  padding-top: 8px;
+  padding-bottom: 9px;
+}
+.pt13 {
+  padding-top: 13px;
+  padding-bottom: 13px;
 }
 .btn {
-    border: solid 2px #a7bf2e;
-    border-radius: 28px 76px 63px;
-    background-color: white;
-    color: black;
-    padding: .375rem .75rem;
-    font-size: 10px;
-    font-family: 'Poppins'
-  }
-  
-  .btn:hover {
-    border: solid 2px #a7bf2e;
-    border-radius: 28px 76px 63px;
-    background-color: #a7bf2e;
-    color: white;
-  }
-  .btn:focus {
-      outline: none !important;
-      box-shadow: none !important;
-  }
-  .poppinsFont {
-    font-family: 'Poppins';
+  border: solid 2px #a7bf2e;
+  border-radius: 28px 76px 63px;
+  background-color: white;
+  color: black;
+  padding: 0.375rem 0.75rem;
+  font-size: 10px;
+  font-family: "Poppins";
+}
+
+.btn:hover {
+  border: solid 2px #a7bf2e;
+  border-radius: 28px 76px 63px;
+  background-color: #a7bf2e;
+  color: white;
+}
+
+.poppinsFont {
+  font-family: "Poppins";
 }
 .btnFnt {
-    font-size: 10px;
+  font-size: 10px;
 }
 .mT-18 {
-    margin-top: 18%;
+  margin-top: 18%;
 }
 .mT-22 {
-    margin-top: 22%;
+  margin-top: 22%;
 }
 .mT-15 {
-    margin-top: 15%;
+  margin-top: 15%;
 }
 .plusIcon {
-    color: #a7bf2e;
-    font-size: 30px;
+  color: #a7bf2e;
+  font-size: 30px;
 }
 .m-6 {
-    margin: 3%;
+  margin: 3%;
 }
 .btnRmv {
-    border: solid 2px rgb(117, 117, 117);
-    border-radius: 28px 76px 63px;
-    background-color: white;
-    color: black;
-    padding: .375rem .75rem;
-    font-size: 10px;
-    font-family: 'Poppins'
-  }
-  
-  .btnRmv:hover {
-    border: solid 2px rgb(117, 117, 117);
-    border-radius: 28px 76px 63px;
-    background-color: rgb(117, 117, 117);
-    color: white;
-  }
-  .btnRmv:focus {
-      outline: none !important;
-      box-shadow: none !important;
-  }
+  border: solid 2px rgb(117, 117, 117);
+  border-radius: 28px 76px 63px;
+  background-color: white;
+  color: black;
+  padding: 0.375rem 0.75rem;
+  font-size: 10px;
+  font-family: "Poppins";
+}
+
+.btnRmv:hover {
+  border: solid 2px rgb(117, 117, 117);
+  border-radius: 28px 76px 63px;
+  background-color: rgb(117, 117, 117);
+  color: white;
+}
+
+.btnRmv:focus {
+  outline: none !important;
+  box-shadow: none !important;
+  color: black;
+}
+
+.btn:focus {
+  outline: none !important;
+  box-shadow: none !important;
+  color: black;
+}
