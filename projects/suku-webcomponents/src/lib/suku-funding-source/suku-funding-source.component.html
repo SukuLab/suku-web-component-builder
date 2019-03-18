@@ -17,49 +17,48 @@
     </div>
     <div class="col-sm-12">
       <div class="row">
-        <div class="col-sm-4 mt-3 pr-5 pl-5">
+        <div class="col-xl-4 col-lg-6  clearfix mt-3 pr-5 pl-5">
           <div class="jumbotron col m-6  container defaultDiv samBoxStyle boxShadowStyle jumbotron_cus2">
-            <div class="col-sm-12 p-3 mt-2">
+            <div class="col-12 p-3 mt-2">
               <div class="col-sm-12 text-center">
                 <b>{{defaultText}}</b>
               </div>
-              <div class="col-sm-12 text-center mt-4">
-                {{defaultbankName}}
+              <div class="col-12 text-center mt-4">
+                <span>{{defaultbankName}}</span>
               </div>
-              <div class="col-sm-12 text-center">
+              <div class="col-12 text-center">
+                <span>
                 {{DefaultaccountNumber}}
-              </div>
-              <div class="col-sm-12 text-center mT-22">
-                <button class="btnDanger col-sm-8 btnFnt" (click)='removeDefault.emit()' id="{{defaultRemoveBtnId}}">{{defaultRemoveBtnTxt}}</button>
+                </span>
               </div>
             </div>
           </div>
         </div>
-        <div class="col-sm-4 mt-3 pr-5 pl-5" *ngFor="let item of fundingDetails; let i = index;">
+        <div class="col-xl-4 col-lg-6  clearfix mt-3 pr-5 pl-5" *ngFor="let item of fundingDetails; let i = index;">
           <div class="jumbotron m-6 justify-content-center container defaultDiv
           samBoxStyle boxShadowStyle jumbotron_cus2">
             <div class="col-sm-12  p-3  mt-2 ">
               <div class="col-sm-12 text-center mt-35">
-                {{item.name}}
+                <span>{{item.name}}</span>
               </div>
               <div class="col-sm-12 text-center pt8">
-                XXXXXX{{item.id | slice:-4}}
+               <span>XXXXXX{{item.id | slice:-4}}</span> 
               </div>
-              <div class="matBoxStyle">
+              <div class="col mt-5 text-center">
+                </div>
                 <div class="col-sm-12 text-center pt13">
-                  <div class="col-sm-10  offset-sm-1 p-2">
-                    <button class="btn btn-info mb9 col-sm-12 btnFnt" (click)="makeDefaultAction.emit();" id="{{defaultBtnId}}">{{defaultBtnTxt}}</button>
-                    <button class="btnDanger  col-sm-12 mt-1 btnFnt" (click)="removeSourceAction.emit(item);" id="{{removeBtnId}}">{{removeBtnTxt}}</button>
+                  <div class="col-sm-10 col-xs-12 offset-xs-0  offset-sm-1 p-2">
+                    <button *ngIf="!item.defaultAccount==true" class="btn btn-info mb9 clearfix col-lg-12 btnFnt p-2" (click)="makeDefaultAction.emit(item);" id="{{defaultBtnId}}">{{defaultBtnTxt}}</button>
+                    <button class="btnDanger  col-lg-12 mt-1 clearfix btnFnt p-2" (click)="removeSourceAction.emit(item);" id="{{removeBtnId}}">{{removeBtnTxt}}</button>
                   </div>
                 </div>
               </div>
-            </div>
           </div>
         </div>
-        <div class="col-sm-4 mt-3 pr-5 pl-5">
+        <div class="col-xl-4 col-lg-6  clearfix mt-3 pr-5 pl-5">
           <div class="jumbotron  m-6 container defaultDiv samBoxStyle boxShadowStyle jumbotron_cus2">
             <div class="col-sm-12  p-3  mt-2">
-              <div class="col-sm-12 text-center pb10">
+              <div class="col-sm-12 text-center pb10 p-2">
                 {{achWalletTxt}}
               </div>
               <div class="col-sm-12 text-center">
@@ -67,13 +66,6 @@
               </div>
               <div class="col-sm-12 text-center">
                 ${{WalletBalance}}
-              </div>
-              <div class=" matBoxStyle">
-                <div class="col-sm-12 text-center pt8 mT-15">
-                  <div class="col-sm-10 offset-sm-1 mt-12">
-                    <button class="btn btn-info  col-sm-12 mt-1" (click)="achMakeDefaultAction.emit()" id="{{achMakeDefaultBtnId}}">{{achMakeDefaultBtnText}}</button>
-                  </div>
-                </div>
               </div>
             </div>
           </div>
