@@ -7,33 +7,37 @@ import { FormGroup, FormBuilder, FormsModule, FormControl, Validators } from '@a
   styleUrls: ['./suku-create-customer.component.scss']
 })
 export class SukuCreateCustomerComponent implements OnInit {
-
   _data;
   _data1;
+  _ssnLimit;
   maxDate = "2001-03-11"
   @Input() form: FormGroup;
   @Input() formArrayNameValue;
   @Input() countriesList;
   @Input() statesList;
-  @Input() DwollaTOScontrol;
-  @Input() CitizensReserveTOScontrol;
+  @Input() CRDwollaTOSControl;
   @Output() countrySelect = new EventEmitter();
   @Output() submitData = new EventEmitter();
   @Output() onSubmit  = new EventEmitter();
   @Output() stateSelect = new EventEmitter();
   @Output() industryTypeFun = new EventEmitter();
   @Output() businessTypeFun = new EventEmitter();
-  @Input() ssnLimit;
+  @Input()
+  get ssnLimit() {
+    return this._ssnLimit;
+  }
+  set ssnLimit(val) {
+    console.log("val", val);
+    this._ssnLimit = val;
+  }
   @Input() businessTypeValue;
   @Input() industryTypeValue;
   @Input() businessClassificationValue;
   DwollaTOSformValid: boolean;
   CitizensReserveTOSformValid: boolean;
   validateType: boolean;
-   getControl;
-  //  getControlcontroller;
-  //  getControlAddress;
-    constructor(private fb: FormBuilder) { }
+  getControl;
+  constructor(private fb: FormBuilder) { }
 
   ngOnInit() {
     this.DwollaTOSformValid = true;
@@ -49,7 +53,6 @@ export class SukuCreateCustomerComponent implements OnInit {
         const data = {
             'countryDetails': JSON.parse(val) 
         };
-        // console.log("data", this.form.get(this.arrayControlName));
         console.log("sdhhjhdsdcddscdscdsbhcdsbcjhd : " + data);
         this.countrySelect.emit(data);
     }
@@ -62,7 +65,6 @@ industryTypeFunAction(val,) {
       const data = {
           'industryType': JSON.parse(val) 
       };
-      // console.log("data", this.form.get(this.arrayControlName));
       console.log("sdhhjhdsdcddscdscdsbhcdsbcjhd : " + data);
       this.industryTypeFun.emit(data);
   }
@@ -81,14 +83,15 @@ validateTypeFun(type) {
     this.validateType = false;
   }
 }
+
 action1() {
-  const controlName1 = this.CitizensReserveTOScontrol;
-  const controlName2 = this.DwollaTOScontrol;
-  if (this.form.get(controlName1).value && this.form.get(controlName2).value ) {
+  const controlName1 = this.CRDwollaTOSControl;
+  if (this.form.get(controlName1).value) {
     this.CitizensReserveTOSformValid = false;
   } else {
     this.CitizensReserveTOSformValid = true;
   }
 }
+
 
 }

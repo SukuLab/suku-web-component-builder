@@ -266,7 +266,8 @@
                 <div class="col flexCol p-0">
                   <mat-form-field>
                     <input matInput type="text" [readonly]="validateType" name="ssn" formControlName="ssn" id="ssn"
-                      placeholder="Last {{ssnLimit}} digits of SSN">
+                      [placeholder]="_ssnLimit">
+                      <mat-hint *ngIf="_ssnLimit == 'ssn'">hint: Enter 9 digit ssn.</mat-hint>
                   </mat-form-field>
                   <mat-error>
                     <span *ngIf="getControl.get('controller').get('ssn').touched">
@@ -386,46 +387,32 @@
           to share your identity and account data with Dwolla for the
           purposes of opening and supporting your Dwolla account,
           and you are responsible for the accuracy and completeness of that data.
-          You understand that you will access and manage your Dwolla account through Citizens Reserve’s
+          You understand that you will access and manage your Dwolla account through Citizens Reserve's
           application, and Dwolla account notifications will be sent by Citizens Reserve, not Dwolla.
           Citizens Reserve will provide customer support for your Dwolla account activity,
           and can be reached at suku.world, support@suku.world and/or (317) 690-5477.</p>
-      </div>
-      <div class="form-group offset-sm-1  col-sm-12 col-xs-12 pL0">
-        <div class=" col-sm-12 pt-4 col-xs-12 noPadding">
-          <span>
-            <!-- <mat-checkbox color="primary" type="checkbox" id="checkbox" formControlName="checkbox" name="checkbox">
-            </mat-checkbox> -->
-            <mat-checkbox color="primary" type="checkbox" (change)="action1()" id="{{DwollaTOScontrol}}"
-              formControlName="{{DwollaTOScontrol}}" name="{{DwollaTOScontrol}}">
-            </mat-checkbox>
-          </span>
-          <span class="col terms f15">I Agree to Dwolla TOS and Privacy Policy
-          </span>
-        </div>
       </div>
       <div class="col-sm-10 col-xs-12 offset-sm-1 pL-15 ">
         <p class="Spring-Cases txtFlow">
         </p>
       </div>
-      <div class="form-group offset-sm-1 col-sm-12 col-xs-12 pL0">
-        <div class=" col-sm-12 pt-4 col-xs-12 noPadding">
+      <div class="form-group offset-sm-1 col-sm-11 col-xs-12 pL0">
+        <div class=" col pt-4 col-xs-12">
           <span>
-            <mat-checkbox color="primary" type="checkbox" (change)="action1()" id="{{CitizensReserveTOScontrol}}"
-              formControlName="{{CitizensReserveTOScontrol}}" name="{{CitizensReserveTOScontrol}}">
+            <mat-checkbox color="primary" type="checkbox" (change)="action1()" id="{{CRDwollaTOSControl}}"
+              formControlName="{{CRDwollaTOSControl}}" name="{{CRDwollaTOSControl}}">
             </mat-checkbox>
           </span>
-          <span class="col terms f15">I Agree to Citizens Reserve
-            <a class="link ws" href="https://citizensreserve.com/terms" target="_blank">TOS</a>
+          <span class="col terms f15">I agree to Citizen Reserve's 
+            <a class="link ws" href="https://citizensreserve.com/terms" target="_blank">Terms of Service</a>
             and
-            <a class="link ws" href="https://citizensreserve.com/privacy" target="_blank">Privacy Policy.</a>
+            <a class="link ws" href="https://citizensreserve.com/privacy" target="_blank">Privacy Policy</a>
+            , as well as our payment partner Dwolla's 
+            <a href="https://www.dwolla.com/legal/tos/" target="_blank">Terms of Service </a> and 
+            <a href="https://www.dwolla.com/legal/privacy/" target="_blank"> Privacy Policy.</a>
           </span>
         </div>
       </div>
-      <!-- <div class="col-sm-12  pB40 d-flex justify-content-center mt-5">
-          <button class="btn btn-info f18" (click)=" onSubmit.emit();">Agree
-            & Continue</button>
-        </div> -->
       <div class="col d-flex justify-content-center mt-4 mb-3  pB40">
         <button class="btn btn-info" [disabled]="CitizensReserveTOSformValid"
           [ngClass]="{'disabled': CitizensReserveTOSformValid}" (click)="submitData.emit(); onSubmit.emit();">Agree
