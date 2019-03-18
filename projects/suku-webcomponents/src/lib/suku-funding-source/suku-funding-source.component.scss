@@ -30,8 +30,8 @@
 .jumbotron_cus2 {
   padding-bottom: 15px;
   padding-top: 15px;
-  padding-right: 15px;
-  padding-left: 15px;
+  padding-right: 5px;
+  padding-left: 5px;
   margin-bottom: 15px;
   margin-right: 15px;
 }
@@ -111,7 +111,7 @@
   padding-bottom: 9px;
 }
 .pb10 {
-  padding-bottom: 10px;
+  padding-bottom: 8px;
 }
 .pt8 {
   padding-top: 8px;
@@ -191,4 +191,11 @@
 .icon-size{
   font-size: 74px !important;
   color: #a6bf2e;
+}
+
+@media only screen and (max-width:800px) {
+  /* For mobile phones: */
+  .jumbotron_cus1, .jumbotron_cus2  {
+    width:100%;
+  }
 }
