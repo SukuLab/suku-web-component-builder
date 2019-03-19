@@ -124,7 +124,7 @@
 }
 
 .p15 {
-  padding-top: 15%;
+  padding-top: 12%;
   padding-bottom: 13px;
 }
 
@@ -143,6 +143,13 @@
   border-radius: 28px 76px 63px;
   background-color: #a7bf2e;
   color: white;
+}
+
+.btn:focus {
+  border: solid 2px #a7bf2e;
+  border-radius: 28px 76px 63px;
+  background-color: #a7bf2e;
+  color: black;
 }
 
 .poppinsFont {
