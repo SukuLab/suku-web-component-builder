@@ -1,10 +1,10 @@
-<div class="col-sm-12 fontPoppins pT-5 d-flex">
-  <div class="form-group col-12 Rectangle-2 p-3">
-    <div class="col-sm-12 text-center mb-2">
-      {{transactionHistory}}
+<div class="col fontPoppins p-5 d-flex">
+  <div class="form-group col-12 historyWidget p-3">
+    <div class="col-sm-12 text-center mb-2 pt-2 pb-3">
+      <b>{{transactionHistory | uppercase}}</b>
     </div>
-    <div class="col-sm-12 table-responsive mB-4" id="sailorTableArea">
-      <table class="col-sm-12  table table-bordered tableBg" id="sailorTable" style="overflow-x:auto;">
+    <div class="col-sm-12 table-responsive mb-3" id="transactionTable">
+      <table class="col-sm-12  table table-bordered tableBg" id="transactionHisTable" style="overflow-x:auto;">
         <thead>
           <tr *ngFor="let heading of headings">
             <th scope="col" class="text-center" id="{{typeId}}">{{heading.type}}</th>
@@ -27,7 +27,7 @@
             <td scope="row" class="text-center {{( (transaction.status) == 'Failed') ? 'falied' : 'incoming'}}">{{transaction?.status}}</td>
             <td scope="row" class="text-center">{{transaction?.created | date:'d MMM yyyy HH:MM a'}}</td>
             <td scope="row" class="text-center">{{(transaction?.completedOn | date:'d MMM yyyy HH:MM a') || 'Not available'}}</td>
-            <td class="text-center"><button *ngIf="transaction?.status=='Pending'" id="{{cancelId}}" (click)="action.emit(transaction);" class="btn  btnCancel">{{cancel}}</button></td>
+            <td class="text-center"><button *ngIf="transaction?.status=='pending'" id="{{cancelId}}" (click)="action.emit(transaction);" class="btn  btnCancel">{{cancel}}</button></td>
           </tr>
         </tbody>
       </table>
