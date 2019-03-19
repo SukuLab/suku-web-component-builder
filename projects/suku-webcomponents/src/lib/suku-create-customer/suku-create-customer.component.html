@@ -10,31 +10,21 @@
   <br>
   <div class="col Rectangle-2">
     <div formArrayName="{{formArrayNameValue}}">
-      <div class="form-group col-xs-12 col-sm-12 col-md-12 col-lg-12 pL0R0  "
-        *ngFor="let detail of form.get(formArrayNameValue)['controls']; let i=index" [formGroupName]="i">
-        <div class="col-sm-12 pT5">
+      <div class="form-group col-xs-12 col-sm-12 col-md-12 col-lg-12" *ngFor="let detail of form.get(formArrayNameValue)['controls']; let i=index"
+        [formGroupName]="i">
+        <div class="col-sm-10 col-xs-12 offset-sm-1">
           <div class="row">
-            <div class="col-sm-5 offset-sm-1">
-              <span class="header pL30">Business Information</span>
-            </div>
-            <div class="col-sm-6">
-              <span class="header pL30">Controller Information</span>
-            </div>
-          </div>
-        </div>
-        <div class="col-sm-12 pT5">
-          <div class="col-sm-4 pL43">
-            <span class="hide-details pT5 pL40 pL30">ACCOUNT ADMIN</span>
-          </div>
-        </div>
-        <div class="col-sm-10 col-xs-12 offset-sm-1 noPadding ">
-          <div class="row">
-            <div class="col-sm-6 p-0">
+            <div class="col-sm-6 p-0 mt-sm-5">
+              <div class="col-sm-12 pt-3">
+                <span class="header pL30">Business Information</span>
+              </div>
+              <div class="col-sm-12 pt-2">
+                <span class="hide-details pL30">ACCOUNT ADMIN</span>
+              </div>
               <div class="col-sm-12 form-group">
                 <div class="col flexCol p-0">
                   <mat-form-field>
-                    <input matInput type="text" name="firstName" formControlName="firstName" id="firstName"
-                      placeholder="First name">
+                    <input matInput type="text" name="firstName" formControlName="firstName" id="firstName" placeholder="First name">
                   </mat-form-field>
                   <mat-error>
                     <span *ngIf="getControl.get('firstName').touched">
@@ -48,8 +38,7 @@
               <div class="col-sm-12 form-group">
                 <div class="col flexCol p-0">
                   <mat-form-field>
-                    <input matInput type="text" name="lastName" formControlName="lastName" id="lastName"
-                      placeholder="Last name">
+                    <input matInput type="text" name="lastName" formControlName="lastName" id="lastName" placeholder="Last name">
                   </mat-form-field>
                   <mat-error>
                     <span *ngIf="getControl.get('lastName').touched">
@@ -78,8 +67,7 @@
               <div class="col-sm-12 form-group">
                 <div class="col flexCol p-0">
                   <mat-form-field>
-                    <input matInput type="text" name="address1" formControlName="address1" id="address1"
-                      placeholder="Address">
+                    <input matInput type="text" name="address1" formControlName="address1" id="address1" placeholder="Address">
                   </mat-form-field>
                   <mat-error>
                     <span *ngIf="getControl.get('address1').touched">
@@ -153,8 +141,8 @@
               <div class="col-sm-12 form-group">
                 <div class="col flexCol p-0">
                   <mat-form-field>
-                    <mat-select id="businessClassification" formControlName="businessClassification"
-                      name="businessClassification" placeholder="Business Classification">
+                    <mat-select id="businessClassification" formControlName="businessClassification" name="businessClassification"
+                      placeholder="Business Classification">
                       <mat-option value="">Select business Classification</mat-option>
                       <mat-option *ngFor="let businessClassification of businessClassificationValue ; let i = index"
                         value="{{businessClassification.id}}">
@@ -181,8 +169,8 @@
               <div class="col-sm-12 form-group">
                 <div class="col flexCol p-0">
                   <mat-form-field>
-                    <mat-select id="businessType" #z (selectionChange)="businessTypeFunAction(z.value)"
-                      formControlName="businessType" name="businessType" placeholder="Business type">
+                    <mat-select id="businessType" #z (selectionChange)="businessTypeFunAction(z.value)" formControlName="businessType"
+                      name="businessType" placeholder="Business type">
                       <mat-option value="">Select businessType</mat-option>
                       <mat-option *ngFor="let business of businessTypeValue ; let i = index" value="{{business.value}}">
                         {{business.name}}</mat-option>
@@ -205,8 +193,11 @@
                 </div>
               </div>
             </div>
-            <!-- hjhjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjdf -->
-            <div class="col-sm-6 p-0" formGroupName="controller">
+            <!-- controller -->
+            <div class="col-sm-6 p-0 mt-sm-5" formGroupName="controller">
+              <div class="col-sm-12 pb-5 pt-3">
+                <span class="header pL30">Controller Information</span>
+              </div>
               <div class="col-sm-12 form-group">
                 <div class="col flexCol p-0">
                   <mat-form-field>
@@ -225,8 +216,8 @@
               <div class="col-sm-12 form-group">
                 <div class="col flexCol p-0">
                   <mat-form-field>
-                    <input matInput type="text" [readonly]="validateType" name="lastName" formControlName="lastName"
-                      id="lastName" placeholder="Last name">
+                    <input matInput type="text" [readonly]="validateType" name="lastName" formControlName="lastName" id="lastName"
+                      placeholder="Last name">
                   </mat-form-field>
                   <mat-error>
                     <span *ngIf="getControl.get('controller').get('lastName').touched">
@@ -240,8 +231,8 @@
               <div class="col-sm-12 form-group">
                 <div class="col flexCol p-0">
                   <mat-form-field>
-                    <input matInput type="text" [readonly]="validateType" name="title" formControlName="title"
-                      id="title" placeholder="Title">
+                    <input matInput type="text" [readonly]="validateType" name="title" formControlName="title" id="title"
+                      placeholder="Title">
                   </mat-form-field>
                   <mat-error>
                     <span *ngIf="getControl.get('controller').get('title').touched">
@@ -255,8 +246,8 @@
               <div class="col-sm-12 form-group">
                 <div class="col flexCol p-0">
                   <mat-form-field>
-                    <input matInput [matDatepicker]="picker" [min]="2001-12-6" [readonly]="validateType"
-                      placeholder="Date of Birth" id="dateOfBirth" formControlName="dateOfBirth">
+                    <input matInput [matDatepicker]="picker" [min]="2001-12-6" [readonly]="validateType" placeholder="Date of Birth"
+                      id="dateOfBirth" formControlName="dateOfBirth">
                     <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
                     <mat-datepicker #picker></mat-datepicker>
                   </mat-form-field>
@@ -267,7 +258,6 @@
                   <mat-form-field>
                     <input matInput type="text" [readonly]="validateType" name="ssn" formControlName="ssn" id="ssn"
                       [placeholder]="_ssnLimit">
-                      <mat-hint *ngIf="_ssnLimit == 'ssn'">hint: Enter 9 digit ssn.</mat-hint>
                   </mat-form-field>
                   <mat-error>
                     <span *ngIf="getControl.get('controller').get('ssn').touched">
@@ -317,8 +307,8 @@
                 <div class="col-sm-12 form-group">
                   <div class="col flexCol p-0">
                     <mat-form-field>
-                      <mat-select #t [disabled]="validateType" (selectionChange)="countrySelectAction(t.value)"
-                        name="country" formControlName="country" id="country" placeholder="Country">
+                      <mat-select #t [disabled]="validateType" (selectionChange)="countrySelectAction(t.value)" name="country"
+                        formControlName="country" id="country" placeholder="Country">
                         <mat-option *ngFor="let item of countriesList; let i = index" value="{{item | json}}">
                           {{item.countryName }}</mat-option>
                       </mat-select>
@@ -328,8 +318,8 @@
                 <div class="col-sm-12 form-group">
                   <div class="col flexCol p-0">
                     <mat-form-field>
-                      <mat-select name="stateProvinceRegion" [disabled]="validateType"
-                        formControlName="stateProvinceRegion" id="stateProvinceRegion" placeholder="State">
+                      <mat-select name="stateProvinceRegion" [disabled]="validateType" formControlName="stateProvinceRegion"
+                        id="stateProvinceRegion" placeholder="State">
                         <mat-option *ngFor="let item of statesList; let i = index" value="{{ item.stateShortName }}">{{
                           item.stateName }}</mat-option>
                       </mat-select>
@@ -354,8 +344,8 @@
                 <div class="col-sm-12 form-group">
                   <div class="col flexCol p-0">
                     <mat-form-field>
-                      <input matInput type="text" [readonly]="validateType" name="postalCode"
-                        formControlName="postalCode" id="postalCode" placeholder="Postal-code">
+                      <input matInput type="text" [readonly]="validateType" name="postalCode" formControlName="postalCode"
+                        id="postalCode" placeholder="Postal-code">
                     </mat-form-field>
                     <mat-error>
                       <span *ngIf="getControl.get('controller').get('address').get('postalCode').touched">
@@ -372,50 +362,25 @@
         </div>
       </div>
     </div>
-    <div class="form-group col-xs-12 col-sm-12 col-md-12 col-lg-12 pL0R0 ">
-      <div class="col-sm-10 col-xs-12 pT25 offset-sm-1 noPadding">
-        <p class="Spring-Cases txtFlow justify-content-center">
-          In order to use the payment functionality of our application,
-          you must open a "Dwolla Platform" account provided by Dwolla,
-          Inc. and you must accept the <a href="https://www.dwolla.com/legal/tos/" target="_blank">Dwolla Terms of
-            Service</a> and
-          <a href="https://www.dwolla.com/legal/privacy/" target="_blank">Privacy Policy.</a>
-          Any funds held in the Dwolla account are held by Dwolla's financial institution partners as set out in the
-          <a href="https://www.dwolla.com/legal/tos/" target="_blank">Dwolla Terms of Service.</a> You authorize
-          Citizens
-          Reserve, Inc.
-          to share your identity and account data with Dwolla for the
-          purposes of opening and supporting your Dwolla account,
-          and you are responsible for the accuracy and completeness of that data.
-          You understand that you will access and manage your Dwolla account through Citizens Reserve's
-          application, and Dwolla account notifications will be sent by Citizens Reserve, not Dwolla.
-          Citizens Reserve will provide customer support for your Dwolla account activity,
-          and can be reached at suku.world, support@suku.world and/or (317) 690-5477.</p>
-      </div>
-      <div class="col-sm-10 col-xs-12 offset-sm-1 pL-15 ">
-        <p class="Spring-Cases txtFlow">
-        </p>
-      </div>
-      <div class="form-group offset-sm-1 col-sm-11 col-xs-12 pL0">
-        <div class=" col pt-4 col-xs-12">
-          <span>
-            <mat-checkbox color="primary" type="checkbox" (change)="action1()" id="{{CRDwollaTOSControl}}"
-              formControlName="{{CRDwollaTOSControl}}" name="{{CRDwollaTOSControl}}">
-            </mat-checkbox>
-          </span>
-          <span class="col terms f15">I agree to Citizen Reserve's 
-            <a class="link ws" href="https://citizensreserve.com/terms" target="_blank">Terms of Service</a>
-            and
-            <a class="link ws" href="https://citizensreserve.com/privacy" target="_blank">Privacy Policy</a>
-            , as well as our payment partner Dwolla's 
-            <a href="https://www.dwolla.com/legal/tos/" target="_blank">Terms of Service </a> and 
-            <a href="https://www.dwolla.com/legal/privacy/" target="_blank"> Privacy Policy.</a>
-          </span>
-        </div>
+    <div class="form-group col-xs-12 col-sm-10 offset-sm-1 p-0">
+      <div class=" col pt-4 col-xs-12">
+        <span>
+          <mat-checkbox color="primary" type="checkbox" (change)="action1()" id="{{CRDwollaTOSControl}}"
+            formControlName="{{CRDwollaTOSControl}}" name="{{CRDwollaTOSControl}}">
+          </mat-checkbox>
+        </span>
+        <span class="col terms f15">I agree to Citizen Reserve's
+          <a class="link ws" href="https://citizensreserve.com/terms" target="_blank">Terms of Service</a>
+          and
+          <a class="link ws" href="https://citizensreserve.com/privacy" target="_blank">Privacy Policy</a>
+          , as well as our payment partner Dwolla's
+          <a href="https://www.dwolla.com/legal/tos/" target="_blank">Terms of Service </a> and
+          <a href="https://www.dwolla.com/legal/privacy/" target="_blank"> Privacy Policy.</a>
+        </span>
       </div>
       <div class="col d-flex justify-content-center mt-4 mb-3  pB40">
-        <button class="btn btn-info" [disabled]="CitizensReserveTOSformValid"
-          [ngClass]="{'disabled': CitizensReserveTOSformValid}" (click)="submitData.emit(); onSubmit.emit();">Agree
+        <button class="btn btn-info" [disabled]="CitizensReserveTOSformValid" [ngClass]="{'disabled': CitizensReserveTOSformValid}"
+          (click)="submitData.emit(); onSubmit.emit();">Agree
           & Continue</button>
       </div>
     </div>
