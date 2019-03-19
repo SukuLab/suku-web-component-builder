@@ -1,5 +1,4 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
-
 @Component({
   selector: 'suku-transaction-history',
   templateUrl: './suku-transaction-history.component.html',
@@ -20,7 +19,8 @@ export class SukuTransactionHistoryComponent implements OnInit {
   @Output() action = new EventEmitter();
   @Input() cancelId = 'cancelId';
   @Input() cancel = 'Cancel';
-  constructor() { }
+  constructor() {
+  }
 
   ngOnInit() {
     this.headings = [{
@@ -29,7 +29,8 @@ export class SukuTransactionHistoryComponent implements OnInit {
       'counterparty': 'Counter Party',
       'amount': 'Amount',
       'status': 'Status',
-      'dateCreated': 'Date Created',
+      'dateInitiated': 'Initiated On',
+      'dateCreated': 'Completed On',
       'paymentManagement': 'Payment Management'
     }]
   }
