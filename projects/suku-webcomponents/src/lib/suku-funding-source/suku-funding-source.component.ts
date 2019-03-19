@@ -25,10 +25,12 @@ export class SukuFundingSourceComponent implements OnInit {
   @Input() DefaultaccountNumber = 'XXXXXX0220';
   @Input() WalletBalance = 0.000;
   @Input() defaultRemoveBtnId = 'defaultRemoveBtnId';
+  @Input() transferFundId = 'transferFundId';
+  @Input() transferFundTxt = 'Transfer Balance';
   @Output() removeDefault = new EventEmitter();
   @Output() makeDefaultAction = new EventEmitter();
   @Output() removeSourceAction = new EventEmitter();
-  @Output() achMakeDefaultAction = new EventEmitter();
+  @Output() transferFundAction = new EventEmitter();
   @Output() addSource = new EventEmitter();
   ngOnInit() {
   }
