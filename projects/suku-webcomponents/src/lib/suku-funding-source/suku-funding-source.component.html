@@ -1,7 +1,7 @@
 <div class="col-sm-12 d-flex pt-4">
   <div class="Rectangle-2 col mB-2 pb-5">
     <div class="col-sm-12">
-      <div class="row" (click)="addSource.emit()">
+      <div class="row" >
         <div class="col-sm-1">
           {{headerOneTxt}} <br>
           {{headerTwoText}}
@@ -9,7 +9,7 @@
         <div class="col-sm-10">
           <div class="add-btn p-2 pl-sm-5 ml-sm-4 text-left" *ngIf="fundingDetails.length !== 8">
             <a>
-              <i class="fa fa-plus-circle plusIcon"></i>
+              <i class="fa fa-plus-circle plusIcon" (click)="addSource.emit()"></i>
             </a>
           </div>
         </div>
@@ -17,16 +17,16 @@
     </div>
     <div class="col-sm-12">
       <div class="row">
-        <div class="col-xl-4 col-lg-6  clearfix mt-3 pr-5 pl-5">
+        <div class="col-xl-3 col-lg-4 col-md-6 clearfix mt-3 pr-5 pl-5">
           <div class="jumbotron col m-6  container defaultDiv samBoxStyle boxShadowStyle jumbotron_cus2">
             <div class="col-12 p-3 mt-2">
-              <div class="col-sm-12 text-center">
+              <div class="col-sm-12 w74 text-center">
                 <b>{{defaultText}}</b>
               </div>
-              <div class="col-12 text-center mt-4">
+              <div class="col-12 w74 text-center mt-4">
                 <span>{{defaultbankName}}</span>
               </div>
-              <div class="col-12 text-center">
+              <div class="col-12 w74 text-center">
                 <span>
                 {{DefaultaccountNumber}}
                 </span>
@@ -34,42 +34,52 @@
             </div>
           </div>
         </div>
-        <div class="col-xl-4 col-lg-6  clearfix mt-3 pr-5 pl-5" *ngFor="let item of fundingDetails; let i = index;">
+        <div class="col-xl-3 col-lg-4 col-md-6  clearfix mt-3 pr-5 pl-5" *ngFor="let item of fundingDetails; let i = index;">
           <div class="jumbotron m-6 justify-content-center container defaultDiv
           samBoxStyle boxShadowStyle jumbotron_cus2">
             <div class="col-sm-12  p-3  mt-2 ">
-              <div class="col-sm-12 text-center mt-35">
+              <div class="col-sm-12 w74 text-center mt-35">
                 <span>{{item.name}}</span>
               </div>
-              <div class="col-sm-12 text-center pt8">
+              <div class="col-sm-12 w74 text-center pt8">
                <span>XXXXXX{{item.id | slice:-4}}</span> 
               </div>
               <div class="col mt-5 text-center">
                 </div>
                 <div class="col-sm-12 text-center pt13">
                   <div class="col-sm-10 col-xs-12 offset-xs-0  offset-sm-1 p-2">
-                    <button *ngIf="!item.defaultAccount==true" class="btn btn-info mb9 clearfix col-lg-12 btnFnt p-2" (click)="makeDefaultAction.emit(item);" id="{{defaultBtnId}}">{{defaultBtnTxt}}</button>
-                    <button class="btnDanger  col-lg-12 mt-1 clearfix btnFnt p-2" (click)="removeSourceAction.emit(item);" id="{{removeBtnId}}">{{removeBtnTxt}}</button>
+                      <div class="row">
+                          <div class="col-lg-12 p-0">
+                            <button *ngIf="!item.defaultAccount==true" class="btn btn-info w74 mb9 btn-block btnFnt p-2" (click)="makeDefaultAction.emit(item);" id="{{defaultBtnId}}">{{defaultBtnTxt}}</button>
+                            <button class="btnDanger mt-1 w74 clearfix btnFnt p-2 btn-block" (click)="removeSourceAction.emit(item);" id="{{removeBtnId}}">{{removeBtnTxt}}</button>
+                         </div>
+                      </div>
                   </div>
                 </div>
               </div>
           </div>
         </div>
-        <div class="col-xl-4 col-lg-6  clearfix mt-3 pr-5 pl-5">
+        <div class="col-xl-3 col-lg-4 col-md-6 clearfix mt-3 pr-5 pl-5">
           <div class="jumbotron  m-6 container defaultDiv samBoxStyle boxShadowStyle jumbotron_cus2">
             <div class="col-sm-12  p-3  mt-2">
-              <div class="col-sm-12 text-center pb10 p-2">
+              <div class="col-sm-12 text-center w74 pb10 p-2">
                 {{achWalletTxt}}
               </div>
-              <div class="col-sm-12 text-center">
+              <div class="col-sm-12 w74 text-center">
                 {{balanceLblTxt}}:
               </div>
-              <div class="col-sm-12 text-center">
+              <div class="col-sm-12 w74 text-center">
                 ${{WalletBalance}}
               </div>
               <div class="col-sm-12 text-center p15">
                 <div class="col-sm-10 col-xs-12 offset-xs-0  offset-sm-1 p-2">
-                  <button class="btn btn-info mb9 clearfix col-lg-12 btnFnt p-2" (click)="transferFundAction.emit();" id="{{transferFundId}}">{{transferFundTxt}}</button>
+                    <div class="row">
+                        <div class="col-lg-12 p-0">
+                          <button class="btn btn-info mb9 w74 clearfix btnFnt p-2 mt-3 btn-block" (click)="transferFundAction.emit();" id="{{transferFundId}}">
+                            Transfer Balance
+                          </button>
+                        </div>
+                    </div>
                 </div>
               </div>
             </div>
