@@ -8,14 +8,26 @@ import { MatSnackBar } from '@angular/material';
 	styleUrls: [ './suku-creation-customer-fileupload.component.scss' ]
 })
 export class SukuCreationCustomerFileuploadComponent implements OnInit {
-	@Output() onFileChange = new EventEmitter();
-	@Output() submitData = new EventEmitter();
 	imagepath;
 	showPdfErrorMsg;
 	showMessage;
   docType = [];
   uploadType;
-  documentType;
+	documentType;
+	_classification;
+	fileArrayList = [];
+	@Input() title = 'Document upload:';
+	@Input()
+	get classification() {
+		return this._classification;
+	}
+	set classification(val) {
+		console.log(val)
+    this._classification = val;
+	}
+	@Output() OnFileChange = new EventEmitter();
+	@Output() submitData = new EventEmitter();
+
 	constructor(private snackBar: MatSnackBar) {}
 
 	ngOnInit() {
@@ -32,10 +44,6 @@ export class SukuCreationCustomerFileuploadComponent implements OnInit {
 			{
 				name: 'idCard',
 				value: 'idCard'
-			},
-			{
-				name: 'other',
-				value: 'other'
 			}
 		];
 	}
@@ -49,8 +57,12 @@ export class SukuCreationCustomerFileuploadComponent implements OnInit {
 	}
 
 	fileupload(e) {
-    console.log(e);
-    if(this.documentType) {
+		console.log(e);
+		if (this._classification == 'business') {
+			this.documentType = true;
+			this.uploadType = 'other';
+		}
+    if (this.documentType) {
 		const files = e.target.files;
 		const maxFileSize = 9999999;
 		let currentFileSize;
@@ -65,8 +77,10 @@ export class SukuCreationCustomerFileuploadComponent implements OnInit {
 						const data = {
               file : file,
               documentType: docType
-            };
-						this.onFileChange.emit(data);
+						};
+						this.fileArrayList.push(file);
+						console.log("this.fileArrayList", this.fileArrayList);
+						this.OnFileChange.emit(data);
 						currentFileSize = file.size;
 					}
 					e.target.value = '';
@@ -81,6 +95,7 @@ export class SukuCreationCustomerFileuploadComponent implements OnInit {
     this.snackbar('Please select document type.');
   }
 	}
+	
 
 	snackbar(msg) {
 		this.snackBar.open(msg, 'close', {

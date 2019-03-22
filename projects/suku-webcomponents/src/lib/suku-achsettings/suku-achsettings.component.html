@@ -124,8 +124,7 @@
           </div>
         </div>
       </div>
-
-      <div class="col-sm-12 mt-2 mb-4 text-center" *ngIf="(subContent != 'verified' ) && (documentStatus?.length == 0 && (subContent == 'document')) ">
+      <div class="col-sm-12 mt-2 mb-4 text-center" *ngIf="(subContent == 'not exist' ) || (subContent != 'verified' ) && (documentStatus?.length == 0 && (subContent == 'document'))">
         <button class=" btn textBold" id="{{paymentButtonId}}"
           (click)="action.emit()">{{SetupACHPaymentsBtnText}}</button>
       </div>
