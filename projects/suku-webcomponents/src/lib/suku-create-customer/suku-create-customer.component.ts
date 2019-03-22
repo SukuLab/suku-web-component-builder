@@ -51,34 +51,25 @@ export class SukuCreateCustomerComponent implements OnInit {
 	}
 
 	countrySelectAction(val) {
-		console.log('list', val);
-		console.log('list', JSON.parse(val));
 		if (val) {
 			const data = {
 				countryDetails: JSON.parse(val)
 			};
-			// console.log("data", this.form.get(this.arrayControlName));
-			console.log('sdhhjhdsdcddscdscdsbhcdsbcjhd : ' + data);
 			this.countrySelect.emit(data);
 		}
   }
 
 	industryTypeFunAction(val) {
-		console.log('list', val);
-		console.log('list', JSON.parse(val));
-
 		if (val) {
 			const data = {
 				industryType: JSON.parse(val)
 			};
-			// console.log("data", this.form.get(this.arrayControlName));
-			console.log('sdhhjhdsdcddscdscdsbhcdsbcjhd : ' + data);
 			this.industryTypeFun.emit(data);
 		}
 	}
 
 	businessTypeFunAction(val) {
-		console.log('list', val);
+		console.log("value", val);
 		this.validateTypeFun(val);
 	}
 
@@ -92,7 +83,6 @@ export class SukuCreateCustomerComponent implements OnInit {
   }
 
 	action1() {
-		// const controlName1 = this.CitizensReserveTOScontrol;
 		const controlName1 = this.CRDwollaTOSControl;
 		if (this.form.get(controlName1).value) {
 			this.CitizensReserveTOSformValid = false;
