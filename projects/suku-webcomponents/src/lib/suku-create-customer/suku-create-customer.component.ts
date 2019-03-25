@@ -10,7 +10,8 @@ export class SukuCreateCustomerComponent implements OnInit {
 	_data;
 	_data1;
 	_ssnLimit;
-	maxDate = '2001-03-11';
+	maxDate;
+  currentDate;
 	@Input() form: FormGroup;
 	@Input() formArrayNameValue;
 	@Input() countriesList;
@@ -48,6 +49,7 @@ export class SukuCreateCustomerComponent implements OnInit {
 		this.CitizensReserveTOSformValid = true;
 		this.validateType = true;
 		this.getControl = this.form.get(this.formArrayNameValue)['controls'][0];
+		this.GetFormattedDate();
 	}
 
 	countrySelectAction(val) {
@@ -90,4 +92,19 @@ export class SukuCreateCustomerComponent implements OnInit {
 			this.CitizensReserveTOSformValid = true;
 		}
 	}
+
+	GetFormattedDate() {
+    const todayTime = new Date();
+    const year = (todayTime.getFullYear());
+    const LeapYear = year % 4;
+    if (LeapYear == 0) {
+      // This is Leap Year
+      this.currentDate = new Date().setDate(todayTime.getDate() - 6575)
+    } else {
+      // This is not leap year
+			this.currentDate = new Date().setDate(todayTime.getDate() - 6574)
+			console.log("cxcxcxcx" + 	this.currentDate)
+    }
+		this.maxDate = new Date(this.currentDate).toISOString();
+  }
 }
