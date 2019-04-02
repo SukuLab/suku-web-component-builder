@@ -1,43 +1,80 @@
 <div class="col p-0">
-  <label class="titleClass"><strong>{{title}}</strong></label>
-  <div class="col Rectangle-2 d-flex">
-    <div class="col p-3">
-      <div class="col p-5 col-xs-12 noPadding ">
-        <div class="row">
+    <label class="titleClass"><strong>{{title}}</strong></label>
+    <div class="col Rectangle-2 d-flex">
+      <div class="col p-3">
+        <div class="col p-3 mt-3 col-xs-12 noPadding ">
           <div class="col">
             <div class="col flexCol p-0">
               <div class="col-sm-10 f14">
-                <span class="poppins">Upload the following Documents:</span>
+                <span class="poppins" *ngIf="!(_classification == 'business')">For Controller Verification:</span>
+                <span class="poppins" *ngIf="(_classification == 'business')">For Business Verification:</span>
               </div>
-              <div class="col-sm-12 docText">
-                <p class="mB-0 Spring-Cases txtFlow"> 1. Controller's Driver's License:</p>
-                <p class="mB-0 Spring-Cases txtFlow"> 2. EIN documentation (IRS-issued SS4 confirmation letter)</p>
+              <div class="col-sm-12 preFont">
+                <div *ngIf="!(_classification == 'business')"  class="pl-2">
+                  <p class="mB-0 Spring-Cases txtFlow">
+                    Please submit verification documentation.
+                    Files must be either a .jpg, .jpeg, .png, or .pdf up to 10MB in size.*
+                  </p>
+                  Allowed Documents:
+                  <ul class="pl-5 ml-2">
+                    <li>Unexpired Passport</li>
+                    <li>Unexpired driver's license</li>
+                    <li>Other unexpired Government Issued ID card</li>
+                  </ul>
+                </div>
+                <div *ngIf="(_classification == 'business')" class="pl-2">
+                  <p class="mB-0 Spring-Cases txtFlow">
+                    Please submit verification documentation.
+                    Files must be either a .jpg, .jpeg, .png, or .pdf up to 10MB in size.*
+                  </p>
+                  <ul class="pl-5 ml-2">
+                    <li>Partnership, General Partnership: EIN Letter (IRS-issued SS4 confirmation letter).</li>
+                    <li>(Limited Liability Corporation (LLC), Corporation: EIN Letter (IRS-issued SS4 confirmation
+                      letter).</li>
+                    <li class="text-justify">Sole Proprietorship: One or more of the following, as applicable to your sole
+                      proprietorship: Fictitious Business Name Statement; Certificate of Assumed Name; Business License;
+                      Sales/Use Tax License; Registration of Trade Name; EIN documentation (IRS-issued SS4 confirmation
+                      letter); Color copy of a valid government-issued photo ID (e.g., a driver's license, passport, or
+                      state ID card).
+                      Other business documents that are applicable includes any US government entity (federal, state,
+                      local) issued business formation or licensing exhibiting the name of the business enrolling with
+                      Dwolla, or; Any business formation documents exhibiting the name of the business entity in addition
+                      to being filed and stamped by a US government entity. Examples include:</li>
+                    <li>Filed and stamped Articles of Organization or Incorporation</li>
+                    <li>Sales/Use Tax License</li>
+                    <li>Business License</li>
+                    <li>Certificate of Good Standing</li>
+                  </ul>
+                </div>
                 <div class="col mt-3 mb-3 p-0" *ngIf="fileArrayList?.length > 0">
-                    <p class="poppins">Document uploaded list:</p>
-                    <ul class="pl-4 ml-2">
-                      <li *ngFor="let file of fileArrayList"><i>{{file?.name}}</i></li>
-                    </ul>
-                  </div>
+                  <p class="poppins">Document uploaded list:</p>
+                  <ul class="pl-5 ml-2">
+                    <li *ngFor="let file of fileArrayList"><i>{{file?.name}}</i></li>
+                  </ul>
+                </div>
               </div>
-            </div>  
+            </div>
           </div>
           <div class="col">
             <div class="col pl-sm-5 pr-sm-5">
               <mat-form-field class="col pl-sm-5 pr-sm-5" *ngIf="_classification == 'controller'">
-                  <mat-select placeholder="type of Document" id="uploadDoc"  #types (selectionChange)="imageType(types.value)">
-                    <mat-option *ngFor="let type of docType" [value]="type.value">
-                      {{type.name}}
-                    </mat-option>
-                  </mat-select>
-               </mat-form-field>
+                <mat-select placeholder="type of Document" id="uploadDoc" #types
+                  (selectionChange)="imageType(types.value)">
+                  <mat-option *ngFor="let type of docType" [value]="type.value">
+                    {{type.name}}
+                  </mat-option>
+                </mat-select>
+              </mat-form-field>
             </div>
             <div class="col flexCol p-0">
-              <div class=" col-sm-8 offset-sm-2 border-dot rounded-0 bg-light d-flex justify-content-center text-center p-4">
+              <div
+                class="col-sm-4 offset-sm-8 border-dot rounded-0 bg-light d-flex justify-content-center text-center p-4">
                 <div class="col-sm-5 col-xs-4 p-4 ">
-                  <a onclick="document.getElementById('myFileInput').click()" class=" fa fa-cloud-upload f60 text-muted center-block  pT9 "
-                    id="saleTwoUpload" style="width: 100%"> </a>
+                  <a onclick="document.getElementById('myFileInput').click()"
+                    class=" fa fa-cloud-upload f60 text-muted center-block  pT9 " id="saleTwoUpload" style="width: 100%">
+                  </a>
                   <input type="file" placeholder={{imagepath}} id="myFileInput" accept=".pdf,.jpg, .jpeg, .png"
-                    name="uploadDocument[]" #fileInput (change)="fileupload($event)" multiple="true"/>
+                    name="uploadDocument[]" #fileInput (change)="fileupload($event)" multiple="true" />
                 </div>
                 <div class="col-sm-8 err_style " *ngIf="showPdfErrorMsg" id="uploadcanExceed">The file type
                   pdf/doc/docx
@@ -50,90 +87,15 @@
             </div>
           </div>
         </div>
-      </div>
-      <div class="col">
-        <div class="row">
+        <div class="col">
+          <div class="row">
             <div class="col">
               <div class="col d-flex justify-content-center mt-4 mb-3  pB40">
                 <button class="btn btn-info" (click)="submitData.emit(); ">Agree & Continue</button>
               </div>
             </div>
           </div>
+        </div>
       </div>
     </div>
   </div>
-  </div>
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  <!-- <div class="col p-0">
-      <label class="titleClass"><strong>{{title}}</strong></label>
-      <div class="col Rectangle-2 d-flex">
-        <div class="col p-3">
-          <div class="col p-5 col-xs-12 offset-xs-1 noPadding ">
-            <div class="row">
-              <div class="col">
-                <div class="col flexCol p-0">
-                  <div class="col-sm-10 f14">
-                    <span class="poppins">Upload the following Documents:</span>
-                  </div>
-                  <div class="col-sm-12 docText">
-                    <p class="mB-0 Spring-Cases txtFlow"> 1. Controller's Driver's License:</p>
-                    <p class="mB-0 Spring-Cases txtFlow"> 2. EIN documentation (IRS-issued SS4 confirmation letter)</p>
-                  </div>
-                  <div class="col mt-3 mb-3" *ngIf="fileArrayList">
-                    <p class="poppins">Document list:</p>
-                    <ul class="pl-5">
-                      <li *ngFor="let file of fileArrayList">{{file?.name}}</li>
-                    </ul>
-                  </div>
-                </div>  
-              </div>
-              <div class="col">
-                <div class="col pl-sm-5 pr-sm-5">
-                  <mat-form-field class="col pl-sm-5 pr-sm-5" *ngIf="_classification == 'controller'">
-                      <mat-select placeholder="type of Document" id="uploadDoc"  #types (selectionChange)="imageType(types.value)">
-                        <mat-option *ngFor="let type of docType" [value]="type.value">
-                          {{type.name}}
-                        </mat-option>
-                      </mat-select>
-                   </mat-form-field>
-                </div>
-                <div class="col flexCol p-0">
-                  <div class=" col-sm-8 offset-sm-2 border-dot rounded-0 bg-light d-flex justify-content-center text-center p-4">
-                    <div class="col-sm-5 col-xs-4 p-4 ">
-                      <a onclick="document.getElementById('myFileInput').click()" class=" fa fa-cloud-upload f60 text-muted center-block  pT9 "
-                        id="saleTwoUpload" style="width: 100%"> </a>
-                      <input type="file" placeholder={{imagepath}} id="myFileInput" accept=".pdf,.jpg, .jpeg, .png"
-                        name="uploadDocument[]" #fileInput (change)="fileupload($event)" multiple="true"/>
-                    </div>
-                    <div class="col-sm-8 err_style " *ngIf="showPdfErrorMsg" id="uploadcanExceed">The file type
-                      pdf/doc/docx
-                      files
-                      are allowed! </div>
-                    <div class="col-sm-8 err_style " *ngIf="showMessage" id="uploadcanExceed">The file size cannot exceed
-                      10
-                      MB</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col">
-            <div class="row">
-                <div class="col">
-                  <div class="col d-flex justify-content-center mt-4 mb-3  pB40">
-                    <button class="btn btn-info" (click)="submitData.emit(); ">Agree & Continue</button>
-                  </div>
-                </div>
-              </div>
-          </div>
-        </div>
-      </div>
-      </div> -->

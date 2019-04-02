@@ -41,7 +41,7 @@
     color: black;
     border-radius: 29px 77px 61px;
     font-weight: 900;
-    font-family:'Poppins', sans-serif !important;
+    font-family: 'Poppins', sans-serif !important;
     font-size: 1.5rem;
 }
 
@@ -131,6 +131,28 @@ fieldset[disabled] .btn-info.focus {
     letter-spacing: 0.3px;
     color: #ccda5c;
 }
+
 .add:hover {
-    font-weight: 600; 
+    font-weight: 600;
+}
+
+.docText {
+    font-family: 'Poppins', sans-serif !important;
+    letter-spacing: 0.1px;
+}
+
+label.titleClass {
+    font-family: 'Poppins', sans-serif !important;
+    font-size: 20px;
+    font-weight: bold;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: 0.1px;
+}
+
+.preFont {
+    font-family: "Encode sans", sans-serif !important;
+    letter-spacing: 0.1px;
+    font-size: 14px;
 }
