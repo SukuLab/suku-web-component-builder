@@ -27,7 +27,7 @@
             <td scope="row" class="text-center {{( (transaction.status) == 'Failed') ? 'falied' : 'incoming'}}">{{transaction?.status}}</td>
             <td scope="row" class="text-center">{{transaction?.created | date:'d MMM yyyy HH:MM a'}}</td>
             <td scope="row" class="text-center">{{(transaction?.completedOn | date:'d MMM yyyy HH:MM a') || 'Not available'}}</td>
-            <td class="text-center"><button *ngIf="transaction?.status=='pending'" id="{{cancelId}}" (click)="action.emit(transaction);" class="btn  btnCancel">{{cancel}}</button></td>
+            <td class="text-center"><button *ngIf="transaction?.status=='pending' && transaction?.type=='outgoing'" id="{{cancelId}}" (click)="action.emit(transaction);" class="btn  btnCancel">{{cancel}}</button></td>
           </tr>
         </tbody>
       </table>
