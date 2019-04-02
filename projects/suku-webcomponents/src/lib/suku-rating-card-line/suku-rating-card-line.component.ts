@@ -19,7 +19,7 @@ export class SukuRatingCardLineComponent implements OnInit {
 	@Input() interest;
 	@Input() imageColSize = 'col-sm-1 p-0';
 	@Input() txtcolsize = 'col-sm-3 col-xs-12 pl-lg-2 pr-2 pt-1 mt-1';
-	@Input() txttwocolsize = 'col-sm-3 pt-2 mt-1';
+	@Input() txttwocolsize = 'col-sm-3 pt-2 pl-lg-2 pr-lg-2 mt-1';
 	@Input() txtthreecolsize = 'col-sm-3 pt-2 mt-1';
 	@Input('title-one') titleOne = 'Title One';
 	@Input('title-one-color') titleOneColor = 'black';
