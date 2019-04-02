@@ -1,4 +1,3 @@
-<!-- method two -->
 <form [formGroup]="form">
   <div class="col">
     <label class="titleClass"><strong>{{title}}</strong></label>
@@ -93,7 +92,8 @@
                     </mat-form-field>
                   </div>
                 </div>
-                <div class="col p-3">
+
+                <!-- <div class="col p-3">
                   <div class="row">
                     <div class="col-sm-8 p-0">
                       <label class="upload-doc-title">
@@ -104,13 +104,15 @@
                     </div>
                     <div class="col-sm-4">
                       <div class="col border-dot rounded-0 bg-light d-flex justify-content-center mt-3">
-                        <span class="fa fa-cloud-upload mt-3 upload-icon display-2 text-muted">
+                        <span class="fa fa-cloud-upload mt-3 upload-icon display-2 text-muted" *ngIf="true">
                         </span>
-                        <input type="file" class="upload" name="document" formControlName="document" (change)="upload.emit($event.target.files)" />
+                        <input type="file" class="upload" name="document" formControlName="document" (change)="fileupload($event)" />
                       </div>
                     </div>
                   </div>
-                </div>
+                </div> -->
+
+                
               </div>
             </div>
           </div>
@@ -119,12 +121,12 @@
       <div class="col mt-5 mb-3">
         <div class="row">
           <div class="col mt-3 mb-2">
-            <span class="add c-pointer" (click)="add.emit()"><i class="fa fa-plus-circle pr-3 icon"></i>Add New
+            <span class="add c-pointer" id="addOwner" (click)="add.emit()"><i class="fa fa-plus-circle pr-3 icon"></i>Add New
               Beneficial
               Owner</span>
           </div>
-          <div class="col d-flex justify-content-end  mt-3 mb-3 pr-sm-5 mr-sm-1">
-            <button class="btn btn-info" (click)="agree()">Submit Beneficial Owner</button>
+          <div class="col d-flex justify-content-end  mt-3 mb-3 pr-sm-5 mr-sm-2">
+            <button class="btn btn-info" id="submitOwner" (click)="agree()">Submit Beneficial Owner</button>
           </div>
         </div>
       </div>
@@ -136,12 +138,12 @@
                 name="{{control}}">
               </mat-checkbox>
             </span>
-            <span class="col terms">{{content}}
+            <span class="col terms" id="content">{{content}}
             </span>
           </div>
         </div>
         <div class="col d-flex justify-content-center mt-4 mb-3">
-          <button class="btn btn-info" [ngClass]="{'disabled': formValid}" (click)="submitData.emit()" [disabled]="formValid">Agree
+          <button class="btn btn-info" id="agreeBtn" [ngClass]="{'disabled': formValid}" (click)="submitData.emit()" [disabled]="formValid">Agree
             & Continue</button>
         </div>
       </div>

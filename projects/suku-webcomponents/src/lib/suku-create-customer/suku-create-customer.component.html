@@ -10,8 +10,8 @@
   <br>
   <div class="col Rectangle-2">
     <div formArrayName="{{formArrayNameValue}}">
-      <div class="form-group col-xs-12 col-sm-12 col-md-12 col-lg-12" *ngFor="let detail of form.get(formArrayNameValue)['controls']; let i=index"
-        [formGroupName]="i">
+      <div class="form-group col-xs-12 col-sm-12 col-md-12 col-lg-12"
+        *ngFor="let detail of form.get(formArrayNameValue)['controls']; let i=index" [formGroupName]="i">
         <div class="col-sm-10 col-xs-12 offset-sm-1">
           <div class="row">
             <div class="col-sm-6 p-0 mt-sm-5">
@@ -24,7 +24,8 @@
               <div class="col-sm-12 form-group">
                 <div class="col flexCol p-0">
                   <mat-form-field>
-                    <input matInput type="text" name="firstName" formControlName="firstName" id="firstName" placeholder="First name">
+                    <input matInput type="text" name="firstName" formControlName="firstName" id="firstName"
+                      placeholder="First name">
                   </mat-form-field>
                   <mat-error>
                     <span *ngIf="getControl.get('firstName').touched">
@@ -38,7 +39,8 @@
               <div class="col-sm-12 form-group">
                 <div class="col flexCol p-0">
                   <mat-form-field>
-                    <input matInput type="text" name="lastName" formControlName="lastName" id="lastName" placeholder="Last name">
+                    <input matInput type="text" name="lastName" formControlName="lastName" id="lastName"
+                      placeholder="Last name">
                   </mat-form-field>
                   <mat-error>
                     <span *ngIf="getControl.get('lastName').touched">
@@ -67,7 +69,8 @@
               <div class="col-sm-12 form-group">
                 <div class="col flexCol p-0">
                   <mat-form-field>
-                    <input matInput type="text" name="address1" formControlName="address1" id="address1" placeholder="Address">
+                    <input matInput type="text" name="address1" formControlName="address1" id="address1"
+                      placeholder="Address">
                   </mat-form-field>
                   <mat-error>
                     <span *ngIf="getControl.get('address1').touched">
@@ -141,8 +144,8 @@
               <div class="col-sm-12 form-group">
                 <div class="col flexCol p-0">
                   <mat-form-field>
-                    <mat-select id="businessClassification" formControlName="businessClassification" name="businessClassification"
-                      placeholder="Business Classification">
+                    <mat-select id="businessClassification" formControlName="businessClassification"
+                      name="businessClassification" placeholder="Business Classification">
                       <mat-option value="">Select business Classification</mat-option>
                       <mat-option *ngFor="let businessClassification of businessClassificationValue ; let i = index"
                         value="{{businessClassification.id}}">
@@ -169,8 +172,8 @@
               <div class="col-sm-12 form-group">
                 <div class="col flexCol p-0">
                   <mat-form-field>
-                    <mat-select id="businessType" #z (selectionChange)="businessTypeFunAction(z.value)" formControlName="businessType"
-                      name="businessType" placeholder="Business type">
+                    <mat-select id="businessType" #z (selectionChange)="businessTypeFunAction(z.value)"
+                      formControlName="businessType" name="businessType" placeholder="Business type">
                       <mat-option value="">Select businessType</mat-option>
                       <mat-option *ngFor="let business of businessTypeValue ; let i = index" value="{{business.value}}">
                         {{business.name}}</mat-option>
@@ -216,8 +219,8 @@
               <div class="col-sm-12 form-group">
                 <div class="col flexCol p-0">
                   <mat-form-field>
-                    <input matInput type="text" [readonly]="validateType" name="lastName" formControlName="lastName" id="lastName"
-                      placeholder="Last name">
+                    <input matInput type="text" [readonly]="validateType" name="lastName" formControlName="lastName"
+                      id="lastName" placeholder="Last name">
                   </mat-form-field>
                   <mat-error>
                     <span *ngIf="getControl.get('controller').get('lastName').touched">
@@ -231,8 +234,8 @@
               <div class="col-sm-12 form-group">
                 <div class="col flexCol p-0">
                   <mat-form-field>
-                    <input matInput type="text" [readonly]="validateType" name="title" formControlName="title" id="title"
-                      placeholder="Title">
+                    <input matInput type="text" [readonly]="validateType" name="title" formControlName="title"
+                      id="title" placeholder="Title">
                   </mat-form-field>
                   <mat-error>
                     <span *ngIf="getControl.get('controller').get('title').touched">
@@ -246,7 +249,7 @@
               <div class="col-sm-12 form-group">
                 <div class="col flexCol p-0">
                   <mat-form-field>
-                    <input matInput [matDatepicker]="picker" [min]="2001-12-6" [readonly]="validateType" placeholder="Date of Birth"
+                    <input matInput [matDatepicker]="picker" [max]="maxDate" placeholder="Date of Birth"
                       id="dateOfBirth" formControlName="dateOfBirth">
                     <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
                     <mat-datepicker #picker></mat-datepicker>
@@ -256,8 +259,7 @@
               <div class="col-sm-12 form-group">
                 <div class="col flexCol p-0">
                   <mat-form-field>
-                    <input matInput type="text" [readonly]="validateType" name="ssn" formControlName="ssn" id="ssn"
-                      [placeholder]="_ssnLimit">
+                    <input matInput type="text" name="ssn" formControlName="ssn" id="ssn" [placeholder]="_ssnLimit">
                   </mat-form-field>
                   <mat-error>
                     <span *ngIf="getControl.get('controller').get('ssn').touched">
@@ -307,7 +309,7 @@
                 <div class="col-sm-12 form-group">
                   <div class="col flexCol p-0">
                     <mat-form-field>
-                      <mat-select #t [disabled]="validateType" (selectionChange)="countrySelectAction(t.value)" name="country"
+                      <mat-select #t (selectionChange)="countrySelectAction(t.value)" name="country"
                         formControlName="country" id="country" placeholder="Country">
                         <mat-option *ngFor="let item of countriesList; let i = index" value="{{item | json}}">
                           {{item.countryName }}</mat-option>
@@ -318,7 +320,7 @@
                 <div class="col-sm-12 form-group">
                   <div class="col flexCol p-0">
                     <mat-form-field>
-                      <mat-select name="stateProvinceRegion" [disabled]="validateType" formControlName="stateProvinceRegion"
+                      <mat-select name="stateProvinceRegion" formControlName="stateProvinceRegion"
                         id="stateProvinceRegion" placeholder="State">
                         <mat-option *ngFor="let item of statesList; let i = index" value="{{ item.stateShortName }}">{{
                           item.stateName }}</mat-option>
@@ -344,8 +346,8 @@
                 <div class="col-sm-12 form-group">
                   <div class="col flexCol p-0">
                     <mat-form-field>
-                      <input matInput type="text" [readonly]="validateType" name="postalCode" formControlName="postalCode"
-                        id="postalCode" placeholder="Postal-code">
+                      <input matInput type="text" [readonly]="validateType" name="postalCode"
+                        formControlName="postalCode" id="postalCode" placeholder="Postal-code">
                     </mat-form-field>
                     <mat-error>
                       <span *ngIf="getControl.get('controller').get('address').get('postalCode').touched">
@@ -379,8 +381,8 @@
         </span>
       </div>
       <div class="col d-flex justify-content-center mt-4 mb-3  pB40">
-        <button class="btn btn-info" [disabled]="CitizensReserveTOSformValid" [ngClass]="{'disabled': CitizensReserveTOSformValid}"
-          (click)="submitData.emit(); onSubmit.emit();">Agree
+        <button class="btn btn-info" [disabled]="CitizensReserveTOSformValid"
+          [ngClass]="{'disabled': CitizensReserveTOSformValid}" (click)="submitData.emit(); onSubmit.emit();">Agree
           & Continue</button>
       </div>
     </div>

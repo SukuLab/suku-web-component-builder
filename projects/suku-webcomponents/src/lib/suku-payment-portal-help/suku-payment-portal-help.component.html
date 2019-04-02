@@ -1,10 +1,13 @@
 <div class="col-12 text-left border d-flex Rectangle-2 mT-8 p-3 bgWhite">
-  <div class="col-12">
+  <div class="col-12 m-3">
     <span class="Pl0 progressTxt mb40">HELP PAGE</span>
-    <div class="col-12 text-left p-0 progressTxt mT-5 mB-8">
-      {{helpPage}} <a 
-            href="{{helpPageHref}}"
-            target="_blank"> HERE</a>
-  </div>
+    <div class="col-12 text-left p-0 progressTxt mT-5 mb-5">
+      {{helpPage}} <a href="{{helpPageHref}}" target="_blank"> HERE</a>
+    </div>
+    <div class="col mt-3 mb-2 p-0 pt-4">
+      <span class="add c-pointer" id="addOwner" (click)="add.emit()"><i class="fa fa-plus-circle pr-3 icon"></i>Add New
+        Beneficial
+        Owner</span>
+    </div>
   </div>
 </div>

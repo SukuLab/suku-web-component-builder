@@ -1,27 +1,33 @@
 <div class="profileBox">
-    <div class="col-md-12 col-sm-12 text-center">
-      <img class="circle mb-4 mt-4" id="image" src="{{image}}" alt="PROFILE">
-    </div>
-    <div class="col-md-12 col-sm-12 text-center">
-      <label class="userName">
-        <b>{{ userName || 'Emery' }}</b>
-      </label>
-    </div>
-    <div class="bLine form-group"></div>
-    <div class="col-sm-12 col-md-12"  id="newSellList">
-      <div class="row pointer">
-        <div class="p-3 col mb-1" >
-        <img src="{{icon}}" alt="icon" height="33px" width="33px">
-        <span class="create-interest-listing c-pointer pl-2 pt-3" (click)="createNewList.emit(1)">{{titleOne || 'CREATE NEW LISTING'}} </span>
-        </div>
+  <div class="col-md-12 col-sm-12 text-center">
+    <img class="circle mb-4 mt-4" id="image" src="{{image}}" alt="PROFILE">
+  </div>
+  <div class="col-md-12 col-sm-12 text-center">
+    <label class="userName">
+      {{ userName }}
+    </label>
+  </div>
+  <div class="bLine form-group"></div>
+  <div class="col-sm-12 col-md-12" id="newSellList">
+    <div class="row pointer">
+      <div class="p-3 col mb-1">
+        <span (click)="createNewList.emit(1)" class="c-pointer">
+          <img src="{{icon}}" alt="icon" height="33px" width="33px">
+          <span class="create-interest-listing c-pointer pl-1 pt-3" >{{titleOne || 'CREATE
+            NEW LISTING'}} </span>
+        </span>
       </div>
     </div>
-    <div class="col-sm-12 col-md-12 form-group mb-3"  id="newBuyInterest">
-      <div class="row pointer">
-        <div class="pl-3 pb-3 pr-3 pt-2 col mb-2" >
-        <img src="{{icon}}" alt="icon" height="33px" width="33px">
-        <span class="create-interest-listing c-pointer pl-2 pt-3 mB-170" (click)="clearBuyInterestStorage.emit(1)">{{titleTwo || 'CREATE NEW INTEREST'}}</span>
-        </div>
-        </div>
+  </div>
+  <div class="col-sm-12 col-md-12 form-group" id="newBuyInterest">
+    <div class="row pointer">
+      <div class="pl-3 pb-3 pr-3 pt-2 col mb-2">
+        <span (click)="clearBuyInterestStorage.emit(1)" class="c-pointer">
+          <img src="{{icon}}" alt="icon" height="33px" width="33px">
+          <span class="create-interest-listing c-pointer pl-1 pt-3 mB-170">{{titleTwo
+            || 'CREATE NEW INTEREST'}}</span>
+        </span>
+      </div>
     </div>
   </div>
+</div>

@@ -1,5 +1,6 @@
 import { Component, OnInit, Input, Output, AfterViewInit, EventEmitter } from '@angular/core';
 import { FormGroup, FormArray } from '@angular/forms';
+import { MatSnackBar } from '@angular/material';
 
 @Component({
 	selector: 'suku-beneficial-owner',
@@ -28,7 +29,9 @@ export class SukuBeneficialOwnerComponent implements OnInit {
 	selected = [];
 	toggle = [];
 	customClass;
-	constructor() {}
+	documentType;
+	uploadType;
+	constructor(private snackBar: MatSnackBar) {}
 
 	ngOnInit() {
 		this.formValid = true;
@@ -69,13 +72,10 @@ export class SukuBeneficialOwnerComponent implements OnInit {
 	}
 
 	countrySelectAction(val, i) {
-		console.log("list" , val);
-		console.log("list" , JSON.parse(val));
-		const countryName = JSON.parse(val);
 		if (val) {
 			const data = {
-				'countryDetails': JSON.parse(val) ,
-				'index': i
+				countryDetails: JSON.parse(val),
+				index: i
 			};
 			this.countrySelect.emit(data);
 		}
@@ -83,7 +83,49 @@ export class SukuBeneficialOwnerComponent implements OnInit {
 
 	agree() {
 		const formData = this.form.value;
-		console.log("formData", formData);
 		this.submitOwner.emit(formData);
+	}
+
+	fileupload(e) {
+		console.log(e);
+			const files = e.target.files;
+			const maxFileSize = 9999999;
+			let currentFileSize;
+			const file = e.target.files[0];
+			currentFileSize = file.size;
+			if (currentFileSize <= maxFileSize) {
+				if (
+					file.type == 'image/jpeg' ||
+					file.type == 'application/pdf' ||
+					file.type == 'image/png' ||
+					file.type == 'image/jpg'
+				) {
+					if (e.target.files && e.target.files.length > 0) {
+						for (let i = 0; i < e.target.files.length; i++) {
+							const file = e.target.files[i];
+							const docType = this.uploadType;
+							const data = {
+								file: file,
+								documentType: docType
+							};
+							this.upload.emit(data);
+							currentFileSize = file.size;
+						}
+						e.target.value = '';
+					}
+				} else {
+					this.snackbar('The file type jpg/jpeg/png files are allowed!');
+				}
+			} else {
+				this.snackbar('The file size cannot exceed 10 MB');
+			}
+	}
+
+	snackbar(msg) {
+		this.snackBar.open(msg, 'close', {
+			verticalPosition: 'bottom',
+			horizontalPosition: 'right',
+			duration: 3500
+		});
 	}
 }

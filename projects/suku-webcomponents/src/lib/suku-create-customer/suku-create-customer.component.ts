@@ -10,7 +10,8 @@ export class SukuCreateCustomerComponent implements OnInit {
 	_data;
 	_data1;
 	_ssnLimit;
-	maxDate = '2001-03-11';
+	maxDate;
+  currentDate;
 	@Input() form: FormGroup;
 	@Input() formArrayNameValue;
 	@Input() countriesList;
@@ -48,37 +49,29 @@ export class SukuCreateCustomerComponent implements OnInit {
 		this.CitizensReserveTOSformValid = true;
 		this.validateType = true;
 		this.getControl = this.form.get(this.formArrayNameValue)['controls'][0];
+		this.GetFormattedDate();
 	}
 
 	countrySelectAction(val) {
-		console.log('list', val);
-		console.log('list', JSON.parse(val));
 		if (val) {
 			const data = {
 				countryDetails: JSON.parse(val)
 			};
-			// console.log("data", this.form.get(this.arrayControlName));
-			console.log('sdhhjhdsdcddscdscdsbhcdsbcjhd : ' + data);
 			this.countrySelect.emit(data);
 		}
   }
 
 	industryTypeFunAction(val) {
-		console.log('list', val);
-		console.log('list', JSON.parse(val));
-
 		if (val) {
 			const data = {
 				industryType: JSON.parse(val)
 			};
-			// console.log("data", this.form.get(this.arrayControlName));
-			console.log('sdhhjhdsdcddscdscdsbhcdsbcjhd : ' + data);
 			this.industryTypeFun.emit(data);
 		}
 	}
 
 	businessTypeFunAction(val) {
-		console.log('list', val);
+		console.log("value", val);
 		this.validateTypeFun(val);
 	}
 
@@ -92,7 +85,6 @@ export class SukuCreateCustomerComponent implements OnInit {
   }
 
 	action1() {
-		// const controlName1 = this.CitizensReserveTOScontrol;
 		const controlName1 = this.CRDwollaTOSControl;
 		if (this.form.get(controlName1).value) {
 			this.CitizensReserveTOSformValid = false;
@@ -100,4 +92,19 @@ export class SukuCreateCustomerComponent implements OnInit {
 			this.CitizensReserveTOSformValid = true;
 		}
 	}
+
+	GetFormattedDate() {
+    const todayTime = new Date();
+    const year = (todayTime.getFullYear());
+    const LeapYear = year % 4;
+    if (LeapYear == 0) {
+      // This is Leap Year
+      this.currentDate = new Date().setDate(todayTime.getDate() - 6575)
+    } else {
+      // This is not leap year
+			this.currentDate = new Date().setDate(todayTime.getDate() - 6574)
+			console.log("cxcxcxcx" + 	this.currentDate)
+    }
+		this.maxDate = new Date(this.currentDate).toISOString();
+  }
 }
