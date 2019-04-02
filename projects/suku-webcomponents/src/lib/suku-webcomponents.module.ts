@@ -82,6 +82,9 @@ import { SukuDwollaFundingSourceComponent } from './suku-dwolla-funding-source/s
 import { SukuCreationCustomerFileuploadComponent } from './suku-creation-customer-fileupload/suku-creation-customer-fileupload.component';
 import { SukuPaymentPortalHelpComponent } from './suku-payment-portal-help/suku-payment-portal-help.component';
 import { SukuTermsAndConditionsComponent } from './suku-terms-and-conditions/suku-terms-and-conditions.component';
+import { SukuCardLineTypeOneComponent } from './suku-card-line-type-one/suku-card-line.component';
+import { SukuCardLineTypeTwoComponent } from './suku-card-line-type-two/suku-card-line.component';
+import { SukuRatingCardLineComponent } from './suku-rating-card-line/suku-rating-card-line.component';
 
 @NgModule({
   declarations: [
@@ -128,7 +131,10 @@ import { SukuTermsAndConditionsComponent } from './suku-terms-and-conditions/suk
     SukuDwollaFundingSourceComponent,
     SukuCreationCustomerFileuploadComponent,
     SukuPaymentPortalHelpComponent,
-    SukuTermsAndConditionsComponent
+    SukuTermsAndConditionsComponent,
+    SukuCardLineTypeOneComponent,
+    SukuCardLineTypeTwoComponent,
+    SukuRatingCardLineComponent
   ],
   imports: [
     CommonModule,
@@ -215,6 +221,9 @@ import { SukuTermsAndConditionsComponent } from './suku-terms-and-conditions/suk
     SukuCreationCustomerFileuploadComponent,
     SukuPaymentPortalHelpComponent,
     SukuTermsAndConditionsComponent,
+    SukuCardLineTypeOneComponent,
+    SukuCardLineTypeTwoComponent,
+    SukuRatingCardLineComponent
   ]
 })
 export class SukuWebcomponentsModule { }
