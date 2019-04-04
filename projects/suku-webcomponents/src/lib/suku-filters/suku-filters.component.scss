@@ -487,6 +487,50 @@ fieldset[disabled] .btn-info.focus {
   text-transform: uppercase
 }
 
+/deep/.mat-checkbox-frame {
+  background-color: transparent;
+  transition: border-color 90ms cubic-bezier(0,0,.2,.1);
+  border-width: 0px !important;
+  border-style: solid;
+}
+.mat-checkbox-background, .mat-checkbox-frame {
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  position: absolute;
+  border-radius: 2px;
+  box-sizing: border-box;
+  pointer-events: none;
+  border-style: solid;
+  border-width: 1px;
+}
+/deep/.mat-checkbox-background, .mat-checkbox-frame {
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  position: absolute;
+  border-radius: 2px;
+  box-sizing: border-box;
+  pointer-events: none;
+  border-style: solid;
+  border-width: 1px;
+}
+.mat-checkbox-frame {
+  background-color: transparent;
+  transition: border-color 90ms cubic-bezier(0,0,.2,.1);
+  border-width: 0px !important;
+  border-style: solid;
+}
+
+/deep/.mat-checkbox-checked.mat-primary .mat-checkbox-background {
+  background-color: #ffffff;
+}
+
+/deep/.mat-checkbox-checkmark-path {
+  stroke: #0f0f0f !important;
+}
 
 .mat-checkbox-label {
   font-family: Roboto, "Helvetica Neue", sans-serif;
