@@ -1,3 +1,6 @@
+$starMargin: 5px;
+$fullStarColor: rgb(137, 137, 137);
+$emptyStarColor: rgb(225, 225, 225);
 
 h2 {
   font-family: 'Encode Sans', sans-serif;
@@ -30,7 +33,7 @@ h2 {
 }
 
 .starSize {
-  font-size:20px !important;
+  font-size: 20px !important;
 }
 
 .img-res {
@@ -39,4 +42,30 @@ h2 {
   max-width: 100%;
   max-height: 100%;
   padding: 6px 5px 6px 5px;
+}
+
+.emptyStar {
+  color: $emptyStarColor;
+  margin-right: $starMargin;
+}
+
+.fullStar {
+  color: $fullStarColor;
+  margin-right: $starMargin;
+}
+
+.halfStarLeft {
+  color: $fullStarColor;
+  position: relative;
+  left: 1px;
+}
+
+.halfStarRight {
+  color: $emptyStarColor;
+  position: relative;
+  right: 1px;
+}
+
+.f20 {
+  font-size: 20px;
 }

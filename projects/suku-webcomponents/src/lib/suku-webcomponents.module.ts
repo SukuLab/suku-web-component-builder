@@ -85,6 +85,7 @@ import { SukuTermsAndConditionsComponent } from './suku-terms-and-conditions/suk
 import { SukuCardLineTypeOneComponent } from './suku-card-line-type-one/suku-card-line.component';
 import { SukuCardLineTypeTwoComponent } from './suku-card-line-type-two/suku-card-line.component';
 import { SukuRatingCardLineComponent } from './suku-rating-card-line/suku-rating-card-line.component';
+import { SukuNotificationPanelComponent } from './suku-notification-panel/suku-notification-panel.component';
 
 @NgModule({
   declarations: [
@@ -134,7 +135,8 @@ import { SukuRatingCardLineComponent } from './suku-rating-card-line/suku-rating
     SukuTermsAndConditionsComponent,
     SukuCardLineTypeOneComponent,
     SukuCardLineTypeTwoComponent,
-    SukuRatingCardLineComponent
+    SukuRatingCardLineComponent,
+    SukuNotificationPanelComponent
   ],
   imports: [
     CommonModule,
@@ -223,7 +225,8 @@ import { SukuRatingCardLineComponent } from './suku-rating-card-line/suku-rating
     SukuTermsAndConditionsComponent,
     SukuCardLineTypeOneComponent,
     SukuCardLineTypeTwoComponent,
-    SukuRatingCardLineComponent
+    SukuRatingCardLineComponent,
+    SukuNotificationPanelComponent
   ]
 })
 export class SukuWebcomponentsModule { }
