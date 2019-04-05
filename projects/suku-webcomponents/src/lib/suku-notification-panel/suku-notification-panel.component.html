@@ -4,11 +4,11 @@
       id="notification{{item?.id}}">
       <div class="col pointer text-center p-0">
         <div class="pt-4">
-          <span class="box-counter">
+          <span class="box-counter" id="notificationValue{{i}}">
             {{ (item?.value > 9) ? '' : '0' }}{{ (item?.value == 0) ? 00 : item?.value }}
           </span>
           <p class="pb-4 n-m mb-0">
-            <a class="box-title" id="{{id}}">
+            <a class="box-title" id="notificationTitle{{i}}">
               {{item?.name  || 'N/A' }}
             </a>
           </p>
