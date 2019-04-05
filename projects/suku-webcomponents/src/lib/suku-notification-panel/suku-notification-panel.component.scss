@@ -4,8 +4,9 @@
   border-radius: 2px;
   background-color: #fff;
   box-shadow: 0 3px 3px 0 rgba(0, 0, 0, .03);
-  border-left: 1px solid #dee2e68a!important;
-  border-bottom: 1px solid #dee2e68a!important;
+  border-left: 1px solid #dee2e68a !important;
+  border-bottom: 1px solid #dee2e68a !important;
+  cursor: pointer !important;
 }
 
 .box-title {
@@ -41,6 +42,17 @@
   margin-top: -15px;
 }
 
+.title {
+  font-family: "Poppins", sans-serif !important;
+  font-size: 17px;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: -0.2px;
+  color: #b6b6b6;
+}
+
 
 @media (min-width: 575.98px) {
   .box {
@@ -58,14 +70,23 @@
 // Medium devices (tablets, less than 992px)
 @media (min-width: 991.98px) {
   .box {
-    height: 180px !important;
+    height: 170px !important;
   }
 }
 
 // Large devices (desktops, less than 1200px)
 @media (min-width: 1199.98px) {
   .box {
-    height: 150px !important;
+    height: 140px !important;
   }
 
+  .box-title {
+    font-size: 15px !important;
+  }
+}
+// Extra Large devices --font-size
+@media (min-width: 1400px) {
+  .box-title {
+    font-size: 17px !important;
+  }
 }

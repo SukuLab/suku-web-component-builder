@@ -1,0 +1,18 @@
+  <label class="title">{{title}}</label>
+  <div class="d-md-flex mb-5 flex-md-row">
+    <div [class]="customclass" *ngFor="let item of notificationArray;let i=index" (click)="action.emit(item?.id)"
+      id="notification{{item?.id}}">
+      <div class="col pointer text-center p-0">
+        <div class="pt-4">
+          <span class="box-counter">
+            {{ (item?.value > 9) ? '' : '0' }}{{ (item?.value == 0) ? 00 : item?.value }}
+          </span>
+          <p class="pb-4 n-m mb-0">
+            <a class="box-title" id="{{id}}">
+              {{item?.name  || 'N/A' }}
+            </a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>

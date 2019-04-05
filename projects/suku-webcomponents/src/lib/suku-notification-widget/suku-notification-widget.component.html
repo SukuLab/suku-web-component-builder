@@ -1,18 +1,16 @@
 <div [class]="customclass">
-  <div class="col box pointer text-center">
-    <div class="pt-4 pb-2">
-      <strong>
-        <a class="box-title" id="{{id}}">
-          {{notificationTitle || 'review bids' }}
-        </a>
-      </strong>
-    </div>
-    <div class="pb-4">
-      <strong class="box-counter" id="{{notificationCount}}">
+  <div class="col pointer text-center p-0">
+    <div class="pt-4">
+      <span class="box-counter">
         {{ notificationValue > 9 ? ' ' :
         '0'}}{{ notificationValue === 0 ? 0 :
         ''}}{{notificationValue}}
-      </strong>
+      </span>
+      <p class="pb-3 n-m mb-0">
+        <a class="box-title" id="{{id}}">
+          {{notificationTitle || 'review bids' }}
+        </a>
+      </p>
     </div>
   </div>
 </div>
