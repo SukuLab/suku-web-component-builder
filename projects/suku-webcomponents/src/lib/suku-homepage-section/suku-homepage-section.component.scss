@@ -1,0 +1,68 @@
+$header-font: 23px;
+$info-button-width: 23px;
+$info-message-width: 300px;
+$suku-light-green: #d8f40b;
+$suku-dark-grey: #303030;
+
+.homepage-section {
+	font-family: 'Poppins', sans-serif;
+}
+
+.title {
+	font-size: $header-font;
+	font-weight: 700;
+}
+
+.italic {
+	font-weight: 400;
+}
+
+.info {
+	text-align: center;
+	height: $info-button-width;
+	width: $info-button-width;
+	border-radius: 100px;
+	background: $suku-dark-grey;
+	color: $suku-light-green;
+
+	&:hover .info-box {
+		display: block;
+	}
+}
+
+.info-box {
+	z-index: 100;
+	width: $info-message-width;
+	border-radius: 6px;
+	word-wrap: break-word;
+	background: black;
+	display: none;
+	position: relative;
+	bottom: -10px;
+	// left: (-$info-message-width / 2) + ($info-button-width / 2);
+	right: $info-button-width;
+	color: white;
+	text-align: left;
+	padding: 20px;
+	font-size: 13px;
+	font-family: "Encode Sans";
+	font-weight: 500;
+	font-style: normal;
+	font-stretch: normal;
+	line-height: 1.45;
+	letter-spacing: 0.4px;
+	color: #b6b6b6;
+
+	&::after {
+		content: "";
+		position: absolute;
+		top: -10px;
+		left: 35px;
+		margin-left: -5px;
+		border-width: 5px;
+		border-style: solid;
+		border-color: transparent transparent #191922 transparent;
+		font-style: normal;
+		font-stretch: normal;
+	}
+}

@@ -32,10 +32,7 @@ export class SukuACHSettingsComponent implements OnInit, AfterViewInit {
 		return this._beneficialOwnerStatus;
 	}
 	set beneficialOwnerStatus(val) {
-		console.log(val);
 		this._beneficialOwnerStatus = val;
-		console.log(`beneficial ownership status: ${val}`);
-		console.log(val);
 		if (val) {
 			this.lowerText = 'Please upload beneficial owner documents below';
 		}
@@ -47,7 +44,6 @@ export class SukuACHSettingsComponent implements OnInit, AfterViewInit {
 	constructor() {}
 
 	ngOnInit() {
-		console.log('this.documentStatus', this.documentStatus);
 		if (this.documentStatus) {
 			for (let j = 0; j < this.documentStatus.length; j++) {
 				this.toggle[j] = false;
@@ -61,7 +57,6 @@ export class SukuACHSettingsComponent implements OnInit, AfterViewInit {
 	}
 
 	uploadDoc(val) {
-		console.log('val', val);
 		this.upload.emit(val);
 	}
 
