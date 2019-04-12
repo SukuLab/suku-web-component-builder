@@ -40,11 +40,11 @@
                 <div class="row">
                   <div class="col-sm-12 col-lg-4 offset-lg-4 text-lg-right col-md-3 text-md-center col-xs-12 p-xs-0">
                     <a class="profilePercentage colorGrey"  id="{{subHeadingOneId}}" [style.visibility]="editvisibility ? 'visible' : 'hidden'"
-                      routerLink="/CreateProfile_Confirmation">{{subHeadingOne}}</a>
+                      (click)="editAccount()">{{subHeadingOne}}</a>
                   </div>
                   <div class="col-sm-3 col-md-3 p-md-0 col-lg-4 text-lg-center col-xs-12 p-xs-0">
                     <a class=" profilePercentage colorGrey" id="{{subHeadingTwoId}}" [style.visibility]="changePasswordvisibility ? 'visible' : 'hidden'"
-                      routerLink="/changePassword">{{subHeadingTwo}}</a>
+                    (click)="changePass()">{{subHeadingTwo}}</a>
                   </div>
                 </div>
               </div>

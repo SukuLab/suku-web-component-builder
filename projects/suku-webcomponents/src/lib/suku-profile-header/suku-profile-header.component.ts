@@ -34,7 +34,8 @@ export class SukuProfileHeaderComponent implements OnInit {
 	@Input() rateDetailsCustomClass = 'pl-2';
 	@Input() ratingPrivacy: Boolean;
 	@Input() rateDetailsId = '';
-	@Output() rating = new EventEmitter();
+	@Output() actionOne = new EventEmitter();
+	@Output() actionTwo = new EventEmitter();
 	@Input() customClass;
 	@Input()
 	@Input('rating-value')
@@ -90,4 +91,12 @@ export class SukuProfileHeaderComponent implements OnInit {
 	constructor() { }
 
 	ngOnInit() { }
+	
+	editAccount() {
+        this.actionOne.emit();
+    }
+
+    changePass() {
+        this.actionTwo.emit();
+    }
 }
