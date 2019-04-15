@@ -18,7 +18,6 @@ export class SukuProductTraceWidgetComponent implements OnInit {
   isSearch = false;
   _result;
   i;
-  // @Input() seasons ;
   @Input('head-name') headName;
   @Input('sub-Head-Name') subHeadName;
   @Input() name;
