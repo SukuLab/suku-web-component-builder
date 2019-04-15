@@ -136,16 +136,26 @@
   overflow-y: scroll;
 }
 
-/deep/ .mat-radio-button.mat-accent .mat-radio-inner-circle::before {
-  font-family: "Font Awesome 5 Free";
-  content: "\f058";
-  display: inline-block;
+/* scss-- color */
+::ng-deep .mat-radio-button.mat-accent.mat-radio-checked .mat-radio-outer-circle {
+  border-color: #a7bf2e !important;
+}
+::ng-deep .mat-radio-button.mat-accent .mat-radio-inner-circle::before {
+  font-family: "Font Awesome 5 Free" !important;
+  content: "\f058" !important;
+  display: inline-block !important;
   vertical-align: middle;
-   font-weight: 900;
-   font-size: 35px !important;
-   color: #a7bf2e;
-   margin: 0px !important;
-   margin-bottom: 0px !important;
-   margin-left: -8px !important;
-   margin-top: -7.6px !important;
+  font-weight: 900;
+  font-size: 35px !important;
+  color: #a7bf2e;
+  margin: 0px !important;
+  margin-bottom: 0px !important;
+  margin-left: -8px !important;
+  margin-top: -7.6px !important;
+}
+::ng-deep .mat-radio-button.mat-accent .mat-radio-inner-circle {
+  background-color: #fafafa !important;
+}
+::ng-deep .mat-radio-button.mat-accent .mat-radio-ripple .mat-ripple-element {
+  background-color:#a7bf2e3a !important;
 }

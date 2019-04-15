@@ -11,7 +11,7 @@ export class SukuTrackProgressBarComponent implements OnInit {
   @Input('progress-style-three') progressStyleThree = 'progressUpcoming';
   @Input() headingOne = 'SELECT A PRODUCT';
   @Input() headingTwo = 'TRACE COMPONENTS';
-  @Input() headingThree = 'SHOW TRACE';
+  @Input() headingThree = 'SHOW TACE TRACE';
   @Input() headingOneId = 'firstHeading';
   @Input() headingTwoId = 'secondHeading';
   @Input() headingThreeId = 'thirdHeading';

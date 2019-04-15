@@ -22,9 +22,9 @@
       <p class="responseInfo" *ngIf="productdetails?.length > 0 ? true : false ">please select one</p>
       <div class="heightTab" id="scrollDiv">
         <div class="col" *ngFor="let products of productdetails">
-          <mat-radio-button color="primary" class="searchData f13" value="2" (click)="selectproducts.emit(products)"
-            (click)="showSelectedPro(products)"> {{products.asset.description}}<br>
-            {{products.asset.name}}<br></mat-radio-button>
+          <mat-radio-button class="searchData f13" value="2" (click)="selectproducts.emit(products)"
+            (click)="showSelectedPro(products)"> {{products?.asset?.description}}<br>
+            {{products?.asset?.name}}<br></mat-radio-button>
           <hr>
         </div>
       </div>
