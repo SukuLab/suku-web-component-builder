@@ -1,0 +1,8 @@
+<span [formGroup]="form">
+  <mat-radio-group formControlName="{{control}}" name="{{control}}">
+    <mat-radio-button type="radio" (click)="buttonAction()" class="radio-inline thisProductInfoLabel"
+      [id]="radioButtonId" [color]="color" [value]="value">
+      <span [class]="contentCustomClass">{{content}}</span>
+    </mat-radio-button>
+  </mat-radio-group>
+</span>

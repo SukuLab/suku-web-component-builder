@@ -92,6 +92,7 @@ import { SukuHomepageSectionComponent } from './suku-homepage-section/suku-homep
 import { SukuHomepageButtonComponent } from './suku-homepage-button/suku-homepage-button.component';
 import { SukuProfileHeaderComponent } from './suku-profile-header/suku-profile-header.component';
 import { SukuSocialIconsComponent } from './suku-social-icons/suku-social-icons.component';
+import { SukuRadioButtonComponent } from './suku-radio-button/suku-radio-button.component';
 @NgModule({
   declarations: [
     SukuBidTagComponent,
@@ -147,7 +148,8 @@ import { SukuSocialIconsComponent } from './suku-social-icons/suku-social-icons.
     SukuHomepageSectionComponent,
     SukuHomepageButtonComponent,
     SukuProfileHeaderComponent,
-    SukuSocialIconsComponent
+    SukuSocialIconsComponent,
+    SukuRadioButtonComponent
   ],
   imports: [
     CommonModule,
@@ -243,7 +245,8 @@ import { SukuSocialIconsComponent } from './suku-social-icons/suku-social-icons.
     SukuHomepageSectionComponent,
     SukuHomepageButtonComponent,
     SukuProfileHeaderComponent,
-    SukuSocialIconsComponent
+    SukuSocialIconsComponent,
+    SukuRadioButtonComponent
   ]
 })
 export class SukuWebcomponentsModule { }
