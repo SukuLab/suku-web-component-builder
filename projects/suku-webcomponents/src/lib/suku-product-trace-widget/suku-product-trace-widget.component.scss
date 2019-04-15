@@ -1,9 +1,10 @@
 // track and trce product search
+@import url('https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
 
 .product-boxContent{
   width: 100%;
   float: left;
-  background: #494848;
+  background: #2f2e2e;
   border-left: 5px solid #a7bf2e;;
   border-radius: 0 40px 0 0;
   padding: 15px 5px 4px 15px;
@@ -12,10 +13,10 @@
  .prizeHead{
   width: 100%;
   float: left;
-  font-size: 17px;
+  font-size: 15px;
   color: #e5e5e5;
   line-height: 1em;
-  margin: 0 0 12px 0;
+  margin: 0 0 8px 0;
  }
  .prizesubHead{
   width: 100%;
@@ -28,12 +29,14 @@
  }
  .RectangleBorder {
    background-color: #ffffff;
-   box-shadow: 0 -4px 2px 0 rgba(0, 0, 0, 0.08);
+   box-shadow: -4px 4px 5px 0px rgba(0, 0, 0, 0.08);
     border-radius: 0 0 0px 0px;
-    margin-top: 84px !important;
+    margin-top: 75px !important;
+    padding-right: 20px;
+    padding-left: 20px;
  }
  .productName{
-   color: #e5e5e5;
+   color: #7f7e7e;
    font-size: 13px;
  }
  .searchBorderBox{
@@ -41,8 +44,9 @@
      border-radius: 12px 25.5px 25.5px 25.5px;
      font-size: 15px;
  }
+
  .searchBorderStyles {
-   padding-bottom: 0px;
+   padding-bottom: 5px;
    padding-top: 5px;
    padding-right: 0px;
    padding-left: 0px;
@@ -58,16 +62,16 @@
  }
  .trackBtn{
      font-family: "Encode Sans", sans-serif;
-     font-size: 15px;
-     padding: 0.55rem 0.85rem;
+     font-size: 11px;
+     padding: 0.55rem 0.99rem;
  }
  .trackBtn:hover{
    color: #ffffff !important;
    background: #a7bf2e !important;
   }
  .trackBtn.disabled:hover{
-   color: grey !important;
-   background: #a7bf2e !important;
+   color: black !important;
+   background: white;
   }
  .pTB11 {
    padding-bottom: 8px;
@@ -75,10 +79,13 @@
  }
  
 .searchData {
+  word-break: normal;
+  font-size: 13px;
   color: #b6b6b6;
+  font-family:  'Poppins', sans-serif !important;
 }
  .resultCount {
-  color: #e5e5e5;
+  color: #898787;
   font-size: 12px;
   padding-left: 13px;
 }
@@ -104,6 +111,11 @@
   border-radius: 60px;
 }
 
+/deep/ .searchData > label {
+  white-space: pre-wrap !important;
+  line-height: normal !important;
+}
+
 #scrollDiv::-webkit-scrollbar {
   width: 6px;
 }
@@ -114,8 +126,26 @@
   box-shadow: 0px 0px 0px rgb(114, 104, 104);
 }
 
+.searchData > label {
+  white-space: pre-wrap;
+}
+
 .scrollbar {
   float: left;
   height: 390px;
   overflow-y: scroll;
+}
+
+/deep/ .mat-radio-button.mat-accent .mat-radio-inner-circle::before {
+  font-family: "Font Awesome 5 Free";
+  content: "\f058";
+  display: inline-block;
+  vertical-align: middle;
+   font-weight: 900;
+   font-size: 35px !important;
+   color: #a7bf2e;
+   margin: 0px !important;
+   margin-bottom: 0px !important;
+   margin-left: -8px !important;
+   margin-top: -7.6px !important;
 }
