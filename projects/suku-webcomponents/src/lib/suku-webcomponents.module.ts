@@ -85,7 +85,13 @@ import { SukuTermsAndConditionsComponent } from './suku-terms-and-conditions/suk
 import { SukuCardLineTypeOneComponent } from './suku-card-line-type-one/suku-card-line.component';
 import { SukuCardLineTypeTwoComponent } from './suku-card-line-type-two/suku-card-line.component';
 import { SukuRatingCardLineComponent } from './suku-rating-card-line/suku-rating-card-line.component';
-
+import { SukuNotificationPanelComponent } from './suku-notification-panel/suku-notification-panel.component';
+import { SukuAddIconComponent } from './suku-add-icon/suku-add-icon.component';
+import { SukuHomepageComponent } from './suku-homepage/suku-homepage.component';
+import { SukuHomepageSectionComponent } from './suku-homepage-section/suku-homepage-section.component';
+import { SukuHomepageButtonComponent } from './suku-homepage-button/suku-homepage-button.component';
+import { SukuProfileHeaderComponent } from './suku-profile-header/suku-profile-header.component';
+import { SukuSocialIconsComponent } from './suku-social-icons/suku-social-icons.component';
 @NgModule({
   declarations: [
     SukuBidTagComponent,
@@ -134,7 +140,14 @@ import { SukuRatingCardLineComponent } from './suku-rating-card-line/suku-rating
     SukuTermsAndConditionsComponent,
     SukuCardLineTypeOneComponent,
     SukuCardLineTypeTwoComponent,
-    SukuRatingCardLineComponent
+    SukuRatingCardLineComponent,
+    SukuNotificationPanelComponent,
+    SukuAddIconComponent,
+    SukuHomepageComponent,
+    SukuHomepageSectionComponent,
+    SukuHomepageButtonComponent,
+    SukuProfileHeaderComponent,
+    SukuSocialIconsComponent
   ],
   imports: [
     CommonModule,
@@ -223,7 +236,14 @@ import { SukuRatingCardLineComponent } from './suku-rating-card-line/suku-rating
     SukuTermsAndConditionsComponent,
     SukuCardLineTypeOneComponent,
     SukuCardLineTypeTwoComponent,
-    SukuRatingCardLineComponent
+    SukuRatingCardLineComponent,
+    SukuNotificationPanelComponent,
+    SukuAddIconComponent,
+    SukuHomepageComponent,
+    SukuHomepageSectionComponent,
+    SukuHomepageButtonComponent,
+    SukuProfileHeaderComponent,
+    SukuSocialIconsComponent
   ]
 })
 export class SukuWebcomponentsModule { }

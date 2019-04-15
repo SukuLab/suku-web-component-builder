@@ -1,9 +1,16 @@
-import { Component, OnInit, Input, Output, EventEmitter, AfterViewInit } from '@angular/core';
+import {
+	Component,
+	OnInit,
+	Input,
+	Output,
+	EventEmitter,
+	AfterViewInit,
+} from '@angular/core';
 
 @Component({
 	selector: 'suku-ach-setting',
 	templateUrl: './suku-achsettings.component.html',
-	styleUrls: [ './suku-achsettings.component.scss' ]
+	styleUrls: [ './suku-achsettings.component.scss' ],
 })
 export class SukuACHSettingsComponent implements OnInit, AfterViewInit {
 	_beneficialOwnerStatus;
@@ -15,9 +22,7 @@ export class SukuACHSettingsComponent implements OnInit, AfterViewInit {
 	@Input() subContentId = ' unverified';
 	@Input() SetupACHPaymentsBtnText = 'Setup ACH Payments';
 	@Input() paymentButtonId = 'SetupACHPayments';
-	@Input() lowerText = 'please setup your ACH payment profile below';
-	@Input() upperText = 'ACH Payment Profile Not Complete';
-	@Input() upperTextId = 'upperTextId';
+	@Input() lowerText = 'Please setup your ACH payment profile below';
 	@Input() lowerTextId = 'lowerTextId';
 	@Input() subtitleId = 'subtitleId';
 	@Output() action = new EventEmitter();
@@ -27,8 +32,10 @@ export class SukuACHSettingsComponent implements OnInit, AfterViewInit {
 		return this._beneficialOwnerStatus;
 	}
 	set beneficialOwnerStatus(val) {
-		console.log(val);
 		this._beneficialOwnerStatus = val;
+		if (val) {
+			this.lowerText = 'Please upload beneficial owner documents below';
+		}
 	}
 	@Input() documentStatus;
 	selected = [];
@@ -37,7 +44,6 @@ export class SukuACHSettingsComponent implements OnInit, AfterViewInit {
 	constructor() {}
 
 	ngOnInit() {
-		console.log('this.documentStatus', this.documentStatus);
 		if (this.documentStatus) {
 			for (let j = 0; j < this.documentStatus.length; j++) {
 				this.toggle[j] = false;
@@ -51,8 +57,44 @@ export class SukuACHSettingsComponent implements OnInit, AfterViewInit {
 	}
 
 	uploadDoc(val) {
-		console.log('val', val);
 		this.upload.emit(val);
+	}
+
+	getDocTypeString(docType): string {
+		switch (docType) {
+			case 'idcard':
+				return 'Government Issued ID';
+				break;
+			case 'passport':
+				return 'Passport';
+				break;
+			case 'license':
+				return "Driver's License";
+				break;
+			default:
+				return docType;
+				break;
+		}
+	}
+
+	getDocFailureString(failureType): string {
+		switch (failureType) {
+			case 'ScanNotReadable':
+				return 'Scan Not Readable';
+				break;
+			case 'ScanNotUploaded':
+				return 'Scan Not Uploaded';
+				break;
+			case 'ScanIdTypeNotSupported':
+				return 'ID Type Not Supported';
+				break;
+			case 'ScanNameMismatch':
+				return 'Name Mismatch';
+				break;
+			default:
+				return failureType;
+				break;
+		}
 	}
 
 	active(i) {

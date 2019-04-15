@@ -28,7 +28,7 @@
 	background-color: white;
 	color: black;
 	padding: 0.775rem 1.85rem;
-	font-size: 12px;
+	font-size: 12px !important;
 	font-weight: bold;
 	font-family: "Poppins";
 }
@@ -61,7 +61,7 @@
 	font-family: 'Poppins', sans-serif !important;
 }
 
-.status {
+.statusUnverified {
 	color: red;
 	letter-spacing: 0.3px;
 }

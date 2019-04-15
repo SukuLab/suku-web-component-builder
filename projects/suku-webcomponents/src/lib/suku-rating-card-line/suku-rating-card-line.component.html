@@ -10,12 +10,17 @@
       <h2 [style.font-size.px]="contentOneSize" [class]="contentOnecustomclass" [style.font-weight]="contentOneWeight"
         [style.color]="contentOneColor">{{contentOne}}</h2>
     </div>
-    <div class="col-sm-3 p-lg-0 pr-0 d-flex mt-2 pt-2 flex-column" *ngIf="true">
+    <div class="col-sm-3 p-lg-0 pr-0 d-flex mt-2 pt-2 flex-column c-pointer" (click)="action.emit()"  *ngIf="true">
       <h2 [style.font-size.px]="ratingtitleSize" [class]="ratingtitlecustomclass"
         [style.font-weight]="ratingtitleWeight" [style.color]="ratingtitleColor">{{ratingTitle}}</h2>
       <p class="mb-0">
-        <span (change)="action.emit(ratingValue)" class="starSize">
-          <div [innerHTML]="myHTML" [class]="customRatingclass" ratingValue=""></div>
+        <span class="starSize">
+          <div class="pl-1">
+              <span class="fa fa-star fullStar f20" *ngFor="let star of fullStarsArray"> </span>
+              <span class="fa fa-star-half halfStarLeft f20" *ngIf="halfStar == 1"> </span>
+              <span class="fa fa-star-half fa-flip-horizontal halfStarRight f20" *ngIf="halfStar == 1"> </span>
+              <span class="fa fa-star emptyStar f20" *ngFor="let star of emptyStarsArray"> </span>
+          </div>
         </span>
       </p>
     </div>

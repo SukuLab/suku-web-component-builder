@@ -87,7 +87,6 @@ export class SukuBeneficialOwnerComponent implements OnInit {
 	}
 
 	fileupload(e) {
-		console.log(e);
 			const files = e.target.files;
 			const maxFileSize = 9999999;
 			let currentFileSize;

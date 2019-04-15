@@ -7,8 +7,7 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class SukuNotificationWidgetComponent implements OnInit {
   @Input() id;
-  @Input() notificationCount = "notificationCountId"
-  @Input() customclass = 'col p-0 pointer text-center';
+  @Input() customclass = 'col box pointer text-center';
 	@Input('notification-title') notificationTitle;
 	@Input('notification-value') notificationValue;
   constructor() { }

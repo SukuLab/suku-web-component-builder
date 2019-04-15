@@ -1,0 +1,25 @@
+$starMargin: 4px;
+$fullStarColor: rgb(137, 137, 137);
+$emptyStarColor: rgb(225, 225, 225);
+
+.emptyStar {
+    color: $emptyStarColor;
+    margin: $starMargin;
+}
+
+.fullStar {
+    color: $fullStarColor;
+    margin: $starMargin;
+}
+
+.halfStarLeft {
+    color: $fullStarColor;
+    position: relative;
+    left: 1px;
+}
+
+.halfStarRight {
+    color: $emptyStarColor;
+    position: relative;
+    right: 1px;
+}

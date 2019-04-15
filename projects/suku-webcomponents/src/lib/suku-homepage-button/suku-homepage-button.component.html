@@ -1,0 +1,10 @@
+<div class="button-container d-flex flex-column align-items-center">
+  <div class="suku-button d-flex justify-content-center align-items-center" [ngClass]="{
+      'disabled': buttonData.disabled
+    }" (click)="onClick()">
+    <i [ngClass]="[buttonData.icon, 'icon']"></i>
+  </div>
+  <div class="suku-button-text text-center mt-3">
+    <h3 class="button-title">{{buttonData.title}}</h3>
+  </div>
+</div>

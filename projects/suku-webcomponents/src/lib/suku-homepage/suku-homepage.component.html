@@ -1,0 +1,5 @@
+<div class="homepage col-md-10 col-12 m-auto">
+  <div *ngFor="let section of homepageData">
+    <suku-homepage-section (sendRoutePath)="onSendRoutePath($event)" [sectionData]="section"></suku-homepage-section>
+  </div>
+</div>

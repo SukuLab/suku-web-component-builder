@@ -13,10 +13,6 @@ export class SukuDashboardProfileComponent implements OnInit {
 	@Input('title-two') titleTwo;
 	@Output('action-one') createNewList = new EventEmitter();
 	@Output('action-two') clearBuyInterestStorage = new EventEmitter();
-	test(i) {
-		alert(i);
-	}
-
   constructor() { }
 
   ngOnInit() {
