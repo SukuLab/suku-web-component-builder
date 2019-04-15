@@ -16,11 +16,5 @@
     <suku-tree [tree-data]="response" [relation]="relation"></suku-tree>
 </div> -->
 <div class="col-sm-8 offset-sm-2">
-    <suku-product-trace-widget head-name="TRACE METHOD #1" name="Product ID:" sub-Head-Name="Product Identification Number"
-    [form]="ProductSearchComponent" searchId="searchByproductId" productId="traceByproductId"
-    traceMethodRadio="radioByproductId" control="productId" (searchFun)="showResultsForID(search)"
-    productdetails="{{productJsonArrayForId}}" disableBtn="{{disableBtnForID}}" (searchByProduct)="searchByProductnameForID()"
-    (selectproducts)="selectproductsDataForID($event)" visible="{{searchTraceToggleForID}}" result="{{searchResultForID}}"
-    (traceproduct)="traceProductForID()">
-</suku-product-trace-widget>
+  <suku-track-progress-bar></suku-track-progress-bar>
 </div>
