@@ -13,26 +13,30 @@ export let sukuHomepageData: SukuHomepageSection[] = [
 				icon: 'fas fa-shopping-cart',
 				path: '/userDashboard',
 				disabled: false,
+				id: 'Marketplace'
 			}),
 			new SukuHomepageButton({
 				title: 'Track & Trace',
 				icon: 'fas fa-link',
 				path: '/productSearch',
 				disabled: false,
+				id: 'trackAndTrace'
 			}),
 			new SukuHomepageButton({
 				title: 'Document Authenticator',
 				icon: 'far fa-file-code',
 				path: '/verify',
 				disabled: false,
+				id: 'documentAuthenticator'
 			}),
 			new SukuHomepageButton({
 				title: 'Payment Portal',
 				icon: 'fas fa-sliders-h',
 				path: '/paymentPortal',
 				disabled: false,
-			}),
-		],
+				id: 'paymentPortal'
+			})
+		]
 	}),
 	new SukuHomepageSection({
 		header: 'SUKU Applications and Services',
@@ -45,25 +49,29 @@ export let sukuHomepageData: SukuHomepageSection[] = [
 				icon: 'fas fa-box-open',
 				path: '/',
 				disabled: true,
+				id: 'inventoryManagement'
 			}),
 			new SukuHomepageButton({
 				title: 'Warehouse Management',
 				icon: 'fas fa-dolly',
 				path: '/',
 				disabled: true,
+				id: 'warehouseManagement'
 			}),
 			new SukuHomepageButton({
 				title: 'Insurance',
 				icon: 'fas fa-shield-alt',
 				path: '/',
 				disabled: true,
+				id: 'insurance'
 			}),
 			new SukuHomepageButton({
 				title: 'Quorum Block Explorer',
 				icon: 'fas fa-cubes',
 				path: '/',
 				disabled: true,
-			}),
-		],
-	}),
+				id: 'quorumBlockExplorer'
+			})
+		]
+	})
 ];

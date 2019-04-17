@@ -11,8 +11,6 @@ export class SukuFundingSourceComponent implements OnInit {
   @Input() fundingDetails = [];
   @Input() defaultText = 'Default';
   @Input() defaultbankName = 'Bank Name';
-  @Input() headerOneTxt = 'FUNDING';
-  @Input() headerTwoText = 'SOURCES';
   @Input() defaultBtnTxt = 'Make Default';
   @Input() removeBtnTxt = 'Remove';
   @Input() defaultBtnId = 'defaultBtnId';

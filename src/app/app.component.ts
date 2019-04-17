@@ -125,6 +125,7 @@ export class AppComponent {
 	
 	];
 	title = 'suku-lib';
+	custom= 'default';
 	base64Image;
 	response = [];
 	treeDataApi = [

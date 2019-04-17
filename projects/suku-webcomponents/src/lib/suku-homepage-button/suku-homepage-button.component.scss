@@ -18,14 +18,11 @@ $suku-dark-grey: #303030;
 	border-bottom-left-radius: $button-size * .35;
 	background: $suku-dark-grey;
 	color: $suku-light-green;
-	// background: #d8f40b;
-	// color: black;
+	cursor: pointer !important;
 	box-shadow: $default-shadow;
-	// transition: <property> <duration> <timing-function> <delay>;
 	transition: all .1s ease-in-out 0s;
 
 	&:hover {
-		// transform: translateY(-5px) scale(1.05);
 		transform: translateY(-3px);
 		box-shadow: 0px 6px 3px 0px rgba(0, 0, 0, 0.5);
 	}
