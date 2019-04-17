@@ -19,7 +19,9 @@ export class SukuCardLineTypeTwoComponent implements OnInit {
 	@Input() imageColSize = "col-sm-1 pt-1 pl-2";
 	@Input() txtcolsize = "col-sm-6 pl-sm-5 pt-2 mt-1";
 	@Input() txttwocolsize = "col pt-2 pl-lg-2 pr-lg-2 mt-1";
-	@Input('title-one') titleOne = 'Title One';
+	@Input('title-one') titleOne = 'Title One';	
+	@Input('icon-info-one') iconOneInfo = 'icon info One';
+	@Input('icon-info-two') iconTwoInfo = 'icon info Two';
 	@Input('title-one-color') titleOneColor = 'black';
 	@Input('title-one-weight') titleOneWeight = '600';
   @Input('title-one-size') titleOneSize = '14';
