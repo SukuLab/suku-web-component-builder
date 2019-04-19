@@ -1,26 +1,4 @@
 <!--The content below is only a placeholder and can be replaced.-->
-<!-- <suku-select-input [options]="options" (sort)="action($event)"></suku-select-input>
-<div class="col d-flex justify-content-end" id="treeSelectOption">
-    <mat-form-field>
-        <mat-select id="treeOptions" [(value)]="selected" #temp (selectionChange)="action(temp.value)">
-            <mat-option id="{{option.id}}" value="{{option.value}}" *ngFor="let option of options;let i= index">{{option.name}}</mat-option>
-        </mat-select>
-    </mat-form-field> -->
-    <!-- <mat-slide-toggle
-          class="example-margin"
-          >
-        Slide me!
-     </mat-slide-toggle> -->
-<!-- </div> -->
-<!-- <div class="col-sm-8">
-    <suku-tree [tree-data]="response" [relation]="relation"></suku-tree>
-</div> -->
 <div class="col-sm-8 offset-sm-2">
-    <suku-product-trace-widget head-name="TRACE METHOD #1" name="Product ID:" sub-Head-Name="Product Identification Number"
-    [form]="ProductSearchComponent" searchId="searchByproductId" productId="traceByproductId"
-    traceMethodRadio="radioByproductId" control="productId" (searchFun)="showResultsForID(search)"
-    productdetails="{{productJsonArrayForId}}" disableBtn="{{disableBtnForID}}" (searchByProduct)="searchByProductnameForID()"
-    (selectproducts)="selectproductsDataForID($event)" visible="{{searchTraceToggleForID}}" result="{{searchResultForID}}"
-    (traceproduct)="traceProductForID()">
-</suku-product-trace-widget>
+<suku-match-chip [customclass]="custom"></suku-match-chip>
 </div>

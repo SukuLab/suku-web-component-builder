@@ -1,0 +1,13 @@
+<span [formGroup]="form">
+<mat-form-field class="col p-0">
+  <mat-select id="sttProductTraceability" formControlName="{{control}}" (selectionChange)="select.emit()"
+    placeholder="select product from this listing">
+    <mat-option *ngFor="let item of data" value="{{item?.productName}}" id="sttProductTraceabilityPn">
+      {{item?.productName}}
+    </mat-option>
+  </mat-select>
+  <span matSuffix>
+    <mat-icon><span><img height="23" [src]="icon" width="20"></span></mat-icon>
+  </span>
+</mat-form-field>
+</span>
