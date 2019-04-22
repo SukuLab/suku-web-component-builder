@@ -1,12 +1,13 @@
-<div class="input-group mb-3">
-  <div class="input-group-prepend">
-    <span class="sort-by mt-3 mr-3"> SORT BY </span>
+<div class="form-group">
+  <div class="select-out input-group">
+    <label for="select" id="sortBy" class="sort-by col-sm-2 p-0 mt-3 mb-0 mr-3">Sort by</label>
+    <span [class]="customclass">
+      <select class="optionsBox form-control fcontrol mt-1" id="interestTwo" name="sort" #addRe (change)="sort.emit(addRe.value)">
+        <option id="default" value="default" disabled>Choose sort method </option>
+        <option *ngFor="let option of options;let i=index" id="{{option.value}}" value="{{option.value}}">{{option.name}}</option>
+      </select>
+      <!-- <i class="fa fa-chevron-down"></i> -->
+      <img class = "image" height="18"  src="../assets/images/arrow-icon.png" width="20">
+    </span>
   </div>
-  <span [class]="customclass">
-    <select class="custom-select optionsBox" id="inputGroupSelect03" name="sort" #addRe (change)="sort.emit(addRe.value)">
-      <option id="default" value="default" disabled>Choose sort method</option>
-      <option *ngFor="let option of options;let i=index" id="{{option.value}}" value="{{option.value}}">{{option.name}}</option>
-    </select>
-    <img class = "image" height="19" src="../assets/images/arrow-icon.png" width="20">
-  </span>
 </div>

@@ -11,6 +11,9 @@ export class SukuSelectInputComponent implements OnInit {
 	@Input() color;
 	@Input() weight;
 	@Input() customclass;
+	// @Input() imgheight = '18';
+	// @Input() imgwidth = '20';
+	// @Input() imgurl = '../assets/images/arrow-icon.png';
 	@Output() sort = new EventEmitter();
 	@Input() options: any[];
 
