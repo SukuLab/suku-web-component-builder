@@ -20,7 +20,9 @@ export class SukuCardLineTypeTwoComponent implements OnInit {
 	@Input() txttwocolsize = 'col-sm-2 pl-lg-0 pr-lg-2 pt-2 mt-1';
 	@Input() txtthreecolsize = 'col pt-2 mt-1';
 
-	@Input('title-one') titleOne = 'Title One';
+	@Input('title-one') titleOne = 'Title One';	
+	@Input('icon-info-one') iconOneInfo = 'icon info One';
+	@Input('icon-info-two') iconTwoInfo = 'icon info Two';
 	@Input('title-one-color') titleOneColor = 'black';
 	@Input('title-one-weight') titleOneWeight = '600';
 	@Input('title-one-size') titleOneSize = '14';
