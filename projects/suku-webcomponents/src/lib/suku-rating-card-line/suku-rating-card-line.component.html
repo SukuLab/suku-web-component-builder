@@ -3,7 +3,7 @@
     <div [class]="imageColSize">
       <img [class]="customImgclass" src="{{image}}" alt="card-img" width="55px" height="46px">
     </div>
-    <span class="col d-lg-flex d-md-flex p-0 mt-2 pt-1">
+    <span class="col d-lg-flex d-md-flex p-0 pt-1">
     <div [class]="txtcolsize">
       <h2 [style.font-size.px]="titleOneSize" [class]="titleOnecustomclass" [style.font-weight]="titleOneWeight"
         [style.color]="titleOneColor">{{titleOne}}</h2>
@@ -27,7 +27,7 @@
     <div [class]="txttwocolsize">
       <h2 [style.font-size.px]="subTitleTwoSize" [class]="subTitleTwocustomclass"
         [style.font-weight]="subTitleTwoWeight" [style.color]="subTitleTwoColor">{{subTitleTwo}}</h2>
-      <h2 [style.font-size.px]="contentTwoSize" [class]="contentTwocustomclass" [style.font-weight]="contentTwoWeight"
+      <h2 [style.font-size.px]="contentTwoSize" (click)="userAction.emit()" [class]="contentTwocustomclass" [style.font-weight]="contentTwoWeight"
         [style.color]="contentTwoColor">{{contentTwo}}</h2>
     </div>
     <div [class]="txtthreecolsize">
