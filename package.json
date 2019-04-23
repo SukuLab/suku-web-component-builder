@@ -27,6 +27,7 @@
     "d3": "^3.5.17",
     "html2canvas": "^1.0.0-alpha.12",
     "jspdf": "^1.5.3",
+    "ngx-countdown-timer": "^0.1.9",
     "rxjs": "~6.3.3",
     "suku-webcomponents": "git+https://parashur:d053b93a67bdbfa89b1d6b79a0de35540d644dd3@github.com/SukuLab/suku-web-components-library.git#feature/livestock-ui",
     "webpack-dev-server": "^3.1.14",
