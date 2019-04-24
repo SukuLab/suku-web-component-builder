@@ -94,6 +94,8 @@ import { SukuProfileHeaderComponent } from './suku-profile-header/suku-profile-h
 import { SukuSocialIconsComponent } from './suku-social-icons/suku-social-icons.component';
 import { SukuRadioButtonComponent } from './suku-radio-button/suku-radio-button.component';
 import { SukuDropdownComponent } from './suku-dropdown/suku-dropdown.component';
+import { SukuHeaderComponent } from './suku-header/suku-header.component';
+import { CountdownTimerModule } from 'ngx-countdown-timer';
 @NgModule({
   declarations: [
     SukuBidTagComponent,
@@ -151,12 +153,14 @@ import { SukuDropdownComponent } from './suku-dropdown/suku-dropdown.component';
     SukuProfileHeaderComponent,
     SukuSocialIconsComponent,
     SukuRadioButtonComponent,
-    SukuDropdownComponent
+    SukuDropdownComponent,
+    SukuHeaderComponent
   ],
   imports: [
     CommonModule,
     FormsModule,
     ReactiveFormsModule,
+    CountdownTimerModule,
     MatAutocompleteModule,
     MatBadgeModule,
     MatBottomSheetModule,
@@ -249,7 +253,8 @@ import { SukuDropdownComponent } from './suku-dropdown/suku-dropdown.component';
     SukuProfileHeaderComponent,
     SukuSocialIconsComponent,
     SukuRadioButtonComponent,
-    SukuDropdownComponent
+    SukuDropdownComponent,
+    SukuHeaderComponent
   ]
 })
 export class SukuWebcomponentsModule { }

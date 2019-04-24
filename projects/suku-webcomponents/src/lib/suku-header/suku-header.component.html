@@ -1,0 +1,23 @@
+<div class="product-boxContent">
+  <div class="col pl-lg-5 pt-3 pb-3">
+    <div class="row">
+      <div class="col pl-lg-5">
+        <h1>{{titleOne}}</h1>
+        <h2>{{contentOne}}</h2>
+      </div>
+      <div class="col pl-lg-5">
+        <h1>{{titleTwo}}</h1>
+        <h2 class="c-pointer" (click)="action.emit()">{{contentTwo}}</h2>
+      </div>
+      <div class="col pl-lg-5">
+        <h1>{{titleThree}}</h1>
+        <h2 *ngIf="(_enableTimer == 'false')">
+          {{contentThree}}
+        </h2>
+        <h2 *ngIf="(_enableTimer == 'true')">
+          <countdown-timer [end]="_date"></countdown-timer>
+        </h2>
+      </div>
+    </div>
+  </div>
+</div>
