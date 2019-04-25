@@ -5,127 +5,123 @@ import { Observable, Observer } from 'rxjs';
 @Component({
 	selector: 'app-root',
 	templateUrl: './app.component.html',
-	styleUrls: ['./app.component.scss']
+	styleUrls: [ './app.component.scss' ]
 })
 export class AppComponent {
 	fundingData = [
 		{
-			"_links": {
-				"transfer-from-balance": {
-					"href": "https://api-sandbox.dwolla.com/transfers",
-					"type": "application/vnd.dwolla.v1.hal+json",
-					"resource-type": "transfer"
+			_links: {
+				'transfer-from-balance': {
+					href: 'https://api-sandbox.dwolla.com/transfers',
+					type: 'application/vnd.dwolla.v1.hal+json',
+					'resource-type': 'transfer'
 				},
-				"on-demand-authorization": {
-					"href": "https://api-sandbox.dwolla.com/on-demand-authorizations/c17c926d-0047-e911-8117-e30af325cbc3",
-					"type": "application/vnd.dwolla.v1.hal+json",
-					"resource-type": "on-demand-authorization"
+				'on-demand-authorization': {
+					href: 'https://api-sandbox.dwolla.com/on-demand-authorizations/c17c926d-0047-e911-8117-e30af325cbc3',
+					type: 'application/vnd.dwolla.v1.hal+json',
+					'resource-type': 'on-demand-authorization'
 				},
-				"self": {
-					"href": "https://api-sandbox.dwolla.com/funding-sources/2226fda5-2b79-45bf-9e5b-a7db0751c95d",
-					"type": "application/vnd.dwolla.v1.hal+json",
-					"resource-type": "funding-source"
+				self: {
+					href: 'https://api-sandbox.dwolla.com/funding-sources/2226fda5-2b79-45bf-9e5b-a7db0751c95d',
+					type: 'application/vnd.dwolla.v1.hal+json',
+					'resource-type': 'funding-source'
 				},
-				"transfer-to-balance": {
-					"href": "https://api-sandbox.dwolla.com/transfers",
-					"type": "application/vnd.dwolla.v1.hal+json",
-					"resource-type": "transfer"
+				'transfer-to-balance': {
+					href: 'https://api-sandbox.dwolla.com/transfers',
+					type: 'application/vnd.dwolla.v1.hal+json',
+					'resource-type': 'transfer'
 				},
-				"transfer-send": {
-					"href": "https://api-sandbox.dwolla.com/transfers",
-					"type": "application/vnd.dwolla.v1.hal+json",
-					"resource-type": "transfer"
+				'transfer-send': {
+					href: 'https://api-sandbox.dwolla.com/transfers',
+					type: 'application/vnd.dwolla.v1.hal+json',
+					'resource-type': 'transfer'
 				},
-				"remove": {
-					"href": "https://api-sandbox.dwolla.com/funding-sources/2226fda5-2b79-45bf-9e5b-a7db0751c95d",
-					"type": "application/vnd.dwolla.v1.hal+json",
-					"resource-type": "funding-source"
+				remove: {
+					href: 'https://api-sandbox.dwolla.com/funding-sources/2226fda5-2b79-45bf-9e5b-a7db0751c95d',
+					type: 'application/vnd.dwolla.v1.hal+json',
+					'resource-type': 'funding-source'
 				},
-				"customer": {
-					"href": "https://api-sandbox.dwolla.com/customers/079085f6-586c-4bfa-85a7-a1dcaaa30274",
-					"type": "application/vnd.dwolla.v1.hal+json",
-					"resource-type": "customer"
+				customer: {
+					href: 'https://api-sandbox.dwolla.com/customers/079085f6-586c-4bfa-85a7-a1dcaaa30274',
+					type: 'application/vnd.dwolla.v1.hal+json',
+					'resource-type': 'customer'
 				},
-				"transfer-receive": {
-					"href": "https://api-sandbox.dwolla.com/transfers",
-					"type": "application/vnd.dwolla.v1.hal+json",
-					"resource-type": "transfer"
+				'transfer-receive': {
+					href: 'https://api-sandbox.dwolla.com/transfers',
+					type: 'application/vnd.dwolla.v1.hal+json',
+					'resource-type': 'transfer'
 				}
 			},
-			"id": "2226fda5-2b79-45bf-9e5b-a7db0751c95d",
-			"status": "verified",
-			"type": "bank",
-			"bankAccountType": "savings",
-			"name": "Parashuram",
-			"created": "2019-03-15T08:57:58.196Z",
-			"removed": false,
-			"default": false,
-			"channels": [
-				"ach"
-			],
-			"bankName": "SANDBOX TEST BANK",
-			"fingerprint": "96364ee2f5572dc50451ba589429be9d034c094ffebade9d2f8c144a97f293cd"
-		},{
-			"_links": {
-				"transfer-from-balance": {
-					"href": "https://api-sandbox.dwolla.com/transfers",
-					"type": "application/vnd.dwolla.v1.hal+json",
-					"resource-type": "transfer"
+			id: '2226fda5-2b79-45bf-9e5b-a7db0751c95d',
+			status: 'verified',
+			type: 'bank',
+			bankAccountType: 'savings',
+			name: 'Parashuram',
+			created: '2019-03-15T08:57:58.196Z',
+			removed: false,
+			default: false,
+			channels: [ 'ach' ],
+			bankName: 'SANDBOX TEST BANK',
+			fingerprint: '96364ee2f5572dc50451ba589429be9d034c094ffebade9d2f8c144a97f293cd'
+		},
+		{
+			_links: {
+				'transfer-from-balance': {
+					href: 'https://api-sandbox.dwolla.com/transfers',
+					type: 'application/vnd.dwolla.v1.hal+json',
+					'resource-type': 'transfer'
 				},
-				"on-demand-authorization": {
-					"href": "https://api-sandbox.dwolla.com/on-demand-authorizations/c17c926d-0047-e911-8117-e30af325cbc3",
-					"type": "application/vnd.dwolla.v1.hal+json",
-					"resource-type": "on-demand-authorization"
+				'on-demand-authorization': {
+					href: 'https://api-sandbox.dwolla.com/on-demand-authorizations/c17c926d-0047-e911-8117-e30af325cbc3',
+					type: 'application/vnd.dwolla.v1.hal+json',
+					'resource-type': 'on-demand-authorization'
 				},
-				"self": {
-					"href": "https://api-sandbox.dwolla.com/funding-sources/2226fda5-2b79-45bf-9e5b-a7db0751c95d",
-					"type": "application/vnd.dwolla.v1.hal+json",
-					"resource-type": "funding-source"
+				self: {
+					href: 'https://api-sandbox.dwolla.com/funding-sources/2226fda5-2b79-45bf-9e5b-a7db0751c95d',
+					type: 'application/vnd.dwolla.v1.hal+json',
+					'resource-type': 'funding-source'
 				},
-				"transfer-to-balance": {
-					"href": "https://api-sandbox.dwolla.com/transfers",
-					"type": "application/vnd.dwolla.v1.hal+json",
-					"resource-type": "transfer"
+				'transfer-to-balance': {
+					href: 'https://api-sandbox.dwolla.com/transfers',
+					type: 'application/vnd.dwolla.v1.hal+json',
+					'resource-type': 'transfer'
 				},
-				"transfer-send": {
-					"href": "https://api-sandbox.dwolla.com/transfers",
-					"type": "application/vnd.dwolla.v1.hal+json",
-					"resource-type": "transfer"
+				'transfer-send': {
+					href: 'https://api-sandbox.dwolla.com/transfers',
+					type: 'application/vnd.dwolla.v1.hal+json',
+					'resource-type': 'transfer'
 				},
-				"remove": {
-					"href": "https://api-sandbox.dwolla.com/funding-sources/2226fda5-2b79-45bf-9e5b-a7db0751c95d",
-					"type": "application/vnd.dwolla.v1.hal+json",
-					"resource-type": "funding-source"
+				remove: {
+					href: 'https://api-sandbox.dwolla.com/funding-sources/2226fda5-2b79-45bf-9e5b-a7db0751c95d',
+					type: 'application/vnd.dwolla.v1.hal+json',
+					'resource-type': 'funding-source'
 				},
-				"customer": {
-					"href": "https://api-sandbox.dwolla.com/customers/079085f6-586c-4bfa-85a7-a1dcaaa30274",
-					"type": "application/vnd.dwolla.v1.hal+json",
-					"resource-type": "customer"
+				customer: {
+					href: 'https://api-sandbox.dwolla.com/customers/079085f6-586c-4bfa-85a7-a1dcaaa30274',
+					type: 'application/vnd.dwolla.v1.hal+json',
+					'resource-type': 'customer'
 				},
-				"transfer-receive": {
-					"href": "https://api-sandbox.dwolla.com/transfers",
-					"type": "application/vnd.dwolla.v1.hal+json",
-					"resource-type": "transfer"
+				'transfer-receive': {
+					href: 'https://api-sandbox.dwolla.com/transfers',
+					type: 'application/vnd.dwolla.v1.hal+json',
+					'resource-type': 'transfer'
 				}
 			},
-			"id": "2226fda5-2b79-45bf-9e5b-a7db0751c95d",
-			"status": "verified",
-			"type": "bank",
-			"bankAccountType": "savings",
-			"name": "Parashuram",
-			"created": "2019-03-15T08:57:58.196Z",
-			"removed": false,
-			"default": false,
-			"channels": [
-				"ach"
-			],
-			"bankName": "SANDBOX TEST BANK",
-			"fingerprint": "96364ee2f5572dc50451ba589429be9d034c094ffebade9d2f8c144a97f293cd"
+			id: '2226fda5-2b79-45bf-9e5b-a7db0751c95d',
+			status: 'verified',
+			type: 'bank',
+			bankAccountType: 'savings',
+			name: 'Parashuram',
+			created: '2019-03-15T08:57:58.196Z',
+			removed: false,
+			default: false,
+			channels: [ 'ach' ],
+			bankName: 'SANDBOX TEST BANK',
+			fingerprint: '96364ee2f5572dc50451ba589429be9d034c094ffebade9d2f8c144a97f293cd'
 		}
-	
 	];
 	title = 'suku-lib';
-	custom= 'default';
+	custom = 'default';
 	base64Image;
 	response = [];
 	treeDataApi = [
@@ -137,7 +133,7 @@ export class AppComponent {
 				description: 'item A'
 			},
 			parent: '',
-			children: ['1002', '1003'],
+			children: [ '1002', '1003' ],
 			graphLinks: [
 				{
 					_id: '5c41e554bd81f31d5d778b42',
@@ -220,7 +216,7 @@ export class AppComponent {
 				},
 				{
 					_id: '5c41e554bd81f31d5d778b3f',
-					children: ['1006', '1007', '1009', '1010', '1011', '1012', '1013'],
+					children: [ '1006', '1007', '1009', '1010', '1011', '1012', '1013' ],
 					uid: '1004',
 					product: {
 						id: '1004',
@@ -290,7 +286,7 @@ export class AppComponent {
 						},
 						{
 							_id: '5c41e554bd81f31d5d778b41',
-							children: ['1008'],
+							children: [ '1008' ],
 							uid: '1007',
 							product: {
 								id: '1007',
@@ -489,7 +485,7 @@ export class AppComponent {
 				},
 				{
 					_id: '5c41e554bd81f31d5d778b3d',
-					children: ['1004', '1005'],
+					children: [ '1004', '1005' ],
 					uid: '1003',
 					product: {
 						id: '1003',
@@ -515,7 +511,7 @@ export class AppComponent {
 					relations: [
 						{
 							_id: '5c41e554bd81f31d5d778b3f',
-							children: ['1006', '1007', '1009', '1010', '1011', '1012', '1013'],
+							children: [ '1006', '1007', '1009', '1010', '1011', '1012', '1013' ],
 							uid: '1004',
 							product: {
 								id: '1004',
@@ -585,7 +581,7 @@ export class AppComponent {
 								},
 								{
 									_id: '5c41e554bd81f31d5d778b41',
-									children: ['1008'],
+									children: [ '1008' ],
 									uid: '1007',
 									product: {
 										id: '1007',
@@ -780,7 +776,7 @@ export class AppComponent {
 				},
 				{
 					_id: '5c41e554bd81f31d5d778b41',
-					children: ['1008'],
+					children: [ '1008' ],
 					uid: '1007',
 					product: {
 						id: '1007',
@@ -898,7 +894,7 @@ export class AppComponent {
 				},
 				{
 					_id: '5c41e554bd81f31d5d778b3d',
-					children: ['1004', '1005'],
+					children: [ '1004', '1005' ],
 					uid: '1003',
 					product: {
 						id: '1003',
@@ -924,7 +920,7 @@ export class AppComponent {
 					relations: [
 						{
 							_id: '5c41e554bd81f31d5d778b3f',
-							children: ['1006', '1007', '1009', '1010', '1011', '1012', '1013'],
+							children: [ '1006', '1007', '1009', '1010', '1011', '1012', '1013' ],
 							uid: '1004',
 							product: {
 								id: '1004',
@@ -994,7 +990,7 @@ export class AppComponent {
 								},
 								{
 									_id: '5c41e554bd81f31d5d778b41',
-									children: ['1008'],
+									children: [ '1008' ],
 									uid: '1007',
 									product: {
 										id: '1007',
@@ -1181,11 +1177,11 @@ export class AppComponent {
 				description: 'item G'
 			},
 			parent: '1004',
-			children: ['1008'],
+			children: [ '1008' ],
 			graphLinks: [
 				{
 					_id: '5c41e554bd81f31d5d778b3d',
-					children: ['1004', '1005'],
+					children: [ '1004', '1005' ],
 					uid: '1003',
 					product: {
 						id: '1003',
@@ -1212,7 +1208,7 @@ export class AppComponent {
 				},
 				{
 					_id: '5c41e554bd81f31d5d778b3f',
-					children: ['1006', '1007', '1009', '1010', '1011', '1012', '1013'],
+					children: [ '1006', '1007', '1009', '1010', '1011', '1012', '1013' ],
 					uid: '1004',
 					product: {
 						id: '1004',
@@ -1263,7 +1259,7 @@ export class AppComponent {
 					relations: [
 						{
 							_id: '5c41e554bd81f31d5d778b3d',
-							children: ['1004', '1005'],
+							children: [ '1004', '1005' ],
 							uid: '1003',
 							product: {
 								id: '1003',
@@ -1304,7 +1300,7 @@ export class AppComponent {
 			relations: [
 				{
 					_id: '5c41e554bd81f31d5d778b3f',
-					children: ['1006', '1007', '1009', '1010', '1011', '1012', '1013'],
+					children: [ '1006', '1007', '1009', '1010', '1011', '1012', '1013' ],
 					uid: '1004',
 					product: {
 						id: '1004',
@@ -1355,7 +1351,7 @@ export class AppComponent {
 					relations: [
 						{
 							_id: '5c41e554bd81f31d5d778b3d',
-							children: ['1004', '1005'],
+							children: [ '1004', '1005' ],
 							uid: '1003',
 							product: {
 								id: '1003',
@@ -1381,7 +1377,7 @@ export class AppComponent {
 							relations: [
 								{
 									_id: '5c41e554bd81f31d5d778b3d',
-									children: ['1004', '1005'],
+									children: [ '1004', '1005' ],
 									uid: '1003',
 									product: {
 										id: '1003',
@@ -1412,7 +1408,7 @@ export class AppComponent {
 				},
 				{
 					_id: '5c41e554bd81f31d5d778b3f',
-					children: ['1006', '1007', '1009', '1010', '1011', '1012', '1013'],
+					children: [ '1006', '1007', '1009', '1010', '1011', '1012', '1013' ],
 					uid: '1004',
 					product: {
 						id: '1004',
@@ -1463,7 +1459,7 @@ export class AppComponent {
 					relations: [
 						{
 							_id: '5c41e554bd81f31d5d778b3d',
-							children: ['1004', '1005'],
+							children: [ '1004', '1005' ],
 							uid: '1003',
 							product: {
 								id: '1003',
@@ -1489,7 +1485,7 @@ export class AppComponent {
 							relations: [
 								{
 									_id: '5c41e554bd81f31d5d778b3d',
-									children: ['1004', '1005'],
+									children: [ '1004', '1005' ],
 									uid: '1003',
 									product: {
 										id: '1003',
@@ -1520,7 +1516,7 @@ export class AppComponent {
 				},
 				{
 					_id: '5c41e554bd81f31d5d778b3f',
-					children: ['1006', '1007', '1009', '1010', '1011', '1012', '1013'],
+					children: [ '1006', '1007', '1009', '1010', '1011', '1012', '1013' ],
 					uid: '1004',
 					product: {
 						id: '1004',
@@ -1571,7 +1567,7 @@ export class AppComponent {
 					relations: [
 						{
 							_id: '5c41e554bd81f31d5d778b3d',
-							children: ['1004', '1005'],
+							children: [ '1004', '1005' ],
 							uid: '1003',
 							product: {
 								id: '1003',
@@ -1597,7 +1593,7 @@ export class AppComponent {
 							relations: [
 								{
 									_id: '5c41e554bd81f31d5d778b3d',
-									children: ['1004', '1005'],
+									children: [ '1004', '1005' ],
 									uid: '1003',
 									product: {
 										id: '1003',
@@ -1644,7 +1640,7 @@ export class AppComponent {
 				{
 					_id: '5c63c62bdf01a8158c9afdf7',
 					links: {
-						usedIn: ['a92359c2-d15f-d7e4-fd4c-10c1f98299b3'],
+						usedIn: [ 'a92359c2-d15f-d7e4-fd4c-10c1f98299b3' ],
 						composedOf: []
 					},
 					timestamp: '2019-02-13T07:14:12.028Z',
@@ -1665,7 +1661,7 @@ export class AppComponent {
 				{
 					_id: '5c62b91b77894b36bae2475c',
 					links: {
-						usedIn: ['1065cbf6-46e2-ea12-3095-14e6bc8208ad'],
+						usedIn: [ '1065cbf6-46e2-ea12-3095-14e6bc8208ad' ],
 						composedOf: []
 					},
 					timestamp: '2019-02-12T12:13:33.953Z',
@@ -1683,7 +1679,7 @@ export class AppComponent {
 						{
 							_id: '5c62b91b77894b36bae2475c',
 							links: {
-								usedIn: ['1065cbf6-46e2-ea12-3095-14e6bc8208ad'],
+								usedIn: [ '1065cbf6-46e2-ea12-3095-14e6bc8208ad' ],
 								composedOf: []
 							},
 							timestamp: '2019-02-12T12:13:33.953Z',
@@ -1704,7 +1700,7 @@ export class AppComponent {
 				{
 					_id: '5c62b8b453f4c836b4f9fa09',
 					links: {
-						usedIn: ['1065cbf6-46e2-ea12-3095-14e6bc8208ad'],
+						usedIn: [ '1065cbf6-46e2-ea12-3095-14e6bc8208ad' ],
 						composedOf: []
 					},
 					timestamp: '2019-02-12T12:13:33.905Z',
@@ -1723,8 +1719,8 @@ export class AppComponent {
 				{
 					_id: '5c62b5ecad0f4f34cba6b5d4',
 					links: {
-						usedIn: ['1065cbf6-46e2-ea12-3095-14e6bc8208ad'],
-						composedOf: ['26a8140a-298a-ba45-bba0-07eb046f34e9']
+						usedIn: [ '1065cbf6-46e2-ea12-3095-14e6bc8208ad' ],
+						composedOf: [ '26a8140a-298a-ba45-bba0-07eb046f34e9' ]
 					},
 					timestamp: '2019-02-12T12:02:30.362Z',
 					tagId: '112',
@@ -1741,7 +1737,7 @@ export class AppComponent {
 						{
 							_id: '5c63c62bdf01a8158c9afdf7',
 							links: {
-								usedIn: ['a92359c2-d15f-d7e4-fd4c-10c1f98299b3'],
+								usedIn: [ 'a92359c2-d15f-d7e4-fd4c-10c1f98299b3' ],
 								composedOf: []
 							},
 							timestamp: '2019-02-13T07:14:12.028Z',
@@ -1779,8 +1775,8 @@ export class AppComponent {
 				{
 					_id: '5c62b5ecad0f4f34cba6b5d4',
 					links: {
-						usedIn: ['1065cbf6-46e2-ea12-3095-14e6bc8208ad'],
-						composedOf: ['26a8140a-298a-ba45-bba0-07eb046f34e9']
+						usedIn: [ '1065cbf6-46e2-ea12-3095-14e6bc8208ad' ],
+						composedOf: [ '26a8140a-298a-ba45-bba0-07eb046f34e9' ]
 					},
 					timestamp: '2019-02-12T12:02:30.362Z',
 					tagId: '112',
@@ -1797,7 +1793,7 @@ export class AppComponent {
 						{
 							_id: '5c63c62bdf01a8158c9afdf7',
 							links: {
-								usedIn: ['a92359c2-d15f-d7e4-fd4c-10c1f98299b3'],
+								usedIn: [ 'a92359c2-d15f-d7e4-fd4c-10c1f98299b3' ],
 								composedOf: []
 							},
 							timestamp: '2019-02-13T07:14:12.028Z',
@@ -1817,8 +1813,8 @@ export class AppComponent {
 								{
 									_id: '5c62b5ecad0f4f34cba6b5d4',
 									links: {
-										usedIn: ['1065cbf6-46e2-ea12-3095-14e6bc8208ad'],
-										composedOf: ['26a8140a-298a-ba45-bba0-07eb046f34e9']
+										usedIn: [ '1065cbf6-46e2-ea12-3095-14e6bc8208ad' ],
+										composedOf: [ '26a8140a-298a-ba45-bba0-07eb046f34e9' ]
 									},
 									timestamp: '2019-02-12T12:02:30.362Z',
 									tagId: '112',
@@ -1835,7 +1831,7 @@ export class AppComponent {
 										{
 											_id: '5c63c62bdf01a8158c9afdf7',
 											links: {
-												usedIn: ['a92359c2-d15f-d7e4-fd4c-10c1f98299b3'],
+												usedIn: [ 'a92359c2-d15f-d7e4-fd4c-10c1f98299b3' ],
 												composedOf: []
 											},
 											timestamp: '2019-02-13T07:14:12.028Z',
@@ -1862,7 +1858,7 @@ export class AppComponent {
 				{
 					_id: '5c62b8b453f4c836b4f9fa09',
 					links: {
-						usedIn: ['1065cbf6-46e2-ea12-3095-14e6bc8208ad'],
+						usedIn: [ '1065cbf6-46e2-ea12-3095-14e6bc8208ad' ],
 						composedOf: []
 					},
 					timestamp: '2019-02-12T12:13:33.905Z',
@@ -1880,8 +1876,8 @@ export class AppComponent {
 						{
 							_id: '5c62b5ecad0f4f34cba6b5d4',
 							links: {
-								usedIn: ['1065cbf6-46e2-ea12-3095-14e6bc8208ad'],
-								composedOf: ['26a8140a-298a-ba45-bba0-07eb046f34e9']
+								usedIn: [ '1065cbf6-46e2-ea12-3095-14e6bc8208ad' ],
+								composedOf: [ '26a8140a-298a-ba45-bba0-07eb046f34e9' ]
 							},
 							timestamp: '2019-02-12T12:02:30.362Z',
 							tagId: '112',
@@ -1898,7 +1894,7 @@ export class AppComponent {
 								{
 									_id: '5c63c62bdf01a8158c9afdf7',
 									links: {
-										usedIn: ['a92359c2-d15f-d7e4-fd4c-10c1f98299b3'],
+										usedIn: [ 'a92359c2-d15f-d7e4-fd4c-10c1f98299b3' ],
 										composedOf: []
 									},
 									timestamp: '2019-02-13T07:14:12.028Z',
@@ -1921,8 +1917,8 @@ export class AppComponent {
 						{
 							_id: '5c62b5ecad0f4f34cba6b5d4',
 							links: {
-								usedIn: ['1065cbf6-46e2-ea12-3095-14e6bc8208ad'],
-								composedOf: ['26a8140a-298a-ba45-bba0-07eb046f34e9']
+								usedIn: [ '1065cbf6-46e2-ea12-3095-14e6bc8208ad' ],
+								composedOf: [ '26a8140a-298a-ba45-bba0-07eb046f34e9' ]
 							},
 							timestamp: '2019-02-12T12:02:30.362Z',
 							tagId: '112',
@@ -1939,7 +1935,7 @@ export class AppComponent {
 								{
 									_id: '5c63c62bdf01a8158c9afdf7',
 									links: {
-										usedIn: ['a92359c2-d15f-d7e4-fd4c-10c1f98299b3'],
+										usedIn: [ 'a92359c2-d15f-d7e4-fd4c-10c1f98299b3' ],
 										composedOf: []
 									},
 									timestamp: '2019-02-13T07:14:12.028Z',
@@ -1962,8 +1958,8 @@ export class AppComponent {
 						{
 							_id: '5c62b5ecad0f4f34cba6b5d4',
 							links: {
-								usedIn: ['1065cbf6-46e2-ea12-3095-14e6bc8208ad'],
-								composedOf: ['26a8140a-298a-ba45-bba0-07eb046f34e9']
+								usedIn: [ '1065cbf6-46e2-ea12-3095-14e6bc8208ad' ],
+								composedOf: [ '26a8140a-298a-ba45-bba0-07eb046f34e9' ]
 							},
 							timestamp: '2019-02-12T12:02:30.362Z',
 							tagId: '112',
@@ -1980,7 +1976,7 @@ export class AppComponent {
 								{
 									_id: '5c63c62bdf01a8158c9afdf7',
 									links: {
-										usedIn: ['a92359c2-d15f-d7e4-fd4c-10c1f98299b3'],
+										usedIn: [ 'a92359c2-d15f-d7e4-fd4c-10c1f98299b3' ],
 										composedOf: []
 									},
 									timestamp: '2019-02-13T07:14:12.028Z',
@@ -2003,8 +1999,8 @@ export class AppComponent {
 						{
 							_id: '5c62b5ecad0f4f34cba6b5d4',
 							links: {
-								usedIn: ['1065cbf6-46e2-ea12-3095-14e6bc8208ad'],
-								composedOf: ['26a8140a-298a-ba45-bba0-07eb046f34e9']
+								usedIn: [ '1065cbf6-46e2-ea12-3095-14e6bc8208ad' ],
+								composedOf: [ '26a8140a-298a-ba45-bba0-07eb046f34e9' ]
 							},
 							timestamp: '2019-02-12T12:02:30.362Z',
 							tagId: '112',
@@ -2021,7 +2017,7 @@ export class AppComponent {
 								{
 									_id: '5c63c62bdf01a8158c9afdf7',
 									links: {
-										usedIn: ['a92359c2-d15f-d7e4-fd4c-10c1f98299b3'],
+										usedIn: [ 'a92359c2-d15f-d7e4-fd4c-10c1f98299b3' ],
 										composedOf: []
 									},
 									timestamp: '2019-02-13T07:14:12.028Z',
@@ -2046,7 +2042,7 @@ export class AppComponent {
 				{
 					_id: '5c62b91b77894b36bae2475c',
 					links: {
-						usedIn: ['1065cbf6-46e2-ea12-3095-14e6bc8208ad'],
+						usedIn: [ '1065cbf6-46e2-ea12-3095-14e6bc8208ad' ],
 						composedOf: []
 					},
 					timestamp: '2019-02-12T12:13:33.953Z',
@@ -2065,7 +2061,7 @@ export class AppComponent {
 				{
 					_id: '5c62b91b77894b36bae2475c',
 					links: {
-						usedIn: ['1065cbf6-46e2-ea12-3095-14e6bc8208ad'],
+						usedIn: [ '1065cbf6-46e2-ea12-3095-14e6bc8208ad' ],
 						composedOf: []
 					},
 					timestamp: '2019-02-12T12:13:33.953Z',
@@ -2083,7 +2079,7 @@ export class AppComponent {
 						{
 							_id: '5c62b91b77894b36bae2475c',
 							links: {
-								usedIn: ['1065cbf6-46e2-ea12-3095-14e6bc8208ad'],
+								usedIn: [ '1065cbf6-46e2-ea12-3095-14e6bc8208ad' ],
 								composedOf: []
 							},
 							timestamp: '2019-02-12T12:13:33.953Z',
@@ -2102,7 +2098,7 @@ export class AppComponent {
 						{
 							_id: '5c62b91b77894b36bae2475c',
 							links: {
-								usedIn: ['1065cbf6-46e2-ea12-3095-14e6bc8208ad'],
+								usedIn: [ '1065cbf6-46e2-ea12-3095-14e6bc8208ad' ],
 								composedOf: []
 							},
 							timestamp: '2019-02-12T12:13:33.953Z',
@@ -2123,7 +2119,7 @@ export class AppComponent {
 				{
 					_id: '5c62b91b77894b36bae2475c',
 					links: {
-						usedIn: ['1065cbf6-46e2-ea12-3095-14e6bc8208ad'],
+						usedIn: [ '1065cbf6-46e2-ea12-3095-14e6bc8208ad' ],
 						composedOf: []
 					},
 					timestamp: '2019-02-12T12:13:33.953Z',
@@ -2141,7 +2137,7 @@ export class AppComponent {
 						{
 							_id: '5c62b91b77894b36bae2475c',
 							links: {
-								usedIn: ['1065cbf6-46e2-ea12-3095-14e6bc8208ad'],
+								usedIn: [ '1065cbf6-46e2-ea12-3095-14e6bc8208ad' ],
 								composedOf: []
 							},
 							timestamp: '2019-02-12T12:13:33.953Z',
@@ -2160,7 +2156,7 @@ export class AppComponent {
 						{
 							_id: '5c62b91b77894b36bae2475c',
 							links: {
-								usedIn: ['1065cbf6-46e2-ea12-3095-14e6bc8208ad'],
+								usedIn: [ '1065cbf6-46e2-ea12-3095-14e6bc8208ad' ],
 								composedOf: []
 							},
 							timestamp: '2019-02-12T12:13:33.953Z',
@@ -2179,7 +2175,7 @@ export class AppComponent {
 						{
 							_id: '5c62b91b77894b36bae2475c',
 							links: {
-								usedIn: ['1065cbf6-46e2-ea12-3095-14e6bc8208ad'],
+								usedIn: [ '1065cbf6-46e2-ea12-3095-14e6bc8208ad' ],
 								composedOf: []
 							},
 							timestamp: '2019-02-12T12:13:33.953Z',
@@ -2197,7 +2193,7 @@ export class AppComponent {
 								{
 									_id: '5c62b91b77894b36bae2475c',
 									links: {
-										usedIn: ['1065cbf6-46e2-ea12-3095-14e6bc8208ad'],
+										usedIn: [ '1065cbf6-46e2-ea12-3095-14e6bc8208ad' ],
 										composedOf: []
 									},
 									timestamp: '2019-02-12T12:13:33.953Z',
@@ -2218,7 +2214,7 @@ export class AppComponent {
 						{
 							_id: '5c62b91b77894b36bae2475c',
 							links: {
-								usedIn: ['1065cbf6-46e2-ea12-3095-14e6bc8208ad'],
+								usedIn: [ '1065cbf6-46e2-ea12-3095-14e6bc8208ad' ],
 								composedOf: []
 							},
 							timestamp: '2019-02-12T12:13:33.953Z',
@@ -2236,7 +2232,7 @@ export class AppComponent {
 								{
 									_id: '5c62b91b77894b36bae2475c',
 									links: {
-										usedIn: ['1065cbf6-46e2-ea12-3095-14e6bc8208ad'],
+										usedIn: [ '1065cbf6-46e2-ea12-3095-14e6bc8208ad' ],
 										composedOf: []
 									},
 									timestamp: '2019-02-12T12:13:33.953Z',
@@ -2263,688 +2259,638 @@ export class AppComponent {
 
 	usedIn = [
 		{
-			"uid": "61f11f9e-7040-a5a8-1a90-615c2fde4eda",
-			"timestamp": "2019-02-18T11:14:31.836Z",
-			"asset": {
-				"id": "1035",
-				"name": "ssd 11",
-				"description": "safas"
+			uid: '61f11f9e-7040-a5a8-1a90-615c2fde4eda',
+			timestamp: '2019-02-18T11:14:31.836Z',
+			asset: {
+				id: '1035',
+				name: 'ssd 11',
+				description: 'safas'
 			},
-			"graphLinks": [
+			graphLinks: [
 				{
-					"_id": "5c6b9b6da20186237cb2b844",
-					"links": {
-						"usedIn": [],
-						"composedOf": [
-							"a5401d12-2b5d-0cb6-4813-237cc6025c8c",
-							"231610f3-46fe-a430-fb38-4dcb22dc8383"
-						]
+					_id: '5c6b9b6da20186237cb2b844',
+					links: {
+						usedIn: [],
+						composedOf: [ 'a5401d12-2b5d-0cb6-4813-237cc6025c8c', '231610f3-46fe-a430-fb38-4dcb22dc8383' ]
 					},
-					"timestamp": "2019-02-19T04:31:30.599Z",
-					"assetModel": "any",
-					"asset": {
-						"id": "1038",
-						"name": "SOny note Model 1902",
-						"description": "16gb ram"
+					timestamp: '2019-02-19T04:31:30.599Z',
+					assetModel: 'any',
+					asset: {
+						id: '1038',
+						name: 'SOny note Model 1902',
+						description: '16gb ram'
 					},
-					"uid": "faa27ca8-e0ea-e29d-bbc9-3f9c776f34e3",
-					"linksInfo": [],
-					"location": [],
-					"__v": 0,
-					"depth": 3,
-					"assetName": "SOny note Model 1902",
-					"relations": []
+					uid: 'faa27ca8-e0ea-e29d-bbc9-3f9c776f34e3',
+					linksInfo: [],
+					location: [],
+					__v: 0,
+					depth: 3,
+					assetName: 'SOny note Model 1902',
+					relations: []
 				},
 				{
-					"_id": "5c6b9a15a20186237cb2b842",
-					"links": {
-						"usedIn": [],
-						"composedOf": [
-							"e01d6fb8-59c5-bd50-9518-cad3576c2fa7",
-							"231610f3-46fe-a430-fb38-4dcb22dc8383",
-							"2fcea72c-bce8-0fdf-233e-d8616296d8c8"
+					_id: '5c6b9a15a20186237cb2b842',
+					links: {
+						usedIn: [],
+						composedOf: [
+							'e01d6fb8-59c5-bd50-9518-cad3576c2fa7',
+							'231610f3-46fe-a430-fb38-4dcb22dc8383',
+							'2fcea72c-bce8-0fdf-233e-d8616296d8c8'
 						]
 					},
-					"timestamp": "2019-02-19T04:31:30.599Z",
-					"assetModel": "any",
-					"asset": {
-						"id": "1037",
-						"name": "Hp Model 1602",
-						"description": "16gb ram"
+					timestamp: '2019-02-19T04:31:30.599Z',
+					assetModel: 'any',
+					asset: {
+						id: '1037',
+						name: 'Hp Model 1602',
+						description: '16gb ram'
 					},
-					"uid": "72b2b15a-784b-9c9e-962b-f03917a4ffc0",
-					"linksInfo": [],
-					"location": [],
-					"__v": 0,
-					"depth": 3,
-					"assetName": "Hp Model 1602",
-					"relations": []
+					uid: '72b2b15a-784b-9c9e-962b-f03917a4ffc0',
+					linksInfo: [],
+					location: [],
+					__v: 0,
+					depth: 3,
+					assetName: 'Hp Model 1602',
+					relations: []
 				},
 				{
-					"_id": "5c67d401373bbf1308176e97",
-					"links": {
-						"usedIn": [],
-						"composedOf": [
-							"231610f3-46fe-a430-fb38-4dcb22dc8383",
-							"5dc05ec5-0856-dec3-0ef6-d8bf7bab912b",
-							"59fc5bd5-eaa1-d586-8191-713ca53ba44b"
+					_id: '5c67d401373bbf1308176e97',
+					links: {
+						usedIn: [],
+						composedOf: [
+							'231610f3-46fe-a430-fb38-4dcb22dc8383',
+							'5dc05ec5-0856-dec3-0ef6-d8bf7bab912b',
+							'59fc5bd5-eaa1-d586-8191-713ca53ba44b'
 						]
 					},
-					"timestamp": "2019-02-16T06:18:45.551Z",
-					"assetModel": "any",
-					"asset": {
-						"id": "1033",
-						"name": "Thinkpad Model 1602",
-						"description": "16gb ram"
+					timestamp: '2019-02-16T06:18:45.551Z',
+					assetModel: 'any',
+					asset: {
+						id: '1033',
+						name: 'Thinkpad Model 1602',
+						description: '16gb ram'
 					},
-					"uid": "49640f04-8710-8c0c-7d4a-767f20ee9306",
-					"linksInfo": [],
-					"location": [],
-					"__v": 0,
-					"depth": 3,
-					"assetName": "Thinkpad Model 1602",
-					"relations": []
+					uid: '49640f04-8710-8c0c-7d4a-767f20ee9306',
+					linksInfo: [],
+					location: [],
+					__v: 0,
+					depth: 3,
+					assetName: 'Thinkpad Model 1602',
+					relations: []
 				},
 				{
-					"_id": "5c67c6c3373bbf1308176e96",
-					"links": {
-						"usedIn": [
-							"72b2b15a-784b-9c9e-962b-f03917a4ffc0"
-						],
-						"composedOf": [
-							"857cfc8c-c793-8fcf-076e-715c6bec962d",
-							"231610f3-46fe-a430-fb38-4dcb22dc8383"
-						]
+					_id: '5c67c6c3373bbf1308176e96',
+					links: {
+						usedIn: [ '72b2b15a-784b-9c9e-962b-f03917a4ffc0' ],
+						composedOf: [ '857cfc8c-c793-8fcf-076e-715c6bec962d', '231610f3-46fe-a430-fb38-4dcb22dc8383' ]
 					},
-					"timestamp": "2019-02-16T06:18:45.551Z",
-					"assetModel": "any",
-					"asset": {
-						"id": "1032",
-						"name": "Hp Castro 1602",
-						"description": "16gb ram"
+					timestamp: '2019-02-16T06:18:45.551Z',
+					assetModel: 'any',
+					asset: {
+						id: '1032',
+						name: 'Hp Castro 1602',
+						description: '16gb ram'
 					},
-					"uid": "2fcea72c-bce8-0fdf-233e-d8616296d8c8",
-					"linksInfo": [],
-					"location": [],
-					"__v": 0,
-					"depth": 3,
-					"assetName": "Hp Castro 1602",
-					"relations": [
+					uid: '2fcea72c-bce8-0fdf-233e-d8616296d8c8',
+					linksInfo: [],
+					location: [],
+					__v: 0,
+					depth: 3,
+					assetName: 'Hp Castro 1602',
+					relations: [
 						{
-							"_id": "5c6b9a15a20186237cb2b842",
-							"links": {
-								"usedIn": [],
-								"composedOf": [
-									"e01d6fb8-59c5-bd50-9518-cad3576c2fa7",
-									"231610f3-46fe-a430-fb38-4dcb22dc8383",
-									"2fcea72c-bce8-0fdf-233e-d8616296d8c8"
+							_id: '5c6b9a15a20186237cb2b842',
+							links: {
+								usedIn: [],
+								composedOf: [
+									'e01d6fb8-59c5-bd50-9518-cad3576c2fa7',
+									'231610f3-46fe-a430-fb38-4dcb22dc8383',
+									'2fcea72c-bce8-0fdf-233e-d8616296d8c8'
 								]
 							},
-							"timestamp": "2019-02-19T04:31:30.599Z",
-							"assetModel": "any",
-							"asset": {
-								"id": "1037",
-								"name": "Hp Model 1602",
-								"description": "16gb ram"
+							timestamp: '2019-02-19T04:31:30.599Z',
+							assetModel: 'any',
+							asset: {
+								id: '1037',
+								name: 'Hp Model 1602',
+								description: '16gb ram'
 							},
-							"uid": "72b2b15a-784b-9c9e-962b-f03917a4ffc0",
-							"linksInfo": [],
-							"location": [],
-							"__v": 0,
-							"depth": 3,
-							"assetName": "Hp Model 1602",
-							"relations": []
+							uid: '72b2b15a-784b-9c9e-962b-f03917a4ffc0',
+							linksInfo: [],
+							location: [],
+							__v: 0,
+							depth: 3,
+							assetName: 'Hp Model 1602',
+							relations: []
 						}
 					]
 				},
 				{
-					"_id": "5c6a9b7a737ff329ec202c78",
-					"links": {
-						"usedIn": [
-							"231610f3-46fe-a430-fb38-4dcb22dc8383"
-						],
-						"composedOf": [
-							"95afd652-7aeb-28e9-b667-167af413d297",
-							"3b8945c3-38ca-a5c7-fcfa-91eb7e23773e"
-						]
+					_id: '5c6a9b7a737ff329ec202c78',
+					links: {
+						usedIn: [ '231610f3-46fe-a430-fb38-4dcb22dc8383' ],
+						composedOf: [ '95afd652-7aeb-28e9-b667-167af413d297', '3b8945c3-38ca-a5c7-fcfa-91eb7e23773e' ]
 					},
-					"timestamp": "2019-02-18T11:14:31.836Z",
-					"assetModel": "any",
-					"asset": {
-						"id": "1036",
-						"name": "dell 11",
-						"description": "dcsd"
+					timestamp: '2019-02-18T11:14:31.836Z',
+					assetModel: 'any',
+					asset: {
+						id: '1036',
+						name: 'dell 11',
+						description: 'dcsd'
 					},
-					"uid": "e370ae7b-567f-f4b5-5ee2-9a03fac6ce14",
-					"linksInfo": [],
-					"location": [],
-					"__v": 0,
-					"depth": 1,
-					"assetName": "dell 11",
-					"relations": [
+					uid: 'e370ae7b-567f-f4b5-5ee2-9a03fac6ce14',
+					linksInfo: [],
+					location: [],
+					__v: 0,
+					depth: 1,
+					assetName: 'dell 11',
+					relations: [
 						{
-							"_id": "5c67c03b373bbf1308176e94",
-							"links": {
-								"usedIn": [
-									"2fcea72c-bce8-0fdf-233e-d8616296d8c8",
-									"49640f04-8710-8c0c-7d4a-767f20ee9306",
-									"72b2b15a-784b-9c9e-962b-f03917a4ffc0",
-									"faa27ca8-e0ea-e29d-bbc9-3f9c776f34e3"
+							_id: '5c67c03b373bbf1308176e94',
+							links: {
+								usedIn: [
+									'2fcea72c-bce8-0fdf-233e-d8616296d8c8',
+									'49640f04-8710-8c0c-7d4a-767f20ee9306',
+									'72b2b15a-784b-9c9e-962b-f03917a4ffc0',
+									'faa27ca8-e0ea-e29d-bbc9-3f9c776f34e3'
 								],
-								"composedOf": [
-									"e370ae7b-567f-f4b5-5ee2-9a03fac6ce14"
-								]
+								composedOf: [ 'e370ae7b-567f-f4b5-5ee2-9a03fac6ce14' ]
 							},
-							"timestamp": "2019-02-16T06:18:45.551Z",
-							"assetModel": "any",
-							"asset": {
-								"id": "1030",
-								"name": "SSDX Model  1602",
-								"description": "256 gb SSD",
-								"bidId": "1003",
-								"transactionId": "1005"
+							timestamp: '2019-02-16T06:18:45.551Z',
+							assetModel: 'any',
+							asset: {
+								id: '1030',
+								name: 'SSDX Model  1602',
+								description: '256 gb SSD',
+								bidId: '1003',
+								transactionId: '1005'
 							},
-							"uid": "231610f3-46fe-a430-fb38-4dcb22dc8383",
-							"linksInfo": [],
-							"location": [],
-							"__v": 0,
-							"depth": 2,
-							"assetName": "SSDX Model  1602",
-							"relations": [
+							uid: '231610f3-46fe-a430-fb38-4dcb22dc8383',
+							linksInfo: [],
+							location: [],
+							__v: 0,
+							depth: 2,
+							assetName: 'SSDX Model  1602',
+							relations: [
 								{
-									"_id": "5c67c6c3373bbf1308176e96",
-									"links": {
-										"usedIn": [
-											"72b2b15a-784b-9c9e-962b-f03917a4ffc0"
-										],
-										"composedOf": [
-											"857cfc8c-c793-8fcf-076e-715c6bec962d",
-											"231610f3-46fe-a430-fb38-4dcb22dc8383"
-										]
+									_id: '5c67c6c3373bbf1308176e96',
+									links: {
+										usedIn: [ '72b2b15a-784b-9c9e-962b-f03917a4ffc0' ],
+										composedOf: [ '857cfc8c-c793-8fcf-076e-715c6bec962d', '231610f3-46fe-a430-fb38-4dcb22dc8383' ]
 									},
-									"timestamp": "2019-02-16T06:18:45.551Z",
-									"assetModel": "any",
-									"asset": {
-										"id": "1032",
-										"name": "Hp Castro 1602",
-										"description": "16gb ram"
+									timestamp: '2019-02-16T06:18:45.551Z',
+									assetModel: 'any',
+									asset: {
+										id: '1032',
+										name: 'Hp Castro 1602',
+										description: '16gb ram'
 									},
-									"uid": "2fcea72c-bce8-0fdf-233e-d8616296d8c8",
-									"linksInfo": [],
-									"location": [],
-									"__v": 0,
-									"depth": 3,
-									"assetName": "Hp Castro 1602",
-									"relations": [
+									uid: '2fcea72c-bce8-0fdf-233e-d8616296d8c8',
+									linksInfo: [],
+									location: [],
+									__v: 0,
+									depth: 3,
+									assetName: 'Hp Castro 1602',
+									relations: [
 										{
-											"_id": "5c6b9a15a20186237cb2b842",
-											"links": {
-												"usedIn": [],
-												"composedOf": [
-													"e01d6fb8-59c5-bd50-9518-cad3576c2fa7",
-													"231610f3-46fe-a430-fb38-4dcb22dc8383",
-													"2fcea72c-bce8-0fdf-233e-d8616296d8c8"
+											_id: '5c6b9a15a20186237cb2b842',
+											links: {
+												usedIn: [],
+												composedOf: [
+													'e01d6fb8-59c5-bd50-9518-cad3576c2fa7',
+													'231610f3-46fe-a430-fb38-4dcb22dc8383',
+													'2fcea72c-bce8-0fdf-233e-d8616296d8c8'
 												]
 											},
-											"timestamp": "2019-02-19T04:31:30.599Z",
-											"assetModel": "any",
-											"asset": {
-												"id": "1037",
-												"name": "Hp Model 1602",
-												"description": "16gb ram"
+											timestamp: '2019-02-19T04:31:30.599Z',
+											assetModel: 'any',
+											asset: {
+												id: '1037',
+												name: 'Hp Model 1602',
+												description: '16gb ram'
 											},
-											"uid": "72b2b15a-784b-9c9e-962b-f03917a4ffc0",
-											"linksInfo": [],
-											"location": [],
-											"__v": 0,
-											"depth": 3,
-											"assetName": "Hp Model 1602",
-											"relations": []
+											uid: '72b2b15a-784b-9c9e-962b-f03917a4ffc0',
+											linksInfo: [],
+											location: [],
+											__v: 0,
+											depth: 3,
+											assetName: 'Hp Model 1602',
+											relations: []
 										}
 									]
 								},
 								{
-									"_id": "5c67d401373bbf1308176e97",
-									"links": {
-										"usedIn": [],
-										"composedOf": [
-											"231610f3-46fe-a430-fb38-4dcb22dc8383",
-											"5dc05ec5-0856-dec3-0ef6-d8bf7bab912b",
-											"59fc5bd5-eaa1-d586-8191-713ca53ba44b"
+									_id: '5c67d401373bbf1308176e97',
+									links: {
+										usedIn: [],
+										composedOf: [
+											'231610f3-46fe-a430-fb38-4dcb22dc8383',
+											'5dc05ec5-0856-dec3-0ef6-d8bf7bab912b',
+											'59fc5bd5-eaa1-d586-8191-713ca53ba44b'
 										]
 									},
-									"timestamp": "2019-02-16T06:18:45.551Z",
-									"assetModel": "any",
-									"asset": {
-										"id": "1033",
-										"name": "Thinkpad Model 1602",
-										"description": "16gb ram"
+									timestamp: '2019-02-16T06:18:45.551Z',
+									assetModel: 'any',
+									asset: {
+										id: '1033',
+										name: 'Thinkpad Model 1602',
+										description: '16gb ram'
 									},
-									"uid": "49640f04-8710-8c0c-7d4a-767f20ee9306",
-									"linksInfo": [],
-									"location": [],
-									"__v": 0,
-									"depth": 3,
-									"assetName": "Thinkpad Model 1602",
-									"relations": []
+									uid: '49640f04-8710-8c0c-7d4a-767f20ee9306',
+									linksInfo: [],
+									location: [],
+									__v: 0,
+									depth: 3,
+									assetName: 'Thinkpad Model 1602',
+									relations: []
 								},
 								{
-									"_id": "5c6b9a15a20186237cb2b842",
-									"links": {
-										"usedIn": [],
-										"composedOf": [
-											"e01d6fb8-59c5-bd50-9518-cad3576c2fa7",
-											"231610f3-46fe-a430-fb38-4dcb22dc8383",
-											"2fcea72c-bce8-0fdf-233e-d8616296d8c8"
+									_id: '5c6b9a15a20186237cb2b842',
+									links: {
+										usedIn: [],
+										composedOf: [
+											'e01d6fb8-59c5-bd50-9518-cad3576c2fa7',
+											'231610f3-46fe-a430-fb38-4dcb22dc8383',
+											'2fcea72c-bce8-0fdf-233e-d8616296d8c8'
 										]
 									},
-									"timestamp": "2019-02-19T04:31:30.599Z",
-									"assetModel": "any",
-									"asset": {
-										"id": "1037",
-										"name": "Hp Model 1602",
-										"description": "16gb ram"
+									timestamp: '2019-02-19T04:31:30.599Z',
+									assetModel: 'any',
+									asset: {
+										id: '1037',
+										name: 'Hp Model 1602',
+										description: '16gb ram'
 									},
-									"uid": "72b2b15a-784b-9c9e-962b-f03917a4ffc0",
-									"linksInfo": [],
-									"location": [],
-									"__v": 0,
-									"depth": 3,
-									"assetName": "Hp Model 1602",
-									"relations": []
+									uid: '72b2b15a-784b-9c9e-962b-f03917a4ffc0',
+									linksInfo: [],
+									location: [],
+									__v: 0,
+									depth: 3,
+									assetName: 'Hp Model 1602',
+									relations: []
 								},
 								{
-									"_id": "5c6b9b6da20186237cb2b844",
-									"links": {
-										"usedIn": [],
-										"composedOf": [
-											"a5401d12-2b5d-0cb6-4813-237cc6025c8c",
-											"231610f3-46fe-a430-fb38-4dcb22dc8383"
-										]
+									_id: '5c6b9b6da20186237cb2b844',
+									links: {
+										usedIn: [],
+										composedOf: [ 'a5401d12-2b5d-0cb6-4813-237cc6025c8c', '231610f3-46fe-a430-fb38-4dcb22dc8383' ]
 									},
-									"timestamp": "2019-02-19T04:31:30.599Z",
-									"assetModel": "any",
-									"asset": {
-										"id": "1038",
-										"name": "SOny note Model 1902",
-										"description": "16gb ram"
+									timestamp: '2019-02-19T04:31:30.599Z',
+									assetModel: 'any',
+									asset: {
+										id: '1038',
+										name: 'SOny note Model 1902',
+										description: '16gb ram'
 									},
-									"uid": "faa27ca8-e0ea-e29d-bbc9-3f9c776f34e3",
-									"linksInfo": [],
-									"location": [],
-									"__v": 0,
-									"depth": 3,
-									"assetName": "SOny note Model 1902",
-									"relations": []
+									uid: 'faa27ca8-e0ea-e29d-bbc9-3f9c776f34e3',
+									linksInfo: [],
+									location: [],
+									__v: 0,
+									depth: 3,
+									assetName: 'SOny note Model 1902',
+									relations: []
 								}
 							]
 						}
 					]
 				},
 				{
-					"_id": "5c67c03b373bbf1308176e94",
-					"links": {
-						"usedIn": [
-							"2fcea72c-bce8-0fdf-233e-d8616296d8c8",
-							"49640f04-8710-8c0c-7d4a-767f20ee9306",
-							"72b2b15a-784b-9c9e-962b-f03917a4ffc0",
-							"faa27ca8-e0ea-e29d-bbc9-3f9c776f34e3"
+					_id: '5c67c03b373bbf1308176e94',
+					links: {
+						usedIn: [
+							'2fcea72c-bce8-0fdf-233e-d8616296d8c8',
+							'49640f04-8710-8c0c-7d4a-767f20ee9306',
+							'72b2b15a-784b-9c9e-962b-f03917a4ffc0',
+							'faa27ca8-e0ea-e29d-bbc9-3f9c776f34e3'
 						],
-						"composedOf": [
-							"e370ae7b-567f-f4b5-5ee2-9a03fac6ce14"
-						]
+						composedOf: [ 'e370ae7b-567f-f4b5-5ee2-9a03fac6ce14' ]
 					},
-					"timestamp": "2019-02-16T06:18:45.551Z",
-					"assetModel": "any",
-					"asset": {
-						"id": "1030",
-						"name": "SSDX Model  1602",
-						"description": "256 gb SSD",
-						"bidId": "1003",
-						"transactionId": "1005"
+					timestamp: '2019-02-16T06:18:45.551Z',
+					assetModel: 'any',
+					asset: {
+						id: '1030',
+						name: 'SSDX Model  1602',
+						description: '256 gb SSD',
+						bidId: '1003',
+						transactionId: '1005'
 					},
-					"uid": "231610f3-46fe-a430-fb38-4dcb22dc8383",
-					"linksInfo": [],
-					"location": [],
-					"__v": 0,
-					"depth": 2,
-					"assetName": "SSDX Model  1602",
-					"relations": [
+					uid: '231610f3-46fe-a430-fb38-4dcb22dc8383',
+					linksInfo: [],
+					location: [],
+					__v: 0,
+					depth: 2,
+					assetName: 'SSDX Model  1602',
+					relations: [
 						{
-							"_id": "5c67c6c3373bbf1308176e96",
-							"links": {
-								"usedIn": [
-									"72b2b15a-784b-9c9e-962b-f03917a4ffc0"
-								],
-								"composedOf": [
-									"857cfc8c-c793-8fcf-076e-715c6bec962d",
-									"231610f3-46fe-a430-fb38-4dcb22dc8383"
-								]
+							_id: '5c67c6c3373bbf1308176e96',
+							links: {
+								usedIn: [ '72b2b15a-784b-9c9e-962b-f03917a4ffc0' ],
+								composedOf: [ '857cfc8c-c793-8fcf-076e-715c6bec962d', '231610f3-46fe-a430-fb38-4dcb22dc8383' ]
 							},
-							"timestamp": "2019-02-16T06:18:45.551Z",
-							"assetModel": "any",
-							"asset": {
-								"id": "1032",
-								"name": "Hp Castro 1602",
-								"description": "16gb ram"
+							timestamp: '2019-02-16T06:18:45.551Z',
+							assetModel: 'any',
+							asset: {
+								id: '1032',
+								name: 'Hp Castro 1602',
+								description: '16gb ram'
 							},
-							"uid": "2fcea72c-bce8-0fdf-233e-d8616296d8c8",
-							"linksInfo": [],
-							"location": [],
-							"__v": 0,
-							"depth": 3,
-							"assetName": "Hp Castro 1602",
-							"relations": [
+							uid: '2fcea72c-bce8-0fdf-233e-d8616296d8c8',
+							linksInfo: [],
+							location: [],
+							__v: 0,
+							depth: 3,
+							assetName: 'Hp Castro 1602',
+							relations: [
 								{
-									"_id": "5c6b9a15a20186237cb2b842",
-									"links": {
-										"usedIn": [],
-										"composedOf": [
-											"e01d6fb8-59c5-bd50-9518-cad3576c2fa7",
-											"231610f3-46fe-a430-fb38-4dcb22dc8383",
-											"2fcea72c-bce8-0fdf-233e-d8616296d8c8"
+									_id: '5c6b9a15a20186237cb2b842',
+									links: {
+										usedIn: [],
+										composedOf: [
+											'e01d6fb8-59c5-bd50-9518-cad3576c2fa7',
+											'231610f3-46fe-a430-fb38-4dcb22dc8383',
+											'2fcea72c-bce8-0fdf-233e-d8616296d8c8'
 										]
 									},
-									"timestamp": "2019-02-19T04:31:30.599Z",
-									"assetModel": "any",
-									"asset": {
-										"id": "1037",
-										"name": "Hp Model 1602",
-										"description": "16gb ram"
+									timestamp: '2019-02-19T04:31:30.599Z',
+									assetModel: 'any',
+									asset: {
+										id: '1037',
+										name: 'Hp Model 1602',
+										description: '16gb ram'
 									},
-									"uid": "72b2b15a-784b-9c9e-962b-f03917a4ffc0",
-									"linksInfo": [],
-									"location": [],
-									"__v": 0,
-									"depth": 3,
-									"assetName": "Hp Model 1602",
-									"relations": []
+									uid: '72b2b15a-784b-9c9e-962b-f03917a4ffc0',
+									linksInfo: [],
+									location: [],
+									__v: 0,
+									depth: 3,
+									assetName: 'Hp Model 1602',
+									relations: []
 								}
 							]
 						},
 						{
-							"_id": "5c67d401373bbf1308176e97",
-							"links": {
-								"usedIn": [],
-								"composedOf": [
-									"231610f3-46fe-a430-fb38-4dcb22dc8383",
-									"5dc05ec5-0856-dec3-0ef6-d8bf7bab912b",
-									"59fc5bd5-eaa1-d586-8191-713ca53ba44b"
+							_id: '5c67d401373bbf1308176e97',
+							links: {
+								usedIn: [],
+								composedOf: [
+									'231610f3-46fe-a430-fb38-4dcb22dc8383',
+									'5dc05ec5-0856-dec3-0ef6-d8bf7bab912b',
+									'59fc5bd5-eaa1-d586-8191-713ca53ba44b'
 								]
 							},
-							"timestamp": "2019-02-16T06:18:45.551Z",
-							"assetModel": "any",
-							"asset": {
-								"id": "1033",
-								"name": "Thinkpad Model 1602",
-								"description": "16gb ram"
+							timestamp: '2019-02-16T06:18:45.551Z',
+							assetModel: 'any',
+							asset: {
+								id: '1033',
+								name: 'Thinkpad Model 1602',
+								description: '16gb ram'
 							},
-							"uid": "49640f04-8710-8c0c-7d4a-767f20ee9306",
-							"linksInfo": [],
-							"location": [],
-							"__v": 0,
-							"depth": 3,
-							"assetName": "Thinkpad Model 1602",
-							"relations": []
+							uid: '49640f04-8710-8c0c-7d4a-767f20ee9306',
+							linksInfo: [],
+							location: [],
+							__v: 0,
+							depth: 3,
+							assetName: 'Thinkpad Model 1602',
+							relations: []
 						},
 						{
-							"_id": "5c6b9a15a20186237cb2b842",
-							"links": {
-								"usedIn": [],
-								"composedOf": [
-									"e01d6fb8-59c5-bd50-9518-cad3576c2fa7",
-									"231610f3-46fe-a430-fb38-4dcb22dc8383",
-									"2fcea72c-bce8-0fdf-233e-d8616296d8c8"
+							_id: '5c6b9a15a20186237cb2b842',
+							links: {
+								usedIn: [],
+								composedOf: [
+									'e01d6fb8-59c5-bd50-9518-cad3576c2fa7',
+									'231610f3-46fe-a430-fb38-4dcb22dc8383',
+									'2fcea72c-bce8-0fdf-233e-d8616296d8c8'
 								]
 							},
-							"timestamp": "2019-02-19T04:31:30.599Z",
-							"assetModel": "any",
-							"asset": {
-								"id": "1037",
-								"name": "Hp Model 1602",
-								"description": "16gb ram"
+							timestamp: '2019-02-19T04:31:30.599Z',
+							assetModel: 'any',
+							asset: {
+								id: '1037',
+								name: 'Hp Model 1602',
+								description: '16gb ram'
 							},
-							"uid": "72b2b15a-784b-9c9e-962b-f03917a4ffc0",
-							"linksInfo": [],
-							"location": [],
-							"__v": 0,
-							"depth": 3,
-							"assetName": "Hp Model 1602",
-							"relations": []
+							uid: '72b2b15a-784b-9c9e-962b-f03917a4ffc0',
+							linksInfo: [],
+							location: [],
+							__v: 0,
+							depth: 3,
+							assetName: 'Hp Model 1602',
+							relations: []
 						},
 						{
-							"_id": "5c6b9b6da20186237cb2b844",
-							"links": {
-								"usedIn": [],
-								"composedOf": [
-									"a5401d12-2b5d-0cb6-4813-237cc6025c8c",
-									"231610f3-46fe-a430-fb38-4dcb22dc8383"
-								]
+							_id: '5c6b9b6da20186237cb2b844',
+							links: {
+								usedIn: [],
+								composedOf: [ 'a5401d12-2b5d-0cb6-4813-237cc6025c8c', '231610f3-46fe-a430-fb38-4dcb22dc8383' ]
 							},
-							"timestamp": "2019-02-19T04:31:30.599Z",
-							"assetModel": "any",
-							"asset": {
-								"id": "1038",
-								"name": "SOny note Model 1902",
-								"description": "16gb ram"
+							timestamp: '2019-02-19T04:31:30.599Z',
+							assetModel: 'any',
+							asset: {
+								id: '1038',
+								name: 'SOny note Model 1902',
+								description: '16gb ram'
 							},
-							"uid": "faa27ca8-e0ea-e29d-bbc9-3f9c776f34e3",
-							"linksInfo": [],
-							"location": [],
-							"__v": 0,
-							"depth": 3,
-							"assetName": "SOny note Model 1902",
-							"relations": []
+							uid: 'faa27ca8-e0ea-e29d-bbc9-3f9c776f34e3',
+							linksInfo: [],
+							location: [],
+							__v: 0,
+							depth: 3,
+							assetName: 'SOny note Model 1902',
+							relations: []
 						}
 					]
 				},
 				{
-					"_id": "5c6a992a737ff329ec202c74",
-					"links": {
-						"usedIn": [
-							"e370ae7b-567f-f4b5-5ee2-9a03fac6ce14"
-						],
-						"composedOf": [
-							"a4ce7289-0887-f090-dfe8-0c59827b4dcf",
-							"61f11f9e-7040-a5a8-1a90-615c2fde4eda",
-							"857cfc8c-c793-8fcf-076e-715c6bec962d"
+					_id: '5c6a992a737ff329ec202c74',
+					links: {
+						usedIn: [ 'e370ae7b-567f-f4b5-5ee2-9a03fac6ce14' ],
+						composedOf: [
+							'a4ce7289-0887-f090-dfe8-0c59827b4dcf',
+							'61f11f9e-7040-a5a8-1a90-615c2fde4eda',
+							'857cfc8c-c793-8fcf-076e-715c6bec962d'
 						]
 					},
-					"timestamp": "2019-02-18T11:14:31.836Z",
-					"assetModel": "any",
-					"asset": {
-						"id": "1034",
-						"name": "ram 11",
-						"description": "fsfda",
-						"bidId": "1004",
-						"transactionId": "1006"
+					timestamp: '2019-02-18T11:14:31.836Z',
+					assetModel: 'any',
+					asset: {
+						id: '1034',
+						name: 'ram 11',
+						description: 'fsfda',
+						bidId: '1004',
+						transactionId: '1006'
 					},
-					"uid": "3b8945c3-38ca-a5c7-fcfa-91eb7e23773e",
-					"linksInfo": [],
-					"location": [],
-					"__v": 0,
-					"depth": 0,
-					"assetName": "ram 11",
-					"relations": [
+					uid: '3b8945c3-38ca-a5c7-fcfa-91eb7e23773e',
+					linksInfo: [],
+					location: [],
+					__v: 0,
+					depth: 0,
+					assetName: 'ram 11',
+					relations: [
 						{
-							"_id": "5c6a9b7a737ff329ec202c78",
-							"links": {
-								"usedIn": [
-									"231610f3-46fe-a430-fb38-4dcb22dc8383"
-								],
-								"composedOf": [
-									"95afd652-7aeb-28e9-b667-167af413d297",
-									"3b8945c3-38ca-a5c7-fcfa-91eb7e23773e"
-								]
+							_id: '5c6a9b7a737ff329ec202c78',
+							links: {
+								usedIn: [ '231610f3-46fe-a430-fb38-4dcb22dc8383' ],
+								composedOf: [ '95afd652-7aeb-28e9-b667-167af413d297', '3b8945c3-38ca-a5c7-fcfa-91eb7e23773e' ]
 							},
-							"timestamp": "2019-02-18T11:14:31.836Z",
-							"assetModel": "any",
-							"asset": {
-								"id": "1036",
-								"name": "dell 11",
-								"description": "dcsd"
+							timestamp: '2019-02-18T11:14:31.836Z',
+							assetModel: 'any',
+							asset: {
+								id: '1036',
+								name: 'dell 11',
+								description: 'dcsd'
 							},
-							"uid": "e370ae7b-567f-f4b5-5ee2-9a03fac6ce14",
-							"linksInfo": [],
-							"location": [],
-							"__v": 0,
-							"depth": 1,
-							"assetName": "dell 11",
-							"relations": [
+							uid: 'e370ae7b-567f-f4b5-5ee2-9a03fac6ce14',
+							linksInfo: [],
+							location: [],
+							__v: 0,
+							depth: 1,
+							assetName: 'dell 11',
+							relations: [
 								{
-									"_id": "5c67c03b373bbf1308176e94",
-									"links": {
-										"usedIn": [
-											"2fcea72c-bce8-0fdf-233e-d8616296d8c8",
-											"49640f04-8710-8c0c-7d4a-767f20ee9306",
-											"72b2b15a-784b-9c9e-962b-f03917a4ffc0",
-											"faa27ca8-e0ea-e29d-bbc9-3f9c776f34e3"
+									_id: '5c67c03b373bbf1308176e94',
+									links: {
+										usedIn: [
+											'2fcea72c-bce8-0fdf-233e-d8616296d8c8',
+											'49640f04-8710-8c0c-7d4a-767f20ee9306',
+											'72b2b15a-784b-9c9e-962b-f03917a4ffc0',
+											'faa27ca8-e0ea-e29d-bbc9-3f9c776f34e3'
 										],
-										"composedOf": [
-											"e370ae7b-567f-f4b5-5ee2-9a03fac6ce14"
-										]
+										composedOf: [ 'e370ae7b-567f-f4b5-5ee2-9a03fac6ce14' ]
 									},
-									"timestamp": "2019-02-16T06:18:45.551Z",
-									"assetModel": "any",
-									"asset": {
-										"id": "1030",
-										"name": "SSDX Model  1602",
-										"description": "256 gb SSD",
-										"bidId": "1003",
-										"transactionId": "1005"
+									timestamp: '2019-02-16T06:18:45.551Z',
+									assetModel: 'any',
+									asset: {
+										id: '1030',
+										name: 'SSDX Model  1602',
+										description: '256 gb SSD',
+										bidId: '1003',
+										transactionId: '1005'
 									},
-									"uid": "231610f3-46fe-a430-fb38-4dcb22dc8383",
-									"linksInfo": [],
-									"location": [],
-									"__v": 0,
-									"depth": 2,
-									"assetName": "SSDX Model  1602",
-									"relations": [
+									uid: '231610f3-46fe-a430-fb38-4dcb22dc8383',
+									linksInfo: [],
+									location: [],
+									__v: 0,
+									depth: 2,
+									assetName: 'SSDX Model  1602',
+									relations: [
 										{
-											"_id": "5c67c6c3373bbf1308176e96",
-											"links": {
-												"usedIn": [
-													"72b2b15a-784b-9c9e-962b-f03917a4ffc0"
-												],
-												"composedOf": [
-													"857cfc8c-c793-8fcf-076e-715c6bec962d",
-													"231610f3-46fe-a430-fb38-4dcb22dc8383"
-												]
+											_id: '5c67c6c3373bbf1308176e96',
+											links: {
+												usedIn: [ '72b2b15a-784b-9c9e-962b-f03917a4ffc0' ],
+												composedOf: [ '857cfc8c-c793-8fcf-076e-715c6bec962d', '231610f3-46fe-a430-fb38-4dcb22dc8383' ]
 											},
-											"timestamp": "2019-02-16T06:18:45.551Z",
-											"assetModel": "any",
-											"asset": {
-												"id": "1032",
-												"name": "Hp Castro 1602",
-												"description": "16gb ram"
+											timestamp: '2019-02-16T06:18:45.551Z',
+											assetModel: 'any',
+											asset: {
+												id: '1032',
+												name: 'Hp Castro 1602',
+												description: '16gb ram'
 											},
-											"uid": "2fcea72c-bce8-0fdf-233e-d8616296d8c8",
-											"linksInfo": [],
-											"location": [],
-											"__v": 0,
-											"depth": 3,
-											"assetName": "Hp Castro 1602",
-											"relations": [
+											uid: '2fcea72c-bce8-0fdf-233e-d8616296d8c8',
+											linksInfo: [],
+											location: [],
+											__v: 0,
+											depth: 3,
+											assetName: 'Hp Castro 1602',
+											relations: [
 												{
-													"_id": "5c6b9a15a20186237cb2b842",
-													"links": {
-														"usedIn": [],
-														"composedOf": [
-															"e01d6fb8-59c5-bd50-9518-cad3576c2fa7",
-															"231610f3-46fe-a430-fb38-4dcb22dc8383",
-															"2fcea72c-bce8-0fdf-233e-d8616296d8c8"
+													_id: '5c6b9a15a20186237cb2b842',
+													links: {
+														usedIn: [],
+														composedOf: [
+															'e01d6fb8-59c5-bd50-9518-cad3576c2fa7',
+															'231610f3-46fe-a430-fb38-4dcb22dc8383',
+															'2fcea72c-bce8-0fdf-233e-d8616296d8c8'
 														]
 													},
-													"timestamp": "2019-02-19T04:31:30.599Z",
-													"assetModel": "any",
-													"asset": {
-														"id": "1037",
-														"name": "Hp Model 1602",
-														"description": "16gb ram"
+													timestamp: '2019-02-19T04:31:30.599Z',
+													assetModel: 'any',
+													asset: {
+														id: '1037',
+														name: 'Hp Model 1602',
+														description: '16gb ram'
 													},
-													"uid": "72b2b15a-784b-9c9e-962b-f03917a4ffc0",
-													"linksInfo": [],
-													"location": [],
-													"__v": 0,
-													"depth": 3,
-													"assetName": "Hp Model 1602",
-													"relations": []
+													uid: '72b2b15a-784b-9c9e-962b-f03917a4ffc0',
+													linksInfo: [],
+													location: [],
+													__v: 0,
+													depth: 3,
+													assetName: 'Hp Model 1602',
+													relations: []
 												}
 											]
 										},
 										{
-											"_id": "5c67d401373bbf1308176e97",
-											"links": {
-												"usedIn": [],
-												"composedOf": [
-													"231610f3-46fe-a430-fb38-4dcb22dc8383",
-													"5dc05ec5-0856-dec3-0ef6-d8bf7bab912b",
-													"59fc5bd5-eaa1-d586-8191-713ca53ba44b"
+											_id: '5c67d401373bbf1308176e97',
+											links: {
+												usedIn: [],
+												composedOf: [
+													'231610f3-46fe-a430-fb38-4dcb22dc8383',
+													'5dc05ec5-0856-dec3-0ef6-d8bf7bab912b',
+													'59fc5bd5-eaa1-d586-8191-713ca53ba44b'
 												]
 											},
-											"timestamp": "2019-02-16T06:18:45.551Z",
-											"assetModel": "any",
-											"asset": {
-												"id": "1033",
-												"name": "Thinkpad Model 1602",
-												"description": "16gb ram"
+											timestamp: '2019-02-16T06:18:45.551Z',
+											assetModel: 'any',
+											asset: {
+												id: '1033',
+												name: 'Thinkpad Model 1602',
+												description: '16gb ram'
 											},
-											"uid": "49640f04-8710-8c0c-7d4a-767f20ee9306",
-											"linksInfo": [],
-											"location": [],
-											"__v": 0,
-											"depth": 3,
-											"assetName": "Thinkpad Model 1602",
-											"relations": []
+											uid: '49640f04-8710-8c0c-7d4a-767f20ee9306',
+											linksInfo: [],
+											location: [],
+											__v: 0,
+											depth: 3,
+											assetName: 'Thinkpad Model 1602',
+											relations: []
 										},
 										{
-											"_id": "5c6b9a15a20186237cb2b842",
-											"links": {
-												"usedIn": [],
-												"composedOf": [
-													"e01d6fb8-59c5-bd50-9518-cad3576c2fa7",
-													"231610f3-46fe-a430-fb38-4dcb22dc8383",
-													"2fcea72c-bce8-0fdf-233e-d8616296d8c8"
+											_id: '5c6b9a15a20186237cb2b842',
+											links: {
+												usedIn: [],
+												composedOf: [
+													'e01d6fb8-59c5-bd50-9518-cad3576c2fa7',
+													'231610f3-46fe-a430-fb38-4dcb22dc8383',
+													'2fcea72c-bce8-0fdf-233e-d8616296d8c8'
 												]
 											},
-											"timestamp": "2019-02-19T04:31:30.599Z",
-											"assetModel": "any",
-											"asset": {
-												"id": "1037",
-												"name": "Hp Model 1602",
-												"description": "16gb ram"
+											timestamp: '2019-02-19T04:31:30.599Z',
+											assetModel: 'any',
+											asset: {
+												id: '1037',
+												name: 'Hp Model 1602',
+												description: '16gb ram'
 											},
-											"uid": "72b2b15a-784b-9c9e-962b-f03917a4ffc0",
-											"linksInfo": [],
-											"location": [],
-											"__v": 0,
-											"depth": 3,
-											"assetName": "Hp Model 1602",
-											"relations": []
+											uid: '72b2b15a-784b-9c9e-962b-f03917a4ffc0',
+											linksInfo: [],
+											location: [],
+											__v: 0,
+											depth: 3,
+											assetName: 'Hp Model 1602',
+											relations: []
 										},
 										{
-											"_id": "5c6b9b6da20186237cb2b844",
-											"links": {
-												"usedIn": [],
-												"composedOf": [
-													"a5401d12-2b5d-0cb6-4813-237cc6025c8c",
-													"231610f3-46fe-a430-fb38-4dcb22dc8383"
-												]
+											_id: '5c6b9b6da20186237cb2b844',
+											links: {
+												usedIn: [],
+												composedOf: [ 'a5401d12-2b5d-0cb6-4813-237cc6025c8c', '231610f3-46fe-a430-fb38-4dcb22dc8383' ]
 											},
-											"timestamp": "2019-02-19T04:31:30.599Z",
-											"assetModel": "any",
-											"asset": {
-												"id": "1038",
-												"name": "SOny note Model 1902",
-												"description": "16gb ram"
+											timestamp: '2019-02-19T04:31:30.599Z',
+											assetModel: 'any',
+											asset: {
+												id: '1038',
+												name: 'SOny note Model 1902',
+												description: '16gb ram'
 											},
-											"uid": "faa27ca8-e0ea-e29d-bbc9-3f9c776f34e3",
-											"linksInfo": [],
-											"location": [],
-											"__v": 0,
-											"depth": 3,
-											"assetName": "SOny note Model 1902",
-											"relations": []
+											uid: 'faa27ca8-e0ea-e29d-bbc9-3f9c776f34e3',
+											linksInfo: [],
+											location: [],
+											__v: 0,
+											depth: 3,
+											assetName: 'SOny note Model 1902',
+											relations: []
 										}
 									]
 								}
@@ -2953,223 +2899,202 @@ export class AppComponent {
 					]
 				}
 			],
-			"links": {
-				"usedIn": [
-					"3b8945c3-38ca-a5c7-fcfa-91eb7e23773e"
-				],
-				"composedOf": [
-					"95afd652-7aeb-28e9-b667-167af413d297"
-				]
+			links: {
+				usedIn: [ '3b8945c3-38ca-a5c7-fcfa-91eb7e23773e' ],
+				composedOf: [ '95afd652-7aeb-28e9-b667-167af413d297' ]
 			},
-			"assetName": "ssd 11",
-			"relations": [
+			assetName: 'ssd 11',
+			relations: [
 				{
-					"_id": "5c6a992a737ff329ec202c74",
-					"links": {
-						"usedIn": [
-							"e370ae7b-567f-f4b5-5ee2-9a03fac6ce14"
-						],
-						"composedOf": [
-							"a4ce7289-0887-f090-dfe8-0c59827b4dcf",
-							"61f11f9e-7040-a5a8-1a90-615c2fde4eda",
-							"857cfc8c-c793-8fcf-076e-715c6bec962d"
+					_id: '5c6a992a737ff329ec202c74',
+					links: {
+						usedIn: [ 'e370ae7b-567f-f4b5-5ee2-9a03fac6ce14' ],
+						composedOf: [
+							'a4ce7289-0887-f090-dfe8-0c59827b4dcf',
+							'61f11f9e-7040-a5a8-1a90-615c2fde4eda',
+							'857cfc8c-c793-8fcf-076e-715c6bec962d'
 						]
 					},
-					"timestamp": "2019-02-18T11:14:31.836Z",
-					"assetModel": "any",
-					"asset": {
-						"id": "1034",
-						"name": "ram 11",
-						"description": "fsfda",
-						"bidId": "1004",
-						"transactionId": "1006"
+					timestamp: '2019-02-18T11:14:31.836Z',
+					assetModel: 'any',
+					asset: {
+						id: '1034',
+						name: 'ram 11',
+						description: 'fsfda',
+						bidId: '1004',
+						transactionId: '1006'
 					},
-					"uid": "3b8945c3-38ca-a5c7-fcfa-91eb7e23773e",
-					"linksInfo": [],
-					"location": [],
-					"__v": 0,
-					"depth": 0,
-					"assetName": "ram 11",
-					"relations": [
+					uid: '3b8945c3-38ca-a5c7-fcfa-91eb7e23773e',
+					linksInfo: [],
+					location: [],
+					__v: 0,
+					depth: 0,
+					assetName: 'ram 11',
+					relations: [
 						{
-							"_id": "5c6a9b7a737ff329ec202c78",
-							"links": {
-								"usedIn": [
-									"231610f3-46fe-a430-fb38-4dcb22dc8383"
-								],
-								"composedOf": [
-									"95afd652-7aeb-28e9-b667-167af413d297",
-									"3b8945c3-38ca-a5c7-fcfa-91eb7e23773e"
-								]
+							_id: '5c6a9b7a737ff329ec202c78',
+							links: {
+								usedIn: [ '231610f3-46fe-a430-fb38-4dcb22dc8383' ],
+								composedOf: [ '95afd652-7aeb-28e9-b667-167af413d297', '3b8945c3-38ca-a5c7-fcfa-91eb7e23773e' ]
 							},
-							"timestamp": "2019-02-18T11:14:31.836Z",
-							"assetModel": "any",
-							"asset": {
-								"id": "1036",
-								"name": "dell 11",
-								"description": "dcsd"
+							timestamp: '2019-02-18T11:14:31.836Z',
+							assetModel: 'any',
+							asset: {
+								id: '1036',
+								name: 'dell 11',
+								description: 'dcsd'
 							},
-							"uid": "e370ae7b-567f-f4b5-5ee2-9a03fac6ce14",
-							"linksInfo": [],
-							"location": [],
-							"__v": 0,
-							"depth": 1,
-							"assetName": "dell 11",
-							"relations": [
+							uid: 'e370ae7b-567f-f4b5-5ee2-9a03fac6ce14',
+							linksInfo: [],
+							location: [],
+							__v: 0,
+							depth: 1,
+							assetName: 'dell 11',
+							relations: [
 								{
-									"_id": "5c67c03b373bbf1308176e94",
-									"links": {
-										"usedIn": [
-											"2fcea72c-bce8-0fdf-233e-d8616296d8c8",
-											"49640f04-8710-8c0c-7d4a-767f20ee9306",
-											"72b2b15a-784b-9c9e-962b-f03917a4ffc0",
-											"faa27ca8-e0ea-e29d-bbc9-3f9c776f34e3"
+									_id: '5c67c03b373bbf1308176e94',
+									links: {
+										usedIn: [
+											'2fcea72c-bce8-0fdf-233e-d8616296d8c8',
+											'49640f04-8710-8c0c-7d4a-767f20ee9306',
+											'72b2b15a-784b-9c9e-962b-f03917a4ffc0',
+											'faa27ca8-e0ea-e29d-bbc9-3f9c776f34e3'
 										],
-										"composedOf": [
-											"e370ae7b-567f-f4b5-5ee2-9a03fac6ce14"
-										]
+										composedOf: [ 'e370ae7b-567f-f4b5-5ee2-9a03fac6ce14' ]
 									},
-									"timestamp": "2019-02-16T06:18:45.551Z",
-									"assetModel": "any",
-									"asset": {
-										"id": "1030",
-										"name": "SSDX Model  1602",
-										"description": "256 gb SSD",
-										"bidId": "1003",
-										"transactionId": "1005"
+									timestamp: '2019-02-16T06:18:45.551Z',
+									assetModel: 'any',
+									asset: {
+										id: '1030',
+										name: 'SSDX Model  1602',
+										description: '256 gb SSD',
+										bidId: '1003',
+										transactionId: '1005'
 									},
-									"uid": "231610f3-46fe-a430-fb38-4dcb22dc8383",
-									"linksInfo": [],
-									"location": [],
-									"__v": 0,
-									"depth": 2,
-									"assetName": "SSDX Model  1602",
-									"relations": [
+									uid: '231610f3-46fe-a430-fb38-4dcb22dc8383',
+									linksInfo: [],
+									location: [],
+									__v: 0,
+									depth: 2,
+									assetName: 'SSDX Model  1602',
+									relations: [
 										{
-											"_id": "5c67c6c3373bbf1308176e96",
-											"links": {
-												"usedIn": [
-													"72b2b15a-784b-9c9e-962b-f03917a4ffc0"
-												],
-												"composedOf": [
-													"857cfc8c-c793-8fcf-076e-715c6bec962d",
-													"231610f3-46fe-a430-fb38-4dcb22dc8383"
-												]
+											_id: '5c67c6c3373bbf1308176e96',
+											links: {
+												usedIn: [ '72b2b15a-784b-9c9e-962b-f03917a4ffc0' ],
+												composedOf: [ '857cfc8c-c793-8fcf-076e-715c6bec962d', '231610f3-46fe-a430-fb38-4dcb22dc8383' ]
 											},
-											"timestamp": "2019-02-16T06:18:45.551Z",
-											"assetModel": "any",
-											"asset": {
-												"id": "1032",
-												"name": "Hp Castro 1602",
-												"description": "16gb ram"
+											timestamp: '2019-02-16T06:18:45.551Z',
+											assetModel: 'any',
+											asset: {
+												id: '1032',
+												name: 'Hp Castro 1602',
+												description: '16gb ram'
 											},
-											"uid": "2fcea72c-bce8-0fdf-233e-d8616296d8c8",
-											"linksInfo": [],
-											"location": [],
-											"__v": 0,
-											"depth": 3,
-											"assetName": "Hp Castro 1602",
-											"relations": [
+											uid: '2fcea72c-bce8-0fdf-233e-d8616296d8c8',
+											linksInfo: [],
+											location: [],
+											__v: 0,
+											depth: 3,
+											assetName: 'Hp Castro 1602',
+											relations: [
 												{
-													"_id": "5c6b9a15a20186237cb2b842",
-													"links": {
-														"usedIn": [],
-														"composedOf": [
-															"e01d6fb8-59c5-bd50-9518-cad3576c2fa7",
-															"231610f3-46fe-a430-fb38-4dcb22dc8383",
-															"2fcea72c-bce8-0fdf-233e-d8616296d8c8"
+													_id: '5c6b9a15a20186237cb2b842',
+													links: {
+														usedIn: [],
+														composedOf: [
+															'e01d6fb8-59c5-bd50-9518-cad3576c2fa7',
+															'231610f3-46fe-a430-fb38-4dcb22dc8383',
+															'2fcea72c-bce8-0fdf-233e-d8616296d8c8'
 														]
 													},
-													"timestamp": "2019-02-19T04:31:30.599Z",
-													"assetModel": "any",
-													"asset": {
-														"id": "1037",
-														"name": "Hp Model 1602",
-														"description": "16gb ram"
+													timestamp: '2019-02-19T04:31:30.599Z',
+													assetModel: 'any',
+													asset: {
+														id: '1037',
+														name: 'Hp Model 1602',
+														description: '16gb ram'
 													},
-													"uid": "72b2b15a-784b-9c9e-962b-f03917a4ffc0",
-													"linksInfo": [],
-													"location": [],
-													"__v": 0,
-													"depth": 3,
-													"assetName": "Hp Model 1602",
-													"relations": []
+													uid: '72b2b15a-784b-9c9e-962b-f03917a4ffc0',
+													linksInfo: [],
+													location: [],
+													__v: 0,
+													depth: 3,
+													assetName: 'Hp Model 1602',
+													relations: []
 												}
 											]
 										},
 										{
-											"_id": "5c67d401373bbf1308176e97",
-											"links": {
-												"usedIn": [],
-												"composedOf": [
-													"231610f3-46fe-a430-fb38-4dcb22dc8383",
-													"5dc05ec5-0856-dec3-0ef6-d8bf7bab912b",
-													"59fc5bd5-eaa1-d586-8191-713ca53ba44b"
+											_id: '5c67d401373bbf1308176e97',
+											links: {
+												usedIn: [],
+												composedOf: [
+													'231610f3-46fe-a430-fb38-4dcb22dc8383',
+													'5dc05ec5-0856-dec3-0ef6-d8bf7bab912b',
+													'59fc5bd5-eaa1-d586-8191-713ca53ba44b'
 												]
 											},
-											"timestamp": "2019-02-16T06:18:45.551Z",
-											"assetModel": "any",
-											"asset": {
-												"id": "1033",
-												"name": "Thinkpad Model 1602",
-												"description": "16gb ram"
+											timestamp: '2019-02-16T06:18:45.551Z',
+											assetModel: 'any',
+											asset: {
+												id: '1033',
+												name: 'Thinkpad Model 1602',
+												description: '16gb ram'
 											},
-											"uid": "49640f04-8710-8c0c-7d4a-767f20ee9306",
-											"linksInfo": [],
-											"location": [],
-											"__v": 0,
-											"depth": 3,
-											"assetName": "Thinkpad Model 1602",
-											"relations": []
+											uid: '49640f04-8710-8c0c-7d4a-767f20ee9306',
+											linksInfo: [],
+											location: [],
+											__v: 0,
+											depth: 3,
+											assetName: 'Thinkpad Model 1602',
+											relations: []
 										},
 										{
-											"_id": "5c6b9a15a20186237cb2b842",
-											"links": {
-												"usedIn": [],
-												"composedOf": [
-													"e01d6fb8-59c5-bd50-9518-cad3576c2fa7",
-													"231610f3-46fe-a430-fb38-4dcb22dc8383",
-													"2fcea72c-bce8-0fdf-233e-d8616296d8c8"
+											_id: '5c6b9a15a20186237cb2b842',
+											links: {
+												usedIn: [],
+												composedOf: [
+													'e01d6fb8-59c5-bd50-9518-cad3576c2fa7',
+													'231610f3-46fe-a430-fb38-4dcb22dc8383',
+													'2fcea72c-bce8-0fdf-233e-d8616296d8c8'
 												]
 											},
-											"timestamp": "2019-02-19T04:31:30.599Z",
-											"assetModel": "any",
-											"asset": {
-												"id": "1037",
-												"name": "Hp Model 1602",
-												"description": "16gb ram"
+											timestamp: '2019-02-19T04:31:30.599Z',
+											assetModel: 'any',
+											asset: {
+												id: '1037',
+												name: 'Hp Model 1602',
+												description: '16gb ram'
 											},
-											"uid": "72b2b15a-784b-9c9e-962b-f03917a4ffc0",
-											"linksInfo": [],
-											"location": [],
-											"__v": 0,
-											"depth": 3,
-											"assetName": "Hp Model 1602",
-											"relations": []
+											uid: '72b2b15a-784b-9c9e-962b-f03917a4ffc0',
+											linksInfo: [],
+											location: [],
+											__v: 0,
+											depth: 3,
+											assetName: 'Hp Model 1602',
+											relations: []
 										},
 										{
-											"_id": "5c6b9b6da20186237cb2b844",
-											"links": {
-												"usedIn": [],
-												"composedOf": [
-													"a5401d12-2b5d-0cb6-4813-237cc6025c8c",
-													"231610f3-46fe-a430-fb38-4dcb22dc8383"
-												]
+											_id: '5c6b9b6da20186237cb2b844',
+											links: {
+												usedIn: [],
+												composedOf: [ 'a5401d12-2b5d-0cb6-4813-237cc6025c8c', '231610f3-46fe-a430-fb38-4dcb22dc8383' ]
 											},
-											"timestamp": "2019-02-19T04:31:30.599Z",
-											"assetModel": "any",
-											"asset": {
-												"id": "1038",
-												"name": "SOny note Model 1902",
-												"description": "16gb ram"
+											timestamp: '2019-02-19T04:31:30.599Z',
+											assetModel: 'any',
+											asset: {
+												id: '1038',
+												name: 'SOny note Model 1902',
+												description: '16gb ram'
 											},
-											"uid": "faa27ca8-e0ea-e29d-bbc9-3f9c776f34e3",
-											"linksInfo": [],
-											"location": [],
-											"__v": 0,
-											"depth": 3,
-											"assetName": "SOny note Model 1902",
-											"relations": []
+											uid: 'faa27ca8-e0ea-e29d-bbc9-3f9c776f34e3',
+											linksInfo: [],
+											location: [],
+											__v: 0,
+											depth: 3,
+											assetName: 'SOny note Model 1902',
+											relations: []
 										}
 									]
 								}
@@ -3178,9 +3103,9 @@ export class AppComponent {
 					]
 				}
 			],
-			"depth": -1
+			depth: -1
 		}
-	]
+	];
 	selected = '1';
 	options = [
 		{
@@ -3200,9 +3125,39 @@ export class AppComponent {
 		}
 	];
 	relation: any;
-	transactionHistory = [{"id":"632a2614-3d55-e911-8117-e30af325cbc3","status":"cancelled","amount":"80.00","created":"2019-04-02T11:47:26.507Z","completedOn":"","accountName":"Bryce ","counterParty":"","type":"","individualAchId":"ID7JNK7A"},
-	{"id":"682a2614-3d55-e911-8117-e30af325cbc3","status":"pending","amount":"80.00","created":"2019-04-02T11:47:26.243Z","completedOn":"","accountName":"Bryce 190b3d93-2d4f-4b2b-93ed-df10acdbe096","counterParty":"ImpactRanching","type":"outgoing"},
-	{"id":"ebd133b2-3c55-e911-8117-e30af325cbc3","status":"pending","amount":"200.00","created":"2019-04-02T11:44:39.750Z","completedOn":"","accountName":"Bryce c9354fe7-dbea-45a5-8c81-730b3a0f0e56","counterParty":"Smartrac","type":"incoming"}]
+	transactionHistory = [
+		{
+			id: '632a2614-3d55-e911-8117-e30af325cbc3',
+			status: 'cancelled',
+			amount: '80.00',
+			created: '2019-04-02T11:47:26.507Z',
+			completedOn: '',
+			accountName: 'Bryce ',
+			counterParty: '',
+			type: '',
+			individualAchId: 'ID7JNK7A'
+		},
+		{
+			id: '682a2614-3d55-e911-8117-e30af325cbc3',
+			status: 'pending',
+			amount: '80.00',
+			created: '2019-04-02T11:47:26.243Z',
+			completedOn: '',
+			accountName: 'Bryce 190b3d93-2d4f-4b2b-93ed-df10acdbe096',
+			counterParty: 'ImpactRanching',
+			type: 'outgoing'
+		},
+		{
+			id: 'ebd133b2-3c55-e911-8117-e30af325cbc3',
+			status: 'pending',
+			amount: '200.00',
+			created: '2019-04-02T11:44:39.750Z',
+			completedOn: '',
+			accountName: 'Bryce c9354fe7-dbea-45a5-8c81-730b3a0f0e56',
+			counterParty: 'Smartrac',
+			type: 'incoming'
+		}
+	];
 
 	constructor() {
 		const imageUrl =
@@ -3223,8 +3178,6 @@ export class AppComponent {
 			this.response = this.usedIn;
 		}
 	}
-
-
 
 	getBase64ImageFromURL(url: string) {
 		return Observable.create((observer: Observer<string>) => {

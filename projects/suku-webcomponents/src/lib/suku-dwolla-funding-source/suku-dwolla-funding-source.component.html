@@ -1,6 +1,12 @@
 <div class="col p-2">
-    <div id="mainContainer">
-      <input type="button" class="suku-button" id="start" (click)="getDwollaHtml()" value="Add Bank">
-    </div>
-    <div id="iavContainer" class="bg m-3"></div>
+  <div id="mainContainer">
+    <p class="mt-2 note pl-3 text-center"><b>Note:</b> Adding a funding resource requires a third-party UI, which may
+      take a few moments to load.</p>
   </div>
+  <div class="col pt-3 pb-2 bg m-3">
+    <div id="iavContainer"></div>
+    <div class="col text-center pb-4">
+      <button class="suku-button" (click)="action.emit()" *ngIf="enable?.button ">Return to Funding Sources</button>
+    </div>
+  </div>
+</div>

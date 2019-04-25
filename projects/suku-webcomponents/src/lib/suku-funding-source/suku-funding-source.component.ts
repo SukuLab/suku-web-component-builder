@@ -1,36 +1,55 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
-  selector: 'suku-funding-source',
-  templateUrl: './suku-funding-source.component.html',
-  styleUrls: ['./suku-funding-source.component.scss']
+	selector: 'suku-funding-source',
+	templateUrl: './suku-funding-source.component.html',
+	styleUrls: [ './suku-funding-source.component.scss' ]
 })
 export class SukuFundingSourceComponent implements OnInit {
+	@Input() fundingDetails = [];
+	@Input()
+	loader = {
+		diameter: 55,
+		loaderMessage: 'Please wait...'
+	};
+	@Input()
+	fundingSourceLabel = {
+		labelOne: 'Funding Sources',
+		labelOneId: 'fundingSources',
+		labelTwo: 'Default Funding Sources:',
+		labelTwoId: 'defaultFundingSources:',
+		labelThree: 'Current Funding Sources',
+		labelThreeId: 'currentFundingSources',
+		labelFour: 'No Funding Source Added!',
+		labelFourId: 'noFundingSourceAdded!',
+		labelFive: 'Default',
+		labelFiveId: 'Default'
+	};
+	@Input()
+	fundingSourceWidgetLabel = {
+		labelOne: 'ACH Wallet',
+		labelOneId: 'ACHWallet',
+		labelTwo: 'Balance:',
+		labelTwoId: 'Balance:'
+	};
+	@Input()
+	fundingSourceWidgetButtonLabel = {
+		labelOne: 'Remove',
+		labelOneId: 'Remove',
+		labelTwo: 'Make Default:',
+		labelTwoId: 'Make Default:',
+		labelThree: 'Transfer Balance',
+		labelThreeId: 'Make Default:'
+	};
+	@Input() contentOne = '';
 
-  constructor() { }
-  @Input() fundingDetails = [];
-  @Input() defaultText = 'Default';
-  @Input() defaultbankName = 'Bank Name';
-  @Input() defaultBtnTxt = 'Make Default';
-  @Input() removeBtnTxt = 'Remove';
-  @Input() defaultBtnId = 'defaultBtnId';
-  @Input() removeBtnId = 'removeBtnId';
-  @Input() defaultRemoveBtnTxt = 'Remove';
-  @Input() achWalletTxt = 'ACH Wallet';
-  @Input() balanceLblTxt = 'Balance';
-  @Input() achMakeDefaultBtnText = 'Make Default';
-  @Input() achMakeDefaultBtnId = 'achMakeDefaultBtnId';
-  @Input() DefaultaccountNumber = 'XXXXXX0220';
-  @Input() WalletBalance = 0.000;
-  @Input() defaultRemoveBtnId = 'defaultRemoveBtnId';
-  @Input() transferFundId = 'transferFundId';
-  @Input() transferFundTxt = 'Transfer Balance';
-  @Output() removeDefault = new EventEmitter();
-  @Output() makeDefaultAction = new EventEmitter();
-  @Output() removeSourceAction = new EventEmitter();
-  @Output() transferFundAction = new EventEmitter();
-  @Output() addSource = new EventEmitter();
-  ngOnInit() {
-  }
+	/* output--actions */
+	@Output() removeDefault = new EventEmitter();
+	@Output() makeDefaultAction = new EventEmitter();
+	@Output() removeSourceAction = new EventEmitter();
+	@Output() transferFundAction = new EventEmitter();
+	@Output() addSource = new EventEmitter();
 
+	constructor() {}
+	ngOnInit() {}
 }

@@ -7,25 +7,52 @@ import { MatSnackBar } from '@angular/material';
 	styleUrls: [ './suku-dwolla-funding-source.component.scss' ]
 })
 export class SukuDwollaFundingSourceComponent implements OnInit {
-	@Input('iav-token') iavtoken;
+	_iavToken;
+	_validResponse;
+	enable = {
+		button: false
+	};
+
+	@Input('iav-token')
+	get iavToken() {
+		return this._iavToken;
+	}
+	set iavToken(val) {
+		this._iavToken = val;
+	}
+
+	@Input()
+	get validResponse() {
+		return this._validResponse;
+	}
+	set validResponse(val) {
+		this._validResponse = val;
+		console.log('_validResponse', this._validResponse);
+		if (this._validResponse) {
+			this.getDwollaHtml();
+		} else {
+			this.snackbar('Please wait...');
+		}
+	}
+
 	@Output() action = new EventEmitter();
+
 	constructor(private snackBar: MatSnackBar) {}
 
 	ngOnInit() {}
 
 	getDwollaHtml() {
-		if (this.iavtoken) {
-			(<HTMLInputElement>document.getElementById('start')).disabled = true;
+		if (this._iavToken) {
 			if (document.getElementById('iavContainer')) {
 				const list = document.getElementById('iavContainer');
 				while (list.hasChildNodes()) {
 					list.removeChild(list.firstChild);
 				}
 			}
-			console.log('triggered', this.iavtoken);
+			console.log('triggered', this._iavToken);
 			dwolla.configure('sandbox');
 			dwolla.iav.start(
-				this.iavtoken,
+				this._iavToken,
 				{
 					container: 'iavContainer',
 					stylesheets: [ 'https://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext' ],
@@ -35,9 +62,13 @@ export class SukuDwollaFundingSourceComponent implements OnInit {
 				},
 				(err, res) => {
 					console.log('Error: ' + JSON.stringify(err) + ' -- Response: ' + JSON.stringify(res));
-					if (err) {
-						console.log('failed');
-						(<HTMLInputElement>document.getElementById('start')).disabled = false;
+					if (res) {
+						const checkResponse = res['_links']['funding-source'].href;
+						if (checkResponse) {
+							this.enable.button = true;
+						} else {
+							this.enable.button = false;
+						}
 					}
 				}
 			);
@@ -50,7 +81,7 @@ export class SukuDwollaFundingSourceComponent implements OnInit {
 		this.snackBar.open(msg, 'close', {
 			verticalPosition: 'bottom',
 			horizontalPosition: 'right',
-			duration: 3500
+			duration: 3000
 		});
 	}
 }

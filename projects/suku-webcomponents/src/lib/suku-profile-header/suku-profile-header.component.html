@@ -2,21 +2,22 @@
   <div class="col-sm-12 pt1 pt-top">
     <div class="col pl-lg-5">
       <div class="row">
-        <div class="col mt-5">
+        <div class="col mt-5 p-md-0 pl-lg-2">
           <div class="col-sm-8 col-md-12 col-lg-12">
             <div class="row">
               <div class="col-sm-5 col-md-5">
                 <img [src]="profileImage" class="rounded-circle img-circle" alt="profile" width="150" height="150">
               </div>
-              <div class="col-sm-7 pt-3 col-md-7">
+              <div class="col-sm-7 pt-3 pl-lg-1 col-md-7">
                 <h1 [style.font-size.px]="nameSize" [class]="nameCustomClass" [style.font-weight]="nameWeight"
                   [style.color]="nameColor" id="{{userNameId}}">
                   {{userName}}
                 </h1>
-                <h2 [style.font-size.px]="accountSize" [class]="accountCustomClass" id="{{accountId}}"
+                <!--Commenting out account type (e.g., manufacturer)-->
+                <!--<h2 [style.font-size.px]="accountSize" [class]="accountCustomClass" id="{{accountId}}"
                   [style.font-weight]="accountWeight" [style.color]="accountColor">
                   {{accountType}}
-                </h2>
+                </h2>-->
                 <span>
                   <div class="pt-4" *ngIf="ratingPrivacy">
                     <span class="fa fa-star fullStar f22" *ngFor="let star of fullStarsArray"> </span>
@@ -25,8 +26,8 @@
                     <span class="fa fa-star emptyStar f22" *ngFor="let star of emptyStarsArray"> </span>
                   </div>
                 </span>
-                <h2 [style.font-size.px]="rateDetailSize" [class]="rateDetailsCustomClass" id="{{rateDetailsId}}"
-                  [style.font-weight]="ratingDetailWeight" [style.color]="rateDetailColor">
+                <h2 [style.font-size.px]="rateDetailSize" *ngIf="ratingPrivacy" [class]="rateDetailsCustomClass"
+                  id="{{rateDetailsId}}" [style.font-weight]="ratingDetailWeight" [style.color]="rateDetailColor">
                   {{rateDetails}}
                 </h2>
               </div>
@@ -36,15 +37,19 @@
         <div class="col-sm-7 col-md-12 col-lg-6 pl-lg-0">
           <div class="col-sm-12 pt-lg-5 pl-lg-0">
             <div class="col-sm-12 pt-lg-5 pl-lg-0 p-xs-2">
-              <div class="col-sm-12 pt-lg-4">
+              <div class="col-sm-12 pt-lg-4" [ngClass]="{'mb-lg-3': !editvisibility }">
                 <div class="row">
-                  <div class="col-sm-12 col-lg-4 offset-lg-4 text-lg-right col-md-3 text-md-center col-xs-12 p-xs-0">
-                    <a class="profilePercentage colorGrey"  id="{{subHeadingOneId}}" [style.visibility]="editvisibility ? 'visible' : 'hidden'"
+                  <div class="col-sm-12 col-lg-4 offset-lg-4 text-lg-right col-md-3 text-md-center col-xs-12 p-xs-0"
+                    *ngIf="editvisibility">
+                    <a class="profilePercentage colorGrey" id="{{subHeadingOneId}}"
+                      [style.visibility]="editvisibility ? 'visible' : 'hidden'"
                       (click)="editAccount()">{{subHeadingOne}}</a>
                   </div>
-                  <div class="col-sm-3 col-md-3 p-md-0 col-lg-4 text-lg-center col-xs-12 p-xs-0">
-                    <a class=" profilePercentage colorGrey" id="{{subHeadingTwoId}}" [style.visibility]="changePasswordvisibility ? 'visible' : 'hidden'"
-                    (click)="changePass()">{{subHeadingTwo}}</a>
+                  <div class="col-sm-3 col-md-3 p-md-0 col-lg-4 text-lg-center col-xs-12 p-xs-0"
+                    *ngIf="changePasswordvisibility">
+                    <a class=" profilePercentage colorGrey" id="{{subHeadingTwoId}}"
+                      [style.visibility]="changePasswordvisibility ? 'visible' : 'hidden'"
+                      (click)="changePass()">{{subHeadingTwo}}</a>
                   </div>
                 </div>
               </div>
@@ -54,8 +59,8 @@
                     <div>
                       <span class="row pb-2">
                         <img [src]="mailIcon" [class]="mailIconClass">
-                        <h2 [style.font-size.px]="mailTxtSize" [class]="mailcustomClass" id="{{mailId}}" [style.font-weight]="mailWeight"
-                          [style.color]="mailTextColor">
+                        <h2 [style.font-size.px]="mailTxtSize" [class]="mailcustomClass" id="{{mailId}}"
+                          [style.font-weight]="mailWeight" [style.color]="mailTextColor">
                           {{mail}}
                         </h2>
                       </span>
@@ -63,8 +68,8 @@
                     <div class="pt-3">
                       <span class="row pb-2">
                         <img [src]="phNumberIcon" height="20px" class="mt-1">
-                        <h2 [style.font-size.px]="phnumberSize" [class]="phnumberCustomClass" id="{{phoneId}}" [style.font-weight]="phnumberWeight"
-                          [style.color]="phnumberColor">
+                        <h2 [style.font-size.px]="phnumberSize" [class]="phnumberCustomClass" id="{{phoneId}}"
+                          [style.font-weight]="phnumberWeight" [style.color]="phnumberColor">
                           {{number}}
                         </h2>
                       </span>
@@ -75,8 +80,8 @@
                       <div class="col-sm-8">
                         <span class="row pb-2">
                           <img [src]="addressIcon">
-                          <h2 [style.font-size.px]="addressSize" [class]="addressCustomClass" id="{{addressId}}" [style.font-weight]="addressWeight"
-                            [style.color]="addressColor">
+                          <h2 [style.font-size.px]="addressSize" [class]="addressCustomClass" id="{{addressId}}"
+                            [style.font-weight]="addressWeight" [style.color]="addressColor">
                             {{address}}
                           </h2>
                         </span>

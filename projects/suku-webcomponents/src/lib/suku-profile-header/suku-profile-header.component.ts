@@ -3,7 +3,7 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 @Component({
 	selector: 'suku-profile-header',
 	templateUrl: './suku-profile-header.component.html',
-	styleUrls: ['./suku-profile-header.component.scss']
+	styleUrls: [ './suku-profile-header.component.scss' ]
 })
 export class SukuProfileHeaderComponent implements OnInit {
 	/* profile--widget --start */
@@ -15,14 +15,14 @@ export class SukuProfileHeaderComponent implements OnInit {
 	_ratingValue;
 	@Input() profileImage = '../../assets/images/browser.png';
 	@Input('user-name') userName = 'Suku';
-	@Input() nameWeight = '400';
-	@Input() nameCustomClass = 'mb-0 text-white mt-1 pl-1 text-capitalize';
+	@Input() nameWeight = '300';
+	@Input() nameCustomClass = 'mb-4 text-white res-color mt-4 pl-1 text-capitalize';
 	@Input() nameSize = '33.4';
 	@Input() nameColor;
 	@Input() userNameId;
 	@Input('account-type') accountType = 'Manufacturer';
 	@Input() accountWeight = '400';
-	@Input() accountCustomClass = 'pl-2';
+	@Input() accountCustomClass = 'pl-2 res-color';
 	@Input() accountSize = '17';
 	@Input() accountColor = 'rgba(255, 255, 255, 0.67)';
 	@Input() accountId = 'accountId';
@@ -36,6 +36,7 @@ export class SukuProfileHeaderComponent implements OnInit {
 	@Input() rateDetailsId = '';
 	@Output() actionOne = new EventEmitter();
 	@Output() actionTwo = new EventEmitter();
+	@Output() rating = new EventEmitter();
 	@Input() customClass;
 	@Input()
 	@Input('rating-value')
@@ -56,7 +57,7 @@ export class SukuProfileHeaderComponent implements OnInit {
 	@Input() changePasswordvisibility = true;
 
 	/* suku-mail-widget */
-	@Input() mail = 'dconway@vairog.com';
+	@Input() mail = 'dconway@suku.com';
 	@Input() mailTxtSize = '13';
 	@Input() mailTextColor = '#3e3e3e';
 	@Input() mailWeight = '500';
@@ -88,15 +89,15 @@ export class SukuProfileHeaderComponent implements OnInit {
 	@Input() samBadgeClass = '';
 	@Output() samIconAction = new EventEmitter();
 
-	constructor() { }
+	constructor() {}
 
-	ngOnInit() { }
-	
+	ngOnInit() {}
+
 	editAccount() {
-        this.actionOne.emit();
-    }
+		this.actionOne.emit();
+	}
 
-    changePass() {
-        this.actionTwo.emit();
-    }
+	changePass() {
+		this.actionTwo.emit();
+	}
 }

@@ -120,6 +120,7 @@ $emptyStarColor: rgb(225, 225, 225);
 	position: relative;
 	right: 1px;
 }
+
 .profileBox {
 	width: 187.656px;
 	border-radius: 0 0 30px 30px;
@@ -164,6 +165,7 @@ $emptyStarColor: rgb(225, 225, 225);
 }
 
 @media only screen and (max-width: 500px) {
+
 	h1,
 	h2 {
 		color: black !important;
@@ -188,8 +190,12 @@ h2 {
 	}
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 568px) {
 	h2 {
 		font-size: 13px !important;
+	}
+
+	.res-color {
+		color: black !important;
 	}
 }

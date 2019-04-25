@@ -33,6 +33,6 @@ export class SukuHeaderComponent implements OnInit {
 	constructor() {}
 
 	ngOnInit() {
+		this.contentThree = 'N/A';
 	}
-
 }
