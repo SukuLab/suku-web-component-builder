@@ -89,4 +89,11 @@ h2 {
   visibility: visible;
 }
 
-// tool tip end
+.user {
+  cursor: pointer !important;
+}
+
+.user:hover {
+  color: black !important;
+  font-weight: 700 !important;
+}

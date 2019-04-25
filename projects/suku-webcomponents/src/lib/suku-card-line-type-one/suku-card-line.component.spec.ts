@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { SukuCardLineComponent } from './suku-card-line.component';
+import { SukuCardLineTypeOneComponent } from './suku-card-line.component';
 
 describe('SukuCardLineComponent', () => {
-  let component: SukuCardLineComponent;
-  let fixture: ComponentFixture<SukuCardLineComponent>;
+  let component: SukuCardLineTypeOneComponent;
+  let fixture: ComponentFixture<SukuCardLineTypeOneComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ SukuCardLineComponent ]
+      declarations: [ SukuCardLineTypeOneComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(SukuCardLineComponent);
+    fixture = TestBed.createComponent(SukuCardLineTypeOneComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

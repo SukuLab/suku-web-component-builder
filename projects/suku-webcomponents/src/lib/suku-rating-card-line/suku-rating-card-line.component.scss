@@ -69,3 +69,12 @@ h2 {
 .f20 {
   font-size: 20px;
 }
+
+.user {
+  cursor: pointer;
+}
+
+.user:hover {
+  color: black !important;
+  font-weight: 700 !important;
+}
