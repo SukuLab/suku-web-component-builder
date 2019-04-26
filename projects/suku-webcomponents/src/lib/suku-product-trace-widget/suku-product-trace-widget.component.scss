@@ -10,6 +10,7 @@
 	padding: 10px 5px 0px 15px;
 	margin: 0 0 0px 0;
 }
+
 .prizeHead {
 	width: 100%;
 	float: left;
@@ -18,6 +19,7 @@
 	line-height: 1em;
 	margin: 0 0 8px 0;
 }
+
 .prizesubHead {
 	width: 100%;
 	float: left;
@@ -27,6 +29,7 @@
 	line-height: 1em;
 	margin: 0 0 12px 0;
 }
+
 .RectangleBorder {
 	background-color: #ffffff;
 	box-shadow: -4px 4px 5px 0px rgba(0, 0, 0, 0.08);
@@ -35,44 +38,46 @@
 	padding-right: 20px;
 	padding-left: 20px;
 }
+
 .productName {
 	color: #7f7e7e;
 	font-size: 13px;
 }
-.searchBorderBox {
-	border: solid 1px #b6b6b6;
-	border-radius: 12px 25.5px 25.5px 25.5px;
-	font-size: 15px;
-}
 
 .searchBorderStyles {
-	padding-bottom: 5px;
-	padding-top: 5px;
-	padding-right: 0px;
-	padding-left: 0px;
-	border-bottom-width: 0px;
-	border-top-width: 0px;
-	border-right-width: 0px;
-	border-left-width: 0px;
 	width: 87%;
+	padding: -4px 0;
+	border-width: 0;
 }
+
+.searchBorderBox {
+	border: 1px solid #b6b6b6;
+	border-radius: 12px 25.5px 25.5px;
+	font-size: 15px;
+	margin-top: 7px;
+}
+
 .productCount {
 	color: #b6b6b6;
 	font-size: 12px;
 }
+
 .trackBtn {
 	font-family: "Encode Sans", sans-serif;
 	font-size: 11px;
 	padding: 0.55rem 0.99rem;
 }
+
 .trackBtn:hover {
 	color: #ffffff !important;
 	background: #a7bf2e !important;
 }
+
 .trackBtn.disabled:hover {
 	color: black !important;
 	background: white;
 }
+
 .pTB11 {
 	padding-bottom: 8px;
 	padding-top: 10px;
@@ -84,6 +89,7 @@
 	color: #b6b6b6;
 	font-family: 'Poppins', sans-serif !important;
 }
+
 .resultCount {
 	color: #898787;
 	font-size: 12px;
@@ -95,6 +101,7 @@
 	font-size: 12px;
 	padding-left: 13px;
 }
+
 .heightTab {
 	max-height: 230px;
 	overflow-x: hidden;
@@ -111,7 +118,7 @@
 	border-radius: 60px;
 }
 
-::ng-deep .searchData > label {
+.searchData>label {
 	white-space: pre-wrap !important;
 	line-height: normal !important;
 }
@@ -126,7 +133,7 @@
 	box-shadow: 0px 0px 0px rgb(114, 104, 104);
 }
 
-.searchData > label {
+.searchData>label {
 	white-space: pre-wrap;
 }
 
@@ -136,12 +143,13 @@
 	overflow-y: scroll;
 }
 
-::ng-deep .mat-radio-button.mat-accent.mat-radio-checked .mat-radio-outer-circle {
+/* ng-deep removed --for local dev */
+.mat-radio-button.mat-accent.mat-radio-checked .mat-radio-outer-circle {
 	border-color: #a7bf2e !important;
 }
 
-::ng-deep .mat-radio-button.mat-accent .mat-radio-inner-circle::before {
-	font-family: "Font Awesome 5 Free" !important;
+.mat-radio-button.mat-accent .mat-radio-inner-circle::before {
+	font-family: "Font Awesome 5 Free", sans-serif !important;
 	content: "\f058" !important;
 	display: inline-block !important;
 	vertical-align: middle;
@@ -153,9 +161,11 @@
 	margin-left: -8px !important;
 	margin-top: -7.6px !important;
 }
-::ng-deep .mat-radio-button.mat-accent .mat-radio-inner-circle {
+
+.mat-radio-button.mat-accent .mat-radio-inner-circle {
 	background-color: #fafafa !important;
 }
-::ng-deep .mat-radio-button.mat-accent .mat-radio-ripple .mat-ripple-element {
+
+.mat-radio-button.mat-accent .mat-radio-ripple .mat-ripple-element {
 	background-color: #a7bf2e3a !important;
 }
