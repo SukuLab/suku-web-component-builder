@@ -29,16 +29,21 @@
         <tbody>
           <tr id="{{transactionDetailsId}}" *ngFor="let transaction of transactionDetails">
             <td scope="row" class="text-left {{( (transaction?.type) == 'outgoing') ? 'outgoing' : 'incoming'}}">
-              {{transaction?.type || 'N/A'}}</td>
-            <td scope="row" class="text-left">{{transaction?.accountName || 'N/A'}}</td>
-            <td scope="row" class="text-left">{{transaction?.counterParty || 'N/A'}}</td>
-            <td scope="row" class="text-left">${{transaction?.amount || 'N/A'}}</td>
+              <span class="pl-4">{{transaction?.type || 'Not available'}}</span></td>
+            <td scope="row" class="text-left"><span class="pl-4">{{transaction?.accountName || 'Not available'}}</span>
+            </td>
+            <td scope="row" class="text-left"><span class="pl-4">{{transaction?.counterParty || 'Not available'}}</span>
+            </td>
+            <td scope="row" class="text-left"><span class="pl-4">${{transaction?.amount || 'Not available'}}</span></td>
             <td scope="row" class="text-left {{( (transaction.status) == 'Failed') ? 'falied' : 'incoming'}}">
-              {{transaction?.status || 'N/A'}}</td>
-            <td scope="row" class="text-left">{{transaction?.created | date:'d MMM yyyy h:mm:s a'  || 'N/A'}}</td>
-            <td scope="row" class="text-left">
-              {{(transaction?.completedOn | date:'d MMM yyyy h:mm:s a') || 'N/A'}}</td>
-            <td class="text-left"><button *ngIf="transaction?.status=='pending'" id="{{cancelId}}"
+              <span class="pl-4">{{transaction?.status || 'Not available'}}</span></td>
+            <td scope="row" class="text-left"><span
+                class="pl-4">{{transaction?.created | date:'d MMM yyyy h:mm:s a'  || 'Not available'}}</span>
+            </td>
+            <td scope="row" class="text-left"><span class="pl-4">
+                {{(transaction?.completedOn | date:'d MMM yyyy h:mm:s a') || 'Not available'}}</span>
+            </td>
+            <td class="text-center"><button id="{{cancelId}}" *ngIf="transaction?.status=='pending'"
                 (click)="action.emit(transaction);" class="btn  btnCancel">{{cancel}}</button></td>
           </tr>
         </tbody>
