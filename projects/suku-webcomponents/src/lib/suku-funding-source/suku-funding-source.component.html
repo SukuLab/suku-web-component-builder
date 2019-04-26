@@ -1,47 +1,46 @@
 <div class="d-flex col pt-5 p-0">
   <div class="col-sm-12 p-0">
-    <!-- loader -->
-    <div class="col d-flex loader-bg pt-5 mt-lg-4 mb-3" *ngIf="!(fundingDetails?.length > 0)">
+    <!-- loader -start -->
+    <div class="col d-flex Rectangle-2 pt-5 mt-lg-4 mb-3" *ngIf="!(fundingDetails?.length > 0)">
       <div class="col-sm-12 p-3">
         <div class="col-sm-12 d-flex justify-content-center">
-          <mat-spinner diameter="{{loader?.diameter}}"></mat-spinner>
+          <mat-spinner diameter="55"></mat-spinner>
         </div>
         <div class="mt-4 pb-3 col-sm-12 text-center">
-          <span id="loading">{{loader?.loaderMessage}}</span>
+          <span id="loading">Please wait...</span>
         </div>
       </div>
     </div>
-    <!-- fs-header -->
+    <!-- loader -end -->
+    <!-- fs-header-start -->
     <div class="col-sm-12 pt-2 pb-2 funding-box-widget p-0" *ngIf="(fundingDetails?.length > 0)">
       <div class="col-sm-12 pt-3 pb-3">
         <div class="col">
           <div class="col-sm-12">
             <h1 class="title">{{fundingSourceLabel?.labelOne}}<span class="pl-3 c-pointer"
                 id="{{fundingSourceLabel?.labelOneId}}" (click)="addSource.emit()">
-                <img src="../assets/images/plus_circle.png" class="icon" width="25px" height="25px" alt="plus-icon">
+                <img src="../assets/images/plus_circle.png" [class]="iconClass" class="icon" width="25px" height="25px"
+                  alt="plus-icon">
               </span>
             </h1>
           </div>
           <div class="col-sm-12">
-            <h2>
-              {{fundingSourceLabel?.labelTwo}}
-              <span class="pl-lg-2 pop-light" id="{{fundingSourceLabel?.labelTwoId}}">
-                {{contentOne || 'N/A'}}
-              </span>
-            </h2>
+            <h2>{{fundingSourceLabel?.labelTwo}}<span class="pl-lg-2 pop-light"
+                id="{{fundingSourceLabel?.labelTwoId}}">{{contentOne || 'N/A'}}</span></h2>
           </div>
         </div>
       </div>
     </div>
+    <!-- fs-header-end -->
     <div class="col-sm-12 box-shadows d-flex p-0" *ngIf="(fundingDetails?.length > 0)">
       <div class="row flex">
         <div class="col">
-          <div class="col-sm-11 offset-sm-1 pt-4 pl-lg-0 pr-lg-0">
-            <p class="sub-title pt-3 pl-0" [style.font-weight]="700" *ngIf="contentOne"
+          <div class="col-sm-12 pt-4 pl-lg-5 pr-lg-0 pb-2">
+            <p class="sub-title pt-3 pl-5" [style.font-weight]="700" *ngIf="contentOne"
               id="{{fundingSourceLabel?.labelThreeId}}">
               {{fundingSourceLabel?.labelThree}}
             </p>
-            <p class="sub-title pt-3 pl-0" [style.font-weight]="700" *ngIf="!contentOne"
+            <p class="sub-title pt-3 pl-5" [style.font-weight]="700" *ngIf="!contentOne"
               id="{{fundingSourceLabel?.labelFourId}}">
               {{fundingSourceLabel?.labelFour}}
             </p>
@@ -78,28 +77,26 @@
                           <div class="col pl-5 pr-5 pb-3" *ngIf="item?.defaultAccount">
                             <button type="button" class="btn-lg btn-block btn-default"
                               (click)="removeSourceAction.emit(item);"
-                              id="{{fundingSourceWidgetButtonLabel?.labelOneId}}">
-                              {{fundingSourceWidgetButtonLabel?.labelOne}}</button>
+                              id="{{fundingSourceWidgetButtonLabel?.labelOneId}}">{{fundingSourceWidgetButtonLabel?.labelOne}}</button>
                           </div>
                           <!-- default-fs-action -->
                           <div class="col pl-5 pr-5 pb-3" *ngIf="!item?.defaultAccount && !item?.balance">
                             <button type="button" class="btn-lg btn-block btn-default"
                               (click)="makeDefaultAction.emit(item);"
-                              id="{{fundingSourceWidgetButtonLabel?.labelTwoId}}">
-                              {{fundingSourceWidgetButtonLabel?.labelTwo}}</button>
+                              id="{{fundingSourceWidgetButtonLabel?.labelTwoId}}">{{fundingSourceWidgetButtonLabel?.labelTwo}}</button>
                           </div>
                           <!-- transfer-balance-action -->
                           <div class="col pl-5 pr-5 pb-3" *ngIf="item?.balance">
                             <button type="button" class="btn-lg btn-block"
                               [ngClass]="{'btn-default': item?.defaultAccount, 'btn': !item?.defaultAccount}"
-                              (click)="transferFundAction.emit();" (click)="makeDefaultAction.emit(item);"
-                              id="{{fundingSourceWidgetButtonLabel?.labelThreeId}}">
-                              {{fundingSourceWidgetButtonLabel?.labelThree}}</button>
+                              (click)="transferFundAction.emit();"
+                              id="{{fundingSourceWidgetButtonLabel?.labelThreeId}}">{{fundingSourceWidgetButtonLabel?.labelThree}}</button>
                           </div>
                         </div>
                       </div>
                     </div>
                   </div>
+                  <!-- fs-widget-end -->
                 </div>
               </div>
             </div>

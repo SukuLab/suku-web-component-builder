@@ -7,11 +7,7 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 })
 export class SukuFundingSourceComponent implements OnInit {
 	@Input() fundingDetails = [];
-	@Input()
-	loader = {
-		diameter: 55,
-		loaderMessage: 'Please wait...'
-	};
+	@Input() iconClass = 'icon';
 	@Input()
 	fundingSourceLabel = {
 		labelOne: 'Funding Sources',
@@ -42,6 +38,12 @@ export class SukuFundingSourceComponent implements OnInit {
 		labelThreeId: 'Make Default:'
 	};
 	@Input() contentOne = '';
+
+	@Input() labelOneId;
+	@Input() labelOneSize;
+	@Input() labelOneColor;
+	@Input() labelOneWeight;
+	@Input() labelOneCustomClass;
 
 	/* output--actions */
 	@Output() removeDefault = new EventEmitter();
