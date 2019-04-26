@@ -9,10 +9,40 @@ export class SukuHeaderComponent implements OnInit {
 	_date;
 	_enableTimer;
 	@Input() titleOne = 'LISTING NAME';
+	@Input() titleOneId;
+	@Input() titleOneSize;
+	@Input() titleOneColor;
+	@Input() titleOneWeight;
+	@Input() titleOneCustomClass;
+
 	@Input() contentOne = 'N/A';
+	@Input() contentOneId;
+	@Input() contentOneSize;
+	@Input() contentOneColor;
+	@Input() contentOneWeight;
+	@Input() contentOneCustomClass;
+
 	@Input() titleTwo = 'SELLER NAME';
+	@Input() titleTwoId;
+	@Input() titleTwoSize;
+	@Input() titleTwoColor;
+	@Input() titleTwoWeight;
+	@Input() titleTwoCustomClass;
+
 	@Input() contentTwo = 'N/A';
+	@Input() contentTwoId;
+	@Input() contentTwoSize;
+	@Input() contentTwoColor;
+	@Input() contentTwoWeight;
+	@Input() contentTwoCustomClass;
+
 	@Input() titleThree = 'TIME REMAINING';
+	@Input() titleThreeId;
+	@Input() titleThreeSize;
+	@Input() titleThreeColor;
+	@Input() titleThreeWeight;
+	@Input() titleThreeCustomClass;
+
 	@Input()
 	get contentThree() {
 		return this._date;
@@ -29,6 +59,12 @@ export class SukuHeaderComponent implements OnInit {
 		console.log(val);
 		this._enableTimer = val;
 	}
+	@Input() contentThreeId;
+	@Input() contentThreeSize;
+	@Input() contentThreeColor;
+	@Input() contentThreeWeight;
+	@Input() contentThreeCustomClass;
+
 	@Output() action = new EventEmitter();
 	constructor() {}
 
