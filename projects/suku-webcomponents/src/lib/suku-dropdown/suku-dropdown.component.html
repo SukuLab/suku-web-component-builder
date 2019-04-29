@@ -1,13 +1,20 @@
 <span [formGroup]="form">
-<mat-form-field class="col p-0">
-  <mat-select id="sttProductTraceability" formControlName="{{control}}" (selectionChange)="select.emit()"
-    placeholder="select product from this listing">
-    <mat-option *ngFor="let item of data" value="{{item?.productName}}" id="sttProductTraceabilityPn">
-      {{item?.productName}}
-    </mat-option>
-  </mat-select>
-  <span matSuffix>
-    <mat-icon><span><img height="23" [src]="icon" width="20"></span></mat-icon>
-  </span>
-</mat-form-field>
+  <mat-form-field class="col p-0">
+    <mat-select id="{{selectId}}" [class]="customSelectClass" #selector formControlName="{{control}}"
+      (selectionChange)="select.emit(selector.value)" [placeholder]="placeholder">
+      <mat-option *ngFor="let item of data;let i=index" value="{{item[keyValue]}}" id="option{{i}}">
+        {{item[displayKey]}}
+      </mat-option>
+    </mat-select>
+    <span matSuffix>
+      <mat-icon><span><img height="23" [src]="icon" width="20"></span></mat-icon>
+    </span>
+    <!-- *ngIf="isFieldValid(control)" -->
+    <mat-error>
+      <span class="err_style">
+        <span *ngIf="form.hasError('required',[control])" id="countryReq">{{errorMsg}}
+        </span>
+      </span>
+    </mat-error>
+  </mat-form-field>
 </span>

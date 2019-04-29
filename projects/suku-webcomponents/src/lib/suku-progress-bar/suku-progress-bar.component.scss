@@ -1,4 +1,3 @@
-
 .Progresscircle {
   width: 50px;
   height: 50px;
@@ -17,7 +16,7 @@
   -moz-border-radius: 50% !important;
   -webkit-border-radius: 50% !important;
   border-radius: 50% !important;
-  font-family: 'Poppins-Regular';
+  font-family: 'Poppins', sans-serif !important;
 }
 
 .progressUpcoming {
@@ -28,12 +27,13 @@
   -moz-border-radius: 50% !important;
   -webkit-border-radius: 50% !important;
   border-radius: 50% !important;
-  font-family: 'Poppins-Regular';
+  font-family: 'Poppins', sans-serif !important;
 }
+
 .PRODUCT-1 {
   width: 90px;
   height: 24px;
-  font-family: Poppins;
+  font-family: 'Poppins', sans-serif !important;
   font-size: 17px;
   font-weight: bold;
   font-style: normal;
@@ -42,6 +42,7 @@
   letter-spacing: -0.2px;
   color: #b6b6b6;
 }
+
 .progressCompleted {
   width: 50px !important;
   height: 50px !important;
@@ -50,10 +51,11 @@
   -moz-border-radius: 50% !important;
   -webkit-border-radius: 50% !important;
   border-radius: 50% !important;
-  font-family: 'Poppins-Regular';
+  font-family: 'Poppins', sans-serif !important;
 }
-.progressTitle{
-  font-family: EncodeSans;
+
+.progressTitle {
+  font-family: 'Encode Sans', sans-serif !important;
   font-size: 12px;
   font-weight: 500;
   font-style: normal;
@@ -65,7 +67,7 @@
 }
 
 .progress-bar-active {
-  font-family: EncodeSans;
+  font-family: 'Encode Sans', sans-serif !important;
   font-size: 12px;
   font-weight: bold;
   font-style: normal;
@@ -75,11 +77,11 @@
   text-align: center;
   color: var(--black);
 }
+
 .circleP {
   background-color: gray;
   width: 50px !important;
   height: 50px !important;
-  background: gray;
   -moz-border-radius: 50% !important;
   -webkit-border-radius: 50% !important;
   border-radius: 50% !important;
@@ -116,4 +118,14 @@ tr#txt {
 
 .border-top-box {
   border-top: 1px solid #dee2e670 !important;
+}
+
+.text-bold {
+  color: black !important;
+  font-weight: bold !important;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: -0.4px;
+  text-align: center;
 }
