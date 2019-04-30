@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:200i,400,700');
+
+$poppins: 'Poppins', sans-serif !important;
+
+.article {
+  width: 40.6%;
+  float: left;
+  margin: 0 8.4% 50px 0;
+}
+
+.paddingbottom48 {
+  padding-bottom: 9px;
+  padding-left: 48px;
+}
+
+.paddingTop15 {
+  padding-top: 15px;
+}
+
+.marginBottom22 {
+  margin-bottom: 22px;
+}
+
+.bidderAdd {
+  font-family: $poppins;
+  font-size: 15px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: -0.4px;
+  color: #020202d9;
+  margin-bottom: 1px;
+  text-transform: capitalize;
+}
