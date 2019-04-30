@@ -11,7 +11,7 @@ export class SukuBidTagComponent implements OnInit {
 	@Input() prizeWeight = '500';
 	@Input() prizeColor = 'white';
 	@Input() prizeCustomClass = 'mb-0';
-	@Input() unit = '/ BOX';
+	@Input() unit = '/ UNIT';
 	@Input() unitSize = '14';
 	@Input() unitWeight = '500';
 	@Input() unitColor = 'white';
@@ -26,7 +26,7 @@ export class SukuBidTagComponent implements OnInit {
 	@Input() pWeight = '500';
 	@Input() pColor = 'white';
 	@Input() pCustomClass = 'mt-1 pb-2';
-	@Input() bidtagclass = 'col p-3 suku-big-tag pl-5';
+	@Input() bidtagclass = 'col p-2 suku-big-tag pl-5';
 	@Input() id = 'suku-big-tag';
 
   constructor() { }

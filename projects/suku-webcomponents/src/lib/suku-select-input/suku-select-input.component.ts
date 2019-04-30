@@ -11,6 +11,10 @@ export class SukuSelectInputComponent implements OnInit {
 	@Input() color;
 	@Input() weight;
 	@Input() customclass;
+	@Input() keyValue = 'value';
+	@Input() displayKey = 'name'
+	@Input() titleText = 'Sort by';
+	@Input() placeHolder = 'Choose sort method';
 	// @Input() imgheight = '18';
 	// @Input() imgwidth = '20';
 	// @Input() imgurl = '../assets/images/arrow-icon.png';

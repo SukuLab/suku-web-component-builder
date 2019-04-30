@@ -129,3 +129,47 @@ tr#txt {
   letter-spacing: -0.4px;
   text-align: center;
 }
+
+.text-bold {
+  color: black !important;
+  font-weight: bold !important;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: -0.4px;
+  text-align: center;
+ }
+ 
+ .checkmark {
+  display: inline-block;
+ }
+ 
+ .checkmark:after {
+  /*Add another block-level blank space*/
+  content: '';
+  display: block;
+  /*Make it a small rectangle so the border will create an L-shape*/
+  width: 8px;
+  height: 15px;
+  /*Add a white border on the bottom and left, creating that 'L'* /
+  border: solid #d8fc40;
+  border-width: 0 3px 3px 0;
+  /*Rotate the L 45 degrees to turn it into a checkmark*/
+  transform: rotate(45deg);
+ }
+ 
+ hr {
+  margin-top: 1rem !important;
+  margin-bottom: 1rem !important;
+  border: 0 !important;
+  border-top: 1px solid #979797 !important;
+  opacity: 0.2 !important;
+ }
+ 
+ .pr-6 {
+  padding-right: 5rem;
+ }
+ 
+ .pl-6 {
+  padding-left: 5rem;
+ }
