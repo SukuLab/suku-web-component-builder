@@ -1,5 +1,10 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:200i,400,700');
+
+$poppins: 'Poppins',
+sans-serif !important;
+
 h1 {
-  font-family: 'Poppins', sans-serif;
+  font-family: $poppins;
   font-size: 20px;
   font-weight: 600;
   font-style: normal;

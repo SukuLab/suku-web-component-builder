@@ -1,3 +1,8 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:200i,400,700');
+
+$poppins: 'Poppins',
+sans-serif !important;
+
 .product-boxContent {
   width: 100%;
   float: left;
@@ -41,7 +46,7 @@ h2 {
 .prizesubHead {
   width: 100%;
   float: left;
-  font-family: 'Poppins-Regular', sans-serif !important;
+  font-family: $poppins;
   font-size: 15px;
   color: #e5e5e5;
   line-height: 1em;

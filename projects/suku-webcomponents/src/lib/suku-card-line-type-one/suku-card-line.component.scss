@@ -7,17 +7,12 @@ h2 {
   line-height: normal;
   letter-spacing: -0.2px;
   color: #b6b6b6;
-  word-break: break-all !important;
+  word-break: break-word !important;
 }
 
 .card-line-bg {
   background-color: #fff;
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.05);
-  /*  */
-  // position: relative;
-  // background-color: #eee;
-  // border: 1px solid black;
-  // z-index: -1;
 }
 
 .card-line-img {

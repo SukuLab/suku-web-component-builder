@@ -1,3 +1,11 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:200i,400,700');
+@import url('https://fonts.googleapis.com/css?family=Encode+Sans:200i,400,700');
+
+$poppins: 'Poppins',
+sans-serif !important;
+$encodeSans: 'Encode Sans',
+sans-serif !important;
+
 #privacy {
 	flex-grow: 1;
 }
@@ -84,7 +92,7 @@
 }
 
 .profilePercentage {
-	font-family: 'Encode Sans', sans-serif !important;
+	font-family: $encodeSans;
 	font-size: 14px;
 	font-weight: normal;
 	font-style: normal;
@@ -143,7 +151,7 @@ $emptyStarColor: rgb(225, 225, 225);
 }
 
 .userName {
-	font-family: 'Poppins', sans-serif !important;
+	font-family: $poppins;
 	font-size: 20px;
 	font-weight: 600;
 	font-style: normal;
@@ -174,7 +182,7 @@ $emptyStarColor: rgb(225, 225, 225);
 
 /* suku-phone-widget */
 h2 {
-	font-family: 'Encode Sans', sans-serif !important;
+	font-family: $encodeSans;
 	font-size: 12px;
 	font-weight: 500;
 	font-style: normal;
