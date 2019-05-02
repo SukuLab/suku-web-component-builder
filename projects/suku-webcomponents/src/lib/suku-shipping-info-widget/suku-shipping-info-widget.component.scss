@@ -9,8 +9,8 @@ $poppins: 'Poppins', sans-serif !important;
 }
 
 .paddingbottom48 {
+  font-family: "Encode Sans", sans-serif;
   padding-bottom: 9px;
-  padding-left: 48px;
 }
 
 .paddingTop15 {
@@ -22,7 +22,7 @@ $poppins: 'Poppins', sans-serif !important;
 }
 
 .bidderAdd {
-  font-family: $poppins;
+  font-family: "Poppins", sans-serif;
   font-size: 15px;
   font-weight: normal;
   font-style: normal;
@@ -32,4 +32,10 @@ $poppins: 'Poppins', sans-serif !important;
   color: #020202d9;
   margin-bottom: 1px;
   text-transform: capitalize;
+}
+
+.article {
+  width: 100%;
+  float: left;
+  margin: 0 8.4% 50px 0;
 }
