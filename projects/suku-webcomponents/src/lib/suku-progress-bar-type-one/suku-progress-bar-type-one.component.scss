@@ -1,3 +1,13 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:200i,400,700');
+@import url('https://fonts.googleapis.com/css?family=Encode+Sans:200i,400,700');
+
+$main-color: #a7bf2e;
+$poppins: 'Poppins',
+sans-serif !important;
+$encodeSans: 'Encode Sans',
+sans-serif !important;
+
+
 .Progresscircle {
   width: 50px;
   height: 50px;
@@ -12,11 +22,11 @@
   width: 50px !important;
   height: 50px;
   color: white;
-  background: var(--main-color);
+  background: $main-color;
   -moz-border-radius: 50% !important;
   -webkit-border-radius: 50% !important;
   border-radius: 50% !important;
-  font-family: 'Poppins', sans-serif !important;
+  font-family: $poppins;
 }
 
 .progressUpcoming {
@@ -27,20 +37,7 @@
   -moz-border-radius: 50% !important;
   -webkit-border-radius: 50% !important;
   border-radius: 50% !important;
-  font-family: 'Poppins', sans-serif !important;
-}
-
-.PRODUCT-1 {
-  width: 90px;
-  height: 24px;
-  font-family: 'Poppins', sans-serif !important;
-  font-size: 17px;
-  font-weight: bold;
-  font-style: normal;
-  font-stretch: normal;
-  line-height: normal;
-  letter-spacing: -0.2px;
-  color: #b6b6b6;
+  font-family: $poppins;
 }
 
 .progressCompleted {
@@ -51,11 +48,11 @@
   -moz-border-radius: 50% !important;
   -webkit-border-radius: 50% !important;
   border-radius: 50% !important;
-  font-family: 'Poppins', sans-serif !important;
+  font-family: $poppins;
 }
 
 .progressTitle {
-  font-family: 'Encode Sans', sans-serif !important;
+  font-family: $poppins;
   font-size: 12px;
   font-weight: 500;
   font-style: normal;
@@ -64,27 +61,6 @@
   letter-spacing: -0.4px;
   text-align: center;
   color: #b6b6b6;
-}
-
-.progress-bar-active {
-  font-family: 'Encode Sans', sans-serif !important;
-  font-size: 12px;
-  font-weight: bold;
-  font-style: normal;
-  font-stretch: normal;
-  line-height: normal;
-  letter-spacing: -0.4px;
-  text-align: center;
-  color: var(--black);
-}
-
-.circleP {
-  background-color: gray;
-  width: 50px !important;
-  height: 50px !important;
-  -moz-border-radius: 50% !important;
-  -webkit-border-radius: 50% !important;
-  border-radius: 50% !important;
 }
 
 .tableMar {
@@ -130,46 +106,47 @@ tr#txt {
   text-align: center;
 }
 
-.text-bold {
-  color: black !important;
-  font-weight: bold !important;
-  font-style: normal;
-  font-stretch: normal;
-  line-height: normal;
-  letter-spacing: -0.4px;
-  text-align: center;
- }
- 
- .checkmark {
+.checkmark {
   display: inline-block;
- }
- 
- .checkmark:after {
+}
+
+.checkmark:after {
   /*Add another block-level blank space*/
   content: '';
   display: block;
   /*Make it a small rectangle so the border will create an L-shape*/
   width: 8px;
   height: 15px;
-  /*Add a white border on the bottom and left, creating that 'L'* /
+  /*Add a white border on the bottom and left, creating that 'L' */
   border: solid #d8fc40;
   border-width: 0 3px 3px 0;
   /*Rotate the L 45 degrees to turn it into a checkmark*/
   transform: rotate(45deg);
- }
- 
- hr {
+}
+
+hr {
   margin-top: 1rem !important;
   margin-bottom: 1rem !important;
   border: 0 !important;
   border-top: 1px solid #979797 !important;
   opacity: 0.2 !important;
- }
- 
- .pr-6 {
+}
+
+.pr-6 {
   padding-right: 5rem;
- }
- 
- .pl-6 {
-  padding-left: 5rem;
- }
+}
+
+.pl-6 {
+  padding-left: 4.8rem;
+}
+
+.progressText {
+  font-family: $encodeSans;
+  font-size: 12px;
+  font-weight: 500;
+  color: #b6b6b6;
+}
+
+.mnt-0 {
+  margin-top: -1.1rem;
+}

@@ -8,6 +8,11 @@ import { Observable, Observer } from 'rxjs';
 	styleUrls: [ './app.component.scss' ]
 })
 export class AppComponent {
+	fundingDetails = [ 
+		{},
+		{},
+		{}
+	]
 	fundingData = [
 		{
 			_links: {
