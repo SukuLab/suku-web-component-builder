@@ -1,10 +1,10 @@
 <div class="product-boxContent">
-    <div class="col pl-0 pt-3 pb-3">
-      <div class="row">
-        <div class="col">
-          <h1 [style.font-size.px]="titleOneSize" [class]="titleOneCustomClass" [style.font-weight]="titleOneWeight"
-            [style.color]="titleOneColor" id="{{titleOneId}}">{{titleOne}}</h1>
-        </div>
+  <div class="col pl-0 pt-3 pb-3">
+    <div class="row">
+      <div class="col">
+        <h1 [style.font-size.px]="titleOneSize" [class]="titleOneCustomClass" [style.font-weight]="titleOneWeight"
+          [style.color]="titleOneColor" id="{{titleOneId}}"><ng-content></ng-content> </h1>
       </div>
     </div>
   </div>
+</div>
