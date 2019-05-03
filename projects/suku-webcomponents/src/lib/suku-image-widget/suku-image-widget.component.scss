@@ -1,15 +1,13 @@
 .product-img {
+  width: auto;
   max-width: 256px;
+  max-height: 158px;
   height: auto;
   float: left;
   text-align: center;
   line-height: 172px;
-  // border: 1px solid #f4f4f4;
-  // box-shadow: rgba(0, 0, 0, 0.05) 0 0 2px;
   position: relative;
-  margin: 16px -255px -212px 35px;
   z-index: 10;
-  // padding-left:20px;
 }
 
 .ImgRes {
