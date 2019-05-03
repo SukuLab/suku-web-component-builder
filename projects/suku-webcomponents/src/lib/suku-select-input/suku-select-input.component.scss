@@ -1,20 +1,3 @@
-.optionsBox {
-  font-family: 'Encode Sans', sans-serif !important;
-  font-size: 12px;
-  font-weight: normal;
-  font-style: normal;
-  font-stretch: normal;
-  line-height: 1.43;
-  letter-spacing: -0.01px;
-  color: #3e3e3e;
-  text-transform: uppercase;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  -o-appearance: none;
-  /* no standardized syntax available, no ie-friendly solution available */
-}
-
-
 .sort-by {
   font-family: 'Poppins', sans-serif;
   font-size: 15px;
@@ -42,6 +25,10 @@
   background-color: #ffffff;
 }
 
+.optionsBox:focus {
+  background-color: #ffffff !important;
+}
+
 .default {
   width: 281px;
 }
@@ -54,6 +41,10 @@ select + img.image {
   pointer-events: none;
   /* everything after this is just to cover up the original arrow */
   /* (for browsers that don't support the syntax used above) */
-  background-color: transparent;
+  background-color: #ffffff;
   padding-right: 5px;
+}
+
+select:focus {
+  background-color: #ffffff !important;
 }

@@ -99,6 +99,7 @@ import { SukuTitleHeaderComponent } from './suku-title-header/suku-title-header.
 import { SukuShippingInfoWidgetComponent } from './suku-shipping-info-widget/suku-shipping-info-widget.component';
 import { SukuProgressBarTypeOneComponent } from './suku-progress-bar-type-one/suku-progress-bar-type-one.component';
 import { SukuProgressBarTypeTwoComponent } from './suku-progress-bar-type-two/suku-progress-bar-type-two.component';
+import { SukuImageWidgetComponent } from './suku-image-widget/suku-image-widget.component';
 @NgModule({
 	declarations: [
 		SukuBidTagComponent,
@@ -160,7 +161,8 @@ import { SukuProgressBarTypeTwoComponent } from './suku-progress-bar-type-two/su
 		SukuDropdownComponent,
 		SukuHeaderComponent,
 		SukuTitleHeaderComponent,
-		SukuShippingInfoWidgetComponent
+		SukuShippingInfoWidgetComponent,
+		SukuImageWidgetComponent
 	],
 	imports: [
 		CommonModule,
@@ -263,7 +265,8 @@ import { SukuProgressBarTypeTwoComponent } from './suku-progress-bar-type-two/su
 		SukuTitleHeaderComponent,
 		SukuShippingInfoWidgetComponent,
 		SukuProgressBarTypeOneComponent,
-		SukuProgressBarTypeTwoComponent
+		SukuProgressBarTypeTwoComponent,
+		SukuImageWidgetComponent
 	]
 })
 export class SukuWebcomponentsModule {}
