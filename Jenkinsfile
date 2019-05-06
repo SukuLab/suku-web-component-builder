@@ -12,11 +12,11 @@ pipeline {
     agent { label "build" }
     stages {
 
-        /*stage("slack notification") {
+        stage("slack notification") {
              steps {
                  slackSend (color: '#FFFF00', message: "STARTED: Job '${env.JOB_NAME} [${env.BUILD_NUMBER}]' (${env.BUILD_URL})")
              }
-        }*/
+        }
 
         stage("checkout"){
             steps {
@@ -24,13 +24,13 @@ pipeline {
             }
         }
 
-        //stage("static code analysis"){
-            //steps {
-                //withSonarQubeEnv('sonarqube') {
-                    //sh '/opt/sonar/bin/sonar-scanner -Dsonar.projectKey=test-library -Dsonar.sources=./src/app -Dsonar.exclusions=**/**/assets/**'
-                //}
-            //}
-        //}
+        stage("static code analysis"){
+            steps {
+                withSonarQubeEnv('sonarqube') {
+                    sh '/opt/sonar/bin/sonar-scanner -Dsonar.projectKey=test-library -Dsonar.sources=./src/app -Dsonar.exclusions=**/**/assets/**'
+                }
+            }
+        }
 
         stage("build docker image") {
             steps {
@@ -40,7 +40,7 @@ pipeline {
 
         stage("run docker"){
             steps {
-                sh "docker run --name gitpush -e GIT_USERNAME=${GIT_USERNAME} -e EMAIL_ID=${EMAIL_ID} test-lib:ci_latest"
+                sh "docker run --name gitpush -e BRANCH_NAME=${BRANCH_NAME} -e GIT_USERNAME=${GIT_USERNAME} -e EMAIL_ID=${EMAIL_ID} test-lib:ci_latest"
             }
         }
     }
@@ -53,12 +53,12 @@ pipeline {
 
         success {
              setBuildStatus("Build succeeded", "SUCCESS");
-            // slackSend (color: '#00FF00', message: "SUCCESSFUL: Job '${env.JOB_NAME} [${env.BUILD_NUMBER}]' (${env.BUILD_URL})")
+             slackSend (color: '#00FF00', message: "SUCCESSFUL: Job '${env.JOB_NAME} [${env.BUILD_NUMBER}]' (${env.BUILD_URL})")
         }
 
         failure {
              setBuildStatus("Build failed", "FAILURE");
-             //slackSend (color: '#FF0000', message: "FAILED: Job '${env.JOB_NAME} [${env.BUILD_NUMBER}]' (${env.BUILD_URL})")
+             slackSend (color: '#FF0000', message: "FAILED: Job '${env.JOB_NAME} [${env.BUILD_NUMBER}]' (${env.BUILD_URL})")
         }
     }
 }
