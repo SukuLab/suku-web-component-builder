@@ -40,7 +40,7 @@ pipeline {
 
         stage("run docker"){
             steps {
-                sh "docker run --name gitpush -e BRANCH_NAME=${BRANCH_NAME} -e GIT_USERNAME=${GIT_USERNAME} -e EMAIL_ID=${EMAIL_ID} test-lib:ci_latest"
+              sh "docker run --name gitpush -e $BUILD_TAG=${BUILD_TAG} -e BRANCH_NAME=${BRANCH_NAME} -e GIT_USERNAME=${GIT_USERNAME} -e EMAIL_ID=${EMAIL_ID} test-lib:ci_latest"
             }
         }
     }
