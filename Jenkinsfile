@@ -40,14 +40,14 @@ pipeline {
 
         stage("run docker"){
             steps {
-                sh "docker run --name gitpush -e BRANCH_NAME=${BRANCH_NAME} -e GIT_USERNAME=${GIT_USERNAME} -e EMAIL_ID=${EMAIL_ID} test-lib:ci_latest"
+                sh "docker run --name gitpush_${BRANCH_NAME} -e BRANCH_NAME=${BRANCH_NAME} -e GIT_USERNAME=${GIT_USERNAME} -e EMAIL_ID=${EMAIL_ID} test-lib:ci_latest"
             }
         }
     }
 
     post {
         always {
-             sh "docker rm -f gitpush"
+             sh "docker rm -f gitpush_${BRANCH_NAME}"
              sh "docker rmi -f test-lib:ci_latest"
         }
 
