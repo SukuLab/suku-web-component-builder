@@ -10,6 +10,6 @@ echo "setting git config"
 git config --global user.email "$EMAIL_ID"
 git config --global user.name "$GIT_USERNAME"
 git add .
-git commit -m "updated"
+git commit -m "updated $BUILD_NUMBER"
 echo "pushing the changes"
 git push origin $BRANCH_NAME
