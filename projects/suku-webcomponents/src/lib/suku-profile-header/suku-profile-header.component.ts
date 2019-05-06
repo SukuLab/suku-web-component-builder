@@ -15,8 +15,8 @@ export class SukuProfileHeaderComponent implements OnInit {
 	_ratingValue;
 	@Input() profileImage = '../../assets/images/browser.png';
 	@Input('user-name') userName = 'Suku';
-	@Input() nameWeight = '300';
-	@Input() nameCustomClass = 'mb-4 text-white res-color mt-4 pl-1 text-capitalize';
+	@Input() nameWeight = '400';
+	@Input() nameCustomClass = 'text-white mb-4 res-color pl-2 text-capitalize';
 	@Input() nameSize = '33.4';
 	@Input() nameColor;
 	@Input() userNameId;
@@ -31,7 +31,7 @@ export class SukuProfileHeaderComponent implements OnInit {
 	@Input() rateDetailColor = '#757575';
 	@Input() ratingDetailWeight = '400';
 	@Input() rateDetailSize = '14';
-	@Input() rateDetailsCustomClass = 'pl-2';
+	@Input() rateDetailsCustomClass = 'pl-2 mt-1';
 	@Input() ratingPrivacy: Boolean;
 	@Input() rateDetailsId = '';
 	@Output() actionOne = new EventEmitter();

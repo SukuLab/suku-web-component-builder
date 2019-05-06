@@ -180,6 +180,17 @@ $emptyStarColor: rgb(225, 225, 225);
 	}
 }
 
+h1 {
+	font-family: $poppins;
+	font-family: Poppins;
+	font-size: 33.4px;
+	font-weight: normal;
+	font-style: normal;
+	font-stretch: normal;
+	line-height: normal;
+	letter-spacing: -0.5px;
+}
+
 /* suku-phone-widget */
 h2 {
 	font-family: $encodeSans;
@@ -206,4 +217,17 @@ h2 {
 	.res-color {
 		color: black !important;
 	}
+
+	.p-xs-0 {
+		padding: 0;
+	}
+
+	.p-xs-2 {
+		padding: 0 0 0 0.2rem;
+		;
+	}
+}
+
+.f22 {
+	font-size: 22px;
 }

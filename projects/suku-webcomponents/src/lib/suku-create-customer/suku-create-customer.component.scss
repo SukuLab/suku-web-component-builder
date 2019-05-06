@@ -340,7 +340,6 @@
 
 }
 
-
 .zeplin_button {
 
     width: 81px;
@@ -972,7 +971,6 @@
     font-size: 1.5rem;
 }
 
-
 .btn-info {
     border: solid 2px #a7bf2e;
     padding: 10px 32px 10px 32px;
@@ -986,7 +984,6 @@
     background-color: #a7bf2e;
     color: white;
 }
-
 
 .btn-info:active {
     border: solid 2px #a7bf2e;
@@ -1043,7 +1040,6 @@ fieldset[disabled] .btn-info.focus {
     box-shadow: none !important;
 }
 
-
 .disabled {
     cursor: not-allowed !important;
 }
@@ -1061,4 +1057,8 @@ fieldset[disabled] .btn-info.focus {
 
 .add:hover {
     font-weight: 600;
+}
+
+:ng-deep .mat-form-field-appearance-legacy .mat-form-field-underline {
+    bottom: 1em !important;
 }
