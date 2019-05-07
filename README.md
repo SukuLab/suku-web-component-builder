@@ -2,7 +2,7 @@
 ## Development server
 Run npm install for installing dependencies.
 
-Run 'ng s -o' for a dev server, You will be automatically navigated to http://localhost:4200/.
+Run `ng s -o` for a dev server, You will be automatically navigated to http://localhost:4200/.
 
 Create new component and import in `suku-webcomponents.module`.
 
