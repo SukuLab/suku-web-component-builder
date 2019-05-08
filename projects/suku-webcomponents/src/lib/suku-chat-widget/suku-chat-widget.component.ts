@@ -1,6 +1,6 @@
 import { Component, OnInit, Input, ViewChild, Inject, HostListener, Output } from '@angular/core';
 import { ScrollToBottomDirective } from './suku-chat-scroll-directive';
-import { EventEmitter } from 'events';
+import { EventEmitter } from '@angular/core';
 @Component({
   selector: 'suku-chat-widget',
   templateUrl: './suku-chat-widget.component.html',
@@ -23,7 +23,7 @@ export class SukuChatWidgetComponent implements OnInit {
   @Input() IconSrc = '../assets/images/send-message-icon.png';
   @Input() userImg = '../assets/images/group.svg';
   @Input() toUserImg = '../assets/images/group.svg';
-  @Output() message = new EventEmitter();
+  @Output() sendmessage = new EventEmitter();
   @HostListener('window:scroll', ['$event']) 
     scrollHandler(event) {
       console.debug("Scroll Event");
@@ -60,9 +60,9 @@ export class SukuChatWidgetComponent implements OnInit {
     console.log('test-send', val);
     this._messageObj.message = val;
     this._messageObj.timestamp = new Date().toLocaleString();
-    this.message.emit(this._messageObj);
+    this.sendmessage.emit(this._messageObj);
     console.log("messageObj", this._messageObj);
-    this.messageData.push(this._messageObj);
+    // this.messageData.push(this._messageObj);
   }
 
 }

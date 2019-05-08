@@ -5,5 +5,5 @@
   </suku-profile-header>
 </div>
 <div class="col-sm-3 p-0 m-5">
-  <suku-chat-widget [messageData]="messageArray" [userImg]="chatImg"></suku-chat-widget>
+  <suku-chat-widget [messageData]="messageArray" [userImg]="chatImg" (sendmessage)="sendMessage($event)"></suku-chat-widget>
 </div>

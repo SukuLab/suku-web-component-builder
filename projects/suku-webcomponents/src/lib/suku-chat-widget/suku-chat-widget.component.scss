@@ -146,11 +146,11 @@ h2 {
     padding-left: 0.25rem;
     padding-right: 0.25rem;
     opacity: 0.0;
-    -webkit-transition: all 500ms ease-in-out;
-    -moz-transition: all 500ms ease-in-out;
-    -ms-transition: all 500ms ease-in-out;
-    -o-transition: all 500ms ease-in-out;
-    transition: all 500ms ease-in-out;
+    -webkit-transition: .6 ease;
+    -moz-transition: .6 ease;
+    -ms-transition: .6 ease;
+    -o-transition: .6 ease;
+    transition: .6 ease;
 }
 
 .messageContainer {
