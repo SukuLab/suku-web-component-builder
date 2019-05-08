@@ -102,6 +102,7 @@ import { SukuProgressBarTypeTwoComponent } from './suku-progress-bar-type-two/su
 import { SukuImageWidgetComponent } from './suku-image-widget/suku-image-widget.component';
 import { SukuChatWidgetComponent } from './suku-chat-widget/suku-chat-widget.component';
 import { SukuLoaderComponent } from './suku-loader/suku-loader.component';
+import { SukuConfirmationComponent } from './suku-confirmation/suku-confirmation.component';
 @NgModule({
 	declarations: [
 		SukuBidTagComponent,
@@ -166,7 +167,8 @@ import { SukuLoaderComponent } from './suku-loader/suku-loader.component';
 		SukuShippingInfoWidgetComponent,
 		SukuImageWidgetComponent,
 		SukuChatWidgetComponent,
-		SukuLoaderComponent
+		SukuLoaderComponent,
+		SukuConfirmationComponent
 	],
 	imports: [
 		CommonModule,
@@ -272,7 +274,8 @@ import { SukuLoaderComponent } from './suku-loader/suku-loader.component';
 		SukuProgressBarTypeTwoComponent,
 		SukuImageWidgetComponent,
 		SukuChatWidgetComponent,
-		SukuLoaderComponent
+		SukuLoaderComponent,
+		SukuConfirmationComponent
 	]
 })
 export class SukuWebcomponentsModule {}
