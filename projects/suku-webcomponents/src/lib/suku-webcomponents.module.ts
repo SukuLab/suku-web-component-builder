@@ -170,7 +170,7 @@ import { SukuConfirmationComponent } from './suku-confirmation/suku-confirmation
 		SukuImageWidgetComponent,
 		SukuChatWidgetComponent,
 		SukuLoaderComponent,
-		SukuConfirmationComponent
+		SukuConfirmationComponent,
 		ScrollToBottomDirective,
 	],
 	imports: [
