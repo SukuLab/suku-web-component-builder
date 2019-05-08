@@ -41,6 +41,7 @@ import {
 	MatToolbarModule,
 	MatTooltipModule
 } from '@angular/material';
+import { DOCUMENT } from '@angular/platform-browser';
 import { SukuHeadingComponent } from './suku-heading/suku-heading.component';
 import { SukuSubHeadingComponent } from './suku-sub-heading/suku-sub-heading.component';
 import { SukuProfileWidgetComponent } from './suku-profile-widget/suku-profile-widget.component';
@@ -101,6 +102,7 @@ import { SukuProgressBarTypeOneComponent } from './suku-progress-bar-type-one/su
 import { SukuProgressBarTypeTwoComponent } from './suku-progress-bar-type-two/suku-progress-bar-type-two.component';
 import { SukuImageWidgetComponent } from './suku-image-widget/suku-image-widget.component';
 import { SukuChatWidgetComponent } from './suku-chat-widget/suku-chat-widget.component';
+import { ScrollToBottomDirective } from './suku-chat-widget/suku-chat-scroll-directive';
 @NgModule({
 	declarations: [
 		SukuBidTagComponent,
@@ -164,7 +166,8 @@ import { SukuChatWidgetComponent } from './suku-chat-widget/suku-chat-widget.com
 		SukuTitleHeaderComponent,
 		SukuShippingInfoWidgetComponent,
 		SukuImageWidgetComponent,
-		SukuChatWidgetComponent
+		SukuChatWidgetComponent,
+		ScrollToBottomDirective
 	],
 	imports: [
 		CommonModule,
