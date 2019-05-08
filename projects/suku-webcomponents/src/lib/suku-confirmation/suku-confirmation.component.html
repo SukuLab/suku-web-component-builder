@@ -1,0 +1,62 @@
+<mat-dialog-content>
+  <div class="col text-center">
+    <div class="row justify-content-center">
+      <div class="product-boxContent">
+        <div class="col pl-lg-4 pt-1 pb-3">
+          <div class="row">
+            <div class="col pl-lg-0 pl-0 mt-3 mb-3">
+              <i class="fa fa-question iconstyle"></i>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col pl-lg-0 pl-0 mt-2 mb-3">
+              <span id="confirmation" class="color pb-1 mt-3 mb-3">
+                {{ Titleone }}
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <h2 class=" col-sm-10 FontStyle mt-5 mb-2 text-center">
+        {{ Titletwo }}
+      </h2>
+      <h2 class=" col-sm-10 FontStyle2 mt-3 mb-3 text-center">
+        {{ Titlethree }}
+      </h2>
+    </div>
+  </div>
+</mat-dialog-content>
+<mat-dialog-actions>
+  <div class="col text-center">
+    <div class="row">
+      <div
+        class=" col-lg-3 col-md-6 col-sm-4 col-xs-10 offset-lg-2 pl-lg-0 pr-lg-0 "
+      >
+        <button
+          type="button"
+          id="{{ Buttononeid }}"
+          class="btn btn-default btn-lg center-block width100"
+          mat-dialog-close
+          (click)="triggerone.emit()"
+          tabindex="-1"
+        >
+          {{ Buttonone }}
+        </button>
+      </div>
+      <div
+        class="col-lg-3 col-md-6 col-sm-4 col-xs-10 offset-lg-2 pl-lg-0 pr-lg-0"
+      >
+        <button
+          type="button"
+          tabindex="1"
+          (click)="triggertwo.emit()"
+          id="{{ Buttontwoid }}"
+          mat-dialog-close
+          class="btn btn-info btn-lg center-block width100"
+        >
+          {{ Buttontwo }}
+        </button>
+      </div>
+    </div>
+  </div>
+</mat-dialog-actions>
