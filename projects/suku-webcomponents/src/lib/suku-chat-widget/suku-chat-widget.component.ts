@@ -21,6 +21,8 @@ export class SukuChatWidgetComponent implements OnInit {
   @Input() chatStatus = false;
   @Input() messageData = [];
   @Input() IconSrc = '../assets/images/send-message-icon.png';
+  @Input() userImg = '../assets/images/group.svg';
+  @Input() toUserImg = '../assets/images/group.svg';
   @Output() message = new EventEmitter();
   @HostListener('window:scroll', ['$event']) 
     scrollHandler(event) {
@@ -38,12 +40,10 @@ export class SukuChatWidgetComponent implements OnInit {
         from: {
           userId: this.messageData[0].from.userId,
           userName: this.messageData[0].from.userName,
-          userImg: this.messageData[0].from.userImg,
         },
         to: {
           userId: this.messageData[0].to.userId,
           userName: this.messageData[0].to.userName,
-          userImg: this.messageData[0].to.userImg,
         }
       };
     }

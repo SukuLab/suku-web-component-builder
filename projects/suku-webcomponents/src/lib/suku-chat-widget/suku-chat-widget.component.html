@@ -19,7 +19,7 @@
         <div class="blockChat" *ngFor="let item of messageData; let i=index" scrollToBottom>
           <div class="col" [class.messageContainer]="item?.userId == item?.from?.userId">
             <div class="messageStyle mb-2" [class.rightFloat]="item?.userId == item?.from?.userId">
-              <img [src]="((item?.userId == item?.from?.userId)? item?.from?.userImg : item?.to?.userImg) || _imgPlaceholder" alt="Avatar"
+              <img [src]="((item?.userId == item?.from?.userId)? userImg : toUserImg) || _imgPlaceholder" alt="Avatar"
                 class="user-icon m-1 p-1"
                 [ngClass]="{'order-last align-self-end': item?.userId == item?.from?.userId }">
               <span class="d-flex" [class.rightFloat]="item?.userId == item?.from?.userId"
@@ -41,7 +41,7 @@
       </div>
       <div class="col">
         <!-- to scroll down -->
-        <!--  <div class="scroll-to-top" [ngClass]="{'show-scrollTop': windowScrolled}">
+        <!-- <div class="scroll-to-top" [ngClass]="{'show-scrollTop': windowScrolled}">
               <button (click)="scrollToTop()">
                   <i class="fa fa-chevron-up"></i>
               </button>
