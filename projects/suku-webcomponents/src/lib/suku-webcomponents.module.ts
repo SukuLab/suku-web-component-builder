@@ -271,7 +271,8 @@ import { SukuLoaderComponent } from './suku-loader/suku-loader.component';
 		SukuProgressBarTypeOneComponent,
 		SukuProgressBarTypeTwoComponent,
 		SukuImageWidgetComponent,
-		SukuChatWidgetComponent
+		SukuChatWidgetComponent,
+		SukuLoaderComponent
 	]
 })
 export class SukuWebcomponentsModule {}
