@@ -103,6 +103,7 @@ import { SukuProgressBarTypeTwoComponent } from './suku-progress-bar-type-two/su
 import { SukuImageWidgetComponent } from './suku-image-widget/suku-image-widget.component';
 import { SukuChatWidgetComponent } from './suku-chat-widget/suku-chat-widget.component';
 import { ScrollToBottomDirective } from './suku-chat-widget/suku-chat-scroll-directive';
+import { SukuLoaderComponent } from './suku-loader/suku-loader.component';
 @NgModule({
 	declarations: [
 		SukuBidTagComponent,
@@ -167,7 +168,8 @@ import { ScrollToBottomDirective } from './suku-chat-widget/suku-chat-scroll-dir
 		SukuShippingInfoWidgetComponent,
 		SukuImageWidgetComponent,
 		SukuChatWidgetComponent,
-		ScrollToBottomDirective
+		ScrollToBottomDirective,
+		SukuLoaderComponent
 	],
 	imports: [
 		CommonModule,
@@ -272,7 +274,8 @@ import { ScrollToBottomDirective } from './suku-chat-widget/suku-chat-scroll-dir
 		SukuProgressBarTypeOneComponent,
 		SukuProgressBarTypeTwoComponent,
 		SukuImageWidgetComponent,
-		SukuChatWidgetComponent
+		SukuChatWidgetComponent,
+		SukuLoaderComponent
 	]
 })
 export class SukuWebcomponentsModule {}
