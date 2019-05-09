@@ -65,6 +65,10 @@ h2 {
     font-weight: 600 !important;
     font-size: 16px;
 }
+.pop-bold:hover {
+   text-decoration: underline;
+   cursor: pointer;
+}
 
 .c-pointer {
     cursor: pointer;
@@ -100,7 +104,11 @@ h2 {
     font-weight: 400;
     font-size: 15px;
 }
-
+.chatMessage {
+    font-family: $poppins;
+    font-weight: 400;
+    font-size: 15px;
+}
 /* msg-content-color */
 .senderColor {
     background-color: #a7bf2e !important;
@@ -139,10 +147,10 @@ h2 {
 #timeStamp {
     color: #716868;
     font-family: $poppins;
-    font-size: 10px;
+    font-size: 11px;
     padding-left: 0.75rem;
     padding-top: 0.25rem;
-    display: none;
+    // display: none;
     padding-left: 0.25rem;
     padding-right: 0.25rem;
     opacity: 0.0;
@@ -151,6 +159,7 @@ h2 {
     -ms-transition: .6 ease;
     -o-transition: .6 ease;
     transition: .6 ease;
+    z-index:10;
 }
 
 .messageContainer {
@@ -159,8 +168,11 @@ h2 {
 }
 
 #messageBlock:hover+#timeStamp {
-    display: block;
+    // display: block;
     opacity: 1.0;
+    background-color: #efeeee;
+    color: #726868;
+    border-radius: 5px;
 }
 
 .bg-light {
@@ -211,3 +223,167 @@ h2 {
     box-shadow: inset 10px 5px 6px #f2f2f2 !important;
 }
   
+.scroll-to-top {
+    justify-content: flex-end;
+    bottom: 15px;
+    right: 15px;
+    // opacity: 0;
+    transition: all .2s ease-in-out;
+   }
+   .show-scrollTop {
+    opacity: 1;
+    transition: all .2s ease-in-out;
+   }
+
+
+   
+// tool tip start
+.tooltip {
+    position: relative;
+    display: contents;
+    border-bottom: 1px dotted black;
+  }
+  
+  .tooltip .tooltiptext {
+    visibility: hidden;
+    width: 129px;
+    background-color: #efeeee;
+    color: #726868;
+    text-align: start;
+    border-radius: 5px;
+    position: absolute;
+    z-index: 1;
+    top: 68%;
+    left: 59%;
+    margin-left: -60px;
+    padding-left: 5px;
+    font-size: 11px;
+    padding-right: 5px;
+  }
+  
+  .tooltip:hover .tooltiptext {
+    visibility: visible;
+  }
+
+
+
+  .tooltip-example {
+    text-align: center;
+    padding: 0 50px;
+  }
+  .tooltip-example [tooltip] {
+    display: inline-block;
+    margin: 50px 20px;
+    width: 180px;
+    height: 50px;
+    border: 1px solid gray;
+    border-radius: 5px;
+    line-height: 50px;
+    text-align: center;
+  }
+  .ng-tooltip {
+    position: absolute;
+    max-width: 150px;
+    font-size: 14px;
+    text-align: center;
+    color: #f8f8f2;
+    padding: 3px 8px;
+    background: #282a36;
+    border-radius: 4px;
+    z-index: 1000;
+    opacity: 0;
+  }
+  .ng-tooltip:after {
+    content: "";
+    position: absolute;
+    border-style: solid;
+  }
+  .ng-tooltip-top:after {
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-color: black transparent transparent transparent;
+  }
+  .ng-tooltip-bottom:after {
+    bottom: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-color: transparent transparent black transparent;
+  }
+  .ng-tooltip-left:after {
+    top: 50%;
+    left: 100%;
+    margin-top: -5px;
+    border-width: 5px;
+    border-color: transparent transparent transparent black;
+  }
+  .ng-tooltip-right:after {
+    top: 50%;
+    right: 100%;
+    margin-top: -5px;
+    border-width: 5px;
+    border-color: transparent black transparent transparent;
+  }
+  .ng-tooltip-show {
+    opacity: 1;
+  }
+  
+//   #messageBlock:hover +.tipTooltext {
+//     visibility: visible;
+//   }
+  
+
+.scrollDown{
+    color: white;
+    padding: 5px;
+    width:50px;
+    height:50px;
+    border-radius: 4px;
+    text-decoration: none;
+    border-radius: 50%;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+	background:rgba(178,178,178,0.7);
+    -webkit-transition: all 0.3s linear;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    border:none;
+}
+
+.scrollDown:hover  {
+  background: rgb(166, 191, 46);
+  cursor: pointer;
+}
+
+.scroll-down-icon {
+    font-size:17px;
+    -webkit-transition: all 0.3s linear;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+
+.scrollDown:hover > .scroll-down-icon {
+    -webkit-transition: all 0.5s linear;
+    -moz-transition: all 0.5s ease;
+    -ms-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+    font-size:18px;
+}
+
+button:focus {
+    outline: none;
+}
+
+  
+#ScrollDownbutton {
+    position: absolute;
+    bottom: 84px;
+    right: 402px;
+}

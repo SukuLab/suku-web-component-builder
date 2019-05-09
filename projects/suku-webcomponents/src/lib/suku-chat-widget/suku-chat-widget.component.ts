@@ -8,7 +8,8 @@ import { EventEmitter } from '@angular/core';
 })
 export class SukuChatWidgetComponent implements OnInit {
   _messageObj;
-  _imgPlaceholder = '../assets/images/group.svg'
+  _imgPlaceholder = '../assets/images/group.svg';
+  _scrollHeight;
   @ViewChild(ScrollToBottomDirective)
   scroll: ScrollToBottomDirective;
   @Input() chat = {
@@ -24,46 +25,56 @@ export class SukuChatWidgetComponent implements OnInit {
   @Input() userImg = '../assets/images/group.svg';
   @Input() toUserImg = '../assets/images/group.svg';
   @Output() sendmessage = new EventEmitter();
-  @HostListener('window:scroll', ['$event']) 
+  @Output() userAction = new EventEmitter();
+  @HostListener('scroll', ['$event'])
     scrollHandler(event) {
-      console.debug("Scroll Event");
+      console.log('Scroll Event', event);
+      // const scrollTop = event.target.scrollTop;
+      console.log('Scroll Event', event.target.scrollTop);
     }
+
   constructor() { }
 
   ngOnInit() {
-    this.scrollDown();
-    if (this.messageData) {
+    if (this.messageData.length > 0) {
       this._messageObj = {
         message: this.messageData[0].message,
         timestamp: this.messageData[0].dateTime,
-        userId: this.messageData[0].from.userId,
-        from: {
-          userId: this.messageData[0].from.userId,
-          userName: this.messageData[0].from.userName,
+        userId: this.messageData[0].sender.userId,
+        sender: {
+          userId: this.messageData[0].sender.userId,
+          userName: this.messageData[0].sender.userName,
         },
-        to: {
-          userId: this.messageData[0].to.userId,
-          userName: this.messageData[0].to.userName,
+        receiver: {
+          userId: this.messageData[0].receiver.userId,
+          userName: this.messageData[0].receiver.userName,
         }
       };
     }
   }
 
-  scrollDown() {
-    const sss = document.getElementById('scrollDiv');
-    if (sss) {
-      sss.scrollTop = sss.scrollHeight;
+  action() {
+    if (this.messageData) {
+    this.userAction.emit(this.messageData[0].sender.userId);
     }
   }
 
   sendMessage(val) {
     console.log('test-send', val);
-    this._messageObj.message = val;
-    this._messageObj.timestamp = new Date().toLocaleString();
-    this.sendmessage.emit(this._messageObj);
-    console.log("messageObj", this._messageObj);
-    // this.messageData.push(this._messageObj);
+    this.sendmessage.emit(val);
+    this.messageData.push(this._messageObj);
   }
+
+  scrollToTop() {
+    console.log('sd');
+    // (function smoothscroll() {
+    //     const currentScroll = document.documentElement.scrollTop || document.body.scrollTop;
+    //     if (currentScroll > 0) {
+    //         window.requestAnimationFrame(smoothscroll);
+    //         window.scrollTo(0, currentScroll - (currentScroll / 8));
+    //     }
+    // })();
+}
 
 }
 

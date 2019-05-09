@@ -8,44 +8,56 @@
             </h1>
           </div>
           <div class="col-sm-12">
-            <h2>{{chat?.labelTwo}}<span class="pl-lg-2 pop-bold"
+            <h2>{{chat?.labelTwo}}<span class="pl-lg-2 pop-bold" (click)="action()"
                 id="{{chat?.labelTwoId}}">{{contentOne || 'N/A'}}</span></h2>
           </div>
         </div>
       </div>
     </div>
     <div class="form-group box-shadows col-xs-12 col-sm-12 p-0">
-      <div id="scrollDiv" class="chatBox p-1" #scrollMe [scrollTop]="scrollMe.scrollHeight" (scroll)="scrollHandler($event)">
+      <div id="scrollDiv" class="chatBox p-1" #scrollMe [scrollTop]="scrollMe.scrollHeight"
+        (scroll)="scrollHandler($event)">
         <div class="blockChat" *ngFor="let item of messageData; let i=index" scrollToBottom>
-          <div class="col" [class.messageContainer]="item?.userId == item?.from?.userId">
-            <div class="messageStyle mb-2" [class.rightFloat]="item?.userId == item?.from?.userId">
-              <img [src]="((item?.userId == item?.from?.userId)? userImg : toUserImg) || _imgPlaceholder" alt="Avatar"
-                class="user-icon m-1 p-1"
-                [ngClass]="{'order-last align-self-end': item?.userId == item?.from?.userId }">
-              <span class="d-flex" [class.rightFloat]="item?.userId == item?.from?.userId"
+          <div class="col" [class.messageContainer]="item?.userId == item?.sender?.userId">
+            <div class="messageStyle mb-1" [class.rightFloat]="item?.userId == item?.sender?.userId">
+              <span class="mb-2 ml-2 p-1"
+                [ngClass]="{'order-last align-self-end': item?.userId == item?.sender?.userId }">
+                <img [src]="((item?.userId == item?.sender?.userId)? userImg : toUserImg) || _imgPlaceholder"
+                  alt="Avatar" class="user-icon">
+              </span>
+              <span class="d-flex" [class.rightFloat]="item?.userId == item?.sender?.userId"
                 class="msg-content hoverable">
-                <div class="d-flex" [class.rightFloat]="item?.userId == item?.from?.userId" id="messageBlock">
+                <div class="d-flex" [class.rightFloat]="item?.userId == item?.sender?.userId" id="messageBlock">
                   <span class="mb-0" id="chatMessage{{i}}">
-                    <p class="p-2 mb-0 mt-2 chatMessage"
-                      [ngClass]="{'senderColor': item?.userId == item?.from?.userId, 'receiverColor': item?.userId != item?.from?.userId }">
-                      {{item?.message}}</p>
+                    <p class="p-2 mb-0 mt-2"
+                      [ngClass]="{'senderColor': item?.userId == item?.sender?.userId, 'receiverColor': item?.userId != item?.sender?.userId }">
+                      <!-- <span class="tooltip"> -->
+                      <span class="chatMessage">{{item?.message}}</span>
+                      <!-- <span class="tooltiptext">{{item?.timestamp | date:'d MMM yyyy h:mm:s a'}}</span>
+                      </span> -->
+                    </p>
                   </span>
                 </div>
                 <p class="mb-0" id="timeStamp"
-                  [ngClass]="{ 'float-right': item?.userId == item?.from?.userId, 'float-left': item?.userId != item?.from?.userId }">
-                  {{item?.timestamp}}</p>
+                  [ngClass]="{ 'float-right': item?.userId == item?.sender?.userId, 'float-left': item?.userId != item?.sender?.userId }">
+                  {{item?.timestamp | date:'d MMM yyyy h:mm:s a'}}</p>
               </span>
             </div>
           </div>
         </div>
+
       </div>
       <div class="col">
         <!-- to scroll down -->
-        <!-- <div class="scroll-to-top" [ngClass]="{'show-scrollTop': windowScrolled}">
-              <button (click)="scrollToTop()">
-                  <i class="fa fa-chevron-up"></i>
-              </button>
-          </div> -->
+        <!-- [ngClass]="{'show-scrollTop': windowScrolled}" -->
+        <div id="ScrollDownbutton" (click)="scrollToTop()">
+            <button class="scrollDown"><span class="fa fa-chevron-down scroll-down-icon mt-1"></span></button>
+        </div>
+        <!-- <div class="scroll-to-top" >
+          <button (click)="scrollToTop()">
+              <i class="fa fa-chevron-up"></i>
+          </button>
+      </div> -->
         <div class="row p-3 bg-light">
           <div style="text-align: center;" class="col-sm-10 pl-1 pr-1">
             <input class="form-control" [ngClass]="{'disabled': chatStatus }" autofocus="autofocus" #messageValue
