@@ -10,6 +10,9 @@ export class SukuChatWidgetComponent implements OnInit {
   _messageObj;
   _imgPlaceholder = '../assets/images/group.svg';
   _scrollHeight;
+  _touserID;
+  _initialScrollHeight;
+  _showScrollDownIcon;
   @ViewChild(ScrollToBottomDirective)
   scroll: ScrollToBottomDirective;
   @Input() chat = {
@@ -27,11 +30,17 @@ export class SukuChatWidgetComponent implements OnInit {
   @Output() sendmessage = new EventEmitter();
   @Output() userAction = new EventEmitter();
   @HostListener('scroll', ['$event'])
-    scrollHandler(event) {
-      console.log('Scroll Event', event);
-      // const scrollTop = event.target.scrollTop;
-      console.log('Scroll Event', event.target.scrollTop);
+  scrollHandler(event) {
+    console.log('Scroll Event', event);
+    console.log('Scroll Event', event.target.scrollTop);
+    console.log('_initialScrollHeight', this._initialScrollHeight.scrollHeight);
+    if ((this._initialScrollHeight.scrollHeight - event.target.scrollTop) > 390) {
+      this._showScrollDownIcon = true;
+      console.log("true");
+    } else {
+      this._showScrollDownIcon = false;
     }
+  }
 
   constructor() { }
 
@@ -50,12 +59,14 @@ export class SukuChatWidgetComponent implements OnInit {
           userName: this.messageData[0].receiver.userName,
         }
       };
+      this._touserID = this._messageObj.receiver.userId;
     }
+    this._initialScrollHeight = document.querySelector('.chatBox');
   }
 
   action() {
     if (this.messageData) {
-    this.userAction.emit(this.messageData[0].sender.userId);
+      this.userAction.emit(this.messageData[0].receiver.userId);
     }
   }
 
@@ -65,16 +76,44 @@ export class SukuChatWidgetComponent implements OnInit {
     this.messageData.push(this._messageObj);
   }
 
-  scrollToTop() {
-    console.log('sd');
-    // (function smoothscroll() {
-    //     const currentScroll = document.documentElement.scrollTop || document.body.scrollTop;
-    //     if (currentScroll > 0) {
-    //         window.requestAnimationFrame(smoothscroll);
-    //         window.scrollTo(0, currentScroll - (currentScroll / 8));
-    //     }
-    // })();
-}
+  scrollToBottomOnClik() {
+    const someElement = document.querySelector('.chatBox');
+    console.log('sd', someElement.scrollTop);
+    const duration = 300;
+    this.animateScroll(duration);
+  }
+
+  animateScroll(duration) {
+    const someElement = document.getElementById('scrollDiv');
+    const start = someElement.scrollTop;
+    const end = someElement.scrollHeight;
+    const change = end - start;
+    const increment = 20;
+    function easeInOut(currentTime, startPos, changePos, delay) {
+      currentTime /= delay / 2;
+      if (currentTime < 1) {
+        return changePos / 2 * currentTime * currentTime + startPos;
+      }
+      currentTime -= 1;
+      return -changePos / 2 * (currentTime * (currentTime - 2) - 1) + start;
+    }
+    function animate(elapsedTime) {
+      elapsedTime += increment;
+      const position = easeInOut(elapsedTime, start, change, duration);
+      someElement.scrollTop = position;
+      if (elapsedTime < duration) {
+        setTimeout(function () {
+          animate(elapsedTime);
+        }, increment);
+      }
+    }
+    animate(0);
+  }
+
+
+
+
+
 
 }
 
