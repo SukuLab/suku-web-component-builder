@@ -13,8 +13,10 @@ export class SukuChatWidgetComponent implements OnInit {
   _touserID;
   _initialScrollHeight;
   _showScrollDownIcon;
+
   @ViewChild(ScrollToBottomDirective)
   scroll: ScrollToBottomDirective;
+
   @Input() chat = {
     labelOne: 'Negotiation Chat Box',
     labelOneId: 'negotiationChatBox',
@@ -27,15 +29,16 @@ export class SukuChatWidgetComponent implements OnInit {
   @Input() IconSrc = '../assets/images/send-message-icon.png';
   @Input() userImg = '../assets/images/group.svg';
   @Input() toUserImg = '../assets/images/group.svg';
+
   @Output() sendmessage = new EventEmitter();
   @Output() userAction = new EventEmitter();
+
   @HostListener('scroll', ['$event'])
   scrollHandler(event) {
-    console.log('Scroll Event', event);
     console.log('Scroll Event', event.target.scrollTop);
     console.log('_initialScrollHeight', this._initialScrollHeight.scrollHeight);
     if ((this._initialScrollHeight.scrollHeight - event.target.scrollTop) > 390) {
-      this._showScrollDownIcon = true;
+      this._showScrollDownIcon = true; // enable scrollToBottomOnClik()
       console.log("true");
     } else {
       this._showScrollDownIcon = false;
@@ -73,7 +76,6 @@ export class SukuChatWidgetComponent implements OnInit {
   sendMessage(val) {
     console.log('test-send', val);
     this.sendmessage.emit(val);
-    this.messageData.push(this._messageObj);
   }
 
   scrollToBottomOnClik() {
@@ -109,11 +111,6 @@ export class SukuChatWidgetComponent implements OnInit {
     }
     animate(0);
   }
-
-
-
-
-
 
 }
 

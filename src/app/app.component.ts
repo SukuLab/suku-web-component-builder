@@ -146,7 +146,7 @@ export class AppComponent implements OnInit {
 		{
 			'message': 'When you move the mouse over the text below, the tooltip text will fade in and take 1 second to go from completely invisible to visible.:)',
 			'_id': '5cd13b224128930019a0fb79',
-			'userId': 473,
+			'userId': 474,
 			'userType': 'seller',
 			'accountType': 'Manufacturer',
 			'bidId': 1138,
