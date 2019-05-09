@@ -49,8 +49,7 @@
       </div>
       <div class="col">
         <!-- to scroll down -->
-        <!-- [ngClass]="{'show-scrollTop': windowScrolled}" -->
-        <div id="ScrollDownbutton" (click)="scrollToTop()">
+        <div id="ScrollDownbutton" (click)="scrollToTop()" *ngIf="false">
             <button class="scrollDown"><span class="fa fa-chevron-down scroll-down-icon mt-1"></span></button>
         </div>
         <!-- <div class="scroll-to-top" >
