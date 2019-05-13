@@ -31,7 +31,7 @@
                 class="msg-content hoverable">
                 <div class="d-flex" [class.rightFloat]="item?.userId == item?.sender?.userId" id="messageBlock">
                   <span class="mb-0" id="chatMessage{{i}}">
-                    <p class="p-2 mb-0 mt-3"
+                    <p class="p-2 mb-0 mct-5"
                       [ngClass]="{'senderColor': item?.userId == item?.sender?.userId, 'receiverColor': item?.userId != item?.sender?.userId }">
                       <span class="chatMessage">{{item?.message}}</span>
                     </p>
