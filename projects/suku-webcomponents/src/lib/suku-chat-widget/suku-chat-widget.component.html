@@ -39,7 +39,7 @@
                 </div>
                 <p class="mb-0" id="timeStamp"
                   [ngClass]="{ 'float-right': item?.userId == item?.sender?.userId, 'float-left': item?.userId != item?.sender?.userId }">
-                  {{item?.timestamp | date:'d MMM yyyy h:mm:s a'}}</p>
+                  {{item?.timestamp | date:'medium'}}</p>
               </span>
             </div>
           </div>
