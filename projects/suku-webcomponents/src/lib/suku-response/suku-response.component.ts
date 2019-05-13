@@ -7,8 +7,6 @@ import { Component, Input } from '@angular/core';
 })
 export class SukuResponseComponent {
 	@Input() customClass = 'filterResult text-center col p-0';
-	@Input() iconClass = 'fa fa-frown-o responseIcon';
-	@Input() iconColor = '#c0ca33';
 	@Input() title = 'No results found';
 	@Input() titleId = 'noResultsFound';
 	@Input() titleSize = '26';
@@ -19,4 +17,5 @@ export class SukuResponseComponent {
 	@Input() descriptionSize = '18';
 	@Input() descriptionColor = '#979797';
 	@Input() descriptionWeight = '400';
+	@Input() bgColor = '';
 }
