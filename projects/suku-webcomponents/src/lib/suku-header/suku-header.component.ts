@@ -34,7 +34,7 @@ export class SukuHeaderComponent implements OnInit {
 	@Input() contentTwoSize;
 	@Input() contentTwoColor;
 	@Input() contentTwoWeight;
-	@Input() contentTwoCustomClass;
+	@Input() contentTwoCustomClass="c-pointer";
 
 	@Input() titleThree = 'TIME REMAINING';
 	@Input() titleThreeId;
@@ -48,7 +48,6 @@ export class SukuHeaderComponent implements OnInit {
 		return this._date;
 	}
 	set contentThree(val) {
-		console.log(val);
 		this._date = val;
 	}
 	@Input()
@@ -56,7 +55,6 @@ export class SukuHeaderComponent implements OnInit {
 		return this._enableTimer;
 	}
 	set enableTimer(val) {
-		console.log(val);
 		this._enableTimer = val;
 	}
 	@Input() contentThreeId;

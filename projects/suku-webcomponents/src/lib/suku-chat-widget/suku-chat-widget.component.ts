@@ -1,6 +1,6 @@
 import { Component, OnInit, Input, ViewChild, Inject, HostListener, Output } from '@angular/core';
 import { ScrollToBottomDirective } from './suku-chat-scroll-directive';
-import { EventEmitter } from 'events';
+import { EventEmitter } from '@angular/core';
 @Component({
   selector: 'suku-chat-widget',
   templateUrl: './suku-chat-widget.component.html',
@@ -8,61 +8,108 @@ import { EventEmitter } from 'events';
 })
 export class SukuChatWidgetComponent implements OnInit {
   _messageObj;
-  _imgPlaceholder = '../assets/images/group.svg'
+  _imgPlaceholder = '../assets/images/group.svg';
+  _scrollHeight;
+  _touserID;
+  _initialScrollHeight;
+  _showScrollDownIcon;
+
   @ViewChild(ScrollToBottomDirective)
   scroll: ScrollToBottomDirective;
+
   @Input() chat = {
     labelOne: 'Negotiation Chat Box',
     labelOneId: 'negotiationChatBox',
     labelTwo: 'Chatting with:',
     labelTwoId: 'chattingWith'
   };
-  @Input() contentOne = 'Camila';
+  @Input() toUserName = 'N/A';
+  @Input() toUserNameId = 'touserName';
   @Input() chatStatus = false;
   @Input() messageData = [];
   @Input() IconSrc = '../assets/images/send-message-icon.png';
   @Input() userImg = '../assets/images/group.svg';
   @Input() toUserImg = '../assets/images/group.svg';
-  @Output() message = new EventEmitter();
-  @HostListener('window:scroll', ['$event']) 
-    scrollHandler(event) {
-      console.debug("Scroll Event");
-    }
-  constructor() { }
 
-  ngOnInit() {
-    this.scrollDown();
-    if (this.messageData) {
-      this._messageObj = {
-        message: this.messageData[0].message,
-        timestamp: this.messageData[0].dateTime,
-        userId: this.messageData[0].from.userId,
-        from: {
-          userId: this.messageData[0].from.userId,
-          userName: this.messageData[0].from.userName,
-        },
-        to: {
-          userId: this.messageData[0].to.userId,
-          userName: this.messageData[0].to.userName,
-        }
-      };
+  @Output() sendmessage = new EventEmitter();
+  @Output() userAction = new EventEmitter();
+
+  @HostListener('scroll', ['$event'])
+  scrollHandler(event) {
+    if ((this._initialScrollHeight.scrollHeight - event.target.scrollTop) > 390) {
+      this._showScrollDownIcon = true; // enable scrollToBottomOnClik()
+      console.log("true");
+    } else {
+      this._showScrollDownIcon = false;
     }
   }
 
-  scrollDown() {
-    const sss = document.getElementById('scrollDiv');
-    if (sss) {
-      sss.scrollTop = sss.scrollHeight;
+  constructor() { }
+
+  ngOnInit() {
+    if (this.messageData.length > 0) {
+      this._messageObj = {
+        message: this.messageData[0].message,
+        timestamp: this.messageData[0].dateTime,
+        userId: this.messageData[0].sender.userId,
+        sender: {
+          userId: this.messageData[0].sender.userId,
+          userName: this.messageData[0].sender.userName,
+        },
+        receiver: {
+          userId: this.messageData[0].receiver.userId,
+          userName: this.messageData[0].receiver.userName,
+        }
+      };
+    }
+    this._initialScrollHeight = document.querySelector('.chatBox');
+    this.scrollToBottom();
+  }
+
+  action() {
+    if (this.messageData) {
+      this.userAction.emit(this.messageData[0].receiver);
     }
   }
 
   sendMessage(val) {
     console.log('test-send', val);
-    this._messageObj.message = val;
-    this._messageObj.timestamp = new Date().toLocaleString();
-    this.message.emit(this._messageObj);
-    console.log("messageObj", this._messageObj);
-    this.messageData.push(this._messageObj);
+    this.sendmessage.emit(val);
+    this.scrollToBottom();
+  }
+
+  scrollToBottom() {
+    const someElement = document.querySelector('.chatBox');
+    console.log('sd', someElement.scrollTop);
+    const duration = 300;
+    this.animateScroll(duration);
+  }
+
+  animateScroll(duration) {
+    const someElement = document.getElementById('scrollDiv');
+    const start = someElement.scrollTop;
+    const end = someElement.scrollHeight;
+    const change = end - start;
+    const increment = 20;
+    function easeInOut(currentTime, startPos, changePos, delay) {
+      currentTime /= delay / 2;
+      if (currentTime < 1) {
+        return changePos / 2 * currentTime * currentTime + startPos;
+      }
+      currentTime -= 1;
+      return -changePos / 2 * (currentTime * (currentTime - 2) - 1) + start;
+    }
+    function animate(elapsedTime) {
+      elapsedTime += increment;
+      const position = easeInOut(elapsedTime, start, change, duration);
+      someElement.scrollTop = position;
+      if (elapsedTime < duration) {
+        setTimeout(function () {
+          animate(elapsedTime);
+        }, increment);
+      }
+    }
+    animate(0);
   }
 
 }
