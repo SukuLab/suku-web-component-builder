@@ -23,7 +23,8 @@ export class SukuChatWidgetComponent implements OnInit {
     labelTwo: 'Chatting with:',
     labelTwoId: 'chattingWith'
   };
-  @Input() contentOne = 'Camila';
+  @Input() toUserName = 'N/A';
+  @Input() toUserNameId = 'touserName';
   @Input() chatStatus = false;
   @Input() messageData = [];
   @Input() IconSrc = '../assets/images/send-message-icon.png';
@@ -35,8 +36,6 @@ export class SukuChatWidgetComponent implements OnInit {
 
   @HostListener('scroll', ['$event'])
   scrollHandler(event) {
-    console.log('Scroll Event', event.target.scrollTop);
-    console.log('_initialScrollHeight', this._initialScrollHeight.scrollHeight);
     if ((this._initialScrollHeight.scrollHeight - event.target.scrollTop) > 390) {
       this._showScrollDownIcon = true; // enable scrollToBottomOnClik()
       console.log("true");
@@ -62,23 +61,24 @@ export class SukuChatWidgetComponent implements OnInit {
           userName: this.messageData[0].receiver.userName,
         }
       };
-      this._touserID = this._messageObj.receiver.userId;
     }
     this._initialScrollHeight = document.querySelector('.chatBox');
+    this.scrollToBottom();
   }
 
   action() {
     if (this.messageData) {
-      this.userAction.emit(this.messageData[0].receiver.userId);
+      this.userAction.emit(this.messageData[0].receiver);
     }
   }
 
   sendMessage(val) {
     console.log('test-send', val);
     this.sendmessage.emit(val);
+    this.scrollToBottom();
   }
 
-  scrollToBottomOnClik() {
+  scrollToBottom() {
     const someElement = document.querySelector('.chatBox');
     console.log('sd', someElement.scrollTop);
     const duration = 300;

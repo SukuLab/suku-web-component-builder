@@ -171,7 +171,7 @@ import { SukuConfirmationComponent } from './suku-confirmation/suku-confirmation
 		SukuChatWidgetComponent,
 		SukuLoaderComponent,
 		SukuConfirmationComponent,
-		ScrollToBottomDirective,
+		ScrollToBottomDirective
 	],
 	imports: [
 		CommonModule,
