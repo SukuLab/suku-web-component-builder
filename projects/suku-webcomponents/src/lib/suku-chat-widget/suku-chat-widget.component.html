@@ -19,7 +19,7 @@
       <!-- auto scroll  `scrollMe [scrollTop]=scrollMe.scrollHeight` disabled  -->
       <div id="scrollDiv" class="chatBox p-1"  (scroll)="scrollHandler($event)">
         <div class="blockChat" *ngFor="let item of messageData; let i=index" scrollToBottom>
-          <div class="col d-flex pl-3 pr-3" [class.messageContainerRgt]="item?.userId == item?.sender?.userId"
+          <div class="col d-flex pl-4 pr-4" [class.messageContainerRgt]="item?.userId == item?.sender?.userId"
             [class.messageContainerLft]="item?.userId != item?.sender?.userId">
             <div class="messageStyle mb-1" [class.rightFloat]="item?.userId == item?.sender?.userId">
               <span class="mb-3 align-end  p-2"
