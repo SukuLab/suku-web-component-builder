@@ -19,11 +19,11 @@
       <!-- auto scroll  `scrollMe [scrollTop]=scrollMe.scrollHeight` disabled  -->
       <div id="scrollDiv" class="chatBox p-1"  (scroll)="scrollHandler($event)">
         <div class="blockChat" *ngFor="let item of messageData; let i=index" scrollToBottom>
-          <div class="col d-flex pl-4 pr-4" [class.messageContainerRgt]="item?.userId == item?.sender?.userId"
+          <div class="col d-flex" [class.messageContainerRgt]="item?.userId == item?.sender?.userId"
             [class.messageContainerLft]="item?.userId != item?.sender?.userId">
             <div class="messageStyle mb-1" [class.rightFloat]="item?.userId == item?.sender?.userId">
-              <span class="mb-3 align-end  p-2"
-                [ngClass]="{'order-last ml-2': item?.userId == item?.sender?.userId, 'mr-2': item?.userId != item?.sender?.userId }">
+              <span class="mb-3 p-2"
+                [ngClass]="{'order-last align-self-end ml-2': item?.userId == item?.sender?.userId, 'mr-2': item?.userId != item?.sender?.userId }">
                 <img [src]="((item?.userId == item?.sender?.userId)? userImg : toUserImg) || _imgPlaceholder"
                   alt="Avatar" class="user-icon">
               </span>
@@ -31,7 +31,7 @@
                 class="msg-content hoverable">
                 <div class="d-flex" [class.rightFloat]="item?.userId == item?.sender?.userId" id="messageBlock">
                   <span class="mb-0" id="chatMessage{{i}}">
-                    <p class="p-2 mb-0 mct-7"
+                    <p class="p-2 mb-0 mct-5 "
                       [ngClass]="{'senderColor': item?.userId == item?.sender?.userId, 'receiverColor': item?.userId != item?.sender?.userId }">
                       <span class="chatMessage">{{item?.message}}</span>
                     </p>
@@ -41,7 +41,7 @@
                   [ngClass]="{ 'float-right': item?.userId == item?.sender?.userId, 'float-left': item?.userId != item?.sender?.userId }">
                   {{item?.timestamp | date:'medium'}}</p>
               </span>
-            </div>
+            </div>  
           </div>
         </div>
       </div>
@@ -52,7 +52,7 @@
         </div>
         <div class="row p-3 bg-light">
           <div style="text-align: center;" class="col-lg-10 col-sm-10 col-10 pl-1 pr-1">
-            <input class="form-control" [ngClass]="{'disabled': chatStatus }" autofocus="autofocus" #messageValue
+            <input class="form-control" [disabled]="chatStatus" [ngClass]="{'disabled': chatStatus }" autofocus="autofocus" #messageValue
               type="text" name="message " id="message" placeholder="type message here... "
               (keyup.enter)="sendMessage(messageValue?.value);messageValue.value = ''">
           </div>
