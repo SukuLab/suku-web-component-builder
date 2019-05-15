@@ -31,7 +31,7 @@
                 class="msg-content hoverable">
                 <div class="d-flex" [class.rightFloat]="item?.userId == item?.sender?.userId" id="messageBlock">
                   <span class="mb-0" id="chatMessage{{i}}">
-                    <p class="p-2 mb-0 mt-3"
+                    <p class="p-2 mb-0 mct-5 "
                       [ngClass]="{'senderColor': item?.userId == item?.sender?.userId, 'receiverColor': item?.userId != item?.sender?.userId }">
                       <span class="chatMessage">{{item?.message}}</span>
                     </p>
@@ -39,9 +39,9 @@
                 </div>
                 <p class="mb-0" id="timeStamp"
                   [ngClass]="{ 'float-right': item?.userId == item?.sender?.userId, 'float-left': item?.userId != item?.sender?.userId }">
-                  {{item?.timestamp | date:'d MMM yyyy h:mm:s a'}}</p>
+                  {{item?.timestamp | date:'medium'}}</p>
               </span>
-            </div>
+            </div>  
           </div>
         </div>
       </div>
@@ -52,7 +52,7 @@
         </div>
         <div class="row p-3 bg-light">
           <div style="text-align: center;" class="col-lg-10 col-sm-10 col-10 pl-1 pr-1">
-            <input class="form-control" [ngClass]="{'disabled': chatStatus }" autofocus="autofocus" #messageValue
+            <input class="form-control" [disabled]="chatStatus" [ngClass]="{'disabled': chatStatus }" autofocus="autofocus" #messageValue
               type="text" name="message " id="message" placeholder="type message here... "
               (keyup.enter)="sendMessage(messageValue?.value);messageValue.value = ''">
           </div>

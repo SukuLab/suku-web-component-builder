@@ -1,3 +1,5 @@
-<button class="btn btn-info btn-lg btn-block" [style.font-size.px]="size" id="{{id}}" (click)="trigger.emit()">
-  <ng-content></ng-content>
- </button>
+<div class="col p-0">
+  <button class="btn btn-info btn-lg btn-block" [disabled]="disableValue" [style.font-size.px]="size" [style.font-weight]="fontWeight" id="{{id}}" (click)="trigger.emit()">
+    <ng-content></ng-content>
+  </button>
+</div>

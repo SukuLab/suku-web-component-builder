@@ -33,7 +33,7 @@ export class AppComponent implements OnInit {
 			'__v': 0
 		},
 		{
-			'message': 'how are you',
+			'message': 'how are you, Waiting for bid confirmation and thanks.',
 			'_id': '5cd13affd705200019ef3cf6',
 			'userId': 474,
 			'userType': 'buy',

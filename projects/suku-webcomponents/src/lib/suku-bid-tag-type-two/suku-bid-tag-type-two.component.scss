@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:200i,400,700');
+
+$poppins: 'Poppins',
+sans-serif !important;
+
+aside {
+  width: 100%;
+  float: left;
+  background: #353a3e;
+  border-left: 5px solid #a7bf2e;
+  border-radius: 0 40px 0 0;
+  padding: 17px 30px;
+  margin: 0 0 18px 0;
+}
+
+ aside:last-child {
+  margin-bottom: 0;
+}
+
+ aside .prize {
+  width: 100%;
+  float: left;
+  font-family: $poppins;
+  font-size: 50px;
+  color: #ffffff;
+  line-height: 1em;
+  margin: 0 0 12px 0;
+}
+
+aside .prize sub {
+  font-size: 38%;
+  color: rgba(255, 255, 255, 0.5);
+  top: -2px;
+}
+
+aside ul {
+  width: 100%;
+  float: left;
+  font-family: $poppins;
+  padding: 0;
+  margin: 0;
+}
+
+aside ul li {
+  width: 100%;
+  float: left;
+  color: rgba(255, 255, 255, 0.5);
+  letter-spacing: 0.02em;
+  padding: 0 0 4px 0;
+  margin: 0;
+}
+
+.bulletPoint li {
+  list-style-type: none;
+}

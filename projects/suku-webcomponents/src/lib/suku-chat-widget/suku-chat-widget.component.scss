@@ -116,6 +116,14 @@ h2 {
 }
 
 
+.mct-7 {
+  margin-top:7px;
+}
+
+.align-end {
+  align-self: flex-end;
+}
+
 /* msg-content-color */
 .senderColor {
   background-color: #a7bf2e !important;
@@ -284,14 +292,14 @@ button:focus {
 
 #ScrollDownbutton {
   position: absolute;
-  right: 0;
-  bottom: 69px;
+  right: 3px;
+  bottom: 78px;
 }
 
 #ScrollDownbutton:hover {
   position: absolute;
-  right: 0;
-  bottom: 63px;
+  right: 3px;
+  bottom: 70px;
   -webkit-transition: all 0.5s linear;
   -moz-transition: all 0.5s ease;
   -ms-transition: all 0.5s ease;
