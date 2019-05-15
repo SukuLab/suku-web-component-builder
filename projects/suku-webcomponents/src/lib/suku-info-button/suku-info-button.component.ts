@@ -9,6 +9,7 @@ export class SukuInfoButtonComponent implements OnInit {
 	@Input() name;
 	@Input() id;
 	@Input() size;
+	@Input() fontWeight = 400;
 	@Input() disableValue: Boolean;
 	@Output() trigger = new EventEmitter();
 

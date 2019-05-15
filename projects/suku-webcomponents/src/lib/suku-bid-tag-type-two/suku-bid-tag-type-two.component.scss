@@ -1,53 +1,47 @@
- .article {
-  float: left;
-}
+@import url('https://fonts.googleapis.com/css?family=Poppins:200i,400,700');
 
- .article .title-txt {
-  font-size: 14px !important;
-  width: 100%;
-  float: left;
-  color: #1d1d1d;
-  padding: 0 0 12px 0;
-}
+$poppins: 'Poppins',
+sans-serif !important;
 
- .article aside {
+aside {
   width: 100%;
   float: left;
   background: #353a3e;
-  border-left: 5px solid #010101;
+  border-left: 5px solid #a7bf2e;
   border-radius: 0 40px 0 0;
   padding: 17px 30px;
   margin: 0 0 18px 0;
 }
 
- .article aside:last-child {
+ aside:last-child {
   margin-bottom: 0;
 }
 
- .article aside .prize {
+ aside .prize {
   width: 100%;
   float: left;
-  font-family: "Poppins", sans-serif;
+  font-family: $poppins;
   font-size: 50px;
   color: #ffffff;
   line-height: 1em;
   margin: 0 0 12px 0;
 }
 
- .article aside .prize sub {
+aside .prize sub {
   font-size: 38%;
   color: rgba(255, 255, 255, 0.5);
   top: -2px;
 }
 
- .article aside ul {
+aside ul {
   width: 100%;
   float: left;
+  font-family: $poppins;
   padding: 0;
   margin: 0;
 }
 
- .article aside ul li {
+aside ul li {
   width: 100%;
   float: left;
   color: rgba(255, 255, 255, 0.5);
@@ -56,137 +50,6 @@
   margin: 0;
 }
 
- .article aside ul li:last-child {
-  padding-bottom: 0;
-}
-
- .article aside ul li:before {
-  display: none;
-}
-
- .article .list {
-  width: 100%;
-  float: left;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-  padding: 0 0 20px 0;
-}
-
- .article .list ul li {
-  color: #000000;
-}
-
- .article.selected aside {
-  border-left-color: #a7bf2e;
-}
-
- .article-out {
-  width: 100%;
-  float: left;
-  margin: 0 0 0px 35px;
-}
-
-@media (max-width: 991px) {
-   .article {
-    width: 44%;
-    margin: 0 3% 50px 3%;
-  }
-
-   .article aside {
-    padding: 25px 25px;
-    margin: 0 0 18px 0;
-  }
-
-   .article-out {
-    width: 106%;
-    margin: 0 -3% -50px -3%;
-    height: 100%;
-  }
-}
-
-@media (max-width: 767px) {
-   .article {
-    width: 100%;
-    margin: 0 0 35px 0;
-  }
-
-   .article aside {
-    border-radius: 0 25px 0 0;
-    padding: 20px 20px;
-  }
-
-   .article aside .prize {
-    font-size: 40px;
-  }
-
-   .article aside ul {
-    width: 100%;
-    float: left;
-    padding: 0;
-    margin: 0;
-  }
-
-   .article .list {
-    padding: 0 0 20px 0;
-  }
-
-   .article-out {
-    width: 100%;
-    margin: 0 0 -35px 0;
-    height: 100%;
-  }
-}
-
 .bulletPoint li {
   list-style-type: none;
-}
-
-.productPayment {
-  font-family: "Encode sans", sans-serif !important;
-  font-size: 14px;
-  font-weight: normal;
-  font-style: normal;
-  font-stretch: normal;
-  line-height: 1.43;
-  letter-spacing: -0.4px;
-  color: #3e3e3e;
-}
-
-.bid-title {
-  font-family: "Encode Sans", sans-serif;
-  font-size: 14px;
-  font-weight: 500;
-  font-style: normal;
-  font-stretch: normal;
-  line-height: normal;
-  letter-spacing: -0.4px;
-  color: #b6b6b6;
-  text-transform: uppercase;
-}
-
-.bid-details {
-  font-family: "Encode Sans", sans-serif;
-  font-size: 14px;
-  font-weight: 50px;
-  font-style: normal;
-  font-stretch: normal;
-  line-height: 1.43;
-  letter-spacing: -0.4px;
-  color: #3e3e3e;
-}
-
-ul {
-  list-style: none;
-}
-
-ul li::before {
-  content: "\2022";
-  color: #dedede;
-  font-weight: bold;
-  font-size: 16px;
-  display: inline-block;
-  width: 1em;
-}
-
-.default {
-  width: 350px;
 }

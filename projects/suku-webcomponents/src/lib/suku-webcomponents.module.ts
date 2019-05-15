@@ -106,6 +106,8 @@ import { ScrollToBottomDirective } from './suku-chat-widget/suku-chat-scroll-dir
 import { SukuLoaderComponent } from './suku-loader/suku-loader.component';
 import { SukuConfirmationComponent } from './suku-confirmation/suku-confirmation.component';
 import { SukuLargeBidTagComponent } from './suku-bid-tag-type-two/suku-bid-tag-type-two.component';
+import { SukuBidWidgetTagComponent } from './suku-bid-widget/suku-bid-widget.component';
+
 @NgModule({
 	declarations: [
 		SukuBidTagComponent,
@@ -173,7 +175,8 @@ import { SukuLargeBidTagComponent } from './suku-bid-tag-type-two/suku-bid-tag-t
 		SukuLoaderComponent,
 		SukuConfirmationComponent,
 		ScrollToBottomDirective,
-		SukuLargeBidTagComponent
+		SukuLargeBidTagComponent,
+		SukuBidWidgetTagComponent
 	],
 	imports: [
 		CommonModule,
@@ -281,7 +284,8 @@ import { SukuLargeBidTagComponent } from './suku-bid-tag-type-two/suku-bid-tag-t
 		SukuChatWidgetComponent,
 		SukuLoaderComponent,
 		SukuConfirmationComponent,
-		SukuLargeBidTagComponent
+		SukuLargeBidTagComponent,
+		SukuBidWidgetTagComponent
 	]
 })
 export class SukuWebcomponentsModule {}

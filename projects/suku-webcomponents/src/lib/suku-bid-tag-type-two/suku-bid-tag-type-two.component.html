@@ -1,31 +1,9 @@
-<div [class]="customClass">
-  <div class="article selected">
-    <div class="title-txt" [style.color]="titleFontColor" [style.font-size.px]="titleFontSize" [style.font-weight]="titleFontWeight">{{titleText}}</div>
-    <aside>
-      <div class="prize"> <span [style.color]="priceFontColor" [style.font-size.px]="priceFontSize" [style.font-weight]="priceFontWeight"> {{(paymentMethod == 'USD') ? '$': ''}}{{productPrice}}</span> <sub>{{(paymentMethod != 'USD') ? paymentMethod : ''}} / UNIT</sub>
-      </div>
-      <ul class="bulletPoint" [style.color]="listFontColor" [style.font-size.px]="listFontSize" [style.font-weight]="listFontWeight">
-        <li>{{totalPriceLabel}}: {{(paymentMethod == 'USD') ? '$': ''}}{{productTotalPrice}} {{(paymentMethod != 'USD') ? paymentMethod : ''}}</li>
-        <li>{{quantityLabel}}: {{productQuantity}}</li>
-        <li *ngIf="minQtyLabel">{{minQtyLabel}}: {{minimumQuantity}}</li>
-      </ul>
-    </aside>
-    <div class="list">
-      <ul class="pl-4 productPayment">
-        <li>
-          <span class="bid-title" [style.color]="bidTitleFontColor" [style.font-weight]="bidTitleFontWeight" [style.font-size.px]="bidTitleFontSize">{{paymentMethodLabel}}:</span>
-          <span class="bid-details ml-2" [style.font-weight]="bidDetilsFontWeight" [style.color]="bidDetilsFontColor" [style.font-size.px]="bidDetilsFontSize"> {{paymentMethod}}</span>
-        </li>
-        <li>
-          <span class="bid-title" [style.color]="bidTitleFontColor" [style.font-weight]="bidTitleFontWeight" [style.font-size.px]="bidTitleFontSize">{{paymentTermsLabel}}:</span>
-          <span class="bid-details ml-2" [style.font-weight]="bidDetilsFontWeight" [style.color]="bidDetilsFontColor" [style.font-size.px]="bidDetilsFontSize"> {{paymentTerms}}</span>
-        </li>
-        <li>
-          <span class="bid-title" [style.color]="bidTitleFontColor" [style.font-weight]="bidTitleFontWeight" [style.font-size.px]="bidTitleFontSize"> {{deliveryTermsLabel}}:</span>
-          <span class="bid-details ml-2" [style.font-weight]="bidDetilsFontWeight" [style.color]="bidDetilsFontColor" [style.font-size.px]="bidDetilsFontSize">  {{deliveryTerms}} {{ deliveryTerms > 1 ? '
-              days' : ' day'}}</span>
-          </li>
-      </ul>
-    </div>
-  </div>  
-</div>
+<aside>
+  <div class="prize"> <span [style.color]="priceFontColor" [style.font-size.px]="priceFontSize" [style.font-weight]="priceFontWeight"> {{(paymentMethod == 'USD') ? '$': ''}}{{productPrice}}</span> <sub>{{(paymentMethod != 'USD') ? paymentMethod : ''}} / UNIT</sub>
+  </div>
+  <ul class="bulletPoint" [style.color]="listFontColor" [style.font-size.px]="listFontSize" [style.font-weight]="listFontWeight">
+    <li>{{totalPriceLabel}}: {{(paymentMethod == 'USD') ? '$': ''}}{{productTotalPrice}} {{(paymentMethod != 'USD') ? paymentMethod : ''}}</li>
+    <li>{{quantityLabel}}: {{productQuantity}}</li>
+    <li *ngIf="minQtyLabel">{{minQtyLabel}}: {{minimumQuantity}}</li>
+  </ul>
+</aside>
