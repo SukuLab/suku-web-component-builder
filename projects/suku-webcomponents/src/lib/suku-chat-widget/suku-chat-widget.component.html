@@ -22,8 +22,8 @@
           <div class="col d-flex" [class.messageContainerRgt]="item?.userId == item?.sender?.userId"
             [class.messageContainerLft]="item?.userId != item?.sender?.userId">
             <div class="messageStyle mb-1" [class.rightFloat]="item?.userId == item?.sender?.userId">
-              <span class="mb-3 p-2"
-                [ngClass]="{'order-last align-self-end ml-2': item?.userId == item?.sender?.userId, 'mr-2': item?.userId != item?.sender?.userId }">
+              <span class="mcb-5 p-2 align-end"
+                [ngClass]="{'order-last ml-2': item?.userId == item?.sender?.userId, 'mr-2': item?.userId != item?.sender?.userId }">
                 <img [src]="((item?.userId == item?.sender?.userId)? userImg : toUserImg) || _imgPlaceholder"
                   alt="Avatar" class="user-icon">
               </span>
@@ -31,7 +31,7 @@
                 class="msg-content hoverable">
                 <div class="d-flex" [class.rightFloat]="item?.userId == item?.sender?.userId" id="messageBlock">
                   <span class="mb-0" id="chatMessage{{i}}">
-                    <p class="p-2 mb-0 mct-5 "
+                    <p class="p-2 mb-0 mct-9 "
                       [ngClass]="{'senderColor': item?.userId == item?.sender?.userId, 'receiverColor': item?.userId != item?.sender?.userId }">
                       <span class="chatMessage">{{item?.message}}</span>
                     </p>
