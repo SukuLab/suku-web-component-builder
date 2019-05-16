@@ -1,21 +1,26 @@
 import { Component, OnInit, Input, ViewChild, Inject, HostListener, Output } from '@angular/core';
 import { ScrollToBottomDirective } from './suku-chat-scroll-directive';
 import { EventEmitter } from '@angular/core';
+
 @Component({
 	selector: 'suku-chat-widget',
 	templateUrl: './suku-chat-widget.component.html',
-	styleUrls: [ './suku-chat-widget.component.scss' ]
+	styleUrls: ['./suku-chat-widget.component.scss']
 })
 export class SukuChatWidgetComponent implements OnInit {
 	_messageObj;
 	_imgPlaceholder = '../assets/images/group.svg';
+	_userImg = '../assets/images/group.svg';
+	_toUserImg = '../assets/images/group.svg';
 	_scrollHeight;
 	_touserID;
 	_initialScrollHeight;
 	_showScrollDownIcon;
 	_chkmessageStatus;
-	@ViewChild(ScrollToBottomDirective) scroll: ScrollToBottomDirective;
+	_oldMessage;
+	_newMessageCount;
 
+	@ViewChild(ScrollToBottomDirective) scroll: ScrollToBottomDirective;
 	@Input()
 	chat = {
 		labelOne: 'Negotiation Chat Box',
@@ -27,9 +32,21 @@ export class SukuChatWidgetComponent implements OnInit {
 	@Input() toUserNameId = 'touserName';
 	@Input() chatStatus = false;
 	@Input() messageData = [];
-	@Input() IconSrc = '../assets/images/send-message-icon.png';
-	@Input() userImg = '../assets/images/group.svg';
-	@Input() toUserImg = '../assets/images/group.svg';
+	@Input() sendMessageIconSrc = '../assets/images/send-message-icon.png';
+	@Input()
+	get userImg() {
+		return this._userImg;
+	}
+	set userImg(val) {
+		this._userImg = val;
+	}
+	@Input()
+	get toUserImg() {
+		return this._userImg;
+	}
+	set toUserImg(val) {
+		this._toUserImg = val;
+	}
 	@Input()
 	get chkmessageStatus() {
 		return this._chkmessageStatus;
@@ -38,15 +55,13 @@ export class SukuChatWidgetComponent implements OnInit {
 		this._chkmessageStatus = val;
 		if (this._chkmessageStatus) {
 			this.scrollToBottom();
-		} else {
-			this.scrollToBottom();
 		}
 	}
 
 	@Output() sendmessage = new EventEmitter();
 	@Output() userAction = new EventEmitter();
 
-	@HostListener('scroll', [ '$event' ])
+	@HostListener('scroll', ['$event'])
 	scrollHandler(event) {
 		if (this._initialScrollHeight.scrollHeight - event.target.scrollTop > 390) {
 			this._showScrollDownIcon = true; // enable scrollToBottomOnClik()
@@ -56,7 +71,8 @@ export class SukuChatWidgetComponent implements OnInit {
 		}
 	}
 
-	constructor() {}
+
+	constructor() { }
 
 	ngOnInit() {
 		if (this.messageData.length > 0) {
@@ -75,6 +91,7 @@ export class SukuChatWidgetComponent implements OnInit {
 			};
 		}
 		this._initialScrollHeight = document.querySelector('.chatBox');
+		this._oldMessage = this.messageData;
 		this.scrollToBottom();
 	}
 
@@ -116,7 +133,7 @@ export class SukuChatWidgetComponent implements OnInit {
 			const position = easeInOut(elapsedTime, start, change, duration);
 			someElement.scrollTop = position;
 			if (elapsedTime < duration) {
-				setTimeout(function() {
+				setTimeout(function () {
 					animate(elapsedTime);
 				}, increment);
 			}

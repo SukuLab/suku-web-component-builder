@@ -22,9 +22,9 @@
           <div class="col d-flex" [class.messageContainerRgt]="item?.userId == item?.sender?.userId"
             [class.messageContainerLft]="item?.userId != item?.sender?.userId">
             <div class="messageStyle mb-1" [class.rightFloat]="item?.userId == item?.sender?.userId">
-              <span class="mcb-5 p-2 align-end"
+              <span class="mcb-10 p-2 align-end"
                 [ngClass]="{'order-last ml-2': item?.userId == item?.sender?.userId, 'mr-2': item?.userId != item?.sender?.userId }">
-                <img [src]="((item?.userId == item?.sender?.userId)? userImg : toUserImg) || _imgPlaceholder"
+                <img [src]="((item?.userId == item?.sender?.userId)? _userImg : _toUserImg) || _imgPlaceholder"
                   alt="Avatar" class="user-icon">
               </span>
               <span class="d-flex" [class.rightFloat]="item?.userId == item?.sender?.userId"
@@ -58,7 +58,7 @@
           </div>
           <div class="col-sm-2 col-2 p-xs-0 mx-auto f22 c-pointer" [ngClass]="{'disabled': chatStatus }"
             (click)="sendMessage(messageValue?.value);messageValue.value = ''">
-            <img [src]="IconSrc" alt="send-icon" class="rotateIcon">
+            <img [src]="sendMessageIconSrc" alt="send-icon" class="rotateIcon">
           </div>
         </div>
       </div>
