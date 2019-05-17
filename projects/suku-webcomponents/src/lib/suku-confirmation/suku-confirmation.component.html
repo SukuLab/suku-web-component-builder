@@ -29,31 +29,15 @@
 <mat-dialog-actions>
   <div class="col text-center">
     <div class="row">
-      <div
-        class=" col-lg-3 col-md-6 col-sm-4 col-xs-10 offset-lg-2 pl-lg-0 pr-lg-0 "
-      >
-        <button
-          type="button"
-          id="{{ Buttononeid }}"
-          class="btn btn-default btn-lg center-block width100"
-          mat-dialog-close
-          (click)="triggerone.emit()"
-          tabindex="-1"
-        >
+      <div class=" col-sm-6 justify-content-center">
+        <button type="button" id="{{ Buttononeid }}" class="btn btn-default btn-lg center-block minWidth50" mat-dialog-close
+          (click)="triggerone.emit(false)" tabindex="-1">
           {{ Buttonone }}
         </button>
       </div>
-      <div
-        class="col-lg-3 col-md-6 col-sm-4 col-xs-10 offset-lg-2 pl-lg-0 pr-lg-0"
-      >
-        <button
-          type="button"
-          tabindex="1"
-          (click)="triggertwo.emit()"
-          id="{{ Buttontwoid }}"
-          mat-dialog-close
-          class="btn btn-info btn-lg center-block width100"
-        >
+      <div class="col-sm-6">
+        <button type="button" tabindex="1" (click)="triggertwo.emit(true)" id="{{ Buttontwoid }}" mat-dialog-close
+          class="btn btn-info btn-lg center-block minWidth50">
           {{ Buttontwo }}
         </button>
       </div>
