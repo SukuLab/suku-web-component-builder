@@ -8,5 +8,9 @@
     "@angular/forms": "^7.0.4",
     "@angular/platform-browser": "*",
     "d3": "^3.5.17"
+  },
+  "schematics": "./collection.json",
+  "dependencies": {
+    "schematics-utilities": "^1.1.2"
   }
 }

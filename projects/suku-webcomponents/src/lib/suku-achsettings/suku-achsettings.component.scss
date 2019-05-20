@@ -1,3 +1,11 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:200i,400,700');
+@import url('https://fonts.googleapis.com/css?family=Encode+Sans:200i,400,700');
+
+$poppins: 'Poppins',
+sans-serif !important;
+$encodeSans: 'Encode Sans',
+sans-serif !important;
+
 .redText {
 	color: red;
 	font-size: 12px;
@@ -19,7 +27,7 @@
 }
 
 .poppinsFont {
-	font-family: 'Poppins';
+	font-family: $poppins;
 }
 
 .btn {
@@ -30,14 +38,14 @@
 	padding: 0.775rem 1.85rem;
 	font-size: 12px !important;
 	font-weight: bold;
-	font-family: "Poppins";
+	font-family: $poppins;
 }
 
 .btn:hover {
 	border: solid 2px #a7bf2e;
 	border-radius: 28px 76px 63px;
 	background-color: #a7bf2e;
-	color: balck;
+	color: black;
 }
 
 .btn:focus {
@@ -58,7 +66,7 @@
 
 .subTitle {
 	font-weight: bold !important;
-	font-family: 'Poppins', sans-serif !important;
+	font-family: $poppins;
 }
 
 .statusUnverified {
@@ -72,7 +80,7 @@
 }
 
 .docLabel {
-	font-family: 'Poppins', sans-serif !important;
+	font-family: $poppins;
 	letter-spacing: 0.1px;
 }
 
@@ -135,7 +143,7 @@
 	color: black;
 	border-radius: 29px 77px 61px;
 	font-weight: 900;
-	font-family: 'Poppins', sans-serif !important;
+	font-family: $poppins;
 	font-size: 1.3rem;
 }
 
@@ -194,13 +202,13 @@ fieldset[disabled] .btn-info.focus {
 
 .btn-info:active:hover,
 .btn-info.active:hover,
-.open > .dropdown-toggle.btn-info:hover,
+.open>.dropdown-toggle.btn-info:hover,
 .btn-info:active:focus,
 .btn-info.active:focus,
-.open > .dropdown-toggle .btn-info:focus,
+.open>.dropdown-toggle .btn-info:focus,
 .btn-info:active.focus,
 .btn-info.active.focus,
-.open > .dropdown-toggle .btn-info.focus {
+.open>.dropdown-toggle .btn-info.focus {
 	border: solid 2px #a7bf2e;
 	padding: 10px 32px 10px 32px;
 	background-color: #a7bf2e;
@@ -233,5 +241,5 @@ fieldset[disabled] .btn-info.focus {
 }
 
 .encode-font {
-	font-family: 'Encode Sans', sans-serif !important;
+	font-family: $encodeSans;
 }
