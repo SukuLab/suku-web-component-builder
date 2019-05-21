@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { NgModule, Injector } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { Routes, RouterModule, CanActivate } from '@angular/router';
@@ -41,7 +41,7 @@ import {
 	MatToolbarModule,
 	MatTooltipModule
 } from '@angular/material';
-import { DOCUMENT } from '@angular/platform-browser';
+import { createCustomElement } from '@angular/elements'
 import { SukuHeadingComponent } from './suku-heading/suku-heading.component';
 import { SukuSubHeadingComponent } from './suku-sub-heading/suku-sub-heading.component';
 import { SukuProfileWidgetComponent } from './suku-profile-widget/suku-profile-widget.component';
@@ -286,6 +286,34 @@ import { SukuBidWidgetTagComponent } from './suku-bid-widget/suku-bid-widget.com
 		SukuConfirmationComponent,
 		SukuLargeBidTagComponent,
 		SukuBidWidgetTagComponent
+	],
+	entryComponents:[
+		SukuBidTagComponent,
+		SukuACHSettingsComponent,
+		SukuAddIconComponent,
+		SukuAddWidgetComponent,
+		SukuAddressWidgetComponent,
+		SukuBidInfoComponent,
+		SukuLargeBidTagComponent,
+		SukuCardTitleComponent
 	]
 })
-export class SukuWebcomponentsModule {}
+export class SukuWebcomponentsModule {
+	constructor(private injector: Injector) {
+		const elements: any[] = [
+			[SukuBidTagComponent, 'suku-bid-tag'],
+			[SukuACHSettingsComponent, 'suku-ach-setting'],
+			[SukuAddIconComponent, 'suku-add-icon'],
+			[SukuAddWidgetComponent, 'suku-add-widget'],
+			[SukuAddressWidgetComponent, 'suku-address-widget'],
+			[SukuBidInfoComponent, 'suku-bid-info'],
+			[SukuLargeBidTagComponent, 'suku-bid-tag-type-two'],
+			[SukuCardTitleComponent, 'suku-card-title']
+		];
+
+		for (const [component, name] of elements) {
+			const el = createCustomElement(component, { injector: this.injector });
+			customElements.define(name, el);
+		}
+	}
+}
