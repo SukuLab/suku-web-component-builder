@@ -8,7 +8,7 @@
     <span class="Account-Setup">Customer Creation</span>
   </div>
   <br>
-  <div class="col Rectangle-2">
+  <div class="col Rectangle-2" id="createCustomer"> 
     <div formArrayName="{{formArrayNameValue}}">
       <div class="form-group col-xs-12 col-sm-12 col-md-12 col-lg-12"
         *ngFor="let detail of form.get(formArrayNameValue)['controls']; let i=index" [formGroupName]="i">
