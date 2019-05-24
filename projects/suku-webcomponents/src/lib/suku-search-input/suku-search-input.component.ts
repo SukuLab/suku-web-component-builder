@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import {FormGroup} from '@angular/forms';
+import { FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'suku-search-input',
@@ -8,8 +8,8 @@ import {FormGroup} from '@angular/forms';
 })
 export class SukuSearchInputComponent implements OnInit {
   @Input() formRadio: FormGroup;
- @Input() icon = '../../assets/images/search-icon.svg';
- @Input() customClass = 'float-right m-2 mr-3 c-pointer';
+  @Input() icon = '../../assets/images/search-icon.svg';
+  @Input() customClass = 'float-right c-pointer searchIcon';
 
   constructor() { }
 

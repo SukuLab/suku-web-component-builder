@@ -1,11 +1,13 @@
-.article {
-  width: 40.6%;
-  float: left;
-  margin: 0 8.4% 50px 0;
-}
+@import url('https://fonts.googleapis.com/css?family=Poppins:200i,400,700');
+@import url('https://fonts.googleapis.com/css?family=Encode+Sans:200i,400,700');
+
+$poppins: 'Poppins',
+sans-serif !important;
+$encodeSans: 'Encode Sans',
+sans-serif !important;
 
 .headingStyle {
-  font-family: "Poppins", sans-serif;
+  font-family: $poppins;
   padding-bottom: 9px;
 }
 
@@ -17,8 +19,8 @@
   margin-bottom: 22px;
 }
 
-.bidderAdd {
-  font-family: "Encode Sans", sans-serif;
+.shipping-address {
+  font-family: $encodeSans;
   font-size: 15px;
   font-weight: normal;
   font-style: normal;
@@ -33,5 +35,4 @@
 .article {
   width: 100%;
   float: left;
-  margin: 0 8.4% 50px 0;
 }

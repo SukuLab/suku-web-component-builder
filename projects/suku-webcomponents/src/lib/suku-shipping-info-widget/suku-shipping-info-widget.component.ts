@@ -7,6 +7,12 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class SukuShippingInfoWidgetComponent implements OnInit {
 @Input() widgetTitle = 'Shipping Information';
+@Input() widgetTitleColor = '';
+@Input() widgetTitleWeight = '';
+@Input() widgetTitleSize = '';
+@Input() widgetTitlecustomclass = '';
+@Input() widgetTitleid = '';
+@Input() shippingaddressCustomClass = '';
 @Input() firstName = '';
 @Input() secondName = '';
 @Input() addressOne = '';

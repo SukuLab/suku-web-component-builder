@@ -4,16 +4,16 @@
       <img [class]="customclass" src="{{image}}" alt="card-img" width="55px" height="46px">
     </div>
       <div *ngIf="msgPaymentStatus=='Paid'" class="padlf">
-        <img [class]="customIconclass" src="{{amountPaid}}" alt="card-img" width="50px" height="50px">
+        <img [class]="customIconclass" src="{{amountPaid}}" alt="amount-paid" width="50px" height="50px">
       </div>
       <div *ngIf="msgPaymentStatus=='unPaid'" class="padlf">
-        <img [class]="customIconclass" src="{{amountUnPaid}}" alt="card-img" width="50px" height="50px">
+        <img [class]="customIconclass" src="{{amountUnPaid}}" alt="amount-unpaid" width="50px" height="50px">
       </div>
       <div *ngIf="msgShipmentStatus=='shipped'">
-        <img [class]="customIconclass" src="{{shippedIcon}}" alt="card-img" width="50px" height="50px">
+        <img [class]="customIconclass" src="{{shippedIcon}}" alt="Shipped" width="50px" height="50px">
       </div>
       <div *ngIf="msgShipmentStatus=='unShipped'">
-        <img [class]="customIconclass" src="{{unShippedIcon}}" alt="card-img" width="50px" height="50px">
+        <img [class]="customIconclass" src="{{unShippedIcon}}" alt="unshipped" width="50px" height="50px">
       </div>
     <div [class]="txtcolsize">
       <h2 [style.font-size.px]="titleOneSize" [class]="titleOnecustomclass" [style.font-weight]="titleOneWeight"

@@ -10,6 +10,7 @@ export class SukuMailWidgetComponent implements OnInit {
 	@Input() size = '14';
 	@Input() color = '#0f0f0f';
 	@Input() weight = '500';
+	@Input() alt = 'mail-icon';
 	@Input() customClass = 'pt-2 pl-3';
 	@Input() id = 'suku-mail-widget';
 	@Input() image = '/assets/images/mail-light.svg';

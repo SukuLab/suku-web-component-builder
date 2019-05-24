@@ -8,6 +8,13 @@ import { Observable, Observer } from 'rxjs';
 	styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit {
+	buttonData = 	{
+		title: 'Marketplace',
+		icon: 'fa fa-shopping-cart',
+		path: '/userDashboard',
+		disabled: false,
+		id: 'Marketplace'
+	}
 	messageData = [
 		{
 			'message': 'hi',

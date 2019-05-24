@@ -4,7 +4,6 @@ import { Component, OnInit, Input, ViewEncapsulation} from '@angular/core';
   selector: 'suku-heading',
   templateUrl: './suku-heading.component.html',
   styleUrls: ['./suku-heading.component.scss'],
-  encapsulation: ViewEncapsulation.ShadowDom
 })
 export class SukuHeadingComponent implements OnInit {
   @Input() name;

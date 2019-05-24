@@ -1,9 +1,17 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:200i,400,700');
+@import url('https://fonts.googleapis.com/css?family=Encode+Sans:200i,400,700');
+
+$poppins: 'Poppins',
+sans-serif !important;
+$encodeSans: 'Encode Sans',
+sans-serif !important;
+
 $starMargin: 5px;
 $fullStarColor: rgb(137, 137, 137);
 $emptyStarColor: rgb(225, 225, 225);
 
 h2 {
-  font-family: 'Encode Sans', sans-serif;
+  font-family: $encodeSans;
   font-size: 12px;
   font-weight: 500;
   font-style: normal;
@@ -11,7 +19,7 @@ h2 {
   line-height: normal;
   letter-spacing: -0.2px;
   color: #b6b6b6;
-  word-break: break-all !important;
+  word-break: break-word !important;
 }
 
 .card-line-bg {

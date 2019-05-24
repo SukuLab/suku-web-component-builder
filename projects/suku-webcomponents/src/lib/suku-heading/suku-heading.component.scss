@@ -11,5 +11,8 @@ h1 {
   font-stretch: normal;
   line-height: normal;
   letter-spacing: -0.3px;
-  word-break: break-all !important;
+  word-break: break-word !important;
+  overflow: hidden;
+  text-overflow: ellipsis !important;
+  white-space: nowrap; 
 }

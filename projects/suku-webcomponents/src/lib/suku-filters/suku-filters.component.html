@@ -13,7 +13,6 @@
             <div *ngIf="status?.label" class="mat-checkbox-label pb-2">
               {{status.displayName}}
             </div>
-            <!-- *ngIf="status.hasSub && status.checked" -->
             <div class="p-0">
               <div class="col-sm-12 pl-3" *ngFor="let subStatus of status.sub; let sk = index">
                 <mat-checkbox [checked]="subStatus.checked" (change)="(subStatus.checked = $event.checked); filterOnChange.emit($event);"
@@ -25,14 +24,14 @@
         <div class="p-3 mt-4 mb-1">
           <h3>{{filterSubHeading}}</h3>
           <div class="pb-0 mt-3">From</div>
-          <mat-form-field class="pt-0">
+          <mat-form-field class="pt-0 col-sm-12">
             <input matInput [matDatepicker]="picker" placeholder="Choose a date" id="fromDateMyPro" formControlName="fromDate"
               name="fromDate">
             <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
             <mat-datepicker #picker></mat-datepicker>
           </mat-form-field>
           <div class="mt-3 pb-0">To</div>
-          <mat-form-field>
+          <mat-form-field class="p-0 col-sm-12">
             <input matInput formControlName="tillDate" [matDatepicker]="picker1" placeholder="Choose a date" id="tillDateMyPro"
               name="tillDate">
             <mat-datepicker-toggle matSuffix [for]="picker1"></mat-datepicker-toggle>

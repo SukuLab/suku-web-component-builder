@@ -1,6 +1,13 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:200i,400,700');
+@import url('https://fonts.googleapis.com/css?family=Encode+Sans:200i,400,700');
+
+$poppins: 'Poppins',
+sans-serif !important;
+$encodeSans: 'Encode Sans',
+sans-serif !important;
+
 .terms {
-    font-family: "Encode Sans", sans-serif !important;
-    ;
+    font-family: $encodeSans;
     font-size: 1rem;
 }
 
@@ -11,7 +18,7 @@
 }
 
 label {
-    font-family: 'Poppins', sans-serif !important;
+    font-family: $poppins;
     font-size: 20px;
     font-weight: bold;
     font-style: normal;
@@ -31,7 +38,7 @@ label {
     color: black;
     border-radius: 29px 77px 61px;
     font-weight: 900;
-    font-family: 'Poppins', sans-serif !important;
+    font-family: $poppins;
     font-size: 1.5rem;
 }
 

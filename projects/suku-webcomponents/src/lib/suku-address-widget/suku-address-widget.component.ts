@@ -12,6 +12,7 @@ export class SukuAddressWidgetComponent implements OnInit {
 	@Input() color = '#3e3e3e';
 	@Input() weight = '500';
 	@Input() id = '';
+	@Input() iconAlt = 'map-pin';
 	@Input() customClass = 'pt-2 pl-3';
 
   constructor() { }

@@ -9,7 +9,6 @@
     <span matSuffix>
       <mat-icon><span><img height="23" [src]="icon" width="20"></span></mat-icon>
     </span>
-    <!-- *ngIf="isFieldValid(control)" -->
     <mat-error>
       <span class="err_style">
         <span *ngIf="form.hasError('required',[control])" id="countryReq">{{errorMsg}}

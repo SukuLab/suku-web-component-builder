@@ -11,7 +11,11 @@ export class SukuCreateCustomerComponent implements OnInit {
 	_data1;
 	_ssnLimit;
 	maxDate;
-  currentDate;
+	currentDate;
+	DwollaTOSformValid: boolean;
+	CitizensReserveTOSformValid: boolean;
+	validateType: boolean;
+	getControl;
 	@Input() form: FormGroup;
 	@Input() formArrayNameValue;
 	@Input() countriesList;
@@ -35,13 +39,6 @@ export class SukuCreateCustomerComponent implements OnInit {
     console.log(val)
     this._ssnLimit = val;
 	}
-	DwollaTOSformValid: boolean;
-	CitizensReserveTOSformValid: boolean;
-	validateType: boolean;
-	getControl;
-	ima;
-	//  getControlcontroller;
-	//  getControlAddress;
 	constructor(private fb: FormBuilder) {}
 
 	ngOnInit() {
@@ -106,5 +103,6 @@ export class SukuCreateCustomerComponent implements OnInit {
 			console.log("cxcxcxcx" + 	this.currentDate)
     }
 		this.maxDate = new Date(this.currentDate).toISOString();
-  }
+	}
+
 }
