@@ -1058,7 +1058,7 @@ fieldset[disabled] .btn-info.focus {
 }
 
 #createCustomer {
-  :ng-deep .mat-form-field-appearance-legacy .mat-form-field-underline {
+  ::ng-deep .mat-form-field-appearance-legacy .mat-form-field-underline {
       bottom: 0.5 rem !important;
   }
 }
