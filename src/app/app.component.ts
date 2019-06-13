@@ -2,12 +2,21 @@ import { Component, OnInit } from '@angular/core';
 import html2canvas from 'html2canvas';
 import * as jspdf from 'jspdf';
 import { Observable, Observer } from 'rxjs';
+import { FormGroup, FormBuilder } from '@angular/forms';
 @Component({
 	selector: 'app-root',
 	templateUrl: './app.component.html',
 	styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit {
+	test: FormGroup;
+	buttonData = 	{
+		title: 'Marketplace',
+		icon: 'fa fa-shopping-cart',
+		path: '/userDashboard',
+		disabled: false,
+		id: 'Marketplace'
+	}
 	messageData = [
 		{
 			'message': 'hi',
@@ -166,8 +175,6 @@ export class AppComponent implements OnInit {
 			'__v': 0
 		}
 	];
-
-
 	fundingDetails = [
 		{},
 		{},
@@ -342,13 +349,14 @@ export class AppComponent implements OnInit {
 			type: 'incoming'
 		}
 	];
-
-
 	messageArray = [];
-	constructor() {
+	constructor(private fb: FormBuilder) {
 	}
 
 	ngOnInit() {
+		this.test = this.fb.group({
+			'testControl': ''
+		});
 		const userInfo = {
 			userId: 474,
 			userName: 'Abigail'

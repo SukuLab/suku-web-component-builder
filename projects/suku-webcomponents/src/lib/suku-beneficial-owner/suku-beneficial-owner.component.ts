@@ -11,6 +11,11 @@ export class SukuBeneficialOwnerComponent implements OnInit {
 	@Input() form: FormGroup;
 	@Input() title = 'Beneficial Owners';
 	@Input() titleClass = 'mb-3 mt-5 ';
+	@Input() titleCustomClass = '';
+	@Input() titleid = '';
+	@Input() titleWeight = '';
+	@Input() titleColor = '';
+	@Input() titleSize = '';
 	@Input() countriesList;
 	@Input() statesList;
 	@Input() formValid: Boolean;

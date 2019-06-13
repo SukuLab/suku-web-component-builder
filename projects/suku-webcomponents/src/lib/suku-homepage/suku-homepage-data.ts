@@ -35,6 +35,13 @@ export let sukuHomepageData: SukuHomepageSection[] = [
 				path: '/paymentPortal',
 				disabled: false,
 				id: 'paymentPortal'
+			}),
+			new SukuHomepageButton({
+				title: 'Governance',
+				icon: 'fas fa-landmark',
+				path: '/governance',
+				disabled: false,
+				id: 'paymentPortal'
 			})
 		]
 	}),
@@ -71,6 +78,13 @@ export let sukuHomepageData: SukuHomepageSection[] = [
 				path: '/',
 				disabled: true,
 				id: 'quorumBlockExplorer'
+			}),
+			new SukuHomepageButton({
+				title: 'Dummy',
+				icon: 'fas fa-plus',
+				path: '/',
+				disabled: null,
+				id: 'dummy'
 			})
 		]
 	})

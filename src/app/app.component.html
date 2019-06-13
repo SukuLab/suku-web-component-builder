@@ -1,6 +1,12 @@
 <!--The content below is only a placeholder and can be replaced.-->
-<div class="col-sm-4">
-  <!-- <suku-image-widget></suku-image-widget> -->
-  <!-- <suku-chat-widget [messageData]="messageData"></suku-chat-widget> -->
-<suku-ach-setting></suku-ach-setting>
-</div>
+<form [formGroup]="test">
+  <div class="col-sm-4">
+    <!-- <suku-image-widget></suku-image-widget> -->
+    <!-- <suku-chat-widget [messageData]="messageData"></suku-chat-widget> -->]
+    <suku-dwolla-funding-agreement [form]="test" control="testControl"></suku-dwolla-funding-agreement>
+    <suku-ach-setting></suku-ach-setting>
+  </div>
+  <div class="col-sm-10 p-5 ">
+    <suku-progress-bar-type-one></suku-progress-bar-type-one>
+  </div>
+</form>

@@ -29,6 +29,7 @@
   border-radius: 50% !important;
   font-family: 'Poppins', sans-serif;
 }
+
 .PRODUCT-1 {
   width: 90px;
   height: 24px;
@@ -41,6 +42,7 @@
   letter-spacing: -0.2px;
   color: #b6b6b6;
 }
+
 .progressCompleted {
   width: 50px !important;
   height: 50px !important;
@@ -51,7 +53,8 @@
   border-radius: 50% !important;
   font-family: 'Poppins', sans-serif;
 }
-.progressTitle{
+
+.progressTitle {
   font-family: 'Encode Sans', sans-serif;
   font-size: 12px;
   font-weight: 500;
@@ -74,6 +77,7 @@
   text-align: center;
   color: var(--black);
 }
+
 .circleP {
   background-color: gray;
   width: 50px !important;
@@ -116,48 +120,20 @@ tr#txt {
   border-top: 1px solid #dee2e670 !important;
 }
 
-.tracTraceTxtBold{
-   font-family: 'Encode Sans', sans-serif;
-   font-size: 12px;
-   font-weight: bold;
-   font-style: normal;
-   font-stretch: normal;
-   line-height: normal;
-   letter-spacing: -0.4px;
-   text-align: center;
-   color: var(--black);
+.tracTraceTxtBold {
+  font-family: 'Encode Sans', sans-serif;
+  font-size: 12px;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: -0.4px;
+  text-align: center;
+  color: var(--black);
 }
 
-// progress bar
-
-// .Progresscircle {
-//  width: 50px;
-//  height: 50px;
-//  color: white;
-//  background: rgb(3, 17, 3);
-//  -moz-border-radius: 50%;
-//  -webkit-border-radius: 50%;
-//  border-radius: 50%;
-// }
-
-// .progressActive {
-//  width: 50px !important;
-//  height: 50px;
-//  color: white;
-//  background: var(--main-color);
-//  -moz-border-radius: 50% !important;
-//  -webkit-border-radius: 50% !important;
-//  border-radius: 50% !important;
-//  font-family: 'Poppins', sans-serif;
-// }
-
-// .progressUpcoming {
-//  width: 50px !important;
-//  height: 50px !important;
-//  color: white;
-//  background: #757575;
-//  -moz-border-radius: 50% !important;
-//  -webkit-border-radius: 50% !important;
-//  border-radius: 50% !important;
-//  font-family: 'Poppins', sans-serif;
-// }
+@media only screen and (max-width:425) {
+  .p-xs-0 {
+    padding: 0px !important;
+  }
+}

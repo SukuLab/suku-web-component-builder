@@ -7,4 +7,9 @@
     line-height: 1.43;
     letter-spacing: -0.4px;
     color: #ffffff !important;
-   }
+}
+
+.c-pointer:hover {
+    cursor: pointer;
+    text-decoration: underline !important;
+}

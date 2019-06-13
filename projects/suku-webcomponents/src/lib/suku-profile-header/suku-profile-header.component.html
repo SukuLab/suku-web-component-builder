@@ -13,11 +13,6 @@
                   [style.color]="nameColor" id="{{userNameId}}">
                   {{userName}}
                 </h1>
-                <!--Commenting out account type (e.g., manufacturer)-->
-                <!-- <h2 [style.font-size.px]="accountSize" [class]="accountCustomClass" id="{{accountId}}"
-                  [style.font-weight]="accountWeight" [style.color]="accountColor">
-                  {{accountType}}
-                </h2> -->
                 <span>
                   <div class="pt-2 pl-1" *ngIf="ratingPrivacy">
                     <span class="fa fa-star fullStar f22" *ngFor="let star of fullStarsArray"> </span>

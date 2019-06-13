@@ -1,18 +1,17 @@
 <div class="col p-4" [formGroup]="form">
-  <label id="titleId" class="titleClass">{{title}}</label>
+  <label [style.font-size.px]="titleSize" [class]="titleClass" id="{{titleid}}" [style.font-weight]="titleWeight"
+    [style.color]="titleColor">{{title}}</label>
   <div class="col bg p-4">
     <div class="col mt-4 mb-3">
-      <mat-checkbox color="primary" type="checkbox" (change)="action()" id="{{checkBoxId}}" formControlName="{{control}}"
-        name="{{control}}">
+      <mat-checkbox color="primary" formControlName="{{control}}" type="checkbox" (change)="action()" id="{{checkBoxId}}">
       </mat-checkbox>
-      <span class="col-sm-12 terms" [style.font-size.rem]="contentSize" id="{{contentId}}">
+      <span class="col-sm-12 terms" [style.font-size.px]="contentSize" id="{{contentId}}">
         {{content}}
       </span>
     </div>
     <div class="col d-flex justify-content-center mt-5 mb-3">
       <button class="btn btn-info" [ngClass]="{'disabled': formValid}" (click)="agree()"
-        [style.font-size.rem]="btnTextSize"
-        [disabled]="formValid">Agree & Continue</button>
+        [style.font-size.rem]="btnTextSize" [disabled]="formValid">Agree & Continue</button>
     </div>
   </div>
 </div>

@@ -1,11 +1,9 @@
 .logo {
-
     position: absolute;
     font-size: 50px;
     opacity: 0;
     right: 0;
     top: 0;
-
 }
 
 .hide-details {
@@ -1059,6 +1057,8 @@ fieldset[disabled] .btn-info.focus {
     font-weight: 600;
 }
 
-:ng-deep .mat-form-field-appearance-legacy .mat-form-field-underline {
-    bottom: 0.5em !important;
+#createCustomer {
+  ::ng-deep .mat-form-field-appearance-legacy .mat-form-field-underline {
+      bottom: 0.5 rem !important;
+  }
 }

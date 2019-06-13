@@ -1,60 +1,66 @@
 <div class="col p-0 pt-4">
-  <div class="row">
-    <div class="col-sm-2 pr-0 mnt-0 ">
-      <span class="progressText ">PROGRESS</span>
-      <hr>
+  <div class="col-sm-12 ">
+    <div class="row">
+      <div class="col-sm-2 pr-0 mnt-0 ">
+        <span>
+          <h6><b>PROGRESS</b></h6>
+        </span>
+      </div>
+      <div class="col-sm-12 ">
+        <table class="col-sm-12">
+          <tr class="pt-3">
+            <td>
+              <hr>
+            </td>
+            <td class="{{progressStyleOne}} text-center" id="{{progressBarIconId?.IconOneId}}">
+              <span *ngIf="(progressStyleOne == 'progressCompleted')" class="checkmark pt-2"></span>
+              <span *ngIf="!(progressStyleOne == 'progressCompleted')">1</span>
+            </td>
+            <td>
+              <hr>
+            </td>
+            <td class="{{progressStyleTwo}} text-center" id="{{progressBarIconId?.IconTwoId}}">
+              <span *ngIf="(progressStyleTwo == 'progressCompleted')" class="checkmark pt-2"></span>
+              <span *ngIf="!(progressStyleTwo == 'progressCompleted')">2</span>
+            </td>
+            <td>
+              <hr>
+            </td>
+            <td class="{{progressStyleThree}} text-center" id="{{progressBarIconId?.IconThreeId}}">
+              <span *ngIf="(progressStyleThree == 'progressCompleted')" class="checkmark pt-2"></span>
+              <span *ngIf="!(progressStyleThree == 'progressCompleted')">3</span>
+            </td>
+            <td>
+              <hr>
+            </td>
+            <td class="{{progressStyleFour}} text-center" id="{{progressBarIconId?.IconFourId}}">
+              <span *ngIf="(progressStyleFour == 'progressCompleted')" class="checkmark pt-2"></span>
+              <span *ngIf="!(progressStyleFour == 'progressCompleted')">4</span>
+            </td>
+            <td>
+              <hr>
+            </td>
+          </tr>
+        </table>
+      </div>
     </div>
-    <div class="col-sm-8 p-0">
-      <table class="col-sm-12">
-        <tr class="pt-3">
-          <td class="{{progressStyleOne}} text-center" id="{{progressBarIconId?.IconOneId}}">
-            <span *ngIf="(progressStyleOne == 'progressCompleted')" class="checkmark pt-2"></span>
-            <span *ngIf="!(progressStyleOne == 'progressCompleted')">1</span>
+    <div class="pt-2">
+      <table class="col-sm-10 offset-sm-1 text-center">
+        <tr id="txt" class="pt-3">
+          <td class="progressTitle" id="{{progressBarTitleId?.labelOneId}}">
+            <span class="{{customHeadingOneClass}} ">{{progressBarLabels?.labelOne}}</span>
           </td>
-          <td>
-            <hr>
+          <td class="progressTitle" id="{{progressBarTitleId?.labelTwoId}}">
+            <span class=" {{customHeadingTwoClass}} ">{{progressBarLabels?.labelTwo}}</span>
           </td>
-          <td class="{{progressStyleTwo}} text-center" id="{{progressBarIconId?.IconTwoId}}">
-            <span *ngIf="(progressStyleTwo == 'progressCompleted')" class="checkmark pt-2"></span>
-            <span *ngIf="!(progressStyleTwo == 'progressCompleted')">2</span>
+          <td class="progressTitle" id="{{progressBarTitleId?.labelThreeId}}">
+            <span class="  {{customHeadingThreeClass}} ">{{progressBarLabels?.labelThree}}</span>
           </td>
-          <td>
-            <hr>
-          </td>
-          <td class="{{progressStyleThree}} text-center" id="{{progressBarIconId?.IconThreeId}}">
-            <span *ngIf="(progressStyleThree == 'progressCompleted')" class="checkmark pt-2"></span>
-            <span *ngIf="!(progressStyleThree == 'progressCompleted')">3</span>
-          </td>
-          <td>
-            <hr>
-          </td>
-          <td class="{{progressStyleFour}} text-center" id="{{progressBarIconId?.IconFourId}}">
-            <span *ngIf="(progressStyleFour == 'progressCompleted')" class="checkmark pt-2"></span>
-            <span *ngIf="!(progressStyleFour == 'progressCompleted')">4</span>
+          <td class="progressTitle" id="{{progressBarTitleId?.labelFourId}}">
+            <span class=" {{customHeadingFourClass}} ">{{progressBarLabels?.labelFour}}</span>
           </td>
         </tr>
       </table>
     </div>
-    <div class="col-sm-2 pl-0 m-auto">
-      <hr>
-    </div>
-  </div>
-  <div class="col-sm-12">
-    <table class="col-sm-10 offset-sm-1 text-center">
-      <tr id="txt" class="pt-3">
-        <td class="progressTitle" id="{{progressBarTitleId?.labelOneId}}">
-          <span class="{{customHeadingOneClass}} pr-5">{{progressBarLabels?.labelOne}}</span>
-        </td>
-        <td class="progressTitle" id="{{progressBarTitleId?.labelTwoId}}">
-          <span class="{{customHeadingTwoClass}} pr-3">{{progressBarLabels?.labelTwo}}</span>
-        </td>
-        <td class="progressTitle" id="{{progressBarTitleId?.labelThreeId}}">
-          <span class="pl-3 {{customHeadingThreeClass}}">{{progressBarLabels?.labelThree}}</span>
-        </td>
-        <td class="progressTitle" id="{{progressBarTitleId?.labelFourId}}">
-          <span class="pl-5 {{customHeadingFourClass}}">{{progressBarLabels?.labelFour}}</span>
-        </td>
-      </tr>
-    </table>
   </div>
 </div>

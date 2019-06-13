@@ -9,9 +9,9 @@ export class SukuConfirmationComponent implements OnInit {
   @Input('Title-one') Titleone;
   @Input('Title-two') Titletwo;
   @Input('Title-three') Titlethree;
-  @Input('Button-one') Buttonone;
+  @Input('Button-one') Buttonone = "Cancel";
   @Input('Button-one-id') Buttononeid;
-  @Input('Button-two') Buttontwo;
+  @Input('Button-two') Buttontwo = "Submit";
   @Input('Button-two-id') Buttontwoid;
   @Output() triggerone = new EventEmitter();
   @Output() triggertwo = new EventEmitter();
