@@ -18,7 +18,7 @@ export let sukuHomepageData: SukuHomepageSection[] = [
 			new SukuHomepageButton({
 				title: 'Track & Trace',
 				icon: 'fas fa-link',
-				path: '/productSearch',
+				path: '/traceProductSearch',
 				disabled: false,
 				id: 'trackAndTrace'
 			}),
