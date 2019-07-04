@@ -7,11 +7,11 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 })
 export class SukuAddIconComponent implements OnInit {
   @Input() name;
-	@Input() size;
-	@Input() color;
+  @Input() size;
+  @Input() color;
   @Input() weight;
   @Input() iconColor;
-	@Input() customClass = 'clearAll c-pointer';
+  @Input() customClass = 'clearAll c-pointer';
 
   constructor() { }
 

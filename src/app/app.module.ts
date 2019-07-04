@@ -3,10 +3,10 @@ import { NgModule, NO_ERRORS_SCHEMA } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { SukuWebcomponentsModule } from 'projects/suku-webcomponents/src/public_api';
 import { MatSelectModule, MatSlideToggle, MatButtonToggleModule, MatSlideToggleBase } from '@angular/material';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
+import { SukuWebcomponentsModule, SukuWebcomponentsService } from 'projects/suku-webcomponents/src/public_api';
 @NgModule({
 	declarations: [AppComponent],
 	imports: [BrowserModule, AppRoutingModule, SukuWebcomponentsModule, BrowserAnimationsModule,
@@ -16,4 +16,8 @@ import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 	providers: [],
 	bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+	constructor(private sukuService: SukuWebcomponentsService) {
+		this.sukuService.setSukuTheme();
+	}
+}

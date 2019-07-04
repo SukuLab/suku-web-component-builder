@@ -10,20 +10,60 @@ import {
 @Component({
 	selector: 'suku-ach-setting',
 	templateUrl: './suku-achsettings.component.html',
-	styleUrls: [ './suku-achsettings.component.scss' ],
+	styleUrls: ['./suku-achsettings.component.scss'],
 })
 export class SukuACHSettingsComponent implements OnInit, AfterViewInit {
 	_beneficialOwnerStatus;
-	@Input() title = ' Payment Portal';
-	@Input() titleId = ' paymentPortal';
-	@Input() subTitle = ' ACH Settings';
-	@Input() subTitleId = ' ACHSettings';
+	@Input() title = 'Payment Portal';
+	@Input() titleId = 'paymentPortal';
+	@Input() titleCustomClass = '';
+	@Input() subTitle = 'ACH Settings';
+	@Input() subTitleId = 'ACHSettings';
+	@Input() subTitleCustomClass = '';
+
+	@Input() labelOne = 'Payment profile status';
+	@Input() labelOneCustomClass = '';
+	@Input() labelOneId = '';
+
+	@Input() labelTwo = 'Beneficial Owner';
+	@Input() labelTwoCustomClass = '';
+	@Input() labelTwoId = 'Beneficial Owner';
+
+	@Input() labelThree = 'Status:';
+	@Input() labelThreeCustomClass = '';
+	@Input() labelThreeId = 'Beneficial Owner';
+
+	@Input() labelFour = 'Documentation Upload Needed';
+	@Input() labelFourCustomClass = '';
+	@Input() labelFourCustomClassId = 'Documentation Upload';
+
+	@Input() labelFive = 'Note: Document verification may take 2-3 business days to get verified.';
+	@Input() labelFiveCustomClass = '';
+	@Input() labelFiveId = '';
+
+	@Input() labelSix = 'Please setup your ACH payment profile below';
+	@Input() labelSixCustomClass = '';
+	@Input() labelSixId = '';
+
+	@Input() labelSeven = 'Document Status:';
+	@Input() labelSevenCustomClass = '';
+	@Input() labelSevenId = '';
+
+	@Input() labelEight = 'Upload Document';
+	@Input() labelEightCustomClass = '';
+	@Input() labelEightId = 'upload';
+
+	@Input() subContentCustomClass = '';
+	@Input() subContentId = 'unverified';
+
+
 	@Input() subContent = 'unverified';
-	@Input() subContentId = ' unverified';
-	@Input() SetupACHPaymentsBtnText = 'Setup ACH Payments';
+
+	@Input() buttonLabel = 'Setup ACH Payments';
+	@Input() buttonLabelId = 'setupACHPayments';
+
 	@Input() paymentButtonId = 'SetupACHPayments';
-	@Input() lowerText = 'Please setup your ACH payment profile below';
-	@Input() lowerTextId = 'lowerTextId';
+
 	@Input() subtitleId = 'subtitleId';
 	@Output() action = new EventEmitter();
 	@Output() upload = new EventEmitter();
@@ -34,14 +74,14 @@ export class SukuACHSettingsComponent implements OnInit, AfterViewInit {
 	set beneficialOwnerStatus(val) {
 		this._beneficialOwnerStatus = val;
 		if (val) {
-			this.lowerText = 'Please upload beneficial owner documents below';
+			this.labelSix = 'Please upload beneficial owner documents below';
 		}
 	}
 	@Input() documentStatus;
 	selected = [];
 	toggle = [];
 	customClass;
-	constructor() {}
+	constructor() { }
 
 	ngOnInit() {
 		if (this.documentStatus) {

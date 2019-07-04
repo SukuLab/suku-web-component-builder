@@ -8,7 +8,8 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "build:lib": "ng-packagr -p ./projects/suku-webcomponents/ng-package.json"
+    "build:lib": "ng-packagr -p ./projects/suku-webcomponents/ng-package.json",
+    "gen-icon": "icon-font-generator ./src/assets/icons/*.svg -o ./src/assets/suku-icons -n=suku -p=suku"
   },
   "private": true,
   "dependencies": {
@@ -17,6 +18,7 @@
     "@angular/common": "~7.0.0",
     "@angular/compiler": "~7.0.0",
     "@angular/core": "~7.0.0",
+    "@angular/elements": "^8.1.0",
     "@angular/forms": "~7.0.0",
     "@angular/http": "~7.0.0",
     "@angular/material": "^7.2.2",
@@ -24,9 +26,12 @@
     "@angular/platform-browser-dynamic": "~7.0.0",
     "@angular/router": "~7.0.0",
     "@progress/kendo-angular-tooltip": "^1.2.0",
+    "@webcomponents/custom-elements": "^1.2.4",
     "core-js": "^2.5.4",
     "d3": "^3.5.17",
+    "document-register-element": "^1.7.2",
     "html2canvas": "^1.0.0-alpha.12",
+    "icon-font-generator": "^2.1.10",
     "jspdf": "^1.5.3",
     "ngx-countdown-timer": "^0.1.9",
     "rxjs": "~6.3.3",
