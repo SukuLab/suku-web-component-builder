@@ -26,6 +26,19 @@
 	font-family: $suku-primary-font;
 }
 
+.owner {
+	font-family: $suku-primary-font;
+	font-size: 1rem;
+}
+
+@media (max-width:320px) {
+	.owner {
+		font-size: 0.75rem;
+		padding: 0.3rem 0rem !important;
+		margin: 0.45rem !important;
+	}
+}
+
 // .suku-btn {
 // 	@extend btn;
 // }
@@ -80,23 +93,16 @@
 }
 
 .docLabel {
-	font-family: $suku-primary-font;
+	font-family: $suku-primary-font !important;
 	letter-spacing: 0.1px;
-}
-
-.mat-chip.mat-standard-chip {
-	background-color: #e0e0e059 !important;
-	color: rgba(0, 0, 0, .87) !important;
-	border-radius: 0px !important;
-	border-left: 3px solid #a7bf2e !important;
-	min-height: 40px !important;
 }
 
 .document {
 	background-color: #e0e0e059 !important;
 	color: rgba(0, 0, 0, .87) !important;
 	border-radius: 0px !important;
-	border-left: 3px solid #a7bf2e !important;
+	border-left: 3px solid !important;
+	border-color: $suku-sick-green !important;
 	min-height: 40px !important;
 }
 
@@ -130,7 +136,7 @@
 }
 
 .icon {
-	font-size: 2.2rem !important;
+	font-size: 1.5rem !important;
 	color: #ccda5c !important;
 }
 
@@ -242,4 +248,13 @@ fieldset[disabled] .btn-info.focus {
 
 .encode-font {
 	font-family: $suku-secondary-font;
+}
+
+
+.plc-5 {
+	padding-left: 2.35rem !important;
+}
+
+.prc-5 {
+	padding-right: 2rem !important;
 }

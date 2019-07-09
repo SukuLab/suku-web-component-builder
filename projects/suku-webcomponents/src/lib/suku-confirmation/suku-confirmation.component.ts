@@ -1,4 +1,5 @@
-import { Component, OnInit, Input, EventEmitter, Output } from '@angular/core';
+import { Component, Inject, Input, OnInit } from '@angular/core';
+import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material';
 
 @Component({
   selector: 'suku-confirmation',
@@ -6,16 +7,45 @@ import { Component, OnInit, Input, EventEmitter, Output } from '@angular/core';
   styleUrls: ['./suku-confirmation.component.scss']
 })
 export class SukuConfirmationComponent implements OnInit {
-  @Input('Title-one') Titleone;
-  @Input('Title-two') Titletwo;
-  @Input('Title-three') Titlethree;
-  @Input('Button-one') Buttonone = "Cancel";
-  @Input('Button-one-id') Buttononeid;
-  @Input('Button-two') Buttontwo = "Submit";
-  @Input('Button-two-id') Buttontwoid;
-  @Output() triggerone = new EventEmitter();
-  @Output() triggertwo = new EventEmitter();
-  constructor() {}
+  @Input() dialogData = {
+    'icon': 'fa fa-question',
+    'iconCustomClass': '',
+    'iconId': 'questionIcon',
+    'titleOne': 'Test',
+    'titleOneId': 'confirmation',
+    'titleTwo': '',
+    'titleTwoId': '',
+    'titleThree': '',
+    'titleThreeId': '',
+    'titleBoxCustomClass': '',
+    'buttonLableOne': 'Cancel',
+    'buttonLableOneId': '',
+    'buttonLableTwo': 'Submit',
+    'buttonLableTwoId': '',
+    'buttonCustomClass': ''
+  };
+  constructor(public dialogCustomRef: MatDialogRef<SukuConfirmationComponent>,
+    @Inject(MAT_DIALOG_DATA) public data: any) { }
 
-  ngOnInit() {}
+  ngOnInit() {
+    console.log('Current data', this.data);
+    for (const key of Object.keys(this.data)) {
+      if (this.data[key]) {
+        console.log(this.data[key], key);
+        // if (this.dialogData[this.data[key]]) {
+        this.dialogData[key] = this.data[key];
+        // }
+      }
+    }
+    console.log('dialogData', this.dialogData);
+  }
+
+  cancel() {
+    this.dialogCustomRef.close(false);
+  }
+
+  submit() {
+    this.dialogCustomRef.close(true);
+  }
+
 }

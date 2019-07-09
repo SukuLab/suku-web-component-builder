@@ -6,12 +6,15 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
   styleUrls: ['./suku-add-icon.component.scss']
 })
 export class SukuAddIconComponent implements OnInit {
-  @Input() name;
   @Input() size;
   @Input() color;
   @Input() weight;
+  @Input() id = 'addNewSellListing';
+  @Input() icon = 'suku suku-plus-icon';
+  @Input() customClass = 'add-widget c-pointer';
+  @Input() iconId = 'icon';
   @Input() iconColor;
-  @Input() customClass = 'clearAll c-pointer';
+  @Input() iconCustomClass = '';
 
   constructor() { }
 

@@ -1,0 +1,15 @@
+/* --------------------------------
+
+suku-icons
+
+-------------------------------- */
+.suku {
+    display: inline-block;
+    background-image: url(./suku-icons/plus-icon.svg);
+    background-repeat: no-repeat;
+}
+
+.suku.suku-plus-icon {
+    height: 33px;
+    width: 33px;
+}

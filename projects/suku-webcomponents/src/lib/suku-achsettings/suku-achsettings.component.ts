@@ -21,7 +21,7 @@ export class SukuACHSettingsComponent implements OnInit, AfterViewInit {
 	@Input() subTitleId = 'ACHSettings';
 	@Input() subTitleCustomClass = '';
 
-	@Input() labelOne = 'Payment profile status';
+	@Input() labelOne = 'Payment profile status:';
 	@Input() labelOneCustomClass = '';
 	@Input() labelOneId = '';
 
@@ -33,7 +33,7 @@ export class SukuACHSettingsComponent implements OnInit, AfterViewInit {
 	@Input() labelThreeCustomClass = '';
 	@Input() labelThreeId = 'Beneficial Owner';
 
-	@Input() labelFour = 'Documentation Upload Needed';
+	@Input() labelFour = ' Documentation Upload Needed';
 	@Input() labelFourCustomClass = '';
 	@Input() labelFourCustomClassId = 'Documentation Upload';
 
@@ -53,10 +53,12 @@ export class SukuACHSettingsComponent implements OnInit, AfterViewInit {
 	@Input() labelEightCustomClass = '';
 	@Input() labelEightId = 'upload';
 
+	@Input() labelNine = 'Beneficial Owners:';
+	@Input() labelNineCustomClass = '';
+	@Input() labelNineId = 'upload';
+
 	@Input() subContentCustomClass = '';
 	@Input() subContentId = 'unverified';
-
-
 	@Input() subContent = 'unverified';
 
 	@Input() buttonLabel = 'Setup ACH Payments';
@@ -104,16 +106,12 @@ export class SukuACHSettingsComponent implements OnInit, AfterViewInit {
 		switch (docType) {
 			case 'idcard':
 				return 'Government Issued ID';
-				break;
 			case 'passport':
 				return 'Passport';
-				break;
 			case 'license':
-				return "Driver's License";
-				break;
+				return `Driver's License`;
 			default:
 				return docType;
-				break;
 		}
 	}
 
@@ -121,19 +119,14 @@ export class SukuACHSettingsComponent implements OnInit, AfterViewInit {
 		switch (failureType) {
 			case 'ScanNotReadable':
 				return 'Scan Not Readable';
-				break;
 			case 'ScanNotUploaded':
 				return 'Scan Not Uploaded';
-				break;
 			case 'ScanIdTypeNotSupported':
 				return 'ID Type Not Supported';
-				break;
 			case 'ScanNameMismatch':
 				return 'Name Mismatch';
-				break;
 			default:
 				return failureType;
-				break;
 		}
 	}
 

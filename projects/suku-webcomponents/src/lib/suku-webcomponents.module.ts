@@ -1,19 +1,26 @@
 import { CommonModule } from '@angular/common';
-import { Injector, NgModule } from '@angular/core';
-import { createCustomElement } from '@angular/elements';
+import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { MatAutocompleteModule, MatBadgeModule, MatBottomSheetModule, MatButtonModule, MatButtonToggleModule, MatCardModule, MatCheckboxModule, MatChipsModule, MatDatepickerModule, MatDialogModule, MatDividerModule, MatExpansionModule, MatGridListModule, MatIconModule, MatInputModule, MatListModule, MatMenuModule, MatNativeDateModule, MatPaginatorModule, MatProgressBarModule, MatProgressSpinnerModule, MatRadioModule, MatRippleModule, MatSelectModule, MatSidenavModule, MatSliderModule, MatSlideToggleModule, MatSnackBarModule, MatSortModule, MatStepperModule, MatTableModule, MatTabsModule, MatToolbarModule, MatTooltipModule } from '@angular/material';
+import {
+	MatAutocompleteModule, MatBadgeModule, MatBottomSheetModule, MatButtonModule,
+	MatButtonToggleModule, MatCardModule, MatCheckboxModule, MatChipsModule, MatDatepickerModule,
+	MatDialogModule, MatDividerModule, MatExpansionModule, MatGridListModule, MatIconModule,
+	MatInputModule, MatListModule, MatMenuModule, MatNativeDateModule, MatPaginatorModule,
+	MatProgressBarModule, MatProgressSpinnerModule, MatRadioModule, MatRippleModule, MatSelectModule,
+	MatSidenavModule, MatSliderModule, MatSlideToggleModule, MatSnackBarModule, MatSortModule,
+	MatStepperModule, MatTableModule, MatTabsModule, MatToolbarModule, MatTooltipModule
+} from '@angular/material';
 import { CountdownTimerModule } from 'ngx-countdown-timer';
-import { SukuACHSettingsComponent } from '../lib/suku-achsettings/suku-achsettings.component';
 import { SukuFundingSourceComponent } from '../lib/suku-funding-source/suku-funding-source.component';
 import { SukuTransactionHistoryComponent } from '../lib/suku-transaction-history/suku-transaction-history.component';
+import { SukuAchSettingModule } from './suku-achsettings/suku-achsettings.module';
 import { SukuAddIconComponent } from './suku-add-icon/suku-add-icon.component';
-import { SukuAddWidgetComponent } from './suku-add-widget/suku-add-widget.component';
+import { SukuAddIconWidgetModule } from './suku-add-widget/suku-add-widget.module';
 import { SukuAddressWidgetComponent } from './suku-address-widget/suku-address-widget.component';
 import { SukuBeneficialOwnerComponent } from './suku-beneficial-owner/suku-beneficial-owner.component';
 import { SukuBidInfoComponent } from './suku-bid-info/suku-bid-info.component';
 import { SukuLargeBidTagComponent } from './suku-bid-tag-type-two/suku-bid-tag-type-two.component';
-import { SukuBidTagComponent } from './suku-bid-tag/suku-bid-tag.component';
+import { SukuBidTagModule } from './suku-bid-tag/suku-bid-tag.module';
 import { SukuBidWidgetTagComponent } from './suku-bid-widget/suku-bid-widget.component';
 import { SukuCardLineTypeOneComponent } from './suku-card-line-type-one/suku-card-line.component';
 import { SukuCardLineTypeTwoComponent } from './suku-card-line-type-two/suku-card-line.component';
@@ -21,7 +28,6 @@ import { SukuCardLineComponent } from './suku-card-line/suku-card-line.component
 import { SukuCardTitleComponent } from './suku-card-title/suku-card-title.component';
 import { ScrollToBottomDirective } from './suku-chat-widget/suku-chat-scroll-directive';
 import { SukuChatWidgetComponent } from './suku-chat-widget/suku-chat-widget.component';
-import { SukuConfirmationComponent } from './suku-confirmation/suku-confirmation.component';
 import { SukuCreateCustomerComponent } from './suku-create-customer/suku-create-customer.component';
 import { SukuCreationCustomerFileuploadComponent } from './suku-creation-customer-fileupload/suku-creation-customer-fileupload.component';
 import { SukuDashboardProfileComponent } from './suku-dashboard-profile/suku-dashboard-profile.component';
@@ -44,6 +50,8 @@ import { SukuLinkComponent } from './suku-link/suku-link.component';
 import { SukuLoaderComponent } from './suku-loader/suku-loader.component';
 import { SukuMailWidgetComponent } from './suku-mail-widget/suku-mail-widget.component';
 import { SukuMatchChipComponent } from './suku-match-chip/suku-match-chip.component';
+import { SukuModalModule } from './suku-modal/suku-modal.module';
+import { SukuModalService } from './suku-modal/suku-modal.service';
 import { SukuNavSubmenuComponent } from './suku-nav-submenu/suku-nav-submenu.component';
 import { SukuNotificationPanelComponent } from './suku-notification-panel/suku-notification-panel.component';
 import { SukuNotificationWidgetComponent } from './suku-notification-widget/suku-notification-widget.component';
@@ -73,7 +81,6 @@ import { SukuTrackProgressBarComponent } from './suku-track-progress-bar/suku-tr
 import { SukuTreeComponent } from './suku-tree/suku-tree.component';
 @NgModule({
 	declarations: [
-		SukuBidTagComponent,
 		SukuCardLineComponent,
 		SukuDashboardProfileComponent,
 		SukuDefaultButtonComponent,
@@ -91,7 +98,6 @@ import { SukuTreeComponent } from './suku-tree/suku-tree.component';
 		SukuSecondaryButtonComponent,
 		SukuSubHeadingComponent,
 		SukuLinkComponent,
-		SukuAddWidgetComponent,
 		SukuSelectInputComponent,
 		SukuNavSubmenuComponent,
 		SukuBidInfoComponent,
@@ -108,7 +114,6 @@ import { SukuTreeComponent } from './suku-tree/suku-tree.component';
 		SukuRatingStarComponent,
 		SukuShippingWidgetComponent,
 		SukuResponseComponent,
-		SukuACHSettingsComponent,
 		SukuTransactionHistoryComponent,
 		SukuFundingSourceComponent,
 		SukuCreateCustomerComponent,
@@ -136,7 +141,6 @@ import { SukuTreeComponent } from './suku-tree/suku-tree.component';
 		SukuImageWidgetComponent,
 		SukuChatWidgetComponent,
 		SukuLoaderComponent,
-		SukuConfirmationComponent,
 		ScrollToBottomDirective,
 		SukuLargeBidTagComponent,
 		SukuBidWidgetTagComponent
@@ -179,22 +183,15 @@ import { SukuTreeComponent } from './suku-tree/suku-tree.component';
 		MatTableModule,
 		MatTabsModule,
 		MatToolbarModule,
-		MatTooltipModule
+		MatTooltipModule,
+		SukuModalModule,
+		SukuAchSettingModule,
+		SukuAddIconWidgetModule,
+		SukuBidTagModule
 	],
-	exports: [SukuACHSettingsComponent],
-	entryComponents: [SukuACHSettingsComponent, SukuAddIconComponent]
+	providers: [SukuModalService],
+	exports: [],
+	entryComponents: []
 })
 export class SukuWebcomponentsModule {
-	constructor(private injector: Injector) {
-		const elements: any[] = [
-			[SukuACHSettingsComponent, 'suku-ach-setting'],
-			[SukuAddIconComponent, 'suku-add-icon']
-		];
-		for (const [component, name] of elements) {
-			const el = createCustomElement(component, { injector: this.injector });
-			customElements.define(name, el);
-		}
-	}
-
-	ngDoBoostrap() { }
 }

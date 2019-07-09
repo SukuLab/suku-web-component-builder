@@ -1,13 +1,17 @@
 /* You can add global styles to this file, and also import other style files */
 // @import '../projects/suku-webcomponents/src/lib/suku-styles.css';s
 @import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
+@import './assets/temp/css/style.css';
+
 body {
   background-color: #f2f2f2 !important;
 }
+
 .html2canvas-container {
-  width:3500px !important;
-  height:2500px !important;
+  width: 3500px !important;
+  height: 2500px !important;
 }
+
 tspan {
   text-anchor: end !important;
 }

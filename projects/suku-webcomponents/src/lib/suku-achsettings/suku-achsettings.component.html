@@ -15,9 +15,9 @@
               [id]="subContentId" class="text-bold">{{subContent}}</span>
           </p>
           <p class="text-center mt-2 mb-2" *ngIf="_beneficialOwnerStatus" id="beneficial-owner-status">
-            <span [class]="labelTwoCustomClass" [id]="labelTwoId">{{labelTwo}}</span>
+            <span [class]="labelTwoCustomClass" [id]="labelTwoId">{{labelTwo}} </span>
             <span [class]="labelThreeCustomClass" [id]="labelThreeId">{{labelThree}}</span>
-            <span class="statusUnverified {{labelFourCustomClass}}" id="labelFourCustomClassId">{{labelFour}}</span>
+            <span class="statusUnverified {{labelFourCustomClass}}" id="labelFourId">{{labelFour}}</span>
           </p>
           <p class="text-center encode-font mb-2 {{labelFiveCustomClass}}" [id]="labelFiveId"
             *ngIf="subContent == 'document'">{{labelFive}}</p>
@@ -27,7 +27,7 @@
         <i> <span class="font12 {{labelSixCustomClass}}" [id]="labelSixId">{{labelSix}} </span>
         </i>
       </div>
-      <div class="col pl-5 pr-5 pb-2 pt-2" *ngIf="subContent == 'document'">
+      <div class="col plc-5 prc-5 pb-2 pt-2" *ngIf="subContent == 'document'">
         <div class="row">
           <div class="col">
             <p class="doclabel mt-4 {{labelSevenCustomClass}}" *ngIf="documentStatus?.length > 0" [id]="labelSevenId">
@@ -44,24 +44,25 @@
         <div class="col document pl-sm-4 mb-3" *ngFor="let doc of documentStatus;let imageIndex = index;">
           <div class="row p-2">
             <div class="col">
-              <p class="mb-0 pb-1">Doc Type:</p>
-              <p class="mb-0"><b>{{doc?.type}}</b></p>
+              <p class="mb-0 pb-1" id="docLabelOne{{imageIndex}}">{{doc?.labelOne || 'Doc Type:'}}</p>
+              <p class="mb-0" id="docType{{imageIndex}}"><b>{{doc?.type}}</b></p>
             </div>
             <div class="col">
-              <p class="mb-0 pb-1">Status:</p>
-              <p class="mb-0"><b>{{doc?.status}}</b></p>
+              <p class="mb-0 pb-1" id="docLabelTwo{{imageIndex}}">{{doc?.labelTwo || 'Status:'}}</p>
+              <p class="mb-0" id="docStatus{{imageIndex}}"><b>{{doc?.status}}</b></p>
             </div>
             <div class="col" *ngIf="!doc?.failureReason"></div>
             <div class="col" *ngIf="doc?.failureReason">
-              <p class="mb-0 pb-1">Failure Reason:</p>
-              <p class="mb-0"><b>{{doc?.failureReason}}</b></p>
+              <p class="mb-0 pb-1" id="docLabelThree{{imageIndex}}">{{doc?.labelThree || 'Failure Reason:'}}</p>
+              <p class="mb-0" id="doFailureReasons{{imageIndex}}"><b>{{doc?.failureReason}}</b></p>
             </div>
           </div>
         </div>
       </div>
       <div class="col pb-4" id="beneficialOwnerBlock">
-        <div class="col">
-          <p class="doclabel mt-4" *ngIf="_beneficialOwnerStatus"><b>Beneficial Owners:</b></p>
+        <div class="col pl-4 pr-4">
+          <p class="doclabel mt-4 {{labelNineCustomClass}}" *ngIf="_beneficialOwnerStatus" [id]="labelNineId">
+            <b>{{labelNine}}</b></p>
         </div>
         <div class="col pl-sm-4 mb-3" *ngFor="let user of _beneficialOwnerStatus;let i = index;">
           <div class="col card-line mt-3 mb-4 c-pointer" data-toggle="collapse" [attr.data-target]="'#ownerBlock' + i"
@@ -70,11 +71,11 @@
               <label class="m-2 pl-3 owner c-pointer">
                 Beneficial Owner {{i+1}}
               </label>
-              <label class="d-flex justify-content-end col pl-0 c-pointer">
-                <span class="pt-3 pr-2 icon" [ngClass]="{'d-none': selected[i] != i}">
+              <label class="d-flex justify-content-end col p-0 c-pointer">
+                <span class="pt-1 pr-2 icon" [ngClass]="{'d-none': selected[i] != i}">
                   <i class="fa fa-arrow-circle-down icon"></i>
                 </span>
-                <span class="pt-3 pr-2 icon" [ngClass]="{'d-none': selected[i] == i}">
+                <span class="pt-1 pr-2 icon" [ngClass]="{'d-none': selected[i] == i}">
                   <i class="fa fa-arrow-circle-up icon"></i>
                 </span>
               </label>
@@ -85,17 +86,18 @@
             id="ownerBlock{{i}}">
             <div class="col">
               <div class="row p-2">
-                <div class="col">
-                  <p class="mb-0 pb-1">Beneficial Owner Name:</p>
-                  <p class="mb-0"><b>{{user?.firstName}}</b></p>
+                <div class="col-12 col-lg-4">
+                  <p class="mb-0 pb-1" id="userLabelOne{{i}}">{{ user?.labelOne || "Beneficial Owner Name:"}}</p>
+                  <p class="mb-0" id="userFirstName{{i}}"><b>{{user?.firstName}}</b></p>
                 </div>
-                <div class="col">
-                  <p class="mb-0 pb-1">Status:</p>
-                  <p class="mb-0"><b>{{user?.verificationStatus}}</b></p>
+                <div class="col-12 col-lg-4">
+                  <p class="mb-0 pb-1" id="userLabelTwo{{i}}">{{ user?.labelTwo || 'Status:'}}</p>
+                  <p class="mb-0" id="userVerificationStatus{{i}}"><b>{{user?.verificationStatus}}</b></p>
                 </div>
-                <div class="col" *ngIf="user?.verificationStatus == 'document'">
+                <div class="col-12 col-lg-4" *ngIf="user?.verificationStatus == 'document'">
                   <div class="col d-flex justify-content-center mt-3 mb-3">
-                    <button class="btn btn-info" (click)="uploadDoc(user)" id="uploadDocument">Upload Document</button>
+                    <button class="btn btn-info" (click)="uploadDoc(user)"
+                      id="uploadBeneficialDocument{{i}}">{{ user?.labelThree || 'Upload Document'}}</button>
                   </div>
                 </div>
               </div>
@@ -105,17 +107,19 @@
               <div class="col document pl-sm-4 mb-3" *ngFor="let doc of user?.data;let statusIndex = index;">
                 <div class="row p-2">
                   <div class="col">
-                    <p class="mb-0 pb-1">Doc Type:</p>
-                    <p class="mb-0"><b>{{getDocTypeString(doc?.type)}}</b></p>
+                    <p class="mb-0 pb-1" id="docBeneficialLabelOne{{statusIndex}}">{{ doc.labelOne || 'Doc Type:'}}</p>
+                    <p class="mb-0" id="docBeneficialDocType{{statusIndex}}"><b>{{getDocTypeString(doc?.type)}}</b></p>
                   </div>
                   <div class="col">
-                    <p class="mb-0 pb-1">Status:</p>
-                    <p class="mb-0"><b>{{doc?.status}}</b></p>
+                    <p class="mb-0 pb-1" id="docBeneficialLabelTwo{{statusIndex}}">{{ doc.labelTwo || 'Status:'}}</p>
+                    <p class="mb-0" id="docBeneficialStatus{{statusIndex}}"><b>{{doc?.status}}</b></p>
                   </div>
                   <div class="col" *ngIf="!doc?.failureReason"></div>
                   <div class="col" *ngIf="doc?.failureReason">
-                    <p class="mb-0 pb-1">Failure-Reason:</p>
-                    <p class="mb-0"><b>{{getDocFailureString(doc?.failureReason)}}</b></p>
+                    <p class="mb-0 pb-1" id="docBeneficialLabelThree{{statusIndex}}">
+                      {{ doc.labelThree || 'Failure-Reason:'}}</p>
+                    <p class="mb-0" id="docBeneficialFailureStatus{{statusIndex}}">
+                      <b>{{getDocFailureString(doc?.failureReason)}}</b></p>
                   </div>
                 </div>
               </div>

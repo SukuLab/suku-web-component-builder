@@ -1,15 +1,18 @@
+@import '../theme/theme';
+
 .c-pointer {
   cursor: pointer !important;
 }
-.clearAll {
-  font-family: "abelregular", Arial, Helvetica, sans-serif;
+
+.add-widget {
+  font-family: $suku-ternary-font;
   font-size: 12px;
   font-weight: normal;
   font-style: normal;
   font-stretch: normal;
   line-height: normal;
   letter-spacing: -0.3px;
-  color: #b6b6b6 !important;
+  color: $suku-text-label-one !important;
   text-decoration: underline;
   text-transform: uppercase;
 }
@@ -19,20 +22,22 @@
   width: 100%;
   float: left;
 }
-.add-btn a {
+
+.add-btn span {
   width: 100px;
   height: 33px;
   float: left;
-  font-family: "abelregular", Arial, Helvetica, sans-serif;
+  font-family: $suku-ternary-font;
   font-size: 12px;
   text-transform: uppercase;
-  line-height: 33px;
-  text-align: right;
+  line-height: 32px;
+  text-align: left;
   text-decoration: none;
   position: relative;
-  padding: 0 0 0 33px;
+  padding: 0 0 0 20px;
 }
-.add-btn a i {
+
+.add-btn span i {
   width: 33px;
   height: 33px;
   float: none;
@@ -42,7 +47,6 @@
   color: #d4c5a0;
   text-align: center;
   line-height: 31px;
-  // position: relative;
   border: 1px solid #ebedee;
   border-radius: 33px;
   position: absolute;
@@ -50,6 +54,9 @@
   left: 0;
   z-index: 10;
 }
+
 .add-btn a:hover {
   text-decoration: underline;
 }
+
+// d4c5a0

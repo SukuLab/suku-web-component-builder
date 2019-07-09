@@ -1,6 +1,7 @@
 /* suku-fonts */
 @import url('https://fonts.googleapis.com/css?family=Poppins:200i,400,700');
 @import url('https://fonts.googleapis.com/css?family=Encode+Sans:200i,400,700');
+@import url('https://fonts.googleapis.com/css?family=Abel&display=swap');
 /* light */
 @import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,900&display=swap');
 /* dark */
@@ -8,12 +9,14 @@
 
 $suku-primary-font: var(--suku-primary-font) !important;
 $suku-secondary-font:var(--suku-secondary-font) !important;
+$suku-ternary-font:var(--suku-ternary-font) !important;
 
 $suku-sick-green : var(--suku-primary-color); // sick-green
 $suku-yellow-green : var(--suku-secondary-color); // warm-green
 
 $suku-bg-primary: var(--suku-bg-primary); // dark-grey
 $suku-bg-secondary: var(--suku-bg-secondary);
+$suku-bg-ternary: var(--suku-bg-ternary);
 
 $suku-text-heading: var(--suku-text-heading);
 $suku-text-sub-heading: var(--suku-text-sub-heading);
@@ -41,11 +44,11 @@ $suku-filter-label-selected: var(--suku-filter-label-selected);
 
 
 .btn {
-  border: solid 2px #a7bf2e;
+  // border: solid 2px #a7bf2e;
   border-radius: 28px 76px 63px;
   background-color: white;
   color: black;
-  padding: 0.775rem 1.85rem;
+  padding: 0.5rem 1.5rem;
   font-size: 12px !important;
   font-weight: bold;
   font-family: $suku-primary-font;
@@ -54,18 +57,69 @@ $suku-filter-label-selected: var(--suku-filter-label-selected);
     border: solid 2px #a7bf2e;
     border-radius: 28px 76px 63px;
     background-color: #a7bf2e;
-    color: black;
+    color: white;
   }
 
   &:focus {
     border: solid 2px #a7bf2e;
     border-radius: 28px 76px 63px;
     background-color: #a7bf2e;
-    color: black;
+    color: white;
     outline: none !important;
     box-shadow: none !important;
   }
 }
+
+.btn-info {
+  border: solid 2px;
+  border-color: $suku-primary-border-color !important;
+  border-radius: 28px 76px 63px;
+  background-color: white;
+  color: black;
+  font-size: 12px !important;
+  font-weight: bold;
+  font-family: $suku-primary-font;
+
+  &:hover {
+    background-color: $suku-primary-border-color !important;
+    color: white;
+  }
+
+  &:focus {
+    background-color: $suku-primary-border-color !important;
+    color: white;
+    outline: none !important;
+    box-shadow: none !important;
+  }
+}
+
+.btn-default {
+  border: solid 2px;
+  border-color: $suku-secondary-border-color !important;
+  border-radius: 28px 76px 63px;
+  background-color: white;
+  color: black;
+  font-size: 12px !important;
+  font-weight: bold;
+  font-family: $suku-primary-font;
+
+  &:hover {
+    background-color: $suku-secondary-border-color !important;
+    color: white;
+  }
+
+  &:focus {
+    background-color: $suku-secondary-border-color !important;
+    color: white;
+    outline: none !important;
+    box-shadow: none !important;
+  }
+}
+
+
+
+
+
 
 .suku-info {
 

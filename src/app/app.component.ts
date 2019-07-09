@@ -3,6 +3,7 @@ import html2canvas from 'html2canvas';
 import * as jspdf from 'jspdf';
 import { Observable, Observer } from 'rxjs';
 import { FormGroup, FormBuilder } from '@angular/forms';
+import { SukuModalService } from 'projects/suku-webcomponents/src/public_api';
 @Component({
 	selector: 'app-root',
 	templateUrl: './app.component.html',
@@ -10,13 +11,13 @@ import { FormGroup, FormBuilder } from '@angular/forms';
 })
 export class AppComponent implements OnInit {
 	test: FormGroup;
-	buttonData = 	{
+	buttonData = {
 		title: 'Marketplace',
 		icon: 'fa fa-shopping-cart',
 		path: '/userDashboard',
 		disabled: false,
 		id: 'Marketplace'
-	}
+	};
 	messageData = [
 		{
 			'message': 'hi',
@@ -350,8 +351,43 @@ export class AppComponent implements OnInit {
 		}
 	];
 	messageArray = [];
-	constructor(private fb: FormBuilder) {
-	}
+	beneficialOwnerStatus = [
+		{
+			firstName: 'Jaison',
+			verificationStatus: 'document',
+			labelThree: '',
+			data: [
+				{
+					'labelOne': 'Doc Type:',
+					'labelTwo': 'Status:',
+					'labelThree': 'Failure Reason:',
+					type: 'Jaison',
+					status: 'document',
+					failureReason: 'NOn'
+				}
+			]
+		},
+		{
+			firstName: 'Jaison',
+			verificationStatus: 'verify'
+		}
+	];
+	status = 'document';
+	documentStatus = [
+		{
+			'labelOne': 'Doc Type:',
+			'labelTwo': 'Status:',
+			'labelThree': 'Failure Reason:',
+			type: 'Jaison',
+			status: 'document'
+		},
+		{
+			'labelOne': 'Doc Type:',
+			type: 'Jaison',
+			status: 'verify'
+		}
+	];
+	constructor(private fb: FormBuilder, private SukuModalService: SukuModalService) { }
 
 	ngOnInit() {
 		this.test = this.fb.group({
@@ -386,4 +422,12 @@ export class AppComponent implements OnInit {
 		console.log(e);
 	}
 
+	open() {
+		const data = {
+			icon: '',
+			titleOne: 'Are you sure you want to delete ?',
+		};
+		this.SukuModalService.openInfoModal(data);
+	}
 }
+
