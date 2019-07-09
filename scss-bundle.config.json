@@ -1,0 +1,4 @@
+{
+  "entry": "./projects/suku-webcomponents/src/lib/theme/_theme.scss",
+  "dest": "dist/suku-webcomponents/_suku-theme.scss"
+}

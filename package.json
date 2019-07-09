@@ -8,7 +8,11 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "build:lib": "ng-packagr -p ./projects/suku-webcomponents/ng-package.json",
+    "build:lib": "ng build suku-webcomponents",
+    "build:lib:schematics": "tsc -p ./projects/suku-webcomponents/tsconfig.schematics.json",
+    "build:lib:scss": "scss-bundle -c scss-bundle.config.json",
+    "copy:collection": "copyfiles --flat projects/suku-webcomponents/collection.json dist/suku-webcomponents",
+    "build:package": "npm run build:lib && npm run build:lib:schematics && npm run build:lib:scss && npm run copy:collection",
     "gen-icon": "icon-font-generator ./src/assets/icons/*.svg -o ./src/assets/suku-icons -n=suku -p=suku"
   },
   "private": true,
@@ -27,6 +31,7 @@
     "@angular/router": "~7.0.0",
     "@progress/kendo-angular-tooltip": "^1.2.0",
     "@webcomponents/custom-elements": "^1.2.4",
+    "copyfiles": "^2.1.0",
     "core-js": "^2.5.4",
     "d3": "^3.5.17",
     "document-register-element": "^1.7.2",
@@ -35,6 +40,7 @@
     "jspdf": "^1.5.3",
     "ngx-countdown-timer": "^0.1.9",
     "rxjs": "~6.3.3",
+    "scss-bundle": "^2.5.1",
     "suku-webcomponents": "git+https://parashur:d053b93a67bdbfa89b1d6b79a0de35540d644dd3@github.com/SukuLab/suku-web-components-library.git#feature/livestock-ui",
     "webpack-dev-server": "^3.1.14",
     "zone.js": "~0.8.26"

@@ -3,5 +3,5 @@ COPY ./ /app
 WORKDIR /app
 RUN npm install
 RUN npm rebuild node-sass
-RUN npm run build:lib
+RUN npm run build:package
 ENTRYPOINT ["./gitpush.sh"]

@@ -6,14 +6,14 @@ import { AppComponent } from './app.component';
 import { MatSelectModule, MatSlideToggle, MatButtonToggleModule, MatSlideToggleBase } from '@angular/material';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
-// import {
-// 	SukuModalModule, SukuAchSettingModule,
-// 	SukuAddIconWidgetModule, SukuBidTagModule, SukuWebcomponentsService
-// } from 'projects/suku-webcomponents/src/public_api';
 import {
 	SukuModalModule, SukuAchSettingModule,
 	SukuAddIconWidgetModule, SukuBidTagModule, SukuWebcomponentsService
-} from 'suku-webcomponents';
+} from 'projects/suku-webcomponents/src/public_api';
+// import {
+// 	SukuModalModule, SukuAchSettingModule,
+// 	SukuAddIconWidgetModule, SukuBidTagModule, SukuWebcomponentsService
+// } from 'suku-webcomponents';
 enableProdMode();
 @NgModule({
 	declarations: [AppComponent],
