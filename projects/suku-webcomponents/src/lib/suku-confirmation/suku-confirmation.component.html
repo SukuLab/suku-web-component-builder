@@ -10,7 +10,7 @@
           </div>
           <div class="row">
             <div class="col pb-3 pt-3">
-              <span id="{{ dialogData?.titleOneId }}" class="title pb-1 mt-3 mb-3">
+              <span id="{{ dialogData?.titleOneId }}" class="title pb-1 mt-3 mb-3 {{dialogData?.titleOneCustomClass}}">
                 {{ dialogData?.titleOne }}
               </span>
             </div>
@@ -22,10 +22,12 @@
 </div>
 <mat-dialog-content class="mat-typography">
   <div class="col p-0">
-    <h2 class="col maincontent pt-4 mb-1 text-center" id="{{ dialogData?.titleTwoId }}">
+    <h2 class="col maincontent pt-4 mb-1 text-center {{dialogData?.titleTwoCustomClass}}"
+      id="{{ dialogData?.titleTwoId }}">
       {{ dialogData?.titleTwo }}
     </h2>
-    <h2 class=" col subcontent mb-2 text-center" id="{{ dialogData?.titleThreeId }}">
+    <h2 class=" col subcontent mb-2 text-center {{dialogData?.titleThreeCustomClass}}"
+      id="{{ dialogData?.titleThreeId }}">
       {{ dialogData?.titleThree }}
     </h2>
   </div>

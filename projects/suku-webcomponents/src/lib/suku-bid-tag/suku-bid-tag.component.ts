@@ -16,7 +16,7 @@ export class SukuBidTagComponent implements OnInit {
 	@Input() unitSize = '14';
 	@Input() unitWeight = '500';
 	@Input() unitColor = 'white';
-	@Input() unitCustomClass = 'mt-3 pt-4 mb-0 ml-3';
+	@Input() unitCustomClass = 'mt-3 pt-5 mb-0 ml-3';
 	@Input() unitId = 'unit';
 	@Input() qContent = '100 cases / box: 200 boxes';
 	@Input() qSize = '15';
@@ -30,7 +30,7 @@ export class SukuBidTagComponent implements OnInit {
 	@Input() pColor = 'white';
 	@Input() pCustomClass = 'mt-1 pb-2';
 	@Input() totalPrizeId = 'totalPrice';
-	@Input() bidtagclass = 'col p-2 suku-big-tag pl-5';
+	@Input() bidtagclass = 'col p-2 suku-big-tag pl-4';
 
 	constructor() { }
 
