@@ -14,25 +14,25 @@ export class SukuSocialIconsComponent implements OnInit {
 		this.socialIcons = [
 			{
 				icon: 'fa fa-twitter',
-				path: '/companyInfo',
+				path: 'https://twitter.com/login',
 				id: 'twitter'
 			},
 			{
 				icon: 'fa fa-facebook',
-				path: '/companyInfo',
+				path: 'https://www.facebook.com/',
 				id: 'facebook'
 			},
 			{
 				icon: 'fa fa-linkedin',
-				path: '/companyInfo',
+				path: 'https://in.linkedin.com/',
 				id: 'linkedin'
 			},
 			{
 				icon: 'fa fa-instagram',
-				path: '/companyInfo',
+				path: 'https://www.instagram.com/',
 				id: 'instagram'
 			}
-    ];
+		];
 	}
 
 	sendRoutePath(e) {
