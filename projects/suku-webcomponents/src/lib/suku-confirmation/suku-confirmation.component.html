@@ -9,7 +9,7 @@
             </div>
           </div>
           <div class="row">
-            <div class="col pb-3 pt-1">
+            <div class="col pb-3 pt-3">
               <span id="{{ dialogData?.titleOneId }}" class="title pb-1 mt-3 mb-3">
                 {{ dialogData?.titleOne }}
               </span>
@@ -22,7 +22,7 @@
 </div>
 <mat-dialog-content class="mat-typography">
   <div class="col p-0">
-    <h2 class="col maincontent pt-3 mb-1 text-center" id="{{ dialogData?.titleTwoId }}">
+    <h2 class="col maincontent pt-4 mb-1 text-center" id="{{ dialogData?.titleTwoId }}">
       {{ dialogData?.titleTwo }}
     </h2>
     <h2 class=" col subcontent mb-2 text-center" id="{{ dialogData?.titleThreeId }}">
@@ -31,16 +31,16 @@
   </div>
 </mat-dialog-content>
 <mat-dialog-actions>
-  <div class="col text-center pb-2">
+  <div class="col text-center pb-3">
     <div class="row">
-      <div class="col-lg-5 offset-lg-1 col-sm-6 pt-2 justify-content-center">
+      <div class="col-lg-5 offset-lg-1 col-sm-6 pt-3 justify-content-center">
         <button type="button" id="{{ dialogData?.buttonLableOneId }}"
           class="btn btn-default center-block w-70 {{dialogData?.buttonCustomClass}}" mat-dialog-close
           (click)="cancel()" tabindex="-1">
           {{ dialogData?.buttonLableOne }}
         </button>
       </div>
-      <div class="col-lg-5 col-sm-6 pt-2 justify-content-center">
+      <div class="col-lg-5 col-sm-6 pt-3 justify-content-center">
         <button type="button" tabindex="1" (click)="submit()" id="{{ dialogData?.buttonLableTwoId }}" mat-dialog-close
           class="btn btn-info center-block w-70 {{dialogData?.buttonCustomClass}}">
           {{ dialogData?.buttonLableTwo }}

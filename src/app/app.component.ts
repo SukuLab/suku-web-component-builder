@@ -427,7 +427,7 @@ export class AppComponent implements OnInit {
 			icon: '',
 			titleOne: 'Are you sure you want to delete ?',
 		};
-		this.SukuModalService.openInfoModal(data);
+		// this.SukuModalService.openInfoModal(data);
 	}
 }
 

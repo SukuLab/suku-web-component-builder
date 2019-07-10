@@ -1,40 +1,44 @@
-import { Injectable } from '@angular/core';
+import { Injectable, Output, EventEmitter } from '@angular/core';
 import { MatDialog } from '@angular/material';
 import { SukuConfirmationComponent } from '../suku-confirmation/suku-confirmation.component';
 @Injectable({
 	providedIn: 'root'
 })
 export class SukuModalService {
-	public dialogWidth;
-	public dialogHeight;
+	public confirmationDialogWidth;
+	public confirmationDialogHeight;
+	public confirmationDialogClose;
+	public onDialogClose: EventEmitter<any> = new EventEmitter<any>();
+
 	constructor(public dialogService: MatDialog) {
-		this.dialogHeight = 'auto';
-		this.dialogWidth = '564px';
+		this.confirmationDialogHeight = 'auto';
+		this.confirmationDialogWidth = '564px';
 	}
 
-	public openInfoModal(data?) {
+	public openConfirmationDialog(data?) {
 		const dialogRef = this.dialogService.open(SukuConfirmationComponent, {
-			width: this.dialogWidth,
-			height: this.dialogHeight,
+			width: this.confirmationDialogWidth,
+			height: this.confirmationDialogHeight,
+			disableClose: this.confirmationDialogClose,
 			data: {
-				icon: data.icon,
-				iconCustomClass: data.iconCustomClass,
-				iconId: data.iconId,
-				titleOne: data.titleOne,
-				titleOneId: data.titleOneId,
-				titleTwo: data.titleTwo,
-				titleTwoId: data.titleOneId,
-				titleThree: data.titleThree,
-				titleThreeId: data.titleThreeId,
-				buttonLableOne: data.buttonLableOne,
-				buttonLableOneId: data.buttonLableOneId,
-				buttonLableTwo: data.buttonLableTwo,
-				buttonLableTwoId: data.buttonLableTwoId,
-				buttonCustomClass: data.buttonCustomClass
+				icon: data ? data.icon : '',
+				iconCustomClass: data ? data.iconCustomClass : '',
+				iconId: data ? data.iconId : '',
+				titleOne: data ? data.titleOne : '',
+				titleOneId: data ? data.titleOneId : '',
+				titleTwo: data ? data.titleTwo : '',
+				titleTwoId: data ? data.titleOneId : '',
+				titleThree: data ? data.titleThree : '',
+				titleThreeId: data ? data.titleThreeId : '',
+				buttonLableOne: data ? data.buttonLableOne : '',
+				buttonLableOneId: data ? data.buttonLableOneId : '',
+				buttonLableTwo: data ? data.buttonLableTwo : '',
+				buttonLableTwoId: data ? data.buttonLableTwoId : '',
+				buttonCustomClass: data ? data.buttonCustomClass : ''
 			}
 		});
 		dialogRef.afterClosed().subscribe((result) => {
-			console.log('result', result);
+			this.onDialogClose.emit(result);
 		});
 	}
 
