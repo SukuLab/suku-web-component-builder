@@ -1,0 +1,17 @@
+@import '../../theme/theme';
+
+.default-btn {
+  font-family: $suku-secondary-font;
+  font-size: 14px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.43;
+  letter-spacing: -0.4px;
+  word-break: break-word;
+}
+
+.c-pointer:hover {
+  cursor: pointer;
+  text-decoration: underline !important;
+}

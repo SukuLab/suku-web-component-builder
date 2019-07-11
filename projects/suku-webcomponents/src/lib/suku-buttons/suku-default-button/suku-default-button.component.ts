@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, Output, EventEmitter,  } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter, } from '@angular/core';
 
 @Component({
   selector: 'suku-default-button',
@@ -6,9 +6,10 @@ import { Component, OnInit, Input, Output, EventEmitter,  } from '@angular/core'
   styleUrls: ['./suku-default-button.component.scss']
 })
 export class SukuDefaultButtonComponent implements OnInit {
- @Input() name;
- @Input() id;
- @Output() trigger = new EventEmitter();
+  @Input() id = 'deafultButton';
+  @Input() size = '1';
+  @Input() color = 'white';
+  @Output() action = new EventEmitter();
 
   constructor() { }
 

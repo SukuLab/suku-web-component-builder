@@ -1,0 +1,11 @@
+<div class="button-container d-flex flex-column align-items-center ">
+  <div class="suku-button d-flex justify-content-center align-items-center {{sukuButtonCustomClass}}"
+    *ngIf="!(buttonData.disabled == null)" [ngClass]="{
+      'disabled': buttonData.disabled
+    }" (click)="onClick()" id="{{buttonData?.id}}">
+    <i class="{{iconCustomClass}}" [ngClass]="[buttonData.icon, 'icon']"></i>
+  </div>
+  <div class="suku-button-text text-center mt-3" *ngIf="!(buttonData.disabled == null)">
+    <h3 class="button-title {{titleCustomClass}}">{{buttonData.title}}</h3>
+  </div>
+</div>

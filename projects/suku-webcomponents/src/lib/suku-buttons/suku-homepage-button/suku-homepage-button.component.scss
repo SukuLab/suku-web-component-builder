@@ -1,0 +1,59 @@
+@import '../../theme/theme';
+
+$button-size: 80px;
+
+.button-container {
+	width: $button-size * 1.33;
+	font-family: $suku-primary-font;
+	font-weight: 700;
+}
+
+.suku-button {
+	height: $button-size;
+	width: $button-size;
+	border-top-left-radius: $button-size * .15;
+	border-top-right-radius: $button-size * .35;
+	border-bottom-right-radius: $button-size * .15;
+	border-bottom-left-radius: $button-size * .35;
+	background: $suku-button-default-bg;
+	color: $suku-yellow-green;
+	cursor: pointer !important;
+	@include default-shadow();
+	transition: all .1s ease-in-out 0s;
+
+	&:hover {
+		@include hover-shadow();
+		transform: translateY(-3px);
+	}
+
+	&:active {
+		@include hover-shadow();
+		transform: translateY(-1px);
+		transition: all 0s;
+	}
+}
+
+.disabled {
+	background: $suku-button-disabled-bg;
+	color: $suku-icon-disabled-bg;
+	cursor: default;
+
+	&:hover {
+		@include default-shadow();
+		transform: translateY(0px);
+	}
+
+	&:active {
+		@include default-shadow();
+		transform: translateY(0px);
+	}
+}
+
+.icon {
+	font-size: $button-size * .5;
+}
+
+.button-title {
+	font-size: $button-size * .175;
+	font-weight: 700;
+}

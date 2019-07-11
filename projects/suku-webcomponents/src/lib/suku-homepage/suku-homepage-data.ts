@@ -1,4 +1,4 @@
-import { SukuHomepageButton } from '../suku-homepage-button/suku-homepage-button';
+import { SukuHomepageButton } from '../suku-buttons/suku-homepage-button/suku-homepage-button';
 import { SukuHomepageSection } from '../suku-homepage-section/suku-homepage-section';
 
 export let sukuHomepageData: SukuHomepageSection[] = [

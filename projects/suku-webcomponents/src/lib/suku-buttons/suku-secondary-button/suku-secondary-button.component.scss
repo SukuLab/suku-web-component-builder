@@ -1,5 +1,7 @@
+@import '../../theme/theme';
+
 .secondary-btn {
-    font-family: 'Encode Sans', sans-serif;
+    font-family: $suku-secondary-font;
     font-size: 14px;
     font-weight: 800;
     font-style: normal;
@@ -7,5 +9,7 @@
     line-height: 1.43;
     letter-spacing: -0.4px;
     color: #1c1c1c !important;
-    border-bottom: 3.5px solid #a7bf2e;
-   }
+    border-bottom: 3.5px solid;
+    border-color: $suku-sick-green;
+    word-break: break-word;
+}

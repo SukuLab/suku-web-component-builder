@@ -1,0 +1,77 @@
+@import '../../theme/theme';
+
+.btn-p {
+  border: 2px solid $suku-sick-green;
+  background-color: #343a40 !important;
+  color: white;
+  font-family: $suku-primary-font;
+  font-weight: 600;
+  font-size: 14px;
+  padding: 0.8rem 1.3rem;
+  border-radius: 30px 90px 77px;
+
+  &:hover {
+    cursor: pointer;
+    background-color: $suku-sick-green !important;
+    color: white;
+  }
+
+  &:focus {
+    color: white;
+    background-color: $suku-sick-green !important;
+    outline: none !important;
+    box-shadow: none !important;
+  }
+}
+
+.btn-p-p.disabled:hover {
+  border: 2px solid $suku-sick-green !important;
+  background-color: white;
+  color: #1d1d1d;
+}
+
+.btn-primary.disabled {
+  background-color: white;
+  color: grey;
+}
+
+.btn-primary.disabled:hover,
+.btn-primary[disabled]:hover,
+fieldset[disabled] .btn-primary:hover,
+.btn-primary.disabled:focus,
+.btn-primary[disabled]:focus,
+fieldset[disabled] .btn-primary:focus,
+.btn-primary.disabled.focus,
+.btn-primary[disabled].focus,
+fieldset[disabled] .btn-primary.focus {
+  background-color: white !important;
+  color: grey;
+}
+
+.btn-primary:focus,
+.btn-primary.focus {
+  background-color: $suku-sick-green;
+  color: white;
+}
+
+.btn-primary:active:hover,
+.btn-primary.active:hover,
+.open>.dropdown-toggle.btn-primary:hover,
+.btn-primary:active:focus,
+.btn-primary.active:focus,
+.open>.dropdown-toggle .btn-primary:focus,
+.btn-primary:active.focus,
+.btn-primary.active.focus,
+.open>.dropdown-toggle .btn-primary.focus {
+  background-color: $suku-sick-green;
+  color: white;
+}
+
+
+.btn-primary:not(:disabled):not(.disabled).active,
+.btn-primary:not(:disabled):not(.disabled):active,
+.show>.btn-primary.dropdown-toggle {
+  color: #fff;
+  background-color: $suku-sick-green;
+  border-color: $suku-sick-green;
+}
