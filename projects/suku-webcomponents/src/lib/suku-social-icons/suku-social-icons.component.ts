@@ -3,15 +3,10 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 @Component({
 	selector: 'suku-social-icons',
 	templateUrl: './suku-social-icons.component.html',
-	styleUrls: [ './suku-social-icons.component.scss' ]
+	styleUrls: ['./suku-social-icons.component.scss']
 })
 export class SukuSocialIconsComponent implements OnInit {
-	@Input() socialIcons;
-	@Output() action = new EventEmitter();
-	constructor() {}
-
-	ngOnInit() {
-		this.socialIcons = [
+	@Input() socialIcons =[
 			{
 				icon: 'fa fa-twitter',
 				path: 'https://twitter.com/login',
@@ -33,11 +28,16 @@ export class SukuSocialIconsComponent implements OnInit {
 				id: 'instagram'
 			}
 		];
+	@Output() action = new EventEmitter();
+	constructor() { }
+
+	ngOnInit() {
+
 	}
 
 	sendRoutePath(e) {
 		this.action.emit(e);
-	} 
+	}
 
 
 }
