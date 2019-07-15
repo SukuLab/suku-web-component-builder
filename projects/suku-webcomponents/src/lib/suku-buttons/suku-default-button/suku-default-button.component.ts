@@ -9,6 +9,8 @@ export class SukuDefaultButtonComponent implements OnInit {
   @Input() id = 'deafultButton';
   @Input() size = '1';
   @Input() color = 'white';
+  @Input() weight = '500';
+  @Input('custom-class') customClass = '';
   @Output() action = new EventEmitter();
 
   constructor() { }

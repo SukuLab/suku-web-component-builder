@@ -5,6 +5,7 @@ import { SukuInfoButtonComponent } from './suku-info-button/suku-info-button.com
 import { SukuPrimaryButtonComponent } from './suku-primary-button/suku-primary-button.component';
 import { SukuSecondaryButtonComponent } from './suku-secondary-button/suku-secondary-button.component';
 import { SukuDefaultButtonComponent } from './suku-default-button/suku-default-button.component';
+import { SukuHomepageButtonComponent } from './suku-homepage-button/suku-homepage-button.component';
 
 @NgModule({
   imports: [
@@ -14,34 +15,41 @@ import { SukuDefaultButtonComponent } from './suku-default-button/suku-default-b
     SukuInfoButtonComponent,
     SukuPrimaryButtonComponent,
     SukuSecondaryButtonComponent,
-    SukuDefaultButtonComponent
+    SukuDefaultButtonComponent,
+    SukuHomepageButtonComponent
   ],
   entryComponents: [
     SukuInfoButtonComponent,
     SukuPrimaryButtonComponent,
     SukuSecondaryButtonComponent,
-    SukuDefaultButtonComponent
+    SukuDefaultButtonComponent,
+    SukuHomepageButtonComponent
+  ],
+  exports: [
+    SukuInfoButtonComponent,
+    SukuPrimaryButtonComponent,
+    SukuSecondaryButtonComponent,
+    SukuDefaultButtonComponent,
+    SukuHomepageButtonComponent
   ]
 })
 export class SukuButtonsModule {
 
   constructor(private injector: Injector) {
-    const customElement = createCustomElement(SukuPrimaryButtonComponent, { injector });
-    customElements.define('suku-primary-button', customElement);
   }
 
-  ngDoBootstrap() { }
-  // constructor(private injector: Injector) {
-  //   const elements: any[] = [
-  //     [SukuInfoButtonComponent, 'suku-info-button'],
-  //     [SukuPrimaryButtonComponent, 'suku-primary-button'],
-  //     [SukuSecondaryButtonComponent, 'suku-secondary-button'],
-  //     [SukuDefaultButtonComponent, 'suku-default-button']
-  //   ];
-  //   for (const [component, name] of elements) {
-  //     const el = createCustomElement(component, { injector: this.injector });
-  //     customElements.define(name, el);
-  //   }
-  // }
+  ngDoBootstrap() {
+    const elements: any[] = [
+      [SukuInfoButtonComponent, 'suku-info-button'],
+      [SukuPrimaryButtonComponent, 'suku-primary-button'],
+      [SukuSecondaryButtonComponent, 'suku-secondary-button'],
+      [SukuDefaultButtonComponent, 'suku-default-button'],
+      [SukuHomepageButtonComponent, 'suku-homepage-button']
+    ];
+    for (const [component, name] of elements) {
+      const el = createCustomElement(component, { injector: this.injector });
+      customElements.define(name, el);
+    }
+  }
 
 }

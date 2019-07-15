@@ -7,9 +7,12 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 })
 export class SukuPrimaryButtonComponent implements OnInit {
 	@Input() id = 'primary';
-	@Input() disableValue: Boolean;
-	@Input() customClass = 'btn-p btn-primary c-pointer';
-	@Output() trigger = new EventEmitter();
+	@Input() size = '1';
+	@Input() color = '';
+	@Input() weight = '600';
+	@Input('disable-value') disableValue: Boolean;
+	@Input('custom-class') customClass = '';
+	@Output() action = new EventEmitter();
 
 	constructor() { }
 

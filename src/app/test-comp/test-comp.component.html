@@ -1,9 +1,12 @@
-<suku-homepage-button [buttonData]="buttonData" iconCustomClass=""></suku-homepage-button>
-<suku-default-button>Test</suku-default-button>
-<suku-link>Test</suku-link>
-<suku-bid-tag>test</suku-bid-tag>
-<suku-info-button>Info</suku-info-button>
-<div class="col pt-4">
-  <suku-primary-button>Primary</suku-primary-button>
-  <suku-secondary-button>Test</suku-secondary-button>
+<!-- <suku-homepage-button [buttonData]="buttonData" iconCustomClass=""></suku-homepage-button> -->
+<suku-default-button [size]="2">Test</suku-default-button>
+<!-- <suku-link>Test</suku-link> -->
+<!-- <suku-bid-tag>test</suku-bid-tag> -->
+<div class="col pt-4 p-0">
+  <suku-info-button [size]="0.9" [disableValue]="false">Info</suku-info-button>
+  <!-- <suku-secondary-button custom-class="test">test</suku-secondary-button> -->
+  <suku-form-footer [btn-one-size]="2" [btn-type]="'primary'" [btn-four-label]="'complete onboarding'"
+    [btn-four-disable-value]="'false'">
+  </suku-form-footer>
+  <!-- <suku-primary-button>publish listing</suku-primary-button> -->
 </div>

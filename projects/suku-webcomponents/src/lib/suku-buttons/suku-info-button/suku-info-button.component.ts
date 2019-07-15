@@ -6,11 +6,12 @@ import { Component, OnInit, Input, EventEmitter, Output } from '@angular/core';
 	styleUrls: ['./suku-info-button.component.scss']
 })
 export class SukuInfoButtonComponent implements OnInit {
-	@Input() name;
 	@Input() id;
-	@Input() size;
+	@Input() size = '0.6';
 	@Input() weight = '600';
-	@Input() disableValue: Boolean;
+	@Input() type = 'info';
+	@Input('custom-class') customClass = '';
+	@Input('disable-value') disableValue: Boolean;
 	@Output() action = new EventEmitter();
 
 	constructor() { }

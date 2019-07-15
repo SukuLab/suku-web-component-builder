@@ -1,4 +1,4 @@
-<a class="secondary-btn c-pointer" id="{{id}}" [style.color]="color" [style.font-size.px]="size"
-  (click)="trigger.emit()">
+<span class="secondary-btn c-pointer {{customClass}}" [id]="id" [style.font-weight]="weight" [style.color]="color"
+  [style.font-size.rem]="size" (click)="action.emit()">
   <ng-content></ng-content>
-</a>
+</span>

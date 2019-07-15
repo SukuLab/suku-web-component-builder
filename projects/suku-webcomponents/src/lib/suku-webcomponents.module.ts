@@ -1,15 +1,7 @@
 import { CommonModule } from '@angular/common';
-import { NgModule, NO_ERRORS_SCHEMA, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import {
-	MatAutocompleteModule, MatBadgeModule, MatBottomSheetModule, MatButtonModule,
-	MatButtonToggleModule, MatCardModule, MatCheckboxModule, MatChipsModule, MatDatepickerModule,
-	MatDialogModule, MatDividerModule, MatExpansionModule, MatGridListModule, MatIconModule,
-	MatInputModule, MatListModule, MatMenuModule, MatNativeDateModule, MatPaginatorModule,
-	MatProgressBarModule, MatProgressSpinnerModule, MatRadioModule, MatRippleModule, MatSelectModule,
-	MatSidenavModule, MatSliderModule, MatSlideToggleModule, MatSnackBarModule, MatSortModule,
-	MatStepperModule, MatTableModule, MatTabsModule, MatToolbarModule, MatTooltipModule
-} from '@angular/material';
+import { MatAutocompleteModule, MatBadgeModule, MatBottomSheetModule, MatButtonModule, MatButtonToggleModule, MatCardModule, MatCheckboxModule, MatChipsModule, MatDatepickerModule, MatDialogModule, MatDividerModule, MatExpansionModule, MatGridListModule, MatIconModule, MatInputModule, MatListModule, MatMenuModule, MatNativeDateModule, MatPaginatorModule, MatProgressBarModule, MatProgressSpinnerModule, MatRadioModule, MatRippleModule, MatSelectModule, MatSidenavModule, MatSliderModule, MatSlideToggleModule, MatSnackBarModule, MatSortModule, MatStepperModule, MatTableModule, MatTabsModule, MatToolbarModule, MatTooltipModule } from '@angular/material';
 import { CountdownTimerModule } from 'ngx-countdown-timer';
 import { SukuFundingSourceComponent } from '../lib/suku-funding-source/suku-funding-source.component';
 import { SukuTransactionHistoryComponent } from '../lib/suku-transaction-history/suku-transaction-history.component';
@@ -22,6 +14,7 @@ import { SukuBidInfoComponent } from './suku-bid-info/suku-bid-info.component';
 import { SukuLargeBidTagComponent } from './suku-bid-tag-type-two/suku-bid-tag-type-two.component';
 import { SukuBidTagModule } from './suku-bid-tag/suku-bid-tag.module';
 import { SukuBidWidgetTagComponent } from './suku-bid-widget/suku-bid-widget.component';
+import { SukuButtonsModule } from './suku-buttons/suku-button.module';
 import { SukuCardLineTypeOneComponent } from './suku-card-line-type-one/suku-card-line.component';
 import { SukuCardLineTypeTwoComponent } from './suku-card-line-type-two/suku-card-line.component';
 import { SukuCardLineComponent } from './suku-card-line/suku-card-line.component';
@@ -39,8 +32,8 @@ import { SukuHeaderComponent } from './suku-header/suku-header.component';
 import { SukuHeadingComponent } from './suku-heading/suku-heading.component';
 import { SukuHomeItalicHeadingComponent } from './suku-home-italic-heading/suku-home-italic-heading.component';
 import { SukuHomeWidgetComponent } from './suku-home-widget/suku-home-widget.component';
-// import { SukuHomepageSectionComponent } from './suku-homepage-section/suku-homepage-section.component';
-// import { SukuHomepageComponent } from './suku-homepage/suku-homepage.component';
+import { SukuHomepageSectionComponent } from './suku-homepage-section/suku-homepage-section.component';
+import { SukuHomepageComponent } from './suku-homepage/suku-homepage.component';
 import { SukuImageWidgetComponent } from './suku-image-widget/suku-image-widget.component';
 import { SukuInlineDropdownComponent } from './suku-inline-dropdown/suku-inline-dropdown.component';
 import { SukuLinkComponent } from './suku-link/suku-link.component';
@@ -74,13 +67,7 @@ import { SukuTermsAndConditionsComponent } from './suku-terms-and-conditions/suk
 import { SukuTitleHeaderComponent } from './suku-title-header/suku-title-header.component';
 import { SukuTrackProgressBarComponent } from './suku-track-progress-bar/suku-track-progress-bar.component';
 import { SukuTreeComponent } from './suku-tree/suku-tree.component';
-// import { SukuButtonsModule } from './suku-buttons/suku-button.module';
-import { SukuDefaultButtonComponent } from './suku-buttons/suku-default-button/suku-default-button.component';
-import { SukuInfoButtonComponent } from './suku-buttons/suku-info-button/suku-info-button.component';
-import { SukuPrimaryButtonComponent } from './suku-buttons/suku-primary-button/suku-primary-button.component';
-import { SukuSecondaryButtonComponent } from './suku-buttons/suku-secondary-button/suku-secondary-button.component';
-import { SukuHomepageButtonComponent } from './suku-buttons/suku-homepage-button/suku-homepage-button.component';
-import { SukuButtonsModule } from './suku-buttons/suku-button.module';
+import { SukuFormFooterModule } from './suku-form-footer/suku-form-footer.module';
 @NgModule({
 	declarations: [
 		SukuCardLineComponent,
@@ -140,12 +127,12 @@ import { SukuButtonsModule } from './suku-buttons/suku-button.module';
 		SukuLoaderComponent,
 		ScrollToBottomDirective,
 		SukuLargeBidTagComponent,
-		SukuBidWidgetTagComponent,
+		SukuBidWidgetTagComponent
 		// SukuDefaultButtonComponent,
 		// SukuInfoButtonComponent,
 		// SukuPrimaryButtonComponent,
 		// SukuSecondaryButtonComponent,
-		SukuHomepageButtonComponent
+		// SukuHomepageButtonComponent
 	],
 	imports: [
 		CommonModule,
@@ -190,7 +177,8 @@ import { SukuButtonsModule } from './suku-buttons/suku-button.module';
 		SukuAchSettingModule,
 		SukuAddIconWidgetModule,
 		SukuBidTagModule,
-		SukuButtonsModule
+		SukuButtonsModule,
+		SukuFormFooterModule
 	],
 	providers: [SukuModalService],
 	exports: [
@@ -237,8 +225,8 @@ import { SukuButtonsModule } from './suku-buttons/suku-button.module';
 		SukuRatingCardLineComponent,
 		SukuNotificationPanelComponent,
 		SukuAddIconComponent,
-		// SukuHomepageComponent,
-		// SukuHomepageSectionComponent,
+		SukuHomepageComponent,
+		SukuHomepageSectionComponent,
 		SukuProfileHeaderComponent,
 		SukuSocialIconsComponent,
 		SukuRadioButtonComponent,
@@ -251,12 +239,12 @@ import { SukuButtonsModule } from './suku-buttons/suku-button.module';
 		SukuLoaderComponent,
 		ScrollToBottomDirective,
 		SukuLargeBidTagComponent,
-		SukuBidWidgetTagComponent,
+		SukuBidWidgetTagComponent
 		// SukuDefaultButtonComponent,
 		// SukuInfoButtonComponent,
 		// SukuPrimaryButtonComponent,
 		// SukuSecondaryButtonComponent,
-		SukuHomepageButtonComponent
+		// SukuHomepageButtonComponent
 	],
 	entryComponents: [],
 	schemas: []

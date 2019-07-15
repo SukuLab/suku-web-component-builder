@@ -7,12 +7,12 @@ import { SukuHomepageButton } from './suku-homepage-button';
 	styleUrls: ['./suku-homepage-button.component.scss'],
 })
 export class SukuHomepageButtonComponent implements OnInit {
-	@Input() titleId;
-	@Input() titleCustomClass;
-	@Input() iconCustomClass;
-	@Input() sukuButtonCustomClass;
-	@Input() buttonData: SukuHomepageButton;
-	@Output() sendRoutePath: EventEmitter<string> = new EventEmitter();
+	@Input('title-id') titleId;
+	@Input('title-custom-class') titleCustomClass;
+	@Input('icon-custom-class') iconCustomClass;
+	@Input('suku-button-custom-class') sukuButtonCustomClass;
+	@Input('button-data') buttonData: SukuHomepageButton;
+	@Output('send-route-path') sendRoutePath: EventEmitter<string> = new EventEmitter();
 
 	constructor() { }
 

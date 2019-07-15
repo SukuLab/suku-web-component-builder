@@ -6,17 +6,15 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import {
-	SukuButtonsModule, SukuWebcomponentsService
+	SukuButtonsModule, SukuWebcomponentsService, SukuFormFooterModule
 } from 'projects/suku-webcomponents/src/public_api';
 import { TestCompComponent } from './test-comp/test-comp.component';
-// import {
-// 	SukuWebcomponentsModule, SukuWebcomponentsService
-// } from 'suku-webcomponents';
+// import { SukuButtonsModule, SukuWebcomponentsService } from 'suku-webcomponents';
 enableProdMode();
 @NgModule({
 	declarations: [AppComponent, TestCompComponent],
 	imports: [BrowserModule, AppRoutingModule, BrowserAnimationsModule,
-		FormsModule, ReactiveFormsModule, SukuButtonsModule
+		FormsModule, ReactiveFormsModule, SukuButtonsModule, SukuFormFooterModule
 	],
 	schemas: [NO_ERRORS_SCHEMA],
 	providers: [],

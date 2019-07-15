@@ -1,10 +1,5 @@
-<button class="{{customClass}}" [ngClass]="{'disabled' : disableValue}" [id]="id" (click)="trigger.emit()">
+<button class="suku-p suku-primary c-pointer {{customClass}}" [ngClass]="{'disabled' : disableValue}"
+  [style.font-size.rem]="size" [style.color]="color" [style.font-weight]="weight" [disabled]="disableValue" [id]="id"
+  (click)="action.emit()">
   <ng-content></ng-content>
 </button>
-
-<!-- <div class="col p-0">
-  <button class="btn btn-info btn-lg" [ngClass]="{'disabled' : disableValue}" [disabled]="disableValue"
-    [style.font-size.px]="size" [style.font-weight]="weight" [id]="id" (click)="action.emit()">
-    <ng-content></ng-content>
-  </button>
-</div> -->
