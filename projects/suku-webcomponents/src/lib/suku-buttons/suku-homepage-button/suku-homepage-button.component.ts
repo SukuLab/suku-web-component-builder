@@ -19,6 +19,7 @@ export class SukuHomepageButtonComponent implements OnInit {
 	ngOnInit() { }
 
 	onClick() {
+		console.log('this.buttonData.path', this.buttonData.path);
 		if (!this.buttonData.disabled) {
 			this.sendRoutePath.emit(this.buttonData.path);
 		}

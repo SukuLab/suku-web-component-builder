@@ -5,7 +5,7 @@ import { sukuHomepageData } from './suku-homepage-data';
 @Component({
 	selector: 'suku-homepage',
 	templateUrl: './suku-homepage.component.html',
-	styleUrls: [ './suku-homepage.component.scss' ],
+	styleUrls: ['./suku-homepage.component.scss'],
 })
 export class SukuHomepageComponent implements OnInit {
 	homepageData: SukuHomepageSection[];
@@ -14,9 +14,10 @@ export class SukuHomepageComponent implements OnInit {
 
 	constructor() {
 		this.homepageData = sukuHomepageData;
+		console.log('homepageData', this.homepageData);
 	}
 
-	ngOnInit() {}
+	ngOnInit() { }
 
 	onSendRoutePath(string) {
 		this.sendRoutePath.emit(string);

@@ -7,6 +7,10 @@
 /* dark */
 @import url('https://fonts.googleapis.com/css?family=Montserrat:400,500,700,800,900&display=swap');
 
+:root {
+  font-size: 10px;
+}
+
 $suku-primary-font: var(--suku-primary-font) !important;
 $suku-secondary-font:var(--suku-secondary-font) !important;
 $suku-ternary-font:var(--suku-ternary-font) !important;
@@ -17,6 +21,7 @@ $suku-yellow-green : var(--suku-secondary-color); // warm-green
 $suku-bg-primary: var(--suku-bg-primary); // dark-grey
 $suku-bg-secondary: var(--suku-bg-secondary);
 $suku-bg-ternary: var(--suku-bg-ternary);
+$suku-homepage-bg: var(--suku-homepage-bg);
 
 $suku-text-heading: var(--suku-text-heading);
 $suku-text-sub-heading: var(--suku-text-sub-heading);
@@ -39,6 +44,13 @@ $suku-filter-label-selected: var(--suku-filter-label-selected);
 $suku-button-default-bg: var(--suku-button-default-bg);
 $suku-button-disabled-bg: var(--suku-button-disabled-bg);
 $suku-icon-disabled-bg: var(--suku-icon-disabled-bg);
+
+// font-size 
+$suku-font-size-xs: var(--suku-font-size-xs);
+$suku-font-size-sm: var(--suku-font-size-sm);
+$suku-font-size-md: var(--suku-font-size-md);
+$suku-font-size-lg: var(--suku-font-size-lg);
+$suku-font-size-xl: var(--suku-font-size-xl);
 
 @mixin suku-container {
   border-radius: 0 0 41px 41px;

@@ -1,19 +1,19 @@
  <div class="form-footer col-xl-12 col-lg-12 col-md-12">
    <div class="row">
-     <div class="col-lg-6 col-md-12 align-items-center d-flex pl-lg-5 pr-lg-0">
+     <div class="col-lg-6 col-md-12 align-items-center d-flex pl-lg-4 pr-lg-0">
        <div class="col-xl-12 col-md-12 col-lg-12">
          <div class="row">
-           <div class="text-xs-center align-items-center d-flex w-xs-100 p-xs-2">
+           <div class="text-xs-center align-items-center d-flex w-xs-100 p-xs-2" *ngIf="btnOneVisible">
              <span class="pl-lg-3 default-btn c-pointer text-xs-center {{btnOneCustomClass}}" [id]="btnOneId"
                [style.font-size.rem]="btnOneSize" [style.color]="btnOneColor" [style.font-weight]="btnOneWeight"
-               (click)="btnOneAction.emit()" *ngIf="btnOneVisible">
+               (click)="btnOneAction.emit()">
                {{btnOneLabel}}
              </span>
            </div>
-           <div class="pl-lg-4 text-xs-center align-items-center d-flex w-xs-100 p-xs-2">
+           <div class="pl-lg-4 text-xs-center align-items-center d-flex w-xs-100 p-xs-2" *ngIf="btnTwoVisible">
              <span class="default-btn c-pointer text-xs-center {{btnTwoCustomClass}}" [id]="btnTwoId"
                [style.font-size.rem]="btnTwoSize" [style.color]="btnTwoColor" [style.font-weight]="btnTwoWeight"
-               (click)="btnTwoAction.emit()" *ngIf="btnTwoVisible">
+               (click)="btnTwoAction.emit()">
                {{btnTwoLabel}}
              </span>
            </div>
@@ -22,16 +22,16 @@
      </div>
      <div class="text-center col-md-12 col-lg-6 col-sm-12 content-end d-flex pl-5 pr-5">
        <div class="row">
-         <div class="form-group pt-3 pt-3 pl-lg-4 pr-lg-4 d-flex justify-content-end w-xs-100">
-           <button class="suku-p suku-{{btnType}} {{btnThreeCustomClass}} w-xs-100" *ngIf="btnThreeVisible"
+         <div class="form-group pt-3 pt-3 pl-lg-4 pr-lg-3 d-flex justify-content-end w-xs-100" *ngIf="btnThreeVisible">
+           <button class="suku-p suku-{{btnThreeType}} {{btnThreeCustomClass}} w-xs-100"
              [ngClass]="{'disabled' : btnThreeDisableValue}" [style.font-size.rem]="btnThreeSize"
              [style.color]="btnThreeColor" [style.font-weight]="btnThreeWeight" [disabled]="btnThreeDisableValue"
              [id]="btnThreeId" (click)="btnThreeAction.emit()">
              {{btnThreeLabel}}
            </button>
          </div>
-         <div class="form-group pt-3 pl-lg-4 pr-lg-4 w-xs-100">
-           <button class="suku-p suku-{{btnType}} {{btnFourCustomClass}} w-xs-100" *ngIf="btnFourVisible"
+         <div class="form-group pt-3 pl-lg-4 pr-lg-3 w-xs-100" *ngIf="btnFourVisible">
+           <button class="suku-p suku-{{btnFourType}} {{btnFourCustomClass}} w-xs-100"
              [ngClass]="{'disabled' : btnFourDisableValue}" [style.font-size.rem]="btnFourSize"
              [style.color]="btnFourColor" [style.font-weight]="btnFourWeight" [disabled]="btnFourDisableValue"
              [id]="btnFourId" (click)="btnFourAction.emit()">

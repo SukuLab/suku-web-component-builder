@@ -8,32 +8,34 @@
         <h2 [style.font-size.px]="size" class="unreadNotifications">{{filterHeading}}</h2>
         <div class="options pl-3">
           <div *ngFor="let status of statusTypesDynamic; let l = index">
-            <mat-checkbox *ngIf="!status?.label" color="primary" [checked]="status.checked" (change)="(status.checked = $event.checked); filterOnChange.emit($event);">
+            <mat-checkbox *ngIf="!status?.label" color="primary" [checked]="status.checked"
+              (change)="(status.checked = $event.checked); filterOnChange.emit($event);">
               {{status.displayName}}</mat-checkbox>
             <div *ngIf="status?.label" class="mat-checkbox-label pb-2">
               {{status.displayName}}
             </div>
             <div class="p-0">
               <div class="col-sm-12 pl-3" *ngFor="let subStatus of status.sub; let sk = index">
-                <mat-checkbox [checked]="subStatus.checked" (change)="(subStatus.checked = $event.checked); filterOnChange.emit($event);"
-                  color="primary"> {{subStatus.displayName}}</mat-checkbox>
+                <mat-checkbox [checked]="subStatus.checked"
+                  (change)="(subStatus.checked = $event.checked); filterOnChange.emit($event);" color="primary">
+                  {{subStatus.displayName}}</mat-checkbox>
               </div>
             </div>
           </div>
         </div>
         <div class="p-3 mt-4 mb-1">
-          <h3>{{filterSubHeading}}</h3>
+          <h3 class="filterSubHeading">{{filterSubHeading}}</h3>
           <div class="pb-0 mt-3">From</div>
           <mat-form-field class="p-0 col-sm-12">
-            <input matInput [matDatepicker]="picker" placeholder="Choose a date" id="fromDateMyPro" formControlName="fromDate"
-              name="fromDate">
+            <input matInput [matDatepicker]="picker" placeholder="Choose a date" id="fromDateMyPro"
+              formControlName="fromDate" name="fromDate">
             <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
             <mat-datepicker #picker></mat-datepicker>
           </mat-form-field>
           <div class="mt-3 pb-0">To</div>
           <mat-form-field class="p-0 col-sm-12">
-            <input matInput formControlName="tillDate" [matDatepicker]="picker1" placeholder="Choose a date" id="tillDateMyPro"
-              name="tillDate">
+            <input matInput formControlName="tillDate" [matDatepicker]="picker1" placeholder="Choose a date"
+              id="tillDateMyPro" name="tillDate">
             <mat-datepicker-toggle matSuffix [for]="picker1"></mat-datepicker-toggle>
             <mat-datepicker #picker1></mat-datepicker>
           </mat-form-field>

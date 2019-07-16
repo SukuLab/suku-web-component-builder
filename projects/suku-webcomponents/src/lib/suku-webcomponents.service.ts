@@ -16,6 +16,7 @@ export const suku: Theme = {
     '--suku-bg-primary': '#2f2e2e',
     '--suku-bg-secondary': '#272727',
     '--suku-bg-ternary': '#35393e',
+    '--suku-homepage-bg': '#ffffff',
     '--suku-button-default-bg': '#303030',
     '--suku-button-disabled-bg': '#d9d9d9',
     '--suku-icon-disabled-color': '#7f7f7f',
@@ -29,10 +30,16 @@ export const suku: Theme = {
     '--suku-primary-border-color': '#a7bf2e',
     '--suku-secondary-border-color': '#757575',
     '--suku-primary-border-radius': '0 40px 0 0',
+    '--suku-secondary-border-radius': '0px 0px 41px 41px',
     '--suku-default-border-radius': '0px',
     '--suku-filter-bg': '#ffffff',
     '--suku-filter-label': '#b6b6b6',
-    '--suku-filter-label-selected': 'black'
+    '--suku-filter-label-selected': 'black',
+    '--suku-font-size-xs': '0.5rem',
+    '--suku-font-size-sm': '1rem',
+    '--suku-font-size-md': '1.5rem',
+    '--suku-font-size-lg': '2rem',
+    '--suku-font-size-xl': '3rem'
   }
 };
 
@@ -47,6 +54,7 @@ export const dark: Theme = {
     '--suku-bg-primary': '#363b4e',
     '--suku-bg-secondary': '#272727',
     '--suku-bg-ternary': '#35393e',
+    '--suku-homepage-bg': '#ffffff',
     '--suku-button-default-bg': '#303030',
     '--suku-button-disabled-bg': '#d9d9d9',
     '--suku-icon-disabled-color': '#7f7f7f',
@@ -60,10 +68,16 @@ export const dark: Theme = {
     '--suku-primary-border-color': '#f2f2f2',
     '--suku-secondary-border-color': '#757575',
     '--suku-primary-border-radius': '0',
+    '--suku-secondary-border-radius': '0px 0px 41px 41px',
     '--suku-default-border-radius': '0px 20px 15px',
     '--suku-filter-bg': 'black',
     '--suku-filter-label': '#b6b6b6',
-    '--suku-filter-label-selected': '#ffffff'
+    '--suku-filter-label-selected': '#ffffff',
+    '--suku-font-size-xs': '1rem',
+    '--suku-font-size-sm': '1.5rem',
+    '--suku-font-size-md': '2rem',
+    '--suku-font-size-lg': '2.5rem',
+    '--suku-font-size-xl': '3rem'
   }
 };
 
@@ -78,6 +92,7 @@ export const light: Theme = {
     '--suku-bg-primary': '#a6c36f',
     '--suku-bg-secondary': '#282828',
     '--suku-bg-ternary': '#35393e',
+    '--suku-homepage-bg': '#ffffff',
     '--suku-button-default-bg': '#303030',
     '--suku-button-disabled-bg': '#d9d9d9',
     '--suku-icon-disabled-color': '#7f7f7f',
@@ -91,7 +106,16 @@ export const light: Theme = {
     '--suku-primary-border-color': '#151515',
     '--suku-secondary-border-color': '#757575',
     '--suku-primary-border-radius': '0px 15px 10px 0px',
-    '--suku-default-border-radius': '10px 10px 20px 5px'
+    '--suku-secondary-border-radius': '0px 0px 41px 41px',
+    '--suku-default-border-radius': '10px 10px 20px 5px',
+    '--suku-filter-bg': 'black',
+    '--suku-filter-label': '#b6b6b6',
+    '--suku-filter-label-selected': '#ffffff',
+    '--suku-font-size-xs': '1rem',
+    '--suku-font-size-sm': '1.5rem',
+    '--suku-font-size-md': '2rem',
+    '--suku-font-size-lg': '2.5rem',
+    '--suku-font-size-xl': '3rem'
   }
 };
 

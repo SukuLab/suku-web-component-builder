@@ -113,8 +113,8 @@ import { SukuFormFooterModule } from './suku-form-footer/suku-form-footer.module
 		SukuRatingCardLineComponent,
 		SukuNotificationPanelComponent,
 		SukuAddIconComponent,
-		// SukuHomepageComponent,
-		// SukuHomepageSectionComponent,
+		SukuHomepageComponent,
+		SukuHomepageSectionComponent,
 		SukuProfileHeaderComponent,
 		SukuSocialIconsComponent,
 		SukuRadioButtonComponent,
@@ -128,11 +128,6 @@ import { SukuFormFooterModule } from './suku-form-footer/suku-form-footer.module
 		ScrollToBottomDirective,
 		SukuLargeBidTagComponent,
 		SukuBidWidgetTagComponent
-		// SukuDefaultButtonComponent,
-		// SukuInfoButtonComponent,
-		// SukuPrimaryButtonComponent,
-		// SukuSecondaryButtonComponent,
-		// SukuHomepageButtonComponent
 	],
 	imports: [
 		CommonModule,
@@ -240,11 +235,6 @@ import { SukuFormFooterModule } from './suku-form-footer/suku-form-footer.module
 		ScrollToBottomDirective,
 		SukuLargeBidTagComponent,
 		SukuBidWidgetTagComponent
-		// SukuDefaultButtonComponent,
-		// SukuInfoButtonComponent,
-		// SukuPrimaryButtonComponent,
-		// SukuSecondaryButtonComponent,
-		// SukuHomepageButtonComponent
 	],
 	entryComponents: [],
 	schemas: []
