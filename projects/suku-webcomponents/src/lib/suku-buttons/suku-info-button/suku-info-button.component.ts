@@ -7,7 +7,7 @@ import { Component, OnInit, Input, EventEmitter, Output } from '@angular/core';
 })
 export class SukuInfoButtonComponent implements OnInit {
 	@Input() id;
-	@Input() size = '0.6';
+	@Input() size = '';
 	@Input() weight = '600';
 	@Input() type = 'info';
 	@Input('custom-class') customClass = '';

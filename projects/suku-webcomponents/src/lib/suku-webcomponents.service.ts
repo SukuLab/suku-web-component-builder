@@ -35,11 +35,14 @@ export const suku: Theme = {
     '--suku-filter-bg': '#ffffff',
     '--suku-filter-label': '#b6b6b6',
     '--suku-filter-label-selected': 'black',
-    '--suku-font-size-xs': '0.5rem',
-    '--suku-font-size-sm': '1rem',
-    '--suku-font-size-md': '1.5rem',
-    '--suku-font-size-lg': '2rem',
-    '--suku-font-size-xl': '3rem'
+    '--suku-font-size-1': '0.75rem', // 12px	- 0.75rem
+    '--suku-font-size-2': '0.875rem', // 14px	0.875rem
+    '--suku-font-size-3': '1.06rem', // 17px	1.0625rem
+    '--suku-font-size-4': '1.25rem', // 20px	1.25rem
+    '--suku-font-size-5': '1.5rem', //  24px	1.5rem
+    '--suku-font-size-6': '1.625rem', // 26px	1.625rem
+    '--suku-font-size-7': '1.8rem', //  30px	1.875rem
+    '--suku-font-size-8': '2rem' //  32px	1.875rem
   }
 };
 
@@ -73,11 +76,14 @@ export const dark: Theme = {
     '--suku-filter-bg': 'black',
     '--suku-filter-label': '#b6b6b6',
     '--suku-filter-label-selected': '#ffffff',
-    '--suku-font-size-xs': '1rem',
-    '--suku-font-size-sm': '1.5rem',
-    '--suku-font-size-md': '2rem',
-    '--suku-font-size-lg': '2.5rem',
-    '--suku-font-size-xl': '3rem'
+    '--suku-font-size-1': '0.75rem', // 12px	- 0.75rem
+    '--suku-font-size-2': '0.875rem', // 14px	0.875rem
+    '--suku-font-size-3': '1.06rem', // 17px	1.0625rem
+    '--suku-font-size-4': '1.25rem', // 20px	1.25rem
+    '--suku-font-size-5': '1.5rem', //  24px	1.5rem
+    '--suku-font-size-6': '1.625rem', // 26px	1.625rem
+    '--suku-font-size-7': '1.8rem', //  30px	1.875rem
+    '--suku-font-size-8': '2rem' //  32px	1.875rem
   }
 };
 
@@ -111,11 +117,14 @@ export const light: Theme = {
     '--suku-filter-bg': 'black',
     '--suku-filter-label': '#b6b6b6',
     '--suku-filter-label-selected': '#ffffff',
-    '--suku-font-size-xs': '1rem',
-    '--suku-font-size-sm': '1.5rem',
-    '--suku-font-size-md': '2rem',
-    '--suku-font-size-lg': '2.5rem',
-    '--suku-font-size-xl': '3rem'
+    '--suku-font-size-1': '0.75rem', // 12px	- 0.75rem
+    '--suku-font-size-2': '0.875rem', // 14px	0.875rem
+    '--suku-font-size-3': '1.06rem', // 17px	1.0625rem
+    '--suku-font-size-4': '1.25rem', // 20px	1.25rem
+    '--suku-font-size-5': '1.5rem', //  24px	1.5rem
+    '--suku-font-size-6': '1.625rem', // 26px	1.625rem
+    '--suku-font-size-7': '1.8rem', //  30px	1.875rem
+    '--suku-font-size-8': '2rem' //  32px	1.875rem
   }
 };
 

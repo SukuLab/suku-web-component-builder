@@ -7,10 +7,6 @@
 /* dark */
 @import url('https://fonts.googleapis.com/css?family=Montserrat:400,500,700,800,900&display=swap');
 
-:root {
-  font-size: 10px;
-}
-
 $suku-primary-font: var(--suku-primary-font) !important;
 $suku-secondary-font:var(--suku-secondary-font) !important;
 $suku-ternary-font:var(--suku-ternary-font) !important;
@@ -46,11 +42,14 @@ $suku-button-disabled-bg: var(--suku-button-disabled-bg);
 $suku-icon-disabled-bg: var(--suku-icon-disabled-bg);
 
 // font-size 
-$suku-font-size-xs: var(--suku-font-size-xs);
-$suku-font-size-sm: var(--suku-font-size-sm);
-$suku-font-size-md: var(--suku-font-size-md);
-$suku-font-size-lg: var(--suku-font-size-lg);
-$suku-font-size-xl: var(--suku-font-size-xl);
+$suku-font-size-1: var(--suku-font-size-1); // 12px
+$suku-font-size-2: var(--suku-font-size-2); // 14px
+$suku-font-size-3: var(--suku-font-size-3); // 17px
+$suku-font-size-4: var(--suku-font-size-4); // 20px
+$suku-font-size-5: var(--suku-font-size-5); // 24px
+$suku-font-size-6: var(--suku-font-size-6); // 26px
+$suku-font-size-7: var(--suku-font-size-7); // 30px
+$suku-font-size-8: var(--suku-font-size-8); // 32px
 
 @mixin suku-container {
   border-radius: 0 0 41px 41px;

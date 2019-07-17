@@ -4,8 +4,8 @@
 @import './assets/temp/css/style.css';
 @import '../node_modules/suku-webcomponents/suku-theme';
 
-:root {
-  font-size: 16px !important;
+:host(.suku-p) {
+  font-size: 62.5% !important;
 }
 
 
