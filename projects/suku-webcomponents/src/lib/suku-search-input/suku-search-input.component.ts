@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { FormGroup } from '@angular/forms';
 
 @Component({
@@ -7,10 +7,15 @@ import { FormGroup } from '@angular/forms';
   styleUrls: ['./suku-search-input.component.scss']
 })
 export class SukuSearchInputComponent implements OnInit {
-  @Input() formRadio: FormGroup;
+  @Input() form: FormGroup;
+  @Input() control;
   @Input() icon = '../../assets/images/search-icon.svg';
-  @Input() customClass = 'float-right c-pointer searchIcon';
-
+  @Input('custom-class') customClass = 'c-pointer default';
+  @Input('icon-custom-class') iconCustomClass = 'float-right c-pointer searchIcon';
+  @Input('icon-id') iconId = 'searchIcon';
+  @Input('placeholder') placeholder = 'search partners';
+  @Output() searchOnType = new EventEmitter();
+  @Output() searchOnEnter = new EventEmitter();
   constructor() { }
 
   ngOnInit() {

@@ -28,6 +28,7 @@ import { SukuDropdownComponent } from './suku-dropdown/suku-dropdown.component';
 import { SukuDwollaFundingAgreementComponent } from './suku-dwolla-funding-agreement/suku-dwolla-funding-agreement.component';
 import { SukuDwollaFundingSourceComponent } from './suku-dwolla-funding-source/suku-dwolla-funding-source.component';
 import { SukuFiltersComponent } from './suku-filters/suku-filters.component';
+import { SukuFormFooterModule } from './suku-form-footer/suku-form-footer.module';
 import { SukuHeaderComponent } from './suku-header/suku-header.component';
 import { SukuHeadingComponent } from './suku-heading/suku-heading.component';
 import { SukuHomeItalicHeadingComponent } from './suku-home-italic-heading/suku-home-italic-heading.component';
@@ -37,7 +38,8 @@ import { SukuHomepageComponent } from './suku-homepage/suku-homepage.component';
 import { SukuImageWidgetComponent } from './suku-image-widget/suku-image-widget.component';
 import { SukuInlineDropdownComponent } from './suku-inline-dropdown/suku-inline-dropdown.component';
 import { SukuLinkComponent } from './suku-link/suku-link.component';
-import { SukuLoaderComponent } from './suku-loader/suku-loader.component';
+import { SukuLoaderModule } from './suku-loader/suku-loader.module';
+import { SukuLoaderService } from './suku-loader/suku-loader.service';
 import { SukuMailWidgetComponent } from './suku-mail-widget/suku-mail-widget.component';
 import { SukuMatchChipComponent } from './suku-match-chip/suku-match-chip.component';
 import { SukuModalModule } from './suku-modal/suku-modal.module';
@@ -67,7 +69,6 @@ import { SukuTermsAndConditionsComponent } from './suku-terms-and-conditions/suk
 import { SukuTitleHeaderComponent } from './suku-title-header/suku-title-header.component';
 import { SukuTrackProgressBarComponent } from './suku-track-progress-bar/suku-track-progress-bar.component';
 import { SukuTreeComponent } from './suku-tree/suku-tree.component';
-import { SukuFormFooterModule } from './suku-form-footer/suku-form-footer.module';
 @NgModule({
 	declarations: [
 		SukuCardLineComponent,
@@ -124,7 +125,6 @@ import { SukuFormFooterModule } from './suku-form-footer/suku-form-footer.module
 		SukuShippingInfoWidgetComponent,
 		SukuImageWidgetComponent,
 		SukuChatWidgetComponent,
-		SukuLoaderComponent,
 		ScrollToBottomDirective,
 		SukuLargeBidTagComponent,
 		SukuBidWidgetTagComponent
@@ -173,9 +173,10 @@ import { SukuFormFooterModule } from './suku-form-footer/suku-form-footer.module
 		SukuAddIconWidgetModule,
 		SukuBidTagModule,
 		SukuButtonsModule,
-		SukuFormFooterModule
+		SukuFormFooterModule,
+		SukuLoaderModule
 	],
-	providers: [SukuModalService],
+	providers: [SukuModalService, SukuLoaderService],
 	exports: [
 		SukuCardLineComponent,
 		SukuDashboardProfileComponent,
@@ -231,7 +232,6 @@ import { SukuFormFooterModule } from './suku-form-footer/suku-form-footer.module
 		SukuShippingInfoWidgetComponent,
 		SukuImageWidgetComponent,
 		SukuChatWidgetComponent,
-		SukuLoaderComponent,
 		ScrollToBottomDirective,
 		SukuLargeBidTagComponent,
 		SukuBidWidgetTagComponent

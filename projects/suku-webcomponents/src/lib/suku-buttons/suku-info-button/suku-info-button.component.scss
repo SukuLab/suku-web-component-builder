@@ -5,7 +5,7 @@
   border-radius: 28px 76px 63px;
   color: #3e3e3e;
   font-family: $suku-secondary-font;
-  font-size: $suku-font-size-2;
+  font-size: $suku-font-size-3;
   font-weight: 600;
   padding: 0.45rem 2rem !important;
 }
@@ -47,7 +47,7 @@
 
 .suku-info.disabled {
   border: solid 2px;
-  border-color: $suku-text-info;
+  border-color: $suku-sick-green;
   background-color: white;
   color: grey;
 }
@@ -62,7 +62,7 @@ fieldset[disabled] .suku-info:focus,
 .suku-info[disabled].focus,
 fieldset[disabled] .suku-info.focus {
   border: solid 2px;
-  border-color: $suku-text-info;
+  border-color: $suku-sick-green;
   background-color: white !important;
   color: grey;
 }
@@ -70,8 +70,8 @@ fieldset[disabled] .suku-info.focus {
 .suku-info:focus,
 .suku-info.focus {
   border: solid 2px;
-  border-color: $suku-text-info;
-  background-color: $suku-text-info;
+  border-color: $suku-sick-green;
+  background-color: $suku-sick-green;
   color: white;
 }
 
@@ -85,8 +85,8 @@ fieldset[disabled] .suku-info.focus {
 .suku-info.active.focus,
 .open>.dropdown-toggle .suku-info.focus {
   border: solid 2px;
-  border-color: $suku-text-info;
-  background-color: $suku-text-info;
+  border-color: $suku-sick-green;
+  background-color: $suku-sick-green;
   color: white;
 }
 
@@ -96,18 +96,18 @@ fieldset[disabled] .suku-info.focus {
 .show>.suku-info.dropdown-toggle {
   color: #fff;
   background-color: $suku-sick-green;
-  border-color: $suku-text-info;
+  border-color: $suku-sick-green;
 }
 
 .suku-info.focus,
 .suku-info:focus {
-  box-shadow: 0 0 0 0.2rem $suku-text-info;
+  box-shadow: none !important;
 }
 
 .suku-info:not(:disabled):not(.disabled).active:focus,
 .suku-info:not(:disabled):not(.disabled):active:focus,
 .show>.suku-info.dropdown-toggle:focus {
-  box-shadow: 0 0 0 0.2rem $suku-text-info;
+  box-shadow: none !important;
 }
 
 // suku-default
@@ -188,11 +188,11 @@ fieldset[disabled] .suku-default.focus {
 
 .suku-default.focus,
 .suku-default:focus {
-  box-shadow: 0 0 0 0.2rem $suku-text-info;
+  box-shadow: none !important;
 }
 
 .suku-default:not(:disabled):not(.disabled).active:focus,
 .suku-default:not(:disabled):not(.disabled):active:focus,
 .show>.suku-default.dropdown-toggle:focus {
-  box-shadow: 0 0 0 0.2rem $suku-text-info;
+  box-shadow: none !important;
 }

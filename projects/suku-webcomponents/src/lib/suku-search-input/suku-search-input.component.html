@@ -1,4 +1,7 @@
-<div id="search_container" class="col-sm-3 p-0 d-flex">
-  <input type="text" id="search" class="stretch" value>
-  <img src="{{icon}}" [class]="customClass"  width="50%" height="47%">
- </div>
+<div [formGroup]="form">
+  <div id="search_container" class="col p-0 d-flex mt-1 {{customClass}}">
+    <input type="text" autocomplete="off" id="search" class="stretch" formControlName="{{control}}" name="{{control}}"
+      (keyup)="searchOnType.emit()" (keyup.enter)="searchOnEnter.emit()" placeholder="{{placeholder}}">
+    <img src="{{icon}}" [class]="iconCustomClass" [id]="iconId" (click)="searchOnEnter.emit();searchOnType.emit()">
+  </div>
+</div>

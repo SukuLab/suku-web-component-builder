@@ -3,7 +3,7 @@ import html2canvas from 'html2canvas';
 import * as jspdf from 'jspdf';
 import { Observable, Observer } from 'rxjs';
 import { FormGroup, FormBuilder } from '@angular/forms';
-// import { SukuModalService } from 'projects/suku-webcomponents/src/public_api';
+import { SukuModalService, SukuLoaderService } from 'projects/suku-webcomponents/src/public_api';
 @Component({
 	selector: 'app-root',
 	templateUrl: './app.component.html',
@@ -388,7 +388,9 @@ export class AppComponent implements OnInit {
 		}
 	];
 
-	constructor(private fb: FormBuilder) { }
+	constructor(private fb: FormBuilder, private sukuModalService: SukuModalService,
+		private sukuLoaderService: SukuLoaderService
+	) { }
 
 	ngOnInit() {
 		this.test = this.fb.group({
@@ -422,10 +424,9 @@ export class AppComponent implements OnInit {
 
 	open() {
 		const data = {
-			icon: '',
-			titleOne: 'Are you sure you want to delete ?',
 		};
-		// this.SukuModalService.openInfoModal(data);
+		this.sukuLoaderService.openLoader(data);
+		// this.sukuModalService.openConfirmationDialog(data);
 	}
 }
 

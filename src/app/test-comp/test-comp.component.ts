@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-test-comp',
@@ -6,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./test-comp.component.scss']
 })
 export class TestCompComponent implements OnInit {
+  form: FormGroup;
   buttonData = {
     title: 'Marketplace',
     icon: 'fa fa-shopping-cart',
@@ -13,9 +15,16 @@ export class TestCompComponent implements OnInit {
     disabled: true,
     id: 'Marketplace'
   };
-  constructor() { }
+  constructor(private fb: FormBuilder) { }
 
   ngOnInit() {
+    this.form = this.fb.group({
+      'search': ''
+    });
+  }
+
+  search() {
+    console.log('form', this.form.value.search);
   }
 
 }

@@ -31,18 +31,19 @@ export const suku: Theme = {
     '--suku-secondary-border-color': '#757575',
     '--suku-primary-border-radius': '0 40px 0 0',
     '--suku-secondary-border-radius': '0px 0px 41px 41px',
+    '--suku-search-border-radius': '10px 18px 18px 16px',
     '--suku-default-border-radius': '0px',
     '--suku-filter-bg': '#ffffff',
     '--suku-filter-label': '#b6b6b6',
     '--suku-filter-label-selected': 'black',
-    '--suku-font-size-1': '0.75rem', // 12px	- 0.75rem
-    '--suku-font-size-2': '0.875rem', // 14px	0.875rem
-    '--suku-font-size-3': '1.06rem', // 17px	1.0625rem
-    '--suku-font-size-4': '1.25rem', // 20px	1.25rem
-    '--suku-font-size-5': '1.5rem', //  24px	1.5rem
-    '--suku-font-size-6': '1.625rem', // 26px	1.625rem
-    '--suku-font-size-7': '1.8rem', //  30px	1.875rem
-    '--suku-font-size-8': '2rem' //  32px	1.875rem
+    '--suku-font-size-1': '11px', // 11px	0.75rem
+    '--suku-font-size-2': '12px', // 12px	0.875rem
+    '--suku-font-size-3': '14px', // 14px	1.0625rem
+    '--suku-font-size-4': '17px', // 20px	1.25rem
+    '--suku-font-size-5': '20px', // 24px	1.5rem
+    '--suku-font-size-6': '24px', // 26px	1.625rem
+    '--suku-font-size-7': '26px', // 30px	1.875rem
+    '--suku-font-size-8': '30px'  // 32px	1.875rem
   }
 };
 
@@ -73,6 +74,7 @@ export const dark: Theme = {
     '--suku-primary-border-radius': '0',
     '--suku-secondary-border-radius': '0px 0px 41px 41px',
     '--suku-default-border-radius': '0px 20px 15px',
+    '--suku-search-border-radius': '10px 18px 18px 16px',
     '--suku-filter-bg': 'black',
     '--suku-filter-label': '#b6b6b6',
     '--suku-filter-label-selected': '#ffffff',
@@ -114,6 +116,7 @@ export const light: Theme = {
     '--suku-primary-border-radius': '0px 15px 10px 0px',
     '--suku-secondary-border-radius': '0px 0px 41px 41px',
     '--suku-default-border-radius': '10px 10px 20px 5px',
+    '--suku-search-border-radius': '10px 18px 18px 16px',
     '--suku-filter-bg': 'black',
     '--suku-filter-label': '#b6b6b6',
     '--suku-filter-label-selected': '#ffffff',

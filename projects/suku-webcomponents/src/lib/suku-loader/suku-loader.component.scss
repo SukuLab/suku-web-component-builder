@@ -1,36 +1,138 @@
-.product-boxContent {
+@import '../theme/theme';
+
+
+// .product-boxContent {
+//   width: 100%;
+//   float: left;
+//   background-image: linear-gradient(to bottom, rgba(101, 102, 243, 0.06), rgba(101, 102, 243, 0.06)),
+//     radial-gradient(circle at 50% 0, #3a3a3a, #000000);
+//   border-radius: 0px;
+//   box-shadow: -4px 4px 5px 0px rgba(0, 0, 0, 0.08);
+//   padding: 10px 5px 0px 15px;
+//   margin: 0 0 0px 0;
+// }
+
+// .color {
+//   font-family: "Poppins", sans-serif !important;
+//   color: #ffffff !important;
+//   font-size: 20px;
+//   font-weight: 300;
+// }
+
+// .width100 {
+//   width: 100%;
+// }
+
+// .FontStyle {
+//   font-family: "Poppins", sans-serif !important;
+//   font-size: 17px;
+//   letter-spacing: 0.4px;
+//   font-weight: 700;
+// }
+
+// .FontStyle2 {
+//   font-family: "Poppins", sans-serif !important;
+//   font-size: 17px;
+//   letter-spacing: 0.4px;
+//   font-weight: 300;
+// }
+
+// .spinnerStyle {
+//   font-size: 50px;
+//   padding-top: 20px;
+//   padding-bottom: 20px;
+// }
+
+// .boxStyle {
+//   border-radius: 7px 7px 22px 22px;
+//   background-color: #ffffff;
+//   box-shadow: 0 12px 14px 0 rgba(0, 0, 0, 0.05);
+// }
+
+// .bgColor {
+//   background-color: #3a3a3a;
+//   opacity: 0.5;
+// }
+
+
+
+
+// suku--
+
+.dialog-title-box {
   width: 100%;
   float: left;
   background-image: linear-gradient(to bottom, rgba(101, 102, 243, 0.06), rgba(101, 102, 243, 0.06)),
     radial-gradient(circle at 50% 0, #3a3a3a, #000000);
-    border-radius: 0px;
+  border-radius: 0px;
   box-shadow: -4px 4px 5px 0px rgba(0, 0, 0, 0.08);
-  padding: 10px 5px 0px 15px;
   margin: 0 0 0px 0;
 }
 
-.color {
-  font-family: "Poppins", sans-serif !important;
+.title {
+  font-family: $suku-primary-font;
   color: #ffffff !important;
   font-size: 20px;
   font-weight: 300;
+}
+
+.icon {
+  font-size: 50px;
+  color: #a7bf2e;
 }
 
 .width100 {
   width: 100%;
 }
 
-.FontStyle {
-  font-family: "Poppins", sans-serif !important;
+.maincontent {
+  font-family: $suku-primary-font;
   font-size: 17px;
   letter-spacing: 0.4px;
   font-weight: 700;
 }
-.FontStyle2 {
-  font-family: "Poppins", sans-serif !important;
+
+.subcontent {
+  font-family: $suku-primary-font;
   font-size: 17px;
   letter-spacing: 0.4px;
   font-weight: 300;
+}
+
+::ng-deep mat-dialog-container {
+  padding: 0px !important;
+  overflow: hidden !important;
+}
+
+:host {
+  ::ng-deep mat-dialog-content {
+    max-height: 91% !important;
+    overflow-y: none !important;
+    margin: 0px !important;
+    height: 100% !important;
+  }
+
+  ::ng-deep mat-dialog-actions {
+    margin: 5px 10px 5px 10px !important;
+  }
+
+}
+
+/* scroll-bar */
+
+/deep/div {
+  ::-webkit-scrollbar {
+    width: 4px !important;
+    /* for vertical scrollbars */
+  }
+
+  ::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.1);
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: rgba(0, 0, 0, 0.8);
+  }
 }
 
 .spinnerStyle {
@@ -39,13 +141,6 @@
   padding-bottom: 20px;
 }
 
-.boxStyle {
-  border-radius: 7px 7px 22px 22px;
-  background-color: #ffffff;
-  box-shadow: 0 12px 14px 0 rgba(0, 0, 0, 0.05);
-}
-
-.bgColor {
-  background-color: #3a3a3a;
-  opacity: 0.5;
+.w-70 {
+  min-width: 70%;
 }
