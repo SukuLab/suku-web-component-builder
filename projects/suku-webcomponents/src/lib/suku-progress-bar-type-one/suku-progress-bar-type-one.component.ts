@@ -1,21 +1,19 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
 	selector: 'suku-progress-bar-type-one',
 	templateUrl: './suku-progress-bar-type-one.component.html',
-	styleUrls: [ './suku-progress-bar-type-one.component.scss' ]
+	styleUrls: ['./suku-progress-bar-type-one.component.scss']
 })
 export class SukuProgressBarTypeOneComponent implements OnInit {
-	@Input() progressStyleOne = 'progressActive';
-	@Input() progressStyleTwo = 'progressUpcoming';
-	@Input() progressStyleThree = 'progressUpcoming';
-	@Input() progressStyleFour = 'progressUpcoming';
-	@Input() progressStyleFive = 'progressUpcoming';
-	@Input() customHeadingOneClass = '';
-	@Input() customHeadingTwoClass = '';
-	@Input() customHeadingThreeClass = '';
-	@Input() customHeadingFourClass = '';
-	@Input() customHeadingFiveClass = '';
+	@Input('progress-style-one') progressStyleOne = 'progressActive';
+	@Input('progress-style-two') progressStyleTwo = 'progressUpcoming';
+	@Input('progress-style-three') progressStyleThree = 'progressUpcoming';
+	@Input('progress-style-four') progressStyleFour = 'progressUpcoming';
+	@Input('custom-heading-one-class') customHeadingOneClass = '';
+	@Input('custom-heading-two-class') customHeadingTwoClass = '';
+	@Input('custom-heading-three-class') customHeadingThreeClass = '';
+	@Input('custom-heading-four-class') customHeadingFourClass = '';
 	@Input()
 	progressBarLabels = {
 		labelOne: 'RETRIEVE COMPANY DATA',
@@ -37,7 +35,11 @@ export class SukuProgressBarTypeOneComponent implements OnInit {
 		labelThreeId: 'productTraceability',
 		labelFourId: 'confirm'
 	};
-	constructor() {}
+	@Output() progressOneAction = new EventEmitter();
+	@Output() progressTwoAction = new EventEmitter();
+	@Output() progressThreeAction = new EventEmitter();
+	@Output() progressFourAction = new EventEmitter();
+	constructor() { }
 
-	ngOnInit() {}
+	ngOnInit() { }
 }
