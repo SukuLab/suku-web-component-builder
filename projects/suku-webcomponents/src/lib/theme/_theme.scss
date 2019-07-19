@@ -69,6 +69,13 @@ $suku-font-size-8: var(--suku-font-size-8); // 30px
   box-shadow: 0px 4px 3px 0px rgba(0, 0, 0, 0.5);
 }
 
+@mixin suku-box {
+  background: $suku-bg-primary;
+  border-left: 5px solid $suku-primary-border-color;
+  border-radius: 0 40px 0 0;
+  box-shadow: -4px 4px 5px 0px rgba(0, 0, 0, 0.08);
+}
+
 .btn {
   // border: solid 2px #a7bf2e;
   border-radius: 28px 76px 63px;

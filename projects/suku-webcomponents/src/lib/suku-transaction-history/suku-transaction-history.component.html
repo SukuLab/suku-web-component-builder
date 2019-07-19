@@ -1,50 +1,57 @@
-<div class="col fontPoppins d-flex p-0">
-  <div class="form-group col-12 p-0">
-    <div class="col-sm-12 text-center text-white historyWidget p-4 pt-2 pb-3">
-      <p class="pop text-center mb-0">{{transactionHistory | uppercase}}</p>
+<div class="col d-flex p-0">
+  <div class="col-12 p-0">
+    <div class="col-sm-12 {{customClass}}">
+      <p [class]="transactionHistoryTittle">{{transactionHistory | uppercase}}</p>
     </div>
-    <div class="col-sm-12 table-responsive box-shadows mb-3 p-0" id="transactionTable">
+    <div class="col-sm-12 table-responsive {{bgCustomClass}}" id="transactionTable">
       <div class="col-sm-12 p-5" *ngIf="!transactionDetails">
-        <div class="col-sm-12 d-flex justify-content-center">
-          <mat-spinner diameter="65"></mat-spinner>
+        <div class="col-sm-12 d-flex {{spinnerCustomClass}}">
+          <mat-spinner color="{{spinnerColor}}" diameter="{{spinnerRadius}}"></mat-spinner>
         </div>
-        <div class="mt-4 pb-3 col-sm-12 text-center">
-          <span id="loading">Please wait...</span>
+        <div [class]="loadingCustomClass">
+          <span [style.font-size.rem]="loadingSize" id="loading" [style.color]="loadingColor"
+            [style.font-weight]="loadingWeight">{{loaderMessage}}</span>
         </div>
       </div>
-      <table class="col-sm-12 table table-striped tableBg mb-0 pl-4 pr-5" *ngIf="transactionDetails"
-        id="transactionHisTable" style="overflow-x:auto;">
+      <table class="col-sm-12 table table-striped {{tableBgColor}} responsive" *ngIf="transactionDetails"
+        id="transactionHisTable">
         <thead>
           <tr>
-            <th scope="col" class="text-center" id="{{typeId}}">{{heading.type}}</th>
-            <th scope="col" class="text-center" id="{{myAccountId}}">{{heading.myAccount}}</th>
-            <th scope="col" class="text-center" id="{{counterPartyId}}">{{heading.counterparty}}</th>
-            <th scope="col" class="text-center" id="{{amountId}}">{{heading.amount}}</th>
-            <th scope="col" class="text-center" id="{{statusId}}">{{heading.status}}</th>
-            <th scope="col" class="text-center" id="{{dateCreatedId}}">{{heading.dateInitiated}}</th>
-            <th scope="col" class="text-center" id="{{dateCreatedId}}">{{heading.dateCreated}}</th>
-            <th scope="col" class="text-center" id="{{paymentManagementId}}">{{heading.paymentManagement}}</th>
+            <th scope="col" [class]="tableHeaderCustomClass" id="{{typeId}}">{{heading.type}}</th>
+            <th scope="col" [class]="tableHeaderCustomClass" id="{{myAccountId}}">{{heading.myAccount}}</th>
+            <th scope="col" [class]="tableHeaderCustomClass" id="{{counterPartyId}}">{{heading.counterparty}}</th>
+            <th scope="col" [class]="tableHeaderCustomClass" id="{{amountId}}">{{heading.amount}}</th>
+            <th scope="col" [class]="tableHeaderCustomClass" id="{{statusId}}">{{heading.status}}</th>
+            <th scope="col" [class]="tableHeaderCustomClass" id="{{dateCreatedId}}">{{heading.dateInitiated}}</th>
+            <th scope="col" [class]="tableHeaderCustomClass" id="{{dateCreatedId}}">{{heading.dateCreated}}</th>
+            <th scope="col" [class]="tableHeaderCustomClass" id="{{paymentManagementId}}">{{heading.paymentManagement}}
+            </th>
           </tr>
         </thead>
         <tbody>
           <tr id="{{transactionDetailsId}}" *ngFor="let transaction of transactionDetails">
-            <td scope="row" class="text-left {{( (transaction?.type) == 'outgoing') ? 'outgoing' : 'incoming'}}">
+            <td scope="row"
+              class=" {{tableBodyCustomClass}} {{( (transaction?.type) == 'outgoing') ? 'outgoing' : 'incoming'}}">
               <span class="pl-4">{{transaction?.type || 'Not available'}}</span></td>
-            <td scope="row" class="text-left"><span class="pl-4">{{transaction?.accountName || 'Not available'}}</span>
+            <td scope="row" [class]="tableBodyCustomClass"><span
+                class="pl-4">{{transaction?.accountName || 'Not available'}}</span>
             </td>
-            <td scope="row" class="text-left"><span class="pl-4">{{transaction?.counterParty || 'Not available'}}</span>
+            <td scope="row" [class]="tableBodyCustomClass"><span
+                class="pl-4">{{transaction?.counterParty || 'Not available'}}</span>
             </td>
-            <td scope="row" class="text-left"><span class="pl-4">${{transaction?.amount || 'Not available'}}</span></td>
-            <td scope="row" class="text-left {{( (transaction.status) == 'Failed') ? 'falied' : 'incoming'}}">
+            <td scope="row" [class]="tableBodyCustomClass"><span
+                class="pl-4">${{transaction?.amount || 'Not available'}}</span></td>
+            <td scope="row"
+              class=" {{tableBodyCustomClass}} {{( (transaction.status) == 'Failed') ? 'falied' : 'incoming'}}">
               <span class="pl-4">{{transaction?.status || 'Not available'}}</span></td>
-            <td scope="row" class="text-left"><span
+            <td scope="row" [class]="tableBodyCustomClass"><span
                 class="pl-4">{{transaction?.created | date:'d MMM yyyy h:mm:s a'  || 'Not available'}}</span>
             </td>
-            <td scope="row" class="text-left"><span class="pl-4">
+            <td scope="row" [class]="tableBodyCustomClass"><span class="pl-4">
                 {{(transaction?.completedOn | date:'d MMM yyyy h:mm:s a') || 'Not available'}}</span>
             </td>
-            <td class="text-center"><button id="{{cancelId}}" *ngIf="transaction?.status=='pending'"
-                (click)="action.emit(transaction);" class="btn  btnCancel">{{cancel}}</button></td>
+            <td [class]="tableBodyCustomClass"><button id="{{cancelId}}" *ngIf="transaction?.status=='pending'"
+                (click)="action.emit(transaction);" [class]="buttonCustomClass">{{cancel}}</button></td>
           </tr>
         </tbody>
       </table>
