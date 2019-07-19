@@ -1,25 +1,31 @@
+@import '../theme/theme';
+
 $starMargin: 4px;
-$fullStarColor: rgb(137, 137, 137);
-$emptyStarColor: rgb(225, 225, 225);
+$fullStarColor: $suku-star-full-bg;
+$emptyStarColor:  $suku-star-empty-bg;
 
 .emptyStar {
     color: $emptyStarColor;
     margin: $starMargin;
+    font-size: $suku-star-size;
 }
 
 .fullStar {
     color: $fullStarColor;
     margin: $starMargin;
+    font-size: $suku-star-size;
 }
 
 .halfStarLeft {
     color: $fullStarColor;
     position: relative;
     left: 1px;
+    font-size: $suku-star-size;
 }
 
 .halfStarRight {
     color: $emptyStarColor;
     position: relative;
     right: 1px;
+    font-size: $suku-star-size;
 }

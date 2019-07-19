@@ -8,7 +8,6 @@ import { MatDialogModule } from '@angular/material/dialog';
     CommonModule, MatDialogModule
   ],
   declarations: [SukuConfirmationComponent],
-  entryComponents: [SukuConfirmationComponent],
-  exports: [SukuConfirmationComponent]
+  entryComponents: [SukuConfirmationComponent]
 })
 export class SukuModalModule { }

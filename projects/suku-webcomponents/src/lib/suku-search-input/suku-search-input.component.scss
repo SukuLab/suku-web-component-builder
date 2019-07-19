@@ -40,7 +40,7 @@ input:focus {
 
 ::placeholder {
   color: #3e3e3e;
-  font-size: $suku-font-size-2;
+  font-size: $suku-font-size-3;
 }
 
 .searchIcon {
@@ -50,10 +50,4 @@ input:focus {
   right: 10px;
   margin: 1px;
   background: $suku-homepage-bg;
-}
-
-@media only screen and (max-width: 425px) and (min-width: 320px) {
-  input#search {
-    margin-left: 27px;
-  }
 }

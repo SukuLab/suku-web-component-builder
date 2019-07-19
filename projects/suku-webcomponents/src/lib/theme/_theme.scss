@@ -18,6 +18,9 @@ $suku-bg-primary: var(--suku-bg-primary); // dark-grey
 $suku-bg-secondary: var(--suku-bg-secondary);
 $suku-bg-ternary: var(--suku-bg-ternary);
 $suku-homepage-bg: var(--suku-homepage-bg);
+$suku-star-empty-bg:var(--suku-star-empty-bg);
+$suku-star-full-bg:var(--suku-star-full-bg);
+$suku-star-size:var(--suku-star-size);
 
 $suku-text-heading: var(--suku-text-heading);
 $suku-text-sub-heading: var(--suku-text-sub-heading);
@@ -65,7 +68,6 @@ $suku-font-size-8: var(--suku-font-size-8); // 30px
 @mixin hover-shadow {
   box-shadow: 0px 4px 3px 0px rgba(0, 0, 0, 0.5);
 }
-
 
 .btn {
   // border: solid 2px #a7bf2e;
@@ -139,11 +141,6 @@ $suku-font-size-8: var(--suku-font-size-8); // 30px
     box-shadow: none !important;
   }
 }
-
-
-
-
-
 
 .suku-info {
 

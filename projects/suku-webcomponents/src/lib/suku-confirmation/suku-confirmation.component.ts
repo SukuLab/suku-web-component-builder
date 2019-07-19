@@ -35,9 +35,7 @@ export class SukuConfirmationComponent implements OnInit {
     for (const key of Object.keys(this.data)) {
       if (this.data[key]) {
         console.log(this.data[key], key);
-        // if (this.dialogData[this.data[key]]) {
         this.dialogData[key] = this.data[key];
-        // }
       }
     }
     console.log('dialogData', this.dialogData);

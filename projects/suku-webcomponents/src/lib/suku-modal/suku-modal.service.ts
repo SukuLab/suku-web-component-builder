@@ -41,9 +41,4 @@ export class SukuModalService {
 			this.onDialogClose.emit(result);
 		});
 	}
-
-	public loader() {
-
-	}
 }
-

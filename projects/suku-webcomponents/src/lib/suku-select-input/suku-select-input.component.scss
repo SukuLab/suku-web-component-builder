@@ -1,17 +1,19 @@
+@import '../theme/theme';
+
 .sort-by {
-  font-family: 'Poppins', sans-serif;
+  font-family: $suku-primary-font;
   font-size: 15px;
   font-weight: normal;
   font-style: normal;
   font-stretch: normal;
   line-height: normal;
   letter-spacing: -0.3px;
-  color: #b6b6b6;
+  color: $suku-text-label-one;
   text-transform: uppercase;
 }
 
 .optionsBox {
-  font-family: 'Encode Sans', sans-serif !important;
+  font-family: $suku-secondary-font;
   font-size: 14px;
   font-weight: normal;
   font-style: normal;
@@ -47,4 +49,10 @@ select + img.image {
 
 select:focus {
   background-color: #ffffff !important;
+}
+
+@media(max-width:486px) {
+  .p-xs-0 {
+     padding: 0px;
+  }
 }
