@@ -34,6 +34,7 @@ pipeline {
 
         stage("build docker image") {
             steps {
+                sh returnStatus: true, script: 'docker rm -f gitpush'
                 sh "docker build -t test-lib:ci_latest ."
             }
         }
