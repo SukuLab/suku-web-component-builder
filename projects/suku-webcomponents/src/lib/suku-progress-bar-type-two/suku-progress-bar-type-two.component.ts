@@ -16,6 +16,7 @@ export class SukuProgressBarTypeTwoComponent implements OnInit {
 	@Input('custom-heading-three-class') customHeadingThreeClass = '';
 	@Input('custom-heading-four-class') customHeadingFourClass = '';
 	@Input('custom-heading-five-class') customHeadingFiveClass = '';
+	@Input('enable-pointer') enablePointer = false;
 
 	@Input()
 	progressBarLabels = {

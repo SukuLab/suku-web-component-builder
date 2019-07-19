@@ -6,7 +6,8 @@ import { AppComponent } from './app.component';
 import { MatSelectModule, MatSlideToggle, MatButtonToggleModule, MatSlideToggleBase } from '@angular/material';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
-import { SukuWebcomponentsModule, SukuWebcomponentsService } from 'projects/suku-webcomponents/src/public_api';
+// import { SukuWebcomponentsModule, SukuWebcomponentsService } from 'projects/suku-webcomponents/src/public_api';
+import { SukuWebcomponentsModule, SukuWebcomponentsService } from 'suku-webcomponents';
 @NgModule({
 	declarations: [AppComponent],
 	imports: [BrowserModule, AppRoutingModule, SukuWebcomponentsModule, BrowserAnimationsModule,

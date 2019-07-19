@@ -181,20 +181,73 @@ import { SukuTreeComponent } from './suku-tree/suku-tree.component';
 		MatToolbarModule,
 		MatTooltipModule
 	],
-	exports: [SukuACHSettingsComponent],
-	entryComponents: [SukuACHSettingsComponent, SukuAddIconComponent]
+	exports: [SukuBidTagComponent,
+		SukuCardLineComponent,
+		SukuDashboardProfileComponent,
+		SukuDefaultButtonComponent,
+		SukuHeadingComponent,
+		SukuHomeItalicHeadingComponent,
+		SukuHomeWidgetComponent,
+		SukuInfoButtonComponent,
+		SukuInlineDropdownComponent,
+		SukuMailWidgetComponent,
+		SukuMatchChipComponent,
+		SukuNotificationWidgetComponent,
+		SukuPrimaryButtonComponent,
+		SukuProgressBarTypeOneComponent,
+		SukuProgressBarTypeTwoComponent,
+		SukuSecondaryButtonComponent,
+		SukuSubHeadingComponent,
+		SukuLinkComponent,
+		SukuAddWidgetComponent,
+		SukuSelectInputComponent,
+		SukuNavSubmenuComponent,
+		SukuBidInfoComponent,
+		SukuPhoneWidgetComponent,
+		SukuAddressWidgetComponent,
+		SukuSearchInputComponent,
+		SukuProfileWidgetComponent,
+		SukuStarBadgeComponent,
+		SukuFiltersComponent,
+		SukuTrackProgressBarComponent,
+		SukuProductTraceWidgetComponent,
+		SukuTreeComponent,
+		SukuCardTitleComponent,
+		SukuRatingStarComponent,
+		SukuShippingWidgetComponent,
+		SukuResponseComponent,
+		SukuACHSettingsComponent,
+		SukuTransactionHistoryComponent,
+		SukuFundingSourceComponent,
+		SukuCreateCustomerComponent,
+		SukuBeneficialOwnerComponent,
+		SukuDwollaFundingAgreementComponent,
+		SukuDwollaFundingSourceComponent,
+		SukuCreationCustomerFileuploadComponent,
+		SukuPaymentPortalHelpComponent,
+		SukuTermsAndConditionsComponent,
+		SukuCardLineTypeOneComponent,
+		SukuCardLineTypeTwoComponent,
+		SukuRatingCardLineComponent,
+		SukuNotificationPanelComponent,
+		SukuAddIconComponent,
+		SukuHomepageComponent,
+		SukuHomepageSectionComponent,
+		SukuHomepageButtonComponent,
+		SukuProfileHeaderComponent,
+		SukuSocialIconsComponent,
+		SukuRadioButtonComponent,
+		SukuDropdownComponent,
+		SukuHeaderComponent,
+		SukuTitleHeaderComponent,
+		SukuShippingInfoWidgetComponent,
+		SukuImageWidgetComponent,
+		SukuChatWidgetComponent,
+		SukuLoaderComponent,
+		SukuConfirmationComponent,
+		ScrollToBottomDirective,
+		SukuLargeBidTagComponent,
+		SukuBidWidgetTagComponent]
 })
 export class SukuWebcomponentsModule {
-	constructor(private injector: Injector) {
-		const elements: any[] = [
-			[SukuACHSettingsComponent, 'suku-ach-setting'],
-			[SukuAddIconComponent, 'suku-add-icon']
-		];
-		for (const [component, name] of elements) {
-			const el = createCustomElement(component, { injector: this.injector });
-			customElements.define(name, el);
-		}
-	}
-
-	ngDoBoostrap() { }
 }
