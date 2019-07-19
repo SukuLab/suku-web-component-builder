@@ -25,6 +25,7 @@ export class SukuProgressBarTypeTwoComponent implements OnInit {
 		labelFour: 'TERMS OF SALE',
 		labelFive: 'CONFIRM'
 	};
+
 	@Input()
 	progressBarIconId = {
 		IconOneId: 'listingDetails',
@@ -33,6 +34,7 @@ export class SukuProgressBarTypeTwoComponent implements OnInit {
 		IconFourId: 'termsOfSale',
 		IconFiveId: 'confirm'
 	};
+
 	@Input()
 	progressBarTitleId = {
 		labelOneId: 'listingDetails',

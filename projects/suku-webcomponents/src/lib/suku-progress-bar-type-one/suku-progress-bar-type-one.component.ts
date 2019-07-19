@@ -21,6 +21,7 @@ export class SukuProgressBarTypeOneComponent implements OnInit {
 		labelThree: 'LICENSING',
 		labelFour: 'CONFIRMATION'
 	};
+
 	@Input()
 	progressBarIconId = {
 		IconOneId: 'listingDetails',
@@ -28,6 +29,7 @@ export class SukuProgressBarTypeOneComponent implements OnInit {
 		IconThreeId: 'productTraceability',
 		IconFourId: 'confirm'
 	};
+
 	@Input()
 	progressBarTitleId = {
 		labelOneId: 'listingDetails',
@@ -35,6 +37,7 @@ export class SukuProgressBarTypeOneComponent implements OnInit {
 		labelThreeId: 'productTraceability',
 		labelFourId: 'confirm'
 	};
+
 	@Output() progressOneAction = new EventEmitter();
 	@Output() progressTwoAction = new EventEmitter();
 	@Output() progressThreeAction = new EventEmitter();
