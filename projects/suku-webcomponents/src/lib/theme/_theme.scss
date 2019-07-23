@@ -22,6 +22,9 @@ $suku-homepage-bg: var(--suku-homepage-bg);
 $suku-default-bg: var(--suku-default-bg);
 $suku-star-empty-bg: var(--suku-star-empty-bg);
 $suku-star-full-bg: var(--suku-star-full-bg);
+$suku-progressbar-active-bg: var(--suku-progressbar-active-bg);
+$suku-progressbar-upcoming-bg: var(--suku-progressbar-upcoming-bg);
+$suku-progressbar-completed-bg: var(--suku-progressbar-completed-bg);
 
 $suku-star-size: var(--suku-star-size);
 
@@ -55,11 +58,13 @@ $suku-icon-disabled-bg: var(--suku-icon-disabled-bg);
 $suku-font-size-1: var(--suku-font-size-1); // 11px
 $suku-font-size-2: var(--suku-font-size-2); // 12px
 $suku-font-size-3: var(--suku-font-size-3); // 14px
-$suku-font-size-4: var(--suku-font-size-4); // 17px
-$suku-font-size-5: var(--suku-font-size-5); // 20px
-$suku-font-size-6: var(--suku-font-size-6); // 24px
-$suku-font-size-7: var(--suku-font-size-7); // 26px
-$suku-font-size-8: var(--suku-font-size-8); // 30px
+$suku-font-size-4: var(--suku-font-size-4); // 15px
+$suku-font-size-5: var(--suku-font-size-5); // 17px
+$suku-font-size-6: var(--suku-font-size-6); // 20px
+$suku-font-size-7: var(--suku-font-size-7); // 24px
+$suku-font-size-8: var(--suku-font-size-8); // 22px
+$suku-font-size-9: var(--suku-font-size-9); // 26px
+$suku-font-size-10: var(--suku-font-size-10); // 30px
 
 @mixin suku-container {
   border-radius: 0 0 41px 41px;
@@ -84,7 +89,7 @@ $suku-font-size-8: var(--suku-font-size-8); // 30px
 
 @mixin suku-title-box {
   background-image: linear-gradient(to bottom, rgba(101, 102, 243, 0.06), rgba(101, 102, 243, 0.06)),
-  radial-gradient(circle at 50% 0, #3a3a3a, #000000);
+    radial-gradient(circle at 50% 0, #3a3a3a, #000000);
   border-radius: 0px;
   box-shadow: -4px 4px 5px 0px rgba(0, 0, 0, 0.08);
 }

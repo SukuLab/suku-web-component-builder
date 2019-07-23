@@ -43,14 +43,19 @@ export const suku: Theme = {
     '--suku-default-bg': '#ffffff',
     '--suku-filter-label': '#b6b6b6',
     '--suku-filter-label-selected': 'black',
+    '--suku-progressbar-inprogress-bg': '#a7bf2e',
+    '--suku-progressbar-upcoming-bg': '#757575',
+    '--suku-progressbar-completed-bg': '#1c1c1c',
     '--suku-font-size-1': '11px', // 11px	0.75rem
     '--suku-font-size-2': '12px', // 12px	0.875rem
     '--suku-font-size-3': '14px', // 14px	1.0625rem
-    '--suku-font-size-4': '17px', // 20px	1.25rem
-    '--suku-font-size-5': '20px', // 24px	1.5rem
-    '--suku-font-size-6': '24px', // 26px	1.625rem
-    '--suku-font-size-7': '26px', // 30px	1.875rem
-    '--suku-font-size-8': '30px'  // 32px	1.875rem
+    '--suku-font-size-4': '15px', // 14px	1.0625rem
+    '--suku-font-size-5': '17px', // 20px	1.25rem
+    '--suku-font-size-6': '20px', // 24px	1.5rem
+    '--suku-font-size-7': '22px', // 26px	1.625rem
+    '--suku-font-size-8': '24px', // 26px	1.625rem
+    '--suku-font-size-9': '26px', // 30px	1.875rem
+    '--suku-font-size-10': '30px'  // 32px	1.875rem
   }
 };
 
@@ -91,6 +96,9 @@ export const dark: Theme = {
     '--suku-filter-bg': 'black',
     '--suku-filter-label': '#b6b6b6',
     '--suku-filter-label-selected': '#ffffff',
+    '--suku-progressbar-inprogress-bg': '#a7bf2e',
+    '--suku-progressbar-upcoming-bg': '#757575',
+    '--suku-progressbar-completed-bg': '#1c1c1c',
     '--suku-font-size-1': '0.75rem', // 12px	- 0.75rem
     '--suku-font-size-2': '0.875rem', // 14px	0.875rem
     '--suku-font-size-3': '1.06rem', // 17px	1.0625rem
@@ -136,6 +144,9 @@ export const light: Theme = {
     '--suku-filter-bg': 'black',
     '--suku-filter-label': '#b6b6b6',
     '--suku-filter-label-selected': '#ffffff',
+    '--suku-progressbar-active-bg': '#a7bf2e',
+    '--suku-progressbar-upcoming-bg': '#757575',
+    '--suku-progressbar-completed-bg': '#1c1c1c',
     '--suku-font-size-1': '0.75rem', // 12px	- 0.75rem
     '--suku-font-size-2': '0.875rem', // 14px	0.875rem
     '--suku-font-size-3': '1.06rem', // 17px	1.0625rem

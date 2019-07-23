@@ -1,13 +1,13 @@
 <div class="col p-0" (click)="cardAction()">
-  <div class="row card-line-bg p-3 m-3 {{customclass}}" [style.background-color]="bgColor">
+  <div class="row card-line-bg p-3 m-3 {{customClass}}" [style.background-color]="bgColor">
     <div [class]="imageColSize">
-      <img [class]="customclass" src="{{image}}" alt="card-img" width="55px" height="46px">
+      <img class="customclass {{imgCustomClass}}" src="{{image}}" alt="card-img">
     </div>
     <div class="col-sm-1" *ngIf="msgStatus == 'read'">
-      <img [class]="customIconclass" src="{{chatUnreadIcon}}" alt="card-img" width="50px" height="50px">
+      <img [class]="customIconClass" src="{{chatUnreadIcon}}" alt="card-img" width="50px" height="50px">
     </div>
     <div class="col-sm-1" *ngIf="msgStatus == 'unRead'">
-      <img [class]="customIconclass" src="{{chatReadIcon}}" alt="card-img" width="50px" height="50px">
+      <img [class]="customIconClass" src="{{chatReadIcon}}" alt="card-img" width="50px" height="50px">
     </div>
     <div [class]="txtcolsize">
       <h2 [style.font-size.px]="titleOneSize" [class]="titleOnecustomclass" [style.font-weight]="titleOneWeight"
@@ -15,13 +15,13 @@
       <h2 [style.font-size.px]="contentOneSize" [class]="contentOnecustomclass" [style.font-weight]="contentOneWeight"
         [style.color]="contentOneColor">{{contentOne}}</h2>
     </div>
-    <div [class]="txttwocolsize">
+    <div [class]="txtTwocolsize">
       <h2 [style.font-size.px]="subTitleTwoSize" [class]="subTitleTwocustomclass"
         [style.font-weight]="subTitleTwoWeight" [style.color]="subTitleTwoColor">{{subTitleTwo}}</h2>
       <h2 [style.font-size.px]="contentTwoSize" [class]="contentTwocustomclass" (click)="contentAction($event)"
         [style.font-weight]="contentTwoWeight" [style.color]="contentTwoColor">{{contentTwo}}</h2>
     </div>
-    <div [class]="txtthreecolsize">
+    <div [class]="txtThreecolsize">
       <h2 [style.font-size.px]="subTitleThreeSize" [class]="subTitleThreeClass"
         [style.font-weight]="subTitleThreeWeight" [style.color]="subTitleThreecolor">{{subTitleThree}}</h2>
       <h2 [style.font-size.px]="contentThreeSize" [class]="contentThreecustomclass"

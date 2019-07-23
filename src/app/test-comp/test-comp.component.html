@@ -1,21 +1,29 @@
 <form [formGroup]="form">
-    <div class="col pb-4 pt-3">
-      <!-- <suku-search-input [form]="form" control="search" (searchOnEnter)="search()">
+  <div class="col pb-4 pt-3">
+    <!-- <suku-search-input [form]="form" control="search" (searchOnEnter)="search()">
       </suku-search-input> -->
-      <!-- <suku-product-trace-widget [form]="form" control='search' label-one="TRACE METHOD #1" 
+    <!-- <suku-product-trace-widget [form]="form" control='search' label-one="TRACE METHOD #1" 
       label-two="Product ID:"   visible = "true" btn-one-disable="true" [productdetails]='data'
       label-three="Product Identification Number"></suku-product-trace-widget> -->
-      <!-- <suku-mail-widget></suku-mail-widget> -->
-      <!-- <suku-payment-portal-help></suku-payment-portal-help> -->
-      <div class="col-2">
-        <!-- <suku-match-chip></suku-match-chip> -->
-        <suku-transaction-history></suku-transaction-history>
-        <!-- <suku-title-header>Listing Name</suku-title-header> -->
-        <!-- <suku-terms-and-conditions></suku-terms-and-conditions> -->
-        <!-- <suku-dropdown [data]="dropDownData" displayKey='templateName' [form]="form" control="search"></suku-dropdown> -->
-      </div>
+    <!-- <suku-mail-widget></suku-mail-widget> -->
+    <!-- <suku-payment-portal-help></suku-payment-portal-help> -->
+    <div class="col-10">
+      <!-- <suku-track-progress-bar></suku-track-progress-bar> -->
+      <!-- <suku-secondary-button>Test</suku-secondary-button> -->
+      <suku-beneficial-owner [form]="form" arrayControlName="owner" control="beneficialCheckBox">
+      </suku-beneficial-owner>
+      <!-- <suku-star-badge>3</suku-star-badge> -->
+      <!-- <suku-card-title></suku-card-title> -->
+      <!-- <suku-match-chip></suku-match-chip> -->
+      <!-- <suku-card-line-type-one></suku-card-line-type-one> -->
+      <!-- <suku-card-line-type-two></suku-card-line-type-two> -->
+      <!-- <suku-transaction-history></suku-transaction-history> -->
+      <!-- <suku-title-header>Listing Name</suku-title-header> -->
+      <!-- <suku-terms-and-conditions></suku-terms-and-conditions> -->
+      <!-- <suku-dropdown [data]="dropDownData" displayKey='templateName' [form]="form" control="search"></suku-dropdown> -->
     </div>
-    <!-- <suku-terms-and-conditions></suku-terms-and-conditions> -->
+  </div>
+  <!-- <suku-terms-and-conditions></suku-terms-and-conditions> -->
 </form>
 
 <!-- <suku-product-trace-widget head-name="TRACE METHOD #1" name="Product ID:" sub-Head-Name="Product Identification Number"

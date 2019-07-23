@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup } from '@angular/forms';
+import { FormBuilder, FormGroup, FormControl, FormArray } from '@angular/forms';
 
 @Component({
   selector: 'app-test-comp',
@@ -156,12 +156,33 @@ export class TestCompComponent implements OnInit {
   ngOnInit() {
     this.form = this.fb.group({
       'search': '',
-      'trace': ''
+      'trace': '',
+      'owner': this.fb.array([]),
+      'beneficialCheckBox': ''
     });
+    (<FormArray>this.form.get('owner')).push(this.control());
   }
 
   search() {
     console.log('form', this.form.value.search);
+  }
+
+  control(): FormGroup {
+    return this.fb.group({
+      firstName: new FormControl(),
+      lastName: new FormControl(),
+      dateOfBirth: new FormControl(),
+      ssn: new FormControl(),
+      address: this.fb.group({
+        address1: new FormControl(),
+        address2: new FormControl(),
+        city: new FormControl(),
+        stateProvinceRegion: new FormControl({ value: '', disabled: true }),
+        country: new FormControl(),
+        postalCode: new FormControl(),
+        document: ''
+      })
+    });
   }
 
 }

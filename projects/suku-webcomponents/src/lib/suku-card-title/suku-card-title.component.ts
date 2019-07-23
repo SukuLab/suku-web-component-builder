@@ -6,19 +6,18 @@ import { Router } from '@angular/router';
   styleUrls: ['./suku-card-title.component.scss']
 })
 export class SukuCardTitleComponent implements OnInit {
-
-  @Input() cardTitleName = 'INTEREST NAME';
-  @Input() cardTitleId = 'heading';
-  @Input() cardTitlesize = '12';
-  @Input() cardTitlecolor = '#b6b6b6';
-  @Input() cardTitleweight;
-  @Input() cardContentName  = 'Spring Cases';
-  @Input() cardContentId = 'Content';
-  @Input() cardContentsize = '17';
-  @Input() cardContentcolor = '#1d1d1d';
-  @Input() cardContentweight  = '700';
-  @Input() customclassContent  = '';
-  @Input() customclasstitle  = '';
+  @Input('card-title-name') cardTitleName = 'INTEREST NAME';
+  @Input('card-title-id') cardTitleId = 'heading';
+  @Input('card-title-size') cardTitlesize = '12';
+  @Input('card-title-color') cardTitlecolor = '#b6b6b6';
+  @Input('card-title-weight') cardTitleweight;
+  @Input('card-content-name') cardContentName = 'Spring Cases';
+  @Input('card-content-id') cardContentId = 'Content';
+  @Input('card-content-size') cardContentsize = '17';
+  @Input('card-content-color') cardContentcolor = '#1d1d1d';
+  @Input('card-content-weight') cardContentweight = '700';
+  @Input('custom-title-class') customTitleClass = '';
+  @Input('custom-content-class') customContentClass = '';
   constructor() { }
 
   ngOnInit() {

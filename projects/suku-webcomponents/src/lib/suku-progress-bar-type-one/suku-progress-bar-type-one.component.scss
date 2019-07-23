@@ -1,12 +1,6 @@
-@import url('https://fonts.googleapis.com/css?family=Poppins:200i,400,700');
-@import url('https://fonts.googleapis.com/css?family=Encode+Sans:200i,400,700');
+@import '../theme/theme';
 
-$main-color: #a7bf2e;
-$poppins: 'Poppins',
-sans-serif !important;
-$encodeSans: 'Encode Sans',
-sans-serif !important;
-
+$main-color: $suku-sick-green;
 
 .Progresscircle {
   width: 50px;
@@ -26,7 +20,7 @@ sans-serif !important;
   -moz-border-radius: 50% !important;
   -webkit-border-radius: 50% !important;
   border-radius: 50% !important;
-  font-family: $poppins;
+  font-family: $suku-primary-font;
 }
 
 .progressUpcoming {
@@ -37,7 +31,7 @@ sans-serif !important;
   -moz-border-radius: 50% !important;
   -webkit-border-radius: 50% !important;
   border-radius: 50% !important;
-  font-family: $poppins;
+  font-family: $suku-primary-font;
 }
 
 .progressCompleted {
@@ -48,11 +42,11 @@ sans-serif !important;
   -moz-border-radius: 50% !important;
   -webkit-border-radius: 50% !important;
   border-radius: 50% !important;
-  font-family: $poppins;
+  font-family: $suku-primary-font;
 }
 
 .progressTitle {
-  font-family: $encodeSans;
+  font-family: $suku-secondary-font;
   font-size: 12px;
   font-weight: 500;
   font-style: normal;
@@ -69,7 +63,7 @@ sans-serif !important;
 }
 
 .tickSign {
-  color: #d8fc40;
+  color: $suku-yellow-green;
 }
 
 tr#txt {
@@ -118,7 +112,7 @@ tr#txt {
   width: 8px;
   height: 15px;
   /*Add a white border on the bottom and left, creating that 'L' */
-  border: solid #d8fc40;
+  border: solid $suku-yellow-green;
   border-width: 0 3px 3px 0;
   /*Rotate the L 45 degrees to turn it into a checkmark*/
   transform: rotate(45deg);
@@ -141,7 +135,7 @@ hr {
 }
 
 .progressText {
-  font-family: $encodeSans;
+  font-family: $suku-secondary-font;
   font-size: 12px;
   font-weight: 500;
   color: #b6b6b6;

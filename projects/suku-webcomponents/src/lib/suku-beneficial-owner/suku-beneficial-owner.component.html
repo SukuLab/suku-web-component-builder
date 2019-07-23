@@ -1,8 +1,8 @@
 <form [formGroup]="form">
   <div class="col">
     <label class="titleClass">
-      <strong [style.font-size.px]="titleSize" [class]="titleCustomClass" id="{{titleid}}" [style.font-weight]="titleWeight"
-        [style.color]="titleColor">{{title}}</strong>
+      <strong [style.font-size.px]="titleSize" [class]="titleCustomClass" id="{{titleid}}"
+        [style.font-weight]="titleWeight" [style.color]="titleColor">{{title}}</strong>
     </label>
     <div class="col bg pl-5 pr-5 pt-5 pb-3 mb-5">
       <div class="col p-0" formArrayName="{{arrayControlName}}" id="beneficialOwnerBlock">
@@ -105,13 +105,13 @@
       <div class="col mt-5 mb-3">
         <div class="row">
           <div class="col mt-3 mb-2">
-            <span class="add c-pointer" id="addOwner" (click)="add.emit()"><i
-                class="fa fa-plus-circle pr-3 icon"></i>Add New
-              Beneficial
-              Owner</span>
+            <span class="add d-flex c-pointer" id="labelOneId" (click)="add.emit()">
+              <i class="fa fa-plus-circle pr-3 add-icon"></i>
+              <span class="mt-1">{{labelOne}}</span></span>
           </div>
-          <div class="col d-flex justify-content-end  mt-3 mb-3 pr-sm-5 mr-sm-2">
-            <button class="btn btn-info" id="submitOwner" (click)="agree()">Submit Beneficial Owner</button>
+          <div class="col d-flex justify-content-end  mt-3 mb-3 pr-sm-3 mr-sm-2">
+            <button class="suku-i suku-{{type}} {{btnOneCustomClass}}" [id]="btnOneId"
+              [ngClass]="{'disabled': btnOneDisable}" (click)="agree()" [disabled]="formValid">{{btnOne}}</button>
           </div>
         </div>
       </div>
@@ -128,9 +128,8 @@
           </div>
         </div>
         <div class="col d-flex justify-content-center mt-4 mb-3">
-          <button class="btn btn-info" id="agreeBtn" [ngClass]="{'disabled': formValid}" (click)="submitData.emit()"
-            [disabled]="formValid">Agree
-            & Continue</button>
+          <button class="suku-i suku-{{type}} {{btnTwoCustomClass}}" [id]="btnTwoId"
+            [ngClass]="{'disabled': btnTwoDisable}" (click)="submitDatas()" [disabled]="formValid">{{btnTwo}}</button>
         </div>
       </div>
     </div>

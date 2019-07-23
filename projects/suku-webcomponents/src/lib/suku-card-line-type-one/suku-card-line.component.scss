@@ -1,27 +1,25 @@
+@import '../theme/theme';
+
 h2 {
-  font-family: 'Encode Sans', sans-serif;
+  font-family: $suku-secondary-font;
   font-size: 12px;
   font-weight: 500;
   font-style: normal;
   font-stretch: normal;
   line-height: normal;
   letter-spacing: -0.2px;
-  color: #b6b6b6;
+  color: $suku-text-label-one;
   word-break: break-word !important;
 }
 
+.img-width {
+  widows: 55px;
+  height: 46px;
+}
+
 .card-line-bg {
-  background-color: #fff;
+  background-color: $suku-homepage-bg;
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.05);
-}
-
-.card-line-img {
-  border: 1px solid #e3dbdb36 !important;
-  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.06);
-}
-
-.border-top-box {
-  border-top: 1px solid #dee2e670 !important;
 }
 
 .c-pointer {
@@ -33,6 +31,6 @@ h2 {
 }
 
 .user:hover {
-  color: black !important;
+  color: $suku-filter-label-selected !important;
   font-weight: 700 !important;
 }

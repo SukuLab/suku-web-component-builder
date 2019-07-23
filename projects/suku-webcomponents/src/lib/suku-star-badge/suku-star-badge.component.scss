@@ -1,36 +1,22 @@
-// .star {
-//   position: relative !important;
-//   width: 26px;
-// }
+@import '../theme/theme';
 
-// .star-txt {
-//   position: absolute !important;
-//   top: 11px;
-//   left: 6px;
-//   width: 100%;
-//   font-size: 14px;
-//   color: #d8fc40 !important;
-// }
-
-// star-badge
-
-.star {
+.star-badge {
   position: relative !important;
   width: 26px;
 }
 
-.star-txt {
+.star-badge-content {
   position: absolute !important;
   top: 13px;
   left: 6px;
   width: 100%;
-  font-size: 12px;
-  color: #d8fc40;
+  font-size: $suku-font-size-2;
+  color: $suku-yellow-green;
 }
 
 h2 {
-  font-family: 'Encode Sans', sans-serif;
-  font-size: 12px;
+  font-family: $suku-secondary-font;
+  font-size: $suku-font-size-2;
   font-weight: 500;
   font-style: normal;
   font-stretch: normal;

@@ -7,6 +7,9 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class SukuStarBadgeComponent implements OnInit {
   @Input() icon = '../assets/images/star.svg';
+  @Input() alt = 'star-image';
+  @Input('badge-custom-class') badgeCustomClass = '';
+  @Input('badge-id') badgeId = 'badgeValue';
 
   constructor() { }
 

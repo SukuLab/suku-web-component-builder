@@ -1,197 +1,323 @@
+@import '../theme/theme';
+
 :root {
-    font-size: 17px !important;
+ font-size: 17px !important;
 }
 
 .bg {
-    border-radius: 0 0 41px 41px;
-    background-color: #ffffff;
-    box-shadow: 0 12px 14px 0 rgba(0, 0, 0, 0.05);
+ border-radius: 0 0 41px 41px;
+ background-color: #ffffff;
+ box-shadow: 0 12px 14px 0 rgba(0, 0, 0, 0.05);
 }
 
 .terms {
-    font-family: "Encode Sans", sans-serif !important;
-    font-size: 1.5rem;
+ font-family: $suku-secondary-font;
+ font-size: $suku-font-size-5;
 }
 
 label {
-    font-family: 'Poppins', sans-serif !important;
-    font-size: 20px;
-    font-weight: bold;
-    font-style: normal;
-    font-stretch: normal;
-    line-height: normal;
-    letter-spacing: 0.1px;
+ font-family: $suku-primary-font;
+ font-size: 20px;
+ font-weight: bold;
+ font-style: normal;
+ font-stretch: normal;
+ line-height: normal;
+ letter-spacing: 0.1px;
 }
 
 .upload-doc-title {
-    font-family: 'Poppins', sans-serif !important;
-    font-size: 1.5rem;
-    font-weight: bold;
-    font-style: normal;
-    font-stretch: normal;
-    line-height: normal;
-    letter-spacing: 0.1px;
+ font-family: $suku-primary-font;
+ font-size: 1.5rem;
+ font-weight: bold;
+ font-style: normal;
+ font-stretch: normal;
+ line-height: normal;
+ letter-spacing: 0.1px;
 }
 
 .owner {
-    font-family: 'Poppins', sans-serif !important;
-    font-size: 1.6rem;
-    font-weight: 400;
-    font-style: normal;
-    font-stretch: normal;
-    line-height: normal;
-    letter-spacing: 0.3px;
+ font-family: $suku-primary-font;
+ font-size: $suku-font-size-4;
+ font-weight: 400;
+ font-style: normal;
+ font-stretch: normal;
+ line-height: normal;
+ letter-spacing: 0.3px;
 }
 
 .card-line {
-    background-color: #ffffff;
-    color: #2c2727;
-    height: 46px;
-    border-radius: 2px;
-    letter-spacing: 0.5px;
-    box-shadow: 0 1px 5px 0px rgba(0, 0, 0, 0.2);
-    border-top: 3px solid #bfd131c9;
+ background-color: #ffffff;
+ color: #2c2727;
+ height: 46px;
+ border-radius: 2px;
+ letter-spacing: 0.5px;
+ box-shadow: 0 1px 5px 0px rgba(0, 0, 0, 0.2);
+ border-top: 3px solid #bfd131c9;
 }
 
 .fullwidth {
-    width: 100%;
+ width: 100%;
 }
 
 .c-pointer {
-    cursor: pointer;
+ cursor: pointer;
 }
 
 
 /* upload box css */
 
 .display-2 {
-    font-size: 6.2rem !important;
-    line-height: 1.5 !important;
+ font-size: 6.2rem !important;
+ line-height: 1.5 !important;
 }
 
 .border-dot {
-    border-style: dashed !important;
-    border-color: #6a68689e;
-    border-radius: 1px;
-    border-width: 2px;
+ border-style: dashed !important;
+ border-color: #6a68689e;
+ border-radius: 1px;
+ border-width: 2px;
 }
 
 .upload {
-    opacity: 0;
-    width: 277px !important;
-    position: relative;
-    height: 120px;
+ opacity: 0;
+ width: 277px !important;
+ position: relative;
+ height: 120px;
 }
 
 .upload:hover {
-    cursor: pointer !important;
+ cursor: pointer !important;
 }
 
 .upload-icon {
-    position: absolute;
+ position: absolute;
 }
 
 .icon {
-    font-size: 2.2rem !important;
-    color: #ccda5c !important;
+ font-size: $suku-font-size-8;
+ color: #ccda5c !important;
+}
+
+.add-icon {
+ font-size: $suku-font-size-10;
+ color: $suku-sick-green;
+}
+
+.add {
+ font-family: $suku-primary-font;
+ font-weight: 800;
 }
 
 /* button css */
 
-.btn {
-    border: solid 2px #a7bf2e;
-    padding: 10px 32px 10px 32px;
-    background-color: white;
-    color: black;
-    border-radius: 29px 77px 61px;
-    font-weight: 900;
-    font-family:'Poppins', sans-serif !important;
-    font-size: 1.3rem;
+.suku-i {
+ border: solid 2px;
+ border-radius: 28px 76px 63px;
+ color: #3e3e3e;
+ font-family: $suku-secondary-font;
+ font-size: $suku-font-size-3;
+ font-weight: 600;
+ padding: 0.45rem 2rem !important;
+
+ &:hover {
+  border: solid 2px;
+  border-color: $suku-sick-green;
+  background-color: $suku-sick-green;
+  color: white !important;
+ }
+}
+
+.suku-i:hover {
+ color: white;
+ cursor: pointer;
+}
+
+.suku-i:focus {
+ outline: none !important;
+}
+
+.suku.disabled:hover {
+ border: solid 2px;
+ border-color: $suku-sick-green;
+ background-color: white;
+ color: $suku-text-link;
+ cursor: not-allowed;
+}
+
+//suku-info css
+.suku-info {
+ border: solid 2px;
+ border-color: $suku-sick-green;
+ background-color: $suku-text-label-two;
+ color: $suku-text-heading;
+
+ &:hover {
+  border: solid 2px;
+  border-color: $suku-sick-green;
+  background-color: $suku-sick-green !important;
+  color: white !important;
+ }
+}
+
+.suku-info:active {
+ border: solid 2px;
+ border-color: $suku-sick-green;
+ background-color: $suku-sick-green;
+ color: white;
+}
+
+.suku-info.disabled {
+ border: solid 2px;
+ border-color: $suku-sick-green;
+ background-color: white !important;
+ color: grey !important;
+}
+
+.suku-info.disabled:hover,
+.suku-info[disabled]:hover,
+fieldset[disabled] .suku-info:hover,
+.suku-info.disabled:focus,
+.suku-info[disabled]:focus,
+fieldset[disabled] .suku-info:focus,
+.suku-info.disabled.focus,
+.suku-info[disabled].focus,
+fieldset[disabled] .suku-info.focus {
+ border: solid 2px;
+ border-color: $suku-sick-green;
+ background-color: white;
+ color: grey;
+}
+
+.suku-info:focus,
+.suku-info.focus {
+ border: solid 2px;
+ border-color: $suku-sick-green;
+ background-color: $suku-sick-green;
+ color: white;
+}
+
+.suku-info:active:hover,
+.suku-info.active:hover,
+.open>.dropdown-toggle.suku-info:hover,
+.suku-info:active:focus,
+.suku-info.active:focus,
+.open>.dropdown-toggle .suku-info:focus,
+.suku-info:active.focus,
+.suku-info.active.focus,
+.open>.dropdown-toggle .suku-info.focus {
+ border: solid 2px;
+ border-color: $suku-sick-green;
+ background-color: $suku-sick-green;
+ color: white;
 }
 
 
-.btn-info {
-    border: solid 2px #a7bf2e;
-    padding: 10px 32px 10px 32px;
-    background-color: white;
-    color: #00000099;
+.suku-info:not(:disabled):not(.disabled).active,
+.suku-info:not(:disabled):not(.disabled):active,
+.show>.suku-info.dropdown-toggle {
+ color: #fff;
+ background-color: $suku-sick-green;
+ border-color: $suku-sick-green;
 }
 
-.btn-info:hover {
-    border: solid 2px #a7bf2e;
-    padding: 10px 32px 10px 32px;
-    background-color: #a7bf2e;
-    color: white;
+.suku-info.focus,
+.suku-info:focus {
+ box-shadow: none !important;
+}
+
+.suku-info:not(:disabled):not(.disabled).active:focus,
+.suku-info:not(:disabled):not(.disabled):active:focus,
+.show>.suku-info.dropdown-toggle:focus {
+ box-shadow: none !important;
+}
+
+// suku-default
+.suku-default {
+ border: solid 2px;
+ border-color: $suku-text-info;
+ background-color: $suku-bg-secondary;
+ color: $suku-text-label-one;
+}
+
+.suku-default:hover {
+ border: solid 2px;
+ border-color: $suku-text-info;
+ background-color: $suku-text-info;
+ color: white;
+}
+
+.suku-default:active {
+ border: solid 2px;
+ border-color: $suku-text-info;
+ background-color: $suku-text-info;
+ color: white;
+}
+
+.suku-default.disabled {
+ border: solid 2px;
+ border-color: $suku-text-info;
+ background-color: white;
+ color: grey;
+}
+
+.suku-default.disabled:hover,
+.suku-default[disabled]:hover,
+fieldset[disabled] .suku-default:hover,
+.suku-default.disabled:focus,
+.suku-default[disabled]:focus,
+fieldset[disabled] .suku-default:focus,
+.suku-default.disabled.focus,
+.suku-default[disabled].focus,
+fieldset[disabled] .suku-default.focus {
+ border: solid 2px;
+ border-color: $suku-text-info;
+ background-color: white !important;
+ color: grey;
+}
+
+.suku-default:focus,
+.suku-default.focus {
+ border: solid 2px;
+ border-color: $suku-text-info;
+ background-color: $suku-text-info;
+ color: white;
+}
+
+.suku-default:active:hover,
+.suku-default.active:hover,
+.open>.dropdown-toggle.suku-default:hover,
+.suku-default:active:focus,
+.suku-default.active:focus,
+.open>.dropdown-toggle .suku-default:focus,
+.suku-default:active.focus,
+.suku-default.active.focus,
+.open>.dropdown-toggle .suku-default.focus {
+ border: solid 2px;
+ border-color: $suku-text-info;
+ background-color: $suku-text-info;
+ color: white;
 }
 
 
-.btn-info:active {
-    border: solid 2px #a7bf2e;
-    padding: 10px 32px 10px 32px;
-    background-color: #a7bf2e;
-    color: white;
+.suku-default:not(:disabled):not(.disabled).active,
+.suku-default:not(:disabled):not(.disabled):active,
+.show>.suku-default.dropdown-toggle {
+ color: #fff;
+ background-color: $suku-text-info;
+ border-color: $suku-text-info;
 }
 
-.btn-info.disabled {
-    border: solid 2px #a7bf2e;
-    padding: 10px 32px 10px 32px;
-    background-color: white;
-    color: grey;
+.suku-default.focus,
+.suku-default:focus {
+ box-shadow: none !important;
 }
 
-.btn-info.disabled:hover,
-.btn-info[disabled]:hover,
-fieldset[disabled] .btn-info:hover,
-.btn-info.disabled:focus,
-.btn-info[disabled]:focus,
-fieldset[disabled] .btn-info:focus,
-.btn-info.disabled.focus,
-.btn-info[disabled].focus,
-fieldset[disabled] .btn-info.focus {
-    border: solid 2px #a7bf2e;
-    padding: 10px 32px 10px 32px;
-    background-color: white !important;
-    color: grey;
-    box-shadow: none !important;
+.suku-default:not(:disabled):not(.disabled).active:focus,
+.suku-default:not(:disabled):not(.disabled):active:focus,
+.show>.suku-default.dropdown-toggle:focus {
+ box-shadow: none !important;
 }
 
-.btn-info:focus,
-.btn-info.focus {
-    border: solid 2px #a7bf2e;
-    padding: 10px 32px 10px 32px;
-    background-color: #a7bf2e;
-    color: white;
-    box-shadow: none !important;
-}
-
-.btn-info:active:hover,
-.btn-info.active:hover,
-.open>.dropdown-toggle.btn-info:hover,
-.btn-info:active:focus,
-.btn-info.active:focus,
-.open>.dropdown-toggle .btn-info:focus,
-.btn-info:active.focus,
-.btn-info.active.focus,
-.open>.dropdown-toggle .btn-info.focus {
-    border: solid 2px #a7bf2e;
-    padding: 10px 32px 10px 32px;
-    background-color: #a7bf2e;
-    color: white;
-    box-shadow: none !important;
-}
-
-
-.disabled {
-    cursor: not-allowed !important;
-}
-
-.add {
-    font-family: 'Poppins', sans-serif !important;
-    font-size: 1.5rem;
-    font-weight: 600;
-    font-style: normal;
-    font-stretch: normal;
-    line-height: normal;
-    letter-spacing: 0.3px;
-    color: #ccda5c;
+.disabled:hover {
+ cursor: not-allowed !important;
 }

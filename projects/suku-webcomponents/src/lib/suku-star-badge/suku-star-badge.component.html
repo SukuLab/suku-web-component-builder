@@ -1,6 +1,6 @@
-<div class="star">
-  <img src="../assets/images/star.svg" alt="star-image" height="37px" id="star-image">
-  <h2 class="star-txt text-center" id="value">
+<div class="star-badge">
+  <img [src]="icon" [alt]="alt" height="37px" id="star-image">
+  <h2 class="star-badge-content text-center {{badgeCustomClass}}" [id]="badgeId">
     <ng-content></ng-content>
   </h2>
 </div>
