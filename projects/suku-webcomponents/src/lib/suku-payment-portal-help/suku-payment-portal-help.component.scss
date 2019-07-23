@@ -1,31 +1,54 @@
-.progressTxt {
-    font-family: 'Encode Sans', sans-serif;
-    font-size: 15px;
-    font-weight: 500;
-    font-style: normal;
-    font-stretch: normal;
-    line-height: normal;
-    letter-spacing: -0.4px;
-    text-align: center;
-    color: #b6b6b6;
-  }
+@import '../theme/theme';
 
-  .bgWhite {
-    background-color: white;
-  }
+.help-Content {
+  font-family: $suku-secondary-font;
+  font-size: 15px;
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: -0.4px;
+  text-align: center;
+  color: $suku-text-label-one;
+}
 
-  .mT-5 {
-      margin-top: 5%;
-  }
+.bgWhite {
+  background-color: white;
+}
 
-  .mT-8 {
-      margin-top: 8%;
-  }
-  .mB-8 {
-      margin-bottom: 8%;
-  }
+.linkA {
+  cursor: pointer;
+}
 
-  .linkA {
-    cursor: pointer;
-  }
-  
+.title {
+  font-family: $suku-primary-font;
+  font-size: $suku-font-size-5;
+  font-weight: 600;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: -0.3px;
+  word-break: break-word !important;
+  overflow: hidden;
+  text-overflow: ellipsis !important;
+  white-space: nowrap;
+}
+
+.add-owner {
+  font-family: $suku-primary-font;
+  font-size: $suku-font-size-5;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: -0.3px;
+  word-break: break-word !important;
+  overflow: hidden;
+  text-overflow: ellipsis !important;
+  white-space: nowrap;
+}
+
+.icon {
+  color: $suku-sick-green;
+  font-size: $suku-font-size-6;
+}

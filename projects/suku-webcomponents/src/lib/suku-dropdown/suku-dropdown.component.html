@@ -7,12 +7,13 @@
       </mat-option>
     </mat-select>
     <span matSuffix>
-      <mat-icon><span><img height="23" [src]="icon" width="20"></span></mat-icon>
+      <mat-icon>
+          <i class="{{icon}} {{iconCustomClass}}" [id]="iconId"></i>
+      </mat-icon>
     </span>
     <mat-error>
       <span class="err_style">
-        <span *ngIf="form.hasError('required',[control])" id="countryReq">{{errorMsg}}
-        </span>
+        <span *ngIf="form.hasError('required',[control])" id="countryReq">{{errorMsg}}</span>
       </span>
     </mat-error>
   </mat-form-field>

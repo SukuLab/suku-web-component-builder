@@ -1,11 +1,16 @@
+@import '../theme/theme';
+
 h2 {
-  font-family: 'Encode Sans', sans-serif !important;
-  font-size: 12px !important;
-  font-weight: 500 !important;
+  font-family: $suku-secondary-font;
+  font-size: $suku-font-size-2;
   font-style: normal;
   font-stretch: normal;
   line-height: normal;
-  letter-spacing: -0.4px !important;
-  color: #b6b6b6 !important;
+  letter-spacing: -0.4px;
+  color: $suku-text-label-one;
+  position: absolute;
+  display: inline;
   word-break: break-all !important;
+  margin-left: 14px;
+  padding-top: 3px;
 }

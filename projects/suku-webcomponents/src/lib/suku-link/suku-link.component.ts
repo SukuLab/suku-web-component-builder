@@ -6,11 +6,10 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
   styleUrls: ['./suku-link.component.scss']
 })
 export class SukuLinkComponent implements OnInit {
-  @Input() name;
 	@Input() size;
 	@Input() color;
 	@Input() weight;
-	@Input() customClass = 'clearAll c-pointer';
+	@Input('custom-class') customClass = '';
 	@Output() action = new EventEmitter();
 
   constructor() { }

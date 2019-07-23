@@ -1,13 +1,9 @@
 /* You can add global styles to this file, and also import other style files */
 // @import '../projects/suku-webcomponents/src/lib/suku-styles.css';s
 @import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
-@import './assets/temp/css/style.css';
-@import '../node_modules/suku-webcomponents/suku-theme';
-
-:host(.suku-p) {
-  font-size: 62.5% !important;
-}
-
+// @import '../node_modules/suku-webcomponents/suku-theme';
+@import '../node_modules/suku-icons/style.css';
+// @import './assets/temp/css/style.css';
 
 body {
   background-color: #f2f2f2 !important;

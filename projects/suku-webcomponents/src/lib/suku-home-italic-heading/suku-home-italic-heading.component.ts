@@ -6,11 +6,11 @@ import { Component, OnInit, Input } from '@angular/core';
   styleUrls: ['./suku-home-italic-heading.component.scss']
 })
 export class SukuHomeItalicHeadingComponent implements OnInit {
-  @Input() name;
+	@Input() id;
 	@Input() size;
 	@Input() color;
 	@Input() weight;
-	@Input() customClass;
+	@Input('custom-class') customClass;
 
   constructor() { }
 

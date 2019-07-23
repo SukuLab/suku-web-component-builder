@@ -6,17 +6,16 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 	styleUrls: ['./suku-add-widget.component.scss']
 })
 export class SukuAddWidgetComponent implements OnInit {
-	@Input() size;
-	@Input() color;
-	@Input() weight;
-	@Input() id = 'addNewSellListing';
-	@Input() icon = 'fa fa-plus';
-	@Input() customClass = 'add-widget c-pointer';
-	@Input() iconId = 'icon';
-	@Input() iconColor;
-	@Input() iconCustomClass = '';
+	@Input() id = 'addWidget';
+	@Input() size = '0.9';
+	@Input() color = '';
+	@Input() weight = '500';
+	@Input() customClass = 'pl-3 mt-auto mb-auto';
+	@Input('icon') icon = 'suku-plus-icon';
+	@Input('icon-id') iconId = 'phoneIcon';
+	@Input('icon-custom-class') iconCustomClass = 'icon';
+	@Input('widget-custom-class') widgetCustomClass = 'col';
 	@Output() action = new EventEmitter();
-
 	constructor() { }
 
 	ngOnInit() { }

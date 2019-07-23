@@ -11,7 +11,6 @@ export class SukuDropdownComponent implements OnInit {
 	@Input() form: FormGroup;
 	@Input() control = 'productTraceability';
 	@Input() data = [];
-	@Input() icon = '../assets/images/arrow-icon.png';
 	@Input() keyValue = 'productName';
 	@Input() displayKey = 'productName';
 	@Input() placeholder = 'select product from this listing';
@@ -19,7 +18,11 @@ export class SukuDropdownComponent implements OnInit {
 	@Input() selectId = 'sttProductTraceability';
 	@Input() errorMsg = 'Cannot be blank';
 	@Input() customSelectClass = '';
+	@Input() icon = 'suku-arrow-icon suku-md';
+	@Input('icon-custom-class') iconCustomClass = '';
+	@Input('icon-id') iconId = '';
 	@Output() select = new EventEmitter();
+
 	constructor() {}
 
 	ngOnInit() {}

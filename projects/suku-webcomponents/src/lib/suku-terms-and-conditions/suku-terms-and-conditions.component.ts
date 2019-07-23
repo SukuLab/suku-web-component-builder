@@ -8,6 +8,20 @@ import { FormBuilder, FormGroup, FormArray, FormControl, Validators } from '@ang
 })
 export class SukuTermsAndConditionsComponent implements OnInit {
   termsandcondition: FormGroup;
+  @Input('check-box-color') checkBoxColor = 'primary';
+  @Input('title') title = 'Contract Terms & Conditions';
+  @Input('title-color') titleColor;
+  @Input('title-size') titleSize;
+  @Input('title-weight') titleWeight;
+  @Input('description') description = 'I Accept the terms and conditions and authorize this transaction.';
+  @Input('description-custom-class') descriptionCustomClass = 'termsAndConditions';
+  @Input('link-custom-class') linkCustomClass = 'link';
+  @Input('link-one') linkOne = 'https://www.suku.world/terms';
+  @Input('link-two') linkTwo = 'https://www.suku.world/privacy';
+  @Input('link-name-one') linkOneTitle = 'Terms';
+  @Input('link-name-two') linkTwoTitle = 'Privacy';
+  @Input() control = 'contractTerms';
+
  @Output() action  = new EventEmitter();
   constructor(
     private fb: FormBuilder,
@@ -18,9 +32,9 @@ export class SukuTermsAndConditionsComponent implements OnInit {
 			'contractTerms': false
 		});
   }
-  // action(eventvalue)
+
   action1() {
-    const data = this.termsandcondition.value.contractTerms
+    const data = this.termsandcondition.value.contractTerms;
     this.action.emit(data);
   }
 

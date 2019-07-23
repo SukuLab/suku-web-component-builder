@@ -234,7 +234,8 @@ import { SukuTreeComponent } from './suku-tree/suku-tree.component';
 		SukuChatWidgetComponent,
 		ScrollToBottomDirective,
 		SukuLargeBidTagComponent,
-		SukuBidWidgetTagComponent
+		SukuButtonsModule,
+		SukuAddIconWidgetModule
 	],
 	entryComponents: [],
 	schemas: []

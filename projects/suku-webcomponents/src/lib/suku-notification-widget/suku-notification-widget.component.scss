@@ -1,15 +1,15 @@
-//as seller-buyer css --user dashboard
+@import '../theme/theme';
 
 .box {
   border-radius: 2px;
-  background-color: #fff;
+  background-color: $suku-homepage-bg;
   box-shadow: 0 3px 3px 0 rgba(0, 0, 0, .03);
-  border-left: 1px solid #dee2e68a!important;
-  border-bottom: 1px solid #dee2e68a!important;
+  border-left: 1px solid #dee2e68a !important;
+  border-bottom: 1px solid #dee2e68a !important;
 }
 
 .box-title {
-  font-family: 'Poppins', sans-serif;
+  font-family: $suku-primary-font;
   font-size: 17px;
   font-weight: bold;
   font-style: normal;
@@ -17,12 +17,12 @@
   line-height: normal;
   letter-spacing: -0.2px;
   text-align: center;
-  color: #1d1d1d;
+  color: $suku-text-heading;
   word-break: break-word !important;
 }
 
 .box-counter {
-  font-family: 'Poppins', sans-serif;
+  font-family: $suku-primary-font;
   font-size: 50px;
   font-weight: bold;
   font-style: normal;
@@ -30,7 +30,7 @@
   line-height: normal;
   letter-spacing: -0.6px;
   text-align: center;
-  color: #a7bf2e;
+  color: $suku-sick-green;
 }
 
 .default {

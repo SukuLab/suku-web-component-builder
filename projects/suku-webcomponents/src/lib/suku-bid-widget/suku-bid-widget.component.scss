@@ -1,10 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Poppins:200i,400,700');
 @import url('https://fonts.googleapis.com/css?family=Encode+Sans:200i,400,700');
-
-$poppins: 'Poppins',
-sans-serif !important;
-$encodeSans: 'Encode Sans',
-sans-serif !important;
+@import '../theme/theme';
 
 .article {
   float: left;
@@ -14,16 +10,16 @@ sans-serif !important;
   font-size: 14px !important;
   width: 100%;
   float: left;
-  color: #1d1d1d;
+  color: $suku-text-heading;
   padding: 0 0 12px 0;
 }
 
  .article aside {
   width: 100%;
   float: left;
-  background: #353a3e;
-  border-left: 5px solid #010101;
-  border-radius: 0 40px 0 0;
+  background: $suku-bg-ternary;
+  border-left: 5px solid #0c0a0a;
+  border-radius: $suku-primary-border-radius;
   padding: 17px 30px;
   margin: 0 0 18px 0;
 }
@@ -35,9 +31,9 @@ sans-serif !important;
  .article aside .prize {
   width: 100%;
   float: left;
-  font-family: $poppins;
+  font-family: $suku-primary-font;
   font-size: 50px;
-  color: #ffffff;
+  color: $suku-text-label-two;
   line-height: 1em;
   margin: 0 0 12px 0;
 }
@@ -51,7 +47,7 @@ sans-serif !important;
  .article aside ul {
   width: 100%;
   float: left;
-  font-family: $poppins;
+  font-family: $suku-primary-font;
   padding: 0;
   margin: 0;
 }
@@ -81,11 +77,11 @@ sans-serif !important;
 }
 
  .article .list ul li {
-  color: #000000;
+  color: $suku-filter-label-selected;
 }
 
  .article.selected aside {
-  border-left-color: #a7bf2e;
+  border-left-color: $suku-primary-border-color;
 }
 
  .article-out {
@@ -150,37 +146,37 @@ sans-serif !important;
 }
 
 .productPayment {
-  font-family: $encodeSans;
+  font-family: $suku-secondary-font;
   font-size: 14px;
   font-weight: normal;
   font-style: normal;
   font-stretch: normal;
   line-height: 1.43;
   letter-spacing: -0.4px;
-  color: #3e3e3e;
+  color: $suku-text-link;
 }
 
 .bid-title {
-  font-family: $encodeSans;
+  font-family: $suku-secondary-font;
   font-size: 14px;
   font-weight: 500;
   font-style: normal;
   font-stretch: normal;
   line-height: normal;
   letter-spacing: -0.4px;
-  color: #b6b6b6;
+  color: $suku-text-label-one;
   text-transform: uppercase;
 }
 
 .bid-details {
-  font-family: $encodeSans;
+  font-family: $suku-secondary-font;
   font-size: 14px;
   font-weight: 50px;
   font-style: normal;
   font-stretch: normal;
   line-height: 1.43;
   letter-spacing: -0.4px;
-  color: #3e3e3e;
+  color: $suku-text-link;
 }
 
 ul {

@@ -6,12 +6,11 @@ import { Component, OnInit, Input } from '@angular/core';
   styleUrls: ['./suku-sub-heading.component.scss']
 })
 export class SukuSubHeadingComponent implements OnInit {
-  @Input() name;
 	@Input() id = 'heading';
 	@Input() size;
 	@Input() color;
 	@Input() weight;
-	@Input() customClass;
+	@Input('custom-class') customClass;
 
   constructor() { }
 

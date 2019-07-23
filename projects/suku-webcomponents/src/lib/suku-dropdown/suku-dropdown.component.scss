@@ -1,0 +1,21 @@
+::ng-deep .mat-select-arrow {
+    border: 0 !important;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+.mat-select-panel {
+    margin-left: 10px !important;
+
+    &:focus {
+        outline: none !important;
+    }
+}
+
+.mat-select-trigger:focus  {
+    outline: none !important;
+}
+
+::ng-deep mat-select:focus  {
+    outline: none !important;
+}

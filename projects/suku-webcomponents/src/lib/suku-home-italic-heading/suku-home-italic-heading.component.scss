@@ -1,6 +1,8 @@
+@import '../theme/theme';
+
 h5 {
-     font-family: poppins;
-    font-size: 14px;
+    font-family: $suku-primary-font;
+    font-size: $suku-font-size-3;
     font-weight: normal;
     font-style: italic !important;
     font-stretch: normal;

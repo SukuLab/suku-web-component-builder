@@ -1,12 +1,9 @@
-<div (click)="action.emit()">
-  <div class="d-flex">
-    <div class="add-btn mt-1">
-      <span>
-        <i class="{{icon}} {{iconCustomClass}}" [id]="iconId" [style.color]="iconColor"></i>
-        <span [style.font-size.px]="size" [style.color]="color" [class]="customClass" [style.font-weight]="weight">
-          <ng-content></ng-content>
-        </span>
-      </span>
-    </div>
-  </div>
+<div [class]="widgetCustomClass"  (click)="action.emit()">
+  <span class="row mb-1 mt-1">
+    <i class="{{icon}} icon {{iconCustomClass}}" [id]="iconId"></i>
+    <h2 [style.font-size.rem]="size" [class]="customClass" id="{{id}}" [style.font-weight]="weight"
+      [style.color]="color">
+      <ng-content></ng-content>
+    </h2>
+  </span>
 </div>

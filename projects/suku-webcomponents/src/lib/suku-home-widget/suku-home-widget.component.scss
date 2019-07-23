@@ -1,7 +1,9 @@
+@import '../theme/theme';
+
 .widget {
-  font-family: 'Encode Sans', sans-serif;
+  font-family: $suku-secondary-font;
   border-radius: 6px 20px 20px 20px;
-  font-size: 16px;
+  font-size: $suku-font-size-4;
   float: left;
   width: 150px;
   height: 63px;
@@ -10,16 +12,4 @@
 
 .c-pointer {
   cursor: pointer !important;
-}
-
-h5 {
-  font-family: 'Poppins', sans-serif;
-  font-size: 14px;
-  font-weight: normal;
-  font-style: italic;
-  font-stretch: normal;
-  line-height: 1.43;
-  letter-spacing: -0.4px;
-  color: #646469;
-  word-break: break-all !important;
 }

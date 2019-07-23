@@ -6,18 +6,16 @@ import { Component, OnInit, Input } from '@angular/core';
   styleUrls: ['./suku-address-widget.component.scss']
 })
 export class SukuAddressWidgetComponent implements OnInit {
-  @Input() image = '../../../assets/images/map-pin.svg';
-  @Input() name = '9315 NW 112TH AVE';
-	@Input() size = '14';
-	@Input() color = '#3e3e3e';
-	@Input() weight = '500';
-	@Input() id = '';
-	@Input() iconAlt = 'map-pin';
-	@Input() customClass = 'pt-2 pl-3';
+  @Input() id = '';
+  @Input() size = '0.9';
+  @Input() color = '#3e3e3e';
+  @Input() weight = '500';
+  @Input() customClass = 'pl-3 mt-auto mb-auto';
+  @Input('icon') icon = 'suku-map-pin';
+  @Input('icon-id') iconId = 'phoneIcon';
+  @Input('icon-custom-class') iconCustomClass = 'icon';
+  @Input('widget-custom-class') widgetCustomClass = 'col';
+  constructor() {}
 
-  constructor() { }
-
-  ngOnInit() {
-  }
-
+  ngOnInit() {}
 }

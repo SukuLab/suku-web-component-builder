@@ -8,10 +8,14 @@ import { SukuAddWidgetComponent } from './suku-add-widget.component';
     CommonModule
   ],
   declarations: [SukuAddWidgetComponent],
-  entryComponents: [SukuAddWidgetComponent]
+  entryComponents: [SukuAddWidgetComponent],
+  exports: [SukuAddWidgetComponent]
 })
 export class SukuAddIconWidgetModule {
   constructor(private injector: Injector) {
+  }
+
+  ngDoBoostrap() {
     const elements: any[] = [
       [SukuAddWidgetComponent, 'suku-add-widget']
     ];
@@ -19,6 +23,5 @@ export class SukuAddIconWidgetModule {
       const el = createCustomElement(component, { injector: this.injector });
       customElements.define(name, el);
     }
-  }
-  ngDoBoostrap() { }
+   }
 }

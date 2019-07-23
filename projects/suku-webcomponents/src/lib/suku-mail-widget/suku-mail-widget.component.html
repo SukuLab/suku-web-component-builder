@@ -1,6 +1,9 @@
-<span class="row pb-4">
-  <img [src]="image" [alt]="alt">
-  <h2 [style.font-size.px]="size" [class]="customClass" id="{{id}}" [style.font-weight]="weight" [style.color]="color">
-    {{name}}
-  </h2>
-</span>
+<div class="{{widgetCustomClass}}">
+  <span class="row pb-1">
+    <i class="{{icon}} {{iconCustomClass}}" [id]="iconId"></i>
+    <h2 [style.font-size.rem]="size" class="{{customClass}}" id="{{id}}" [style.font-weight]="weight"
+      [style.color]="color">
+      <ng-content></ng-content>
+    </h2>
+  </span>
+</div>

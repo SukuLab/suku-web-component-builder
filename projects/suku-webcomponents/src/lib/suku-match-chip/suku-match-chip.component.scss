@@ -1,3 +1,5 @@
+@import '../theme/theme';
+
 .border-top-box {
   border-top: 1px solid #dee2e670 !important;
 }
@@ -12,7 +14,7 @@
 }
 
 h2 {
-  font-family: 'Encode Sans', sans-serif !important;
+  font-family: $suku-secondary-font;
   font-size: 14px;
   font-weight: 600;
   font-style: normal;

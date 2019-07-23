@@ -1,21 +1,27 @@
 <form [formGroup]="form">
-  <!-- <suku-homepage-button [buttonData]="buttonData" iconCustomClass=""></suku-homepage-button> -->
-  <suku-default-button [size]="2">Test</suku-default-button>
-  <!-- <suku-link>Test</suku-link> -->
-  <!-- <suku-bid-tag>test</suku-bid-tag> -->
-  <div class="col pt-4 p-0">
-    <suku-info-button [size]="0.9" [disableValue]="false">Info</suku-info-button>
-    <!-- <suku-secondary-button custom-class="test">test</suku-secondary-button> -->
-    <suku-form-footer [btn-three-type]="'default'" [btn-four-label]="'complete onboarding'"
-      [btn-three-disable-value]="true">
-    </suku-form-footer>
-    <suku-homepage></suku-homepage>
-    <!-- <suku-primary-button>publish listing</suku-primary-button> -->
-
-    <div class="col ml-5 pb-4">
-      <suku-search-input [form]="form" control="search" (searchOnEnter)="search()">
-      </suku-search-input>
+    <div class="col pb-4 pt-3">
+      <!-- <suku-search-input [form]="form" control="search" (searchOnEnter)="search()">
+      </suku-search-input> -->
+      <!-- <suku-product-trace-widget [form]="form" control='search' label-one="TRACE METHOD #1" 
+      label-two="Product ID:"   visible = "true" btn-one-disable="true" [productdetails]='data'
+      label-three="Product Identification Number"></suku-product-trace-widget> -->
+      <!-- <suku-mail-widget></suku-mail-widget> -->
+      <!-- <suku-payment-portal-help></suku-payment-portal-help> -->
+      <div class="col-2">
+        <!-- <suku-match-chip></suku-match-chip> -->
+        <suku-transaction-history></suku-transaction-history>
+        <!-- <suku-title-header>Listing Name</suku-title-header> -->
+        <!-- <suku-terms-and-conditions></suku-terms-and-conditions> -->
+        <!-- <suku-dropdown [data]="dropDownData" displayKey='templateName' [form]="form" control="search"></suku-dropdown> -->
+      </div>
     </div>
-    <suku-rating-star rating-value="4"></suku-rating-star>
-  </div>
+    <!-- <suku-terms-and-conditions></suku-terms-and-conditions> -->
 </form>
+
+<!-- <suku-product-trace-widget head-name="TRACE METHOD #1" name="Product ID:" sub-Head-Name="Product Identification Number"
+[form]="ProductSearchComponent" searchId="searchByproductId" productId="traceByproductId"
+traceMethodRadio="radioByproductId" control="productId" (searchFun)="showResultsForID(search)"
+productdetails="{{productJsonArrayForId}}" disableBtn="{{disableBtnForID}}" (searchByProduct)="searchByProductnameForID()"
+(selectproducts)="selectproductsDataForID($event)" visible="{{searchTraceToggleForID}}" result="{{searchResultForID}}"
+(traceproduct)="traceProductForID()">
+</suku-product-trace-widget> -->

@@ -1,20 +1,20 @@
 <span [formGroup]="form">
-  <div class=" product-boxContent">
-    <div class="col-sm-12 prizeHead pl-0">
-      {{headName}}
+  <div class="product-boxContent col-lg-12">
+    <div class="col-lg-12 traceMethod {{labelOneCustomClass}} pl-0" [id]="labelOneId">
+      {{labelOne}}
     </div>
-    <div class="col-sm-12 prizesubHead pl-0">
-      {{subHeadName}}
+    <div class="col-lg-12 traceSearchType {{labelTwoCustomClass}} pl-0 mb-2" [id]="labelTwoId">
+      {{labelTwo}}
     </div>
   </div>
-  <div class="col-sm-12 mt-2 pt-4 pb-4 RectangleBorder">
-    <div class="col-sm-12 productName pb-1">
-      {{name}}
+  <div class="col-sm-12 mt-2 pt-4 pb-4 traceBox {{traceBoxCustomClass}}">
+    <div class="col-sm-12 productName pb-1 {{labelThreeCustomClass}}" [id]="labelThree">
+      {{labelThree}}
     </div>
-    <div class="col-sm-12 pb-2 pl-3 pt-2 p-0 searchBorderBox">
-      <input type="text" #search class="searchBorderStyles" formControlName="{{control}}" name="{{control}}"
-      (keyup)="searchFun.emit(isSearch)">
-      <span class="m-1"><i class="fa fa-search" style="font-size:22px;color:#b6b6b6;"></i></span>
+    <div class="col-sm-12 pl-3 pb-2 pt-2 p-0 searchBorderBox">
+      <input type="text" [id]="searchInputId" class="searchbox" formControlName="{{control}}" name="{{control}}"
+        (keyup)="searchFun.emit(isSearch)">
+      <span class="float-right"><i class="fa fa-search {{searchIconCustomClass}}"></i></span>
     </div>
     <p class="resultCount" *ngIf="_result == 'true'">{{productdetails?.length}} products found with the above number.
     </p>
@@ -22,7 +22,7 @@
       <p class="responseInfo" *ngIf="productdetails?.length > 0 ? true : false ">please select one</p>
       <div class="heightTab" id="scrollDiv">
         <div class="col" *ngFor="let products of productdetails">
-          <mat-radio-button class="searchData f13" value="2" (click)="selectproducts.emit(products)"
+          <mat-radio-button class="searchData" value="2" (click)="selectproducts.emit(products)"
             (click)="showSelectedPro(products)"> {{products?.asset?.description}}<br>
             {{products?.asset?.name}}<br></mat-radio-button>
           <hr>
@@ -31,11 +31,30 @@
     </div>
     <div class="col-sm-12 mb-2 text-center pt-3 mt-3 pb-1">
       <span class="pt-2">
-        <a *ngIf="_visible == 'true'" id="{{searchId}}" class="trackBtn btn f14" (click)="searchByProduct.emit()">
-          Search for product </a>
-        <a *ngIf="_visible == 'false'" [ngClass]="{'disabled': _disableBtn =='false' }" id="{{tracetheProductId}}" class="trackBtn btn f14"
-          (click)="traceproduct.emit(1)"> trace the
-          product </a>
+        <button *ngIf="_visible == 'true'"  class="suku-i suku-{{btnType}} {{btnOneCustomClass}}"
+          [ngClass]="{'disabled' : btnOneDisable}"
+          [disabled]="btnOneDisable" 
+          [style.font-size.rem]="btnOneSize" 
+          [style.font-weight]="btnOneWeight" 
+          [id]="btnOneId"
+          (click)="btnOneAction.emit()">
+           {{btnLabelOne}}
+        </button>
+        <button *ngIf="_visible == 'false'"  class="suku-i suku-{{btnType}} {{btnTwoCustomClass}}"
+          [ngClass]="{'disabled' : btnTwoDisable}"
+          [disabled]="btnTwoDisable" 
+          [style.font-size.rem]="btnTwoSize" 
+          [style.font-weight]="btnTwoWeight" 
+          [id]="btnTwoId"
+          (click)="btnTwoAction.emit()">
+           {{btnLabelTwo}}
+        </button>
+        <!-- <a *ngIf="_visible == 'true'" id="{{searchId}}" class="trackBtn f14" (click)="searchByProduct.emit()">
+          Search for product </a> -->
+        <!-- <a *ngIf="_visible == 'false'" [ngClass]="{'disabled': _disableBtn =='false' }" 
+          id="{{tracetheProductId}}"
+          class="trackBtn btn f14" (click)="traceproduct.emit(1)"> trace the
+          product </a> -->
       </span>
     </div>
   </div>

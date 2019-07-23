@@ -6,12 +6,11 @@ import { Component, OnInit, Input } from '@angular/core';
   styleUrls: ['./suku-title-header.component.scss']
 })
 export class SukuTitleHeaderComponent implements OnInit {
-	@Input() titleOne = 'LISTING NAME';
-	@Input() titleOneId;
-	@Input() titleOneSize;
-	@Input() titleOneColor;
-	@Input() titleOneWeight;
-	@Input() titleOneCustomClass = 'pop';
+	@Input('title-one-id') titleOneId;
+	@Input('title-one-size') titleOneSize;
+	@Input('title-one-color') titleOneColor = 'white';
+	@Input('title-one-weight') titleOneWeight;
+	@Input('title-one-custom-class') titleOneCustomClass = '';
   constructor() { }
 
   ngOnInit() {

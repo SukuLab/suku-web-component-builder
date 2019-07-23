@@ -20,24 +20,21 @@ export class SukuTransactionHistoryComponent implements OnInit {
 	@Input('loading-color') loadingColor;
 	@Input('loading-size') loadingSize;
 	@Input('loading-weight') loadingWeight;
-	@Input() tableHeaderCustomClass = 'text-center';
-	@Input() tableBodyCustomClass = 'text-left';
-	@Input() buttonCustomClass = 'btn  btnCancel';
-	@Input() typeId = 'typeId';
-	@Input() myAccountId = 'myAccountId';
-	@Input() counterPartyId = 'counterPartyId';
-	@Input() counterparty = 'Counter Party';
-	@Input() amountId = 'AmountId';
-	@Input() statusId = 'statusId';
-	@Input() dateCreatedId = 'dateCreatedId';
-	@Input() paymentManagementId = 'paymentManagementId';
+	@Input('table-header-custom-class') tableHeaderCustomClass = 'text-center';
+	@Input('table-body-custom-class') tableBodyCustomClass = 'text-left';
+	@Input('button-custom-class') buttonCustomClass = 'btn  btnCancel';
+	@Input('type-id') typeId = 'typeId';
+	@Input('my-account-id') myAccountId = 'myAccountId';
+	@Input('counter-party-id') counterPartyId = 'counterPartyId';
+	@Input('amount-id') amountId = 'AmountId';
+	@Input('status-id') statusId = 'statusId';
+	@Input('date-created-id') dateCreatedId = 'dateCreatedId';
+	@Input('payment-management-Id') paymentManagementId = 'paymentManagementId';
 	@Output() action = new EventEmitter();
-	@Input() cancelId = 'cancelId';
-	@Input() cancel = 'Cancel';
+	@Input('cancel-btn-label') cancelBtnLabel = 'Cancel';
+	@Input('cancel-id') cancelId = 'cancelId';
 	@Input() transactionDetails = [];
 	constructor() { }
-
-
 
 	ngOnInit() {
 		this.heading = {

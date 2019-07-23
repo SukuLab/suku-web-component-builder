@@ -1,4 +1,5 @@
-/* Side - Bar - Box */
+@import '../theme/theme';
+
 .side-bar {
   width: 100%;
   float: left;
@@ -34,7 +35,7 @@
 }
 
 .side-bar .box .filter-list h2 {
-  font-family: "Poppins", sans-serif !important;
+  font-family: $suku-primary-font;
   font-size: 15px !important;
   color: #b6b6b6;
   border-bottom: 1px solid #ececec;
@@ -50,8 +51,8 @@
 }
 
 .side-bar .box .filter-links p {
-  font-family: 'Encode Sans', sans-serif !important;
-  font-size: 14px;
+  font-family: $suku-secondary-font;
+  font-size: $suku-font-size-3;
   line-height: 14px;
   text-transform: lowercase;
   padding: 0;
@@ -150,40 +151,40 @@
 }
 
 .btn-p {
-  border: solid 2px #a7bf2e;
+  border: solid 2px $suku-sick-green;
   border-radius: 10px 20px 15px 20px;
   background-color: #343a40 !important;
   color: white;
-  font-family: 'Encode Sans', sans-serif;
+  font-family: $suku-secondary-font;
   font-weight: 600;
   font-size: 14px;
   padding: 0.75rem 2.1rem;
 }
 
 .btn-p:hover {
-  border: solid 2px #a7bf2e;
+  border: solid 2px $suku-sick-green;
   border-radius: 10px 20px 15px 20px;
-  background-color: #a7bf2e;
+  background-color: $suku-sick-green;
   color: white;
 }
 
 .btn-primary:hover {
-  border: 2px solid #a7bf2e;
+  border: 2px solid $suku-sick-green;
   border-radius: 10px 20px 15px;
-  background-color: #a7bf2e;
+  background-color: $suku-sick-green;
   color: #fff;
 }
 
 .btn-p:hover {
-  border: 2px solid #a7bf2e;
+  border: 2px solid $suku-sick-green;
   border-radius: 10px 20px 15px;
-  background-color: #a7bf2e !important;
+  background-color: $suku-sick-green !important;
   color: #fff;
 }
 
 
 .btn-p-p.disabled:hover {
-  border: solid 2px #a7bf2e !important;
+  border: solid 2px $suku-sick-green !important;
   border-radius: 10px 20px 15px 20px;
   background-color: white;
   color: #1d1d1d;
@@ -192,12 +193,12 @@
 .zeplin_button {
   height: 40px;
   color: #f2f2f2;
-  border: solid 2px #a7bf2e;
+  border: solid 2px $suku-sick-green;
   background-color: #272727 !important;
 }
 
 .zeplin_button:hover {
-  background-color: #a7bf2e !important;
+  background-color: $suku-sick-green !important;
 }
 
 .zeplin_button1 {
@@ -224,26 +225,26 @@
 }
 
 .btn-primary {
-  border: solid 2px #a7bf2e;
+  border: solid 2px $suku-sick-green;
   border-radius: 10px 20px 15px 20px;
 }
 
 .btn-primary:hover {
-  border: solid 2px #a7bf2e;
+  border: solid 2px $suku-sick-green;
   border-radius: 10px 20px 15px 20px;
-  background-color: #a7bf2e;
+  background-color: $suku-sick-green;
   color: white;
 }
 
 .btn-primary:active {
-  border: solid 2px #a7bf2e;
+  border: solid 2px $suku-sick-green;
   border-radius: 10px 20px 15px 20px;
-  background-color: #a7bf2e;
+  background-color: $suku-sick-green;
   color: white;
 }
 
 .btn-primary.disabled {
-  border: solid 2px #a7bf2e;
+  border: solid 2px $suku-sick-green;
   border-radius: 10px 20px 15px 20px;
   background-color: white;
   color: grey;
@@ -258,7 +259,7 @@ fieldset[disabled] .btn-primary:focus,
 .btn-primary.disabled.focus,
 .btn-primary[disabled].focus,
 fieldset[disabled] .btn-primary.focus {
-  border: solid 2px #a7bf2e;
+  border: solid 2px $suku-sick-green;
   border-radius: 10px 20px 15px 20px;
   background-color: white !important;
   color: grey;
@@ -266,9 +267,9 @@ fieldset[disabled] .btn-primary.focus {
 
 .btn-primary:focus,
 .btn-primary.focus {
-  border: solid 2px #a7bf2e;
+  border: solid 2px $suku-sick-green;
   border-radius: 10px 20px 15px 20px;
-  background-color: #a7bf2e;
+  background-color: $suku-sick-green;
   color: white;
 }
 
@@ -281,9 +282,9 @@ fieldset[disabled] .btn-primary.focus {
 .btn-primary:active.focus,
 .btn-primary.active.focus,
 .open>.dropdown-toggle .btn-primary.focus {
-  border: solid 2px #a7bf2e;
+  border: solid 2px $suku-sick-green;
   border-radius: 10px 20px 15px 20px;
-  background-color: #a7bf2e;
+  background-color: $suku-sick-green;
   color: white;
 }
 
@@ -292,25 +293,25 @@ fieldset[disabled] .btn-primary.focus {
 .btn-primary:not(:disabled):not(.disabled):active,
 .show>.btn-primary.dropdown-toggle {
   color: #fff;
-  background-color: #a7bf2e;
-  border-color: #a7bf2e;
+  background-color: $suku-sick-green;
+  border-color: $suku-sick-green;
 }
 
 .btn-primary.focus,
 .btn-primary:focus {
-  box-shadow: 0 0 0 0.2rem #a7bf2e;
+  box-shadow: 0 0 0 0.2rem $suku-sick-green;
 }
 
 .btn-primary:not(:disabled):not(.disabled).active:focus,
 .btn-primary:not(:disabled):not(.disabled):active:focus,
 .show>.btn-primary.dropdown-toggle:focus {
-  box-shadow: 0 0 0 0.2rem #a7bf2e;
+  box-shadow: 0 0 0 0.2rem $suku-sick-green;
 }
 
 //button css
 
 .btn {
-  border: solid 2px #a7bf2e;
+  border: solid 2px $suku-sick-green;
   border-radius: 28px 76px 63px;
   background-color: white;
   color: black;
@@ -321,43 +322,43 @@ fieldset[disabled] .btn-primary.focus {
 }
 
 .btn:hover {
-  border: solid 2px #a7bf2e;
+  border: solid 2px $suku-sick-green;
   border-radius: 28px 76px 63px;
-  background-color: #a7bf2e;
+  background-color: $suku-sick-green;
   color: white;
 }
 
 
 .btn.disabled:hover {
-  border: solid 2px #a7bf2e !important;
+  border: solid 2px $suku-sick-green !important;
   border-radius: 28px 76px 63px;
   background-color: white;
   color: black;
 }
 
 .btn-info {
-  border: solid 2px #a7bf2e;
+  border: solid 2px $suku-sick-green;
   border-radius: 28px 76px 63px;
   background-color: white;
   color: black;
 }
 
 .btn-info:hover {
-  border: solid 2px #a7bf2e;
+  border: solid 2px $suku-sick-green;
   border-radius: 28px 76px 63px;
-  background-color: #a7bf2e;
+  background-color: $suku-sick-green;
   color: white;
 }
 
 .btn-info:active {
-  border: solid 2px #a7bf2e;
+  border: solid 2px $suku-sick-green;
   border-radius: 28px 76px 63px;
-  background-color: #a7bf2e;
+  background-color: $suku-sick-green;
   color: white;
 }
 
 .btn-info.disabled {
-  border: solid 2px #a7bf2e;
+  border: solid 2px $suku-sick-green;
   border-radius: 28px 76px 63px;
   background-color: white;
   color: grey;
@@ -372,7 +373,7 @@ fieldset[disabled] .btn-info:focus,
 .btn-info.disabled.focus,
 .btn-info[disabled].focus,
 fieldset[disabled] .btn-info.focus {
-  border: solid 2px #a7bf2e;
+  border: solid 2px $suku-sick-green;
   border-radius: 28px 76px 63px;
   background-color: white !important;
   color: grey;
@@ -380,9 +381,9 @@ fieldset[disabled] .btn-info.focus {
 
 .btn-info:focus,
 .btn-info.focus {
-  border: solid 2px #a7bf2e;
+  border: solid 2px $suku-sick-green;
   border-radius: 28px 76px 63px;
-  background-color: #a7bf2e;
+  background-color: $suku-sick-green;
   color: white;
 }
 
@@ -395,9 +396,9 @@ fieldset[disabled] .btn-info.focus {
 .btn-info:active.focus,
 .btn-info.active.focus,
 .open>.dropdown-toggle .btn-info.focus {
-  border: solid 2px #a7bf2e;
+  border: solid 2px $suku-sick-green;
   border-radius: 28px 76px 63px;
-  background-color: #a7bf2e;
+  background-color: $suku-sick-green;
   color: white;
 }
 
@@ -406,19 +407,19 @@ fieldset[disabled] .btn-info.focus {
 .btn-info:not(:disabled):not(.disabled):active,
 .show>.btn-info.dropdown-toggle {
   color: #fff;
-  background-color: #a7bf2e;
-  border-color: #a7bf2e;
+  background-color: $suku-sick-green;
+  border-color: $suku-sick-green;
 }
 
 .btn-info.focus,
 .btn-info:focus {
-  box-shadow: 0 0 0 0.2rem #a7bf2e;
+  box-shadow: 0 0 0 0.2rem $suku-sick-green;
 }
 
 .btn-info:not(:disabled):not(.disabled).active:focus,
 .btn-info:not(:disabled):not(.disabled):active:focus,
 .show>.btn-info.dropdown-toggle:focus {
-  box-shadow: 0 0 0 0.2rem #a7bf2e;
+  box-shadow: 0 0 0 0.2rem $suku-sick-green;
 }
 
 .default-btn {
@@ -441,7 +442,7 @@ fieldset[disabled] .btn-info.focus {
   line-height: 1.43;
   letter-spacing: -0.4px;
   color: #1c1c1c !important;
-  border-bottom: 3.5px solid #a7bf2e;
+  border-bottom: 3.5px solid $suku-sick-green;
 }
 
 .clearAll {

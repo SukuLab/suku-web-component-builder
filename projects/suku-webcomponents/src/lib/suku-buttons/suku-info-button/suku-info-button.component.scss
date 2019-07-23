@@ -15,6 +15,10 @@
   cursor: pointer;
 }
 
+.suku-i:focus {
+  outline: none !important;
+}
+
 .suku.disabled:hover {
   border: solid 2px;
   border-color: $suku-sick-green;
