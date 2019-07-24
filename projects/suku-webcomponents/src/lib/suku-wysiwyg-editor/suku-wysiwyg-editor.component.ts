@@ -10,6 +10,7 @@ export class SukuWysiwygEditorComponent implements OnInit {
   htmlQuillContent;
   @Input() form: FormGroup;
 	@Input() control = 'productTraceability';
+	@Input() placeholder = 'Enter text'
 	public moduleConfig = {
 		toolbar: [
 			[ 'bold', 'italic', 'underline', 'strike' ], // toggled buttons
