@@ -72,6 +72,7 @@ import { SukuTitleHeaderComponent } from './suku-title-header/suku-title-header.
 import { SukuTrackProgressBarComponent } from './suku-track-progress-bar/suku-track-progress-bar.component';
 import { SukuTreeComponent } from './suku-tree/suku-tree.component';
 import { SukuWysiwygEditorComponent } from './suku-wysiwyg-editor/suku-wysiwyg-editor.component';
+import { QuillModule } from 'ngx-quill';
 @NgModule({
 	declarations: [
 		SukuBidTagComponent,
@@ -181,7 +182,8 @@ import { SukuWysiwygEditorComponent } from './suku-wysiwyg-editor/suku-wysiwyg-e
 		MatTableModule,
 		MatTabsModule,
 		MatToolbarModule,
-		MatTooltipModule
+		MatTooltipModule,
+		QuillModule
 	],
 	exports: [SukuBidTagComponent,
 		SukuCardLineComponent,
