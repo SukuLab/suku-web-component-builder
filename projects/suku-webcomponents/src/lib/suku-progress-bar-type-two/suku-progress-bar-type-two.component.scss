@@ -146,6 +146,10 @@ tr#txt {
   transform: rotate(45deg);
 }
 
+.c-pointer :hover {
+  cursor: pointer;
+}
+
 hr {
   margin-top: 1rem !important;
   margin-bottom: 1rem !important;
