@@ -1,24 +1,26 @@
+@import '../theme/theme';
+
 .suku-button {
     cursor: pointer;
-    border: solid 2px #a7bf2e !important;
+    border: solid 2px $suku-sick-green !important;
     padding: 10px 32px 10px 32px !important;
     background-color: white !important;
     color: #0000009c !important;
     border-radius: 29px 77px 61px !important;
     font-weight: 900 !important;
-    font-family: 'Poppins', sans-serif !important;
+    font-family: $suku-primary-font;
     letter-spacing: 1px;
 }
 
 .suku-button:hover {
     cursor: pointer;
-    border: solid 2px #a7bf2e !important;
+    border: solid 2px $suku-sick-green !important;
     padding: 10px 32px 10px 32px !important;
-    background-color: #a7bf2e !important;
+    background-color: $suku-sick-green !important;
     color: #0000009c !important;
     border-radius: 29px 77px 61px !important;
     font-weight: 900 !important;
-    font-family: 'Poppins', sans-serif !important;
+    font-family: $suku-primary-font;
     letter-spacing: 1px;
 }
 
@@ -27,37 +29,39 @@
     outline: none !important;
 }
 
+
 .dwolla-iav-link {
     font-weight: 400;
-    color: #a7bf2e !important;
-    font-family: 'Poppins', sans-serif !important;
+    color: $suku-sick-green !important;
+    font-family: $suku-primary-font;
     letter-spacing: 0.2px;
 }
 
 .dwolla-iav-button {
     cursor: pointer;
-    border: solid 2px #a7bf2e !important;
+    border: solid 2px $suku-sick-green !important;
     padding: 10px 32px 10px 32px !important;
     background-color: white !important;
     color: #0000009c !important;
     border-radius: 29px 77px 61px !important;
     font-weight: 900 !important;
-    font-family: 'Poppins', sans-serif !important;
+    font-family: $suku-primary-font;
     letter-spacing: 1px;
 }
 
 .dwolla-iav-back-button {
     width: auto !important;
     cursor: pointer;
-    border: solid 2px #a7bf2e !important;
+    border: solid 2px $suku-sick-green !important;
     padding: 10px 32px 10px 32px !important;
     background-color: white !important;
     color: #0000009c !important;
     border-radius: 29px 77px 61px !important;
     font-weight: 900 !important;
-    font-family: 'Poppins', sans-serif !important;
+    font-family: $suku-primary-font;
     letter-spacing: 1.1px;
 }
+
 .bg {
     border-radius: 0 0 41px 41px;
     background-color: #ffffff;

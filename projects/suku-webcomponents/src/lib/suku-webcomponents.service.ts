@@ -55,7 +55,8 @@ export const suku: Theme = {
     '--suku-font-size-7': '22px', // 26px	1.625rem
     '--suku-font-size-8': '24px', // 26px	1.625rem
     '--suku-font-size-9': '26px', // 30px	1.875rem
-    '--suku-font-size-10': '30px'  // 32px	1.875rem
+    '--suku-font-size-10': '30px', // 30px	1.875rem
+    '--suku-font-size-11': '50px'  // 50px	1.875rem
   }
 };
 
@@ -106,7 +107,9 @@ export const dark: Theme = {
     '--suku-font-size-5': '1.5rem', //  24px	1.5rem
     '--suku-font-size-6': '1.625rem', // 26px	1.625rem
     '--suku-font-size-7': '1.8rem', //  30px	1.875rem
-    '--suku-font-size-8': '2rem' //  32px	1.875rem
+    '--suku-font-size-8': '2rem', //  32px	1.875rem
+    '--suku-font-size-10': '3rem', // 30px	1.875rem
+    '--suku-font-size-11': '3.5rem'  // 50px	1.875rem
   }
 };
 
@@ -154,7 +157,9 @@ export const light: Theme = {
     '--suku-font-size-5': '1.5rem', //  24px	1.5rem
     '--suku-font-size-6': '1.625rem', // 26px	1.625rem
     '--suku-font-size-7': '1.8rem', //  30px	1.875rem
-    '--suku-font-size-8': '2rem' //  32px	1.875rem
+    '--suku-font-size-8': '2rem', //  32px	1.875rem
+    '--suku-font-size-10': '3rem', // 30px	1.875rem
+    '--suku-font-size-11': '3.5rem'  // 50px	1.875rem
   }
 };
 

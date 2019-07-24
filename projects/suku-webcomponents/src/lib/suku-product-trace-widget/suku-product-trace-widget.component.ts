@@ -106,8 +106,6 @@ export class SukuProductTraceWidgetComponent implements OnInit {
     this._visible = val;
   }
 
-
-
   showSelectedPro(newValue) {
     this.selectedItem = newValue;
   }

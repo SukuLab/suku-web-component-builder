@@ -106,41 +106,6 @@ export class SukuBeneficialOwnerComponent implements OnInit {
 		this.submitOwner.emit(formData);
 	}
 
-	fileupload(e) {
-		const files = e.target.files;
-		const maxFileSize = 9999999;
-		let currentFileSize;
-		const file = e.target.files[0];
-		currentFileSize = file.size;
-		if (currentFileSize <= maxFileSize) {
-			if (
-				file.type == 'image/jpeg' ||
-				file.type == 'application/pdf' ||
-				file.type == 'image/png' ||
-				file.type == 'image/jpg'
-			) {
-				if (e.target.files && e.target.files.length > 0) {
-					for (let i = 0; i < e.target.files.length; i++) {
-						const file = e.target.files[i];
-						const docType = this.uploadType;
-						const data = {
-							file: file,
-							documentType: docType
-						};
-						this.upload.emit(data);
-						currentFileSize = file.size;
-					}
-					e.target.value = '';
-				}
-			} else {
-				this.snackbar('The file type jpg/jpeg/png files are allowed!');
-			}
-		} else {
-			this.snackbar('The file size cannot exceed 10 MB');
-		}
-	}
-
-
 	submitDatas() {
 		console.log('test')
 	}

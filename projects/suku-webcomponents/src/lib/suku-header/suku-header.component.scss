@@ -13,12 +13,12 @@
 
 h1 {
   color: #fafaf8;
-  font-size: 17px;
+  font-size: $suku-font-size-5;
 }
 
 h2 {
   color: #f9f9f1bd;
-  font-size: 15px;
+  font-size: $suku-font-size-4;
 }
 
 .c-pointer {
@@ -30,4 +30,3 @@ h2 {
   color: $suku-text-label-two;
   text-decoration: underline;
 }
-

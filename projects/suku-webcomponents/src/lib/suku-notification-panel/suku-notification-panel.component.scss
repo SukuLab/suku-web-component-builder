@@ -1,11 +1,8 @@
-@import url('https://fonts.googleapis.com/css?family=Poppins:200i,400,700');
-
-$poppins: 'Poppins',
-sans-serif !important;
+@import '../theme/theme';
 
 .box {
   border-radius: 2px;
-  background-color: #fff;
+  background-color: $suku-default-bg;
   box-shadow: 0 3px 3px 0 rgba(0, 0, 0, .03);
   border-left: 1px solid #dee2e68a !important;
   border-bottom: 1px solid #dee2e68a !important;
@@ -13,28 +10,28 @@ sans-serif !important;
 }
 
 .box-title {
-  font-family: $poppins;
-  font-size: 17px;
+  font-family: $suku-primary-font;
+  font-size: $suku-font-size-5;
   font-weight: bold;
   font-style: normal;
   font-stretch: normal;
   line-height: normal;
   letter-spacing: -0.2px;
   text-align: center;
-  color: #1d1d1d;
+  color: $suku-text-heading;
   word-break: break-word !important;
 }
 
 .box-counter {
-  font-family: $poppins;
-  font-size: 50px;
+  font-family: $suku-primary-font;
+  font-size: $suku-font-size-11;
   font-weight: bold;
   font-style: normal;
   font-stretch: normal;
   line-height: normal;
   letter-spacing: -0.6px;
   text-align: center;
-  color: #a7bf2e;
+  color: $suku-sick-green;
 }
 
 .default {
@@ -46,14 +43,14 @@ sans-serif !important;
 }
 
 .title {
-  font-family: $poppins;
-  font-size: 17px;
+  font-family: $suku-primary-font;
+  font-size: $suku-font-size-5;
   font-weight: bold;
   font-style: normal;
   font-stretch: normal;
   line-height: normal;
   letter-spacing: -0.2px;
-  color: #b6b6b6;
+  color: $suku-text-label-one;
 }
 
 

@@ -1,18 +1,9 @@
-@import url('https://fonts.googleapis.com/css?family=Poppins:200i,400,700');
-@import url('https://fonts.googleapis.com/css?family=Encode+Sans:200i,400,700');
-
-$main-color: #a7bf2e;
-$poppins: 'Poppins',
-sans-serif !important;
-$encodeSans: 'Encode Sans',
-sans-serif !important;
+@import '../theme/theme';
 
 .title {
   color: #fafaf8;
   font-size: 28px;
-  // font-family: "Poppins-light-normal",
-  //   sans-serif;
-  font-family: $poppins;
+  font-family: $suku-primary-font;
   font-weight: 200 !important;
 }
 
@@ -20,7 +11,7 @@ sans-serif !important;
   width: 100%;
   float: left;
   background: #2f2e2e;
-  border-left: 5px solid #a7bf2e;
+  border-left: 5px solid $suku-sick-green;
   border-radius: 0 40px 0 0;
   box-shadow: -4px 4px 5px 0px rgba(0, 0, 0, 0.08);
   padding: 10px 5px 0px 15px;
@@ -33,7 +24,7 @@ sans-serif !important;
 
 .card {
   background: #2f2e2e;
-  border-left: 5px solid #a7bf2e;
+  border-left: 5px solid $suku-sick-green;
   border-radius: 0 40px 0 0;
   box-shadow: -4px 4px 5px 0px rgba(0, 0, 0, 0.08);
   padding: 20px 5px 0px 15px;
@@ -44,10 +35,10 @@ sans-serif !important;
 
 .card::after {
   background: linear-gradient(to right,
-    rgba(255, 255, 255, 0) 0%,
-    rgba(255, 255, 255, 0) 77%,
-    rgba(255, 255, 255, 0) 92%,
-    rgba(255, 255, 255, 0) 100%);
+      rgba(255, 255, 255, 0) 0%,
+      rgba(255, 255, 255, 0) 77%,
+      rgba(255, 255, 255, 0) 92%,
+      rgba(255, 255, 255, 0) 100%);
   left: 50px
 }
 
@@ -72,28 +63,26 @@ sans-serif !important;
 h1 {
   color: #fafaf8;
   font-size: 24px;
-  font-family: $poppins;
+  font-family: $suku-primary-font;
   font-weight: 200 !important;
-  // font-family: 'Poppins-light-normal', sans-serif;
 }
 
 h2 {
   color: #cccccc;
   font-size: 15px;
-  font-family: $poppins;
+  font-family: $suku-primary-font;
   font-weight: 600;
   letter-spacing: 0.15px;
 }
 
 .source-title {
-  font-family: $poppins;
+  font-family: $suku-primary-font;
   font-weight: 700;
   font-size: 15px !important;
 }
 
 .pop-light {
-  // font-family: 'Poppins-light-normal', sans-serif !important;
-  font-family: $poppins;
+  font-family: $suku-primary-font;
   font-weight: 200 !important;
   font-size: 16px;
 }
@@ -109,12 +98,12 @@ h2 {
 }
 
 .pop {
-  font-family: $poppins;
+  font-family: $suku-primary-font;
   font-weight: 800;
 }
 
 .sub-title {
-  font-family: $poppins;
+  font-family: $suku-primary-font;
   font-weight: 700;
   font-size: 22px !important;
 }
@@ -130,9 +119,7 @@ h2 {
 }
 
 .content-font {
-  // font-family: "Poppins-light-normal",
-  //   sans-serif !important;
-  font-family: $poppins;
+  font-family: $suku-primary-font;
   font-weight: 200 !important;
 }
 
@@ -143,7 +130,7 @@ h2 {
   color: black;
   padding: 0.675rem 0.75rem;
   font-size: 12px;
-  font-family: $poppins;
+  font-family: $suku-primary-font;
   font-weight: 700;
 }
 
@@ -151,33 +138,33 @@ h2 {
   border-radius: 28px 76px 63px;
   padding: 0.675rem 0.75rem;
   font-size: 12px;
-  font-family: $poppins;
+  font-family: $suku-primary-font;
   font-weight: 700;
   color: #ffffff;
 }
 
 .btn {
-  border: solid 1px #a7bf2e;
+  border: solid 1px $suku-sick-green;
   border-radius: 28px 76px 63px;
-  background-color: #a7bf2e;
+  background-color: $suku-sick-green;
   color: white;
   padding: 0.675rem 0.75rem;
   font-size: 12px;
-  font-family: $poppins;
+  font-family: $suku-primary-font;
   font-weight: 600;
 }
 
 .btn:hover {
-  border: solid 1px #a7bf2e;
+  border: solid 1px $suku-sick-green;
   border-radius: 28px 76px 63px;
-  background-color: #a7bf2e;
+  background-color: $suku-sick-green;
   color: #2f2e2e
 }
 
 .btn:focus {
-  border: solid 1px #a7bf2e;
+  border: solid 1px $suku-sick-green;
   border-radius: 28px 76px 63px;
-  background-color: #a7bf2e;
+  background-color: $suku-sick-green;
   color: black;
 }
 

@@ -17,17 +17,7 @@
 
 label {
  font-family: $suku-primary-font;
- font-size: 20px;
- font-weight: bold;
- font-style: normal;
- font-stretch: normal;
- line-height: normal;
- letter-spacing: 0.1px;
-}
-
-.upload-doc-title {
- font-family: $suku-primary-font;
- font-size: 1.5rem;
+ font-size: $suku-font-size-6;
  font-weight: bold;
  font-style: normal;
  font-stretch: normal;
@@ -46,7 +36,7 @@ label {
 }
 
 .card-line {
- background-color: #ffffff;
+ background-color: $suku-default-bg;
  color: #2c2727;
  height: 46px;
  border-radius: 2px;
@@ -61,36 +51,6 @@ label {
 
 .c-pointer {
  cursor: pointer;
-}
-
-
-/* upload box css */
-
-.display-2 {
- font-size: 6.2rem !important;
- line-height: 1.5 !important;
-}
-
-.border-dot {
- border-style: dashed !important;
- border-color: #6a68689e;
- border-radius: 1px;
- border-width: 2px;
-}
-
-.upload {
- opacity: 0;
- width: 277px !important;
- position: relative;
- height: 120px;
-}
-
-.upload:hover {
- cursor: pointer !important;
-}
-
-.upload-icon {
- position: absolute;
 }
 
 .icon {
@@ -117,7 +77,7 @@ label {
  font-family: $suku-secondary-font;
  font-size: $suku-font-size-3;
  font-weight: 600;
- padding: 0.45rem 2rem !important;
+ padding: 0.55rem 2rem !important;
 
  &:hover {
   border: solid 2px;

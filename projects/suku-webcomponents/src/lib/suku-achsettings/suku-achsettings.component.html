@@ -24,7 +24,7 @@
         </div>
       </div>
       <div class="col-sm-12 text-center mt-2">
-        <i> <span class="font12 {{labelSixCustomClass}}" [id]="labelSixId">{{labelSix}} </span>
+        <i> <span class="f12 {{labelSixCustomClass}}" [id]="labelSixId">{{labelSix}} </span>
         </i>
       </div>
       <div class="col plc-5 prc-5 pb-2 pt-2" *ngIf="subContent == 'document'">
@@ -96,7 +96,7 @@
                 </div>
                 <div class="col-12 col-lg-4" *ngIf="user?.verificationStatus == 'document'">
                   <div class="col d-flex justify-content-center mt-3 mb-3">
-                    <button class="btn btn-info" (click)="uploadDoc(user)"
+                    <button class="suku suku-info" (click)="uploadDoc(user)"
                       id="uploadBeneficialDocument{{i}}">{{ user?.labelThree || 'Upload Document'}}</button>
                   </div>
                 </div>
@@ -129,7 +129,7 @@
       </div>
       <div class="col-sm-12 mt-2 mb-4 text-center" *ngIf="(subContent == 'not complete' ) || (subContent != 'verified' ) && (documentStatus?.length == 0 &&
          (subContent == 'document'))">
-        <button class="btn textBold" id="{{buttonLabelId}}" (click)="action.emit()">{{buttonLabel}}</button>
+        <button class="suku textBold" id="{{buttonLabelId}}" (click)="action.emit()">{{buttonLabel}}</button>
       </div>
     </div>
   </div>

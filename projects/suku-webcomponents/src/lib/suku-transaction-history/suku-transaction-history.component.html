@@ -51,7 +51,7 @@
                 {{(transaction?.completedOn | date:'d MMM yyyy h:mm:s a') || 'Not available'}}</span>
             </td>
             <td [class]="tableBodyCustomClass"><button id="{{cancelId}}" *ngIf="transaction?.status=='pending'"
-                (click)="action.emit(transaction);" [class]="buttonCustomClass">{{cancel}}</button></td>
+                (click)="action.emit(transaction);" [class]="buttonCustomClass">{{cancelBtnLabel}}</button></td>
           </tr>
         </tbody>
       </table>

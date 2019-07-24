@@ -2,7 +2,7 @@
 
 .sort-by {
   font-family: $suku-primary-font;
-  font-size: 15px;
+  font-size: $suku-font-size-3;
   font-weight: normal;
   font-style: normal;
   font-stretch: normal;
@@ -14,7 +14,7 @@
 
 .optionsBox {
   font-family: $suku-secondary-font;
-  font-size: 14px;
+  font-size: $suku-font-size-3;
   font-weight: normal;
   font-style: normal;
   font-stretch: normal;
@@ -35,7 +35,7 @@
   width: 281px;
 }
 
-select + img.image {
+select+img.image {
   float: right;
   margin-top: -30px;
   margin-right: 5px;
@@ -53,6 +53,6 @@ select:focus {
 
 @media(max-width:486px) {
   .p-xs-0 {
-     padding: 0px;
+    padding: 0px;
   }
 }

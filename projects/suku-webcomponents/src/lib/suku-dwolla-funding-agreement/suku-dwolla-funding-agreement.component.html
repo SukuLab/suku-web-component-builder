@@ -3,14 +3,15 @@
     [style.color]="titleColor">{{title}}</label>
   <div class="col bg p-4">
     <div class="col mt-4 mb-3">
-      <mat-checkbox color="primary" formControlName="{{control}}" type="checkbox" (change)="action()" id="{{checkBoxId}}">
+      <mat-checkbox color="primary" formControlName="{{control}}" type="checkbox" (change)="action()"
+        id="{{checkBoxId}}">
       </mat-checkbox>
       <span class="col-sm-12 terms" [style.font-size.px]="contentSize" id="{{contentId}}">
         {{content}}
       </span>
     </div>
     <div class="col d-flex justify-content-center mt-5 mb-3">
-      <button class="btn btn-info" [ngClass]="{'disabled': formValid}" (click)="agree()"
+      <button class="suku suku-info" [ngClass]="{'disabled': formValid}" (click)="agree()"
         [style.font-size.rem]="btnTextSize" [disabled]="formValid">Agree & Continue</button>
     </div>
   </div>

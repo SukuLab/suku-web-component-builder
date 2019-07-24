@@ -2,11 +2,11 @@
 
 .redText {
 	color: red;
-	font-size: 12px;
+	font-size: $suku-font-size-2;
 }
 
-.font12 {
-	font-size: 12px;
+.f12 {
+	font-size: $suku-font-size-2;
 }
 
 .textBold {
@@ -38,40 +38,6 @@
 		margin: 0.45rem !important;
 	}
 }
-
-// .suku-btn {
-// 	@extend btn;
-// }
-
-// .btn {
-// 	border: solid 2px #a7bf2e;
-// 	border-radius: 28px 76px 63px;
-// 	background-color: white;
-// 	color: black;
-// 	padding: 0.775rem 1.85rem;
-// 	font-size: 12px !important;
-// 	font-weight: bold;
-// 	font-family: $suku-primary-font;
-// }
-
-// .btn:hover {
-// 	border: solid 2px #a7bf2e;
-// 	border-radius: 28px 76px 63px;
-// 	background-color: #a7bf2e;
-// 	color: black;
-// }
-
-// .btn:focus {
-// 	border: solid 2px #a7bf2e;
-// 	border-radius: 28px 76px 63px;
-// 	background-color: #a7bf2e;
-// 	color: black;
-// }
-
-// .btn:focus {
-// 	outline: none !important;
-// 	box-shadow: none !important;
-// }
 
 .font20 {
 	font-size: 25px;
@@ -142,8 +108,8 @@
 
 /* button css */
 
-.btn {
-	border: solid 2px #a7bf2e;
+.suku {
+	border: solid 2px $suku-sick-green;
 	padding: 10px 32px 10px 32px;
 	background-color: white;
 	color: black;
@@ -153,85 +119,85 @@
 	font-size: 1.3rem;
 }
 
-.btn-info {
-	border: solid 2px #a7bf2e;
+.suku-info {
+	border: solid 2px $suku-sick-green;
 	padding: 10px 32px 10px 32px;
 	background-color: white;
 	color: #00000099;
 }
 
-.btn-info:hover {
-	border: solid 2px #a7bf2e;
+.suku-info:hover {
+	border: solid 2px $suku-sick-green;
 	padding: 10px 32px 10px 32px;
-	background-color: #a7bf2e;
+	background-color: $suku-sick-green;
 	color: white;
 }
 
-.btn-info:active {
-	border: solid 2px #a7bf2e;
+.suku-info:active {
+	border: solid 2px $suku-sick-green;
 	padding: 10px 32px 10px 32px;
-	background-color: #a7bf2e;
+	background-color: $suku-sick-green;
 	color: white;
 }
 
-.btn-info.disabled {
-	border: solid 2px #a7bf2e;
+.suku-info.disabled {
+	border: solid 2px $suku-sick-green;
 	padding: 10px 32px 10px 32px;
 	background-color: white;
 	color: grey;
 }
 
-.btn-info.disabled:hover,
-.btn-info[disabled]:hover,
-fieldset[disabled] .btn-info:hover,
-.btn-info.disabled:focus,
-.btn-info[disabled]:focus,
-fieldset[disabled] .btn-info:focus,
-.btn-info.disabled.focus,
-.btn-info[disabled].focus,
-fieldset[disabled] .btn-info.focus {
-	border: solid 2px #a7bf2e;
+.suku-info.disabled:hover,
+.suku-info[disabled]:hover,
+fieldset[disabled] .suku-info:hover,
+.suku-info.disabled:focus,
+.suku-info[disabled]:focus,
+fieldset[disabled] .suku-info:focus,
+.suku-info.disabled.focus,
+.suku-info[disabled].focus,
+fieldset[disabled] .suku-info.focus {
+	border: solid 2px $suku-sick-green;
 	padding: 10px 32px 10px 32px;
 	background-color: white !important;
 	color: grey;
 	box-shadow: none !important;
 }
 
-.btn-info:focus,
-.btn-info.focus {
-	border: solid 2px #a7bf2e;
+.suku-info:focus,
+.suku-info.focus {
+	border: solid 2px $suku-sick-green;
 	padding: 10px 32px 10px 32px;
-	background-color: #a7bf2e;
+	background-color: $suku-sick-green;
 	color: white;
 	box-shadow: none !important;
 }
 
-.btn-info:active:hover,
-.btn-info.active:hover,
-.open>.dropdown-toggle.btn-info:hover,
-.btn-info:active:focus,
-.btn-info.active:focus,
-.open>.dropdown-toggle .btn-info:focus,
-.btn-info:active.focus,
-.btn-info.active.focus,
-.open>.dropdown-toggle .btn-info.focus {
-	border: solid 2px #a7bf2e;
+.suku-info:active:hover,
+.suku-info.active:hover,
+.open>.dropdown-toggle.suku-info:hover,
+.suku-info:active:focus,
+.suku-info.active:focus,
+.open>.dropdown-toggle .suku-info:focus,
+.suku-info:active.focus,
+.suku-info.active.focus,
+.open>.dropdown-toggle .suku-info.focus {
+	border: solid 2px $suku-sick-green;
 	padding: 10px 32px 10px 32px;
-	background-color: #a7bf2e;
+	background-color: $suku-sick-green;
 	color: white;
 	box-shadow: none !important;
 }
 
-.upload-btn {
+.upload-suku {
 	color: black;
 	font-weight: 900;
-	font-family: 'Poppins', sans-serif !important;
+	font-family: $suku-primary-font;
 	font-size: 1.3rem;
-	border-bottom: 3px solid #a7bf2e;
+	border-bottom: 3px solid $suku-sick-green;
 }
 
 .secondary-btn {
-	font-family: 'Poppins', sans-serif !important;
+	font-family: $suku-primary-font;
 	font-size: 14px;
 	font-weight: 800;
 	font-style: normal;
@@ -239,7 +205,7 @@ fieldset[disabled] .btn-info.focus {
 	line-height: 1.43;
 	letter-spacing: -0.4px;
 	color: #1c1c1c !important;
-	border-bottom: 3.5px solid #a7bf2e;
+	border-bottom: 3.5px solid $suku-sick-green;
 }
 
 .secondary-btn:hover {

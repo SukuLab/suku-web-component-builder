@@ -111,14 +111,14 @@
           </div>
           <div class="col d-flex justify-content-end  mt-3 mb-3 pr-sm-3 mr-sm-2">
             <button class="suku-i suku-{{type}} {{btnOneCustomClass}}" [id]="btnOneId"
-              [ngClass]="{'disabled': btnOneDisable}" (click)="agree()" [disabled]="formValid">{{btnOne}}</button>
+              [ngClass]="{'disabled': btnOneDisable}" (click)="agree()" [disabled]="btnOneDisable">{{btnOne}}</button>
           </div>
         </div>
       </div>
       <div class="col">
         <div class="col mt-5">
           <div class="row">
-            <span>
+            <span class="pt-1">
               <mat-checkbox color="primary" type="checkbox" (change)="action()" id="agree" formControlName="{{control}}"
                 name="{{control}}">
               </mat-checkbox>
@@ -129,7 +129,8 @@
         </div>
         <div class="col d-flex justify-content-center mt-4 mb-3">
           <button class="suku-i suku-{{type}} {{btnTwoCustomClass}}" [id]="btnTwoId"
-            [ngClass]="{'disabled': btnTwoDisable}" (click)="submitDatas()" [disabled]="formValid">{{btnTwo}}</button>
+            [ngClass]="{'disabled': btnTwoDisable}" (click)="submitDatas()"
+            [disabled]="btnTwoDisable">{{btnTwo}}</button>
         </div>
       </div>
     </div>
