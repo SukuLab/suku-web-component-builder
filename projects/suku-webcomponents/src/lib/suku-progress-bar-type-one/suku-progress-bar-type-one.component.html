@@ -1,4 +1,4 @@
-<div class="col p-0 pt-4">
+<!-- <div class="col p-0 pt-4">
   <div class="col-sm-12 ">
     <div class="row">
       <div class="col-sm-2 pr-0 mnt-0 ">
@@ -65,6 +65,81 @@
           </td>
           <td class="progressTitle" id="{{progressBarTitleId?.labelFourId}}">
             <span class=" {{customHeadingFourClass}} "
+              (click)="progressFourAction.emit()">{{progressBarLabels?.labelFour}}</span>
+          </td>
+        </tr>
+      </table>
+    </div>
+  </div>
+</div> -->
+
+
+<div [class]="customClass">
+  <div class="col-sm-12">
+    <div class="row">
+      <div [class]="progressBarTitleClass">
+        <span>
+          <h6 [style.color]="progressBarColor" [style.font-size.rem]="progressBarFontSize"
+            [style.font-weight]="progressBarFontWight">
+            <b>{{progressBarTitle}}</b>
+          </h6>
+        </span>
+      </div>
+      <div class="col-sm-12">
+        <table [class]="progressBarNameGridAlign">
+          <tr class="pt-3">
+            <td>
+              <hr>
+            </td>
+            <td class="{{progressStyleOne}} text-center" id="{{progressBarIconId?.IconOneId}}">
+              <span *ngIf="(progressStyleOne == 'progressCompleted')" class=" {{checkMarkCustomClass}} pt-2"></span>
+              <span *ngIf="!(progressStyleOne == 'progressCompleted')">{{progressBarLabelOne}}</span>
+            </td>
+            <td>
+              <hr>
+            </td>
+            <td class="{{progressStyleTwo}} text-center" id="{{progressBarIconId?.IconTwoId}}">
+              <span *ngIf="(progressStyleTwo == 'progressCompleted')" class="{{checkMarkCustomClass}} pt-2"></span>
+              <span *ngIf="!(progressStyleTwo == 'progressCompleted')">{{progressBarLabelTwo}}</span>
+            </td>
+            <td>
+              <hr>
+            </td>
+            <td class="{{progressStyleThree}} text-center" id="{{progressBarIconId?.IconThreeId}}">
+              <span *ngIf="(progressStyleThree == 'progressCompleted')" class="{{checkMarkCustomClass}} pt-2"></span>
+              <span *ngIf="!(progressStyleThree == 'progressCompleted')">{{progressBarLabelThree}}</span>
+            </td>
+            <td>
+              <hr>
+            </td>
+            <td class="{{progressStyleFour}} text-center" id="{{progressBarIconId?.IconFourId}}">
+              <span *ngIf="(progressStyleFour == 'progressCompleted')" class="{{checkMarkCustomClass}} pt-2"></span>
+              <span *ngIf="!(progressStyleFour == 'progressCompleted')">{{progressBarLabelFour}}</span>
+            </td>
+            <td>
+              <hr>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </div>
+    <div class="pt-2">
+      <table class="{{labelGridCustomClass}} {{lableTextCustomClass}}">
+        <tr id="txt" class="pt-3">
+          <td [class]="labelTitleCustomClass" id="{{progressBarTitleId?.labelOneId}}">
+            <span class="{{customHeadingOneClass}}"
+              (click)="progressOneAction.emit()">{{progressBarLabels?.labelOne}}</span>
+          </td>
+          <td [class]="labelTitleCustomClass" id="{{progressBarTitleId?.labelTwoId}}">
+            <span class=" {{customHeadingTwoClass}}"
+              (click)="progressTwoAction.emit()">{{progressBarLabels?.labelTwo}}</span>
+          </td>
+          <td [class]="labelTitleCustomClass" id="{{progressBarTitleId?.labelThreeId}}">
+            <span class="{{customHeadingThreeClass}}"
+              (click)="progressThreeAction.emit()">{{progressBarLabels?.labelThree}}</span>
+          </td>
+          <td [class]="labelTitleCustomClass" id="{{progressBarTitleId?.labelFourId}}">
+            <span class="{{customHeadingFourClass}}"
               (click)="progressFourAction.emit()">{{progressBarLabels?.labelFour}}</span>
           </td>
         </tr>

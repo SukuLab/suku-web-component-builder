@@ -1,19 +1,43 @@
-@import url('https://fonts.googleapis.com/css?family=Poppins:200i,400,700');
+// @import url('https://fonts.googleapis.com/css?family=Poppins:200i,400,700');
 
-$poppins: 'Poppins',
-sans-serif !important;
+// $poppins: 'Poppins',
+// sans-serif !important;
+
+// .filterResult {
+//   margin-top: 170px;
+// }
+
+// .response-title {
+//   font-family: $poppins;
+//   font-weight: 300;
+// }
+
+// .description {
+//   font-family: $poppins;
+//   color: #979797;
+//   width: 350px;
+// }
+
+// 
+
+@import '../theme/theme';
 
 .filterResult {
   margin-top: 170px;
 }
 
 .response-title {
-  font-family: $poppins;
+  font-family: $suku-primary-font;
   font-weight: 300;
 }
 
 .description {
-  font-family: $poppins;
+  font-family: $suku-primary-font;
   color: #979797;
   width: 350px;
+}
+
+.imgCustomClass {
+  height: 70px;
+  width: 70px;
 }
