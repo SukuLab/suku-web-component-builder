@@ -31,30 +31,16 @@
     </div>
     <div class="col-sm-12 mb-2 text-center pt-3 mt-3 pb-1">
       <span class="pt-2">
-        <button *ngIf="_visible == 'true'"  class="suku-i suku-{{btnType}} {{btnOneCustomClass}}"
-          [ngClass]="{'disabled' : btnOneDisable}"
-          [disabled]="btnOneDisable" 
-          [style.font-size.rem]="btnOneSize" 
-          [style.font-weight]="btnOneWeight" 
-          [id]="btnOneId"
-          (click)="btnOneAction.emit()">
-           {{btnLabelOne}}
+        <button *ngIf="_visible == 'true'" class="suku-i suku-{{btnType}} {{btnOneCustomClass}}"
+          [ngClass]="{'disabled' : btnOneDisable}" [disabled]="btnOneDisable" [style.font-size.rem]="btnOneSize"
+          [style.font-weight]="btnOneWeight" [id]="btnOneId" (click)="btnOneAction.emit()">
+          {{btnLabelOne}}
         </button>
-        <button *ngIf="_visible == 'false'"  class="suku-i suku-{{btnType}} {{btnTwoCustomClass}}"
-          [ngClass]="{'disabled' : btnTwoDisable}"
-          [disabled]="btnTwoDisable" 
-          [style.font-size.rem]="btnTwoSize" 
-          [style.font-weight]="btnTwoWeight" 
-          [id]="btnTwoId"
-          (click)="btnTwoAction.emit()">
-           {{btnLabelTwo}}
+        <button *ngIf="_visible == 'false'" class="suku-i suku-{{btnType}} {{btnTwoCustomClass}}"
+          [ngClass]="{'disabled' : btnTwoDisable}" [disabled]="btnTwoDisable" [style.font-size.rem]="btnTwoSize"
+          [style.font-weight]="btnTwoWeight" [id]="btnTwoId" (click)="btnTwoAction.emit()">
+          {{btnLabelTwo}}
         </button>
-        <!-- <a *ngIf="_visible == 'true'" id="{{searchId}}" class="trackBtn f14" (click)="searchByProduct.emit()">
-          Search for product </a> -->
-        <!-- <a *ngIf="_visible == 'false'" [ngClass]="{'disabled': _disableBtn =='false' }" 
-          id="{{tracetheProductId}}"
-          class="trackBtn btn f14" (click)="traceproduct.emit(1)"> trace the
-          product </a> -->
       </span>
     </div>
   </div>

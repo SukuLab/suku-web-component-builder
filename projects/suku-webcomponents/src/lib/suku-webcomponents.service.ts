@@ -46,6 +46,9 @@ export const suku: Theme = {
     '--suku-progressbar-active-bg': '#a7bf2e',
     '--suku-progressbar-upcoming-bg': '#757575',
     '--suku-progressbar-completed-bg': '#1c1c1c',
+    '--suku-profile-bg-color': '#b6b6b6',
+    '--suku-profile-text-one': '#dcd8d8f0',
+    '--suku-profile-text-two': '#504e4e',
     '--suku-font-size-1': '11px', // 11px	0.75rem
     '--suku-font-size-2': '12px', // 12px	0.875rem
     '--suku-font-size-3': '14px', // 14px	1.0625rem

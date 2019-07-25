@@ -7,141 +7,46 @@ import { Component, OnInit, Input, EventEmitter, Output } from '@angular/core';
 })
 export class SukuProfileWidgetComponent implements OnInit {
   @Input() image = '../../assets/images/browser.png';
-	@Input('user-name') userName = 'Vairog';
-	@Input() nameWeight = '400';
-	@Input() nameCustomClass = 'mb-0 mt-1 pl-1';
-	@Input() nameSize = '33.4';
-	@Input() nameColor;
-	@Input('account-type') accountType = 'Manufacturer';
-	@Input() accountWeight = '400';
-	@Input() accountCustomClass = 'pl-2';
-	@Input() accountSize = '17';
-	@Input() accountColor = '';
-	@Input() ratingCustomClass = 'pl-2 mb-2 pt-3';
-	@Input() rateDetails = 'based on 14 rating';
-	@Input() rateColor = '';
-	@Input() ratingWeight = '400';
-  @Input() rDustomClass = 'pl-2';
+  @Input('user-name') userName = 'Vairog';
+  @Input('name-weight') nameWeight = '400';
+  @Input('name-custom-class') nameCustomClass = 'mb-0 mt-1 pl-1';
+  @Input('name-size') nameSize = '';
+  @Input('name-color') nameColor;
+  @Input('account-type') accountType = 'Manufacturer';
+  @Input('account-weight') accountWeight = '400';
+  @Input('account-custom-class') accountCustomClass = 'pl-2';
+  @Input('account-size') accountSize = '';
+  @Input('account-color') accountColor = '';
+  @Input('rating-custom-class') ratingCustomClass = 'pl-2 mb-2 pt-3 mt-4';
+  @Input('rate-details') rateDetails = 'based on 14 rating';
+  @Input('rate-color') rateColor = '';
+  @Input('rating-weight') ratingWeight = '400';
+  @Input('r-dustom-class') rDustomClass = 'pl-2';
   @Input() id = '';
+  @Input('sub-custom-class') subCustomClass = 'profileBox';
+  @Input('main-custom-class') mainCustomClass = 'col-sm-12 col-md-6 col-lg-3 ml-2 mt-1 p-0';
   myHTML;
-	_rate = 0;
-	@Output() rating = new EventEmitter();
-	@Input() customClass;
-	@Input()
-	set ratingValue(ratingValue: number) {
-		this._rate = ratingValue;
-		console.log('', this._rate);
-	}
-  constructor() {
-    this.callOfStarts(this._rate);
+  _rate = 5;
+  @Output() rating = new EventEmitter();
+  @Input() customClass;
+  fullStars = 0;
+  fullStarsArray = [];
+  halfStar = 0;
+  emptyStars = 0;
+  emptyStarsArray = [];
+  @Output() action = new EventEmitter();
+  @Input('rating-value')
+  // Calculate the number of full, half, and empty stars based on the ratingValue
+  // Arrays are created to iterate through with an ngFor in the HTML file
+  set ratingValue(ratingValue: number) {
+    this.fullStars = Math.round(ratingValue);
+    this.fullStarsArray = Array(this.fullStars).fill(1);
+    this.halfStar = (this.fullStars < ratingValue) ? 1 : 0;
+    this.emptyStars = 5 - this.fullStars - this.halfStar;
+    this.emptyStarsArray = Array(this.emptyStars).fill(1);
   }
-  callOfStarts(e) {
-		switch (true) {
-			case e === 0:
-				this.myHTML = `
-      <span class="fa fa-star-o f22"></span>
-      <span class="fa fa-star-o f22"></span>
-      <span class="fa fa-star-o f22"></span>
-      <span class="fa fa-star-o f22"></span>
-      <span class="fa fa-star-o f22"></span>
-      </div>`;
-				break;
-
-			case e <= 0.5:
-				this.myHTML = `
-      <span class="fa fa-star-half-empty starChecked f22"></span>
-      <span class="fa fa-star-o f22"></span>
-      <span class="fa fa-star-o f22"></span>
-      <span class="fa fa-star-o f22"></span>
-      <span class="fa fa-star-o f22"></span>
-      </div>`;
-				break;
-
-			case e > 0.5 && e <= 1:
-				this.myHTML = `
-      <span class="fa fa-star starChecked f22"></span>
-      <span class="fa fa-star-o f22"></span>
-      <span class="fa fa-star-o f22"></span>
-      <span class="fa fa-star-o f22"></span>
-      <span class="fa fa-star-o f22"></span> </div>`;
-				break;
-
-			case e <= 1.5:
-				this.myHTML = `
-      <span class="fa fa-star starChecked f22"></span>
-      <span class="fa fa-star-half-empty starChecked f22"></span>
-      <span class="fa fa-star-o f22"></span>
-      <span class="fa fa-star-o f22"></span>
-      <span class="fa fa-star-o f22"></span> </div>`;
-				break;
-
-			case e > 1.5 && e <= 2:
-				this.myHTML = `
-      <span class="fa fa-star starChecked f22"></span>
-      <span class="fa fa-star starChecked f22"></span>
-      <span class="fa fa-star-o f22"></span>
-      <span class="fa fa-star-o f22"></span>
-      <span class="fa fa-star-o f22"></span> </div>`;
-				break;
-
-			case e <= 2.5:
-				this.myHTML = `
-      <span class="fa fa-star starChecked f22"></span>
-      <span class="fa fa-star starChecked f22"></span>
-      <span class="fa fa-star-half-empty starChecked f22"></span>
-      <span class="fa fa-star-o f22"></span>
-      <span class="fa fa-star-o f22"></span> </div>`;
-				break;
-
-			case e > 2.5 && e <= 3:
-				this.myHTML = `
-      <span class="fa fa-star starChecked f22"></span>
-      <span class="fa fa-star starChecked f22"></span>
-      <span class="fa fa-star starChecked f22"></span>
-      <span class="fa fa-star-o f22"></span>
-      <span class="fa fa-star-o f22"></span> </div>`;
-				break;
-
-			case e <= 3.5:
-				this.myHTML = `
-      <span class="fa fa-star starChecked f22"></span>
-      <span class="fa fa-star starChecked f22"></span>
-      <span class="fa fa-star starChecked f22"></span>
-      <span class="fa fa-star-half-empty starChecked f22"></span>
-      <span class="fa fa-star-o f22"></span> </div>`;
-				break;
-
-			case e > 3.5 && e <= 4:
-				this.myHTML = `
-      <span class="fa fa-star starChecked f22"></span>
-      <span class="fa fa-star starChecked f22"></span>
-      <span class="fa fa-star starChecked f22"></span>
-      <span class="fa fa-star starChecked f22"></span>
-      <span class="fa fa-star-o f22"></span> </div>`;
-				break;
-
-			case e <= 4.5:
-				this.myHTML = `
-      <span class="fa fa-star starChecked f22"></span>
-      <span class="fa fa-star starChecked f22"></span>
-      <span class="fa fa-star starChecked f22"></span>
-      <span class="fa fa-star starChecked f22"></span>
-      <span class="fa fa-star-half-empty starChecked f22"></span>
-    </div>`;
-				break;
-			case e > 4.5 && e <= 5:
-				this.myHTML = `
-      <span class="fa fa-star starChecked f22"></span>
-      <span class="fa fa-star starChecked f22"></span>
-      <span class="fa fa-star starChecked f22"></span>
-      <span class="fa fa-star starChecked f22"></span>
-      <span class="fa fa-star starChecked f22"></span>
-       </div>`;
-				break;
-			default:
-				break;
-		}
-	}
+  constructor() {
+  }
 
   ngOnInit() {
   }

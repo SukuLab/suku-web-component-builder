@@ -68,7 +68,9 @@ import { SukuSubHeadingComponent } from './suku-sub-heading/suku-sub-heading.com
 import { SukuTermsAndConditionsComponent } from './suku-terms-and-conditions/suku-terms-and-conditions.component';
 import { SukuTitleHeaderComponent } from './suku-title-header/suku-title-header.component';
 import { SukuTrackProgressBarComponent } from './suku-track-progress-bar/suku-track-progress-bar.component';
+import { SukuGalleryComponent } from './suku-gallery/suku-gallery.component';
 import { SukuTreeComponent } from './suku-tree/suku-tree.component';
+
 @NgModule({
 	declarations: [
 		SukuCardLineComponent,
@@ -127,7 +129,8 @@ import { SukuTreeComponent } from './suku-tree/suku-tree.component';
 		SukuChatWidgetComponent,
 		ScrollToBottomDirective,
 		SukuLargeBidTagComponent,
-		SukuBidWidgetTagComponent
+		SukuBidWidgetTagComponent,
+		SukuGalleryComponent
 	],
 	imports: [
 		CommonModule,
@@ -234,6 +237,7 @@ import { SukuTreeComponent } from './suku-tree/suku-tree.component';
 		SukuChatWidgetComponent,
 		ScrollToBottomDirective,
 		SukuLargeBidTagComponent,
+		SukuGalleryComponent,
 		SukuButtonsModule,
 		SukuAddIconWidgetModule
 	],
