@@ -10,7 +10,7 @@ export const suku: Theme = {
   properties: {
     '--suku-primary-font': `'Poppins', sans-serif`,
     '--suku-secondary-font': `'Encode Sans', sans-serif`,
-    '--suku-ternary-font': `''abelregular', sans-serif`,
+    '--suku-ternary-font': `abelregular', sans-serif`,
     '--suku-primary-color': '#a7bf2e',
     '--suku-secondary-color': '#d8fc40',
     '--suku-warning-color': '#FF0000',

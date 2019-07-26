@@ -239,6 +239,7 @@ import { SukuTreeComponent } from './suku-tree/suku-tree.component';
 		SukuLargeBidTagComponent,
 		SukuGalleryComponent,
 		SukuButtonsModule,
+		SukuBidWidgetTagComponent,
 		SukuAddIconWidgetModule
 	],
 	entryComponents: [],

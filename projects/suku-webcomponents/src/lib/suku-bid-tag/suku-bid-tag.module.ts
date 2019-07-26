@@ -8,7 +8,8 @@ import { SukuBidTagComponent } from './suku-bid-tag.component';
     CommonModule
   ],
   declarations: [SukuBidTagComponent],
-  entryComponents: [SukuBidTagComponent]
+  entryComponents: [SukuBidTagComponent],
+  exports: [SukuBidTagComponent]
 })
 export class SukuBidTagModule {
   constructor(private injector: Injector) {

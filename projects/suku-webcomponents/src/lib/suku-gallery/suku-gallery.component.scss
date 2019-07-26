@@ -6,8 +6,8 @@ $small_width: 100%; //Slider width - small display
 $small_height: 55%; //Slider height - small display
 $small_nav_width: 5%; // Previous and Next width - small display
 
-$box-shadow: 0 11px 22px rgba(0, 0, 0, 0.20),
-0 7px 7px rgba(0, 0, 0, 0.24);
+$box-shadow: 0 0px 2px rgba(0, 0, 0, .2),
+0 1px 0px rgba(0, 0, 0, .24);
 $brown: #795548;
 $blue: #2196F3;
 $green: #4CAF50;
@@ -17,14 +17,14 @@ $nav_hover_color: rgba(255, 255, 255, 0);
 
 .imgcontainer {
   margin: 0 auto;
-  margin-top: 20px;
+  margin-top: 10px;
   position: relative;
   width: $big_width;
   height: 0;
   padding-bottom: $big_height;
   user-select: none;
-  background-color: #1c1c1c;
   box-shadow: $box-shadow;
+  background-color: #bfbfbf;
 
   input {
     display: none;
@@ -35,7 +35,7 @@ $nav_hover_color: rgba(255, 255, 255, 0);
     width: 100%;
     height: 100%;
     z-index: -1;
-    background: black;
+    background: white;
 
     img {
       height: inherit;
@@ -74,7 +74,7 @@ $nav_hover_color: rgba(255, 255, 255, 0);
       width: 1%;
       height: 1%;
       position: absolute;
-      top: 40%;
+      top: 45%;
       /* padding: 0%; */
       z-index: 99;
       transition: .45s;
@@ -82,7 +82,7 @@ $nav_hover_color: rgba(255, 255, 255, 0);
       /* text-align: center; */
       border-radius: 50%;
       /* left: 10px; */
-      background: #757575;
+      // background: #757575;
       padding: 4.5%;
 
 
@@ -90,17 +90,16 @@ $nav_hover_color: rgba(255, 255, 255, 0);
     }
 
     .next {
-      right: 2px;
+      right: 1px;
     }
 
     .prev {
-      left: 2px;
+      left: 1px;
     }
 
     .prev:hover,
     .next:hover {
       transition: .3s;
-      background-color: white;
     }
 
     .prev span,
@@ -377,7 +376,8 @@ svg {
 .pic {
   background-size: contain;
   border-radius: 5px;
-  &:hover{
+
+  &:hover {
     cursor: pointer;
   }
 }
@@ -392,8 +392,8 @@ svg {
 
 .icon-control-r {
   position: relative;
-  top: -12px;
-  right: -10px;
+  top: -10px;
+  right: -3px;
   font-size: 1rem;
 }
 
@@ -404,21 +404,6 @@ svg {
   font-size: 1rem;
 }
 
-// @media only screen and (min-width:1441px) {
-//   .icon-control-r {
-//     position: relative;
-//     top: -25px;
-//     right: -85px;
-//     font-size: 4.3rem;
-//   }
-
-//   .icon-control-l {
-//     position: relative;
-//     top: -25px;
-//     left: -3px;
-//     font-size: 4.3rem;
-//   }
-// }
 
 @media only screen and (max-width:1440px) {
   .icon-control-r {
@@ -495,37 +480,10 @@ svg {
 }
 
 
+.vid {
+  padding-bottom: 3%;
+}
 
-
-// .z1asCe {
-//   display: inline-block;
-//   fill: currentColor;
-//   height: 24px;
-//   line-height: 24px;
-//   position: relative;
-//   width: 24px;
-// }
-
-
-// .Q8Bv4e {
-//   cursor: pointer;
-//   position: absolute;
-//   height: 24px;
-//   opacity: 0.01;
-//   top: 8px;
-//   transition: opacity 350ms cubic-bezier(0.215,0.61,0.355,1);
-//   -webkit-user-select: none;
-//   width: 24px;
-//   z-index: 1;
-//   &:hover {
-//     opacity: 1;
-//   }
-// }
-
-// .MDG69d {
-//   pointer-events: none;
-//   fill: white;
-// }
 
 /* modal */
 
@@ -536,21 +494,32 @@ svg {
   transition: 0.3s;
 }
 
-#myImg:hover {opacity: 0.7;}
+#myImg:hover {
+  opacity: 0.7;
+}
 
 /* The Modal (background) */
 .modal {
-  display: none; /* Hidden by default */
-  position: fixed; /* Stay in place */
-  z-index: 100; /* Sit on top */
-  padding-top: 100px; /* Location of the box */
+  display: none;
+  /* Hidden by default */
+  position: fixed;
+  /* Stay in place */
+  z-index: 100;
+  /* Sit on top */
+  padding-top: 100px;
+  /* Location of the box */
   left: 0;
   top: 0;
-  width: 100%; /* Full width */
-  height: 100%; /* Full height */
-  overflow: auto; /* Enable scroll if needed */
-  background-color: rgb(0,0,0); /* Fallback color */
-  background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+  width: 100%;
+  /* Full width */
+  height: 100%;
+  /* Full height */
+  overflow: auto;
+  /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0);
+  /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.9);
+  /* Black w/ opacity */
 }
 
 /* Modal Content (Image) */
@@ -574,14 +543,20 @@ svg {
 }
 
 /* Add Animation - Zoom in the Modal */
-.modal-content, #caption { 
+.modal-content,
+#caption {
   animation-name: zoom;
   animation-duration: 0.6s;
 }
 
 @keyframes zoom {
-  from {transform:scale(0)} 
-  to {transform:scale(1)}
+  from {
+    transform: scale(0)
+  }
+
+  to {
+    transform: scale(1)
+  }
 }
 
 /* The Close Button */
@@ -603,7 +578,7 @@ svg {
 }
 
 /* 100% Image Width on Smaller Screens */
-@media only screen and (max-width: 700px){
+@media only screen and (max-width: 700px) {
   .modal-content {
     width: 100%;
   }

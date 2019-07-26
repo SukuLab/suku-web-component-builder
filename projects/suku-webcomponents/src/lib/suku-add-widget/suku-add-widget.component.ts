@@ -12,7 +12,7 @@ export class SukuAddWidgetComponent implements OnInit {
 	@Input() weight = '500';
 	@Input() customClass = 'pl-3 mt-auto mb-auto';
 	@Input('icon') icon = 'suku-plus-icon';
-	@Input('icon-id') iconId = 'phoneIcon';
+	@Input('icon-id') iconId = 'plusIcon';
 	@Input('icon-custom-class') iconCustomClass = 'icon';
 	@Input('widget-custom-class') widgetCustomClass = 'col';
 	@Output() action = new EventEmitter();
