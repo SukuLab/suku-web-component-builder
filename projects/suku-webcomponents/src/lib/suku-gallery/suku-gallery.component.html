@@ -33,16 +33,49 @@
   <div *ngFor="let item of gallery;let i= index">
     <input type="radio" id="i{{1}}" name="images" [checked]='item?.checked' />
     <div class="slide_img" [ngClass]="{'checked': item?.checked }" id="item{{i}}">
-      <img *ngIf="item?.type == 'image'" src="{{item?.link}}">
-      <video #video *ngIf="item?.type == 'video'" width="100%" height="100%" src="{{item?.link}}" controls>
+      <img class="pic" (click)="preview(item)" *ngIf="item?.type == 'image'" src="{{item?.link}}">
+      <video #video (click)="preview(item)" *ngIf="item?.type == 'video'" width="100%" height="100%" src="{{item?.link}}" controls>
         Your browser does not support the video tag.
       </video>
-      <label class="prev" *ngIf="prevBtnVisible" (click)="active(i,'prev')" for="i{{i}}"><span></span></label>
-      <label class="next" *ngIf="nextBtnVisible" (click)="active(i,'next')" for="i{{i+1}}"><span></span></label>
+      <label class="prev" *ngIf="prevBtnVisible" (click)="active(i,'prev')" for="i{{i}}"><span class="icon-left">
+          <i class="fa fa-chevron-left icon-control-l"></i>
+      </span></label>
+      <label class="next" *ngIf="nextBtnVisible" (click)="active(i,'next')" for="i{{i+1}}"><span class="icon-right">
+          <i class="fa fa-chevron-right icon-control-r"></i>
+      </span></label>
     </div>
   </div>
+  <!-- <div id="scrollDiv">
+  <div id="carousel">
+    <div class="slide" *ngFor="let item of gallery;let i= index">
+        <img *ngIf="item?.type == 'image'" class="imgWidget" src="{{item?.link}}">
+        <video #video *ngIf="item?.type == 'video'" class="imgWidget" width="100%" height="100%" src="{{item?.link}}"
+          controls>
+          Your browser does not support the video tag.
+        </video>
+    </div>
+    </div>
+  </div> -->
 </div>
-<div class="col">
+
+
+
+
+<img id="myImg"  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSLIJXakzsFcGAsLMqlbwWFZtZqrliH6rJN6HdWAHPfW36EQF08" alt="Snow" style="width:100%;max-width:300px">
+
+<!-- The Modal -->
+<div id="myModal" class="modal">
+  <span class="close" (click)="closeModal()">&times;</span>
+  <img class="modal-content" id="img01">
+  <video #video width="100%" height="100%"  id="vid"  controls>
+      Your browser does not support the video tag.
+    </video>
+  <div id="caption"></div>
+</div>
+
+
+
+<!-- <div class="col">
   <div class="s-thumbs-container row">
     <div class="s-slider">
       <div *ngFor="let item of gallery;let i= index">
@@ -54,7 +87,10 @@
       </div>
     </div>
   </div>
-</div>
+</div> -->
+
+
+
 
 
 <!-- <input type="radio" id="i1" name="images" checked />
