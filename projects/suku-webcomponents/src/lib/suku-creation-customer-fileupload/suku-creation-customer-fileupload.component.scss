@@ -1,14 +1,6 @@
-@import url('https://fonts.googleapis.com/css?family=Poppins:200i,400,700');
-@import url('https://fonts.googleapis.com/css?family=Encode+Sans:200i,400,700');
-
-$poppins: 'Poppins',
-sans-serif !important;
-$encodeSans: 'Encode Sans',
-sans-serif !important;
-
+@import '../theme/theme';
 
 /* upload box css */
-
 .display-2 {
     font-size: 5.2rem !important;
     line-height: 1.5 !important;
@@ -52,7 +44,7 @@ sans-serif !important;
     color: black;
     border-radius: 29px 77px 61px;
     font-weight: 900;
-    font-family: $poppins;
+    font-family: $suku-primary-font;
     font-size: 1.5rem;
 }
 
@@ -133,7 +125,7 @@ fieldset[disabled] .btn-info.focus {
 }
 
 .add {
-    font-family: $poppins;
+    font-family: $suku-primary-font;
     font-size: 1.7rem;
     font-weight: 400;
     font-style: normal;
@@ -148,12 +140,12 @@ fieldset[disabled] .btn-info.focus {
 }
 
 .docText {
-    font-family: $poppins;
+    font-family: $suku-primary-font;
     letter-spacing: 0.1px;
 }
 
 label.titleClass {
-    font-family: $poppins;
+    font-family: $suku-primary-font;
     ;
     font-size: 20px;
     font-weight: bold;
@@ -164,7 +156,7 @@ label.titleClass {
 }
 
 .preFont {
-    font-family: $encodeSans;
+    font-family: $suku-secondary-font;
     letter-spacing: 0.1px;
     font-size: 14px;
 }

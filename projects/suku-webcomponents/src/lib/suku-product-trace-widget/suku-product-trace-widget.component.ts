@@ -27,6 +27,7 @@ export class SukuProductTraceWidgetComponent implements OnInit {
   isSearch = false;
   _result;
   i;
+  @Input() color = 'primary';
   @Input('label-one') labelOne;
   @Input('label-one-id') labelOneId = 'traceMethod1';
   @Input('label-one-custom-class') labelOneCustomClass;
@@ -58,10 +59,12 @@ export class SukuProductTraceWidgetComponent implements OnInit {
   @Input('btn-two-disable') btnTwoDisable: Boolean;
   @Output() btnTwoAction = new EventEmitter();
 
+  @Input('message-one') messageOne = 'products found with the above number';
+  @Input('message-two') messageTwo = 'please select one';
+
   /* suku-btn */
   @Input() control;
-  @Input() searchId = 'searchProduct';
-  @Input() productId = 'tracetheProduct';
+  @Input('radio-form-control') radioFormControl;
   @Input() traceMethodRadio = 'method';
   @Input() tracetheProductId = '';
   @Output() searchFun = new EventEmitter();
@@ -76,7 +79,7 @@ export class SukuProductTraceWidgetComponent implements OnInit {
     this._disableBtn = val;
   }
   @Input() productdetails = [];
-  // get productdetails() {
+  // get () {
   //   return this._data;
   // }
   // set productdetails(val) {
@@ -110,8 +113,8 @@ export class SukuProductTraceWidgetComponent implements OnInit {
     this.selectedItem = newValue;
   }
 
-  constructor() {}
+  constructor() { }
 
-  ngOnInit() {}
+  ngOnInit() { }
 
 }

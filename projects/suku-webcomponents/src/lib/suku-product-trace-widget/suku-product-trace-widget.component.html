@@ -13,20 +13,27 @@
     </div>
     <div class="col-sm-12 pl-3 pb-2 pt-2 p-0 searchBorderBox">
       <input type="text" [id]="searchInputId" class="searchbox" formControlName="{{control}}" name="{{control}}"
-        (keyup)="searchFun.emit(isSearch)">
-      <span class="float-right"><i class="fa fa-search {{searchIconCustomClass}}"></i></span>
+        (keyup)="searchFun.emit(isSearch)" (keyup.enter)="btnOneAction.emit()">
+      <span class="float-right pr-3"><i class="fa fa-search {{searchIconCustomClass}}"></i></span>
     </div>
-    <p class="resultCount" *ngIf="_result == 'true'">{{productdetails?.length}} products found with the above number.
+    <p class="resultCount" *ngIf="_result == 'true'">{{productdetails?.length}} {{messageOne}}.
     </p>
     <div *ngIf="_visible == 'false'">
-      <p class="responseInfo" *ngIf="productdetails?.length > 0 ? true : false ">please select one</p>
+      <p class="responseInfo" *ngIf="productdetails?.length > 0 ? true : false ">{{messageTwo}}</p>
       <div class="heightTab" id="scrollDiv">
-        <div class="col" *ngFor="let products of productdetails">
-          <mat-radio-button class="searchData" value="2" (click)="selectproducts.emit(products)"
-            (click)="showSelectedPro(products)"> {{products?.asset?.description}}<br>
-            {{products?.asset?.name}}<br></mat-radio-button>
-          <hr>
-        </div>
+        <mat-radio-group class="example-radio-group" [formControlName]="radioFormControl">
+          <div class="col" *ngFor="let products of productdetails;let productIndex=index">
+            <mat-radio-button class="searchData" [color]="color" (click)="selectproducts.emit(products)"
+              [value]="productIndex" id="product{{productIndex}}">
+              <span class="col p-0 product-label">
+                {{products?.asset?.description}}
+                <br/>
+                {{products?.asset?.name}}
+              </span>
+            </mat-radio-button>
+            <hr>
+          </div>
+        </mat-radio-group>
       </div>
     </div>
     <div class="col-sm-12 mb-2 text-center pt-3 mt-3 pb-1">

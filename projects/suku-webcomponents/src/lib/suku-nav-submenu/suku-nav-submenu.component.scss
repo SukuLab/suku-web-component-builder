@@ -1,7 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Poppins:200i,400,700');
-
-$poppins: 'Poppins',
-sans-serif !important;
+@import '../theme/theme';
 
 .header-main .sub-menu-bar {
   width: 100%;
@@ -31,7 +28,7 @@ sans-serif !important;
 .header-main .sub-menu nav ul li {
   height: 30px;
   float: left;
-  font-family: $poppins;
+  font-family: $suku-primary-font;
   font-size: 15px;
   color: rgba(255, 255, 255, 0.5);
   line-height: 2px;
@@ -55,7 +52,7 @@ sans-serif !important;
   position: relative;
   padding: 22px 37px 20px 37px;
   border-radius: 28px 76px 63px;
-  font-family: $poppins;
+  font-family: $suku-primary-font;
 }
 
 .header-main .sub-menu nav ul li a:before {

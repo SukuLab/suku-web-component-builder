@@ -14,71 +14,71 @@ export class SukuGalleryComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    this.gallery = [
-      {
-        index: 'one',
-        type: 'image',
-        checked: true,
-        link:
-          'https://leiscreekcattleco.com/wp-content/uploads/2018/10/WhyAkaushiPhoto.jpg'
-      },
-      {
-        index: 'two',
-        type: 'image',
-        checked: false,
-        link:
-          'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQaurornWO8dpOQVsH3hxOjonAzHbbcMsOA0g6_ziGZVT92HBsP'
-      },
-      {
-        index: 'three',
-        type: 'video',
-        checked: false,
-        link:
-          'http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4'
-      },
-      {
-        index: 'four',
-        type: 'image',
-        checked: false,
-        link:
-          'https://www.uaex.edu/farm-ranch/animals-forages/images/baldy%20with%20calf%20square.JPG'
-      },
-      {
-        index: 's',
-        type: 'video',
-        checked: false,
-        link:
-          'http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4'
-      },
-      {
-        index: 'one',
-        type: 'image',
-        checked: false,
-        link:
-          'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRaXN6xiu-IvpxOb93cBuTrqJwXM5IcMStHAMKpMLXx7K6qfENb'
-      },
-      {
-        index: 'one',
-        type: 'image',
-        checked: false,
-        link:
-          'https://upload.wikimedia.org/wikipedia/commons/f/f6/Limia_cattle.jpg'
-      },
-      {
-        index: 'one',
-        type: 'image',
-        checked: false,
-        link:
-          'http://www.broken-spur-ranch.com/Sites/10/image/Zabaco%20Feb.%20-%20Copy.jpg'
-      },
-      {
-        index: 'two',
-        type: 'image',
-        checked: false,
-        link:
-          'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSLIJXakzsFcGAsLMqlbwWFZtZqrliH6rJN6HdWAHPfW36EQF08'
-      }
-    ];
+    // this.gallery = [
+    //   {
+    //     index: 'one',
+    //     type: 'image',
+    //     checked: true,
+    //     link:
+    //       'https://leiscreekcattleco.com/wp-content/uploads/2018/10/WhyAkaushiPhoto.jpg'
+    //   },
+    //   {
+    //     index: 'two',
+    //     type: 'image',
+    //     checked: false,
+    //     link:
+    //       'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQaurornWO8dpOQVsH3hxOjonAzHbbcMsOA0g6_ziGZVT92HBsP'
+    //   },
+    //   {
+    //     index: 'three',
+    //     type: 'video',
+    //     checked: false,
+    //     link:
+    //       'http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4'
+    //   },
+    //   {
+    //     index: 'four',
+    //     type: 'image',
+    //     checked: false,
+    //     link:
+    //       'https://www.uaex.edu/farm-ranch/animals-forages/images/baldy%20with%20calf%20square.JPG'
+    //   },
+    //   {
+    //     index: 's',
+    //     type: 'video',
+    //     checked: false,
+    //     link:
+    //       'http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4'
+    //   },
+    //   {
+    //     index: 'one',
+    //     type: 'image',
+    //     checked: false,
+    //     link:
+    //       'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRaXN6xiu-IvpxOb93cBuTrqJwXM5IcMStHAMKpMLXx7K6qfENb'
+    //   },
+    //   {
+    //     index: 'one',
+    //     type: 'image',
+    //     checked: false,
+    //     link:
+    //       'https://upload.wikimedia.org/wikipedia/commons/f/f6/Limia_cattle.jpg'
+    //   },
+    //   {
+    //     index: 'one',
+    //     type: 'image',
+    //     checked: false,
+    //     link:
+    //       'http://www.broken-spur-ranch.com/Sites/10/image/Zabaco%20Feb.%20-%20Copy.jpg'
+    //   },
+    //   {
+    //     index: 'two',
+    //     type: 'image',
+    //     checked: false,
+    //     link:
+    //       'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSLIJXakzsFcGAsLMqlbwWFZtZqrliH6rJN6HdWAHPfW36EQF08'
+    //   }
+    // ];
   }
 
   active(i, position) {

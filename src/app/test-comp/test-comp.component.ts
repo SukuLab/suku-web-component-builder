@@ -157,6 +157,8 @@ export class TestCompComponent implements OnInit {
     this.form = this.fb.group({
       'search': '',
       'trace': '',
+      'productId': '',
+      'productList': '',
       'owner': this.fb.array([]),
       'beneficialCheckBox': ''
     });

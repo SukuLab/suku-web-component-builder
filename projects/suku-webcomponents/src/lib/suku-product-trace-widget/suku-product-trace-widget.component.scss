@@ -48,10 +48,21 @@
     outline: none;
   }
 }
+.product-label {
+  white-space: normal;
+  vertical-align: middle;
+  text-align: justify;
+}
 
 @media only screen and (max-width:319px) {
   .searchbox {
     width: 70%;
+  }
+}
+
+@media only screen and (max-width:1024px) {
+  .searchbox {
+    width: 83%;
   }
 }
 

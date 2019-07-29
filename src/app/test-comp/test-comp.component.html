@@ -7,7 +7,7 @@
       label-three="Product Identification Number"></suku-product-trace-widget> -->
     <!-- <suku-mail-widget></suku-mail-widget> -->
     <!-- <suku-payment-portal-help></suku-payment-portal-help> -->
-    <div class="col-sm-5 pb-3">
+    <div class="col-sm-3 pb-3">
       <!-- <suku-track-progress-bar></suku-track-progress-bar> -->
       <!-- <suku-secondary-button>Test</suku-secondary-button> -->
       <!-- <suku-response></suku-response> -->
@@ -30,12 +30,9 @@
     </div>
   </div>
   <!-- <suku-terms-and-conditions></suku-terms-and-conditions> -->
+  <suku-product-trace-widget label-one="TRACE METHOD #1" label-two="Product ID:"
+    label-three="Product Identification Number" [form]="form" searchId="searchByproductId" productId="traceByproductId"
+    traceMethodRadio="radioByproductId" control="productId" [visible]="'false'" radio-form-control="productList" 
+    [productdetails]="data">
+  </suku-product-trace-widget>
 </form>
-
-<!-- <suku-product-trace-widget head-name="TRACE METHOD #1" name="Product ID:" sub-Head-Name="Product Identification Number"
-[form]="ProductSearchComponent" searchId="searchByproductId" productId="traceByproductId"
-traceMethodRadio="radioByproductId" control="productId" (searchFun)="showResultsForID(search)"
-productdetails="{{productJsonArrayForId}}" disableBtn="{{disableBtnForID}}" (searchByProduct)="searchByProductnameForID()"
-(selectproducts)="selectproductsDataForID($event)" visible="{{searchTraceToggleForID}}" result="{{searchResultForID}}"
-(traceproduct)="traceProductForID()">
-</suku-product-trace-widget> -->
