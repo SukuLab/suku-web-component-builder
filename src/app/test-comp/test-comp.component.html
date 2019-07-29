@@ -1,18 +1,25 @@
 <form [formGroup]="form">
   <div class="col pb-4 pt-3">
-    <!-- <suku-search-input [form]="form" control="search" (searchOnEnter)="search()">
-      </suku-search-input> -->
+    <suku-search-input [form]="form" control="search" (searchOnEnter)="search()">
+    </suku-search-input>
     <!-- <suku-product-trace-widget [form]="form" control='search' label-one="TRACE METHOD #1" 
       label-two="Product ID:"   visible = "true" btn-one-disable="true" [productdetails]='data'
       label-three="Product Identification Number"></suku-product-trace-widget> -->
     <!-- <suku-mail-widget></suku-mail-widget> -->
     <!-- <suku-payment-portal-help></suku-payment-portal-help> -->
-    <div class="col-sm-3 pb-3">
+    <div class="col-sm-10 pb-3 pt-3">
       <!-- <suku-track-progress-bar></suku-track-progress-bar> -->
       <!-- <suku-secondary-button>Test</suku-secondary-button> -->
       <!-- <suku-response></suku-response> -->
       <!-- <suku-profile-widget rating-value="5"></suku-profile-widget> -->
-      <suku-gallery></suku-gallery>
+
+      <suku-gallery [gallery]="gallery" gallery-id="demo"></suku-gallery>
+      <suku-gallery [gallery]="gallery" gallery-id="p"></suku-gallery>
+
+
+      <!-- <suku-gallery [gallery]="gallery" id="demo1"></suku-gallery> -->
+
+      <suku-header></suku-header>
       <!-- <suku-dropdown></suku-dropdown> -->
       <!-- <suku-add-widget>Add new listing</suku-add-widget> -->
       <!-- <suku-progress-bar-type-two></suku-progress-bar-type-two> -->
@@ -21,18 +28,31 @@
       <!-- <suku-star-badge>3</suku-star-badge> -->
       <!-- <suku-card-title></suku-card-title> -->
       <!-- <suku-match-chip></suku-match-chip> -->
-      <!-- <suku-card-line-type-one></suku-card-line-type-one> -->
+
       <!-- <suku-card-line-type-two></suku-card-line-type-two> -->
       <!-- <suku-transaction-history></suku-transaction-history> -->
       <!-- <suku-title-header>Listing Name</suku-title-header> -->
+
       <!-- <suku-terms-and-conditions></suku-terms-and-conditions> -->
       <!-- <suku-dropdown [data]="dropDownData" displayKey='templateName' [form]="form" control="search"></suku-dropdown> -->
     </div>
+
+
+  </div>
+  <div class="col-sm-10 p-0 pt-2 mt-3">
+    <suku-card-line-type-one></suku-card-line-type-one>
+  </div>
+  <div class="col-sm-2 mt-3">
+    <suku-homepage-button suku-button-custom-class="active" [button-data]="buttonData"></suku-homepage-button>
+    <!-- <suku-info-button custom-class="w-100" type="default">login</suku-info-button> -->
   </div>
   <!-- <suku-terms-and-conditions></suku-terms-and-conditions> -->
-  <suku-product-trace-widget label-one="TRACE METHOD #1" label-two="Product ID:"
-    label-three="Product Identification Number" [form]="form" searchId="searchByproductId" productId="traceByproductId"
-    traceMethodRadio="radioByproductId" control="productId" [visible]="'false'" radio-form-control="productList" 
-    [productdetails]="data">
-  </suku-product-trace-widget>
 </form>
+
+<!-- <suku-product-trace-widget head-name="TRACE METHOD #1" name="Product ID:" sub-Head-Name="Product Identification Number"
+[form]="ProductSearchComponent" searchId="searchByproductId" productId="traceByproductId"
+traceMethodRadio="radioByproductId" control="productId" (searchFun)="showResultsForID(search)"
+productdetails="{{productJsonArrayForId}}" disableBtn="{{disableBtnForID}}" (searchByProduct)="searchByProductnameForID()"
+(selectproducts)="selectproductsDataForID($event)" visible="{{searchTraceToggleForID}}" result="{{searchResultForID}}"
+(traceproduct)="traceProductForID()">
+</suku-product-trace-widget> -->

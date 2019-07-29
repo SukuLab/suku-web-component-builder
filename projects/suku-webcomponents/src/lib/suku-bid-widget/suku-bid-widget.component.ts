@@ -21,11 +21,11 @@ export class SukuBidWidgetTagComponent implements OnInit {
   @Input('min-qtylabel') minQtyLabel = '';
   @Input('title-text') titleText = 'Original Ask';
   @Input() documents = [];
-  @Input('custom-class') customClass = 'col';
+  @Input('custom-class') customClass = 'col p-0';
   @Input('price-font-size') priceFontSize = '50px';
   @Input('price-font-color') priceFontColor = '#ffffff';
   @Input('list-font-color') listFontColor = '';
-  @Input('list-font-size') listFontSize = '16';
+  @Input('list-font-size') listFontSize = '1.5';
   @Input('bid-title-font-color') bidTitleFontColor = '';
   @Input('bid-title-font-size') bidTitleFontSize = '';
   @Input('bid-detail-font-color') bidDetailFontColor = '';
@@ -43,7 +43,7 @@ export class SukuBidWidgetTagComponent implements OnInit {
   @Input('bid-details-custom-class') bidDetailCustomClass = 'bid-details';
   @Input('article-alignment-custom-class') articleAlignmentCustomClass =
     'article';
-  constructor() {}
+  constructor() { }
 
-  ngOnInit() {}
+  ngOnInit() { }
 }

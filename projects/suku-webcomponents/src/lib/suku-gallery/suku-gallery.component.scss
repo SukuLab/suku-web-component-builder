@@ -466,7 +466,6 @@ svg {
   position: relative;
   width: 89%;
   height: 30vh;
-  /* background-color: #bfbfbf; */
 }
 
 
@@ -489,7 +488,7 @@ svg {
   /* Hidden by default */
   position: fixed;
   /* Stay in place */
-  z-index: 100;
+  z-index: 500;
   /* Sit on top */
   padding-top: 100px;
   /* Location of the box */
@@ -505,6 +504,9 @@ svg {
   /* Fallback color */
   background-color: rgba(0, 0, 0, 0.9);
   /* Black w/ opacity */
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
 }
 
 /* Modal Content (Image) */
@@ -514,22 +516,20 @@ svg {
   align-items: center;
   width: 80%;
   max-width: 50vh;
+
   &:hover {
-    transition: .45s;
-    // transition: transform 3s ease-in-out;
+    transition: .45s ease-in-out;
     max-width: 65vh;
   }
 }
 
 /* Caption of Modal Image (Image Text) - Same Width as the Image */
 #caption {
-  margin: auto;
   display: block;
   width: 80%;
   max-width: 700px;
   text-align: center;
   color: #ccc;
-  padding: 10px 0;
   height: 150px;
 }
 
@@ -573,7 +573,8 @@ svg {
   .modal-content {
     width: 100%;
   }
-  .carousel{
+
+  .carousel {
     display: flex;
     justify-content: center;
   }
@@ -586,16 +587,17 @@ svg {
   background-size: 46% 50%;
 }
 
-.carousel-control-prev, .carousel-control-next {
-  background: #0a0909 no-repeat center center;
-  border-radius: 50%;
-  width: 24px;
-  height: 24px;
-  margin-top: auto;
-  margin-bottom: auto;
-  margin-right: 2%;
-  margin-left: 2%;
-}
+// .carousel-control-prev,
+// .carousel-control-next {
+//   background: #0a0909 no-repeat center center;
+//   border-radius: 50%;
+//   width: 24px;
+//   height: 24px;
+//   margin-top: auto;
+//   margin-bottom: auto;
+//   margin-right: 2%;
+//   margin-left: 2%;
+// }
 
 .carousel-control-next-icon {
   width: 32px;
@@ -608,38 +610,113 @@ svg {
   position: relative;
   width: 100%;
   overflow: hidden;
-  height:38vh;
+  height: 14.5rem;
+  // height:38vh;
   background: #ffffff;
   box-shadow: 0px 2px 3px -2px #00000f4f;
   border: 1px solid #f2f2f2;
 }
 
-// .carousel-control-prev-icon {
-//   display: inline-block;
-//   width: 48px;
-//   height: 59px;
-//   background: #0a0909 no-repeat center center;
-//   /* background-size: 100% 100%; */
-//   color: black;
-//   padding: 7%;
-// }
+/* icon */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  height: 40px;
+  width: 60px;
+  outline: black;
+  background-size: 100%, 100%;
+  border-radius: 50%;
+  // border: 1px solid black;
+  background-image: none;
+  margin-top: 20px;
+  text-align: center;
+  // display: inline-flex;
+  // justify-content: center;
+  // align-items: center;
+}
+
+.carousel-control-prev-icon {
+  margin-right: 0.1rem;
+}
+
+.carousel-control-next-icon {
+  margin-left: 0.1rem;
+}
+
+.carousel-control-next-icon:after {
+  text-align: center;
+  background-color: white;
+  content: '\f054';
+  font-family: FontAwesome;
+  color: black;
+  background-size: 50% 50%;
+  -moz-box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.5);
+  -webkit-box-shadow: 1px 2px 4px rgba(0, 0, 0, .5);
+  box-shadow: 1px 2px 4px rgba(0, 0, 0, .5);
+  border-radius: 50%;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 4px;
+  height: 30px;
+  width: 30px;
+}
+
+.carousel-control-prev-icon:after {
+  content: '\f053';
+  font-family: FontAwesome;
+  background-color: white;
+  color: black;
+  width: 100px;
+  height: 100px;
+  background-size: 50% 50%;
+  // height: 24px;
+  -moz-box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.5);
+  -webkit-box-shadow: 1px 2px 4px rgba(0, 0, 0, .5);
+  box-shadow: 1px 2px 4px rgba(0, 0, 0, .5);
+  border-radius: 50%;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 4px;
+  height: 30px;
+  width: 30px;
+}
+
+
+/* icon -end */
+.default-container {
+  height: 190px;
+  width: 300px;
+}
+
+.default-pic {
+  height: 162px !important;
+}
+
+.default-vid {
+  height: 170px !important;
+}
+
 .carousel-item {
-  transition:none !important;
+  transition: none !important;
 }
 
 .slide_img {
-  margin: 4% auto;
+  margin: 5% auto;
   position: relative;
   width: $big_width;
-  height: 0;
   background-color: #bfbfbf;
 }
 
-.pic{
+.pic {
   background-size: contain;
   border-radius: 5px;
   margin: auto;
   width: 100%;
-  height: 32vh;
+  height: 12rem;
+  // height: 32vh;
   z-index: 99;
 }
+
+
+/* new css */

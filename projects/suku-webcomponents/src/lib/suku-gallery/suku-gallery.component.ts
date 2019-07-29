@@ -7,6 +7,16 @@ import { Component, ElementRef, OnInit, ViewChild, Input } from '@angular/core';
 })
 export class SukuGalleryComponent implements OnInit {
   @Input() gallery = [];
+  @Input() size = 'default';
+  @Input('gallery-id') galleryId = 'demo';
+  @Input('carousel-height') carouselHeight;
+  @Input('carousel-width') carouselWidth;
+  @Input('img-height') imgHeight;
+  @Input('img-width') imgWidth;
+  @Input('vid-height') vidHeight;
+  @Input('vid-width') vidWidth;
+  @Input('control-next-icon-customclass') controlNextIconCustomClass;
+  @Input('control-prev-icon-customclass') controlPrevIconCustomClass;
   prevBtnVisible = true;
   nextBtnVisible = true;
   autoplay = false;
@@ -131,16 +141,11 @@ export class SukuGalleryComponent implements OnInit {
 
   preview(e) {
     console.log('link', e);
-    // Get the modal
-    const modal = document.getElementById('myModal');
-    // Get the image and insert it inside the modal - use its "alt" text as a caption
-    const img = document.getElementById('myImg');
+    const modal = document.getElementById('myGalleryModal');
     const modalImg = <HTMLInputElement>document.getElementById('img01');
     const modalVid = <HTMLInputElement>document.getElementById('vid');
-    const captionText = document.getElementById('caption');
-    // img.onclick = function() {
     modal.style.display = 'block';
-    if ((e.type == 'image')) {
+    if (e.type == 'image') {
       modalImg.src = e.link;
       modalImg.style.display = 'block';
       modalVid.style.display = 'none';
@@ -152,9 +157,8 @@ export class SukuGalleryComponent implements OnInit {
   }
 
   closeModal() {
-    const modal = document.getElementById('myModal');
+    const modal = document.getElementById('myGalleryModal');
     modal.style.display = 'none';
-    const span = document.getElementsByClassName('close')[0];
   }
 
   start() {
@@ -164,5 +168,6 @@ export class SukuGalleryComponent implements OnInit {
       (<HTMLInputElement>document.getElementById('i' + i)).checked = true;
     }
   }
+
 }
 

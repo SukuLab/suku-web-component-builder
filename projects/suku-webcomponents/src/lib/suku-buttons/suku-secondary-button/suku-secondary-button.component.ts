@@ -7,7 +7,7 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 })
 export class SukuSecondaryButtonComponent implements OnInit {
 	@Input() id;
-	@Input() size = 1;
+	@Input() size = 1.5;
 	@Input() weight;
 	@Input() color;
 	@Input('custom-class') customClass;
