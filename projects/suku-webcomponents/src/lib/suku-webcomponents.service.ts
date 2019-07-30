@@ -10,7 +10,7 @@ export const suku: Theme = {
   properties: {
     '--suku-primary-font': `'Poppins', sans-serif`,
     '--suku-secondary-font': `'Encode Sans', sans-serif`,
-    '--suku-ternary-font': `abelregular', sans-serif`,
+    '--suku-ternary-font': `'abelregular', sans-serif`,
     '--suku-primary-color': '#a7bf2e',
     '--suku-secondary-color': '#d8fc40',
     '--suku-warning-color': '#FF0000',
@@ -30,6 +30,7 @@ export const suku: Theme = {
     '--suku-text-link': '#3e3e3e',
     '--suku-text-info': '#757575',
     '--suku-primary-border-color': '#a7bf2e',
+    '--suku-default-border-color': '#e2e2e2',
     '--suku-secondary-border-color': '#757575',
     '--suku-primary-border-radius': '0 40px 0 0',
     '--suku-secondary-border-radius': '0px 0px 41px 41px',
@@ -49,17 +50,17 @@ export const suku: Theme = {
     '--suku-profile-bg-color': '#b6b6b6',
     '--suku-profile-text-one': '#dcd8d8f0',
     '--suku-profile-text-two': '#504e4e',
-    '--suku-font-size-1': '11px', // 11px	0.75rem
-    '--suku-font-size-2': '12px', // 12px	0.875rem
-    '--suku-font-size-3': '14px', // 14px	1.0625rem
-    '--suku-font-size-4': '15px', // 14px	1.0625rem
-    '--suku-font-size-5': '17px', // 20px	1.25rem
-    '--suku-font-size-6': '20px', // 24px	1.5rem
-    '--suku-font-size-7': '22px', // 26px	1.625rem
-    '--suku-font-size-8': '24px', // 26px	1.625rem
-    '--suku-font-size-9': '26px', // 30px	1.875rem
-    '--suku-font-size-10': '30px', // 30px	1.875rem
-    '--suku-font-size-11': '50px'  // 50px	1.875rem
+    '--suku-font-size-1': '11px', // 0.75rem
+    '--suku-font-size-2': '12px', // 0.875rem
+    '--suku-font-size-3': '14px', // 1.0625rem
+    '--suku-font-size-4': '15px', // 1.0625rem
+    '--suku-font-size-5': '17px', // 1.25rem
+    '--suku-font-size-6': '20px', // 1.5rem
+    '--suku-font-size-7': '22px', // 1.625rem
+    '--suku-font-size-8': '24px', // 1.625rem
+    '--suku-font-size-9': '26px', // 1.875rem
+    '--suku-font-size-10': '30px', // 1.875rem
+    '--suku-font-size-11': '50px'  // 1.875rem
   }
 };
 

@@ -70,6 +70,7 @@ import { SukuTitleHeaderComponent } from './suku-title-header/suku-title-header.
 import { SukuTrackProgressBarComponent } from './suku-track-progress-bar/suku-track-progress-bar.component';
 import { SukuGalleryComponent } from './suku-gallery/suku-gallery.component';
 import { SukuTreeComponent } from './suku-tree/suku-tree.component';
+import { SukuFileUploadModule } from './suku-file-upload/suku-file-upload.module';
 
 @NgModule({
 	declarations: [
@@ -177,7 +178,8 @@ import { SukuTreeComponent } from './suku-tree/suku-tree.component';
 		SukuBidTagModule,
 		SukuButtonsModule,
 		SukuFormFooterModule,
-		SukuLoaderModule
+		SukuLoaderModule,
+		SukuFileUploadModule
 	],
 	providers: [SukuModalService, SukuLoaderService],
 	exports: [
@@ -240,7 +242,9 @@ import { SukuTreeComponent } from './suku-tree/suku-tree.component';
 		SukuGalleryComponent,
 		SukuButtonsModule,
 		SukuBidWidgetTagComponent,
-		SukuAddIconWidgetModule
+		SukuAddIconWidgetModule,
+		SukuFileUploadModule,
+		SukuModalModule
 	],
 	entryComponents: [],
 	schemas: []

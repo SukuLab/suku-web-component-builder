@@ -2,18 +2,13 @@
 // @import '../projects/suku-webcomponents/src/lib/suku-styles.css';s
 @import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
 // @import '../node_modules/suku-webcomponents/suku-theme';
-@import '../node_modules/suku-icons/style.css';
-// @import './assets/temp/css/style.css';
+
+/* svg css */
+// @import '../node_modules/suku-icons/style.css';
+
+/* webfont */
+@import './assets/suku-icons/suku.css';
 
 body {
   background-color: #f2f2f2 !important;
-}
-
-.html2canvas-container {
-  width: 3500px !important;
-  height: 2500px !important;
-}
-
-tspan {
-  text-anchor: end !important;
 }

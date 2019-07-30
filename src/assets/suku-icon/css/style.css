@@ -1,76 +1,66 @@
 /* --------------------------------
 
-Generated using nucleoapp.com
+suku-icons - v1.0.0
 
 -------------------------------- */
-.suku {
+i {
     display: inline-block;
-    background-image: url(../icons.svg);
     background-repeat: no-repeat;
+    height: 25px;
+    width: 25px;
 }
 
-.suku.suku-map-pin {
-    background-position: -0px 0px;
-    height: 24px;
-    width: 20px;
+.suku-plus-icon {
+    background-image: url(./suku-icons/plus-icon.svg)
 }
 
-.suku.suku-alarm-icon {
-    background-position: -20px 0px;
-    height: 22px;
-    width: 20px;
+.suku-alarm-icon {
+    background-image: url(./suku-icons/alarm-icon.svg)
 }
 
-.suku.suku-phone-light {
-    background-position: -40px 0px;
-    height: 22px;
-    width: 22px;
+i .suku-group {
+    background-image: url(./suku-icons/group.svg)
 }
 
-.suku.suku-view-icon {
-    background-position: -62px 0px;
-    height: 18px;
-    width: 24px;
+i .suku-mail-icon {
+    background-image: url(./suku-icons/mail-light.svg)
 }
 
-.suku.suku-star-full {
-    background-position: -86px 0px;
-    height: 21px;
-    width: 22px;
+i .suku-map-pin {
+    background-image: url(./suku-icons/map-pin.svg)
 }
 
-.suku.suku-star-empty {
-    background-position: -108px 0px;
-    height: 21px;
-    width: 22px;
+i .suku-phone-icon {
+    background-image: url(./suku-icons/phone-light.svg)
 }
 
-.suku.suku-star-badge {
-    background-position: -130px 0px;
-    height: 43px;
-    width: 44px;
+i .suku-star-badge {
+    background-image: url(./suku-icons/star-badge.svg)
 }
 
-.suku.suku-mail-light {
-    background-position: -174px 0px;
-    height: 18px;
-    width: 22px;
+i .suku-star-icon {
+    background-image: url(./suku-icons/star-full.svg)
 }
 
-.suku.suku-plus-icon-2 {
-    background-position: -196px 0px;
-    height: 33px;
-    width: 33px;
+i .suku-star-empty-icon {
+    background-image: url(./suku-icons/star-empty.svg)
 }
 
-.suku.suku-group {
-    background-position: -229px 0px;
-    height: 145px;
-    width: 145px;
+i .suku-view-icon {
+    background-image: url(./suku-icons/view-icon.svg)
 }
 
-.suku.suku-plus-icon {
-    background-position: -374px 0px;
-    height: 33px;
-    width: 33px;
-} 
+.suku-sm {
+    width: 1rem;
+    height: 1rem;
+}
+
+.suku-md {
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+.suku-lg {
+    width: 2rem;
+    height: 2rem;
+}

@@ -1,0 +1,79 @@
+@import '../theme/theme';
+
+.upload-container {
+  @include suku-container();
+}
+
+h1 {
+  font-family: $suku-primary-font;
+  font-size: $suku-font-size-4;
+  font-weight: 600;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: -0.3px;
+  word-break: break-word !important;
+  overflow: hidden;
+  text-overflow: ellipsis !important;
+  white-space: normal;
+}
+
+.file-wrapper {
+  cursor: pointer;
+  display: inline-block;
+  overflow: hidden;
+  position: relative;
+}
+
+.file-wrapper input {
+  cursor: pointer;
+  font-size: 100px;
+  filter: alpha(opacity=1);
+  -moz-opacity: 0.01;
+  opacity: 0.01;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.file-wrapper .button {
+  border: solid 2px $suku-default-border-color;
+  border-radius: 28px 76px 63px;
+  // background-color: a7bf2e;
+  color: black;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 14px;
+  font-weight: bold;
+  margin-right: 5px;
+  padding: 4px 18px;
+}
+
+.dropzone {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  font-weight: 200;
+  height: 30%;
+  border: 2px dashed $suku-default-border-color;
+  border-radius: 5px;
+  background-color: #eaeaea5e;
+  border-radius: 3px;
+  margin: 1rem;
+
+  &.hovering {
+    border: 2px solid $suku-default-border-color;
+  }
+
+  .file-label {
+    font-size: 0.2rem;
+    position: relative;
+    z-index: 10;
+    display: flex;
+  }
+}
+
+.file-input {
+  visibility: hidden;
+}

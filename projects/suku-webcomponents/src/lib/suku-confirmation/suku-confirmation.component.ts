@@ -31,14 +31,11 @@ export class SukuConfirmationComponent implements OnInit {
     @Inject(MAT_DIALOG_DATA) public data: any) { }
 
   ngOnInit() {
-    console.log('Current data', this.data);
     for (const key of Object.keys(this.data)) {
       if (this.data[key]) {
-        console.log(this.data[key], key);
         this.dialogData[key] = this.data[key];
       }
     }
-    console.log('dialogData', this.dialogData);
   }
 
   cancel() {

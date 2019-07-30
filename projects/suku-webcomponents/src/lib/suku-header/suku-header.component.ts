@@ -34,7 +34,7 @@ export class SukuHeaderComponent implements OnInit {
 	@Input('content-two-size') contentTwoSize;
 	@Input('content-two-color') contentTwoColor;
 	@Input('content-two-weight') contentTwoWeight;
-	@Input('content-two-custom-class') contentTwoCustomClass = "c-pointer";
+	@Input('content-two-custom-class') contentTwoCustomClass = 'c-pointer';
 
 	@Input() titleThree = 'TIME REMAINING';
 	@Input('title-three-id') titleThreeId;
@@ -43,7 +43,7 @@ export class SukuHeaderComponent implements OnInit {
 	@Input('title-three-weight') titleThreeWeight;
 	@Input('title-three-custom-class') titleThreeCustomClass;
 
-	@Input('product-box-content-custom-class') productBoxContentCustomClass = "product-boxContent";
+	@Input('product-box-content-custom-class') productBoxContentCustomClass = 'product-boxContent';
 	@Input('product-box-content-bg-color') productBoxContentBgColor;
 
 
@@ -65,7 +65,7 @@ export class SukuHeaderComponent implements OnInit {
 	@Input('content-three-size') contentThreeSize;
 	@Input('content-three-color') contentThreeColor;
 	@Input('content-three-weight') contentThreeWeight;
-	@Input('content-three-custom-class') contentThreeCustomClass = "c-pointer";
+	@Input('content-three-custom-class') contentThreeCustomClass = 'c-pointer';
 
 	@Output() action = new EventEmitter();
 	constructor() { }

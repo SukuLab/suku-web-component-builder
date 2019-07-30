@@ -2,19 +2,37 @@
 @import url('https://fonts.googleapis.com/css?family=Poppins:200i,400,700');
 @import url('https://fonts.googleapis.com/css?family=Encode+Sans:200i,400,700');
 @import url('https://fonts.googleapis.com/css?family=Abel&display=swap');
+
 /* light */
 @import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,900&display=swap');
+
 /* dark */
 @import url('https://fonts.googleapis.com/css?family=Montserrat:400,500,700,800,900&display=swap');
 
-$suku-primary-font: var(--suku-primary-font) !important;
-$suku-secondary-font:var(--suku-secondary-font) !important;
-$suku-ternary-font:var(--suku-ternary-font) !important;
 
-$suku-sick-green : var(--suku-primary-color); // sick-green
-$suku-yellow-green : var(--suku-secondary-color); // warm-green
+/* font variables */
+$suku-primary-font: var(--suku-primary-font);
+$suku-secondary-font:var(--suku-secondary-font);
+$suku-ternary-font:var(--suku-ternary-font);
+$suku-text-heading: var(--suku-text-heading);
+$suku-text-sub-heading: var(--suku-text-sub-heading);
+$suku-text-label-one: var(--suku-text-label-one);
+$suku-text-label-two: var(--suku-text-label-two);
+$suku-text-label-three: var(--suku-text-label-three);
+$suku-text-link: var(--suku-text-link);
+$suku-text-info: var(--suku-text-info);
 
-$suku-bg-primary: var(--suku-bg-primary); // dark-grey
+/* color variables */
+$suku-sick-green : var(--suku-primary-color);
+$suku-yellow-green : var(--suku-secondary-color);
+$suku-filter-label: var(--suku-filter-label);
+$suku-filter-label-selected: var(--suku-filter-label-selected);
+$suku-profile-text-one : var(--suku-profile-text-one);
+$suku-profile-text-two: var(--suku-profile-text-two);
+$suku-default-icon-color: var(--suku-default-icon-color);
+
+/*bg-color variables */
+$suku-bg-primary: var(--suku-bg-primary);
 $suku-bg-secondary: var(--suku-bg-secondary);
 $suku-bg-ternary: var(--suku-bg-ternary);
 $suku-warning-color: var(--suku-warning-color);
@@ -25,51 +43,37 @@ $suku-star-full-bg: var(--suku-star-full-bg);
 $suku-progressbar-active-bg: var(--suku-progressbar-active-bg);
 $suku-progressbar-upcoming-bg: var(--suku-progressbar-upcoming-bg);
 $suku-progressbar-completed-bg: var(--suku-progressbar-completed-bg);
+$suku-filter-bg: var(--suku-filter-bg);
+$suku-button-default-bg: var(--suku-button-default-bg);
+$suku-button-disabled-bg: var(--suku-button-disabled-bg);
+$suku-icon-disabled-bg: var(--suku-icon-disabled-bg);
+$suku-profile-bg-color: var(--suku-profile-bg-color);
 
-$suku-star-size: var(--suku-star-size);
-
-$suku-text-heading: var(--suku-text-heading);
-$suku-text-sub-heading: var(--suku-text-sub-heading);
-$suku-text-label-one: var(--suku-text-label-one);
-$suku-text-label-two: var(--suku-text-label-two);
-$suku-text-label-three: var(--suku-text-label-three);
-$suku-text-link: var(--suku-text-link);
-$suku-text-info: var(--suku-text-info);
-
+/* border-color variable */
 $suku-primary-border-color: var(--suku-primary-border-color); // sick-green
 $suku-secondary-border-color: var(--suku-secondary-border-color); // pale-grey
+$suku-default-border-color: var(--suku-default-border-color); // pale-grey
+
+/* border-radius */
 $suku-primary-border-radius: var(--suku-primary-border-radius); // right-top-curve
 $suku-secondary-border-radius: var(--suku-secondary-border-radius);
 $suku-default-border-radius: var(--suku-default-border-radius);
 $suku-default-button-border-radius: var(--suku-default-button-border-radius);
 $suku-search-border-radius: var(--suku-search-border-radius);
 
-$suku-default-icon-color: var(--suku-default-icon-color);
-
-$suku-filter-bg: var(--suku-filter-bg);
-$suku-filter-label: var(--suku-filter-label);
-$suku-filter-label-selected: var(--suku-filter-label-selected);
-
-$suku-button-default-bg: var(--suku-button-default-bg);
-$suku-button-disabled-bg: var(--suku-button-disabled-bg);
-$suku-icon-disabled-bg: var(--suku-icon-disabled-bg);
-
-$suku-profile-bg-color: var(--suku-profile-bg-color);
-$suku-profile-text-one : var(--suku-profile-text-one);
-$suku-profile-text-two: var(--suku-profile-text-two);
-
-// font-size 
-$suku-font-size-1: var(--suku-font-size-1); // 11px
-$suku-font-size-2: var(--suku-font-size-2); // 12px
-$suku-font-size-3: var(--suku-font-size-3); // 14px
-$suku-font-size-4: var(--suku-font-size-4); // 15px
-$suku-font-size-5: var(--suku-font-size-5); // 17px
-$suku-font-size-6: var(--suku-font-size-6); // 20px
-$suku-font-size-7: var(--suku-font-size-7); // 24px
-$suku-font-size-8: var(--suku-font-size-8); // 22px
-$suku-font-size-9: var(--suku-font-size-9); // 26px
-$suku-font-size-10: var(--suku-font-size-10); // 30px
-$suku-font-size-11: var(--suku-font-size-11); // 50px
+/* font-size variable*/
+$suku-font-size-1: var(--suku-font-size-1);
+$suku-font-size-2: var(--suku-font-size-2);
+$suku-font-size-3: var(--suku-font-size-3);
+$suku-font-size-4: var(--suku-font-size-4);
+$suku-font-size-5: var(--suku-font-size-5);
+$suku-font-size-6: var(--suku-font-size-6);
+$suku-font-size-7: var(--suku-font-size-7);
+$suku-font-size-8: var(--suku-font-size-8);
+$suku-font-size-9: var(--suku-font-size-9);
+$suku-font-size-10: var(--suku-font-size-10);
+$suku-font-size-11: var(--suku-font-size-11);
+$suku-star-size: var(--suku-star-size);
 
 @mixin suku-container {
   border-radius: 0 0 41px 41px;
@@ -92,12 +96,20 @@ $suku-font-size-11: var(--suku-font-size-11); // 50px
   box-shadow: -4px 4px 5px 0px rgba(0, 0, 0, 0.08);
 }
 
+
 @mixin suku-title-box {
   background-image: linear-gradient(to bottom, rgba(101, 102, 243, 0.06), rgba(101, 102, 243, 0.06)),
     radial-gradient(circle at 50% 0, #3a3a3a, #000000);
   border-radius: 0px;
   box-shadow: -4px 4px 5px 0px rgba(0, 0, 0, 0.08);
 }
+
+
+
+
+
+
+
 
 .btn {
   // border: solid 2px #a7bf2e;

@@ -9,7 +9,7 @@ export class SukuResponseComponent {
 	@Input('custom-class') customClass = 'filterResult text-center col p-0';
 	@Input() title = 'No results found';
 	@Input('title-id') titleId = 'noResultsFound';
-	@Input('title-size') titleSize = '1.5';
+	@Input('title-size') titleSize = '2';
 	@Input('title-color') titleColor = 'black';
 	@Input('title-weight') titleWeight = '300';
 	@Input('title-custom-class') titleCustomClass;

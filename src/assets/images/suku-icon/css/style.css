@@ -1,0 +1,76 @@
+/* --------------------------------
+
+Generated using nucleoapp.com
+
+-------------------------------- */
+.suku {
+    display: inline-block;
+    background-image: url(../icons.svg);
+    background-repeat: no-repeat;
+}
+
+.suku.suku-map-pin {
+    background-position: -0px 0px;
+    height: 24px;
+    width: 20px;
+}
+
+.suku.suku-alarm-icon {
+    background-position: -20px 0px;
+    height: 22px;
+    width: 20px;
+}
+
+.suku.suku-phone-light {
+    background-position: -40px 0px;
+    height: 22px;
+    width: 22px;
+}
+
+.suku.suku-view-icon {
+    background-position: -62px 0px;
+    height: 18px;
+    width: 24px;
+}
+
+.suku.suku-star-full {
+    background-position: -86px 0px;
+    height: 21px;
+    width: 22px;
+}
+
+.suku.suku-star-empty {
+    background-position: -108px 0px;
+    height: 21px;
+    width: 22px;
+}
+
+.suku.suku-star-badge {
+    background-position: -130px 0px;
+    height: 43px;
+    width: 44px;
+}
+
+.suku.suku-mail-light {
+    background-position: -174px 0px;
+    height: 18px;
+    width: 22px;
+}
+
+.suku.suku-plus-icon-2 {
+    background-position: -196px 0px;
+    height: 33px;
+    width: 33px;
+}
+
+.suku.suku-group {
+    background-position: -229px 0px;
+    height: 145px;
+    width: 145px;
+}
+
+.suku.suku-plus-icon {
+    background-position: -374px 0px;
+    height: 33px;
+    width: 33px;
+} 

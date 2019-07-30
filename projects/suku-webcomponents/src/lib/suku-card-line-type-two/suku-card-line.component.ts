@@ -11,7 +11,7 @@ export class SukuCardLineTypeTwoComponent implements OnInit {
 	@Input('icon-one') iconOne = 'suku-chat-read-icon';
 	@Input('icon-two') iconTwo = 'suku-chat-unread-icon';
 	@Input('msg-status') msgStatus;
-	@Input('customclass') customclass = '';
+	@Input('custom-class') customClass = '';
 	@Input('customImgclass') customImgclass = '';
 	@Input('custom-icon-class') customIconClass = 'text-center';
 	@Input('image-col-size') imageColSize = 'col-sm-1 pt-1 pl-2';

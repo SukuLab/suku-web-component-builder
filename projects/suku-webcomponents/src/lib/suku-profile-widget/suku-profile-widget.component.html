@@ -1,27 +1,3 @@
-<!-- `<div class="col-sm-12 ptl30">
-  <div class="row">
-    <div class="col-sm-5">
-      <img src="{{image}}" class="rounded-circle image" alt="profile" width="150"
-        height="150">
-    </div>
-    <div class="col-sm-7 pLR60">
-			 <h1 [style.font-size.px]="nameSize" [class]="nameCustomClass" [style.font-weight]="nameWeight" [style.color]="nameColor" id="{{id}}">
-      {{userName}}
-      </h1>
-			<h2 [style.font-size.px]="accountSize" [class]="accountCustomClass" id="{{id}}" [style.font-weight]="accountWeight" [style.color]="accountColor">
-			{{accountType}}
-		 </h2>
-     <span (change)="rating.emit(ratingValue)">
-      <div [innerHTML]="myHTML" [class]="customClass" ratingValue=""></div>
-      </span>
-			<h2 [style.font-size.px]="accountSize" [class]="rDustomClass" id="{{id}}" [style.font-weight]="ratingWeight" [style.color]="rateColor">
-			{{rateDetails}}
-		 </h2>
-    </div>
-  </div>
-</div> -->
-
-
 <div [class]="mainCustomClass">
   <div class="row d-flex justify-content-start {{subCustomClass}}">
     <img src="{{image}}" class="rounded-circle image mt-2 " alt="profile">
