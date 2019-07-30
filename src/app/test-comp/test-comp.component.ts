@@ -175,6 +175,13 @@ export class TestCompComponent implements OnInit {
         'https://www.uaex.edu/farm-ranch/animals-forages/images/baldy%20with%20calf%20square.JPG'
     },
     {
+      index: 'three',
+      type: 'video',
+      checked: false,
+      link:
+        'http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4'
+    },
+    {
       index: 'one',
       type: 'image',
       checked: false,

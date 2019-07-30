@@ -38,7 +38,7 @@
           src="{{item?.link}}">
         <video #video class="vid" [style.height.rem]="vidHeight" [style.width.rem]="vidWidth"
           [ngClass]="{'default-vid': size == 'default'}" (click)="preview(item)" *ngIf="item?.type == 'video'"
-          width="85%" height="100%" src="{{item?.link}}" controls>
+          width="95%" height="100%" src="{{item?.link}}" controls>
           Your browser does not support the video tag.
         </video>
       </div>
@@ -49,9 +49,7 @@
       </span>
     </a>
     <a class="carousel-control-next" href="#{{galleryId}}" data-slide="next" *ngIf="(gallery?.length > 1)">
-      <span class="control-shape">
-        <span class="carousel-control-next-icon {{controlNextIconCustomClass}}">
-        </span>
+      <span class="carousel-control-next-icon {{controlNextIconCustomClass}}">
       </span>
     </a>
   </div>
