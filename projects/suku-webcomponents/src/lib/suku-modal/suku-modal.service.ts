@@ -12,7 +12,7 @@ export class SukuModalService {
 
 	constructor(public dialogService: MatDialog) {
 		this.confirmationDialogHeight = 'auto';
-		this.confirmationDialogWidth = '564px';
+		this.confirmationDialogWidth = '500px';
 	}
 
 	public openConfirmationDialog(data?) {

@@ -10,7 +10,7 @@ export * from './lib/suku-bid-tag/suku-bid-tag.module';
 export * from './lib/suku-buttons/suku-button.module';
 export * from './lib/suku-loader/suku-loader.module';
 export * from './lib/suku-modal/suku-modal.module';
-
+export * from './lib/suku-modal/suku-modal.service';
 export * from './lib/suku-webcomponents.module';
 
 export * from './lib/suku-webcomponents.service';
