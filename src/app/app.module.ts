@@ -9,7 +9,7 @@ import {
 	SukuWebcomponentsService, SukuFormFooterModule, SukuWebcomponentsModule
 } from 'projects/suku-webcomponents/src/public_api';
 import { TestCompComponent } from './test-comp/test-comp.component';
-// import { SukuButtonsModule, SukuWebcomponentsService } from 'suku-webcomponents';
+// import { SukuButtonsModule, SukuWebco../../projects/suku-webcomponents/src/lib/suku-user-input/suku-user-input.component;
 enableProdMode();
 @NgModule({
 	declarations: [AppComponent, TestCompComponent],

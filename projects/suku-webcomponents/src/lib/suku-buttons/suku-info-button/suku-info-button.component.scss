@@ -31,7 +31,7 @@
 .suku-info {
   border: solid 2px;
   border-color: $suku-sick-green;
-  background-color: $suku-text-label-two;
+  background-color: $suku-default-bg;
   color: $suku-text-heading;
 }
 
@@ -118,8 +118,8 @@ fieldset[disabled] .suku-info.focus {
 .suku-default {
   border: solid 2px;
   border-color: $suku-text-info;
-  background-color: $suku-bg-secondary;
-  color: $suku-text-label-one;
+  background-color: $suku-default-bg;
+  color: $suku-text-heading;
 }
 
 .suku-default:hover {

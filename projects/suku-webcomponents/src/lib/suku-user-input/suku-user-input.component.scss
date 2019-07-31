@@ -1,0 +1,22 @@
+@import '../theme/theme';
+
+.input-full-width {
+    width: 100%;
+}
+
+::ng-deep .mat-input-element {
+    padding: 1% !important;
+}
+
+.material-icons {
+    font-size: $suku-font-size-6;
+}
+
+/* Sets the underline to red if dirty and invalid */
+.mat-form-field.ng-dirty.ng-invalid .mat-form-field-underline {
+    background-color: red;
+  }
+  /* Sets the label to red if dirty and invalid */
+  .mat-form-field.ng-dirty.ng-invalid .mat-form-field-label {
+    color: red;
+  }

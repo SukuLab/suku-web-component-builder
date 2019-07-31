@@ -8,7 +8,7 @@ import { SukuLoaderComponent } from './suku-loader.component';
 export class SukuLoaderService {
 	public loaderDialogWidth;
 	public loaderDialogHeight;
-	public loaderDialogClose;
+	public loaderDialogClose = true;
 	public onDialogClose: EventEmitter<any> = new EventEmitter<any>();
 
 	constructor(public dialogService: MatDialog) {

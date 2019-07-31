@@ -69,8 +69,6 @@ export class SukuProductTraceWidgetComponent implements OnInit {
   @Input() tracetheProductId = '';
   @Output() searchFun = new EventEmitter();
   @Output() selectproducts = new EventEmitter();
-  @Output() searchByProduct = new EventEmitter();
-  @Output() traceproduct = new EventEmitter();
   @Input()
   get disableBtn() {
     return this._disableBtn;
@@ -78,16 +76,8 @@ export class SukuProductTraceWidgetComponent implements OnInit {
   set disableBtn(val) {
     this._disableBtn = val;
   }
-  @Input() productdetails = [];
-  // get () {
-  //   return this._data;
-  // }
-  // set productdetails(val) {
-  //   if (val) {
-  //     this._data = (val);
-  //   }
-  // }
 
+  @Input() productdetails = [];
   @Input()
   get result() {
     return this._result;

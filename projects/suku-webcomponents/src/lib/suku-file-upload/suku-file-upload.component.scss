@@ -69,11 +69,13 @@ h1 {
   .file-label {
     font-size: 0.2rem;
     position: relative;
-    z-index: 10;
+    z-index: 2;
     display: flex;
   }
 }
 
 .file-input {
   visibility: hidden;
+  z-index: -20 !important;
+  pointer-events: none;
 }

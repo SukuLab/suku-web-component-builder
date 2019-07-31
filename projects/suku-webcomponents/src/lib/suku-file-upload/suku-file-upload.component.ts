@@ -1,4 +1,5 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { MatSnackBar } from '@angular/material';
 
 @Component({
   selector: 'suku-file-upload',
@@ -20,7 +21,7 @@ export class SukuFileUploadComponent implements OnInit {
   @Input('img-src') imgSrc = '../../../../assets/images/smartrac-upload-icon.png';
   @Input('file-input-id') fileInputId = 'file';
   @Output() action = new EventEmitter();
-  constructor() { }
+  constructor(private snackBar: MatSnackBar) { }
 
   ngOnInit() {
   }
@@ -31,12 +32,37 @@ export class SukuFileUploadComponent implements OnInit {
   }
 
   startUpload(event: FileList) {
-    console.log('event', event);
-    this.action.emit(event);
+    const maxFileSize = 9999999;
+    const file = event;
+    if (event.length > 0) {
+      for (let i = 0; i < event.length; i++) {
+        if (event[i].type == 'image/jpeg' || event[i].type == 'image/png' || event[i].type == 'image/jpg' ||
+        event[i].type == 'application/pdf') {
+          if (event[i].size <= maxFileSize) {
+            console.log('event', event[i]);
+            const e = event[i];
+            this.action.emit(e);
+          } else {
+            this.snackbar('The file size cannot exceed 10 MB');
+          }
+        } else {
+          this.snackbar('The file type jpg/jpeg/png/pdf files are allowed!');
+        }
+      }
+    }
   }
 
   upload(e) {
     console.log('file-upload');
     (<HTMLInputElement>document.getElementById('file')).click();
+    e.stopPropagation();
+  }
+
+  snackbar(msg) {
+    this.snackBar.open(msg, 'close', {
+      verticalPosition: 'bottom',
+      horizontalPosition: 'right',
+      duration: 3500
+    });
   }
 }

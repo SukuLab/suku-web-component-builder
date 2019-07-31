@@ -223,6 +223,7 @@ export class TestCompComponent implements OnInit {
   ngOnInit() {
     this.form = this.fb.group({
       'search': '',
+      'sample': '',
       'trace': '',
       'productId': '',
       'productList': '',

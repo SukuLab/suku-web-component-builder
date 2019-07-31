@@ -1,0 +1,29 @@
+<mat-form-field [class]="customClass" [color]="color">
+  <span matPrefix class="mr-2" *ngIf="enableUserIcon">
+    <mat-icon class="material-icons">account_circle</mat-icon>
+  </span>
+  <input matInput [placeholder]="placeholder" [formControl]="usernameControl"  [errorStateMatcher]="matcher">
+  <!-- <mat-error *ngIf="usernameControl.invalid">{{getErrorMessage()}}</mat-error> -->
+  <mat-error *ngIf="usernameControl.hasError('required')">
+    {{errorMessageOne}}
+  </mat-error>
+  <mat-error *ngIf="usernameControl.hasError('pattern') && !usernameControl.hasError('required')">
+    {{errorMessageTwo}}
+  </mat-error>
+  <mat-error *ngIf="usernameControl.hasError('maxLength')">
+    {{errorMessageThree}}
+  </mat-error>
+  <mat-error *ngIf="usernameControl.hasError('minlength')">
+    {{errorMessageFour}}
+  </mat-error>
+</mat-form-field>
+{{ usernameControl.hasError('required')}}
+
+<!-- 
+<div class="example-container">
+    <mat-form-field>
+      <input matInput placeholder="Enter your email" [formControl]="usernameControl"  [errorStateMatcher]="matcher">
+      <mat-error *ngIf="usernameControl.invalid">{{getErrorMessage()}}</mat-error>
+    </mat-form-field>
+  </div> -->
+  
