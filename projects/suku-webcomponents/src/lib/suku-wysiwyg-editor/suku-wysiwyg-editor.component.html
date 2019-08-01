@@ -1,5 +1,5 @@
 <span [formGroup]="form">
   <quill-editor [modules]="moduleConfig" 
-  placeholder="Enter Text" formControlName="{{control}}" [(ngModel)]="htmlQuillContent" (onContentChanged)="onContentChanged($event)">
+  placeholder="{{placeholder}}" formControlName="{{control}}" [(ngModel)]="htmlQuillContent" (onContentChanged)="onContentChanged($event)">
   </quill-editor>
 </span>

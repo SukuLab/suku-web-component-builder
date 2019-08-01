@@ -16,7 +16,7 @@ export class MyErrorStateMatcher implements ErrorStateMatcher {
 })
 export class SukuUserInputComponent implements OnInit {
   _subscription;
-  usernameControl = new FormControl();
+  usernameControl = new FormControl('');
   @Input() pattern;
   @Input() color = 'primary';
   @Input() placeholder = 'Username';
@@ -57,8 +57,8 @@ export class SukuUserInputComponent implements OnInit {
       this.usernameControl.updateValueAndValidity();
     }
   }
-  email = new FormControl('', [Validators.required, Validators.email]);
   @Output() action = new EventEmitter();
+  email = new FormControl('', [Validators.required, Validators.email]);
 
   matcher = new MyErrorStateMatcher();
   constructor() { }
@@ -79,9 +79,10 @@ export class SukuUserInputComponent implements OnInit {
   //       this.usernameControl.hasError('email') ? 'Not a valid email' :
   //           '';
   // }
+
   getErrorMessage() {
-    return this.email.hasError('required') ? 'You must enter a value' :
-      this.email.hasError('email') ? 'Not a valid email' :
+    return this.usernameControl.hasError('required') ? 'You must enter a value' :
+      this.usernameControl.hasError('minlength') ? 'username should be more than 2 letters' :
         '';
   }
 

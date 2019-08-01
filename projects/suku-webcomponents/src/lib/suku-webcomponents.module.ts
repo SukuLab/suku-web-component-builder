@@ -82,7 +82,9 @@ import { SukuTreeComponent } from './suku-tree/suku-tree.component';
 import { SukuFileUploadModule } from './suku-file-upload/suku-file-upload.module';
 import { SukuCheckboxComponent } from './suku-checkbox/suku-checkbox.component';
 import { SukuUserInputComponent } from './suku-user-input/suku-user-input.component';
-
+import { SukuWysiwygEditorComponent } from './suku-wysiwyg-editor/suku-wysiwyg-editor.component';
+import { SukuProfileImageIconComponent } from './suku-profile-image-icon/suku-profile-image-icon.component';
+import { QuillModule } from 'ngx-quill';
 @NgModule({
   declarations: [
     SukuCardLineComponent,
@@ -144,7 +146,9 @@ import { SukuUserInputComponent } from './suku-user-input/suku-user-input.compon
     SukuBidWidgetTagComponent,
     SukuGalleryComponent,
     SukuCheckboxComponent,
-    SukuUserInputComponent
+    SukuUserInputComponent,
+    SukuWysiwygEditorComponent,
+    SukuProfileImageIconComponent
   ],
   imports: [
     CommonModule,
@@ -192,7 +196,8 @@ import { SukuUserInputComponent } from './suku-user-input/suku-user-input.compon
     SukuButtonsModule,
     SukuFormFooterModule,
     SukuLoaderModule,
-    SukuFileUploadModule
+    SukuFileUploadModule,
+    QuillModule
   ],
   providers: [SukuModalService, SukuLoaderService],
   exports: [
@@ -259,7 +264,9 @@ import { SukuUserInputComponent } from './suku-user-input/suku-user-input.compon
     SukuBidWidgetTagComponent,
     SukuAddIconWidgetModule,
     SukuFileUploadModule,
-    SukuModalModule
+    SukuModalModule,
+    SukuWysiwygEditorComponent,
+    SukuProfileImageIconComponent
   ],
   entryComponents: [],
   schemas: []

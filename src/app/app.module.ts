@@ -1,5 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule, NO_ERRORS_SCHEMA, enableProdMode } from '@angular/core';
+import { NgModule, NO_ERRORS_SCHEMA, enableProdMode, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -16,7 +16,7 @@ enableProdMode();
 	imports: [BrowserModule, AppRoutingModule, BrowserAnimationsModule,
 		FormsModule, ReactiveFormsModule, SukuFormFooterModule, SukuWebcomponentsModule
 	],
-	schemas: [NO_ERRORS_SCHEMA],
+	schemas: [NO_ERRORS_SCHEMA, CUSTOM_ELEMENTS_SCHEMA],
 	providers: [],
 	bootstrap: [AppComponent]
 })
