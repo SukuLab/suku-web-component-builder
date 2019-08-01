@@ -73,6 +73,7 @@ import { SukuTrackProgressBarComponent } from './suku-track-progress-bar/suku-tr
 import { SukuTreeComponent } from './suku-tree/suku-tree.component';
 import { SukuWysiwygEditorComponent } from './suku-wysiwyg-editor/suku-wysiwyg-editor.component';
 import { QuillModule } from 'ngx-quill';
+import { SukuProfileImageIconComponent } from './suku-profile-image-icon/suku-profile-image-icon.component';
 @NgModule({
 	declarations: [
 		SukuBidTagComponent,
@@ -142,7 +143,8 @@ import { QuillModule } from 'ngx-quill';
 		ScrollToBottomDirective,
 		SukuLargeBidTagComponent,
 		SukuBidWidgetTagComponent,
-		SukuWysiwygEditorComponent
+		SukuWysiwygEditorComponent,
+		SukuProfileImageIconComponent
 	],
 	imports: [
 		CommonModule,
@@ -252,7 +254,8 @@ import { QuillModule } from 'ngx-quill';
 		ScrollToBottomDirective,
 		SukuLargeBidTagComponent,
 		SukuBidWidgetTagComponent,
-		SukuWysiwygEditorComponent
+		SukuWysiwygEditorComponent,
+		SukuProfileImageIconComponent
 	]
 })
 export class SukuWebcomponentsModule {
