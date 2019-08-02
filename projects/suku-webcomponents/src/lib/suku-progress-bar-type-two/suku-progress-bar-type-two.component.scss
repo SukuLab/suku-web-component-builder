@@ -1,40 +1,49 @@
-@import '../theme/theme';
+@import url('https://fonts.googleapis.com/css?family=Poppins:200i,400,700');
+@import url('https://fonts.googleapis.com/css?family=Encode+Sans:200i,400,700');
+
+$main-color: #a7bf2e;
+$poppins: 'Poppins',
+sans-serif !important;
+$encodeSans: 'Encode Sans',
+sans-serif !important;
+
 
 .progressActive {
   width: 50px !important;
   height: 50px;
-  color: $suku-text-label-two;
-  background: $suku-progressbar-active-bg;
+  color: white;
+  background: $main-color;
   -moz-border-radius: 50% !important;
   -webkit-border-radius: 50% !important;
   border-radius: 50% !important;
-  font-family: $suku-primary-font;
+  font-family: $poppins;
 }
 
 .progressUpcoming {
   width: 50px !important;
   height: 50px !important;
-  color: $suku-text-label-two;
-  background: $suku-progressbar-upcoming-bg;
+  color: white;
+  background: #757575;
   -moz-border-radius: 50% !important;
   -webkit-border-radius: 50% !important;
   border-radius: 50% !important;
-  font-family: $suku-primary-font;
+  font-family: $poppins;
 }
+
 
 .progressCompleted {
   width: 50px !important;
   height: 50px !important;
-  color: $suku-text-label-two;
-  background-color:$suku-progressbar-completed-bg;
+  color: white;
+  background-color: #1c1c1c;
   -moz-border-radius: 50% !important;
   -webkit-border-radius: 50% !important;
   border-radius: 50% !important;
-  font-family: $suku-primary-font;
+  font-family: $poppins;
 }
 
 .progressTitle {
-  font-family: $suku-secondary-font;
+  font-family: $encodeSans;
   font-size: 12px !important;
   font-weight: 500;
   font-style: normal;
@@ -42,11 +51,11 @@
   line-height: normal;
   letter-spacing: -0.4px;
   text-align: center;
-  color: $suku-text-label-one;
+  color: #b6b6b6;
 }
 
 .progress-bar-active {
-  font-family: $suku-secondary-font;
+  font-family: $encodeSans;
   font-size: 12px;
   font-weight: bold;
   font-style: normal;
@@ -57,8 +66,22 @@
   color: var(--black);
 }
 
+.circleP {
+  background-color: gray;
+  width: 50px !important;
+  height: 50px !important;
+  -moz-border-radius: 50% !important;
+  -webkit-border-radius: 50% !important;
+  border-radius: 50% !important;
+}
+
+.tableMar {
+  margin-top: 1%;
+  margin-bottom: 4%;
+}
+
 .tickSign {
-  color: $suku-yellow-green;
+  color: #d8fc40;
 }
 
 tr#txt {
@@ -69,6 +92,40 @@ tr#txt {
 
 .starChecked {
   color: #686868 !important;
+}
+
+.card-line-bg {
+  background-color: #fff;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.05);
+}
+
+.card-line-img {
+  border: 1px solid #e3dbdb36 !important;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.06);
+}
+
+.border-top-box {
+  border-top: 1px solid #dee2e670 !important;
+}
+
+.text-bold {
+  color: black !important;
+  font-weight: bold !important;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: -0.4px;
+  text-align: center;
+}
+
+.text-bold {
+  color: black !important;
+  font-weight: bold !important;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: -0.4px;
+  text-align: center;
 }
 
 .checkmark {
@@ -83,10 +140,14 @@ tr#txt {
   width: 8px;
   height: 15px;
   /*Add a white border on the bottom and left, creating that 'L' */
-  border: solid $suku-yellow-green;
+  border: solid #d8fc40;
   border-width: 0 3px 3px 0;
   /*Rotate the L 45 degrees to turn it into a checkmark*/
   transform: rotate(45deg);
+}
+
+.c-pointer :hover {
+  cursor: pointer;
 }
 
 hr {
@@ -97,6 +158,14 @@ hr {
   opacity: 0.2 !important;
 }
 
+.pr-6 {
+  padding-right: 5rem;
+}
+
+.pl-6 {
+  padding-left: 4.8rem;
+}
+
 @media only screen and (max-width:990px) {
   .progressTitle {
     font-size: 8px !important;
@@ -104,17 +173,5 @@ hr {
 
   .p-xs-0 {
     padding: 0 !important;
-  }
-  .p-xs-1{
-    margin-right: 21px;
-  }
-}
-
-@media only screen and (max-width:425px){
-  .p-xs-1{
-    margin-right: 0px;
-  }
-  .p-xs-2{
-    padding-left: 15px;
   }
 }
