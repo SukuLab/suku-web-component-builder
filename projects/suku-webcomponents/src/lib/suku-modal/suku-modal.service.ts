@@ -39,6 +39,7 @@ export class SukuModalService {
 		});
 		dialogRef.afterClosed().subscribe((result) => {
 			this.onDialogClose.emit(result);
+			result = false;
 		});
 	}
 }
