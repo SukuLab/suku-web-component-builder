@@ -53,7 +53,7 @@ export const suku: Theme = {
     '--suku-font-size-1': '11px', // 0.75rem
     '--suku-font-size-2': '12px', // 0.875rem
     '--suku-font-size-3': '14px', // 1.0625rem
-    '--suku-font-size-4': '15px', // 1.0625rem
+    '--suku-font-size-4': '15px', // 1.0625remm
     '--suku-font-size-5': '17px', // 1.25rem
     '--suku-font-size-6': '20px', // 1.5rem
     '--suku-font-size-7': '22px', // 1.625rem

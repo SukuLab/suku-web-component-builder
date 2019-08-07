@@ -10,6 +10,7 @@ export class SukuInfoButtonComponent implements OnInit {
 	@Input() size = '';
 	@Input() weight = '600';
 	@Input() type = 'info';
+	@Input('btn-type') btnType = 'submit';
 	@Input('custom-class') customClass = '';
 	@Input('disable-value') disableValue: Boolean;
 	@Output() action = new EventEmitter();

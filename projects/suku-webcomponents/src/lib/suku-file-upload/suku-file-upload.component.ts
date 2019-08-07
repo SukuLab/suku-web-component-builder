@@ -37,11 +37,12 @@ export class SukuFileUploadComponent implements OnInit {
     if (event.length > 0) {
       for (let i = 0; i < event.length; i++) {
         if (event[i].type == 'image/jpeg' || event[i].type == 'image/png' || event[i].type == 'image/jpg' ||
-        event[i].type == 'application/pdf') {
+          event[i].type == 'application/pdf') {
           if (event[i].size <= maxFileSize) {
             console.log('event', event[i]);
             const e = event[i];
             this.action.emit(e);
+            (<HTMLInputElement>document.getElementById('file')).value = '';
           } else {
             this.snackbar('The file size cannot exceed 10 MB');
           }

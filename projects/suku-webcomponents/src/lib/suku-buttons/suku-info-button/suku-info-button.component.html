@@ -1,4 +1,4 @@
-<button class="suku-i suku-{{type}} {{customClass}}" [ngClass]="{'disabled' : disableValue}" [disabled]="disableValue"
-  [style.font-size.rem]="size" [style.font-weight]="weight" [id]="id" (click)="action.emit()">
+<button class="suku-i suku-{{type}} {{customClass}}" type="{{btnType}}" [ngClass]="{'disabled' : disableValue}"
+  [disabled]="disableValue" [style.font-size.rem]="size" [style.font-weight]="weight" [id]="id" (click)="action.emit()">
   <ng-content></ng-content>
 </button>

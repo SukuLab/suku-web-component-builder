@@ -12,12 +12,12 @@ export class SukuMailWidgetComponent implements OnInit {
   @Input() color = '#0f0f0f';
   @Input() weight = '';
   @Input() customClass = 'pl-3 pt-0 mb-1';
-  @Input() icon = 'suku-mail-icon';
+  @Input() icon = 'suku-mail-icon suku-xs';
   @Input('icon-id') iconId = 'mailIcon';
   @Input('icon-custom-class') iconCustomClass = '';
   @Input() imageWidth = 'img-width';
   @Input('widget-custom-class') widgetCustomClass = 'col mt-2';
-  constructor() {}
+  constructor() { }
 
-  ngOnInit() {}
+  ngOnInit() { }
 }

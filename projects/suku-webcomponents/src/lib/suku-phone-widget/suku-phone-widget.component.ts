@@ -7,16 +7,15 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class SukuPhoneWidgetComponent implements OnInit {
   @Input() id = '';
-  @Input() name = '4806069863';
   @Input() size = '0.9';
   @Input() color = '#3e3e3e';
   @Input() weight = '500';
   @Input() customClass = 'pl-3 mt-auto mb-auto';
-  @Input('icon') icon = 'suku-phone-icon';
+  @Input('icon') icon = 'suku-phone-icon suku-xs';
   @Input('icon-id') iconId = 'phoneIcon';
   @Input('icon-custom-class') iconCustomClass = 'icon';
   @Input('widget-custom-class') widgetCustomClass = 'col';
-  constructor() {}
+  constructor() { }
 
-  ngOnInit() {}
+  ngOnInit() { }
 }

@@ -52,7 +52,7 @@
 .suku-info.disabled {
   border: solid 2px;
   border-color: $suku-sick-green;
-  background-color: white;
+  background-color: $suku-sick-green;
   color: grey;
 }
 
@@ -67,8 +67,9 @@ fieldset[disabled] .suku-info:focus,
 fieldset[disabled] .suku-info.focus {
   border: solid 2px;
   border-color: $suku-sick-green;
-  background-color: white !important;
+  background-color: $suku-sick-green;
   color: grey;
+  cursor: not-allowed;
 }
 
 .suku-info:focus,
@@ -139,8 +140,9 @@ fieldset[disabled] .suku-info.focus {
 .suku-default.disabled {
   border: solid 2px;
   border-color: $suku-text-info;
-  background-color: white;
-  color: grey;
+  background-color: $suku-text-info;
+  color: #c4c4c4;
+  opacity: 0.7;
 }
 
 .suku-default.disabled:hover,
@@ -154,8 +156,10 @@ fieldset[disabled] .suku-default:focus,
 fieldset[disabled] .suku-default.focus {
   border: solid 2px;
   border-color: $suku-text-info;
-  background-color: white !important;
-  color: grey;
+  background-color: $suku-text-info;
+  color: #c4c4c4;
+  opacity: 0.7;
+  cursor: not-allowed;
 }
 
 .suku-default:focus,

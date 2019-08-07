@@ -255,4 +255,7 @@ export class TestCompComponent implements OnInit {
     });
   }
 
+  upload(e) {
+    console.log(e);
+  }
 }
