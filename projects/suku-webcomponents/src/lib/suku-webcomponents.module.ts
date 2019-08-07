@@ -85,6 +85,9 @@ import { SukuUserInputComponent } from './suku-user-input/suku-user-input.compon
 import { SukuWysiwygEditorComponent } from './suku-wysiwyg-editor/suku-wysiwyg-editor.component';
 import { SukuProfileImageIconComponent } from './suku-profile-image-icon/suku-profile-image-icon.component';
 import { QuillModule } from 'ngx-quill';
+import { SukuConfirmationModelComponent } from './suku-confirmation-model/suku-confirmation-model.component';
+import { SukuAddLicenseModelComponent } from './suku-add-license-model/suku-add-license-model.component';
+
 @NgModule({
   declarations: [
     SukuCardLineComponent,
@@ -148,7 +151,9 @@ import { QuillModule } from 'ngx-quill';
     SukuCheckboxComponent,
     SukuUserInputComponent,
     SukuWysiwygEditorComponent,
-    SukuProfileImageIconComponent
+    SukuProfileImageIconComponent,
+    SukuConfirmationModelComponent,
+    SukuAddLicenseModelComponent
   ],
   imports: [
     CommonModule,
@@ -266,9 +271,11 @@ import { QuillModule } from 'ngx-quill';
     SukuFileUploadModule,
     SukuModalModule,
     SukuWysiwygEditorComponent,
-    SukuProfileImageIconComponent
+    SukuProfileImageIconComponent,
+    SukuConfirmationModelComponent,
+    SukuAddLicenseModelComponent
   ],
-  entryComponents: [],
+  entryComponents: [SukuConfirmationModelComponent],
   schemas: []
 })
 export class SukuWebcomponentsModule {
