@@ -1,0 +1,74 @@
+<nav class="navbar navbar-expand-lg {{navbarBgColor}} {{navbarCustomClass}} bg-dark navbar-light navbar1">
+  <div>
+    <a title="SUKU">
+      <img [src]="data?.logo" alt="brand-SUKU" class="btLine {{logoCustomClass}}" />
+    </a>
+  </div>
+  <div class="collapse navbar-collapse justify-content-end mr-5" id="navbarNav">
+    <div *ngFor="let names of data.submenu" class="responseTab">
+      <ul class="navbar-nav">
+        <li class="pT" (click)="toggle(names)">
+          <a [ngClass]="{'active': isActiveFun(names)}" class="{{nameCustomClass}}">
+            {{names.name | uppercase}}
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="row d-flex justify-content-around ml-lg-5">
+    <a class="align-items-end d-flex">
+      <i><img id="notificationBell" src="{{data?.bellIcon}}" id="{{data?.bellIconId}}"></i>
+      <span class="count" id="{{data?.notificationCountId}}">{{data?.notificationCount}}</span>
+    </a>
+    <li class="iconColor"><img [src]="userIcon"></li>
+    <li class="userColor" [style.color]="userNameColor" [style.font-weight]="userNameFontWeight"
+      [style.font-size.rem]="userNameFontSize">{{UserName}}</li>
+  </div>
+</nav>
+<div *ngIf="isActive">
+  <div *ngFor="let names of data.submenu">
+    <div class="mobResponse1" *ngIf="names?.visible">
+      <div class="bgColor1 col-sm-12 wrapper {{submenuCustomClass}}" *ngIf="names?.subMenu">
+        <li *ngFor="let name of names?.subMenuData" class="line" (click)="select(name)"
+          [ngClass]="{'active1': isActive2(name)}">
+          <a>{{name.name}}</a>
+        </li>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Response -->
+<nav class="navbar navbar-expand-lg navbar-dark  mobResponse responseColor">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto" id="accordion">
+      <div *ngFor="let names of data.submenu;  let i = index">
+        <span id="buy{{i}}" class="nav-item nav-link" data-toggle="collapse" attr.data-target="#collapseOne{{i}}">
+          <ul class="navbar-nav">
+            <li class="pT" (click)="toggle(names)">
+              <a class="subMenuBgStyle">{{names.name | uppercase}} <i class="fa fa-arrow-down flRight"
+                  *ngIf="names.subMenu===true"></i></a>
+            </li>
+          </ul>
+          <div attr.id="collapseOne{{i}}" class="panel-collapse panel panel-default collapse in" role="tabpanel"
+            aria-labelledby="headingOne" data-parent="#accordion">
+            <div *ngIf="isActive">
+              <div *ngFor="let names of data.submenu">
+                <div *ngIf="names?.visible">
+                  <div class="bgColor1 col-sm-12 wrapper" *ngIf="names?.subMenu">
+                    <li *ngFor="let name of names?.subMenuData" class="line">
+                      <a>{{name.name}}</a>
+                    </li>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </span>
+      </div>
+    </ul>
+  </div>
+</nav>

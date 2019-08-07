@@ -1,0 +1,36 @@
+{
+  "_from": "file:E:/office/Suku/Suku-web-comp-builder/test-css--library/suku-icons-1.0.0.tgz",
+  "_id": "suku-icons@1.0.0",
+  "_inBundle": false,
+  "_integrity": "sha512-HYfaI8ZAJM8KuDSHFpmJECOZJ3s24ajvV7PgMeZktUUzZ2RfTm2y6LCaeJ6EVrGP/K7fyAn3n6kKzrVi2Vq0UA==",
+  "_location": "/suku-icons",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "file",
+    "where": "E:\\office\\Suku\\Suku-web-comp-builder\\wecomponent-builder\\suku-web-component-builder",
+    "raw": "E:\\office\\Suku\\Suku-web-comp-builder\\test-css--library\\suku-icons-1.0.0.tgz",
+    "rawSpec": "E:\\office\\Suku\\Suku-web-comp-builder\\test-css--library\\suku-icons-1.0.0.tgz",
+    "saveSpec": "file:E:/office/Suku/Suku-web-comp-builder/test-css--library/suku-icons-1.0.0.tgz",
+    "fetchSpec": "E:/office/Suku/Suku-web-comp-builder/test-css--library/suku-icons-1.0.0.tgz"
+  },
+  "_requiredBy": [
+    "#USER"
+  ],
+  "_resolved": "E:/office/Suku/Suku-web-comp-builder/test-css--library/suku-icons-1.0.0.tgz",
+  "_shasum": "5e4a77e5e22eed01993a6b1efa6219244727769f",
+  "_spec": "E:\\office\\Suku\\Suku-web-comp-builder\\test-css--library\\suku-icons-1.0.0.tgz",
+  "_where": "E:\\office\\Suku\\Suku-web-comp-builder\\wecomponent-builder\\suku-web-component-builder",
+  "author": {
+    "name": "suku"
+  },
+  "bundleDependencies": false,
+  "deprecated": false,
+  "description": "suku icon library",
+  "license": "ISC",
+  "main": "index.js",
+  "name": "suku-icons",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "version": "1.0.0"
+}

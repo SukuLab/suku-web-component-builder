@@ -1,0 +1,139 @@
+/* --------------------------------
+
+suku-icons - v1.0.0
+
+-------------------------------- */
+
+:root {
+    --suku-icon-height: 1rem;
+    --suku-icon-width: 1rem;
+    --suku-default-padding: 0.1rem;
+    --suku-default-margin: 0.1rem;
+}
+
+$suku-icon-height: var(--suku-icon-height);
+$suku-icon-width: var(--suku-icon-width);
+$suku-default-padding: var(--suku-default-padding);
+$suku-default-margin: var(--suku-default-margin);
+
+@mixin suku-icon-container {
+    height: $suku-icon-height;
+    width: $suku-icon-width;
+    display: inline-block;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.suku-plus-icon {
+    // @include suku-icon-container();
+    background: url('./suku-icons/plus-icon.svg');
+}
+
+// .suku-alarm-icon {
+//     @include suku-icon-container();
+//     background-image: url(./suku-icons/alarm-icon.svg)
+// }
+
+// .suku-group {
+//     display: inline-block;
+//     background-repeat: no-repeat;
+//     height: var(--suku-icon-height);
+//     width: var(--suku-icon-height);
+//     background-size: contain;
+//     background-image: url(./suku-icons/group-icon.svg)
+// }
+
+// .suku-mail-icon {
+//     @include suku-icon-container();
+//     background-image: url(./suku-icons/mail-icon.svg)
+// }
+
+// .suku-map-pin {
+//     @include suku-icon-container();
+//     background-image: url(./suku-icons/map-pin-icon.svg)
+// }
+
+// .suku-phone-icon {
+//     @include suku-icon-container();
+//     background-image: url(./suku-icons/phone-icon.svg)
+// }
+
+// .suku-star-badge {
+//     @include suku-icon-container();
+//     background-image: url(./suku-icons/star-badge-icon.svg)
+// }
+
+// .suku-star-icon {
+//     @include suku-icon-container();
+//     background-image: url(./suku-icons/star-full-icon.svg)
+// }
+
+// .suku-star-empty-icon {
+//     @include suku-icon-container();
+//     background-image: url(./suku-icons/star-empty-icon.svg)
+// }
+
+// .suku-view-icon {
+//     @include suku-icon-container();
+//     background-image: url(./suku-icons/view-icon.svg)
+// }
+
+// .suku-arrow-icon {
+//     @include suku-icon-container();
+//     background-image: url(./suku-icons/arrow-icon.svg)
+// }
+
+// .suku-chat-read-icon {
+//     @include suku-icon-container();
+//     background-image: url(./suku-icons/chat-read-icon.png)
+// }
+
+// .suku-chat-unread-icon {
+//     @include suku-icon-container();
+//     background-image: url(./suku-icons/chat-unread-icon.png)
+// }
+
+// .suku-payment-cancel-icon {
+//     @include suku-icon-container();
+//     background-image: url(./suku-icons/payment-cancelled-icon.png)
+// }
+
+// .suku-payment-success-icon {
+//     @include suku-icon-container();
+//     background-image: url(./suku-icons/payment-success-icon.png)
+// }
+
+// .suku-payment-pending-icon {
+//     @include suku-icon-container();
+//     background-image: url(./suku-icons/payment-pending-icon.png)
+// }
+
+.suku-xs {
+    height: 1rem;
+    width: 1rem;
+    margin: 0.2rem;
+}
+
+.suku-sm {
+    height: 20px;
+    width: 20px;
+    margin: 0.2rem;
+}
+
+.suku-md {
+    height: 25px;
+    width: 25px;
+    margin: 0.2rem;
+}
+
+.suku-lg {
+    height: 35px;
+    width: 35px;
+    margin: 0.2rem;
+}
+
+.suku-xl {
+    height: 40px;
+    width: 40px;
+    margin: 0.2rem;
+}

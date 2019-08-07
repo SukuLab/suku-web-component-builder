@@ -1,0 +1,162 @@
+/* --------------------------------
+
+suku-icons - v1.0.0
+
+-------------------------------- */
+.suku-plus-icon {
+    display: inline-block;
+    background-repeat: no-repeat;
+    height: 100%;
+    width: 100%;
+    background-size: 100% 100%;
+    background-image: url(./suku-icons/plus-icon.svg)
+}
+
+.suku-alarm-icon {
+    display: inline-block;
+    background-repeat: no-repeat;
+    height: 100%;
+    width: 100%;
+    background-size: 100% 100%;
+    background-image: url(./suku-icons/alarm-icon.svg)
+}
+
+.suku-group {
+    display: inline-block;
+    background-repeat: no-repeat;
+    height: 100%;
+    width: 100%;
+    background-size: 100% 100%;
+    background-image: url(./suku-icons/group-icon.svg)
+}
+
+.suku-mail-icon {
+    display: inline-block;
+    background-repeat: no-repeat;
+    height: 30px;
+    width: 30px;
+    background-image: url(./suku-icons/mail-icon.svg)
+}
+
+.suku-map-pin {
+    display: inline-block;
+    background-repeat: no-repeat;
+    height: 30px;
+    width: 30px;
+    background-image: url(./suku-icons/map-pin-icon.svg)
+}
+
+.suku-phone-icon {
+    display: inline-block;
+    background-repeat: no-repeat;
+    height: 30px;
+    width: 30px;
+    background-image: url(./suku-icons/phone-icon.svg)
+}
+
+.suku-star-badge {
+    display: inline-block;
+    background-repeat: no-repeat;
+    height: 30px;
+    width: 30px;
+    background-image: url(./suku-icons/star-badge-icon.svg)
+}
+
+.suku-star-icon {
+    display: inline-block;
+    background-repeat: no-repeat;
+    height: 30px;
+    width: 30px;
+    background-image: url(./suku-icons/star-full-icon.svg)
+}
+
+.suku-star-empty-icon {
+    display: inline-block;
+    background-repeat: no-repeat;
+    height: 30px;
+    width: 30px;
+    background-image: url(./suku-icons/star-empty-icon.svg)
+}
+
+.suku-view-icon {
+    display: inline-block;
+    background-repeat: no-repeat;
+    height: 30px;
+    width: 30px;
+    background-image: url(./suku-icons/view-icon.svg)
+}
+
+.suku-arrow-icon {
+    display: inline-block;
+    background-repeat: no-repeat;
+    height: 40px;
+    width: 30px;
+    background-image: url(./suku-icons/arrow-icon.svg)
+}
+
+.suku-chat-read-icon {
+    display: inline-block;
+    background-repeat: no-repeat;
+    height: 100%;
+    width: 100%;
+    background-size: 100% 100%;
+    background-image: url(./suku-icons/chat-read-icon.png)
+}
+
+.suku-chat-unread-icon {
+    display: inline-block;
+    background-repeat: no-repeat;
+    height: 100%;
+    width: 100%;
+    background-size: 100% 100%;
+    background-image: url(./suku-icons/chat-unread-icon.png)
+}
+
+.suku-payment-cancel-icon {
+    display: inline-block;
+    background-repeat: no-repeat;
+    height: 40px;
+    width: 30px;
+    background-image: url(./suku-icons/payment-cancelled-icon.png)
+}
+
+.suku-payment-success-icon {
+    display: inline-block;
+    background-repeat: no-repeat;
+    height: 40px;
+    width: 30px;
+    background-image: url(./suku-icons/payment-success-icon.png)
+}
+
+.suku-payment-pending-icon {
+    display: inline-block;
+    background-repeat: no-repeat;
+    height: 40px;
+    width: 30px;
+    background-image: url(./suku-icons/payment-pending-icon.png)
+}
+
+.suku-xs {
+    height: 18px;
+    width: 18px;
+}
+
+.suku-sm {
+    height: 20px;
+    width: 20px;
+}
+
+.suku-md {
+    height: 25px;
+    width: 25px;
+}
+
+.suku-lg {
+    height: 30px;
+    width: 30px;
+}
+
+.suku-xl {
+    height: 35px;
+    width: 35px;
+}
