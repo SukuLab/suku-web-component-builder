@@ -424,9 +424,13 @@ export class AppComponent implements OnInit {
 
 	open() {
 		const data = {
+		'imgSrc': 'http://34.217.89.204/assets/icons/verified_icon.png',
+	  	'message': 'Sucess',
+	  	'description': 'Description',
+	  	'buttonText': 'Action',
 		};
-		this.sukuLoaderService.openLoader(data);
-		// this.sukuModalService.openConfirmationDialog(data);
+		// this.sukuLoaderService.openLoader(data);
+		this.sukuModalService.openConfirmationDialog(data);
 	}
 }
 
