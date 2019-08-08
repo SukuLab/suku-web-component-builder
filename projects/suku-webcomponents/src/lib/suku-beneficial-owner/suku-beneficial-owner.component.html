@@ -129,7 +129,7 @@
         </div>
         <div class="col d-flex justify-content-center mt-4 mb-3">
           <button class="suku-i suku-{{type}} {{btnTwoCustomClass}}" [id]="btnTwoId"
-            [ngClass]="{'disabled': btnTwoDisable}" (click)="submitDatas()"
+            [ngClass]="{'disabled': btnTwoDisable}" (click)="submitData.emit()"
             [disabled]="btnTwoDisable">{{btnTwo}}</button>
         </div>
       </div>

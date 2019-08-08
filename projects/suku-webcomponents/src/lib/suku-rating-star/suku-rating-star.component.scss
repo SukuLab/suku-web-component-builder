@@ -2,7 +2,7 @@
 
 $starMargin: 4px;
 $fullStarColor: $suku-star-full-bg;
-$emptyStarColor:  $suku-star-empty-bg;
+$emptyStarColor: $suku-star-empty-bg;
 
 .emptyStar {
     color: $emptyStarColor;
@@ -21,6 +21,7 @@ $emptyStarColor:  $suku-star-empty-bg;
     position: relative;
     left: 1px;
     font-size: $suku-star-size;
+    margin: $starMargin;
 }
 
 .halfStarRight {
@@ -28,4 +29,5 @@ $emptyStarColor:  $suku-star-empty-bg;
     position: relative;
     right: 1px;
     font-size: $suku-star-size;
+    margin: $starMargin;
 }

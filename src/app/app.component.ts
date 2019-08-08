@@ -418,16 +418,17 @@ export class AppComponent implements OnInit {
 			this.messageArray.push(messageObj);
 		});
 	}
+
 	sendMessage(e) {
 		console.log(e);
 	}
 
 	open() {
 		const data = {
-		'imgSrc': 'http://34.217.89.204/assets/icons/verified_icon.png',
-	  	'message': 'Sucess',
-	  	'description': 'Description',
-	  	'buttonText': 'Action',
+			'imgSrc': 'http://34.217.89.204/assets/icons/verified_icon.png',
+			'message': 'Sucess',
+			'description': 'Description',
+			'buttonText': 'Action',
 		};
 		// this.sukuLoaderService.openLoader(data);
 		this.sukuModalService.openConfirmationDialog(data);

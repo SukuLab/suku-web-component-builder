@@ -24,6 +24,17 @@ export class SukuBeneficialOwnerComponent implements OnInit {
 	@Input()
 	content = `I, Daisy, hereby certify, to the best of my knowledge, that the
   information provided above is complete and correct.`;
+	@Input() type = 'info';
+	@Input('btn-one') btnOne = 'Submit Beneficial Owner';
+	@Input('btn-one-id') btnOneId = 'submitBeneficialOwner';
+	@Input('btn-one-custom-class') btnOneCustomClass = '';
+	@Input('btn-one-disable') btnOneDisable: Boolean = false;
+	@Input('btn-two') btnTwo = 'Agree & Continue';
+	@Input('btn-two-custom-class') btnTwoCustomClass = '';
+	@Input('btn-two-id') btnTwoId = 'agreeBtn';
+	@Input('btn-two-disable') btnTwoDisable: Boolean = false;
+	@Input('label-one') labelOne = 'Add New Beneficial Owner';
+	@Input('label-one-id') labelOneId = 'addOwner';
 	@Output() countrySelect = new EventEmitter();
 	@Output() stateSelect = new EventEmitter();
 	@Output() upload = new EventEmitter();
@@ -36,20 +47,6 @@ export class SukuBeneficialOwnerComponent implements OnInit {
 	customClass;
 	documentType;
 	uploadType;
-
-	@Input() type = 'info';
-	@Input('btn-one') btnOne = 'Submit Beneficial Owner';
-	@Input('btn-one-id') btnOneId = 'submitBeneficialOwner';
-	@Input('btn-one-custom-class') btnOneCustomClass = '';
-	@Input('btn-one-disable') btnOneDisable: Boolean = false;
-	@Input('btn-two') btnTwo = 'Agree & Continue';
-	@Input('btn-two-custom-class') btnTwoCustomClass = '';
-	@Input('btn-two-id') btnTwoId = 'agreeBtn';
-	@Input('btn-two-disable') btnTwoDisable: Boolean = false;
-
-	@Input('label-one') labelOne = 'Add New Beneficial Owner';
-	@Input('label-one-id') labelOneId = 'addOwner';
-
 	constructor(private snackBar: MatSnackBar) { }
 
 	ngOnInit() {
@@ -106,9 +103,6 @@ export class SukuBeneficialOwnerComponent implements OnInit {
 		this.submitOwner.emit(formData);
 	}
 
-	submitDatas() {
-		console.log('test')
-	}
 
 	snackbar(msg) {
 		this.snackBar.open(msg, 'close', {
