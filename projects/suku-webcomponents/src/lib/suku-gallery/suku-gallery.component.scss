@@ -20,7 +20,6 @@ $box-shadow: 0 0px 2px rgba(0, 0, 0, .2),
   }
 }
 
-
 .vid {
   padding: 4% 4% 2%;
 }
@@ -30,7 +29,6 @@ $box-shadow: 0 0px 2px rgba(0, 0, 0, .2),
   position: relative;
   width: 87%;
 }
-
 
 /* modal */
 #myImg {
@@ -67,12 +65,12 @@ $box-shadow: 0 0px 2px rgba(0, 0, 0, .2),
   display: block;
   align-items: center;
   width: 80%;
-  max-width: 50vh;
+  max-width: 65vh;
 
-  &:hover {
-    transition: .45s ease-in-out;
-    max-width: 65vh;
-  }
+  // &:hover {
+  //   transition: .45s ease-in-out;
+  //   max-width: 65vh;
+  // }
 }
 
 /* Caption of Modal Image (Image Text) - Same Width as the Image */
@@ -131,7 +129,6 @@ $box-shadow: 0 0px 2px rgba(0, 0, 0, .2),
     justify-content: center;
   }
 }
-
 
 // .carousel-control-prev-icon {
 //   width: 32px;
@@ -217,7 +214,6 @@ $box-shadow: 0 0px 2px rgba(0, 0, 0, .2),
   height: 30px;
   width: 30px;
 }
-
 
 /* icon -end */
 .default-container {
