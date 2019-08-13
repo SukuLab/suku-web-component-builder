@@ -1,7 +1,7 @@
 import { Injectable, Output, EventEmitter } from '@angular/core';
 import { MatDialog } from '@angular/material';
 import { SukuConfirmationComponent } from '../suku-confirmation/suku-confirmation.component';
-import { SukuConfirmationModelComponent } from '../suku-confirmation-model/suku-confirmation-model.component';
+import { SukuConfirmationModalComponent } from '../suku-confirmation-modal/suku-confirmation-modal.component';
 
 @Injectable({
 	providedIn: 'root'
@@ -44,8 +44,8 @@ export class SukuModalService {
 		});
 	}
 
-	public openConfirmationModelDialog(data?) {
-		const dialogRef = this.dialogService.open(SukuConfirmationModelComponent, {
+	public openConfirmationModalDialog(data?) {
+		const dialogRef = this.dialogService.open(SukuConfirmationModalComponent, {
 			width: this.confirmationDialogWidth,
 			height: this.confirmationDialogHeight,
 			disableClose: this.confirmationDialogClose,
