@@ -182,7 +182,6 @@
   color: #fff;
 }
 
-
 .btn-p-p.disabled:hover {
   border: solid 2px $suku-sick-green !important;
   border-radius: 10px 20px 15px 20px;
@@ -288,7 +287,6 @@ fieldset[disabled] .btn-primary.focus {
   color: white;
 }
 
-
 .btn-primary:not(:disabled):not(.disabled).active,
 .btn-primary:not(:disabled):not(.disabled):active,
 .show>.btn-primary.dropdown-toggle {
@@ -327,7 +325,6 @@ fieldset[disabled] .btn-primary.focus {
   background-color: $suku-sick-green;
   color: white;
 }
-
 
 .btn.disabled:hover {
   border: solid 2px $suku-sick-green !important;
@@ -402,7 +399,6 @@ fieldset[disabled] .btn-info.focus {
   color: white;
 }
 
-
 .btn-info:not(:disabled):not(.disabled).active,
 .btn-info:not(:disabled):not(.disabled):active,
 .show>.btn-info.dropdown-toggle {
@@ -459,7 +455,9 @@ fieldset[disabled] .btn-info.focus {
 }
 
 .filterSubHeading {
-  font-size: 18px;
+  font-size: 17px;
+  font-family: Roboto,"Helvetica Neue",sans-serif;
+  letter-spacing: .2px;
 }
 
 /deep/.mat-checkbox-frame {
@@ -467,7 +465,7 @@ fieldset[disabled] .btn-info.focus {
   transition: border-color 90ms cubic-bezier(0, 0, .2, .1);
   border-width: 0px !important;
   border-style: solid;
-  border-color: #757575a6;
+  border-color: #5c4a4aa6;
 }
 
 .mat-checkbox-background,
