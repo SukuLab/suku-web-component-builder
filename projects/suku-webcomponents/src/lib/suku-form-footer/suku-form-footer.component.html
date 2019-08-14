@@ -23,7 +23,7 @@
      <div class="text-center col-md-12 col-lg-6 col-sm-12 content-end d-flex pl-5 pr-5">
        <div class="row">
          <div class="pt-4 pb-4 pl-lg-4 pr-lg-3 d-flex justify-content-end w-xs-100" *ngIf="btnThreeVisible">
-           <button class="suku-p suku-{{btnThreeType}} {{btnThreeCustomClass}} w-xs-100"
+           <button type="button" class="suku-p suku-{{btnThreeType}} {{btnThreeCustomClass}} w-xs-100"
              [ngClass]="{'disabled' : btnThreeDisableValue}" [style.font-size.rem]="btnThreeSize"
              [style.color]="btnThreeColor" [style.font-weight]="btnThreeWeight" [disabled]="btnThreeDisableValue"
              [id]="btnThreeId" (click)="btnThreeAction.emit()">
@@ -31,7 +31,7 @@
            </button>
          </div>
          <div class="pt-4 pb-4 pl-lg-4 pr-lg-3 w-xs-100" *ngIf="btnFourVisible">
-           <button class="suku-p suku-{{btnFourType}} {{btnFourCustomClass}} w-xs-100"
+           <button type="button" class="suku-p suku-{{btnFourType}} {{btnFourCustomClass}} w-xs-100"
              [ngClass]="{'disabled' : btnFourDisableValue}" [style.font-size.rem]="btnFourSize"
              [style.color]="btnFourColor" [style.font-weight]="btnFourWeight" [disabled]="btnFourDisableValue"
              [id]="btnFourId" (click)="btnFourAction.emit()">

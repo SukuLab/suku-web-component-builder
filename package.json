@@ -46,6 +46,7 @@
     "rxjs": "~6.3.3",
     "rxjs-compat": "^6.5.2",
     "scss-bundle": "^2.5.1",
+    "suku-icons-library": "git+https://parashur:d053b93a67bdbfa89b1d6b79a0de35540d644dd3@github.com/SukuLab/suku-icons-library.git#feature/livestock-ui",
     "suku-webcomponents": "git+https://parashur:d053b93a67bdbfa89b1d6b79a0de35540d644dd3@github.com/SukuLab/suku-web-components-library.git#feature/livestock-ui",
     "webpack-dev-server": "^3.1.14",
     "zone.js": "~0.8.26"

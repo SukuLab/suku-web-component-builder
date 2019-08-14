@@ -437,7 +437,7 @@ export class AppComponent implements OnInit {
 		};
 
 		// this.sukuLoaderService.openLoader(data);
-		this.sukuModalService.openConfirmationModelDialog(data);
+		this.sukuModalService.openConfirmationModalDialog(data);
 	}
 }
 

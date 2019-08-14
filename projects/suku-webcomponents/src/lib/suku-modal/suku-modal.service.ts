@@ -6,6 +6,7 @@ import { SukuAddLicenseModalComponent } from '../suku-add-license-modal/suku-add
 // import { Observable } from 'rxjs/Rx';
 // import { BehaviorSubject } from 'rxjs/BehaviorSubject'; 
 
+
 @Injectable({
 	providedIn: 'root'
 })
@@ -48,7 +49,8 @@ export class SukuModalService {
 		});
 	}
 
-	public openConfirmationModelDialog(data?) {
+
+	public openConfirmationModalDialog(data?) {
 		const dialogRef = this.dialogService.open(SukuConfirmationModalComponent, {
 			width: this.confirmationDialogWidth,
 			height: this.confirmationDialogHeight,
