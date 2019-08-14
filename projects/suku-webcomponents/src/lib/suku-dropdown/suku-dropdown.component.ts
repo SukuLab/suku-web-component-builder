@@ -18,8 +18,8 @@ export class SukuDropdownComponent implements OnInit {
 	@Input() selectId = 'sttProductTraceability';
 	@Input() errorMsg = 'Cannot be blank';
 	@Input() customSelectClass = '';
-	@Input() icon = 'suku-arrow-icon suku-md';
-	@Input('icon-custom-class') iconCustomClass = '';
+	@Input() icon = 'suku-arrow-icon';
+	@Input('icon-custom-class') iconCustomClass = 'arrow-icon';
 	@Input('icon-id') iconId = '';
 	@Output() select = new EventEmitter();
 
