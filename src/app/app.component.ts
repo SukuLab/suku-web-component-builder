@@ -394,7 +394,10 @@ export class AppComponent implements OnInit {
 
 	ngOnInit() {
 		this.test = this.fb.group({
-			'testControl': ''
+			'controlOne': '',
+			'controlTwo': '',
+			'controlThree': '',
+			'controlFour': '',
 		});
 		const userInfo = {
 			userId: 474,
@@ -424,13 +427,17 @@ export class AppComponent implements OnInit {
 
 	open() {
 		const data = {
-		'imgSrc': 'http://34.217.89.204/assets/icons/verified_icon.png',
-	  	'message': 'Sucess',
-	  	'description': 'Description',
-	  	'buttonText': 'Action',
+		     // controlOnePatternEnabled: ',
+			 controlOneRequired: true,
+			 controlTwoRequired: true,
+             controlTwoPatternEnabled: true,
+             controlTwoPattern: '[0-9]{9}[a-zA-Z]{1}[0-9]{5,10}$',
+			 dateControlOneRequired: true,
+			dateControlTwoRequired: false,
 		};
+
 		// this.sukuLoaderService.openLoader(data);
-		this.sukuModalService.openConfirmationDialog(data);
+		this.sukuModalService.openConfirmationModelDialog(data);
 	}
 }
 

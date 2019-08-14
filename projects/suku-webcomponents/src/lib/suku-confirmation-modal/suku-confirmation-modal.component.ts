@@ -3,10 +3,10 @@ import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material';
 
 @Component({
   selector: 'suku-confirmation-model',
-  templateUrl: './suku-confirmation-model.component.html',
-  styleUrls: ['./suku-confirmation-model.component.scss']
+  templateUrl: './suku-confirmation-modal.component.html',
+  styleUrls: ['./suku-confirmation-modal.component.scss']
 })
-export class SukuConfirmationModelComponent implements OnInit {
+export class SukuConfirmationModalComponent implements OnInit {
 
   @Input() dialogData = {
   	'imgSrc': '',
@@ -20,7 +20,7 @@ export class SukuConfirmationModelComponent implements OnInit {
   	'buttonId': '',
   }
   
-  constructor(public dialogCustomRef: MatDialogRef<SukuConfirmationModelComponent>,
+  constructor(public dialogCustomRef: MatDialogRef<SukuConfirmationModalComponent>,
     @Inject(MAT_DIALOG_DATA) public data: any) { }
 
   ngOnInit() {
