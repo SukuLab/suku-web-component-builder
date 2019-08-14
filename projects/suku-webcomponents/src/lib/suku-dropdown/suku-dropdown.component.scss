@@ -12,10 +12,16 @@
     }
 }
 
-.mat-select-trigger:focus  {
+.mat-select-trigger:focus {
     outline: none !important;
 }
 
-::ng-deep mat-select:focus  {
+::ng-deep mat-select:focus {
     outline: none !important;
+}
+
+.arrow-icon {
+    height: 1rem !important;
+    width: 3rem;
+    background-size: 1.5rem 2rem !important;
 }
