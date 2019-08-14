@@ -10,16 +10,26 @@ export class SukuChipListComponent implements OnInit {
   @Input('document-list') DocumentList = [];
   @Output('action-one') actionOne = new EventEmitter();
   @Output('action-two') actionTwo = new EventEmitter();
+  tempDataOne = <any>[];
+	tempDataTwo = <any>[];
   constructor() { }
 
   ngOnInit() {
   }
 
-	downloadDoc(val) {
-		this.actionOne.emit(val);
+	downloadDoc(val,docIndex) {
+    this.tempDataOne.map((d) => {
+      d.value = val;
+      d.index = docIndex
+    });
+		this.actionOne.emit(this.tempDataOne);
   }
   
-  deleteDoc(val) {
-		this.actionTwo.emit(val);
+  deleteDoc(val,docIndex) {
+    this.tempDataTwo.map((d) => {
+      d.value = val;
+      d.index = docIndex
+    });
+		this.actionTwo.emit(this.tempDataTwo);
 	}
 }

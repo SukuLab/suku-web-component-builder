@@ -1,10 +1,10 @@
 <div class="col">
   <mat-chip-list>
     <mat-chip class="whiteSpace" *ngFor="let doc of DocumentList;let docIndex = index;"> <br>
-      <mat-icon matChipRemove (click)="downloadDoc(doc)" matTooltip="Download">
+      <mat-icon matChipRemove (click)="downloadDoc(doc,docIndex)" matTooltip="Download">
         save_alt
       </mat-icon>
-      <mat-icon matChipRemove matTooltip="Delete" (click)="deleteDoc(doc)">clear
+      <mat-icon matChipRemove matTooltip="Delete" (click)="deleteDoc(doc,docIndex)">clear
       </mat-icon>
       <span> {{doc.name}}</span>
     </mat-chip>
