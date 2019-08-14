@@ -5,7 +5,7 @@ import { _keyValueDiffersFactory } from '@angular/core/src/application_module';
 @Component({
 	selector: 'suku-dropdown',
 	templateUrl: './suku-dropdown.component.html',
-	styleUrls: [ './suku-dropdown.component.scss' ]
+	styleUrls: ['./suku-dropdown.component.scss']
 })
 export class SukuDropdownComponent implements OnInit {
 	@Input() form: FormGroup;
@@ -18,14 +18,16 @@ export class SukuDropdownComponent implements OnInit {
 	@Input() selectId = 'sttProductTraceability';
 	@Input() errorMsg = 'Cannot be blank';
 	@Input() customSelectClass = '';
-	@Input() icon = 'suku-arrow-icon';
-	@Input('icon-custom-class') iconCustomClass = 'arrow-icon';
-	@Input('icon-id') iconId = '';
+	@Input() icon = '../../../../../assets/images/arrow-icon.png';
+	@Input('icon-custom-class') iconCustomClass = '';
+	@Input('icon-id') iconId = 'arrow';
 	@Output() select = new EventEmitter();
+	// @Input() icon = 'suku-arrow-icon';
+	// @Input('icon-custom-class') iconCustomClass = 'arrow-icon';
 
-	constructor() {}
+	constructor() { }
 
-	ngOnInit() {}
+	ngOnInit() { }
 
 	isFieldValid(field: string) {
 		return (
