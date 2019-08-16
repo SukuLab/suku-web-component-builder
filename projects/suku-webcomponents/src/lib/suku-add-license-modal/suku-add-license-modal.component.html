@@ -1,0 +1,110 @@
+ <div>
+    <div class="col-sm-12  card-header {{ dialogData?.headerCutomStyle }}">
+        <div class="col-sm-12">
+          <h1 class="headerFont">{{dialogData?.title}}</h1>
+          <p>{{dialogData?.subTitle}}</p>
+        </div>
+      </div>
+      <div class="modal-body col-sm-12">
+          <div>
+          	  <div id="collapseOne" class="collapse show" aria-labelledby="headingOne"
+              dialogData-parent="#accordionExample">
+              <div>
+                <div class="pL">
+                <div class="col-sm-12 mT-7">
+                  <div class="row">
+                    <mat-form-field class="col-sm-6">
+                        <input matInput placeholder="{{ dialogData?.controlOnePlaceholder }}"  [formControl]="controlOne" name="{{dialogData?.controlOne}}" id="{{ dialogData?.controlOneId }}">
+                        <mat-error *ngIf="controlOne.hasError('required')">
+                            {{ dialogData?.controlOneRquiredErrorMsg }}
+                          </mat-error>
+                    </mat-form-field>
+                    <div class="col-sm-6 p-0">
+                    <mat-form-field class="col-12 ">
+                      <input matInput placeholder="{{dialogData?.controlTwoPlaceholder}}" 
+                        [formControl]="controlTwo" id="{{ dialogData?.controlTwoId }}"
+                        name="{{dialogData?.controlTwo}}" #tooltip="matTooltip"
+                        matTooltip="{{ dialogData?.controlTwoToolTip }}">
+                      <mat-error *ngIf="controlTwo.hasError('required')">
+                          	{{ dialogData?.controlTwoRquiredErrorMsg }}
+                      </mat-error>
+                      <mat-error *ngIf="controlTwo.hasError('pattern')">
+                            {{ dialogData?.controlTwoPatternErrorMsg }}
+                      </mat-error>
+                    </mat-form-field>
+                    <div >
+                    <p class="pl-4 {{ dialogData?.hintClass }}">{{ dialogData?.controlHint }}</p>
+                  </div>
+                  </div>
+                  </div>
+                </div>
+                <div class="col-sm-12 mT-7">
+                  <div class="row">
+                    <mat-form-field  class="col-sm-6">
+                      <mat-label>{{ dialogData?.dateControlOnePlaceholder }}</mat-label>
+                      <input matInput [matDatepicker]="picker1" [formControl]="dateControlOne" 
+                       id="{{ dialogData?.dateControlOneId }}"   #checkin1 name="{{ dialogData?.dateControlOne }}" [min]="dialogData?.startDateMinDate"  [max]="dialogData?.startDateMaxDate">
+                      <mat-datepicker-toggle matSuffix [for]="picker1"></mat-datepicker-toggle>
+                      <mat-datepicker #picker1></mat-datepicker>
+                      <mat-error *ngIf="dateControlOne.hasError('required')">
+                            {{ dialogData?.dateControlOneRquiredErrorMsg }}
+                      </mat-error>
+                    </mat-form-field>
+                    <mat-form-field  class="col-sm-6">
+                      <mat-label>{{ dialogData?.dateControlTwoPlaceholder }}</mat-label>
+                      <input matInput [matDatepicker]="picker2" id="{{ dialogData?.dateControlTwoId }}" name="{{dialogData?.dateControlTwo}}"
+                        #checkout1 [formControl]="dateControlTwo"   [min]="dialogData?.endDateMinDate" [max]="dialogData?.endDateMaxDate" >
+                      <mat-datepicker-toggle matSuffix [for]="picker2"></mat-datepicker-toggle>
+                      <mat-datepicker #picker2 color="primary"></mat-datepicker>
+                      <mat-error *ngIf="dateControlTwo.hasError('required')">
+                            {{ dialogData?.dateControlTwoRquiredErrorMsg }}
+                      </mat-error>
+                    </mat-form-field>                           
+                    <div class="col-sm-12 pL">
+                      <div class="row">
+                        <div class="col-lg-3 col-md-6 col-sm-12">
+                       <aside >{{ dialogData?.uploadTitle }}</aside>
+                         <div class=" form-group">
+                          <input   #fileInput (change)="startUpload($event);"
+                           accept="{{ dialogData?.acceptDocment }}"  id="{{ dialogData?.fileInputId }}"
+                            type="file" style="display: none" />
+                        </div>
+                        <div class="bT text-center">
+                        <a (click)="fileInput.click()"><img [src]="dialogData?.uploadImg" alt="{{ dialogData?.uploadImgAltTxt }}" 
+                          width="90px" height="100px"></a>
+                      </div>
+                      </div>
+                      <div class="col-sm-9">
+                      <aside>{{ dialogData?.fileListTitle }}</aside>
+                      <div *ngFor="let file of mulFiles; let i = index;" class="pdfText">
+                          <div>{{file.name}} 
+                           <a (click)="removeFile(i)" id="{{ dialogData?.fileRemoveBtnId }}" class="fT8"><u>{{ dialogData?.fileRemoveBtnTxt }}</u></a>
+                          </div>
+                        </div>
+                      </div>
+                     </div>
+                  </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div>
+          </div>
+          <div>
+          </div>
+        </div>
+        <div class="col-sm-12 mt-5 mb-5">
+          <div class="row  d-flex justify-content-around">
+            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 d-flex justify-content-end
+            mb-lg-0 mb-md-0 mb-sm-2 mb-xs-2">
+                <button  type="button" (click)="closeDialog()"
+                  class="btn btn-secondary btn-default btn-lg col-lg-6 col-md-6 {{ dialogData?.cancelBtnCustomClass }}">{{ dialogData?.cancelBtnText }}</button>
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                <button type="button" class="btn btn-info btn btn-info btn-lg col-lg-6 col-md-6 col-sm-12 col-xs-12 {{ dialogData?.submitBtnCustomClass }}" (click)="addLicense();">{{ dialogData?.submitBtnTxt }}</button>
+            </div>
+          </div>
+        </div>
+      </div>
+ </div>

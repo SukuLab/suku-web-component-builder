@@ -2,6 +2,7 @@ import { Component, OnInit, Input, Output, Inject } from '@angular/core';
 import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material';
 
 @Component({
+
   selector: 'suku-confirmation-modal',
   templateUrl: './suku-confirmation-modal.component.html',
   styleUrls: ['./suku-confirmation-modal.component.scss']
@@ -19,7 +20,6 @@ export class SukuConfirmationModalComponent implements OnInit {
     'messageId': '',
     'buttonId': '',
   };
-
   constructor(public dialogCustomRef: MatDialogRef<SukuConfirmationModalComponent>,
     @Inject(MAT_DIALOG_DATA) public data: any) { }
 
