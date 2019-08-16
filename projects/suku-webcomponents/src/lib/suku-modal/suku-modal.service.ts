@@ -9,7 +9,7 @@ import { SukuConfirmationModalComponent } from '../suku-confirmation-modal/suku-
 export class SukuModalService {
 	public confirmationDialogWidth;
 	public confirmationDialogHeight;
-	public confirmationDialogClose;
+	public confirmationDialogClose = true;
 	public onDialogClose: EventEmitter<any> = new EventEmitter<any>();
 
 	constructor(public dialogService: MatDialog) {
@@ -52,8 +52,8 @@ export class SukuModalService {
 			data: {
 				imgSrc: data ? data.imgSrc : '',
 				message: data ? data.message : '',
-  				description: data ? data.description : '',
-  				buttonText: data ? data.buttonText : ''
+				description: data ? data.description : '',
+				buttonText: data ? data.buttonText : ''
 			}
 		});
 		dialogRef.afterClosed().subscribe((result) => {
