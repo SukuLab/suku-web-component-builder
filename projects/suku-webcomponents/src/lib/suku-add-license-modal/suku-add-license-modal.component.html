@@ -76,11 +76,13 @@
                       </div>
                       <div class="col-sm-9">
                       <aside>{{ dialogData?.fileListTitle }}</aside>
-                      <div *ngFor="let file of mulFiles; let i = index;" class="pdfText">
-                          <div>{{file.name}} 
-                           <a (click)="removeFile(i)" id="{{ dialogData?.fileRemoveBtnId }}" class="fT8"><u>{{ dialogData?.fileRemoveBtnTxt }}</u></a>
-                          </div>
-                        </div>
+                        <mat-chip-list>
+                          <mat-chip class="whiteSpace" *ngFor="let file of mulFiles;let docIndex = index;"> <br>
+                            <mat-icon  id="{{ dialogData?.fileRemoveBtnId }}" matChipRemove matTooltip="Delete" (click)="removeFile(docIndex)">clear
+                            </mat-icon>
+                            <span> {{file.name}}</span>
+                          </mat-chip>
+                        </mat-chip-list>
                       </div>
                      </div>
                   </div>
