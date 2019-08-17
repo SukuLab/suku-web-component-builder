@@ -4,11 +4,12 @@
         <div class="modalproduct-boxContent">
           <div class="col pl-lg-4 pt-1 pb-3">
             <div class="row">
-              <div class="col pl-lg-0 pl-0 mt-3 mb-3">
-                <div class="col pl-lg-0 pl-0 mb-3">
+              <div class="col mt-3 mb-3">
+                <div class="col mb-3">
                   <img [src]="dialogData?.imgSrc" />
                 </div>
-                <span id="{{ dialogData?.messageId }}" class="modalcolor {{ dialogData?.messageCustomClass }} pb-1 mt-3 mb-3">
+                <span id="{{ dialogData?.messageId }}"
+                  class="modalcolor {{ dialogData?.messageCustomClass }} pb-1 mt-3 mb-3">
                   {{ dialogData?.message }}
                 </span>
               </div>

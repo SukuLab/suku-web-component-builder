@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { SukuConfirmationModalComponent } from './suku-confirmation-modal.component';
+import { SukuConfirmationModelComponent } from './suku-confirmation-model.component';
 
-describe('SukuConfirmationModalComponent', () => {
-  let component: SukuConfirmationModalComponent;
-  let fixture: ComponentFixture<SukuConfirmationModalComponent>;
+describe('SukuConfirmationModelComponent', () => {
+  let component: SukuConfirmationModelComponent;
+  let fixture: ComponentFixture<SukuConfirmationModelComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ SukuConfirmationModalComponent ]
+      declarations: [ SukuConfirmationModelComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(SukuConfirmationModalComponent);
+    fixture = TestBed.createComponent(SukuConfirmationModelComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
