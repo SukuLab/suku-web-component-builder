@@ -439,4 +439,19 @@ export class AppComponent implements OnInit {
 		// this.sukuLoaderService.openLoader(data);
 		this.sukuModalService.openConfirmationModalDialog(data);
 	}
+
+	openSomething(){
+      let data = {
+        controlOneRequired: true,
+        controlTwoRequired: true,
+        controlTwoPatternEnabled: true,
+        controlTwoPattern: '[0-9]{9}[a-zA-Z]{1}[0-9]{5,10}$',
+        dateControlOneRequired: true,
+        dateControlTwoRequired: false,
+        startDateMaxDate: new Date(),
+        endDateMinDate: new Date(),
+    }
+		this.sukuModalService.openLicenseModalDialogDialog(data);
+	}
+	
 }

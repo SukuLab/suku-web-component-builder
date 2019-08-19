@@ -2,7 +2,7 @@ import { Component, OnInit, Output, Input, EventEmitter, Inject } from '@angular
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { MatDialogRef, MAT_DIALOG_DATA, MatSnackBar } from '@angular/material';
 // import { SukuModalService } from '../suku-modal/suku-modal.service'
-import { Subject } from 'rxjs';  
+import { Subject } from 'rxjs';
 
 @Component({
   selector: 'suku-add-license-modal',
@@ -11,7 +11,7 @@ import { Subject } from 'rxjs';
 })
 
 export class SukuAddLicenseModalComponent implements OnInit {
-  formSumitAttempt =  false;
+  formSumitAttempt = false;
   _subscriptionOne;
   _subscriptionTwo;
   _subscriptionThree;
@@ -22,13 +22,14 @@ export class SukuAddLicenseModalComponent implements OnInit {
   dateControlOneValue;
   dateControlTwoValue;
   mulFiles = [];
-  uploadFiles: any[]; 
+  imagePreviewUrls = [];
+  uploadFiles: any[];
   // uploadFiles = []; 
 
   @Input() dialogData = {
     controlOne: 'controlOne',
     controlTwo: 'controlTwo',
-    dateControlOne: 'dateControlOne', 
+    dateControlOne: 'dateControlOne',
     dateControlTwo: 'dateControlTwo',
     'controlOnePatternEnabled': '',
     'controlTwoPatternEnabled': '',
@@ -52,10 +53,10 @@ export class SukuAddLicenseModalComponent implements OnInit {
     controlTwoId: 'licenseNumber',
     dateControlOneId: 'startDate',
     dateControlTwoId: 'endDate',
-    controlTwoToolTip: 'The format should be 123456789a12345', 
+    controlTwoToolTip: 'The format should be 123456789a12345',
     controlOnePlaceholder: 'License Name',
-    controlTwoPlaceholder: 'License Number', 
-    dateControlOnePlaceholder: 'Licence Issue Date', 
+    controlTwoPlaceholder: 'License Number',
+    dateControlOnePlaceholder: 'Licence Issue Date',
     dateControlTwoPlaceholder: 'Licence Expiry Date(Optional)',
     controlOneRquiredErrorMsg: 'Cannot be blank.',
     controlTwoRquiredErrorMsg: 'Cannot be blank.',
@@ -77,10 +78,10 @@ export class SukuAddLicenseModalComponent implements OnInit {
     cancelBtnCustomClass: '',
 
   }
-  
-  controlOne = new FormControl(''); 
+
+  controlOne = new FormControl('');
   controlTwo = new FormControl('');
-  dateControlOne = new FormControl(''); 
+  dateControlOne = new FormControl('');
   dateControlTwo = new FormControl('');
   // @Input('enable-required-validator-for-control-one')
   // set enableRequiredValidatorForControlOne(val) {
@@ -118,9 +119,9 @@ export class SukuAddLicenseModalComponent implements OnInit {
   //   }
   // }
   constructor(private snackBar: MatSnackBar, public dialogCustomRef: MatDialogRef<SukuAddLicenseModalComponent>,
-    @Inject(MAT_DIALOG_DATA) public data: any, 
+    @Inject(MAT_DIALOG_DATA) public data: any,
     // public sukuModalService: DynamicData
-    ) {
+  ) {
   }
 
   ngOnInit() {
@@ -131,31 +132,30 @@ export class SukuAddLicenseModalComponent implements OnInit {
       }
     }
 
-    if(this.dialogData.controlOneRequired) {
-       this.controlOne.setValidators(Validators.required);
+    if (this.dialogData.controlOneRequired) {
+      this.controlOne.setValidators(Validators.required);
       this.controlOne.updateValueAndValidity();
     }
 
-    if(this.dialogData.controlTwoRequired) {
+    if (this.dialogData.controlTwoRequired) {
       this.controlTwo.setValidators(Validators.required);
       this.controlTwo.updateValueAndValidity();
     }
 
-   if(this.dialogData.dateControlOneRequired) {
+    if (this.dialogData.dateControlOneRequired) {
       this.dateControlOne.setValidators(Validators.required);
       this.dateControlOne.updateValueAndValidity();
     }
 
-   if(this.dialogData.dateControlTwoRequired) {
+    if (this.dialogData.dateControlTwoRequired) {
       this.dateControlTwo.setValidators(Validators.required);
       this.dateControlTwo.updateValueAndValidity();
     }
 
-   if (this.dialogData.controlTwoPatternEnabled && this.dialogData.controlTwoRequired) {
+    if (this.dialogData.controlTwoPatternEnabled && this.dialogData.controlTwoRequired) {
       this.controlTwo.setValidators([Validators.required, Validators.pattern(this.dialogData.controlTwoPattern)]);
       this.controlTwo.updateValueAndValidity();
     }
-
 
     // if (this.dialogData.controlOnePatternEnabled) {
     //   this.controlOne.setValidators(Validators.pattern(this.dialogData.controlOnePattern));
@@ -164,35 +164,35 @@ export class SukuAddLicenseModalComponent implements OnInit {
 
     console.log('this.dialogData', this.dialogData);
     this._subscriptionOne = this.controlOne.valueChanges.subscribe(value => {
-        if (value) {
-          this.controlOneValue = value;
-        } else {
-          // this.usernameControl.
-        }
+      if (value) {
+        this.controlOneValue = value;
+      } else {
+        // this.usernameControl.
+      }
     })
 
     this._subscriptionTwo = this.controlTwo.valueChanges.subscribe(value => {
-        if (value) {
-          this.controlTwoValue = value;
-        } else {
-          // this.usernameControl.
-        }
+      if (value) {
+        this.controlTwoValue = value;
+      } else {
+        // this.usernameControl.
+      }
     })
 
     this._subscriptionThree = this.dateControlOne.valueChanges.subscribe(value => {
-        if (value) {
-          this.dateControlOneValue =  value;
-        } else {
-          // this.usernameControl.
-        }
+      if (value) {
+        this.dateControlOneValue = value;
+      } else {
+        // this.usernameControl.
+      }
     })
 
     this._subscriptionFour = this.dateControlTwo.valueChanges.subscribe(value => {
-        if (value) {
-          this.dateControlTwoValue = value;
-        } else {
-          // this.usernameControl.
-        }
+      if (value) {
+        this.dateControlTwoValue = value;
+      } else {
+        // this.usernameControl.
+      }
     })
 
     // this._subscribeFiles = this.getUploadedFiles().subscribe(value => {
@@ -205,25 +205,25 @@ export class SukuAddLicenseModalComponent implements OnInit {
   }
 
   addLicense() {
-    if(this.controlOne.invalid || this.controlTwo.invalid ||
-     this.dateControlOne.invalid || this.dateControlTwo.invalid) {
-       this.snackBar.open('Please fill all the mandatory fields.', 'close', {
-            verticalPosition: 'top',
-            horizontalPosition: 'right',
-            duration: 5000
-        });
-   } else {
-    let reqObj = {
-      license: {
-        licenseName: this.controlOneValue,
-        licenseNumber: this.controlTwoValue,
-        startDate: this.dateControlOneValue,
-        endDate: this.dateControlTwoValue,
-        files: this.mulFiles
+    if (this.controlOne.invalid || this.controlTwo.invalid ||
+      this.dateControlOne.invalid || this.dateControlTwo.invalid) {
+      this.snackBar.open('Please fill all the mandatory fields.', 'close', {
+        verticalPosition: 'top',
+        horizontalPosition: 'right',
+        duration: 5000
+      });
+    } else {
+      let reqObj = {
+        license: {
+          licenseName: this.controlOneValue,
+          licenseNumber: this.controlTwoValue,
+          startDate: this.dateControlOneValue,
+          endDate: this.dateControlTwoValue,
+          files: this.mulFiles
+        }
       }
+      this.dialogCustomRef.close(reqObj);
     }
-    this.dialogCustomRef.close(reqObj);
-   }
   }
 
   closeDialog() {
@@ -231,7 +231,7 @@ export class SukuAddLicenseModalComponent implements OnInit {
   }
 
   startUpload(e) {
-      let maxFileSize = 10097152;
+    let maxFileSize = 10097152;
     let currentFileSize;
     if (e.target.files && e.target.files.length > 0) {
       for (var i = 0; i < e.target.files.length; i++) {
@@ -241,28 +241,24 @@ export class SukuAddLicenseModalComponent implements OnInit {
         if (
           currentFileSize <= maxFileSize &&
           (file.type == 'image/jpeg' || file.type == 'image/png' || file.type == 'image/jpg' || file.type == '.pdf' ||
-           file.type == 'application/rtf' || file.type == 'application/msword' ||
-           file.type == 'application/vnd.openxmlformats-officedocument.wordprocessingml.document' || file.type == 'application/pdf')
+            file.type == 'application/rtf' || file.type == 'application/msword' ||
+            file.type == 'application/vnd.openxmlformats-officedocument.wordprocessingml.document' || file.type == 'application/pdf')
         ) {
-          // this.mulFiles.push(e.target.files[i]);
-          // this.imagepath = this.LicencesAndRegistration.value.logo;
-          // this.imageAdded = 'Image addednsbmdbmbnmb';
           this.mulFiles.push(e.target.files[i]);
-          console.log(this.mulFiles);
-          // let reader = new FileReader();
-          // reader.onload = (e: any) => {
-          //   this.imagePreviewUrls.push({ file: e.target.result, name: file.name });
-          // };
-          // reader.readAsDataURL(file);
-         
+          let reader = new FileReader();
+          reader.onload = (e: any) => {
+            this.imagePreviewUrls.push({ file: e.target.result, name: file.name });
+          };
+          reader.readAsDataURL(file);
+
         } else {
-           this.snackBar.open('Upload Word, Image or PDF format of your License, Size should be below 10MB.', 'close', {
+          this.snackBar.open('Upload Word, Image or PDF format of your License, Size should be below 10MB.', 'close', {
             verticalPosition: 'top',
             horizontalPosition: 'right',
             duration: 5000
-        }); 
+          });
         }
-  
+
       }
     }
   }
@@ -270,6 +266,20 @@ export class SukuAddLicenseModalComponent implements OnInit {
   removeFile(param) {
     this.mulFiles.splice(param, 1)
     console.log('param', param)
+    this.imagePreviewUrls.splice(param, 1)
+    console.log('param url', param)
+  }
+
+  downloadDoc(file) {
+    console.log("this si what i am doing ", file);
+    const name = file.name;
+    const uri = file.file;
+    const downloadLink = document.createElement("a");
+    downloadLink.href = uri;
+    downloadLink.download = name;
+    document.body.appendChild(downloadLink);
+    downloadLink.click();
+    document.body.removeChild(downloadLink);
   }
 
   snackbar(msg) {

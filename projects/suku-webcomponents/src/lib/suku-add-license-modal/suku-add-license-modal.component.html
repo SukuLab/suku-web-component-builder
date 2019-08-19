@@ -77,7 +77,10 @@
                       <div class="col-sm-9">
                       <aside>{{ dialogData?.fileListTitle }}</aside>
                         <mat-chip-list>
-                          <mat-chip class="whiteSpace" *ngFor="let file of mulFiles;let docIndex = index;"> <br>
+                          <mat-chip class="whiteSpace" *ngFor="let file of imagePreviewUrls;let docIndex = index;"> <br>
+                            <mat-icon matChipRemove (click)="downloadDoc(file)" matTooltip="Download">
+                                save_alt
+                              </mat-icon>
                             <mat-icon  id="{{ dialogData?.fileRemoveBtnId }}" matChipRemove matTooltip="Delete" (click)="removeFile(docIndex)">clear
                             </mat-icon>
                             <span> {{file.name}}</span>
