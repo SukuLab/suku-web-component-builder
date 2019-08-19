@@ -16,6 +16,8 @@ export class SukuDateTimePickerComponent implements OnInit {
   @Input('max-date') max;
   @Input('min-date') min;
   @Input() formSumitAttempt;
+  @Input() errorMsg = 'Cannot be blank';
+  
   constructor() { }
 
   ngOnInit() { }

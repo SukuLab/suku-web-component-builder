@@ -6,7 +6,7 @@
     <owl-date-time #picker></owl-date-time>
     <mat-error>
       <span class="err_style">
-        <span *ngIf="form.hasError('required',[control])" id="{{dateIda}}">{{errorMsg}}</span>
+        <span *ngIf="form.hasError('required',[control])" id="errorMsg{{dateId}}">{{errorMsg}}</span>
       </span>
     </mat-error>
   </mat-form-field>
