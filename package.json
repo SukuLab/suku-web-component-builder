@@ -38,6 +38,7 @@
     "html2canvas": "^1.0.0-alpha.12",
     "icon-font-generator": "^2.1.10",
     "jspdf": "^1.5.3",
+    "ng-pick-datetime": "^7.0.0",
     "ng2-charts": "~1.6.0",
     "ngx-countdown-timer": "^0.1.9",
     "ngx-quill": "^3.6.0",

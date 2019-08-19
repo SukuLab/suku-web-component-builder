@@ -440,4 +440,3 @@ export class AppComponent implements OnInit {
 		this.sukuModalService.openConfirmationModalDialog(data);
 	}
 }
-
