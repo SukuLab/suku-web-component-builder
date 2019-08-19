@@ -9,30 +9,38 @@ import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material';
 export class SukuConfirmationModalComponent implements OnInit {
 
   @Input() dialogData = {
-  	'imgSrc': '',
-  	'message': '',
-  	'description': '',
-  	'buttonText': '',
-  	'messageCustomClass': '',
-  	'descriptionCustomClass': '',
-  	'buttonCustomClass': '',
-  	'messageId': '',
-  	'buttonId': '',
+    'imgSrc': '',
+    'message': '',
+    'description': '',
+    'loader': '',
+    'buttonText': '',
+    'messageCustomClass': '',
+    'descriptionCustomClass': '',
+    'buttonCustomClass': '',
+    'messageId': '',
+    'buttonId': '',
   };
 
   constructor(public dialogCustomRef: MatDialogRef<SukuConfirmationModalComponent>,
     @Inject(MAT_DIALOG_DATA) public data: any) { }
 
   ngOnInit() {
-  	for (const key of Object.keys(this.data)) {
-      if (this.data[key]) {
-        this.dialogData[key] = this.data[key];
-      }
+    if (this.data.modalData) {
+      this.data.modalData.subscribe((val) => {
+        console.log('data--', val);
+        if (val) {
+          for (const key of Object.keys(val)) {
+            if (val[key]) {
+              this.dialogData[key] = val[key];
+            }
+          }
+        }
+      });
     }
   }
 
   close() {
-	this.dialogCustomRef.close();
+    this.dialogCustomRef.close();
   }
 
 }

@@ -18,6 +18,9 @@
         <h2 class="col-sm-10 modalFontStyle mt-5 mb-2 text-center {{ dialogData?.descriptionCustomClass }}">
           {{ dialogData?.description }}
         </h2>
+        <div class="col-sm-12 pt-2 d-flex justify-content-center" *ngIf="dialogData?.loader">
+          <mat-spinner diameter="45"></mat-spinner>
+        </div>
       </div>
     </div>
     <div class="col text-center p-3">
