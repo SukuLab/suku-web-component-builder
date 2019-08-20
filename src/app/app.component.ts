@@ -394,7 +394,10 @@ export class AppComponent implements OnInit {
 
   ngOnInit() {
     this.test = this.fb.group({
-      'testControl': ''
+      'controlOne': '',
+      'controlTwo': '',
+      'controlThree': '',
+      'controlFour': '',
     });
     const userInfo = {
       userId: 474,
@@ -423,15 +426,42 @@ export class AppComponent implements OnInit {
   }
 
   open() {
-    const data = {
+    let data = {
       'imgSrc': 'http://34.217.89.204/assets/icons/verified_icon.png',
-      'message': 'Sucess',
+      'message': 'please wait',
       'description': 'Description',
-      'loader' : true,
-      'buttonText': 'Action'
+      'loader': 'enable',
+      'buttonText': 'Action',
+      'open': true
     };
     // this.sukuLoaderService.openLoader(data);
     this.sukuModalService.openConfirmationModalDialog(data);
+    setTimeout(() => {
+      data = {
+        'imgSrc': 'http://34.217.89.204/assets/icons/verified_icon.png',
+        'message': 'Success',
+        'description': 'Description',
+        'loader': 'disable',
+        'buttonText': 'Action',
+        'open': false
+      };
+      // this.sukuLoaderService.openLoader(data);
+      this.sukuModalService.openConfirmationModalDialog(data);
+    }, 5000);
   }
-}
 
+  // openSomething() {
+  //   const data = {
+  //     controlOneRequired: true,
+  //     controlTwoRequired: true,
+  //     controlTwoPatternEnabled: true,
+  //     controlTwoPattern: '[0-9]{9}[a-zA-Z]{1}[0-9]{5,10}$',
+  //     dateControlOneRequired: true,
+  //     dateControlTwoRequired: false,
+  //     startDateMaxDate: new Date(),
+  //     endDateMinDate: new Date(),
+  //   }
+  //   this.sukuModalService.openLicenseModalDialogDialog(data);
+  // }
+
+}
