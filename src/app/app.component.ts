@@ -5,9 +5,9 @@ import { Observable, Observer } from 'rxjs';
 import { FormGroup, FormBuilder } from '@angular/forms';
 import { SukuModalService, SukuLoaderService } from 'projects/suku-webcomponents/src/public_api';
 @Component({
-	selector: 'app-root',
-	templateUrl: './app.component.html',
-	styleUrls: ['./app.component.scss']
+  selector: 'app-root',
+  templateUrl: './app.component.html',
+  styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit {
 	test: FormGroup;
@@ -392,9 +392,9 @@ export class AppComponent implements OnInit {
 	expMaxDate: Date;
 	expMinDate: string;
 
-	constructor(private fb: FormBuilder, private sukuModalService: SukuModalService,
-		private sukuLoaderService: SukuLoaderService
-	) { }
+  constructor(private fb: FormBuilder, private sukuModalService: SukuModalService,
+    private sukuLoaderService: SukuLoaderService
+  ) { }
 
 	ngOnInit() {
 		this.test = this.fb.group({
@@ -453,20 +453,44 @@ export class AppComponent implements OnInit {
     return year + "-" + month + "-" + day;
   }
 
-	open() {
-		const data = {
-		     // controlOnePatternEnabled: ',
-			 controlOneRequired: true,
-			 controlTwoRequired: true,
-             controlTwoPatternEnabled: true,
-             controlTwoPattern: '[0-9]{9}[a-zA-Z]{1}[0-9]{5,10}$',
-			 dateControlOneRequired: true,
-			dateControlTwoRequired: false,
-		};
+  open() {
+    let data = {
+      'imgSrc': 'http://34.217.89.204/assets/icons/verified_icon.png',
+      'message': 'please wait',
+      'description': 'Description',
+      'loader': 'enable',
+      'buttonText': 'Action',
+      'open': true
+    };
+    // this.sukuLoaderService.openLoader(data);
+    this.sukuModalService.openConfirmationModalDialog(data);
+    setTimeout(() => {
+      data = {
+        'imgSrc': 'http://34.217.89.204/assets/icons/verified_icon.png',
+        'message': 'Success',
+        'description': 'Description',
+        'loader': 'disable',
+        'buttonText': 'Action',
+        'open': false
+      };
+      // this.sukuLoaderService.openLoader(data);
+      this.sukuModalService.openConfirmationModalDialog(data);
+    }, 5000);
+  }
 
-		// this.sukuLoaderService.openLoader(data);
-		this.sukuModalService.openConfirmationModalDialog(data);
-	}
+  // openSomething() {
+  //   const data = {
+  //     controlOneRequired: true,
+  //     controlTwoRequired: true,
+  //     controlTwoPatternEnabled: true,
+  //     controlTwoPattern: '[0-9]{9}[a-zA-Z]{1}[0-9]{5,10}$',
+  //     dateControlOneRequired: true,
+  //     dateControlTwoRequired: false,
+  //     startDateMaxDate: new Date(),
+  //     endDateMinDate: new Date(),
+  //   }
+  //   this.sukuModalService.openLicenseModalDialogDialog(data);
+  // }
 
 	openSomething(){
       let data = {

@@ -13,6 +13,7 @@ export class SukuConfirmationModalComponent implements OnInit {
     'imgSrc': '',
     'message': '',
     'description': '',
+    'loader': 'disable',
     'buttonText': '',
     'messageCustomClass': '',
     'descriptionCustomClass': '',
@@ -24,10 +25,17 @@ export class SukuConfirmationModalComponent implements OnInit {
     @Inject(MAT_DIALOG_DATA) public data: any) { }
 
   ngOnInit() {
-    for (const key of Object.keys(this.data)) {
-      if (this.data[key]) {
-        this.dialogData[key] = this.data[key];
-      }
+    if (this.data.modalData) {
+      this.data.modalData.subscribe((val) => {
+        console.log('data--', val);
+        if (val) {
+          for (const key of Object.keys(val)) {
+            if (val[key]) {
+              this.dialogData[key] = val[key];
+            }
+          }
+        }
+      });
     }
   }
 
