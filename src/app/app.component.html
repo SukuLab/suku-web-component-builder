@@ -14,7 +14,18 @@
     <!-- <app-test-comp></app-test-comp> -->
     <button (click)="openSomething()">Click</button>
   </div>
-  <div class="col">
-    <!-- <button type="button" (click)="open()">open</button> -->
+  <div class="form-group col-12 col-sm-8 col-md-8 col-lg-8 offset-sm-2 pL0R0 Rectangle-2">
+    <div class="col-sm-10 col-12 offset-sm-1 noPadding ">
+      <div class="col-sm-12 noPadding">
+          <div class="col-sm-6">
+              <suku-date-time-picker (dateSelect)="sendPublishDate()" [max-date]='expMaxDate' [min-date]='mindate' [form]='test' control='publishDate' id='publishDate' place-holder='publish date'>
+              </suku-date-time-picker>
+            </div>
+        <div class="col-sm-6">
+          <suku-date-time-picker  (dateSelect)="sendMaxdate($event)" [min-date]='expMinDate || mindate' [form]='test' control='expiryDate' id='expiryDate' place-holder='expiry Date'>
+          </suku-date-time-picker>
+        </div>
+      </div>
+    </div>
   </div>
 </form>

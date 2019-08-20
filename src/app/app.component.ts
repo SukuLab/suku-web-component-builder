@@ -18,6 +18,7 @@ export class AppComponent implements OnInit {
 		disabled: false,
 		id: 'Marketplace'
 	};
+
 	messageData = [
 		{
 			'message': 'hi',
@@ -387,6 +388,9 @@ export class AppComponent implements OnInit {
 			status: 'verify'
 		}
 	];
+	mindate: Date;
+	expMaxDate: Date;
+	expMinDate: string;
 
 	constructor(private fb: FormBuilder, private sukuModalService: SukuModalService,
 		private sukuLoaderService: SukuLoaderService
@@ -398,6 +402,8 @@ export class AppComponent implements OnInit {
 			'controlTwo': '',
 			'controlThree': '',
 			'controlFour': '',
+			publishDate:'',
+			expiryDate:'',
 		});
 		const userInfo = {
 			userId: 474,
@@ -420,10 +426,32 @@ export class AppComponent implements OnInit {
 			};
 			this.messageArray.push(messageObj);
 		});
+		this.currentdate();
 	}
 	sendMessage(e) {
 		console.log(e);
 	}
+	sendPublishDate() {
+    console.log("this is publish date value called ");
+    const publishDate = new Date(this.test.controls["publishDate"].value);
+    //  this.expMinDate = publishDate;
+    let maxdate = new Date().setDate(publishDate.getDate() + 1);
+    this.expMinDate = new Date(maxdate).toISOString();
+	}
+	
+  sendMaxdate(expiryDate) {
+	console.log("this is expirt date",expiryDate)
+    this.expMaxDate = new Date(expiryDate);
+  }
+
+  currentdate() {
+    const todayTime = new Date();
+    const month = todayTime.getMonth();
+    const day = todayTime.getDate();
+    const year = todayTime.getFullYear();
+    this.mindate = new Date(year, month, day);
+    return year + "-" + month + "-" + day;
+  }
 
 	open() {
 		const data = {
@@ -453,5 +481,5 @@ export class AppComponent implements OnInit {
     }
 		this.sukuModalService.openLicenseModalDialogDialog(data);
 	}
-	
+
 }

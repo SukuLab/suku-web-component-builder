@@ -210,8 +210,8 @@ import { OwlDateTimeModule, OwlNativeDateTimeModule } from 'ng-pick-datetime';
     SukuLoaderModule,
     SukuFileUploadModule,
     QuillModule,
-    OwlDateTimeModule, 
-    OwlNativeDateTimeModule
+    OwlDateTimeModule,
+    OwlNativeDateTimeModule,
   ],
   providers: [SukuModalService, SukuLoaderService],
   exports: [
@@ -283,7 +283,7 @@ import { OwlDateTimeModule, OwlNativeDateTimeModule } from 'ng-pick-datetime';
     SukuProfileImageIconComponent,
     SukuConfirmationModalComponent,
     SukuAddLicenseModalComponent,
-    SukuGalleryUploadComponent, 
+    SukuGalleryUploadComponent,
     SukuChipListComponent,
     SukuDateTimePickerComponent
   ],
