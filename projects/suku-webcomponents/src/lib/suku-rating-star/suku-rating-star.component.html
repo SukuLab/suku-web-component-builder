@@ -1,8 +1,8 @@
 <span (change)="action.emit()">
   <div>
-    <span class="fa fa-star fullStar" *ngFor="let star of fullStarsArray"> </span>
+    <span class="suku-star-icon fullStar" *ngFor="let star of fullStarsArray"> </span>
     <span class="fa fa-star-half halfStarLeft" *ngIf="halfStar == 1"> </span>
     <span class="fa fa-star-half fa-flip-horizontal halfStarRight" *ngIf="halfStar == 1"> </span>
-    <span class="fa fa-star emptyStar" *ngFor="let star of emptyStarsArray"> </span>
+    <span class="suku-star-empty-icon emptyStar" *ngFor="let star of emptyStarsArray"> </span>
   </div>
 </span>

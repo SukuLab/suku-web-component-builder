@@ -1,8 +1,8 @@
 @import '../theme/theme';
 
-$starMargin: 4px;
+$starMargin: 3px;
 $fullStarColor: $suku-star-full-bg;
-$emptyStarColor:  $suku-star-empty-bg;
+$emptyStarColor: $suku-star-empty-bg;
 
 .emptyStar {
     color: $emptyStarColor;

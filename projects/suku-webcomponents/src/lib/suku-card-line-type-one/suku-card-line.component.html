@@ -4,10 +4,12 @@
       <img class="customclass {{imgCustomClass}}" src="{{image}}" alt="card-img">
     </div>
     <div class="col-sm-1" *ngIf="msgStatus == 'read'">
-      <img [class]="customIconClass" src="{{chatUnreadIcon}}" alt="card-img" width="50px" height="50px">
+      <i class="{{customIconClass}} {{chatReadIcon}}" id="{{chatReadIconId}}"></i>
+      <!-- <img [class]="customIconClass" src="{{chatUnreadIcon}}" alt="card-img" width="50px" height="50px"> -->
     </div>
     <div class="col-sm-1" *ngIf="msgStatus == 'unRead'">
-      <img [class]="customIconClass" src="{{chatReadIcon}}" alt="card-img" width="50px" height="50px">
+      <i class="{{customIconClass}} {{chatUnreadIcon}}" id="{{chatUnreadIconId}}"></i>
+      <!-- <img [class]="customIconClass" src="{{chatReadIcon}}" alt="card-img" width="50px" height="50px"> -->
     </div>
     <div [class]="txtcolsize">
       <h2 [style.font-size.px]="titleOneSize" [class]="titleOnecustomclass" [style.font-weight]="titleOneWeight"

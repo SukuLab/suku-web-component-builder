@@ -7,6 +7,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { TestCompComponent } from './test-comp/test-comp.component';
 import { SukuWebcomponentsModule, SukuWebcomponentsService } from 'projects/suku-webcomponents/src/public_api';
+// import { SukuWebcomponentsModule, SukuWebcomponentsService } from 'suku-webcomponents';
 // import { SukuButtonsModule, SukuWebco../../projects/suku-webcomponents/src/lib/suku-user-input/suku-user-input.component;
 enableProdMode();
 @NgModule({
@@ -15,7 +16,7 @@ enableProdMode();
 		FormsModule, ReactiveFormsModule, SukuWebcomponentsModule
 	],
 	schemas: [NO_ERRORS_SCHEMA, CUSTOM_ELEMENTS_SCHEMA],
-	providers: [],
+	providers: [SukuWebcomponentsService],
 	bootstrap: [AppComponent]
 })
 export class AppModule {

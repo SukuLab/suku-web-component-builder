@@ -3,7 +3,8 @@ import html2canvas from 'html2canvas';
 import * as jspdf from 'jspdf';
 import { Observable, Observer } from 'rxjs';
 import { FormGroup, FormBuilder } from '@angular/forms';
-import { SukuModalService, SukuLoaderService } from 'projects/suku-webcomponents/src/public_api';
+import { SukuLoaderService, SukuModalService } from 'projects/suku-webcomponents/src/public_api';
+// import { SukuModalService, SukuLoaderService } from 'suku-webcomponents';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -426,28 +427,30 @@ export class AppComponent implements OnInit {
   }
 
   open() {
-    let data = {
-      'imgSrc': 'http://34.217.89.204/assets/icons/verified_icon.png',
+    console.log('dialog');
+    // 'imgSrc': 'http://34.217.89.204/assets/icons/verified_icon.png',
+    const data = {
+      'icon': 'suku-success-icon',
       'message': 'please wait',
       'description': 'Description',
       'loader': 'enable',
       'buttonText': 'Action',
-      'open': true
+      'openDialog': true
     };
     // this.sukuLoaderService.openLoader(data);
     this.sukuModalService.openConfirmationModalDialog(data);
-    setTimeout(() => {
-      data = {
-        'imgSrc': 'http://34.217.89.204/assets/icons/verified_icon.png',
-        'message': 'Success',
-        'description': 'Description',
-        'loader': 'disable',
-        'buttonText': 'Action',
-        'open': false
-      };
-      // this.sukuLoaderService.openLoader(data);
-      this.sukuModalService.openConfirmationModalDialog(data);
-    }, 5000);
+    // setTimeout(() => {
+    //   data = {
+    //     'imgSrc': 'http://34.217.89.204/assets/icons/verified_icon.png',
+    //     'message': 'Success',
+    //     'description': 'Description',
+    //     'loader': 'disable',
+    //     'buttonText': 'Action',
+    //     'open': false
+    //   };
+    //   // this.sukuLoaderService.openLoader(data);
+    //   this.sukuModalService.openConfirmationModalDialog(data);
+    // }, 5000);
   }
 
   // openSomething() {

@@ -13,9 +13,9 @@ export class SukuAddressWidgetComponent implements OnInit {
   @Input() customClass = 'pl-3 mt-auto mb-auto';
   @Input('icon') icon = 'suku-map-pin';
   @Input('icon-id') iconId = 'phoneIcon';
-  @Input('icon-custom-class') iconCustomClass = 'icon';
+  @Input('icon-custom-class') iconCustomClass = 'custom-icon';
   @Input('widget-custom-class') widgetCustomClass = 'col';
-  constructor() {}
+  constructor() { }
 
-  ngOnInit() {}
+  ngOnInit() { }
 }

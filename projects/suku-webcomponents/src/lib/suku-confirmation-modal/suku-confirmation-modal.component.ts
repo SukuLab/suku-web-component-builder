@@ -11,6 +11,10 @@ export class SukuConfirmationModalComponent implements OnInit {
 
   @Input() dialogData = {
     'imgSrc': '',
+    'imgId': '',
+    'icon': '',
+    'iconId': 'suku-icon',
+    'iconCustomClass': 'suku-md',
     'message': '',
     'description': '',
     'loader': 'disable',

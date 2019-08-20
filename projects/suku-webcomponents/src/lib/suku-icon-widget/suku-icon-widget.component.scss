@@ -1,0 +1,69 @@
+@import '../theme/theme';
+
+.c-pointer {
+  cursor: pointer;
+}
+
+// tool tip start
+.tipTool {
+  position: relative;
+  display: inline-block;
+  width: 45px;
+  height: 0px;
+  text-align: center;
+  border-radius: 15px 15px 15px 15px;
+  background-color: #d8d8d8a8 transparent;
+  font-size: 18px;
+  color: #757575;
+  font-weight: bold;
+  font-style: italic;
+  font-stretch: normal;
+  letter-spacing: 0.5px;
+}
+
+.tipTool .tipTooltext {
+  visibility: hidden;
+  width: max-content;
+  background-color: #000000eb;
+  text-align: left;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  bottom: 150%;
+  left: 70%;
+  margin-left: -60px;
+  font-style: normal;
+  font-stretch: normal;
+  padding-left: 18px;
+  padding-right: 18px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  font-size: 13px;
+  font-family: $suku-secondary-font;
+  font-weight: 500;
+  line-height: 1.45;
+  letter-spacing: 0.4px;
+  color: #b6b6b6;
+}
+
+.tipTool .tipTooltext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 36.5%;
+  margin-left: 0px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #191922 transparent transparent transparent;
+  font-style: normal;
+  font-stretch: normal;
+}
+
+.tipTool:hover .tipTooltext {
+  visibility: visible;
+}
+
+.tooltip-info-content {
+  font-family: $suku-secondary-font;
+}

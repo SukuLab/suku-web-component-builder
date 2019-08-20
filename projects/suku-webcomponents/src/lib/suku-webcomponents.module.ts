@@ -91,6 +91,7 @@ import { SukuConfirmationModalComponent } from './suku-confirmation-modal/suku-c
 import { SukuChipListComponent } from './suku-chip-list/suku-chip-list.component';
 import { SukuDateTimePickerComponent } from './suku-date-time-picker/suku-date-time-picker.component';
 import { OwlDateTimeModule, OwlNativeDateTimeModule } from 'ng-pick-datetime';
+import { SukuIconWidgetComponent } from './suku-icon-widget/suku-icon-widget.component';
 
 @NgModule({
   declarations: [
@@ -160,7 +161,8 @@ import { OwlDateTimeModule, OwlNativeDateTimeModule } from 'ng-pick-datetime';
     SukuAddLicenseModalComponent,
     SukuGalleryUploadComponent,
     SukuChipListComponent,
-    SukuDateTimePickerComponent
+    SukuDateTimePickerComponent,
+    SukuIconWidgetComponent
   ],
   imports: [
     CommonModule,
@@ -210,7 +212,7 @@ import { OwlDateTimeModule, OwlNativeDateTimeModule } from 'ng-pick-datetime';
     SukuLoaderModule,
     SukuFileUploadModule,
     QuillModule,
-    OwlDateTimeModule, 
+    OwlDateTimeModule,
     OwlNativeDateTimeModule
   ],
   providers: [SukuModalService, SukuLoaderService],
@@ -283,9 +285,10 @@ import { OwlDateTimeModule, OwlNativeDateTimeModule } from 'ng-pick-datetime';
     SukuProfileImageIconComponent,
     SukuConfirmationModalComponent,
     SukuAddLicenseModalComponent,
-    SukuGalleryUploadComponent, 
+    SukuGalleryUploadComponent,
     SukuChipListComponent,
-    SukuDateTimePickerComponent
+    SukuDateTimePickerComponent,
+    SukuIconWidgetComponent
   ],
   entryComponents: [SukuConfirmationModalComponent, SukuAddLicenseModalComponent],
   schemas: []

@@ -13,7 +13,7 @@ export class SukuCardLineTypeTwoComponent implements OnInit {
 	@Input('msg-status') msgStatus;
 	@Input('custom-class') customClass = '';
 	@Input('customImgclass') customImgclass = '';
-	@Input('custom-icon-class') customIconClass = 'text-center';
+	@Input('custom-icon-class') customIconClass = 'text-center suku-sm';
 	@Input('image-col-size') imageColSize = 'col-sm-1 pt-1 pl-2';
 	@Input('icon-one-id') iconOneId = 'iconOneId';
 	@Input('icon-two-id') iconTwoId = 'iconTwoId';

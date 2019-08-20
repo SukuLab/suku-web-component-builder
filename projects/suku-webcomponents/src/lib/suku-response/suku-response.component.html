@@ -2,7 +2,8 @@
   <div [class]="subCustomClass">
     <p class="response-title {{titleCustomClass}}" id="{{titleId}}" [style.font-size.rem]="titleSize"
       [style.color]="titleColor" [style.font-weight]="titleWeight">{{title}}</p>
-    <img [src]="sukuResponseLogo" [class]="imgCustomClass" alt="no-data-search-icon">
+    <img [src]="sukuResponseLogo" [class]="imgCustomClass" alt="no-data-search-icon" *ngIf="sukuResponseLogo">
+    <i class="{{icon}} {{iconCustomClass}}" *ngIf="icon" id="{{iconId}}"></i>
     <p class="text-justify text-center mx-auto description {{descriptionCustomClass}}" id="{{descriptionId}}"
       [style.font-size.res]="descriptionSize" [style.color]="descriptionColor" [style.font-weight]="descriptionWeight">
       {{description}}</p>

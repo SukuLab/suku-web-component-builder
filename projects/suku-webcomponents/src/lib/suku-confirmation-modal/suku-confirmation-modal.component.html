@@ -4,9 +4,11 @@
         <div class="modalproduct-boxContent">
           <div class="col pl-lg-4 pt-1 pb-2">
             <div class="row">
-              <div class="col mt-3 mb-3">
+              <div class="col mt-2 mb-2">
                 <div class="col mb-3">
-                  <img [src]="dialogData?.imgSrc" />
+                  <img [src]="dialogData?.imgSrc" id="{{dialogData?.imgId}}" *ngIf="dialogData?.imgSrc" />
+                  <i class="{{dialogData?.icon}} {{dialogData?.iconCustomClass}}" id="{{dialogData?.iconId}}"
+                    *ngIf="dialogData?.icon"></i>
                 </div>
                 <span id="{{ dialogData?.messageId }}"
                   class="modalcolor {{ dialogData?.messageCustomClass }} pb-1 mt-3 mb-3">
@@ -27,7 +29,8 @@
     <div class="col text-center p-3">
       <div class="row mb-3 mt-3">
         <div class="col-lg-4 col-md-6 offset-md-3 offset-sm-4	 col-sm-4 col-xs-10 offset-lg-4 pl-lg-0 pr-lg-0">
-          <button tabindex="1" (click)="close()" [disabled]="(dialogData?.loader == 'enable')" id="{{ dialogData?.buttonId }}"
+          <button tabindex="1" (click)="close()" [disabled]="(dialogData?.loader == 'enable')"
+            id="{{ dialogData?.buttonId }}"
             class="btn btn-info center-block width100 {{ dialogData?.buttonCustomClass }}">
             {{ dialogData?.buttonText }}
           </button>
