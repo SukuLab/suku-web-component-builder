@@ -13,7 +13,7 @@ export class SukuRatingStarComponent implements OnInit {
   emptyStars = 0;
   emptyStarsArray = [];
 	@Output() action = new EventEmitter();
-	@Input() customclass;
+	@Input('custom-class') customClass;
   @Input('rating-value')
   // Calculate the number of full, half, and empty stars based on the ratingValue
   // Arrays are created to iterate through with an ngFor in the HTML file

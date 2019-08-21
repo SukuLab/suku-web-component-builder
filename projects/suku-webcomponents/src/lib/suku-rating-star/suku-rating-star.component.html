@@ -1,5 +1,5 @@
 <span (change)="action.emit()">
-  <div>
+  <div class="{{customClass}}">
     <span class="suku-star-icon fullStar" *ngFor="let star of fullStarsArray"> </span>
     <span class="fa fa-star-half halfStarLeft" *ngIf="halfStar == 1"> </span>
     <span class="fa fa-star-half fa-flip-horizontal halfStarRight" *ngIf="halfStar == 1"> </span>
