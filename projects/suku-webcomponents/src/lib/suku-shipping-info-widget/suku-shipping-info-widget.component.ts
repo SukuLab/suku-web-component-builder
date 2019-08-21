@@ -10,7 +10,7 @@ export class SukuShippingInfoWidgetComponent implements OnInit {
 @Input() widgetTitleColor = '';
 @Input() widgetTitleWeight = '';
 @Input() widgetTitleSize = '';
-@Input() widgetTitlecustomclass = '';
+@Input() widgetTitlecustomclass = 'pb-3';
 @Input() widgetTitleid = '';
 @Input() shippingaddressCustomClass = '';
 @Input() firstName = '';
