@@ -39,7 +39,7 @@ export const suku: Theme = {
     '--suku-default-button-border-radius': '28px 76px 63px',
     '--suku-star-empty-bg': '#e1e1e1',
     '--suku-star-full-bg': 'rgb(137, 137, 137)',
-    '--suku-star-size': '14px',
+    '--suku-star-size': '20px',
     '--suku-filter-bg': '#ffffff',
     '--suku-default-bg': '#ffffff',
     '--suku-filter-label': '#b6b6b6',

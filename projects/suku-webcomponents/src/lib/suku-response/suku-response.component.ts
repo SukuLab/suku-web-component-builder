@@ -21,9 +21,10 @@ export class SukuResponseComponent {
 	@Input('description-custom-class') descriptionCustomClass;
 	@Input('bg-color') bgColor = '';
 	@Input('img-custom-class') imgCustomClass = 'imgCustomClass mb-4 mt-4';
-	@Input('suku-response-logo') sukuResponseLogo = '../../assets/images/no-data-search-icon.svg';
+	@Input('suku-response-logo') sukuResponseLogo = '';
 	@Input('icon') icon = 'suku-no-data-search-icon';
 	@Input('icon-id') iconId = 'suku-no-data-search-icon';
 	@Input('icon-custom-class') iconCustomClass = '';
 	@Input('sub-custom-class') subCustomClass = 'col-lg-5 p-0 col-sm-12 justify-content-center mx-auto';
 }
+

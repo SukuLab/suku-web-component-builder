@@ -1,21 +1,23 @@
-     <div class="col">
-       <div class="col text-center p-0" [ngClass]="{'upload-container': enableContainer}" >
-         <div class="text-center col-sm-12 p-4">
-           <div class="dropzone" dropZone [style.width.rem]="dropZoneWidth" (hovered)="toggleHover($event)"
-             (dropped)="startUpload($event)" [class.hovering]="isHovering" (click)="upload($event)">
-             <h1 class=" title {{customClass}}" [style.font-size.rem]="titleSize" [style.font-weight]="titleWeight"
-               [style.color]="titleColor" [id]="titleId">Verify the authenticity of a document by uploading it here</h1>
-             <div class="file">
-               <label class="file-label" [style.height.rem]="dropZoneHeight">
-                 <span class="file-cta">
-                   <span class="file-icon">
-                     <img class="mt-5" [style.height.%]="imgHeight" [style.width.%]="imgWidth" [src]="imgSrc" />
-                    </span>
-                  </span>
-                </label>
-              </div>
-              <input class="file-input" [id]="fileInputId" type="file" (change)="startUpload($event.target.files)">
-            </div>
-          </div>
+<div class="col">
+  <div class="col text-center p-0" [ngClass]="{'upload-container': enableContainer}">
+    <div class="text-center col-sm-12 p-4">
+      <div class="dropzone" dropZone [style.width.rem]="dropZoneWidth" (hovered)="toggleHover($event)"
+        (dropped)="startUpload($event)" [class.hovering]="isHovering" (click)="upload($event)">
+        <h1 class=" title {{customClass}}" [style.font-size.rem]="titleSize" [style.font-weight]="titleWeight"
+          [style.color]="titleColor" [id]="titleId">Verify the authenticity of a document by uploading it here</h1>
+        <div class="file">
+          <label class="file-label" [style.height.rem]="dropZoneHeight">
+            <span class="file-cta">
+              <span class="file-icon">
+                <img class="mt-5" *ngIf="imgSrc" [style.height.%]="imgHeight" [style.width.%]="imgWidth"
+                  [src]="imgSrc" />
+                <i class="mt-5 {{icon}} {{iconCustomClass}}" *ngIf="icon" id="{{iconId}}"></i>
+              </span>
+            </span>
+          </label>
         </div>
+        <input class="file-input" [id]="fileInputId" type="file" (change)="startUpload($event.target.files)">
       </div>
+    </div>
+  </div>
+</div>

@@ -1,5 +1,5 @@
 <form [formGroup]="form">
-  <div class="col pb-4 pt-3 pl-3">
+  <div class="col pb-4 pt-3 pl-3 bg-grey">
     <!-- icon library using svg-->
     <!-- <i class="suku-mail-icon"></i> -->
 
@@ -11,6 +11,7 @@
     <suku-mail-widget>John@gmail.com</suku-mail-widget>
     <suku-address-widget>John 9315 NW 112TH AVE</suku-address-widget>
     <suku-add-widget>Add Listing</suku-add-widget>
+    <suku-add-icon>Add Listing</suku-add-icon>
     <suku-dropdown [form]="form" control="sample"></suku-dropdown>
     <suku-card-line-type-one msg-status="unRead" txt-col-size="col-sm-5"></suku-card-line-type-one>
     <suku-card-line-type-two msg-status="unRead" txt-col-size="col-sm-5"></suku-card-line-type-two>
@@ -19,10 +20,12 @@
     </suku-card-line-type-two>
     <suku-rating-card-line rating-value="4"></suku-rating-card-line>
     <suku-rating-star rating-value="4"></suku-rating-star>
-
+    <suku-file-upload></suku-file-upload>
     <suku-icon-widget></suku-icon-widget>
     <suku-icon-widget icon="suku-chat-read-icon"></suku-icon-widget>
     <suku-icon-widget icon="suku-payment-pending-icon"></suku-icon-widget>
+    <suku-response></suku-response>
+    <suku-dashboard-profile></suku-dashboard-profile>
 
 
     <!-- <suku-checkbox [color]="'warn'" [disabled]="false" [checked]="false"></suku-checkbox> -->

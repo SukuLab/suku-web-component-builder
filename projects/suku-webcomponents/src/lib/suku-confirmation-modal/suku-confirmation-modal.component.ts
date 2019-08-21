@@ -14,7 +14,7 @@ export class SukuConfirmationModalComponent implements OnInit {
     'imgId': '',
     'icon': '',
     'iconId': 'suku-icon',
-    'iconCustomClass': 'suku-md',
+    'iconCustomClass': 'suku-xl',
     'message': '',
     'description': '',
     'loader': 'disable',

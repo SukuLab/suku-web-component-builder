@@ -16,7 +16,7 @@ export class SukuCardLineTypeOneComponent implements OnInit {
 	@Input('msg-status') msgStatus;
 	@Input('custom-class') customClass = '';
 	@Input('custom-img-class') customImgclass = '';
-	@Input('custom-icon-class') customIconClass = 'text-center suku-sm';
+	@Input('custom-icon-class') customIconClass = 'text-center suku-xl';
 	@Input('image-col-size') imageColSize = 'col-sm-1 pt-1 pl-2';
 	@Input('txt-col-size') txtcolsize = 'col-sm-6  pt-2 mt-1';
 	@Input('txt-two-col-size') txtTwocolsize = 'col-sm-2 pt-2 pl-2 mt-1';

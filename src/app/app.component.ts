@@ -3,7 +3,7 @@ import html2canvas from 'html2canvas';
 import * as jspdf from 'jspdf';
 import { Observable, Observer } from 'rxjs';
 import { FormGroup, FormBuilder } from '@angular/forms';
-import { SukuLoaderService, SukuModalService } from 'projects/suku-webcomponents/src/public_api';
+import { SukuLoaderService, SukuModalService, SukuWebcomponentsService } from 'projects/suku-webcomponents/src/public_api';
 // import { SukuModalService, SukuLoaderService } from 'suku-webcomponents';
 @Component({
   selector: 'app-root',
@@ -390,8 +390,10 @@ export class AppComponent implements OnInit {
   ];
 
   constructor(private fb: FormBuilder, private sukuModalService: SukuModalService,
-    private sukuLoaderService: SukuLoaderService
-  ) { }
+    private sukuLoaderService: SukuLoaderService, private sukuTheme: SukuWebcomponentsService
+  ) {
+    this.sukuTheme.setSukuTheme();
+  }
 
   ngOnInit() {
     this.test = this.fb.group({

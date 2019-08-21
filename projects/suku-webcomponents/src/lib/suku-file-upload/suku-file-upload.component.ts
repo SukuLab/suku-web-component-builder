@@ -18,7 +18,10 @@ export class SukuFileUploadComponent implements OnInit {
   @Input('drop-zone-width') dropZoneWidth = 'auto';
   @Input('img-height') imgHeight = '55';
   @Input('img-width') imgWidth = '';
-  @Input('img-src') imgSrc = '../../../../assets/images/smartrac-upload-icon.png';
+  @Input('img-src') imgSrc = '';
+  @Input('icon') icon = 'suku-upload-icon';
+  @Input('icon-id') iconId = '';
+  @Input('icon-custom-class') iconCustomClass = '';
   @Input('file-input-id') fileInputId = 'file';
   @Output() action = new EventEmitter();
   constructor(private snackBar: MatSnackBar) { }
