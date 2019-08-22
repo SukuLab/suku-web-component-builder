@@ -74,20 +74,11 @@ export class SukuUserInputComponent implements OnInit {
     });
   }
 
-  // getErrorMessage() {
-  //   return this.usernameControl.hasError('required') ? 'You must enter a value' :
-  //       this.usernameControl.hasError('email') ? 'Not a valid email' :
-  //           '';
-  // }
-
   getErrorMessage() {
     return this.usernameControl.hasError('required') ? 'You must enter a value' :
       this.usernameControl.hasError('minlength') ? 'username should be more than 2 letters' :
         '';
   }
-
-
-
 
   ngDestroy() {
     this._subscription.unsubscribe();

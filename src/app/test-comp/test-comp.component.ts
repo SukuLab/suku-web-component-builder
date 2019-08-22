@@ -260,4 +260,8 @@ export class TestCompComponent implements OnInit {
   upload(e) {
     console.log(e);
   }
+
+  action(e, val) {
+    console.log(e, val);
+  }
 }

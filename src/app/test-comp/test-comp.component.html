@@ -33,6 +33,9 @@
     </div>
 
     <suku-filters [form]="form"></suku-filters>
+    <suku-dropdown-wfc (select)="action($event)" [data]="dropDownData" displayKey="templateName"
+      keyValue="templateName">
+    </suku-dropdown-wfc>
     <!-- <suku-checkbox [color]="'warn'" [disabled]="false" [checked]="false"></suku-checkbox> -->
     <!--  <suku-user-input [enable-required-validator]="true"  [enable-min-len-validator]="2"></suku-user-input> -->
     <!-- <suku-file-upload (action)="upload($event)"></suku-file-upload> -->

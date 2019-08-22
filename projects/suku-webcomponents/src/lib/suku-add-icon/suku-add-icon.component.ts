@@ -10,11 +10,11 @@ export class SukuAddIconComponent implements OnInit {
   @Input() color;
   @Input() weight;
   @Input() id = 'addNewSellListing';
-  @Input() icon = 'suku-plus-icon suku-md';
+  @Input() icon = 'suku-plus-icon';
   @Input() customClass = 'add-widget c-pointer';
   @Input() iconId = 'icon';
   @Input() iconColor;
-  @Input() iconCustomClass = '';
+  @Input() iconCustomClass = 'suku-md';
 
   constructor() { }
 

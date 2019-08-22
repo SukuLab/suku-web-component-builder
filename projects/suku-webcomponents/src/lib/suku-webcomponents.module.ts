@@ -92,6 +92,7 @@ import { SukuChipListComponent } from './suku-chip-list/suku-chip-list.component
 import { SukuDateTimePickerComponent } from './suku-date-time-picker/suku-date-time-picker.component';
 import { OwlDateTimeModule, OwlNativeDateTimeModule } from 'ng-pick-datetime';
 import { SukuIconWidgetComponent } from './suku-icon-widget/suku-icon-widget.component';
+import { SukuDropdownWfcComponent } from './suku-dropdown-wfc/suku-dropdown-wfc.component';
 
 @NgModule({
   declarations: [
@@ -162,7 +163,8 @@ import { SukuIconWidgetComponent } from './suku-icon-widget/suku-icon-widget.com
     SukuGalleryUploadComponent,
     SukuChipListComponent,
     SukuDateTimePickerComponent,
-    SukuIconWidgetComponent
+    SukuIconWidgetComponent,
+    SukuDropdownWfcComponent
   ],
   imports: [
     CommonModule,
@@ -288,7 +290,8 @@ import { SukuIconWidgetComponent } from './suku-icon-widget/suku-icon-widget.com
     SukuGalleryUploadComponent,
     SukuChipListComponent,
     SukuDateTimePickerComponent,
-    SukuIconWidgetComponent
+    SukuIconWidgetComponent,
+    SukuDropdownWfcComponent
   ],
   entryComponents: [SukuConfirmationModalComponent, SukuAddLicenseModalComponent],
   schemas: []
