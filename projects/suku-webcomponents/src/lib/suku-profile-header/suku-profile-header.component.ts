@@ -63,8 +63,11 @@ export class SukuProfileHeaderComponent implements OnInit {
 	@Input() mailWeight = '500';
 	@Input() mailcustomClass = 'pt-2 pl-4 d-flex align-items-center';
 	@Input() mailId = 'mail';
-	@Input() mailIcon = '/assets/images/mail-light.svg';
+	@Input() mailIcon = '';
 	@Input() mailIconClass = '';
+	@Input('icon-one-id') iconOneId = 'mail';
+	@Input('icon-one') iconOne = 'suku-mail-icon';
+	@Input('icon-one-custom-class') iconOneCustomClass = 'mt-2';
 
 	/* suku-phone-widget */
 	@Input() number = 'N/A';
@@ -72,22 +75,32 @@ export class SukuProfileHeaderComponent implements OnInit {
 	@Input() phnumberColor = '#3e3e3e';
 	@Input() phnumberWeight = '500';
 	@Input() phnumberCustomClass = 'pl-4 mt-1 mb-1  d-flex align-items-center';
-	@Input() phNumberIcon = '../../assets/images/phone-light.png';
+	@Input() phNumberIcon = '';
 	@Input() phoneId = '';
+	@Input('icon-two-id') iconTwoId = 'phone';
+	@Input('icon-two') iconTwo = 'suku-phone-icon';
+	@Input('icon-two-custom-class') iconTwoCustomClass = 'mt-2';
 
 	/* suku-address-widget */
-	@Input() addressIcon = '../../../assets/images/map-pin.svg';
+	@Input() addressIcon = '';
 	@Input() address = '9315 NW 112TH AVE';
 	@Input() addressSize = '13';
 	@Input() addressColor = '#3e3e3e';
 	@Input() addressWeight = '500';
 	@Input() addressId = '';
 	@Input() addressCustomClass = 'pt-2 pl-4 d-flex align-items-center';
+	@Input('icon-three-id') iconThreeId = 'address';
+	@Input('icon-three') iconThree = 'suku-map-pin-icon';
+	@Input('icon-three-custom-class') iconThreeCustomClass = 'mt-2';
 
 	/* sam-bardge */
-	@Input() samBadgeIcon = '../../../assets/img/samBadge.png';
+	@Input() samBadgeIcon = '';
 	@Input() samBadgeClass = '';
 	@Output() samIconAction = new EventEmitter();
+	@Input('icon-four-id') iconFourId = 'address';
+	@Input('icon-four') iconFour = 'suku-sam-badge-icon';
+	@Input('icon-four-custom-class') iconFourCustomClass = 'mt-1 suku-lg';
+	
 
 	constructor() {}
 

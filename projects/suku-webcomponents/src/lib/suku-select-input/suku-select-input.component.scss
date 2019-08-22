@@ -47,12 +47,35 @@ select+img.image {
   padding-right: 5px;
 }
 
+select+i.dropdown-icon {
+  float: right;
+  margin-top: -30px;
+  margin-right: 4px;
+  pointer-events: none;
+  padding-right: -7px;
+  font-size: large;
+}
+
 select:focus {
   background-color: #ffffff !important;
+  outline: none !important;
 }
 
 @media(max-width:486px) {
   .p-xs-0 {
     padding: 0px;
   }
+}
+
+/* This is to remove the arrow of select element in IE */
+select::-ms-expand {
+  display: none;
+}
+
+select {
+  -moz-appearance: none;
+  /* Firefox */
+  -webkit-appearance: none;
+  /* Safari and Chrome */
+  appearance: none;
 }

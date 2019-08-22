@@ -6,8 +6,8 @@
         <option id="default" value="default" disabled>{{placeHolder}}</option>
         <option *ngFor="let option of options;let i=index" id="{{option[keyValue]}}" value="{{option[keyValue]}}">{{option[displayKey]}}</option>
       </select>
-      <!-- <i class="fa fa-chevron-down"></i> -->
-      <img class = "image" height="18"  src="../assets/images/arrow-icon.png" width="20">
-    </span>
+        <i class="{{icon}} {{iconCustomClass}} dropdown-icon" id="{{iconId}}" *ngIf="icon" ></i>
+      </span>
+      <img class="{{imageCustomClass}}" [height]="imgheight"  [src]="imgurl" [width]="imgwidth" *ngIf="imgurl">
   </div>
 </div>

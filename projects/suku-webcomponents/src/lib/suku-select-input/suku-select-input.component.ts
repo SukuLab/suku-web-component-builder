@@ -15,9 +15,13 @@ export class SukuSelectInputComponent implements OnInit {
 	@Input() displayKey = 'name'
 	@Input() titleText = 'Sort by';
 	@Input() placeHolder = 'Choose sort method';
-	// @Input() imgheight = '18';
-	// @Input() imgwidth = '20';
-	// @Input() imgurl = '../assets/images/arrow-icon.png';
+	@Input() imgheight = '18';
+	@Input() imgwidth = '20';
+	@Input() imgurl = '';
+  @Input('image-custom-class') imageCustomClass = '';
+  @Input('icon') icon = 'suku-arrow-icon';
+  @Input('icon-id') iconId = '';
+  @Input('icon-custom-class') iconCustomClass = '';
 	@Output() sort = new EventEmitter();
 	@Input() options: any[];
 

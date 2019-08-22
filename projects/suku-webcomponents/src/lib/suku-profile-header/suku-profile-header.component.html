@@ -54,7 +54,8 @@
                   <div class="col-sm-6">
                     <div>
                       <span class="row pb-2">
-                        <img [src]="mailIcon" [class]="mailIconClass">
+                        <img [src]="mailIcon" [class]="mailIconClass" *ngIf="mailIcon">
+                        <i class="{{iconOne}} {{iconOneCustomClass}}" id="iconOneId" *ngIf="iconOne"></i>
                         <h2 [style.font-size.px]="mailTxtSize" [class]="mailcustomClass" id="{{mailId}}"
                           [style.font-weight]="mailWeight" [style.color]="mailTextColor">
                           {{mail}}
@@ -64,6 +65,7 @@
                     <div class="pt-2 pb-2">
                       <span class="row pb-2">
                         <img [src]="phNumberIcon" height="20px" class="mt-1">
+                        <i class="{{iconTwo}} {{iconTwoCustomClass}}" id="iconTwoId" *ngIf="iconTwo"></i>
                         <h2 [style.font-size.px]="phnumberSize" [class]="phnumberCustomClass" id="{{phoneId}}"
                           [style.font-weight]="phnumberWeight" [style.color]="phnumberColor">
                           {{number}}
@@ -76,6 +78,7 @@
                       <div class="col-sm-8">
                         <span class="row pb-2">
                           <img [src]="addressIcon">
+                          <i class="{{iconThree}} {{iconThreeCustomClass}}" id="iconThreeId" *ngIf="iconThree"></i>
                           <h2 [style.font-size.px]="addressSize" [class]="addressCustomClass" id="{{addressId}}"
                             [style.font-weight]="addressWeight" [style.color]="addressColor">
                             {{address}}
@@ -84,7 +87,8 @@
                       </div>
                       <div class="col-sm-4">
                         <a id="editProfCont" (click)="samIconAction.emit()" [hidden]="!editvisibility">
-                          <img [src]="samBadgeIcon" alt="sam badge" [class]="samBadgeClass" height="50px" width="50px">
+                          <i class="{{iconFour}} {{iconFourCustomClass}}" id="iconFourId" *ngIf="iconFour"></i>
+                          <img [src]="samBadgeIcon" alt="sam badge" [class]="samBadgeClass" height="50px" width="50px"  *ngIf="samBadgeIcon">
                         </a>
                       </div>
                     </div>
