@@ -27,10 +27,12 @@
     <suku-response></suku-response>
     <suku-dashboard-profile></suku-dashboard-profile>
 
-<suku-profile-header></suku-profile-header>
-<div class="col-sm-3">
-  <suku-select-input customclass="default"></suku-select-input>
-</div>
+    <suku-profile-header></suku-profile-header>
+    <div class="col-sm-3">
+      <suku-select-input customclass="default"></suku-select-input>
+    </div>
+
+    <suku-filters [form]="form"></suku-filters>
     <!-- <suku-checkbox [color]="'warn'" [disabled]="false" [checked]="false"></suku-checkbox> -->
     <!--  <suku-user-input [enable-required-validator]="true"  [enable-min-len-validator]="2"></suku-user-input> -->
     <!-- <suku-file-upload (action)="upload($event)"></suku-file-upload> -->

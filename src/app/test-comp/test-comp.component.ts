@@ -224,6 +224,8 @@ export class TestCompComponent implements OnInit {
     this.form = this.fb.group({
       'search': '',
       'sample': '',
+      'fromDate': '',
+      'toDate': '',
       'trace': '',
       'productId': '',
       'productList': '',

@@ -61,7 +61,6 @@ export const suku: Theme = {
     '--suku-font-size-9': '26px', // 1.875rem
     '--suku-font-size-10': '30px', // 1.875rem
     '--suku-font-size-11': '50px',  // 1.875rem
-    '--font-size': '62.5%'  // 1.875rem
   }
 };
 

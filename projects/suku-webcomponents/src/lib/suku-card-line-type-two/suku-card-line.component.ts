@@ -3,8 +3,7 @@ import { Component, OnInit, Input, Output, EventEmitter, ViewEncapsulation } fro
 @Component({
 	selector: 'suku-card-line-type-two',
 	templateUrl: './suku-card-line.component.html',
-	styleUrls: ['./suku-card-line.component.scss'],
-	encapsulation: ViewEncapsulation.Native
+	styleUrls: ['./suku-card-line.component.scss']
 })
 export class SukuCardLineTypeTwoComponent implements OnInit {
 	@Input() image = 'https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcSTqz64A2Xj54f5v44rD9vNUqyTXz5c0r7zTlfh18idoyUYGH8hF51pP6_efodnajCuYVB4okcMnT0&usqp=CAc';
