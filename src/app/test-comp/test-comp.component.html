@@ -22,7 +22,8 @@
     <suku-rating-star rating-value="4"></suku-rating-star>
     <suku-file-upload></suku-file-upload>
     <suku-icon-widget></suku-icon-widget>
-    <suku-icon-widget icon="suku-chat-read-icon"></suku-icon-widget>
+    <suku-icon-widget icon="suku-chat-read-icon" position-tooltext="3"></suku-icon-widget>
+    <suku-icon-widget icon="suku-chat-unread-icon"></suku-icon-widget>
     <suku-icon-widget icon="suku-payment-pending-icon"></suku-icon-widget>
     <suku-response></suku-response>
     <suku-dashboard-profile></suku-dashboard-profile>
@@ -33,9 +34,14 @@
     </div>
 
     <suku-filters [form]="form"></suku-filters>
-    <suku-dropdown-wfc (select)="action($event)" [data]="dropDownData" displayKey="templateName"
-      keyValue="templateName">
+    <suku-dropdown-wfc (select)="action($event)" [data]="dropDownData" displayKey="templateName" keyValue="templateName"
+      [value]="value">
     </suku-dropdown-wfc>
+
+    <div class="col bg-white">
+      <suku-dropdown [form]="form" control="productId"></suku-dropdown>
+    </div>
+
     <!-- <suku-checkbox [color]="'warn'" [disabled]="false" [checked]="false"></suku-checkbox> -->
     <!--  <suku-user-input [enable-required-validator]="true"  [enable-min-len-validator]="2"></suku-user-input> -->
     <!-- <suku-file-upload (action)="upload($event)"></suku-file-upload> -->

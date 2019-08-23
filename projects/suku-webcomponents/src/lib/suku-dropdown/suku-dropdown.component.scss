@@ -1,26 +1,36 @@
 ::ng-deep .mat-select-arrow {
-    border: 0 !important;
-    -webkit-appearance: none;
-    -moz-appearance: none;
+  border: 0 !important;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+:host {
+  ::ng-deep.mat-select-trigger {
+    height: 1.7em !important;
+    padding-bottom: 0.5em !important;
+  }
+
+  ::ng-deep .mat-form-field-suffix {
+    top: 9px !important;
+  }
 }
 
 .mat-select-panel {
-    margin-left: 10px !important;
+  margin-left: 10px !important;
 
-    &:focus {
-        outline: none !important;
-    }
+  &:focus {
+    outline: none !important;
+  }
 }
 
 .mat-select-trigger:focus {
-    outline: none !important;
+  outline: none !important;
 }
 
 ::ng-deep mat-select:focus {
-    outline: none !important;
+  outline: none !important;
 }
 
 .arrow-icon {
-    height: 0.9em !important;
-    background-size: 0.6em !important;
+  font-size: 2.5em;
 }

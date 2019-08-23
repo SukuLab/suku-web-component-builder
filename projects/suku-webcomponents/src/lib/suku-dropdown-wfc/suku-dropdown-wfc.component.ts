@@ -19,9 +19,16 @@ export class SukuDropdownWfcComponent implements OnInit {
   @Input() selectId = 'sttProductTraceability';
   @Input() errorMsg = 'Cannot be blank';
   @Input() customSelectClass = '';
-  @Input() icon = 'suku-arrow-icon';
+  @Input() icon = 'suku-dropdown-icon';
   @Input('icon-custom-class') iconCustomClass = 'arrow-icon';
   @Input('icon-id') iconId = 'arrow';
+  @Input()
+  set value(val) {
+    console.log('val', val);
+    if (val) {
+      this.dropdownControl.patchValue(val);
+    }
+  }
   @Output() select = new EventEmitter();
   @Output() valueChange = new EventEmitter();
 

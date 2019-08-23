@@ -218,6 +218,7 @@ export class TestCompComponent implements OnInit {
   //         link:
   //   'http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4'
   // },
+  value;
   constructor(private fb: FormBuilder) { }
 
   ngOnInit() {
@@ -226,6 +227,7 @@ export class TestCompComponent implements OnInit {
       'sample': '',
       'fromDate': '',
       'toDate': '',
+      'tillDate': '',
       'trace': '',
       'productId': '',
       'productList': '',
@@ -233,6 +235,7 @@ export class TestCompComponent implements OnInit {
       'beneficialCheckBox': ''
     });
     (<FormArray>this.form.get('owner')).push(this.control());
+    this.value = 'Beef (Rolled)-0515';
   }
 
   search() {
