@@ -34,19 +34,19 @@
 <table class="col-sm-12 text-center mt-2">
   <tr id="txt" class="pt-3">
     <td class="progressTitle" id="{{progressBarTitleId?.labelOneId}}">
-      <span class="pl-4 p-xs-0 {{customHeadingOneClass}}" [ngClass]="{'c-pointer': enablePointer}"
+      <span class="{{customHeadingOneClass}}" [ngClass]="{'c-pointer': enablePointer}"
         (click)="progressOneAction.emit()">{{progressBarLabels?.labelOne}}</span>
     </td>
     <td class="progressTitle" id="{{progressBarTitleId?.labelTwoId}}">
-      <span class="{{customHeadingTwoClass}} pl-4 p-xs-0" [ngClass]="{'c-pointer': enablePointer}"
+      <span class="{{customHeadingTwoClass}} " [ngClass]="{'c-pointer': enablePointer}"
         (click)="progressTwoAction.emit()">{{progressBarLabels?.labelTwo}}</span>
     </td>
     <td class="progressTitle" id="{{progressBarTitleId?.labelThreeId}}">
-      <span class="{{customHeadingThreeClass}} p-xs-0" [ngClass]="{'c-pointer': enablePointer}"
+      <span class="{{customHeadingThreeClass}} " [ngClass]="{'c-pointer': enablePointer}"
         (click)="progressThreeAction.emit()">{{progressBarLabels?.labelThree}}</span>
     </td>
     <td class="progressTitle" id="{{progressBarTitleId?.labelFourId}}">
-      <span class="pr-3 {{customHeadingFourClass}} p-xs-0" [ngClass]="{'c-pointer': enablePointer}"
+      <span class=" {{customHeadingFourClass}} " [ngClass]="{'c-pointer': enablePointer}"
         (click)="progressFourAction.emit()">{{progressBarLabels?.labelFour}}</span>
     </td>
   </tr>
