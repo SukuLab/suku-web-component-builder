@@ -42,6 +42,8 @@
       <suku-dropdown [form]="form" control="productId"></suku-dropdown>
     </div>
 
+    <br />
+
     <!-- <suku-checkbox [color]="'warn'" [disabled]="false" [checked]="false"></suku-checkbox> -->
     <!--  <suku-user-input [enable-required-validator]="true"  [enable-min-len-validator]="2"></suku-user-input> -->
     <!-- <suku-file-upload (action)="upload($event)"></suku-file-upload> -->
@@ -56,6 +58,9 @@
     <!-- <suku-gallery [gallery]="gallery" gallery-id="demo"></suku-gallery> -->
     <!-- <suku-gallery [gallery]="gallery" gallery-id="p"></suku-gallery> -->
     <!-- <suku-file-upload></suku-file-upload> -->
+  </div>
+  <div class="col">
+    <suku-login enable-required-validator="true" [value]="formValue"></suku-login>
   </div>
 </form>
 

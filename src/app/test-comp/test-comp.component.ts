@@ -219,6 +219,10 @@ export class TestCompComponent implements OnInit {
   //   'http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4'
   // },
   value;
+  formValue = {
+    username: 'testUser',
+    password: 'Pass@123'
+  };
   constructor(private fb: FormBuilder) { }
 
   ngOnInit() {

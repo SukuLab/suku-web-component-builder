@@ -47,7 +47,7 @@ export let sukuHomepageData: SukuHomepageSection[] = [
 	}),
 	new SukuHomepageSection({
 		header: 'SUKU Applications and Services',
-		subheader: '- Coming Soon',
+		subheader: ' - Coming Soon',
 		info:
 			'SUKU Applications and Services provide additional functionality and features, which typically leverage the the SUKU Core. We expect these Applications and Services to be built by 3rd parties and by the SUKU Team. These features are coming soon!',
 		buttons: [
