@@ -11,10 +11,10 @@ export class SukuProgressBarTypeOneComponent implements OnInit {
 	@Input('progress-style-two') progressStyleTwo = 'progressUpcoming';
 	@Input('progress-style-three') progressStyleThree = 'progressUpcoming';
 	@Input('progress-style-four') progressStyleFour = 'progressUpcoming';
-	@Input('custom-heading-one-class') customHeadingOneClass = 'pl-4 p-xs-0 ';
-	@Input('custom-heading-two-class') customHeadingTwoClass = ' pl-4 p-xs-0';
+	@Input('custom-heading-one-class') customHeadingOneClass = 'p-xs-0 ';
+	@Input('custom-heading-two-class') customHeadingTwoClass = '  p-xs-0';
 	@Input('custom-heading-three-class') customHeadingThreeClass = 'p-xs-0';
-	@Input('custom-heading-four-class') customHeadingFourClass = 'pr-3 p-xs-0';
+	@Input('custom-heading-four-class') customHeadingFourClass = 'p-xs-0';
 	@Input('enable-pointer') enablePointer = false;
 
 	progressBarLabels = {
