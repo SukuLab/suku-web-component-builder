@@ -1,6 +1,6 @@
 @import '../theme/theme';
 
-h1 {
+.primary {
   font-family: $suku-secondary-font;
   font-weight: 500;
   font-style: normal;
@@ -11,7 +11,7 @@ h1 {
   margin-bottom: 1px;
 }
 
-h2 {
+.secondary {
   font-family: $suku-primary-font;
   font-size: $suku-font-size-5;
   font-weight: 900;
@@ -20,4 +20,14 @@ h2 {
   line-height: normal;
   letter-spacing: -0.2px;
   color: #1d1d1d;
+}
+
+.type-1 {
+  font-family: $suku-secondary-font;
+  font-size: $suku-font-size-5;
+  font-weight: 900;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: -0.2px;
 }

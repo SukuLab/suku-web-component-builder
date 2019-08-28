@@ -1,10 +1,19 @@
 <div class="product-title">
-  <h1 [style.font-size.px]="cardTitlesize" [class]="customTitleClass" [style.color]="cardTitlecolor"
+  <h1 [style.font-size.px]="cardTitlesize" class="{{customTitleClass}}" [style.color]="cardTitlecolor"
     id="{{cardTitleId}}">
     {{cardTitleName}}
   </h1>
-  <h2 [style.font-size.px]="cardContentsize" [class]="customContentClass" id="{{cardContentId}}"
-    [style.font-weight]="cardContentweight" [style.color]="cardContentcolor">
-    {{cardContentName}}
-  </h2>
+  <section *ngIf="!contentTypeArray">
+    <h2 [style.font-size.px]="cardContentsize" class="{{customContentClass}}" id="{{cardContentId}}"
+      [style.font-weight]="cardContentweight" [style.color]="cardContentcolor">
+      {{cardContentName}}
+    </h2>
+  </section>
+  <section *ngIf="contentTypeArray">
+    <h2 *ngFor="let item of cardContentName;let i=index" [style.font-size.px]="cardContentsize"
+      class="{{customContentClass}} mb-0" id="{{cardContentId}}" [style.font-weight]="cardContentweight"
+      [style.color]="cardContentcolor">
+      {{ displayKey  ? item[displayKey] : item}}
+    </h2>
+  </section>
 </div>

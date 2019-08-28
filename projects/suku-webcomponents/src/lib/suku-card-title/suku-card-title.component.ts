@@ -16,8 +16,10 @@ export class SukuCardTitleComponent implements OnInit {
   @Input('card-content-size') cardContentsize = '17';
   @Input('card-content-color') cardContentcolor = '#1d1d1d';
   @Input('card-content-weight') cardContentweight = '700';
-  @Input('custom-title-class') customTitleClass = '';
-  @Input('custom-content-class') customContentClass = '';
+  @Input('custom-title-class') customTitleClass = 'primary';
+  @Input('custom-content-class') customContentClass = 'secondary';
+  @Input('content-type-array') contentTypeArray = false;
+  @Input('display-key') displayKey = '';
   constructor() { }
 
   ngOnInit() {
