@@ -15,7 +15,7 @@ export class TestCompComponent implements OnInit {
     disabled: true,
     id: 'Marketplace'
   };
-  dataCard = ['test-1', 'test-2', 'test-3'];
+  dataCard = ['beefChain', 'test-2', 'test-3'];
   dropDownData = [{
     '_id': '5cdc2038e993be00125c6988',
     'templateName': 'Beef (Rolled)-0515'
