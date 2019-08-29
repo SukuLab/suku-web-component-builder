@@ -1,7 +1,16 @@
 <div class="product-title">
   <h1 [style.font-size.px]="cardTitlesize" class="{{customTitleClass}}" [style.color]="cardTitlecolor"
     id="{{cardTitleId}}">
-    {{cardTitleName}}
+    <span class="mt-auto mb-auto">
+      {{cardTitleName}}
+    </span>
+    <span class="tipTool" [style.left.rem]="positionTooltip" *ngIf="(enableInfoTooltip == 'true')">
+      <span class="tipTooltext {{tooltiptextCustomclass}}" [style.left.rem]="positionTopTooltext"
+        [style.bottom.rem]="positionBtmTooltext">
+        <span>{{tooltipInfo}}</span>
+      </span>
+      <i class="fa fa-info-circle infoIcon" [style.color]="iconColor" [style.font-size.rem]="iconFontSize"></i>
+    </span>
   </h1>
   <section *ngIf="!contentTypeArray">
     <h2 [style.font-size.px]="cardContentsize" class="{{customContentClass}}" id="{{cardContentId}}"
@@ -13,7 +22,7 @@
     <h2 *ngFor="let item of cardContentName;let i=index" [style.font-size.px]="cardContentsize"
       class="{{customContentClass}} mb-0" id="{{cardContentId}}" [style.font-weight]="cardContentweight"
       [style.color]="cardContentcolor">
-      {{ displayKey  ? item[displayKey] : item}}
+      {{ displayKey  ? item[displayKey] : (item | titlecase)}}
     </h2>
   </section>
 </div>

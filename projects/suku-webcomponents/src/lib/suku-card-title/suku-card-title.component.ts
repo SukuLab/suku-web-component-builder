@@ -20,6 +20,14 @@ export class SukuCardTitleComponent implements OnInit {
   @Input('custom-content-class') customContentClass = 'secondary';
   @Input('content-type-array') contentTypeArray = false;
   @Input('display-key') displayKey = '';
+  @Input('icon-color') iconColor = 'black';
+  @Input('icon-font-size') iconFontSize = '';
+  @Input('enable-info-tooltip') enableInfoTooltip = '';
+  @Input('tooltip-info') tooltipInfo = '';
+  @Input('tooltiptext-customclass') tooltiptextCustomclass = '';
+  @Input('position-tooltip') positionTooltip;
+  @Input('position-top-tooltext') positionTopTooltext;
+  @Input('position-btn-tooltext') positionBtmTooltext;
   constructor() { }
 
   ngOnInit() {
