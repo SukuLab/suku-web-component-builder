@@ -18,6 +18,7 @@ export class SukuDateTimePickerComponent implements OnInit {
   @Input('id') dateId = 'datepicker';
   @Input('max-date') max;
   @Input('min-date') min;
+  @Input('start-date') startAt;
   @Input() formSumitAttempt;
   @Input() errorMsg = 'Cannot be blank';
 	@Output() dateSelect = new EventEmitter();
