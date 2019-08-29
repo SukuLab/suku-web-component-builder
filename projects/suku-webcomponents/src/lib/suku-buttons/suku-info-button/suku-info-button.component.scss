@@ -95,7 +95,6 @@ fieldset[disabled] .suku-info.focus {
   color: white;
 }
 
-
 .suku-info:not(:disabled):not(.disabled).active,
 .suku-info:not(:disabled):not(.disabled):active,
 .show>.suku-info.dropdown-toggle {
@@ -185,7 +184,6 @@ fieldset[disabled] .suku-default.focus {
   color: white;
 }
 
-
 .suku-default:not(:disabled):not(.disabled).active,
 .suku-default:not(:disabled):not(.disabled):active,
 .show>.suku-default.dropdown-toggle {
@@ -203,4 +201,7 @@ fieldset[disabled] .suku-default.focus {
 .suku-default:not(:disabled):not(.disabled):active:focus,
 .show>.suku-default.dropdown-toggle:focus {
   box-shadow: none !important;
+}
+.w-80{
+  width: 80% !important;
 }
