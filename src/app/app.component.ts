@@ -519,7 +519,12 @@ export class AppComponent implements OnInit {
 		{ id: 'stepsCompleted', title: 'Steps Completed ' },
 		{ id: 'Status', title: 'Overall Status' }
 	]
-
+  facilityAddress = {
+    registeredName: 'Finca Nueva',
+    phone: '+123 456-7654',
+    email: 'info@FincaNueva.com',
+    address: 'Finca Nueva, Calle Augusto Angulo 130, Miraflores, Perú, 15048',
+  };
 	data = [
 		{
 			statedate: "Aug-30-2019 ", enddate: "Aug-31-2019 ",
