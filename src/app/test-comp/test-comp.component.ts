@@ -8,6 +8,45 @@ import { FormBuilder, FormGroup, FormControl, FormArray } from '@angular/forms';
 })
 export class TestCompComponent implements OnInit {
   form: FormGroup;
+
+  progressData = [
+    {
+      name: 'Finca Nueva',
+      status: 'complete',
+      data: '',
+      id: ''
+    },
+    {
+      name: 'Sasmar',
+      status: 'inProgress',
+      data: '',
+      id: ''
+    },
+    {
+      name: 'Esmeralda',
+      status: 'inComplete',
+      data: '',
+      id: ''
+    },
+    {
+      name: 'Cedicar',
+      status: 'inComplete',
+      data: '',
+      id: ''
+    },
+    {
+      name: 'Esmeralda',
+      status: 'inComplete',
+      data: '',
+      id: ''
+    },
+    {
+      name: 'Cedicar',
+      status: 'inComplete',
+      data: '',
+      id: ''
+    }
+  ];
   buttonData = {
     title: 'Marketplace',
     icon: 'fa fa-shopping-cart',

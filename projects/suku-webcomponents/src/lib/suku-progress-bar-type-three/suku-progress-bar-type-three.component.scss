@@ -1,5 +1,9 @@
 @import '../theme/theme';
 
+// :host {
+//   --suku-progress-bar-count: 1
+// }
+
 .progressActive {
   width: 50px !important;
   height: 50px;
@@ -42,7 +46,7 @@
 
 .progressbar li {
   float: left;
-  width: 20%;
+  width: calc(82%/var(--suku-progress-bar-count));
   position: relative;
   text-align: center;
 }
@@ -114,37 +118,9 @@
   background-color: #b3b3b3;
 }
 
-.checkmark {
-  display: inline-block;
-}
-
-.progressbar li.completed+.checkmark {
-  /*Add another block-level blank space*/
-  content: '';
-  display: block;
-  /*Make it a small rectangle so the border will create an L-shape*/
-  width: 8px;
-  height: 15px;
-  /*Add a white border on the bottom and left, creating that 'L' */
-  border: solid #d8fc40;
-  border-width: 0 3px 3px 0;
-  /*Rotate the L 45 degrees to turn it into a checkmark*/
-  transform: rotate(45deg);
-}
-
-
 .progressbar li.active+li:after {
   background-color: #b3b3b3;
 }
-
-// .progressbar li+li:after {
-//   background-color: #b3b3b3;
-// }
-
-// .progressbar li.active+li:before {
-//   color: white;
-//   background-color: #1c1c1c;
-// }
 
 .progressbar li:first-child:after {
   content: none;
@@ -156,7 +132,7 @@ li {
 
 li {
   font-family: $suku-secondary-font;
-  font-size: 12px;
+  font-size: 14px;
   font-weight: 500;
   font-style: normal;
   font-stretch: normal;
@@ -167,19 +143,86 @@ li {
 }
 
 .checkmark {
-  display: inline-block;
+  position: absolute;
+  top: 20%;
+  right: 44.5%;
+  z-index: 5;
+  background: #1c1c1c;
+  width: 12px;
+  height: 21px;
 }
 
+
 .checkmark:after {
-  /*Add another block-level blank space*/
   content: '';
   display: block;
-  /*Make it a small rectangle so the border will create an L-shape*/
   width: 8px;
   height: 15px;
-  /*Add a white border on the bottom and left, creating that 'L' */
   border: solid #d8fc40;
   border-width: 0 3px 3px 0;
-  /*Rotate the L 45 degrees to turn it into a checkmark*/
   transform: rotate(45deg);
+}
+
+/* tooltip */
+// tool tip start
+.tipTool {
+  position: relative;
+  display: inline-block;
+  height: 0px;
+  text-align: center;
+  border-radius: 15px 15px 15px 15px;
+  background-color: #d8d8d8a8 transparent;
+  font-size: 18px;
+  color: #757575;
+  font-weight: bold;
+  font-style: italic;
+  font-stretch: normal;
+  letter-spacing: 0.5px;
+}
+
+.tipTooltext {
+  visibility: hidden;
+  width: max-content;
+  background-color: #000000eb;
+  text-align: left;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  bottom: 110%;
+  left: 51%;
+  margin-left: -60px;
+  font-style: normal;
+  font-stretch: normal;
+  padding-left: 18px;
+  padding-right: 18px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  font-size: 13px;
+  font-family: $suku-secondary-font;
+  font-weight: 500;
+  line-height: 1.45;
+  letter-spacing: 0.4px;
+  color: #b6b6b6;
+}
+
+.tipTooltext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 36.5%;
+  margin-left: 0px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #191922 transparent transparent transparent;
+  font-style: normal;
+  font-stretch: normal;
+}
+
+li:hover::before .tipTooltext {
+  visibility: visible;
+}
+
+.tooltip-info-content {
+  font-family: $suku-secondary-font;
 }

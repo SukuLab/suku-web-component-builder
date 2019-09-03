@@ -1,9 +1,16 @@
 <div class="col-12">
   <ul class="progressbar">
-    <li class="completed checkmark">Step 1</li>
-    <li class="active">Step 2</li>
-    <li>Step 3</li>
-    <li>Step 4</li>
-    <!-- <li>Step 5</li> -->
+    <li [ngClass]="{ 'active' : (data?.status == statusKey[0]), 
+    'completed' : (data?.status == statusKey[2]), 'toolTip': (data?.status == statusKey[1]) }" *ngFor="let data of
+    progressBarData;let i
+    =index">
+      <!-- <span class="tipTool" [style.left.rem]="positionTooltip"> -->
+      <span class="tipTooltext" [style.left.rem]="positionTooltext">
+        <span>{{iconInfo}}</span>
+      </span>
+      <span *ngIf="(data?.status == statusKey[2])" class="checkmark"></span>
+      {{data?.name}}
+      <!-- </span> -->
+    </li>
   </ul>
 </div>

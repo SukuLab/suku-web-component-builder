@@ -1,7 +1,5 @@
 <form [formGroup]="form">
-  <div class="col-12 w-100">
-    <suku-progress-bar-type-three></suku-progress-bar-type-three>
-  </div>
+
 
   <div class="col-12 pb-4 pt-3 pl-3 bg-grey">
     <!-- icon library using svg-->
@@ -77,6 +75,13 @@
     </suku-card-title>
   </div>
 
+  <div class="col">
+    <suku-nav-bar></suku-nav-bar>
+  </div>
+
+  <div class="col-12 w-100">
+    <suku-progress-bar-type-three [data]="progressData"></suku-progress-bar-type-three>
+  </div>
 </form>
 
 

@@ -98,6 +98,7 @@ import { SukuDateComponent } from './suku-date/suku-date.component';
 import { SukuLoginComponent } from './suku-login/suku-login.component';
 import { SukuProgressBarTypeThreeComponent } from './suku-progress-bar-type-three/suku-progress-bar-type-three.component';
 import { SukuDisplayTableComponent } from './suku-display-table/suku-display-table.component';
+import { SukuNavBarComponent } from './suku-nav-bar/suku-nav-bar.component';
 
 @NgModule({
   declarations: [
@@ -173,7 +174,8 @@ import { SukuDisplayTableComponent } from './suku-display-table/suku-display-tab
     SukuDateComponent,
     SukuLoginComponent,
     SukuProgressBarTypeThreeComponent,
-    SukuDisplayTableComponent
+    SukuDisplayTableComponent,
+    SukuNavBarComponent
   ],
   imports: [
     CommonModule,
@@ -304,7 +306,8 @@ import { SukuDisplayTableComponent } from './suku-display-table/suku-display-tab
     SukuDateComponent,
     SukuLoginComponent,
     SukuProgressBarTypeThreeComponent,
-    SukuDisplayTableComponent
+    SukuDisplayTableComponent,
+    SukuNavBarComponent
   ],
   entryComponents: [SukuConfirmationModalComponent, SukuAddLicenseModalComponent],
   schemas: [],

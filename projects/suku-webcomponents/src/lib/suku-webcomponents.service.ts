@@ -104,6 +104,7 @@ export const dark: Theme = {
     '--suku-progressbar-inprogress-bg': '#a7bf2e',
     '--suku-progressbar-upcoming-bg': '#757575',
     '--suku-progressbar-completed-bg': '#1c1c1c',
+    '--suku-submenu-bg-color': '',
     '--suku-font-size-1': '0.75rem', // 12px	- 0.75rem
     '--suku-font-size-2': '0.875rem', // 14px	0.875rem
     '--suku-font-size-3': '1.06rem', // 17px	1.0625rem
