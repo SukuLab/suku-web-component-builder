@@ -1,6 +1,6 @@
 <div class="col content">
   <div class="header">
-    <div class="col pt-3 pb-3">
+    <div class="col pt-4 pb-4">
       <div class="row">
         <div class="col">
           <h1 [style.font-size.px]="titleOneSize" class="title mt-auto mb-0 {{titleOneCustomClass}}"
@@ -14,7 +14,7 @@
   <table class="table table-striped">
     <thead>
       <tr>
-        <th [style.color]="headerColor"  [style.font-size.px]="headerSize"   [style.font-weight]="headerWeight" *ngFor="let header of header;">{{header.title}}</th>
+        <th [style.color]="headerColor"  [style.font-size.px]="headerSize"   [style.font-weight]="headerWeight" *ngFor="let header of header;" id="{{header.id}}">{{header.title}}</th>
       </tr>
     </thead>
     <tbody>
