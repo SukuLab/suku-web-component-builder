@@ -1,5 +1,6 @@
 import { CommonModule } from '@angular/common';
-import { NgModule } from '@angular/core';
+// import { NgModule } from '@angular/core';
+import { NgModule, NO_ERRORS_SCHEMA, Injectable, CUSTOM_ELEMENTS_SCHEMA, Injector, ErrorHandler } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import {
   MatAutocompleteModule, MatBadgeModule, MatBottomSheetModule, MatButtonModule,
@@ -96,6 +97,7 @@ import { SukuDropdownWfcComponent } from './suku-dropdown-wfc/suku-dropdown-wfc.
 import { SukuDateComponent } from './suku-date/suku-date.component';
 import { SukuLoginComponent } from './suku-login/suku-login.component';
 import { SukuProgressBarTypeThreeComponent } from './suku-progress-bar-type-three/suku-progress-bar-type-three.component';
+import { SukuDisplayTableComponent } from './suku-display-table/suku-display-table.component';
 
 @NgModule({
   declarations: [
@@ -170,7 +172,8 @@ import { SukuProgressBarTypeThreeComponent } from './suku-progress-bar-type-thre
     SukuDropdownWfcComponent,
     SukuDateComponent,
     SukuLoginComponent,
-    SukuProgressBarTypeThreeComponent
+    SukuProgressBarTypeThreeComponent,
+    SukuDisplayTableComponent
   ],
   imports: [
     CommonModule,
@@ -300,10 +303,11 @@ import { SukuProgressBarTypeThreeComponent } from './suku-progress-bar-type-thre
     SukuDropdownWfcComponent,
     SukuDateComponent,
     SukuLoginComponent,
-    SukuProgressBarTypeThreeComponent
+    SukuProgressBarTypeThreeComponent,
+    SukuDisplayTableComponent
   ],
   entryComponents: [SukuConfirmationModalComponent, SukuAddLicenseModalComponent],
-  schemas: []
+  schemas: [],
 })
 export class SukuWebcomponentsModule {
 }
