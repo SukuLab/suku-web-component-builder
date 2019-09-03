@@ -13,18 +13,18 @@ export class SukuUserDetailsComponent implements OnInit {
 @Input() widgetTitlecustomclass = '';
 @Input() widgetTitleid = '';
 @Input() shippingaddressCustomClass = '';
-@Input() email = '';
-@Input() phoneNumber = '';
-@Input() fullName = '';
-@Input() fullAddress = '';
-@Input() firstName = '';
-@Input() secondName = '';
-@Input() addressOne = '';
-@Input() addressTwo = '';
-@Input() city = '';
-@Input() state = '';
-@Input() zip = '';
-@Input() country = '';
+@Input() email ;
+@Input() phoneNumber ;
+@Input() fullName ;
+@Input() fullAddress;
+@Input() firstName ;
+@Input() secondName ;
+@Input() addressOne ;
+@Input() addressTwo ;
+@Input() city ;
+@Input() state;
+@Input() zip;
+@Input() country ;
   constructor() { }
 
   ngOnInit() {
