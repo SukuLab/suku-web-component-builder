@@ -13,7 +13,6 @@
 /* dark */
 @import url('https://fonts.googleapis.com/css?family=Montserrat:400,500,700,800,900&display=swap');
 
-
 /* font variables */
 $suku-primary-font: var(--suku-primary-font);
 $suku-secondary-font:var(--suku-secondary-font);
@@ -52,6 +51,7 @@ $suku-button-default-bg: var(--suku-button-default-bg);
 $suku-button-disabled-bg: var(--suku-button-disabled-bg);
 $suku-icon-disabled-bg: var(--suku-icon-disabled-bg);
 $suku-profile-bg-color: var(--suku-profile-bg-color);
+$suku-submenu-bg-color: var(--suku-bg-secondary);
 
 /* border-color variable */
 $suku-primary-border-color: var(--suku-primary-border-color); // sick-green
@@ -100,20 +100,12 @@ $suku-star-size: var(--suku-star-size);
   box-shadow: -4px 4px 5px 0px rgba(0, 0, 0, 0.08);
 }
 
-
 @mixin suku-title-box {
   background-image: linear-gradient(to bottom, rgba(101, 102, 243, 0.06), rgba(101, 102, 243, 0.06)),
     radial-gradient(circle at 50% 0, #3a3a3a, #000000);
   border-radius: 0px;
   box-shadow: -4px 4px 5px 0px rgba(0, 0, 0, 0.08);
 }
-
-
-
-
-
-
-
 
 .btn {
   // border: solid 2px #a7bf2e;
