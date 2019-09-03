@@ -1,5 +1,6 @@
 import { CommonModule } from '@angular/common';
-import { NgModule } from '@angular/core';
+// import { NgModule } from '@angular/core';
+import { NgModule, NO_ERRORS_SCHEMA, Injectable, CUSTOM_ELEMENTS_SCHEMA, Injector, ErrorHandler } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import {
   MatAutocompleteModule, MatBadgeModule, MatBottomSheetModule, MatButtonModule,
@@ -95,6 +96,7 @@ import { SukuIconWidgetComponent } from './suku-icon-widget/suku-icon-widget.com
 import { SukuDropdownWfcComponent } from './suku-dropdown-wfc/suku-dropdown-wfc.component';
 import { SukuDateComponent } from './suku-date/suku-date.component';
 import { SukuLoginComponent } from './suku-login/suku-login.component';
+import { SukuDisplayTableComponent } from './suku-display-table/suku-display-table.component';
 
 @NgModule({
   declarations: [
@@ -168,7 +170,8 @@ import { SukuLoginComponent } from './suku-login/suku-login.component';
     SukuIconWidgetComponent,
     SukuDropdownWfcComponent,
     SukuDateComponent,
-    SukuLoginComponent
+    SukuLoginComponent,
+    SukuDisplayTableComponent,
   ],
   imports: [
     CommonModule,
@@ -297,10 +300,11 @@ import { SukuLoginComponent } from './suku-login/suku-login.component';
     SukuIconWidgetComponent,
     SukuDropdownWfcComponent,
     SukuDateComponent,
-    SukuLoginComponent
+    SukuLoginComponent,
+    SukuDisplayTableComponent,
   ],
   entryComponents: [SukuConfirmationModalComponent, SukuAddLicenseModalComponent],
-  schemas: []
+  schemas: [],
 })
 export class SukuWebcomponentsModule {
 }

@@ -6,9 +6,9 @@ import { FormGroup, FormBuilder } from '@angular/forms';
 import { SukuLoaderService, SukuModalService, SukuWebcomponentsService } from 'projects/suku-webcomponents/src/public_api';
 // import { SukuModalService, SukuLoaderService } from 'suku-webcomponents';
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+	selector: 'app-root',
+	templateUrl: './app.component.html',
+	styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit {
 	test: FormGroup;
@@ -393,11 +393,11 @@ export class AppComponent implements OnInit {
 	expMaxDate: Date;
 	expMinDate: string;
 
-  constructor(private fb: FormBuilder, private sukuModalService: SukuModalService,
-    private sukuLoaderService: SukuLoaderService, private sukuTheme: SukuWebcomponentsService
-  ) {
-    this.sukuTheme.setSukuTheme();
-  }
+	constructor(private fb: FormBuilder, private sukuModalService: SukuModalService,
+		private sukuLoaderService: SukuLoaderService, private sukuTheme: SukuWebcomponentsService
+	) {
+		this.sukuTheme.setSukuTheme();
+	}
 
 	ngOnInit() {
 		this.test = this.fb.group({
@@ -405,8 +405,8 @@ export class AppComponent implements OnInit {
 			'controlTwo': '',
 			'controlThree': '',
 			'controlFour': '',
-			publishDate:'',
-			expiryDate:'',
+			publishDate: '',
+			expiryDate: '',
 		});
 		const userInfo = {
 			userId: 474,
@@ -435,80 +435,115 @@ export class AppComponent implements OnInit {
 		console.log(e);
 	}
 	sendPublishDate() {
-    console.log("this is publish date value called ");
-    const publishDate = new Date(this.test.controls["publishDate"].value);
-    //  this.expMinDate = publishDate;
-    let maxdate = new Date().setDate(publishDate.getDate() + 1);
-    this.expMinDate = new Date(maxdate).toISOString();
+		console.log("this is publish date value called ");
+		const publishDate = new Date(this.test.controls["publishDate"].value);
+		//  this.expMinDate = publishDate;
+		let maxdate = new Date().setDate(publishDate.getDate() + 1);
+		this.expMinDate = new Date(maxdate).toISOString();
 	}
-	
-  sendMaxdate(expiryDate) {
-	console.log("this is expirt date",expiryDate)
-    this.expMaxDate = new Date(expiryDate);
-  }
 
-  currentdate() {
-    const todayTime = new Date();
-    const month = todayTime.getMonth();
-    const day = todayTime.getDate();
-    const year = todayTime.getFullYear();
-    this.mindate = new Date(year, month, day);
-    return year + "-" + month + "-" + day;
-  }
+	sendMaxdate(expiryDate) {
+		console.log("this is expirt date", expiryDate)
+		this.expMaxDate = new Date(expiryDate);
+	}
 
-  open() {
-    console.log('dialog');
-    // 'imgSrc': 'http://34.217.89.204/assets/icons/verified_icon.png',
-    const data = {
-      'icon': 'suku-success-icon',
-      'message': 'please wait',
-      'description': 'Description',
-      'loader': 'enable',
-      'buttonText': 'Action',
-      'openDialog': true
-    };
-    // this.sukuLoaderService.openLoader(data);
-    this.sukuModalService.openConfirmationModalDialog(data);
-    // setTimeout(() => {
-    //   data = {
-    //     'imgSrc': 'http://34.217.89.204/assets/icons/verified_icon.png',
-    //     'message': 'Success',
-    //     'description': 'Description',
-    //     'loader': 'disable',
-    //     'buttonText': 'Action',
-    //     'open': false
-    //   };
-    //   // this.sukuLoaderService.openLoader(data);
-    //   this.sukuModalService.openConfirmationModalDialog(data);
-    // }, 5000);
-  }
+	currentdate() {
+		const todayTime = new Date();
+		const month = todayTime.getMonth();
+		const day = todayTime.getDate();
+		const year = todayTime.getFullYear();
+		this.mindate = new Date(year, month, day);
+		return year + "-" + month + "-" + day;
+	}
 
-  // openSomething() {
-  //   const data = {
-  //     controlOneRequired: true,
-  //     controlTwoRequired: true,
-  //     controlTwoPatternEnabled: true,
-  //     controlTwoPattern: '[0-9]{9}[a-zA-Z]{1}[0-9]{5,10}$',
-  //     dateControlOneRequired: true,
-  //     dateControlTwoRequired: false,
-  //     startDateMaxDate: new Date(),
-  //     endDateMinDate: new Date(),
-  //   }
-  //   this.sukuModalService.openLicenseModalDialogDialog(data);
-  // }
+	open() {
+		console.log('dialog');
+		// 'imgSrc': 'http://34.217.89.204/assets/icons/verified_icon.png',
+		const data = {
+			'icon': 'suku-success-icon',
+			'message': 'please wait',
+			'description': 'Description',
+			'loader': 'enable',
+			'buttonText': 'Action',
+			'openDialog': true
+		};
+		// this.sukuLoaderService.openLoader(data);
+		this.sukuModalService.openConfirmationModalDialog(data);
+		// setTimeout(() => {
+		//   data = {
+		//     'imgSrc': 'http://34.217.89.204/assets/icons/verified_icon.png',
+		//     'message': 'Success',
+		//     'description': 'Description',
+		//     'loader': 'disable',
+		//     'buttonText': 'Action',
+		//     'open': false
+		//   };
+		//   // this.sukuLoaderService.openLoader(data);
+		//   this.sukuModalService.openConfirmationModalDialog(data);
+		// }, 5000);
+	}
 
-	openSomething(){
-      let data = {
-        controlOneRequired: true,
-        controlTwoRequired: true,
-        controlTwoPatternEnabled: true,
-        controlTwoPattern: '[0-9]{9}[a-zA-Z]{1}[0-9]{5,10}$',
-        dateControlOneRequired: true,
-        dateControlTwoRequired: false,
-        startDateMaxDate: new Date(),
-        endDateMinDate: new Date(),
-    }
+	// openSomething() {
+	//   const data = {
+	//     controlOneRequired: true,
+	//     controlTwoRequired: true,
+	//     controlTwoPatternEnabled: true,
+	//     controlTwoPattern: '[0-9]{9}[a-zA-Z]{1}[0-9]{5,10}$',
+	//     dateControlOneRequired: true,
+	//     dateControlTwoRequired: false,
+	//     startDateMaxDate: new Date(),
+	//     endDateMinDate: new Date(),
+	//   }
+	//   this.sukuModalService.openLicenseModalDialogDialog(data);
+	// }
+
+	openSomething() {
+		let data = {
+			controlOneRequired: true,
+			controlTwoRequired: true,
+			controlTwoPatternEnabled: true,
+			controlTwoPattern: '[0-9]{9}[a-zA-Z]{1}[0-9]{5,10}$',
+			dateControlOneRequired: true,
+			dateControlTwoRequired: false,
+			startDateMaxDate: new Date(),
+			endDateMinDate: new Date(),
+		}
 		this.sukuModalService.openLicenseModalDialogDialog(data);
 	}
 
+	header = [
+		{ id: 'statedate', title: 'Start Date' },
+		{ id: 'enddate', title: 'End Date' },
+		{ id: 'lname', title: 'Lot ID' },
+		{ id: 'myStatus', title: 'My Task Status ' },
+		{ id: 'stepsCompleted', title: 'Steps Completed ' },
+		{ id: 'Status', title: 'Overall Status' }
+	]
+
+	data = [
+		{
+			statedate: "Aug-30-2019 ", enddate: "Aug-31-2019 ",
+			lotid: "N/A", myStatus: 'completed', stepsCompleted: "2/5", status: 'not-completed'
+		},
+		{
+			statedate: "Aug-30-2019 ", enddate: "Aug-31-2019 ",
+			lotid: "N/A", myStatus: 'completed', stepsCompleted: "3/5", status: 'not-completed'
+		},
+		{
+			statedate: "Aug-30-2019 ", enddate: "Aug-31-2019 ",
+			lotid: "N/A", myStatus: 'completed', stepsCompleted: "5/5", status: 'completed'
+		},
+		{
+			statedate: "Aug-30-2019 ", enddate: "Aug-31-2019 ",
+			lotid: "N/A", myStatus: 'completed', stepsCompleted: "3/6", status: 'not-completed'
+		},
+		{
+			statedate: "Aug-30-2019 ", enddate: "Aug-31-2019 ",
+			lotid: "N/A", myStatus: 'completed', stepsCompleted: "3/3", status: 'completed'
+		},
+		{
+			statedate: "Aug-30-2019 ", enddate: "Aug-31-2019",
+			lotid: "N/A", myStatus: 'completed', stepsCompleted: "1/6", status: 'not-completed'
+		}
+	]
 }

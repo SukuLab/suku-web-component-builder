@@ -1,0 +1,28 @@
+<div class="col content">
+  <div class="header">
+    <div class="col pt-3 pb-3">
+      <div class="row">
+        <div class="col">
+          <h1 [style.font-size.px]="titleOneSize" class="title mt-auto mb-0 {{titleOneCustomClass}}"
+            [style.font-weight]="titleOneWeight" [style.color]="titleOneColor" id="{{titleOneId}}">
+            {{titleContent}}
+          </h1>
+        </div>
+      </div>
+    </div>
+  </div>
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th [style.color]="headerColor"  [style.font-size.px]="headerSize"   [style.font-weight]="headerWeight" *ngFor="let header of header;">{{header.title}}</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let data of tableData;">
+        <td *ngFor="let key of tableDataKey;" [style.color]="dataColor"  [style.font-size.px]="dataSize"   [style.font-weight]="dataWeight">
+          <span>{{data[key]}}</span>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
