@@ -1,0 +1,17 @@
+.img-circle {
+  display: inline-block;
+  position: relative;
+  z-index: 0;
+  line-height: 42px;
+  text-align: center;
+  box-shadow: 0 2px 2px 0 rgba(0,0,0,.1);
+  background-color: #fff;
+  border-radius: 50%;
+ }
+.title {
+  font-size: 27px;
+  border-bottom: 2px solid #c3cfd9;
+  display: inline-block;
+  margin-left: 5px;
+  vertical-align: bottom;
+}

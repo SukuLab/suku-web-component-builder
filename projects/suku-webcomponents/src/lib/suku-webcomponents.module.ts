@@ -97,6 +97,7 @@ import { SukuDropdownWfcComponent } from './suku-dropdown-wfc/suku-dropdown-wfc.
 import { SukuDateComponent } from './suku-date/suku-date.component';
 import { SukuLoginComponent } from './suku-login/suku-login.component';
 import { SukuDisplayTableComponent } from './suku-display-table/suku-display-table.component';
+import { SukuUsernameIconWidgetComponent } from './suku-username-icon-widget/suku-username-icon-widget.component';
 
 @NgModule({
   declarations: [
@@ -172,6 +173,7 @@ import { SukuDisplayTableComponent } from './suku-display-table/suku-display-tab
     SukuDateComponent,
     SukuLoginComponent,
     SukuDisplayTableComponent,
+    SukuUsernameIconWidgetComponent,
   ],
   imports: [
     CommonModule,
@@ -302,6 +304,7 @@ import { SukuDisplayTableComponent } from './suku-display-table/suku-display-tab
     SukuDateComponent,
     SukuLoginComponent,
     SukuDisplayTableComponent,
+    SukuUsernameIconWidgetComponent,
   ],
   entryComponents: [SukuConfirmationModalComponent, SukuAddLicenseModalComponent],
   schemas: [],
