@@ -3,7 +3,7 @@ import { Component, OnInit, Input } from '@angular/core';
 @Component({
   selector: 'suku-username-icon-widget',
   templateUrl: './suku-username-icon-widget.component.html',
-  styleUrls: ['./suku-username-icon-widget.component.css']
+  styleUrls: ['./suku-username-icon-widget.component.scss']
 })
 export class SukuUsernameIconWidgetComponent implements OnInit {
   @Input('image-text') alternativeText;
