@@ -1,7 +1,7 @@
 import { Component, OnInit, Output, EventEmitter, Input } from '@angular/core';
-import { FormGroup, FormControl, Validators } from '@angular/forms';
+import { FormControl, Validators } from '@angular/forms';
 import { MatSnackBar } from '@angular/material';
-import { Subject, BehaviorSubject } from 'rxjs';
+import { BehaviorSubject } from 'rxjs';
 
 @Component({
   selector: 'suku-login',
@@ -11,7 +11,6 @@ import { Subject, BehaviorSubject } from 'rxjs';
 export class SukuLoginComponent implements OnInit {
   hide;
   remeberMeValue;
-  // _enableRequiredValidator = new Subject();
   _enableRequiredValidator = new BehaviorSubject('');
   @Input() color = 'primary';
   usernameControl = new FormControl('');

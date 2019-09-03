@@ -96,6 +96,7 @@ import { SukuIconWidgetComponent } from './suku-icon-widget/suku-icon-widget.com
 import { SukuDropdownWfcComponent } from './suku-dropdown-wfc/suku-dropdown-wfc.component';
 import { SukuDateComponent } from './suku-date/suku-date.component';
 import { SukuLoginComponent } from './suku-login/suku-login.component';
+import { SukuProgressBarTypeThreeComponent } from './suku-progress-bar-type-three/suku-progress-bar-type-three.component';
 import { SukuDisplayTableComponent } from './suku-display-table/suku-display-table.component';
 import { SukuUsernameIconWidgetComponent } from './suku-username-icon-widget/suku-username-icon-widget.component';
 
@@ -172,8 +173,9 @@ import { SukuUsernameIconWidgetComponent } from './suku-username-icon-widget/suk
     SukuDropdownWfcComponent,
     SukuDateComponent,
     SukuLoginComponent,
+    SukuProgressBarTypeThreeComponent,
     SukuDisplayTableComponent,
-    SukuUsernameIconWidgetComponent,
+    SukuUsernameIconWidgetComponent
   ],
   imports: [
     CommonModule,
@@ -303,8 +305,9 @@ import { SukuUsernameIconWidgetComponent } from './suku-username-icon-widget/suk
     SukuDropdownWfcComponent,
     SukuDateComponent,
     SukuLoginComponent,
+    SukuProgressBarTypeThreeComponent,
     SukuDisplayTableComponent,
-    SukuUsernameIconWidgetComponent,
+    SukuUsernameIconWidgetComponent
   ],
   entryComponents: [SukuConfirmationModalComponent, SukuAddLicenseModalComponent],
   schemas: [],
