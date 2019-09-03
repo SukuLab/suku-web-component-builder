@@ -11,7 +11,11 @@
 
 @import "~ng-pick-datetime/assets/style/picker.min.css";
 
-body {
-  background-color: #f2f2f2 !important;
+:root {
+  font-size: 15px !important;
 }
 
+body {
+  font-size: 1rem;
+  background-color: #f2f2f2 !important;
+}

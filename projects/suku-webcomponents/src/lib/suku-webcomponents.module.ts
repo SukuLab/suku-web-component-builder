@@ -95,6 +95,7 @@ import { SukuIconWidgetComponent } from './suku-icon-widget/suku-icon-widget.com
 import { SukuDropdownWfcComponent } from './suku-dropdown-wfc/suku-dropdown-wfc.component';
 import { SukuDateComponent } from './suku-date/suku-date.component';
 import { SukuLoginComponent } from './suku-login/suku-login.component';
+import { SukuProgressBarTypeThreeComponent } from './suku-progress-bar-type-three/suku-progress-bar-type-three.component';
 
 @NgModule({
   declarations: [
@@ -168,7 +169,8 @@ import { SukuLoginComponent } from './suku-login/suku-login.component';
     SukuIconWidgetComponent,
     SukuDropdownWfcComponent,
     SukuDateComponent,
-    SukuLoginComponent
+    SukuLoginComponent,
+    SukuProgressBarTypeThreeComponent
   ],
   imports: [
     CommonModule,
@@ -297,7 +299,8 @@ import { SukuLoginComponent } from './suku-login/suku-login.component';
     SukuIconWidgetComponent,
     SukuDropdownWfcComponent,
     SukuDateComponent,
-    SukuLoginComponent
+    SukuLoginComponent,
+    SukuProgressBarTypeThreeComponent
   ],
   entryComponents: [SukuConfirmationModalComponent, SukuAddLicenseModalComponent],
   schemas: []

@@ -69,3 +69,11 @@
 .c-pointer {
   cursor: pointer;
 }
+
+:host {
+
+  ::ng-deep .mat-form-field-prefix,
+  ::ng-deep .mat-form-field-suffix {
+    align-self: flex-end;
+  }
+}
