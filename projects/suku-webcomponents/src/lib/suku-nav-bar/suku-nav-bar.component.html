@@ -17,8 +17,8 @@
   </div>
   <div class="row d-flex justify-content-around ml-lg-5">
     <a class="align-items-end d-flex">
-      <i><img id="notificationBell" src="{{data?.bellIcon}}" id="{{data?.bellIconId}}"></i>
-      <span class="count" id="{{data?.notificationCountId}}">{{data?.notificationCount}}</span>
+      <i *ngIf="hideBellIcon"><img id="notificationBell" src="{{data?.bellIcon}}" id="{{data?.bellIconId}}"></i>
+      <span *ngIf="hideBellIcon" class="count" id="{{data?.notificationCountId}}">{{data?.notificationCount}}</span>
     </a>
     <li class="iconColor"><img [src]="userIcon"></li>
     <li class="userColor" [style.color]="userNameColor" [style.font-weight]="userNameFontWeight"

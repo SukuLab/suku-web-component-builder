@@ -22,6 +22,7 @@ export class SukuNavBarComponent {
 	@Input('submenu-custom-class') submenuCustomClass;
 	@Input('logo-custom-class') logoCustomClass = 'img-width';
 	@Input('name-custom-class') nameCustomClass = '';
+	@Input('hide-bell-icon') hideBellIcon = true;
 	selectedItem: any;
 	@Input() data = {
 		logo: 'assets/images/Suku_Logo_white.png',
