@@ -1,9 +1,5 @@
 @import '../theme/theme';
 
-// :host {
-//   --suku-progress-bar-count: 1
-// }
-
 .progressActive {
   width: 50px !important;
   height: 50px;
@@ -38,11 +34,6 @@
   font-family: $suku-primary-font;
 }
 
-.container {
-  width: 100%;
-  position: absolute;
-  z-index: 1;
-}
 
 .progressbar li {
   float: left;
@@ -51,30 +42,11 @@
   text-align: center;
 }
 
-.progressbar li:before {
-  content: "";
-  width: 50px;
-  height: 50px;
-}
-
-.progressbar li:before {
-  width: 50px;
-  height: 50px;
-  display: block;
-  margin: 0 auto 10px auto;
-  border-radius: 50%;
-  line-height: 27px;
-  background: white;
-  color: #bebebe;
-  text-align: center;
-  font-weight: bold;
-}
-
 .progressbar {
   counter-reset: step;
 }
 
-.progressbar li:before {
+.progressbar li .circle {
   content: counter(step);
   counter-increment: step;
   width: 50px;
@@ -102,7 +74,6 @@
   left: -50%;
   z-index: -1;
 }
-
 
 .progressbar li.active:before {
   color: white;
@@ -145,13 +116,12 @@ li {
 .checkmark {
   position: absolute;
   top: 20%;
-  right: 44.5%;
+  right: 45.5%;
   z-index: 5;
   background: #1c1c1c;
   width: 12px;
   height: 21px;
 }
-
 
 .checkmark:after {
   content: '';
@@ -181,7 +151,7 @@ li {
 }
 
 .tipTooltext {
-  visibility: hidden;
+  // visibility: hidden;
   width: max-content;
   background-color: #000000eb;
   text-align: left;
@@ -190,7 +160,7 @@ li {
   position: absolute;
   z-index: 1;
   bottom: 110%;
-  left: 51%;
+  left: 18%;
   margin-left: -60px;
   font-style: normal;
   font-stretch: normal;
@@ -219,10 +189,31 @@ li {
   font-stretch: normal;
 }
 
-li:hover::before .tipTooltext {
-  visibility: visible;
+.active {
+  color: white;
+  background: $suku-sick-green !important;
 }
 
-.tooltip-info-content {
-  font-family: $suku-secondary-font;
+.completed {
+  color: white;
+  background-color: #1c1c1c !important;
+}
+
+button {
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit;
+}
+
+.c-pointer {
+  cursor: pointer !important;
+}
+
+.text-bold {
+  font-weight: 600 !important;
+  color: black !important
 }
