@@ -34,7 +34,10 @@ export class SukuDisplayTableComponent implements OnInit {
   @Input('header-weight') headerWeight;
   @Input('data-size') dataSize = '12px';
 	@Input('data-color') dataColor;
-	@Input('data-weight') dataWeight;
+  @Input('data-weight') dataWeight;  
+  @Input('data-href') hrefSelection = 'lotid';
+  @Input('status-bg-style') colorPallete = ["#a3ded8", "#f8dbb4", "#c7c3fa", "gray"];
+  @Input('status') status = ["complete", "incomplete", "pending",'others'];
   constructor() {
   }
   ngOnInit() {
