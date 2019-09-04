@@ -12,6 +12,7 @@ export class SukuUsernameIconWidgetComponent implements OnInit {
   @Input('image-src') image;
   @Input('image-style') customClass = 'img-circle';
   @Input('image-title') welcomeTitle;
+  @Input('image-title-font-size') fontSize = '1.6';
 
   constructor() { }
 
