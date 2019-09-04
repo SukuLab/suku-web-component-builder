@@ -519,12 +519,12 @@ export class AppComponent implements OnInit {
 		{ id: 'stepsCompleted', title: 'Steps Completed ' },
 		{ id: 'Status', title: 'Overall Status' }
 	]
-  facilityAddress = {
-    registeredName: 'Finca Nueva',
-    phone: '+123 456-7654',
-    email: 'info@FincaNueva.com',
-    address: 'Finca Nueva, Calle Augusto Angulo 130, Miraflores, Perú, 15048',
-  };
+	facilityAddress = {
+		registeredName: 'Finca Nueva',
+		phone: '+123 456-7654',
+		email: 'info@FincaNueva.com',
+		address: 'Finca Nueva, Calle Augusto Angulo 130, Miraflores, Perú, 15048',
+	};
 	data = [
 		{
 			statedate: "Aug-30-2019 ", enddate: "Aug-31-2019 ",
@@ -540,7 +540,7 @@ export class AppComponent implements OnInit {
 		},
 		{
 			statedate: "Aug-30-2019 ", enddate: "Aug-31-2019 ",
-			lotid: "N/A", myStatus: 'completed', stepsCompleted: "3/6", status: 'not-completed'
+			lotid: "N/A", myStatus: 'completed', stepsCompleted: "3/6", status: 'in-progress'
 		},
 		{
 			statedate: "Aug-30-2019 ", enddate: "Aug-31-2019 ",
@@ -548,7 +548,7 @@ export class AppComponent implements OnInit {
 		},
 		{
 			statedate: "Aug-30-2019 ", enddate: "Aug-31-2019",
-			lotid: "N/A", myStatus: 'completed', stepsCompleted: "1/6", status: 'not-completed'
+			lotid: "N/A", myStatus: 'pending', stepsCompleted: "1/6", status: 'not-completed'
 		}
 	]
 }
