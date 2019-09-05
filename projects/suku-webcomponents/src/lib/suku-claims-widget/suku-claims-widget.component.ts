@@ -21,6 +21,8 @@ export class SukuClaimsWidgetComponent implements OnInit {
     }
   ];
   @Input() tooltipInfo = 'This claim has name an expired endorsement';
+  @Input('position-tooltip-left') positionTooltipLeft;
+  @Input('position-tooltip-top') positionTooltipTop;
   constructor() { }
 
   ngOnInit() {
