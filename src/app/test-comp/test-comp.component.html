@@ -46,6 +46,9 @@
       <suku-dropdown [form]="form" control="productId"></suku-dropdown>
     </div>
 
+    <div class="col-5">
+      <suku-primary-button [disable-value]="true">Submit</suku-primary-button>
+    </div>
     <br />
 
     <!-- <suku-checkbox [color]="'warn'" [disabled]="false" [checked]="false"></suku-checkbox> -->
@@ -79,6 +82,10 @@
     <suku-nav-bar [hide-bell-icon]='false'></suku-nav-bar>
   </div>
 
+  <div class="col">
+    <suku-username-icon-widget image-title="Welcome Ricardo!">
+    </suku-username-icon-widget>
+  </div>
   <div class="col-12 w-100 pt-4">
     <suku-progress-bar-type-three [data]="progressData"></suku-progress-bar-type-three>
   </div>
@@ -87,6 +94,9 @@
   <div class="col-12 pb-5">
     <suku-claims-widget></suku-claims-widget>
   </div>
+  <br />
+  <br />
+  <br />
 
 </form>
 

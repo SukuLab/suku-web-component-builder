@@ -13,36 +13,42 @@ export class TestCompComponent implements OnInit {
     {
       name: 'Finca Nueva',
       status: 'complete',
+      type: 'FARM',
       data: '',
       id: ''
     },
     {
       name: 'Sasmar',
       status: 'inProgress',
+      type: 'PROCESSOR',
       data: '',
       id: ''
     },
     {
       name: 'Esmeralda',
       status: 'inComplete',
+      type: 'LOGISTICS',
       data: '',
       id: ''
     },
     {
       name: 'Cedicar',
       status: 'inComplete',
+      type: 'DISTRIBUTOR',
       data: '',
       id: ''
     },
     {
       name: 'Esmeralda',
       status: 'inComplete',
+      type: 'UNKNOWN',
       data: '',
       id: ''
     },
     {
       name: 'Cedicar',
       status: 'inComplete',
+      type: 'UNKNOWN',
       data: '',
       id: ''
     }
@@ -263,6 +269,8 @@ export class TestCompComponent implements OnInit {
     username: 'testUser',
     password: 'Pass@123'
   };
+
+  image = '../../assets/icons/group.svg';
   constructor(private fb: FormBuilder) { }
 
   ngOnInit() {

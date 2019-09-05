@@ -1,7 +1,8 @@
 <div class="col-12 w-100 d-flex flex-column">
   <ul class="progressbar">
     <li *ngFor="let data of progressBarData;let i=index">
-      <p class="circle" id="progressBar{{i}}" (click)="showDetails(((data?.status == statusKey[1]) ? data : ''))" [ngClass]="{ 
+      <p class="circle" id="progressBar{{i}}" (click)="showDetails(((data?.status == statusKey[1]) ? data : ''))"
+        [ngClass]="{ 
     'active' : (data?.status == statusKey[0]), 
     'completed' : (data?.status == statusKey[2]), 
     'toolTip': (data?.status == statusKey[1] && selected == data), 'c-pointer': enablePointer }">
@@ -12,9 +13,11 @@
         </span>
         <span *ngIf="(data?.status == statusKey[2])" class="checkmark"></span>
       </p>
-      <span class="{{customTitleClass}}" id="progressBarTitle{{i}}"
-        [ngClass]="{'text-bold': data?.status == statusKey[0], 'c-pointer': enablePointer}">
-        {{data?.name}}
+      <span id="progressBarTitle{{i}}">
+        <span class="{{customTitleClass}} title" id="title{{i}}"
+          [ngClass]="{'text-bold': data?.status == statusKey[0], 'c-pointer': enablePointer}">{{data?.type}}</span>
+        <p [ngClass]="{'subtitle-bold': data?.status == statusKey[0], 'c-pointer': enablePointer}"
+          class="{{customSubtitleClass}} type mb-1" id="subTitle{{i}}">{{data?.name}}</p>
       </span>
     </li>
   </ul>
