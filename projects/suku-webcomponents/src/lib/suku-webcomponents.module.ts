@@ -102,6 +102,7 @@ import { SukuUsernameIconWidgetComponent } from './suku-username-icon-widget/suk
 import { SukuNavBarComponent } from './suku-nav-bar/suku-nav-bar.component';
 import { SukuUserDetailsComponent } from './suku-user-details/suku-user-details.component';
 import { SukuMessageBoxComponent } from './suku-message-box/suku-message-box.component';
+import { SukuClaimsWidgetComponent } from './suku-claims-widget/suku-claims-widget.component';
 
 @NgModule({
   declarations: [
@@ -181,7 +182,8 @@ import { SukuMessageBoxComponent } from './suku-message-box/suku-message-box.com
     SukuUsernameIconWidgetComponent,
     SukuNavBarComponent,
     SukuUserDetailsComponent,
-    SukuMessageBoxComponent
+    SukuMessageBoxComponent,
+    SukuClaimsWidgetComponent
   ],
   imports: [
     CommonModule,
@@ -316,7 +318,8 @@ import { SukuMessageBoxComponent } from './suku-message-box/suku-message-box.com
     SukuUsernameIconWidgetComponent,
     SukuNavBarComponent,
     SukuUserDetailsComponent,
-    SukuMessageBoxComponent
+    SukuMessageBoxComponent,
+    SukuClaimsWidgetComponent
   ],
   entryComponents: [SukuConfirmationModalComponent, SukuAddLicenseModalComponent],
   schemas: [],

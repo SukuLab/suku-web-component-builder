@@ -37,7 +37,7 @@
 
 .progressbar li {
   float: left;
-  width: calc(82%/var(--suku-progress-bar-count));
+  width: calc(92%/var(--suku-progress-bar-count));
   position: relative;
   text-align: center;
 }
@@ -61,6 +61,8 @@
   font-weight: 400;
   font-size: 14px;
   font-family: $suku-primary-font;
+  z-index: 10;
+  position: relative;
 }
 
 .progressbar li:after {
@@ -72,7 +74,7 @@
   background: #b3b3b3;
   top: 25px;
   left: -50%;
-  z-index: -1;
+  z-index: 0;
 }
 
 .progressbar li.active:before {
@@ -115,8 +117,8 @@ li {
 
 .checkmark {
   position: absolute;
-  top: 20%;
-  right: 45.5%;
+  top: 32%;
+  right: 35.5%;
   z-index: 5;
   background: #1c1c1c;
   width: 12px;
@@ -159,8 +161,8 @@ li {
   padding: 5px 0;
   position: absolute;
   z-index: 1;
-  bottom: 110%;
-  left: 18%;
+  bottom: 130%;
+  left: -60%;
   margin-left: -60px;
   font-style: normal;
   font-stretch: normal;
@@ -216,4 +218,19 @@ button {
 .text-bold {
   font-weight: 600 !important;
   color: black !important
+}
+
+.type {
+  font-family: $suku-secondary-font;
+  font-size: $suku-font-size-2;
+}
+
+.title {
+  font-family: $suku-secondary-font;
+  font-size: $suku-font-size-2;
+}
+
+.subtitle-bold {
+  font-weight: 500 !important;
+  color: black;
 }

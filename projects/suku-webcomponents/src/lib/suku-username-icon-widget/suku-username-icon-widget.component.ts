@@ -9,7 +9,7 @@ export class SukuUsernameIconWidgetComponent implements OnInit {
   @Input('image-text') alternativeText;
   @Input('image-height') height;
   @Input('image-width') width;
-  @Input('image-src') image;
+  @Input('image-src') image = '../../assets/icons/group.svg';
   @Input('image-style') customClass = 'img-circle';
   @Input('image-title') welcomeTitle;
   @Input('image-title-font-size') fontSize = '1.6';

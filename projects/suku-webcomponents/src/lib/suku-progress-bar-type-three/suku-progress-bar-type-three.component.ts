@@ -25,11 +25,10 @@ export class SukuProgressBarTypeThreeComponent implements OnInit {
     }
   }
   @Input('tooltip-Info') tooltipInfo = 'This step in the journey is not yet complete.';
-  @Input('position-tooltip') positionTooltip;
-  @Input('position-tooltext') positionTooltext;
-  @Input('icon-info-custom-class') iconInfoCustomClass = 'suku-shipped-icon';
-  @Input('custom-icon-class') customIconClass = 'suku-xl';
+  @Input('position-tooltip-left') positionTooltipLeft;
+  @Input('position-tooltip-top') positionTooltipTop;
   @Input('custom-title-class') customTitleClass = '';
+  @Input('custom-subtitlee-class') customSubtitleClass = '';
   @Input('enable-pointer') enablePointer = true;
   constructor() {
   }

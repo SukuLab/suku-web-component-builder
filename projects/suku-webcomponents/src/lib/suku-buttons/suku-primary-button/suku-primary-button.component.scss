@@ -30,14 +30,13 @@
 }
 
 .suku-p.disabled:hover {
-  border: 2px solid $suku-sick-green !important;
-  background-color: $suku-bg-ternary;
+  background-color: $suku-bg-secondary;
   color: #1d1d1d;
   cursor: not-allowed;
 }
 
 .suku-primary.disabled {
-  background-color: $suku-bg-ternary;
+  background-color: $suku-bg-secondary;
   color: grey;
   opacity: 0.65;
 }
@@ -51,7 +50,7 @@ fieldset[disabled] .suku-primary:focus,
 .suku-primary.disabled.focus,
 .suku-primary[disabled].focus,
 fieldset[disabled] .suku-primary.focus {
-  background-color: $suku-bg-ternary !important;
+  background-color: $suku-bg-secondary !important;
   color: grey;
 }
 

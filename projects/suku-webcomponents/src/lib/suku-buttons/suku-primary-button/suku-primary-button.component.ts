@@ -10,6 +10,7 @@ export class SukuPrimaryButtonComponent implements OnInit {
 	@Input() size = '1';
 	@Input() color = '';
 	@Input() weight = '600';
+	@Input('btnType') btnType = 'button';
 	@Input('disable-value') disableValue: Boolean;
 	@Input('custom-class') customClass = '';
 	@Output() action = new EventEmitter();
