@@ -1,0 +1,61 @@
+<div class="col content">
+  <div class="header">
+    <div class="col pt-4 pb-4">
+      <div class="row">
+        <div class="col">
+          <h1 [style.font-size.px]="titleOneSize" class="title mt-auto mb-0 {{titleOneCustomClass}}"
+            [style.font-weight]="titleOneWeight" [style.color]="titleOneColor" id="{{titleOneId}}">
+            {{titleContent}}
+          </h1>
+        </div>
+      </div>
+    </div>
+  </div>
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th *ngFor="let head of items[0] | keys">{{head}}</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of items;let j=index">
+        <td *ngFor="let list of item | keys; let i=index">
+
+          <span *ngIf="!editable[j] && (list != 'action') && (typeKey[list]!='Checkbox')"> {{item[list]}}</span>
+
+          <!-- input -->
+          <input class="form-control" [(ngModel)]="item[list] " *ngIf="editable[j]  && (list != 'action') &&
+          ( typeKey[list]=='String' || typeKey[list]=='Number')" />
+
+
+          <!-- checkbox -->
+          <mat-checkbox color="primary" [disabled]="!editable[j]" [(ngModel)]="item[list]"
+            *ngIf="(typeKey[list]=='Checkbox')"></mat-checkbox>
+          <!-- <span *ngIf="!editable[j] && (list != 'action') &&
+             ( typeKey[list]!='String' && typeKey[list]!='Number')"> {{item[list]}}</span> -->
+
+          <!-- select -->
+          <select class="form-control" *ngIf="editable[j] && (list != 'action') 
+            && ( typeKey[list]!='String' && typeKey[list]!='Number' && typeKey[list]!='Checkbox')"
+            [(ngModel)]="item[list]">
+            <option *ngFor="let c of typeKey[list]" [ngValue]="c"> {{c}} </option>
+          </select>
+
+          <!-- input -->
+          <span class="col" (click)="edit(j)" *ngIf="list == 'action' && !editable[j]">edit</span>
+          <span class="col" (click)="edit(j)" *ngIf="list == 'action' &&editable[j]">save</span>
+          <span class="col" (click)="remove(j)" *ngIf="list == 'action'">remove</span>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <div class="col">
+    <button (click)="addTable(1)">Add table</button>
+  </div>
+  <div class="col">
+    <button (click)="addTable(10)">Add table</button>
+  </div>
+  <div class="col">
+    <button (click)="submit()">Submit table</button>
+  </div>
+</div>

@@ -103,6 +103,8 @@ import { SukuNavBarComponent } from './suku-nav-bar/suku-nav-bar.component';
 import { SukuUserDetailsComponent } from './suku-user-details/suku-user-details.component';
 import { SukuMessageBoxComponent } from './suku-message-box/suku-message-box.component';
 import { SukuClaimsWidgetComponent } from './suku-claims-widget/suku-claims-widget.component';
+import { SukuFormTableComponent } from './suku-form-table/suku-form-table.component';
+import { SukuKeysPipe } from './suku-form-table/suku-key.pipe';
 
 @NgModule({
   declarations: [
@@ -183,7 +185,9 @@ import { SukuClaimsWidgetComponent } from './suku-claims-widget/suku-claims-widg
     SukuNavBarComponent,
     SukuUserDetailsComponent,
     SukuMessageBoxComponent,
-    SukuClaimsWidgetComponent
+    SukuClaimsWidgetComponent,
+    SukuFormTableComponent,
+    SukuKeysPipe
   ],
   imports: [
     CommonModule,
@@ -319,7 +323,8 @@ import { SukuClaimsWidgetComponent } from './suku-claims-widget/suku-claims-widg
     SukuNavBarComponent,
     SukuUserDetailsComponent,
     SukuMessageBoxComponent,
-    SukuClaimsWidgetComponent
+    SukuClaimsWidgetComponent,
+    SukuFormTableComponent
   ],
   entryComponents: [SukuConfirmationModalComponent, SukuAddLicenseModalComponent],
   schemas: [],

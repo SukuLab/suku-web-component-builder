@@ -1,0 +1,49 @@
+@import '../theme/theme';
+
+.header {
+  @include suku-box();
+}
+
+.title {
+  font-family: $suku-primary-font;
+  font-weight: 600;
+  font-size: $suku-font-size-6;
+  text-transform: uppercase;
+}
+
+.table {
+  font-family: $suku-primary-font;
+  box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.1);
+}
+
+table td {
+  vertical-align: middle;
+}
+
+select,
+input {
+  width: 100%;
+  /* border:0.5px solid; */
+  height: inherit !important;
+}
+
+td {
+  width: 10%;
+}
+
+.form-control:focus {
+  outline: none;
+  border-color: white !important;
+  box-shadow: none !important;
+}
+
+:host {
+  ::ng-deep.mat-checkbox {
+    vertical-align: sub !important;
+  }
+}
+
+th:last-child {
+  width: 5% !important;
+  /*Custom your width*/
+}
