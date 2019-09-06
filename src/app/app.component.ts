@@ -528,27 +528,30 @@ export class AppComponent implements OnInit {
 	data = [
 		{
 			statedate: "Aug-30-2019 ", enddate: "Aug-31-2019 ",
-			lotid: "N/A", myStatus: 'completed', stepsCompleted: "2/5", status: 'not-completed'
+			lotid: "741", myStatus: 'completed', stepsCompleted: "2/5", status: 'not-completed'
 		},
 		{
 			statedate: "Aug-30-2019 ", enddate: "Aug-31-2019 ",
-			lotid: "N/A", myStatus: 'completed', stepsCompleted: "3/5", status: 'not-completed'
+			lotid: "021", myStatus: 'completed', stepsCompleted: "3/5", status: 'not-completed'
 		},
 		{
 			statedate: "Aug-30-2019 ", enddate: "Aug-31-2019 ",
-			lotid: "N/A", myStatus: 'completed', stepsCompleted: "5/5", status: 'completed'
+			lotid: "784", myStatus: 'completed', stepsCompleted: "5/5", status: 'completed'
 		},
 		{
 			statedate: "Aug-30-2019 ", enddate: "Aug-31-2019 ",
-			lotid: "N/A", myStatus: 'completed', stepsCompleted: "3/6", status: 'in-progress'
+			lotid: "369", myStatus: 'completed', stepsCompleted: "3/6", status: 'in-progress'
 		},
 		{
 			statedate: "Aug-30-2019 ", enddate: "Aug-31-2019 ",
-			lotid: "N/A", myStatus: 'completed', stepsCompleted: "3/3", status: 'completed'
+			lotid: "797", myStatus: 'completed', stepsCompleted: "3/3", status: 'completed'
 		},
 		{
 			statedate: "Aug-30-2019 ", enddate: "Aug-31-2019",
-			lotid: "N/A", myStatus: 'pending', stepsCompleted: "1/6", status: 'not-completed'
+			lotid: "785", myStatus: 'pending', stepsCompleted: "1/6", status: 'not-completed'
 		}
 	]
+	call(s){
+		console.log("dkdjs",s);
+	}
 }

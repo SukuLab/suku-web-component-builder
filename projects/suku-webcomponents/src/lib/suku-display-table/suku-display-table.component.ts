@@ -37,9 +37,12 @@ export class SukuDisplayTableComponent implements OnInit {
   @Input('data-weight') dataWeight;
   @Input('data-href') hrefSelection = 'lotid';
   @Input('status-bg-style') colorPallete = ["#a3ded8", "#f8dbb4", "#c7c3fa", "gray"];
-  @Input('status') status = ["completed", "not-completed", "pending", 'others'];
+  @Input('status') status = ["completed", "not-completed", "pending",'others'];
+  @Output() action = new EventEmitter();
+  
   constructor() {
   }
+  
   ngOnInit() {
   }
 
