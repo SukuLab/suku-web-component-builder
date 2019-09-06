@@ -24,7 +24,7 @@
           [style.font-weight]="dataWeight"
           [style.background-color]="
         (data[key] === status[0]) ? colorPallete[0]: (data[key] === status[1]) ? colorPallete[1]: (data[key] === status[2]) ? colorPallete[2] :(data[key] === status[3]) ? colorPallete[3] : 'white'">
-          <span *ngIf="key === hrefSelection"  (click)="action.emit($event)"
+          <span *ngIf="key === hrefSelection"  (click)="action.emit(data)"
             class="suku-link c-pointer">
             {{data[key]}}
           </span>
