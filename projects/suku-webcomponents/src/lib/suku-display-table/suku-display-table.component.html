@@ -11,7 +11,7 @@
       </div>
     </div>
   </div>
-  <table class="table table-striped ">
+  <table class="table table-striped border">
     <thead>
       <tr>
         <th [style.color]="headerColor" [style.font-size.px]="headerSize" [style.font-weight]="headerWeight"
@@ -24,7 +24,10 @@
           [style.font-weight]="dataWeight"
           [style.background-color]="
         (data[key] === status[0]) ? colorPallete[0]: (data[key] === status[1]) ? colorPallete[1]: (data[key] === status[2]) ? colorPallete[2] :(data[key] === status[3]) ? colorPallete[3] : 'white'">
-          <a *ngIf="key === hrefSelection" href="{{data[key]}}">{{data[key]}}</a>
+          <span *ngIf="key === hrefSelection"  (click)="action.emit($event)"
+            class="suku-link c-pointer">
+            {{data[key]}}
+          </span>
           <span *ngIf="!(key === hrefSelection)">{{data[key]}}</span>
         </td>
       </tr>
