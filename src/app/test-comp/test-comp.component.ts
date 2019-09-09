@@ -12,7 +12,7 @@ export class TestCompComponent implements OnInit {
   progressData = [
     {
       name: 'Finca Nueva',
-      status: 'complete',
+      status: 'inProgress',
       type: 'FARM',
       data: '',
       id: ''
