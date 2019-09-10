@@ -78,6 +78,40 @@ export class TestCompComponent implements OnInit {
       '# of Boxes': ''
     }
   ];
+  tableKey3 = {
+    Sku: 'Number',
+    brand: 'String',
+    'product name': 'String',
+    '# of Boxes': 'Number',
+    'Received All Boxes': 'Checkbox',
+    '# of Boxes Received': 'Number',
+  };
+  tabelData3 = [
+    {
+      Sku: '34564',
+      brand: 'WONG PREMIUM',
+      'product name': 'PICAHNA',
+      '# of Boxes': '45',
+      'Received All Boxes': false,
+      '# of Boxes Received': '',
+    },
+    {
+      Sku: '34564',
+      brand: 'WONG PREMIUM',
+      'product name': 'TBONE',
+      '# of Boxes': '4',
+      'Received All Boxes': false,
+      '# of Boxes Received': '',
+    },
+    {
+      Sku: '34564',
+      brand: 'WONG PREMIUM',
+      'product name': 'TBONE',
+      '# of Boxes': '14',
+      'Received All Boxes': false,
+      '# of Boxes Received': '',
+    }
+  ];
 
 
   progressData = [
@@ -124,6 +158,7 @@ export class TestCompComponent implements OnInit {
       id: ''
     }
   ];
+
   buttonData = {
     title: 'Marketplace',
     icon: 'fa fa-shopping-cart',
@@ -131,6 +166,7 @@ export class TestCompComponent implements OnInit {
     disabled: true,
     id: 'Marketplace'
   };
+
   dataCard = ['beefChain', 'test-2', 'test-3'];
   dropDownData = [{
     '_id': '5cdc2038e993be00125c6988',

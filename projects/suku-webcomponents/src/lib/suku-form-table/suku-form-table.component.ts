@@ -1,3 +1,4 @@
+
 import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
@@ -6,6 +7,7 @@ import { Component, OnInit, Input } from '@angular/core';
   styleUrls: ['./suku-form-table.component.scss']
 })
 export class SukuFormTableComponent implements OnInit {
+  j;
   @Input('table-header') header;
   @Input('table-header-content') headerContent = 'cjkcsnns sjkcs jkkjs kjkjd kjdfkjdf jkdf';
   _tableData: any;
@@ -50,6 +52,11 @@ export class SukuFormTableComponent implements OnInit {
   @Input() items;
   @Input() selectionKey;
   @Input() highlighterKey;
+  @Input() patchKey;
+  @Input() enableHighlighter = false;
+  @Input() enableControls = true;
+  @Input() enableSelectAll = false;
+  @Input() selectAll;
 
   constructor() {
   }
@@ -61,7 +68,15 @@ export class SukuFormTableComponent implements OnInit {
   addTable(val, editIndex) {
     for (let i = 0; i < val; i++) {
       this.editable[editIndex + i] = true;
-      const template = { name: '', 'Physical Challenged': false, dob: '', degree: '', pet: '', action: '' };
+      const template = {};
+      const typeKey = this.typeKey;
+      Object.keys(typeKey).forEach((key) => {
+        if (typeKey[key] == 'Checkbox') {
+          template[key] = false;
+        } else if (typeKey[key] == 'String' || typeKey[key] == 'Number') {
+          template[key] = '';
+        }
+      });
       this.items.push(template);
     }
   }
@@ -85,4 +100,45 @@ export class SukuFormTableComponent implements OnInit {
     console.log('data', this.items);
   }
 
+  validate(e, v) {
+    console.log(e, v);
+    if (+e.target.value > +v) {
+      e.preventDefault();
+    }
+  }
+
+  selectAllAction() {
+    const selectAll = this.selectAll;
+    if (selectAll) {
+      this.items.forEach(element => {
+        Object.keys(element).forEach((key) => {
+          if (key == 'Received All Boxes') {
+            console.log('element', element[key]);
+            element[key] = true;
+          }
+        });
+        console.log('data', element);
+      });
+    } else {
+      this.items.forEach(element => {
+        Object.keys(element).forEach((key) => {
+          if (key == 'Received All Boxes') {
+            console.log('element', element[key]);
+            element[key] = false;
+          }
+          if (key == this.patchKey) {
+            console.log('element', element[key]);
+            element[key] = '';
+          }
+        });
+        console.log('data', element);
+      });
+    }
+
+  }
+
+
 }
+
+
+

@@ -12,7 +12,7 @@
     </div>
   </div>
   <div class="col p-0">
-    <table class="table bg-white">
+    <table class="table bg-white table-responsive-sm">
       <thead>
         <tr>
           <th *ngFor="let head of items[0] | keys">
@@ -25,21 +25,29 @@
           <!-- '#d2d2d2' f8dbb4 -->
           <td *ngFor="let list of item | keys; let i=index" [style.background-color]="
           ((list == highlighterKey) ? 
-          ((item[selectionKey] && item[highlighterKey]) ? '#a3ded8':( !(item[selectionKey]) ? '#dfe7ed' : '#f8dbb4')) :
-          '')">
-            <span *ngIf="!editable[j] && (list != 'action') && (typeKey[list]!='Checkbox') && (list != highlighterKey)">
+          ((item[selectionKey] && item[highlighterKey] && enableHighlighter) ? '#a3ded8':( !(item[selectionKey] && enableHighlighter) ? 
+                 '#d3d9dc' : '#f8dbb4')) : '') || 
+                 ((list == patchKey) ? 
+          ((item[patchKey]) ? '#a3ded8' :( !(item[selectionKey]) ? '#f8dbb4' : '#d3d9dc')) : '')
+            ">
+            <span
+              *ngIf="!editable[j] && (list != 'action') && (typeKey[list]!='Checkbox') && (list != highlighterKey) && (list != patchKey)">
               {{item[list]}}
             </span>
             <!-- input -->
-            <input class="form-control" [(ngModel)]="item[list]"
+            <input class="form-control" [(ngModel)]="item[list]" [maxLength]="25"
               *ngIf="editable[j] && (list != 'action') && ( typeKey[list]=='String' || typeKey[list]=='Number')" />
 
             <input type="date" data-date="" data-date-format="mm/dd/yyyy" class="form-control"
               *ngIf="editable[j] && (list != 'action') && typeKey[list]=='Date'" [(ngModel)]="item[list]" />
-            <!-- [(ngModel)]="item[list]" -->
+
             <!-- checkbox -->
-            <mat-checkbox color="primary" [disabled]="!editable[j] && (list != selectionKey)" [(ngModel)]="item[list]"
-              *ngIf="(typeKey[list]=='Checkbox')"></mat-checkbox>
+            <span [ngClass]="{'align-checkbox': editable[j] }" *ngIf="(typeKey[list]=='Checkbox')">
+              <mat-checkbox color="primary" [disabled]="!editable[j] && (list != selectionKey)"
+                [(ngModel)]="item[list]">
+              </mat-checkbox>
+            </span>
+
             <!-- select -->
             <select class="form-control" *ngIf="editable[j] && (list != 'action') 
             && ( typeKey[list]!='String' && typeKey[list]!='Number' && typeKey[list]!='Checkbox' &&
@@ -47,10 +55,17 @@
               <option *ngFor="let c of typeKey[list]" [ngValue]="c"> {{c}} </option>
             </select>
 
-            <!-- input -->
+            <!-- input- highlighterKey -->
             <input type="number" [ngClass]="{'disabled': !item[selectionKey]}" [disabled]="!item[selectionKey]"
               class="form-control sample" [(ngModel)]="item[highlighterKey]"
               *ngIf="(list == highlighterKey) && (list != 'action') && highlighterKey" />
+
+            <!-- input -patchKey -->
+            <input type="number" [ngClass]="{'disabled': item[selectionKey]}" [disabled]="item[selectionKey]"
+              class="form-control sample" [(ngModel)]="item[selectionKey] ? item[highlighterKey]: item[patchKey]"
+              *ngIf="(list == patchKey) && (list != 'action') && patchKey" />
+
+
 
             <span class="col p-0 pl-2" (click)="edit(j)" *ngIf="list == 'action' && !editable[j]">
               <span class="secondary-btn">
@@ -69,10 +84,20 @@
             </span>
           </td>
         </tr>
+        <tr *ngIf="enableSelectAll">
+          <td *ngFor="let list of items[0] | keys; let i=index">
+            <!-- checkbox -->
+            <span [ngClass]="{'align-checkbox': editable[j] }" *ngIf="(typeKey[list]=='Checkbox')">
+              <mat-checkbox color="primary" [disabled]="!editable[j] && (list != selectionKey)" [(ngModel)]="selectAll"
+                (change)="selectAllAction()"> Select All
+              </mat-checkbox>
+            </span>
+          </td>
+        </tr>
       </tbody>
     </table>
   </div>
-  <div class="col text-right">
+  <div class="col text-right" *ngIf="enableControls">
     <span class="p-2">
       <a class="secondary-btn" (click)="addTable(1,items?.length)" color="primary">Add 1 row</a>
     </span>
