@@ -1,0 +1,12 @@
+@import '../theme/theme';
+
+.form-control:focus {
+  border: 1px solid #ced4da;
+  border-color: #ced4da !important;
+  box-shadow: none !important;
+}
+
+textarea {
+  font-family: $suku-primary-font;
+  font-size: $suku-font-size-3
+}

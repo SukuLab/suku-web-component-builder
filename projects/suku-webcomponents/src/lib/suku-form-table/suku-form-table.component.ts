@@ -8,22 +8,8 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class SukuFormTableComponent implements OnInit {
   j;
-  @Input('table-header') header;
-  @Input('table-header-content') headerContent = 'cjkcsnns sjkcs jkkjs kjkjd kjdfkjdf jkdf';
-  _tableData: any;
-  tableDataKey;
-
-  @Input('table-data')
-  get tableData() {
-    return this._tableData;
-  }
-
-  set tableData(val) {
-    this._tableData = val;
-    if (this._tableData[0]) {
-      this.tableDataKey = Object.keys(this._tableData[0]);
-    }
-  }
+  _items = [];
+  editable = [];
   @Input('title-one-id') titleOneId;
   @Input('title-one-size') titleOneSize;
   @Input('title-one-color') titleOneColor = 'white';
@@ -33,23 +19,22 @@ export class SukuFormTableComponent implements OnInit {
   @Input('header-size') headerSize = '14px';
   @Input('header-color') headerColor;
   @Input('header-weight') headerWeight;
-  @Input('data-size') dataSize = '12px';
-  @Input('data-color') dataColor;
-  @Input('data-weight') dataWeight;
-  @Input('data-href') hrefSelection = 'lotid';
   @Input('status-bg-style') colorPallete = ['#a3ded8', '#f8dbb4', '#c7c3fa', 'gray'];
   @Input('status') status = ['completed', 'not-completed', 'pending', 'others'];
-
-  @Input() dataHeader = {
-    CowId: 'Number',
-    Birthdate: 'String',
-    Approx_Weight: 'Number',
-    Breed: 'Array'
-  };
-
-  editable = [];
   @Input() typeKey;
-  @Input() items;
+  @Input() defaultCount = 2;
+  @Input()
+  get items() {
+    return this._items;
+  }
+  set items(val) {
+    console.log('val', val.length);
+    if (val.length == 0) {
+      this.addTable(this.defaultCount, val.length);
+    } else {
+      this._items = val;
+    }
+  }
   @Input() selectionKey;
   @Input() highlighterKey;
   @Input() patchKey;
@@ -57,12 +42,14 @@ export class SukuFormTableComponent implements OnInit {
   @Input() enableControls = true;
   @Input() enableSelectAll = false;
   @Input() selectAll;
+  @Input() keyData;
+  @Input() controlsSize;
+  @Input() controlCustomClass;
 
   constructor() {
   }
 
   ngOnInit() {
-    console.log('dataHeader', this.dataHeader);
   }
 
   addTable(val, editIndex) {
@@ -75,14 +62,20 @@ export class SukuFormTableComponent implements OnInit {
           template[key] = false;
         } else if (typeKey[key] == 'String' || typeKey[key] == 'Number') {
           template[key] = '';
+        } else {
+          template[key] = '';
         }
       });
-      this.items.push(template);
+      if (this.enableControls) {
+        template['action'] = '';
+      }
+      this._items.push(template);
     }
+    console.log('_items', this._items);
   }
 
   submit() {
-    console.log('items', this.items);
+    console.log('_items', this._items);
   }
 
   edit(i) {
@@ -95,22 +88,24 @@ export class SukuFormTableComponent implements OnInit {
   }
 
   remove(i) {
-    console.log('item', i);
-    this.items.splice(i, 1);
-    console.log('data', this.items);
+    this._items.splice(i, 1);
   }
 
-  validate(e, v) {
-    console.log(e, v);
-    if (+e.target.value > +v) {
-      e.preventDefault();
-    }
+  checkValid(list) {
+    const data = [
+      { key: '# of Boxes' },
+      { key: 'test' }
+    ];
+    const result = data.some(val => {
+      return val.key == list;
+    });
+    return result;
   }
 
   selectAllAction() {
     const selectAll = this.selectAll;
     if (selectAll) {
-      this.items.forEach(element => {
+      this._items.forEach(element => {
         Object.keys(element).forEach((key) => {
           if (key == 'Received All Boxes') {
             console.log('element', element[key]);
@@ -120,7 +115,7 @@ export class SukuFormTableComponent implements OnInit {
         console.log('data', element);
       });
     } else {
-      this.items.forEach(element => {
+      this._items.forEach(element => {
         Object.keys(element).forEach((key) => {
           if (key == 'Received All Boxes') {
             console.log('element', element[key]);

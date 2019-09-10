@@ -21,6 +21,10 @@ table td {
   padding-left: 1%;
 }
 
+.btn-edit {
+  line-height: 2 !important;
+}
+
 select,
 input {
   width: 100%;
@@ -111,10 +115,19 @@ option {
   color: #555;
 }
 
-.table td,
+
 .table th {
-  padding: .75rem;
+  padding: .5rem;
   padding-left: 1.25rem;
-  vertical-align: top;
   border-top: 1px solid #bbbbbbcc;
+}
+
+.table td {
+  padding: .25rem;
+  padding-left: 1.25rem;
+  border-top: 1px solid #bbbbbbcc;
+}
+
+.border-enable {
+  border: 1px solid #92929240;
 }
