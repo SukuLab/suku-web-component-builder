@@ -98,7 +98,13 @@
   <br />
   <br />
   <div class="col-12 pb-5">
-    <suku-form-table></suku-form-table>
+    <suku-form-table [typeKey]="tableKey1" [items]="tabelData1"></suku-form-table>
+  </div>
+  <div class="col-12 pb-5">
+    <suku-form-table [typeKey]="tableKey2" [enableControls]="false" [items]="tabelData2" [enableHighlighter]="true" [selectionKey]="'selection'" [highlighterKey]="'# of Boxes'"></suku-form-table>
+  </div>
+  <div class="col-12 pb-5">
+    <suku-form-table [typeKey]="tableKey3" [enableControls]="false" [enableSelectAll]="true" [items]="tabelData3" [selectionKey]="'Received All Boxes'" [highlighterKey]="'# of Boxes'" [patchKey]="'# of Boxes Received'"></suku-form-table>
   </div>
   <br />
   <br />
