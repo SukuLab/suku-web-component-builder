@@ -8,6 +8,77 @@ import { FormBuilder, FormGroup, FormControl, FormArray } from '@angular/forms';
 })
 export class TestCompComponent implements OnInit {
   form: FormGroup;
+  tableKey1 = {
+    name: 'String',
+    'Physical Challenged': 'Checkbox',
+    dob: 'Date',
+    degree: 'String',
+    pet: ['cat', 'dog']
+  };
+  tabelData1 = [
+    {
+      name: 'jean',
+      'Physical Challenged': true,
+      dob: '2014-11-09',
+      degree: '',
+      pet: 'dog',
+      action: ''
+    },
+    {
+      name: 'Roy',
+      'Physical Challenged': true,
+      dob: '2019-12-09',
+      degree: '',
+      pet: 'cat',
+      action: ''
+    },
+    {
+      name: 'Bean',
+      'Physical Challenged': false,
+      dob: '2014-12-29',
+      degree: '',
+      pet: 'dog',
+      action: ''
+    }
+  ];
+  tableKey2 = {
+    selection: 'Checkbox',
+    Sku: 'Number',
+    brand: 'String',
+    'product name': 'String',
+    '# of Boxes': 'Number'
+  };
+  tabelData2 = [
+    {
+      selection: true,
+      Sku: '123465',
+      brand: 'WONG PREMIUM',
+      'product name': 'TBONE',
+      '# of Boxes': '45'
+    },
+    {
+      selection: true,
+      Sku: '123465',
+      brand: 'WONG PREMIUM',
+      'product name': 'TBONE',
+      '# of Boxes': '5'
+    },
+    {
+      selection: false,
+      Sku: '123465',
+      brand: 'WONG PREMIUM',
+      'product name': 'TBONE',
+      '# of Boxes': ''
+    },
+    {
+      selection: false,
+      Sku: '123465',
+      brand: 'WONG PREMIUM',
+      'product name': 'TBONE',
+      '# of Boxes': ''
+    }
+  ];
+
 
   progressData = [
     {

@@ -98,7 +98,12 @@
   <br />
   <br />
   <div class="col-12 pb-5">
-    <suku-form-table></suku-form-table>
+    <suku-form-table [typeKey]="tableKey1" [items]="tabelData1"></suku-form-table>
+  </div>
+  <div class="col-12 pb-5">
+    <suku-form-table [typeKey]="tableKey2" [items]="tabelData2" [selectionKey]="'selection'"
+      [highlighterKey]="'# of Boxes'">
+    </suku-form-table>
   </div>
   <br />
   <br />

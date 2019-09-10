@@ -27,7 +27,7 @@ export class SukuFormTableComponent implements OnInit {
   @Input('title-one-color') titleOneColor = 'white';
   @Input('title-one-weight') titleOneWeight;
   @Input('title-one-custom-class') titleOneCustomClass = '';
-  @Input('title-content') titleContent = 'No-Data';
+  @Input('title-content') titleContent = 'Enter animal information:';
   @Input('header-size') headerSize = '14px';
   @Input('header-color') headerColor;
   @Input('header-weight') headerWeight;
@@ -46,47 +46,22 @@ export class SukuFormTableComponent implements OnInit {
   };
 
   editable = [];
-  typeKey = {
-    name: 'String',
-    surname: 'Checkbox',
-    pet: ['cat', 'dog'],
-  };
+  @Input() typeKey;
+  @Input() items;
+  @Input() selectionKey;
+  @Input() highlighterKey;
 
-  items = [
-    {
-      name: 'jean',
-      surname: true,
-      pet: 'dog',
-      action: ''
-    },
-    {
-      name: 'jean',
-      surname: true,
-      pet: 'cat',
-      action: ''
-    },
-    {
-      name: 'jean',
-      surname: false,
-      pet: 'dog',
-      action: ''
-    }
-  ];
   constructor() {
   }
 
   ngOnInit() {
     console.log('dataHeader', this.dataHeader);
-    // if (this.dataHeader) {
-    //   this.tableDataKey = Object.keys(this.dataHeader);
-    //   this.tableDataValue = Object.values(this.dataHeader);
-    // }
-    // console.log('dataHeader', this.tableDataKey, this.tableDataValue);
   }
 
-  addTable(val) {
+  addTable(val, editIndex) {
     for (let i = 0; i < val; i++) {
-      const template = { name: '', surname: false, pet: '', action: '' };
+      this.editable[editIndex + i] = true;
+      const template = { name: '', 'Physical Challenged': false, dob: '', degree: '', pet: '', action: '' };
       this.items.push(template);
     }
   }
@@ -95,8 +70,8 @@ export class SukuFormTableComponent implements OnInit {
     console.log('items', this.items);
   }
 
-  edit(i, item) {
-    console.log(i, item);
+  edit(i) {
+    console.log(i);
     if (this.editable[i]) {
       this.editable[i] = false;
     } else {
