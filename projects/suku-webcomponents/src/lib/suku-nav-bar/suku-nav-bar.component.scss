@@ -174,7 +174,6 @@ ul li a:hover {
     color: $suku-text-label-two;
   }
 
-
   .btLine {
     margin-left: 0px !important;
   }
@@ -197,7 +196,6 @@ ul li a:hover {
     color: rgba(255, 255, 255, 1);
     background: none !important;
   }
-
 
   .mobResponse {
     display: block !important;
@@ -250,4 +248,10 @@ ul li a:hover {
   position: relative;
   top: -15px;
   right: 12px;
+}
+:host {
+  .row{
+    margin-right:0px;
+    margin-left: 0px;
+  }
 }
