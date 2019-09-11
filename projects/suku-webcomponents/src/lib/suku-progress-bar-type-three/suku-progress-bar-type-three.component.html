@@ -1,12 +1,12 @@
 <div class="col-12 w-100 d-flex flex-column">
   <ul class="progressbar">
     <li *ngFor="let data of progressBarData;let i=index">
-      <p class="circle" id="progressBar{{i}}" (click)="showDetails(((data?.status == statusKey[1]) ? data : ''))"
+      <p class="circle" id="progressBar{{i}}" (click)="showDetails(data)"
         [ngClass]="{ 
     'active' : (data?.status == statusKey[0]), 
     'completed' : (data?.status == statusKey[2]), 
     'toolTip': (data?.status == statusKey[1] && selected == data), 'c-pointer': enablePointer }">
-        <span *ngIf="!(data?.status == statusKey[2])">{{i}}</span>
+        <span *ngIf="!(data?.status == statusKey[2])">{{i+1}}</span>
         <span class="tipTooltext" [style.visibility]="((selected == data) ? 'visible' : 'hidden')"
           [style.left.rem]="positionTooltipLeft" [style.top.rem]="positionTooltipTop">
           <span id="progressToolTip">{{tooltipInfo}}</span>

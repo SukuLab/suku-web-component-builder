@@ -1,0 +1,133 @@
+@import '../theme/theme';
+
+.header {
+  @include suku-box();
+}
+
+.title {
+  font-family: $suku-primary-font;
+  font-weight: 600;
+  font-size: $suku-font-size-5;
+  text-transform: uppercase;
+}
+
+.table {
+  font-family: $suku-primary-font;
+  box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.1);
+}
+
+table td {
+  vertical-align: middle;
+  padding-left: 1%;
+}
+
+.btn-edit {
+  line-height: 2 !important;
+}
+
+select,
+input {
+  width: 100%;
+  height: inherit !important;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  margin: 0;
+}
+
+td {
+  width: 15%;
+}
+
+.form-control:focus {
+  border: 1px solid #ced4da;
+  border-color: #ced4da !important;
+  box-shadow: none !important;
+}
+
+:host {
+  ::ng-deep.mat-checkbox {
+    vertical-align: sub !important;
+  }
+}
+
+th:last-child {
+  width: 12% !important;
+}
+
+td:last-child {
+  width: 13% !important;
+}
+
+button:focus {
+  outline: none !important;
+}
+
+.secondary-btn {
+  font-family: $suku-secondary-font;
+  font-size: $suku-font-size-3;
+  font-weight: 600;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.43;
+  letter-spacing: -0.4px;
+  color: $suku-text-heading;
+  border-bottom: 3.5px solid;
+  border-color: $suku-sick-green;
+  word-break: break-word !important;
+  cursor: pointer;
+}
+
+.align-checkbox {
+  display: flex;
+  padding-top: 5%;
+}
+
+.c-pointer {
+  cursor: pointer;
+}
+
+table>tbody>tr>td {
+  flex-wrap: wrap !important;
+}
+
+.sample {
+  background: inherit !important;
+  border: none !important;
+}
+
+.disabled {
+  cursor: not-allowed;
+}
+
+select option {
+  border: 1px solid #757575;
+}
+
+option {
+  border: 1px solid #AAA;
+  border-radius: 2px;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1);
+  color: #555;
+}
+
+
+.table th {
+  padding: .5rem;
+  padding-left: 1.25rem;
+  border-top: 1px solid #bbbbbbcc;
+}
+
+.table td {
+  padding: .25rem;
+  padding-left: 1.25rem;
+  border-top: 1px solid #bbbbbbcc;
+}
+
+.border-enable {
+  border: 1px solid #92929240;
+}

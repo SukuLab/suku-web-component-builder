@@ -1,5 +1,4 @@
-import { Component, OnInit, Input, HostListener } from '@angular/core';
-
+import { Component, OnInit, Input, HostListener, EventEmitter } from '@angular/core';
 @Component({
   selector: 'suku-progress-bar-type-three',
   templateUrl: './suku-progress-bar-type-three.component.html',
@@ -30,6 +29,7 @@ export class SukuProgressBarTypeThreeComponent implements OnInit {
   @Input('custom-title-class') customTitleClass = '';
   @Input('custom-subtitlee-class') customSubtitleClass = '';
   @Input('enable-pointer') enablePointer = true;
+  @Input() action = new EventEmitter();
   constructor() {
   }
 
@@ -38,11 +38,16 @@ export class SukuProgressBarTypeThreeComponent implements OnInit {
 
 
   showDetails(data) {
-    console.log('e--', this.selected, data);
-    if (this.selected == data) {
-      this.selected = '';
+    console.log('e--', data);
+    if (data.status == 'inComplete') {
+      if (this.selected == data) {
+        this.selected = '';
+      } else {
+        this.selected = data;
+      }
     } else {
-      this.selected = data;
+      this.selected = '';
+      this.action.emit(data);
     }
   }
 

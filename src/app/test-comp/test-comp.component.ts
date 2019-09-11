@@ -9,10 +9,124 @@ import { FormBuilder, FormGroup, FormControl, FormArray } from '@angular/forms';
 export class TestCompComponent implements OnInit {
   form: FormGroup;
 
+  tableKeyA1 = {
+    'Cow ID': 'String',
+    'Approx. Age (mths.)': 'Number',
+    'Approx. Weight (kgs.)': 'Number',
+    Breed: ['Aungus', 'Charolais', 'Hereford', 'Simmental'],
+  };
+  tabelDataA1 = [];
+
+  tableKey1 = {
+    name: 'String',
+    'Physical Challenged': 'Checkbox',
+    dob: 'Date',
+    degree: 'String',
+    pet: ['cat', 'dog']
+  };
+  tabelData1 = [
+    {
+      name: 'jean',
+      'Physical Challenged': true,
+      dob: '2014-11-09',
+      degree: '',
+      pet: 'dog',
+      action: ''
+    },
+    {
+      name: 'Roy',
+      'Physical Challenged': true,
+      dob: '2019-12-09',
+      degree: '',
+      pet: 'cat',
+      action: ''
+    },
+    {
+      name: 'Bean',
+      'Physical Challenged': false,
+      dob: '2014-12-29',
+      degree: '',
+      pet: 'dog',
+      action: ''
+    }
+  ];
+  tableKey2 = {
+    selection: 'Checkbox',
+    Sku: 'Number',
+    brand: 'String',
+    'product name': 'String',
+    '# of Boxes': 'Number'
+  };
+  tabelData2 = [
+    {
+      selection: true,
+      Sku: '123465',
+      brand: 'WONG PREMIUM',
+      'product name': 'TBONE',
+      '# of Boxes': '45'
+    },
+    {
+      selection: true,
+      Sku: '123465',
+      brand: 'WONG PREMIUM',
+      'product name': 'TBONE',
+      '# of Boxes': '5'
+    },
+    {
+      selection: false,
+      Sku: '123465',
+      brand: 'WONG PREMIUM',
+      'product name': 'TBONE',
+      '# of Boxes': ''
+    },
+    {
+      selection: false,
+      Sku: '123465',
+      brand: 'WONG PREMIUM',
+      'product name': 'TBONE',
+      '# of Boxes': ''
+    }
+  ];
+  tableKey3 = {
+    Sku: 'Number',
+    brand: 'String',
+    'product name': 'String',
+    '# of Boxes': 'Number',
+    'Received All Boxes': 'Checkbox',
+    '# of Boxes Received': 'Number',
+  };
+  tabelData3 = [
+    {
+      Sku: '34564',
+      brand: 'WONG PREMIUM',
+      'product name': 'PICAHNA',
+      '# of Boxes': '45',
+      'Received All Boxes': false,
+      '# of Boxes Received': '',
+    },
+    {
+      Sku: '34564',
+      brand: 'WONG PREMIUM',
+      'product name': 'TBONE',
+      '# of Boxes': '4',
+      'Received All Boxes': false,
+      '# of Boxes Received': '',
+    },
+    {
+      Sku: '34564',
+      brand: 'WONG PREMIUM',
+      'product name': 'TBONE',
+      '# of Boxes': '14',
+      'Received All Boxes': false,
+      '# of Boxes Received': '',
+    }
+  ];
+
+
   progressData = [
     {
       name: 'Finca Nueva',
-      status: 'complete',
+      status: 'inProgress',
       type: 'FARM',
       data: '',
       id: ''
@@ -53,6 +167,7 @@ export class TestCompComponent implements OnInit {
       id: ''
     }
   ];
+
   buttonData = {
     title: 'Marketplace',
     icon: 'fa fa-shopping-cart',
@@ -60,6 +175,7 @@ export class TestCompComponent implements OnInit {
     disabled: true,
     id: 'Marketplace'
   };
+
   dataCard = ['beefChain', 'test-2', 'test-3'];
   dropDownData = [{
     '_id': '5cdc2038e993be00125c6988',
@@ -257,13 +373,6 @@ export class TestCompComponent implements OnInit {
     }
   ];
 
-  //      {
-  //   index: 'three',
-  //     type: 'video',
-  //       checked: false,
-  //         link:
-  //   'http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4'
-  // },
   value;
   formValue = {
     username: 'testUser',
@@ -271,6 +380,332 @@ export class TestCompComponent implements OnInit {
   };
 
   image = '../../assets/icons/group.svg';
+
+
+  sampleAssetsData = [
+    {
+      brand: {
+        _id: '3021c8b0b062fc85cd0e8c5d',
+        name: 'Wong Premium',
+      },
+      marketplace: {
+        _id: '5d7698a75c7a7011ddeb157a',
+        name: '',
+      },
+      extras: {
+        coupons: ['https://coupon.com'],
+        details: [
+          {
+            title: 'Cooking Tips',
+            description:
+              'Bacon ipsum dolor amet chicken spare ribs tenderloin salami strip steak sausage ball tip ham swine picanha.',
+          },
+        ],
+      },
+      ids: [
+        {
+          id: '487141',
+          type: 'SKU',
+        },
+      ],
+      photos: [
+        'https://wongfood.vteximg.com.br/arquivos/ids/168354-1000-1000/Asado-de-Aguja-Wong-Premium-x-Kilo-1-8147.jpg?v=636416324177970000',
+      ],
+      videos: [
+        'https://suku-scanner.s3-us-west-2.amazonaws.com/sizzling-steak.mp4',
+      ],
+      url: ['https://www.wong.pe/asado-de-aguja-wong-premium-x-kg-487141/p'],
+      version: [
+        {
+          '# of Boxes': 'Number'
+        }
+      ],
+      _id: '5d7698a7571ca311dd5af90e',
+      skuku: '010',
+      name: 'Asado De Aguja',
+      description:
+        'This meat comes from cattle of European origin, which complements their diet with the natural antioxidant Sel-Plex making it healthier. Vacuum packed. Weight approx 1.5 Kg (Reference Photo. Products are sold in their original state).',
+      previewVideo:
+        'https://suku-scanner.s3-us-west-2.amazonaws.com/sizzling-steak.mp4',
+    },
+    {
+      brand: {
+        _id: '3021c8b0b062fc85cd0e8c5d',
+        name: 'Wong Premium',
+      },
+      marketplace: {
+        _id: '5d7698a75c7a7011ddeb157a',
+        name: '',
+      },
+      extras: {
+        coupons: ['https://coupon.com'],
+        details: [
+          {
+            title: 'Cooking Tips',
+            description:
+              'Bacon ipsum dolor amet chicken spare ribs tenderloin salami strip steak sausage ball tip ham swine picanha.',
+          },
+        ],
+      },
+      ids: [
+        {
+          id: '487142',
+          type: 'SKU',
+        },
+      ],
+      photos: [
+        'https://wongfood.vteximg.com.br/arquivos/ids/168354-1000-1000/Asado-de-Aguja-Wong-Premium-x-Kilo-1-8147.jpg?v=636416324177970000',
+      ],
+      videos: [
+        'https://suku-scanner.s3-us-west-2.amazonaws.com/sizzling-steak.mp4',
+      ],
+      url: ['https://www.wong.pe/asado-de-aguja-wong-premium-x-kg-487141/p'],
+      version: [
+        {
+          '# of Boxes': 'Number'
+        }
+      ],
+      _id: '5d7698a7571ca311dd5af91f',
+      skuku: '013',
+      name: 'Asado Ruso',
+      description:
+        'This meat comes from cattle of European origin, which complements their diet with the natural antioxidant Sel-Plex making it healthier. Vacuum packed. Weight approx 1.5 Kg (Reference Photo. Products are sold in their original state).',
+      previewVideo:
+        'https://suku-scanner.s3-us-west-2.amazonaws.com/sizzling-steak.mp4',
+    },
+    {
+      brand: {
+        _id: '3021c8b0b062fc85cd0e8c5d',
+        name: 'Wong Premium',
+      },
+      marketplace: {
+        _id: '5d7698a75c7a7011ddeb157a',
+        name: '',
+      },
+      extras: {
+        coupons: ['https://coupon.com'],
+        details: [
+          {
+            title: 'Cooking Tips',
+            description:
+              'Bacon ipsum dolor amet chicken spare ribs tenderloin salami strip steak sausage ball tip ham swine picanha.',
+          },
+        ],
+      },
+      ids: [
+        {
+          id: '744518',
+          type: 'SKU',
+        },
+      ],
+      photos: [
+        'https://wongfood.vteximg.com.br/arquivos/ids/168354-1000-1000/Asado-de-Aguja-Wong-Premium-x-Kilo-1-8147.jpg?v=636416324177970000',
+      ],
+      videos: [
+        'https://suku-scanner.s3-us-west-2.amazonaws.com/sizzling-steak.mp4',
+      ],
+      url: ['https://www.wong.pe/asado-de-aguja-wong-premium-x-kg-487141/p'],
+      version: [
+        {
+          '# of Boxes': 'Number'
+        }
+      ],
+      _id: '5d7698a7571ca311dd5af91f',
+      skuku: '012',
+      name: 'Cowboy Steak',
+      description:
+        'This meat comes from cattle of European origin, which complements their diet with the natural antioxidant Sel-Plex making it healthier. Vacuum packed. Weight approx 1.5 Kg (Reference Photo. Products are sold in their original state).',
+      previewVideo:
+        'https://suku-scanner.s3-us-west-2.amazonaws.com/sizzling-steak.mp4',
+    }
+  ];
+  sampleAssetsDataForLogi = [
+    {
+      _id: '67e7dff46a1231e9e505dcc8',
+      skuku: '001',
+      lotId: '1',
+      ids: [
+        {
+          id: '487141',
+          type: 'SKU',
+        },
+      ],
+      name: 'Asado De Aguja',
+      version: 0,
+      attributes: {
+        '# of Boxes': 45,
+      },
+    },
+    {
+      _id: 'f25742857e0a123e05e9fdee',
+      skuku: '010',
+      lotId: '1',
+      ids: [
+        {
+          id: '487142',
+          type: 'SKU',
+        },
+      ],
+      name: 'Asado Ruso',
+      version: 0,
+      attributes: {
+        '# of Boxes': 60,
+      },
+    },
+    {
+      _id: 'f51cf10c79a1235aedb083f4',
+      skuku: '012',
+      lotId: '1',
+      ids: [
+        {
+          id: '487165',
+          type: 'SKU',
+        },
+      ],
+      name: 'Asado De Tira',
+      version: 0,
+      attributes: {
+        '# of Boxes': 25,
+      },
+    },
+    {
+      _id: 'f3122dfe6a015dd7cac477fe',
+      skuku: '013',
+      lotId: '1',
+      ids: [
+        {
+          id: '487167',
+          type: 'SKU',
+        },
+      ],
+      name: 'Entraña Fina',
+      version: 0,
+      attributes: {
+        '# of Boxes': 20,
+      },
+    },
+    {
+      _id: '2ab8b31fb08a1236a83c495a',
+      skuku: '014',
+      lotId: '1',
+      ids: [
+        {
+          id: '487170',
+          type: 'SKU',
+        },
+      ],
+      name: 'Bife De Vacio',
+      version: 0,
+      attributes: {
+        '# of Boxes': 25,
+      },
+    },
+    {
+      _id: '69b4edb0f32a8ccfaf562645',
+      skuku: '015',
+      lotId: '1',
+      ids: [
+        {
+          id: '487171',
+          type: 'SKU',
+        },
+      ],
+      name: 'Colita De Cuadril',
+      version: 0,
+      attributes: {
+        '# of Boxes': 25,
+      },
+    },
+    {
+      _id: '2969713e87e448e71dce795f',
+      skuku: '016',
+      lotId: '1',
+      ids: [
+        {
+          id: '487172',
+          type: 'SKU',
+        },
+      ],
+      name: 'Bife Angosto',
+      version: 0,
+      attributes: {
+        '# of Boxes': 25,
+      },
+    },
+    {
+      _id: '6893733cadef0c3cc831953d',
+      skuku: '017',
+      lotId: '1',
+      ids: [
+        {
+          id: '487175',
+          type: 'SKU',
+        },
+      ],
+      name: 'Picanha',
+      version: 0,
+      attributes: {
+        '# of Boxes': 25,
+      },
+    },
+    {
+      _id: '7a3c779e8297ca6c3cdbdb2e',
+      skuku: '018',
+      lotId: '1',
+      ids: [
+        {
+          id: '487176',
+          type: 'SKU',
+        },
+      ],
+      name: 'T-bone',
+      version: 0,
+      attributes: {
+        '# of Boxes': 25,
+      },
+    },
+    {
+      _id: 'c03bed502f70eda2587fa88e',
+      skuku: '019',
+      lotId: '1',
+      ids: [
+        {
+          id: '487178',
+          type: 'SKU',
+        },
+      ],
+      name: 'Asado Pejerrey',
+      version: 0,
+      attributes: {
+        '# of Boxes': 25,
+      },
+    },
+    {
+      _id: '17cd5c76c1865613b37c7e37',
+      skuku: '020',
+      lotId: '1',
+      ids: [
+        {
+          id: '487182',
+          type: 'SKU',
+        },
+      ],
+      name: 'Bife Ancho',
+      version: 0,
+      attributes: {
+        '# of Boxes': 25,
+      },
+    }
+  ];
+  highlightnerArray = [];
+  highlightnerLogisticsArray = [
+    {
+      key: '# of Boxes'
+    }
+  ];
+
+  sampleData = [];
+  sampleDataForLogistics = [];
   constructor(private fb: FormBuilder) { }
 
   ngOnInit() {
@@ -288,6 +723,61 @@ export class TestCompComponent implements OnInit {
     });
     (<FormArray>this.form.get('owner')).push(this.control());
     this.value = 'Beef (Rolled)-0515';
+    this.sampleAssetsData.forEach(val => {
+      const template = {
+        selection: false,
+        Sku: val.skuku,
+        brand: val.brand.name,
+        'product name': val.name
+      };
+      this.sampleData.push(template);
+
+      Object.keys(val.version[0]).forEach(value => {
+        console.log('val-- test', value);
+        const isPresent = this.highlightnerArray.some(ele => {
+          return ele.key == value;
+        });
+        console.log('isPresent', isPresent);
+        if (!isPresent) {
+          this.highlightnerArray.push({ 'key': value });
+        }
+        this.sampleData.map(vals => {
+          vals[value] = '';
+        });
+      });
+      console.log('val', val);
+    });
+    /* logistics */
+    this.sampleAssetsDataForLogi.forEach(val => {
+      const template = {
+        Sku: val.skuku,
+        brand: val.name,
+        'product name': val.name,
+        '# of Boxes': val.attributes['# of Boxes'],
+        'Received All Boxes': false
+      };
+      this.sampleDataForLogistics.push(template);
+      this.sampleDataForLogistics.map(vals => {
+        vals['# of Boxes Received'] = '';
+      });
+      // Object.keys(val.version[0]).forEach(value => {
+      //   console.log('val-- test', value);
+      //   const isPresent = this.highlightnerLogisticsArray.some(ele => {
+      //     return ele.key == value;
+      //   });
+      //   console.log('isPresent', isPresent);
+      //   if (!isPresent) {
+      //     this.highlightnerLogisticsArray.push({ 'key': value });
+      //   }
+      //   this.sampleData.map(vals => {
+      //     vals[value] = '';
+      //   });
+      // });
+    });
+    const unique_array = this.removeDuplicates(this.highlightnerArray);
+    // unique_array = Array.from(new Set(unique_array));
+    console.log('sampleDataForLogistics', this.sampleDataForLogistics);
+    console.log('this.sampleData', this.sampleData, unique_array);
   }
 
   search() {
@@ -322,4 +812,16 @@ export class TestCompComponent implements OnInit {
   something(e){
     console.log("thi sis something:",e);
   }
+
+  removeDuplicates(arr) {
+    const unique_array = [];
+    for (let i = 0; i < arr.length; i++) {
+      if (unique_array.indexOf(arr[i]) == -1) {
+        unique_array.push(arr[i])
+      }
+    }
+    return unique_array;
+  }
+
+
 }
