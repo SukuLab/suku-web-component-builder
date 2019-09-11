@@ -9,6 +9,7 @@ import { FormGroup } from '@angular/forms';
 export class SukuDisplayTableComponent implements OnInit {
   @Input('table-header') header;
   @Input('table-header-content') headerContent = 'cjkcsnns sjkcs jkkjs kjkjd kjdfkjdf jkdf';
+  @Input('table-items-count') itemsPerPageCount = '10';
   _tableData: any;
   tableDataKey;
 

@@ -13,6 +13,7 @@ import {
   MatToolbarModule, MatTooltipModule
 } from '@angular/material';
 import { CountdownTimerModule } from 'ngx-countdown-timer';
+import { NgxPaginationModule } from 'ngx-pagination';
 import { SukuFundingSourceComponent } from '../lib/suku-funding-source/suku-funding-source.component';
 import { SukuTransactionHistoryComponent } from '../lib/suku-transaction-history/suku-transaction-history.component';
 import { SukuAchSettingModule } from './suku-achsettings/suku-achsettings.module';
@@ -198,6 +199,7 @@ import { SukuMessageWidgetComponent } from './suku-message-widget/suku-message-w
     FormsModule,
     ReactiveFormsModule,
     CountdownTimerModule,
+    NgxPaginationModule,
     MatAutocompleteModule,
     MatBadgeModule,
     MatBottomSheetModule,
