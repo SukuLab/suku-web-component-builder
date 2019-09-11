@@ -4,7 +4,7 @@ import { SukuConfirmationComponent } from '../suku-confirmation/suku-confirmatio
 import { SukuConfirmationModalComponent } from '../suku-confirmation-modal/suku-confirmation-modal.component';
 import { Subject, BehaviorSubject } from 'rxjs';
 import { SukuAddLicenseModalComponent } from '../suku-add-license-modal/suku-add-license-modal.component';
-
+import { SukuConfirmationStatusModalComponent } from '../suku-confirmation-status-modal/suku-confirmation-status-modal.component'
 
 @Injectable({
   providedIn: 'root'
@@ -18,10 +18,14 @@ export class SukuModalService {
 
   /*  */
   bSubject = new BehaviorSubject('');
+  confirmationStatusDialogWidth;
+  confirmationStatusDialogHeight;
   /*  */
   constructor(public dialogService: MatDialog) {
     this.confirmationDialogHeight = 'auto';
     this.confirmationDialogWidth = '500px';
+    this.confirmationStatusDialogWidth = '600px';
+    this.confirmationStatusDialogHeight = 'auto';
   }
 
   public openConfirmationDialog(data?) {
@@ -69,6 +73,23 @@ export class SukuModalService {
     }
   }
 
+  public openConfirmationStatusModalDialog(data?) {
+    this.bSubject.next(data);
+    if (data.openDialog) {
+      const dialogRef = this.dialogService.open(SukuConfirmationStatusModalComponent, {
+        width: this.confirmationStatusDialogWidth,
+        height: this.confirmationStatusDialogHeight,
+        disableClose: this.confirmationDialogClose,
+        data: {
+          modalData: this.bSubject
+        }
+      });
+      console.log('dialogRef.componentInstance.data', dialogRef.componentInstance.data)
+      dialogRef.afterClosed().subscribe((result) => {
+        this.onDialogClose.emit(result);
+      });
+    }
+  }
 
   public openLicenseModalDialogDialog(data?) {
     const dialogRef = this.dialogService.open(SukuAddLicenseModalComponent, {
