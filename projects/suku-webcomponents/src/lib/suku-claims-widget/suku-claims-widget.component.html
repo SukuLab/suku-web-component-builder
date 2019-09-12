@@ -1,12 +1,15 @@
 <div class="col">
   <p class="col mb-1 pb-2" *ngFor="let claim of claims;let i=index">
-    <span class="row" [ngClass]="{ 'info': !claim?.verifiable}">
-      <i [ngClass]="{'suku-claim-verified-icon': claim?.verifiable, 
+    <span class="row">
+      <span class="d-flex" [ngClass]="{ 'info': !claim?.verifiable}">
+        <i [ngClass]="{'suku-claim-verified-icon': claim?.verifiable, 
     'suku-claim-unverified-icon': !claim?.verifiable }" class="suku-md"></i>
-      <span class="mt-auto mb-auto pl-2 name {{claimTitleCustomClass}}" id="claimTitle{{i}}">{{claim?.name}}</span>
-      <span class="info-box title" [style.right.rem]="positionTooltipRight" [style.bottom.rem]="positionTooltipBottom">
-        <span id="claimTooltip{{i}}" class="{{claimTooltipCustomClass}}">
-          <span [innerHTML]="tooltipInfo"></span>
+        <span class="mt-auto mb-auto pl-2 name {{claimTitleCustomClass}}" id="claimTitle{{i}}">{{claim?.name}}</span>
+        <span class="info-box title" [style.right.rem]="positionTooltipRight"
+          [style.bottom.rem]="positionTooltipBottom">
+          <span id="claimTooltip{{i}}" class="{{claimTooltipCustomClass}}">
+            <span [innerHTML]="claim?.tooltipInfo"></span>
+          </span>
         </span>
       </span>
     </span>

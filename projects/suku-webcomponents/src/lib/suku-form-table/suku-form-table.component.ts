@@ -1,5 +1,5 @@
 
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'suku-form-table',
@@ -45,6 +45,9 @@ export class SukuFormTableComponent implements OnInit {
   @Input() keyData;
   @Input() controlsSize;
   @Input() controlCustomClass;
+  @Output() save = new EventEmitter();
+  @Output() remove = new EventEmitter();
+  @Output() submitData = new EventEmitter();
 
   constructor() {
   }
@@ -78,17 +81,19 @@ export class SukuFormTableComponent implements OnInit {
     console.log('_items', this._items);
   }
 
-  edit(i) {
+  edit(i, item) {
     console.log(i);
     if (this.editable[i]) {
       this.editable[i] = false;
+      this.save.emit(item);
     } else {
       this.editable[i] = true;
     }
   }
 
-  remove(i) {
+  removedata(i, item) {
     this._items.splice(i, 1);
+    this.remove.emit(item);
   }
 
   checkValid(list) {
@@ -132,6 +137,10 @@ export class SukuFormTableComponent implements OnInit {
 
   }
 
+  sendData() {
+    const data = this._items;
+    this.submitData.emit(data);
+  }
 
 }
 

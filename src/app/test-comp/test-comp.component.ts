@@ -820,5 +820,9 @@ export class TestCompComponent implements OnInit {
     return unique_array;
   }
 
+  getAssetArray(e) {
+    console.log('e', e);
+  }
+
 
 }
