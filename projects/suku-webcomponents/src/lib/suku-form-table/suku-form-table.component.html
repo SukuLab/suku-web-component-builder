@@ -15,7 +15,7 @@
     <table class="table bg-white table-responsive-sm">
       <thead>
         <tr>
-          <th *ngFor="let head of _items[0] | keys">
+          <th *ngFor="let head of _itemsKey">
             <span>{{head | titlecase }}</span>
           </th>
         </tr>
@@ -39,26 +39,27 @@
             ((list == patchKey) ?
             ((item[patchKey]) ? '#a3ded8' :( !(item[selectionKey]) ? '#f8dbb4' : '#d3d9dc')) : '')">
             <span
-              *ngIf="!editable[j] && (list != 'action') && (typeKey[list]!='Checkbox') && !checkValid(list) && (list != patchKey)">
+              *ngIf="!editable[j] && !enableEdit && (list != 'action') && (typeKey[list]!='Checkbox') && !checkValid(list) && (list != patchKey)">
               {{item[list]}}
             </span>
             <!-- input -->
-            <input (keyup)="sendData()" id="asset{{i}}" class="form-control" [(ngModel)]="item[list]" [maxLength]="25"
-              *ngIf="editable[j] && (list != 'action') && ( typeKey[list]=='String' || typeKey[list]=='Number')" />
+            <input (keyup)="sendData()" id="asset{{j}}{{list}}" class="form-control" [(ngModel)]="item[list]"
+              [maxLength]="25"
+              *ngIf="editable[j] && !enableEdit && (list != 'action') && ( typeKey[list]=='String' || typeKey[list]=='Number')" />
 
-            <input type="date" id="asset{{i}}" (keyup)="sendData()" data-date="" data-date-format="mm/dd/yyyy"
-              class="form-control" *ngIf="editable[j] && (list != 'action') && typeKey[list]=='Date'"
+            <input type="date" id="asset{{j}}{{list}}" (keyup)="sendData()" data-date="" data-date-format="mm/dd/yyyy"
+              class="form-control" *ngIf="editable[j] && !enableEdit && (list != 'action') && typeKey[list]=='Date'"
               [(ngModel)]="item[list]" />
 
             <!-- checkbox -->
-            <span [ngClass]="{'align-checkbox': editable[j] }" *ngIf="(typeKey[list]=='Checkbox')">
-              <mat-checkbox color="primary" id="asset{{i}}" (change)="sendData()"
-                [disabled]="!editable[j] && (list != selectionKey)" [(ngModel)]="item[list]">
+            <span [ngClass]="{'align-checkbox': editable[j] && !enableEdit }" *ngIf="(typeKey[list]=='Checkbox')">
+              <mat-checkbox color="primary" id="asset{{j}}{{list}}" (change)="sendData()"
+                [disabled]="!editable[j] && !enableEdit && (list != selectionKey)" [(ngModel)]="item[list]">
               </mat-checkbox>
             </span>
 
             <!-- select -->
-            <select class="form-control" (change)="sendData()" *ngIf="editable[j] && (list != 'action') 
+            <select class="form-control" (change)="sendData()" *ngIf="editable[j] && !enableEdit && (list != 'action') 
             && ( typeKey[list]!='String' && typeKey[list]!='Number' && typeKey[list]!='Checkbox' &&
             typeKey[list] !='Date')" [(ngModel)]="item[list]">
               <option *ngFor="let c of typeKey[list];let k=index" id="asset{{k}}" [ngValue]="c"> {{c}} </option>
@@ -66,48 +67,48 @@
 
             <!-- input- highlighterKey -->
             <span *ngIf="checkValid(list) && (list != 'action')">
-              <span *ngFor="let data of keyData">
+              <span *ngFor="let data of keyData;let dataIndex=index">
                 <span *ngIf="(list == data.key)">
-                  <input type="number" id="asset{{i}}" (keyup)="sendData()"
-                    [ngClass]="{'disabled': !item[selectionKey]}" [disabled]="!item[selectionKey]"
-                    class="form-control sample" [(ngModel)]="item[data.key]"
+                  <input type="number" (keyup)="sendData()" [ngClass]="{'disabled': !item[selectionKey]}"
+                    [disabled]="!item[selectionKey]" class="form-control sample" [(ngModel)]="item[data.key]"
                     *ngIf="checkValid(list) && (list != 'action') && highlighterKey" />
                 </span>
               </span>
             </span>
 
             <!-- input -patchKey -->
-            <input type="number" id="asset{{i}}" (keyup)="sendData()" [ngClass]="{'disabled': item[selectionKey]}"
-              [disabled]="item[selectionKey]" class="form-control sample"
+            <input type="number" id="asset{{j}}{{selectionKey}}" (keyup)="sendData()"
+              [ngClass]="{'disabled': item[selectionKey]}" [disabled]="item[selectionKey]" class="form-control sample"
               [(ngModel)]="item[selectionKey] ? item[highlighterKey]: item[patchKey]"
               *ngIf="(list == patchKey) && (list != 'action') && patchKey" />
 
-            <span class="col p-0 pl-2" (click)="edit(j, item)" *ngIf="list == 'action' && !editable[j]">
+            <span class="col p-0 pl-2" (click)="edit(j, item)" *ngIf="list == 'action' && !editable[j] && !enableEdit">
               <span class="secondary-btn controlCustomClass" id="edit{{j}}" [style.font-size.rem]="controlsSize"
-                [ngClass]="{'btn-edit' : editable[j]}">
+                [ngClass]="{'btn-edit' : editable[j] && !enableEdit}">
                 edit
               </span>
             </span>
-            <span class="col p-0 pl-2" *ngIf="list == 'action' && editable[j]">
+            <span class="col p-0 pl-2" *ngIf="list == 'action' && editable[j] && !enableEdit">
               <span class="secondary-btn controlCustomClass" id="edit{{j}}" [style.font-size.rem]="controlsSize"
-                (click)="edit(j, item)" [ngClass]="{'btn-edit' : editable[j]}">
+                (click)="edit(j, item)" [ngClass]="{'btn-edit' : editable[j] && !enableEdit}">
                 save
               </span>
             </span>
             <span class="col c-pointer pl-4" *ngIf="list == 'action'">
               <span class="secondary-btn controlCustomClass" id="edit{{j}}" [style.font-size.rem]="controlsSize"
-                (click)="removedata(j, item)" [ngClass]="{'btn-edit' : editable[j]}">
+                (click)="removedata(j, item)" [ngClass]="{'btn-edit' : editable[j] && !enableEdit}">
                 remove
               </span>
             </span>
           </td>
         </tr>
         <tr *ngIf="enableSelectAll && _items[0]">
-          <td *ngFor="let list of _items[0] | keys; let i=index">
+          <td *ngFor="let list of _itemsKey; let i=index">
             <!-- checkbox -->
-            <span [ngClass]="{'align-checkbox': editable[j] }" *ngIf="(typeKey[list]=='Checkbox')">
-              <mat-checkbox (change)="sendData()" color="primary" [disabled]="!editable[j] && (list != selectionKey)"
-                [(ngModel)]="selectAll" (change)="selectAllAction()"> Select All
+            <span [ngClass]="{'align-checkbox': editable[j] && !enableEdit }" *ngIf="(typeKey[list]=='Checkbox')">
+              <mat-checkbox (change)="sendData()" color="primary"
+                [disabled]="!editable[j] && !enableEdit && (list != selectionKey)" [(ngModel)]="selectAll"
+                (change)="selectAllAction()"> Select All
               </mat-checkbox>
             </span>
           </td>

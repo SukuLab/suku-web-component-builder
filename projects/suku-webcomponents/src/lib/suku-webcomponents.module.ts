@@ -13,6 +13,7 @@ import {
   MatToolbarModule, MatTooltipModule
 } from '@angular/material';
 import { CountdownTimerModule } from 'ngx-countdown-timer';
+import { NgxPaginationModule } from 'ngx-pagination';
 import { SukuFundingSourceComponent } from '../lib/suku-funding-source/suku-funding-source.component';
 import { SukuTransactionHistoryComponent } from '../lib/suku-transaction-history/suku-transaction-history.component';
 import { SukuAchSettingModule } from './suku-achsettings/suku-achsettings.module';
@@ -103,6 +104,7 @@ import { SukuNavBarComponent } from './suku-nav-bar/suku-nav-bar.component';
 import { SukuUserDetailsComponent } from './suku-user-details/suku-user-details.component';
 import { SukuMessageBoxComponent } from './suku-message-box/suku-message-box.component';
 import { SukuClaimsWidgetComponent } from './suku-claims-widget/suku-claims-widget.component';
+import { SukuConfirmationStatusModalComponent } from './suku-confirmation-status-modal/suku-confirmation-status-modal.component';
 import { SukuFormTableComponent } from './suku-form-table/suku-form-table.component';
 import { SukuKeysPipe } from './suku-form-table/suku-key.pipe';
 import { SukuMessageWidgetComponent } from './suku-message-widget/suku-message-widget.component';
@@ -187,6 +189,7 @@ import { SukuMessageWidgetComponent } from './suku-message-widget/suku-message-w
     SukuUserDetailsComponent,
     SukuMessageBoxComponent,
     SukuClaimsWidgetComponent,
+    SukuConfirmationStatusModalComponent,
     SukuFormTableComponent,
     SukuKeysPipe,
     SukuMessageWidgetComponent
@@ -196,6 +199,7 @@ import { SukuMessageWidgetComponent } from './suku-message-widget/suku-message-w
     FormsModule,
     ReactiveFormsModule,
     CountdownTimerModule,
+    NgxPaginationModule,
     MatAutocompleteModule,
     MatBadgeModule,
     MatBottomSheetModule,
@@ -326,10 +330,11 @@ import { SukuMessageWidgetComponent } from './suku-message-widget/suku-message-w
     SukuUserDetailsComponent,
     SukuMessageBoxComponent,
     SukuClaimsWidgetComponent,
+    SukuConfirmationStatusModalComponent,
     SukuFormTableComponent,
     SukuMessageWidgetComponent
   ],
-  entryComponents: [SukuConfirmationModalComponent, SukuAddLicenseModalComponent],
+  entryComponents: [SukuConfirmationModalComponent, SukuAddLicenseModalComponent, SukuConfirmationStatusModalComponent],
   schemas: [],
 })
 export class SukuWebcomponentsModule {

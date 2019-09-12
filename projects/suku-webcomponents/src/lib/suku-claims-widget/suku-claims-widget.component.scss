@@ -13,7 +13,6 @@
 // .toolTip:hover .tipTooltext {
 //   visibility: visible;
 // }
-
 // .tipTooltext {
 //   visibility: hidden;
 //   width: 800px;
@@ -39,7 +38,6 @@
 //   letter-spacing: 0.4px;
 //   color: #b6b6b6;
 // }
-
 // .tipTooltext::after {
 //   content: "";
 //   position: absolute;
@@ -53,7 +51,6 @@
 //   font-stretch: normal;
 //   transform: rotate(90deg);
 // }
-
 // // tool tip start
 // .tipTool {
 //   position: relative;
@@ -61,7 +58,6 @@
 //   height: 0px;
 //   letter-spacing: 0.5px;
 // }
-
 // .tipTool .tipTooltext {
 //   visibility: hidden;
 //   background-color: #000000eb;
@@ -87,7 +83,6 @@
 //   color: #b6b6b6;
 //   width: 800px;
 // }
-
 // .tipTool .tipTooltext::after {
 //   content: "";
 //   position: absolute;
@@ -101,16 +96,18 @@
 //   font-stretch: normal;
 //   transform: rotate(90deg);
 // }
-
 // .tipTool:hover .tipTooltext {
 //   visibility: visible;
 // }
-
 .info {
 
   &:hover .info-box {
     display: block;
   }
+}
+
+.maxWidth {
+  max-width: 75%;
 }
 
 .info-box {
@@ -122,7 +119,7 @@
   display: none;
   position: absolute;
   bottom: 0;
-  right: 32%;
+  /*right: 32%;*/
   text-align: left;
   padding: 20px;
   font-size: 13px;
@@ -137,8 +134,8 @@
   &::after {
     content: "";
     position: absolute;
-    top: 30px;
-    left: -1.5%;
+    /*top: 30px;*/
+    left: -0.3%;
     margin-left: -5px;
     border-width: 5px;
     border-style: solid;

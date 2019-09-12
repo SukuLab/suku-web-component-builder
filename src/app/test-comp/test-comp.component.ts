@@ -809,6 +809,9 @@ export class TestCompComponent implements OnInit {
   action(e, val) {
     console.log(e, val);
   }
+  something(e){
+    console.log("thi sis something:",e);
+  }
 
   removeDuplicates(arr) {
     const unique_array = [];

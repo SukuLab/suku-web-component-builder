@@ -430,6 +430,7 @@ export class AppComponent implements OnInit {
 			this.messageArray.push(messageObj);
 		});
 		this.currentdate();
+		this.open();
 	}
 	sendMessage(e) {
 		console.log(e);
@@ -461,14 +462,15 @@ export class AppComponent implements OnInit {
 		// 'imgSrc': 'http://34.217.89.204/assets/icons/verified_icon.png',
 		const data = {
 			'icon': 'suku-success-icon',
-			'message': 'please wait',
-			'description': 'Description',
+			'message': 'confirm shipment status',
+			'description': 'Are you sure you would like to mark this listing/product as shipped?',
 			'loader': 'enable',
 			'buttonText': 'Action',
+			'descriptionOne' : 'Note: Once the Listing/Product is marked as shipped, you will not be able to edit the tracking number or comments.',
 			'openDialog': true
 		};
 		// this.sukuLoaderService.openLoader(data);
-		this.sukuModalService.openConfirmationModalDialog(data);
+		this.sukuModalService.openConfirmationStatusModalDialog(data);
 		// setTimeout(() => {
 		//   data = {
 		//     'imgSrc': 'http://34.217.89.204/assets/icons/verified_icon.png',

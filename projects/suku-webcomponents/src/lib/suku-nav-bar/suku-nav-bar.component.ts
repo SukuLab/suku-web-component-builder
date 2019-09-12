@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, Output, EventEmitter  } from '@angular/core';
 
 @Component({
 	selector: 'suku-nav-bar',
@@ -23,6 +23,7 @@ export class SukuNavBarComponent {
 	@Input('logo-custom-class') logoCustomClass = 'img-width';
 	@Input('name-custom-class') nameCustomClass = '';
 	@Input('hide-bell-icon') hideBellIcon = true;
+	@Output() action = new EventEmitter();
 	selectedItem: any;
 	@Input() data = {
 		logo: 'assets/images/Suku_Logo_white.png',
@@ -143,6 +144,7 @@ export class SukuNavBarComponent {
 		this.data.submenu.forEach(element => {
 			if (names == element) {
 				console.log('element', element);
+				this.action.emit(element);
 				element.visible = true;
 
 			} else {

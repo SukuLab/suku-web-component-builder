@@ -13,7 +13,7 @@ export class SukuUsernameIconWidgetComponent implements OnInit {
   @Input('image-style') customClass = 'img-circle';
   @Input('image-title') welcomeTitle;
   @Input('image-title-font-size') fontSize = '1.6';
-
+  @Input('image-title-id') userNameId = 'username';
   constructor() { }
 
   ngOnInit() {

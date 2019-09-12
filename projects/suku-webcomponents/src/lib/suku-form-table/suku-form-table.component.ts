@@ -9,6 +9,7 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 export class SukuFormTableComponent implements OnInit {
   j;
   _items = [];
+  _itemsKey;
   editable = [];
   @Input('title-one-id') titleOneId;
   @Input('title-one-size') titleOneSize;
@@ -21,6 +22,15 @@ export class SukuFormTableComponent implements OnInit {
   @Input('header-weight') headerWeight;
   @Input('status-bg-style') colorPallete = ['#a3ded8', '#f8dbb4', '#c7c3fa', 'gray'];
   @Input('status') status = ['completed', 'not-completed', 'pending', 'others'];
+  @Input()
+  set facilityType(val) {
+    if (val != 'Producer') {
+      for (let i = 0; i < this._items.length; i++) {
+        this.editable[this.defaultCount + i] = false;
+      }
+    }
+  }
+  @Input() enableEdit = false;
   @Input() typeKey;
   @Input() defaultCount = 2;
   @Input()
@@ -33,6 +43,9 @@ export class SukuFormTableComponent implements OnInit {
       this.addTable(this.defaultCount, val.length);
     } else {
       this._items = val;
+    }
+    if (this._items[0]) {
+      this._itemsKey = Object.keys(this._items[0]);
     }
   }
   @Input() selectionKey;
