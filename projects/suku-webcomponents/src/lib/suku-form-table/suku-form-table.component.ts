@@ -164,6 +164,14 @@ export class SukuFormTableComponent implements OnInit {
     }
   }
 
+  patchValue(selection, defaultValue, index) {
+    console.log('selection, defaultValue', selection, defaultValue, index);
+    if (selection) {
+      this._items[index][this.patchKey] = defaultValue;
+    } else {
+      this._items[index][this.patchKey] = this._null;
+    }
+  }
 
   sendData() {
     const data = this._items;

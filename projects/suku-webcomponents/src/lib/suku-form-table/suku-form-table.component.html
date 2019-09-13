@@ -64,8 +64,9 @@
 
             <!-- checkbox -->
             <span class="align-checkbox" *ngIf="(typeKey[list]=='Checkbox')">
-              <mat-checkbox color="primary" (change)="sendData()" [disabled]="!editable[j] && (list != selectionKey)"
-                [(ngModel)]="item[list]">
+              <mat-checkbox color="primary"
+                (change)="sendData();patchValue(item[selectionKey], item[highlighterKey], j)"
+                [disabled]="!editable[j] && (list != selectionKey)" [(ngModel)]="item[list]">
               </mat-checkbox>
             </span>
 
@@ -90,12 +91,13 @@
 
             <!-- input -patchKey -->
             <input type="{{(typeKey[list]=='Number')?'number':'text'}}" id="asset{{j}}{{selectionKey}}"
-              (keyup)="sendData()" [ngClass]="{'disabled': item[selectionKey]}" [disabled]="item[selectionKey]"
-              class="form-control sample" [(ngModel)]="item[selectionKey] ?
-             ( item[highlighterKey] && item[patchKey]=item[highlighterKey]) 
-             : item[patchKey] = _null" *ngIf="(list == patchKey) &&
-              (list !=
-              'action') && patchKey" />
+              (keyup)="sendData();" [ngClass]="{'disabled':
+              item[selectionKey]}" [disabled]="item[selectionKey]" class="form-control sample"
+              [(ngModel)]="item[patchKey]" *ngIf="(list == patchKey) && (list != 'action')
+              && patchKey" />
+            <!-- item[selectionKey] ?
+              ( item[highlighterKey] && item[patchKey]=item[highlighterKey])
+              : item[patchKey] = _null -->
 
             <span class="col p-0 pl-2" (click)="edit(j, item)" *ngIf="list == 'action' && !editable[j]">
               <span class="secondary-btn controlCustomClass" id="edit{{j}}" [style.font-size.rem]="controlsSize"
