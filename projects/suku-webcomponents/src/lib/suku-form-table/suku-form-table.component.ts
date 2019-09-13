@@ -60,7 +60,7 @@ export class SukuFormTableComponent implements OnInit {
   @Output() save = new EventEmitter();
   @Output() remove = new EventEmitter();
   @Output() submitData = new EventEmitter();
-
+  _null = null;
 
   constructor() {
   }
@@ -167,7 +167,7 @@ export class SukuFormTableComponent implements OnInit {
 
   sendData() {
     const data = this._items;
-    console.log('sendData',data);
+    console.log('sendData', data);
     this.submitData.emit(data);
   }
 
