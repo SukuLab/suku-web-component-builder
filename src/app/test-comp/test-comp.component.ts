@@ -21,7 +21,7 @@ export class TestCompComponent implements OnInit {
     name: 'String',
     'Physical Challenged': 'Checkbox',
     dob: 'Date',
-    degree: 'String',
+    degree: 'Number',
     pet: ['cat', 'dog']
   };
   tabelData1 = [
@@ -87,28 +87,32 @@ export class TestCompComponent implements OnInit {
       Sku: '123465',
       brand: 'WONG PREMIUM',
       'product name': 'TBONE',
-      '# of Boxes': '45'
+      '# of Boxes': '45',
+      temp: '12'
     },
     {
       selection: true,
       Sku: '123465',
       brand: 'WONG PREMIUM',
       'product name': 'TBONE',
-      '# of Boxes': '5'
+      '# of Boxes': '5',
+      temp: '21'
+    },
+    {
+      selection: false,
+      Sku: '123465',
+      brand: 'WONG PREMIUM -',
+      'product name': 'TBONE',
+      '# of Boxes': '',
+      temp: '21'
     },
     {
       selection: false,
       Sku: '123465',
       brand: 'WONG PREMIUM',
       'product name': 'TBONE',
-      '# of Boxes': ''
-    },
-    {
-      selection: false,
-      Sku: '123465',
-      brand: 'WONG PREMIUM',
-      'product name': 'TBONE',
-      '# of Boxes': ''
+      '# of Boxes': '2',
+      temp: '21'
     }
   ];
   tableKey3 = {
@@ -118,6 +122,7 @@ export class TestCompComponent implements OnInit {
     '# of Boxes': 'Number',
     'Received All Boxes': 'Checkbox',
     '# of Boxes Received': 'Number',
+    temp: '',
   };
   tabelData3 = [
     {

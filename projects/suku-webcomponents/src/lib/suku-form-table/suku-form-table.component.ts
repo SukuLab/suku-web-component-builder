@@ -54,7 +54,7 @@ export class SukuFormTableComponent implements OnInit {
   @Input() enableControls = true;
   @Input() enableSelectAll = false;
   @Input() selectAll;
-  @Input() keyData;
+  @Input() keyData = [];
   @Input() controlsSize;
   @Input() controlCustomClass;
   @Output() save = new EventEmitter();
@@ -114,10 +114,14 @@ export class SukuFormTableComponent implements OnInit {
       { key: '# of Boxes' },
       { key: 'test' }
     ];
-    const result = data.some(val => {
-      return val.key == list;
-    });
-    return result;
+    if (this.keyData.length > 0) {
+      const result = this.keyData.some(val => {
+        return val.key == list;
+      });
+      return result;
+    } else {
+      return false;
+    }
   }
 
   selectAllAction() {
@@ -151,9 +155,10 @@ export class SukuFormTableComponent implements OnInit {
 
   chkHiddenKey(key) {
     if (this.hiddenKey.length > 0) {
-      this.hiddenKey.some(val => {
+      const result = this.hiddenKey.some(val => {
         return val == key;
       });
+      return result;
     } else {
       return false;
     }
@@ -162,6 +167,7 @@ export class SukuFormTableComponent implements OnInit {
 
   sendData() {
     const data = this._items;
+    console.log('sendData',data);
     this.submitData.emit(data);
   }
 

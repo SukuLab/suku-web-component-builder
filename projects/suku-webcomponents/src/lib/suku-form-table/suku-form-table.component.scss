@@ -83,8 +83,9 @@ button:focus {
 }
 
 .align-checkbox {
-  display: flex;
-  padding-top: 5%;
+  font-size:18px;
+  // display: flex;
+  // padding-top: 5%;
 }
 
 .c-pointer {
@@ -132,3 +133,9 @@ option {
 .border-enable {
   border: 1px solid #92929240;
 }
+
+.hidden{
+  display: none;
+}
+
+table { width: 100%; }
