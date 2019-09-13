@@ -60,6 +60,7 @@ export class SukuFormTableComponent implements OnInit {
   @Output() save = new EventEmitter();
   @Output() remove = new EventEmitter();
   @Output() submitData = new EventEmitter();
+
   _null = null;
 
   constructor() {
@@ -128,12 +129,15 @@ export class SukuFormTableComponent implements OnInit {
     const selectAll = this.selectAll;
     if (selectAll) {
       this._items.forEach(element => {
-        Object.keys(element).forEach((key) => {
+        Object.keys(element).forEach((key, index) => {
           if (key == 'Received All Boxes') {
-            console.log('element', element[key]);
+            console.log('element', element[key], index);
             element[key] = true;
+            element[this.patchKey] = element[this.highlighterKey];
+            this._items[index][this.patchKey] = this._items[index][this.highlighterKey];
           }
         });
+
         console.log('data', element);
       });
     } else {
