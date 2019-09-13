@@ -23,25 +23,23 @@ export class SukuFormTableComponent implements OnInit {
   @Input('status-bg-style') colorPallete = ['#a3ded8', '#f8dbb4', '#c7c3fa', 'gray'];
   @Input('status') status = ['completed', 'not-completed', 'pending', 'others'];
   @Input()
-  set facilityType(val) {
-    if (val != 'Producer') {
-      for (let i = 0; i < this._items.length; i++) {
-        this.editable[this.defaultCount + i] = false;
+  set enableEditIndex(val) {
+    if (val) {
+      for (let i = 0; i < +val; i++) {
+        this.editable[i] = true;
       }
     }
   }
-  @Input() enableEdit = false;
   @Input() typeKey;
   @Input() defaultCount = 2;
   @Input()
   get items() {
+    console.log('items ------------');
     return this._items;
   }
   set items(val) {
-    console.log('val', val.length);
-    if (val.length == 0) {
-      this.addTable(this.defaultCount, val.length);
-    } else {
+    if (val) {
+      console.log('_items', val);
       this._items = val;
     }
     if (this._items[0]) {
@@ -51,6 +49,7 @@ export class SukuFormTableComponent implements OnInit {
   @Input() selectionKey;
   @Input() highlighterKey;
   @Input() patchKey;
+  @Input() hiddenKey = [];
   @Input() enableHighlighter = false;
   @Input() enableControls = true;
   @Input() enableSelectAll = false;
@@ -61,6 +60,7 @@ export class SukuFormTableComponent implements OnInit {
   @Output() save = new EventEmitter();
   @Output() remove = new EventEmitter();
   @Output() submitData = new EventEmitter();
+
 
   constructor() {
   }
@@ -147,8 +147,18 @@ export class SukuFormTableComponent implements OnInit {
         console.log('data', element);
       });
     }
-
   }
+
+  chkHiddenKey(key) {
+    if (this.hiddenKey.length > 0) {
+      this.hiddenKey.some(val => {
+        return val == key;
+      });
+    } else {
+      return false;
+    }
+  }
+
 
   sendData() {
     const data = this._items;

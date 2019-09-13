@@ -16,7 +16,7 @@ export class TestCompComponent implements OnInit {
     Breed: ['Aungus', 'Charolais', 'Hereford', 'Simmental'],
   };
   tabelDataA1 = [];
-
+  hiddenKey = ['brand'];
   tableKey1 = {
     name: 'String',
     'Physical Challenged': 'Checkbox',
@@ -26,29 +26,53 @@ export class TestCompComponent implements OnInit {
   };
   tabelData1 = [
     {
-      name: 'jean',
-      'Physical Challenged': true,
-      dob: '2014-11-09',
-      degree: '',
-      pet: 'dog',
-      action: ''
-    },
-    {
-      name: 'Roy',
-      'Physical Challenged': true,
-      dob: '2019-12-09',
-      degree: '',
-      pet: 'cat',
-      action: ''
-    },
-    {
-      name: 'Bean',
+      name: '',
       'Physical Challenged': false,
-      dob: '2014-12-29',
+      dob: '',
       degree: '',
-      pet: 'dog',
+      pet: '',
+      action: ''
+    },
+    {
+      name: '',
+      'Physical Challenged': false,
+      dob: '',
+      degree: '',
+      pet: '',
+      action: ''
+    },
+    {
+      name: '',
+      'Physical Challenged': false,
+      dob: '',
+      degree: '',
+      pet: '',
+      action: ''
+    },
+    {
+      name: '',
+      'Physical Challenged': false,
+      dob: '',
+      degree: '',
+      pet: '',
       action: ''
     }
+    // {
+    //   name: 'Roy',
+    //   'Physical Challenged': true,
+    //   dob: '2019-12-09',
+    //   degree: '',
+    //   pet: 'cat',
+    //   action: ''
+    // },
+    // {
+    //   name: 'Bean',
+    //   'Physical Challenged': false,
+    //   dob: '2014-12-29',
+    //   degree: '',
+    //   pet: 'dog',
+    //   action: ''
+    // }
   ];
   tableKey2 = {
     selection: 'Checkbox',
@@ -723,30 +747,31 @@ export class TestCompComponent implements OnInit {
     });
     (<FormArray>this.form.get('owner')).push(this.control());
     this.value = 'Beef (Rolled)-0515';
-    this.sampleAssetsData.forEach(val => {
-      const template = {
-        selection: false,
-        Sku: val.skuku,
-        brand: val.brand.name,
-        'product name': val.name
-      };
-      this.sampleData.push(template);
-
-      Object.keys(val.version[0]).forEach(value => {
-        console.log('val-- test', value);
-        const isPresent = this.highlightnerArray.some(ele => {
-          return ele.key == value;
+    setTimeout(() => {
+      this.sampleAssetsData.forEach(val => {
+        const template = {
+          selection: false,
+          Sku: val.skuku,
+          brand: val.brand.name,
+          'product name': val.name
+        };
+        this.sampleData.push(template);
+        Object.keys(val.version[0]).forEach(value => {
+          console.log('val-- test', value);
+          const isPresent = this.highlightnerArray.some(ele => {
+            return ele.key == value;
+          });
+          console.log('isPresent', isPresent);
+          if (!isPresent) {
+            this.highlightnerArray.push({ 'key': value });
+          }
+          this.sampleData.map(vals => {
+            vals[value] = '';
+          });
         });
-        console.log('isPresent', isPresent);
-        if (!isPresent) {
-          this.highlightnerArray.push({ 'key': value });
-        }
-        this.sampleData.map(vals => {
-          vals[value] = '';
-        });
+        console.log('val', val);
       });
-      console.log('val', val);
-    });
+    }, 2000)
     /* logistics */
     this.sampleAssetsDataForLogi.forEach(val => {
       const template = {
@@ -809,8 +834,8 @@ export class TestCompComponent implements OnInit {
   action(e, val) {
     console.log(e, val);
   }
-  something(e){
-    console.log("thi sis something:",e);
+  something(e) {
+    console.log("thi sis something:", e);
   }
 
   removeDuplicates(arr) {

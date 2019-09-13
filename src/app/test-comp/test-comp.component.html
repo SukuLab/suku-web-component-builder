@@ -79,7 +79,7 @@
   </div>
 
   <div class="col">
-    <suku-nav-bar [hide-bell-icon]='false' (action) ='something($event)'></suku-nav-bar>
+    <suku-nav-bar [hide-bell-icon]='false' (action)='something($event)'></suku-nav-bar>
   </div>
 
   <div class="col">
@@ -92,17 +92,17 @@
 
 
   <div class="col-12 pb-5">
-    <suku-claims-widget ></suku-claims-widget>
+    <suku-claims-widget></suku-claims-widget>
   </div>
   <br />
   <br />
   <br />
-  <div class="col-12 pb-5">
+  <!-- <div class="col-12 pb-5">
     <suku-form-table [typeKey]="tableKeyA1" [items]="tabelDataA1" (submitData)="getAssetArray($event)">
     </suku-form-table>
-  </div>
+  </div> -->
   <div class="col-12 pb-5">
-    <suku-form-table [typeKey]="tableKey1" [items]="tabelData1"></suku-form-table>
+    <suku-form-table [typeKey]="tableKey1" [enableEditIndex]="3" [items]="tabelData1"></suku-form-table>
   </div>
   <div class="col-12 pb-5">
     <suku-form-table [typeKey]="tableKey2" [enableControls]="false" [items]="sampleData" [enableHighlighter]="true"
@@ -111,7 +111,7 @@
   <div class="col-12 pb-5">
     <suku-form-table [typeKey]="tableKey3" [enableControls]="false" [enableSelectAll]="true"
       [items]="sampleDataForLogistics" [selectionKey]="'Received All Boxes'" [highlighterKey]="'# of Boxes'"
-      [keyData]="highlightnerArray" [patchKey]="'# of Boxes Received'">
+      [keyData]="highlightnerArray" [patchKey]="'# of Boxes Received'" [hiddenKey]="hiddenKey">
     </suku-form-table>
   </div>
   <div class="col-12 pb-5">
