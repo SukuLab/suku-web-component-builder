@@ -1,5 +1,5 @@
 
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'suku-form-table',
@@ -9,6 +9,7 @@ import { Component, OnInit, Input } from '@angular/core';
 export class SukuFormTableComponent implements OnInit {
   j;
   _items = [];
+  _itemsKey;
   editable = [];
   @Input('title-one-id') titleOneId;
   @Input('title-one-size') titleOneSize;
@@ -21,30 +22,46 @@ export class SukuFormTableComponent implements OnInit {
   @Input('header-weight') headerWeight;
   @Input('status-bg-style') colorPallete = ['#a3ded8', '#f8dbb4', '#c7c3fa', 'gray'];
   @Input('status') status = ['completed', 'not-completed', 'pending', 'others'];
+  @Input()
+  set enableEditIndex(val) {
+    if (val) {
+      for (let i = 0; i < +val; i++) {
+        this.editable[i] = true;
+      }
+    }
+  }
   @Input() typeKey;
   @Input() defaultCount = 2;
   @Input()
   get items() {
+    console.log('items ------------');
     return this._items;
   }
   set items(val) {
-    console.log('val', val.length);
-    if (val.length == 0) {
-      this.addTable(this.defaultCount, val.length);
-    } else {
+    if (val) {
+      console.log('_items', val);
       this._items = val;
+    }
+    if (this._items[0]) {
+      this._itemsKey = Object.keys(this._items[0]);
     }
   }
   @Input() selectionKey;
   @Input() highlighterKey;
   @Input() patchKey;
+  @Input() hiddenKey = [];
   @Input() enableHighlighter = false;
   @Input() enableControls = true;
   @Input() enableSelectAll = false;
   @Input() selectAll;
-  @Input() keyData;
+  @Input() keyData = [];
   @Input() controlsSize;
   @Input() controlCustomClass;
+  @Output() save = new EventEmitter();
+  @Output() remove = new EventEmitter();
+  @Output() submitData = new EventEmitter();
+
+  _null = null;
 
   constructor() {
   }
@@ -78,17 +95,19 @@ export class SukuFormTableComponent implements OnInit {
     console.log('_items', this._items);
   }
 
-  edit(i) {
+  edit(i, item) {
     console.log(i);
     if (this.editable[i]) {
       this.editable[i] = false;
+      this.save.emit(item);
     } else {
       this.editable[i] = true;
     }
   }
 
-  remove(i) {
+  removedata(i, item) {
     this._items.splice(i, 1);
+    this.remove.emit(item);
   }
 
   checkValid(list) {
@@ -96,22 +115,29 @@ export class SukuFormTableComponent implements OnInit {
       { key: '# of Boxes' },
       { key: 'test' }
     ];
-    const result = data.some(val => {
-      return val.key == list;
-    });
-    return result;
+    if (this.keyData.length > 0) {
+      const result = this.keyData.some(val => {
+        return val.key == list;
+      });
+      return result;
+    } else {
+      return false;
+    }
   }
 
   selectAllAction() {
     const selectAll = this.selectAll;
     if (selectAll) {
       this._items.forEach(element => {
-        Object.keys(element).forEach((key) => {
+        Object.keys(element).forEach((key, index) => {
           if (key == 'Received All Boxes') {
-            console.log('element', element[key]);
+            console.log('element', element[key], index);
             element[key] = true;
+            element[this.patchKey] = element[this.highlighterKey];
+            this._items[index][this.patchKey] = this._items[index][this.highlighterKey];
           }
         });
+
         console.log('data', element);
       });
     } else {
@@ -129,9 +155,33 @@ export class SukuFormTableComponent implements OnInit {
         console.log('data', element);
       });
     }
-
   }
 
+  chkHiddenKey(key) {
+    if (this.hiddenKey.length > 0) {
+      const result = this.hiddenKey.some(val => {
+        return val == key;
+      });
+      return result;
+    } else {
+      return false;
+    }
+  }
+
+  patchValue(selection, defaultValue, index) {
+    console.log('selection, defaultValue', selection, defaultValue, index);
+    if (selection) {
+      this._items[index][this.patchKey] = defaultValue;
+    } else {
+      this._items[index][this.patchKey] = this._null;
+    }
+  }
+
+  sendData() {
+    const data = this._items;
+    console.log('sendData', data);
+    this.submitData.emit(data);
+  }
 
 }
 
