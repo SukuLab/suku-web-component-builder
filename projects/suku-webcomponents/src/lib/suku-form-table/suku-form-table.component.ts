@@ -137,7 +137,6 @@ export class SukuFormTableComponent implements OnInit {
             this._items[mainIndex][this.patchKey] = this._items[mainIndex][this.highlighterKey];
           }
         });
-
         console.log('data', element);
       });
     } else {
