@@ -735,6 +735,34 @@ export class TestCompComponent implements OnInit {
 
   sampleData = [];
   sampleDataForLogistics = [];
+
+
+  tableKeyForLogistics = {
+    Sku: 'Number',
+    brand: 'String',
+    'product name': 'String',
+    '# of Boxes': 'Number',
+    'Received All Boxes': 'Checkbox',
+    '# of Boxes Received': 'Number',
+  };
+  dataForDistributor = [
+    {
+      'Sku': '744518',
+      'brand': 'Wong Premium',
+      'product name': 'Cowboy Steak',
+      '# of Boxes': '12',
+      'Received All Boxes': false,
+      '# of Boxes Received': ''
+    },
+    {
+      'Sku': '744518',
+      'brand': 'Wong Premium',
+      'product name': 'Cowboy Steak',
+      '# of Boxes': '1',
+      'Received All Boxes': false,
+      '# of Boxes Received': ''
+    }
+  ]
   constructor(private fb: FormBuilder) { }
 
   ngOnInit() {
@@ -840,7 +868,7 @@ export class TestCompComponent implements OnInit {
     console.log(e, val);
   }
   something(e) {
-    console.log("thi sis something:", e);
+    console.log('thi sis something:', e);
   }
 
   removeDuplicates(arr) {

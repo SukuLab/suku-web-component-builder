@@ -430,7 +430,7 @@ export class AppComponent implements OnInit {
 			this.messageArray.push(messageObj);
 		});
 		this.currentdate();
-		this.open();
+		// this.open();
 	}
 	sendMessage(e) {
 		console.log(e);
@@ -466,7 +466,7 @@ export class AppComponent implements OnInit {
 			'description': 'Are you sure you would like to mark this listing/product as shipped?',
 			'loader': 'enable',
 			'buttonText': 'Action',
-			'descriptionOne' : 'Note: Once the Listing/Product is marked as shipped, you will not be able to edit the tracking number or comments.',
+			'descriptionOne': 'Note: Once the Listing/Product is marked as shipped, you will not be able to edit the tracking number or comments.',
 			'openDialog': true
 		};
 		// this.sukuLoaderService.openLoader(data);
@@ -601,7 +601,7 @@ export class AppComponent implements OnInit {
 			lotid: "785", myStatus: 'pending', stepsCompleted: "1/6", status: 'not-completed'
 		}
 	]
-	call(s){
-		console.log("dkdjs",s);
+	call(s) {
+		console.log("dkdjs", s);
 	}
 }

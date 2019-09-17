@@ -42,14 +42,17 @@
            ||
            ((list == patchKey) ?
            ((item[patchKey]) ? '#a3ded8' :( !(item[selectionKey]) ? '#f8dbb4' : '#d3d9dc')) : '') -->
+          <!-- ((list == patchKey) ?
+            ((item[patchKey]) ? '#a3ded8' :( !(item[selectionKey]) ? '#f8dbb4' : '#d3d9dc')) : '') -->
           <td [ngClass]="{'border-enable': checkValid(list), 'text-center': typeKey[list]=='Checkbox' }"
             *ngFor="let list of item | keys; let i=index" [style.background-color]="(checkValid(list) ?
             ((item[selectionKey] && item[highlighterKey] && enableHighlighter) ? '#a3ded8':( !(item[selectionKey] &&
             enableHighlighter) ?
             '#d3d9dc' : '#f8dbb4')) : '')
             ||
-            ((list == patchKey) ?
-            ((item[patchKey]) ? '#a3ded8' :( !(item[selectionKey]) ? '#f8dbb4' : '#d3d9dc')) : '')">
+            ((item[selectionKey] && (list == patchKey)) ? '#d3d9dc' : 
+            ( ((list == patchKey) &&(item[patchKey])) ? '#a3ded8':
+             ((list == patchKey) ? '#f8dbb4' :'')))">
             <span
               *ngIf="!editable[j] && (list != 'action') && (typeKey[list]!='Checkbox') && !checkValid(list) && (list != patchKey)">
               {{item[list]}}
@@ -95,9 +98,6 @@
               item[selectionKey]}" [disabled]="item[selectionKey]" class="form-control sample"
               [(ngModel)]="item[patchKey]" *ngIf="(list == patchKey) && (list != 'action')
               && patchKey" />
-            <!-- item[selectionKey] ?
-              ( item[highlighterKey] && item[patchKey]=item[highlighterKey])
-              : item[patchKey] = _null -->
 
             <span class="col p-0 pl-2" (click)="edit(j, item)" *ngIf="list == 'action' && !editable[j]">
               <span class="secondary-btn controlCustomClass" id="edit{{j}}" [style.font-size.rem]="controlsSize"
