@@ -1,5 +1,6 @@
-import { Component, OnInit, Input, Output, Inject } from '@angular/core';
-import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material';
+import { Component, OnInit, Output, Input, EventEmitter, Inject } from '@angular/core';
+import { FormGroup, FormControl, Validators } from '@angular/forms';
+import { MatDialogRef, MAT_DIALOG_DATA, MatSnackBar } from '@angular/material';
 
 @Component({
   selector: 'suku-confirmation-status-modal',
@@ -8,6 +9,8 @@ import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material';
 })
 export class SukuConfirmationStatusModalComponent implements OnInit {
 
+  controlOneValue;
+  controlTwoValue;
   @Input() dialogData = {
     'imgSrc': '',
     'imgId': '',
@@ -28,9 +31,23 @@ export class SukuConfirmationStatusModalComponent implements OnInit {
     cancelBtnText: 'Cancel',
     submitBtnTxt: 'Confirm',
     cancelBtnCustomClass: '',
-    submitBtnCustomClass: ''
+    submitBtnCustomClass: '',
+    controlOne: 'controlOne',
+    controlTwo: 'controlTwo',
+    controlTwoRequired: '',
+    controlOneId: 'contentOne',
+    controlTwoId: 'ContentTwo',
+    controlOnePlaceholder: 'Tracking Number (Optional)',
+    controlTwoPlaceholder: 'Comments*',
+    controlTwoRquiredErrorMsg : 'Cannot be blank.'
+
   };
+  controlOne = new FormControl('');
+  controlTwo = new FormControl('');
+  _subscriptionTwo;
+  _subscriptionOne;
   constructor(public dialogCustomRef: MatDialogRef<SukuConfirmationStatusModalComponent>,
+    private snackBar: MatSnackBar,
     @Inject(MAT_DIALOG_DATA) public data: any) { }
 
   ngOnInit() {
@@ -43,15 +60,50 @@ export class SukuConfirmationStatusModalComponent implements OnInit {
               this.dialogData[key] = val[key];
             }
           }
+
         }
       });
     }
+    if (this.dialogData.controlTwoRequired) {
+      this.controlTwo.setValidators(Validators.required);
+      this.controlTwo.updateValueAndValidity();
+    }
+    this._subscriptionOne = this.controlOne.valueChanges.subscribe(value => {
+      if (value) {
+        this.controlOneValue = value;
+      } else {
+        // this.usernameControl.
+      }
+    })
+    this._subscriptionTwo = this.controlTwo.valueChanges.subscribe(value => {
+      if (value) {
+        this.controlTwoValue = value;
+      } else {
+        // this.usernameControl.
+      }
+    })
   }
 
   close() {
     this.dialogCustomRef.close(true);
   }
-  submit(){
-
+  submit() {
+    console.log("this is called :",this.controlTwo.invalid);
+    if (this.controlTwo.invalid) {
+      this.snackBar.open('Please fill all the mandatory fields.', 'close', {
+        verticalPosition: 'top',
+        horizontalPosition: 'right',
+        duration: 5000
+      });
+    } else {
+      let reqObj = {
+        Comments: {
+          trackingId: this.controlOneValue,
+          comments: this.controlTwoValue,
+        }
+      }
+      console.log("thi sis sls :",reqObj);
+      this.dialogCustomRef.close(reqObj);
+    }
   }
 }

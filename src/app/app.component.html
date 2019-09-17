@@ -52,9 +52,9 @@
         </div>
       </div>
     </div> -->
-    <suku-display-table [table-header]='header' (action)="call($event)" [table-data]="data">
+    <suku-display-table display-pagination = 'true' table-items-count = '10' [table-header]='header' (action)="call($event)" [table-data]="data">
     </suku-display-table>
-    <suku-user-details widgetTitleSize = "16" widgetTitleWeight="600" widgetTitle='User details' fullName='{{facilityAddress?.registeredName}}'
+    <suku-user-details  widgetTitleSize = "16" widgetTitleWeight="600" widgetTitle='User details' fullName='{{facilityAddress?.registeredName}}'
     email='{{facilityAddress?.email}}'  phoneNumber='{{facilityAddress?.phone}}' 
     fullAddress='{{facilityAddress?.address}}'></suku-user-details>
   </div>
@@ -65,3 +65,5 @@
 
   <app-test-comp></app-test-comp>
 </form>
+<!--  @Input('display-pagination') showPagination = false;
+  @Input('table-items-count') itemsPerPageCount ; -->
