@@ -54,9 +54,14 @@
     </div> -->
     <suku-display-table display-pagination = 'true' table-items-count = '10' [table-header]='header' (action)="call($event)" [table-data]="data">
     </suku-display-table>
+    <suku-user-input [enable-user-icon]="false" (onChangeAction)="getLotId($event)"
+    placeholder="Enter Lot #">
+  </suku-user-input>
     <suku-user-details  widgetTitleSize = "16" widgetTitleWeight="600" widgetTitle='User details' fullName='{{facilityAddress?.registeredName}}'
     email='{{facilityAddress?.email}}'  phoneNumber='{{facilityAddress?.phone}}' 
     fullAddress='{{facilityAddress?.address}}'></suku-user-details>
+    <!-- <suku-user-input> </suku-user-input> -->
+   
   </div>
   <div>
       <!-- <suku-confirmation-status-modal></suku-confirmation-status-modal> -->

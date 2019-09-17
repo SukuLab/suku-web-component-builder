@@ -58,6 +58,7 @@ export class SukuUserInputComponent implements OnInit {
     }
   }
   @Output() action = new EventEmitter();
+  @Output() onChangeAction = new EventEmitter();
   email = new FormControl('', [Validators.required, Validators.email]);
 
   matcher = new MyErrorStateMatcher();
@@ -84,4 +85,3 @@ export class SukuUserInputComponent implements OnInit {
     this._subscription.unsubscribe();
   }
 }
-
