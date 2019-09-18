@@ -8,6 +8,7 @@ import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material';
 })
 export class SukuConfirmationComponent implements OnInit {
   @Input() dialogData = {
+    'showCloseButton': false,
     'icon': 'fa fa-question',
     'iconCustomClass': '',
     'iconId': 'questionIcon',
@@ -21,11 +22,13 @@ export class SukuConfirmationComponent implements OnInit {
     'titleThreeId': '',
     'titleThreeCustomClass': '',
     'titleBoxCustomClass': '',
-    'buttonLableOne': 'Cancel',
+    'buttonLableOne': 'No',
     'buttonLableOneId': '',
-    'buttonLableTwo': 'Submit',
+    'buttonLableThreeId': 'buttonLableThreeId',
+    'buttonLableTwo': 'Yes',
     'buttonLableTwoId': '',
-    'buttonCustomClass': ''
+    'buttonCustomClass': '',
+    'buttonLableThree': 'Cancel'
   };
   constructor(public dialogCustomRef: MatDialogRef<SukuConfirmationComponent>,
     @Inject(MAT_DIALOG_DATA) public data: any) { }
@@ -36,6 +39,10 @@ export class SukuConfirmationComponent implements OnInit {
         this.dialogData[key] = this.data[key];
       }
     }
+  }
+
+  closeDialog() {
+    this.dialogCustomRef.close('cancel');
   }
 
   cancel() {

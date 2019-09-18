@@ -99,7 +99,7 @@
               [(ngModel)]="item[patchKey]" *ngIf="(list == patchKey) && (list != 'action')
               && patchKey" />
 
-            <span class="col p-0 pl-2" (click)="edit(j, item)" *ngIf="list == 'action' && !editable[j]">
+            <span class="col p-0 pl-2" (click)="edit(j, item);sendData()" *ngIf="list == 'action' && !editable[j]">
               <span class="secondary-btn controlCustomClass" id="edit{{j}}" [style.font-size.rem]="controlsSize"
                 [ngClass]="{'btn-edit' : editable[j]}">
                 edit
@@ -107,13 +107,13 @@
             </span>
             <span class="col p-0 pl-2" *ngIf="list == 'action' && editable[j]">
               <span class="secondary-btn controlCustomClass" id="edit{{j}}" [style.font-size.rem]="controlsSize"
-                (click)="edit(j, item)" [ngClass]="{'btn-edit' : editable[j]}">
+                (click)="edit(j, item);sendData()" [ngClass]="{'btn-edit' : editable[j]}">
                 save
               </span>
             </span>
             <span class="col c-pointer pl-4" *ngIf="list == 'action'">
               <span class="secondary-btn controlCustomClass" id="edit{{j}}" [style.font-size.rem]="controlsSize"
-                (click)="removedata(j, item)" [ngClass]="{'btn-edit' : editable[j]}">
+                (click)="removedata(j, item);sendData()" [ngClass]="{'btn-edit' : editable[j]}">
                 remove
               </span>
             </span>

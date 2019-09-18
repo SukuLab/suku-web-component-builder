@@ -47,7 +47,10 @@ export class SukuModalService {
         buttonLableOneId: data ? data.buttonLableOneId : '',
         buttonLableTwo: data ? data.buttonLableTwo : '',
         buttonLableTwoId: data ? data.buttonLableTwoId : '',
-        buttonCustomClass: data ? data.buttonCustomClass : ''
+        buttonCustomClass: data ? data.buttonCustomClass : '',
+        showCloseButton: data ? data.showCloseButton: '',
+        buttonLableThreeId: data ? data.buttonLableThreeId: '',
+        buttonLableThree: data ? data.buttonLableThree : ''
       }
     });
     dialogRef.afterClosed().subscribe((result) => {
