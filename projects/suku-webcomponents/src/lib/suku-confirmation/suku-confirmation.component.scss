@@ -79,3 +79,13 @@
 .w-70 {
   min-width: 70%;
 }
+
+.sticky {
+  z-index: 1;
+  cursor: pointer !important;
+  position: absolute;
+  right: 10px !important;
+  top: 5px !important;
+  color: white;
+  font-size: 20px;
+}
