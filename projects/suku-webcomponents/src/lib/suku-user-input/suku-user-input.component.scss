@@ -15,8 +15,13 @@
 /* Sets the underline to red if dirty and invalid */
 .mat-form-field.ng-dirty.ng-invalid .mat-form-field-underline {
     background-color: red;
-  }
-  /* Sets the label to red if dirty and invalid */
-  .mat-form-field.ng-dirty.ng-invalid .mat-form-field-label {
+}
+
+/* Sets the label to red if dirty and invalid */
+.mat-form-field.ng-dirty.ng-invalid .mat-form-field-label {
     color: red;
-  }
+}
+
+.mat-form-field-subscript-wrapper {
+    font-size: 90% !important;
+}

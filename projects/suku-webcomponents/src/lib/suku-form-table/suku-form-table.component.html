@@ -12,13 +12,20 @@
     </tr>
   </table>
   <div class="header">
-    <div class="col pt-4 pb-4">
+    <div class="col" [ngClass]="{'pt-3 pb-3': (type == 'Processor'), 'pb-4 pt-4': (type != 'Processor') }">
       <div class="row">
-        <div class="col">
+        <div class="col mt-auto mb-auto">
           <h1 [style.font-size.px]="titleOneSize" class="title mt-auto mb-0 {{titleOneCustomClass}}"
             [style.font-weight]="titleOneWeight" [style.color]="titleOneColor" id="{{titleOneId}}">
             {{titleContent}}
           </h1>
+        </div>
+        <div class="col" id="processor">
+          <span [ngClass]="{'align-checkbox': editable[j] }" *ngIf="type == 'Processor'">
+            <mat-checkbox (change)="sendData();" color="primary" [(ngModel)]="selectAll" (change)="selectAllAction()">
+              <span class="checkbox">Select All</span>
+            </mat-checkbox>
+          </span>
         </div>
       </div>
     </div>
@@ -59,7 +66,7 @@
             </span>
             <!-- input -->
             <span *ngIf="editable[j] && (list != 'action') && ( typeKey[list]=='String' || typeKey[list]=='Number')">
-              <input (keyup)="sendData()" class="form-control" [(ngModel)]="item[list]" [maxLength]="25"
+              <input (keyup)="sendData()" (keyup)="checkSpcialChar($event)"  class="form-control" [(ngModel)]="item[list]" [maxLength]="25"
               type="{{(typeKey[list]=='Number')?'number':'text'}}"
               (change)="validate(item[list],j)"
               *ngIf="editable[j] && (list != 'action') && ( typeKey[list]=='String' || typeKey[list]=='Number')" />

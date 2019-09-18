@@ -1,4 +1,4 @@
-import { Component, Input, Output, EventEmitter  } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
 	selector: 'suku-nav-bar',
@@ -116,10 +116,6 @@ export class SukuNavBarComponent {
 			},
 			{
 				name: 'Logout',
-				subMenu: false
-			},
-			{
-				name: 'Help',
 				subMenu: false
 			}
 		]
