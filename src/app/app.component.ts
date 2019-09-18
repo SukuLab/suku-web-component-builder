@@ -461,16 +461,23 @@ export class AppComponent implements OnInit {
 		console.log('dialog');
 		// 'imgSrc': 'http://34.217.89.204/assets/icons/verified_icon.png',
 		const data = {
-			'icon': 'suku-success-icon',
-			'message': 'confirm shipment status',
-			'description': 'Are you sure you would like to mark this listing/product as shipped?',
-			'loader': 'enable',
-			'buttonText': 'Action',
-			'descriptionOne': 'Note: Once the Listing/Product is marked as shipped, you will not be able to edit the tracking number or comments.',
+			// 'icon': 'suku-success-icon',
+			// 'message': 'confirm shipment status',
+			// 'description': 'Are you sure you would like to mark this listing/product as shipped?',
+			// 'loader': 'enable',
+			// 'buttonText': 'Action',
+			// 'descriptionOne': 'Note: Once the Listing/Product is marked as shipped, you will not be able to edit the tracking number or comments.',
+			showCloseButton: true,
 			'openDialog': true
 		};
 		// this.sukuLoaderService.openLoader(data);
-		this.sukuModalService.openConfirmationStatusModalDialog(data);
+		this.sukuModalService.openConfirmationDialog(data);
+		this.sukuModalService.onDialogClose.subscribe(res => {
+      // this.closePopup();
+      	if(res == 'cancel') {
+      		console.log('works')
+      	}
+    	})
 		// setTimeout(() => {
 		//   data = {
 		//     'imgSrc': 'http://34.217.89.204/assets/icons/verified_icon.png',
