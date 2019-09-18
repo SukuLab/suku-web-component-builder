@@ -65,10 +65,15 @@
               {{item[list]}}
             </span>
             <!-- input -->
-            <input (keyup)="sendData()" (keypress)="checkSpcialChar($event)" class="form-control"
-              [(ngModel)]="item[list]" [maxLength]="25" type="{{(typeKey[list]=='Number')?'number':'text'}}"
-              pattern="[0-9a-zA-Z]+"
-              *ngIf="editable[j] && (list != 'action') && ( typeKey[list]=='String' || typeKey[list]=='Number')" />
+            <span *ngIf="editable[j] && (list != 'action') && ( typeKey[list]=='String' || typeKey[list]=='Number')">
+              <input (keyup)="sendData()" (keypress)="checkSpcialChar($event)" class="form-control"
+                [(ngModel)]="item[list]" [maxLength]="25" type="{{(typeKey[list]=='Number')?'number':'text'}}"
+                (change)="validate(item[list],j)"
+                *ngIf="editable[j] && (list != 'action') && ( typeKey[list]=='String' || typeKey[list]=='Number')" />
+              <p id="id{{j}}" class="errorMessage"
+                *ngIf="(j == errorvalidationIndex) && (item[list] == errorvalidationKey )">value should be greater then
+                0</p>
+            </span>
 
             <input type="date" (keyup)="sendData()" data-date="" data-date-format="mm/dd/yyyy" class="form-control"
               *ngIf="editable[j] && (list != 'action') && typeKey[list]=='Date'" [(ngModel)]="item[list]" />
@@ -95,17 +100,27 @@
                   <input type="{{(typeKey[list]=='Number')?'number':'text'}}" id="asset{{j}}{{dataIndex}}"
                     (keyup)="sendData()" [ngClass]="{'disabled': !item[selectionKey]}" [disabled]="!item[selectionKey]"
                     class="form-control sample" [(ngModel)]="item[data.key]"
+                    (change)="validate(item[data.key],dataIndex)"
                     *ngIf="checkValid(list) && (list != 'action') && highlighterKey" />
                 </span>
+                <p id="{{dataIndex}}" class="errorMessage"
+                  *ngIf="(dataIndex == errorvalidationIndex) && (item[data.key] == errorvalidationKey )">value should be
+                  greater then 0</p>
               </span>
             </span>
 
             <!-- input -patchKey -->
-            <input type="{{(typeKey[list]=='Number')?'number':'text'}}" id="asset{{j}}{{selectionKey}}"
-              (keyup)="sendData();" [ngClass]="{'disabled':
+            <span *ngIf="(list == patchKey) && (list != 'action')
+            && patchKey">
+              <input type="{{(typeKey[list]=='Number')?'number':'text'}}" id="asset{{j}}{{selectionKey}}"
+                (keyup)="sendData();" [ngClass]="{'disabled':
               item[selectionKey]}" [disabled]="item[selectionKey]" class="form-control sample"
-              [(ngModel)]="item[patchKey]" *ngIf="(list == patchKey) && (list != 'action')
-              && patchKey" />
+                [(ngModel)]="item[patchKey]" *ngIf="(list == patchKey) && (list != 'action')
+              && patchKey" (change)="validate(item[patchKey],selectionKey)" />
+              <p id="asset{{j}}{{selectionKey}}" class="errorMessage"
+                *ngIf="(selectionKey == errorvalidationIndex) && (item[patchKey] == errorvalidationKey )">value should
+                be greater then 0</p>
+            </span>
 
             <span class="col p-0 pl-2" (click)="edit(j, item);sendData()" *ngIf="list == 'action' && !editable[j]">
               <span class="secondary-btn controlCustomClass" id="edit{{j}}" [style.font-size.rem]="controlsSize"
