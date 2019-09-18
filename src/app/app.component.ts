@@ -551,9 +551,60 @@ export class AppComponent implements OnInit {
 		{
 			statedate: "Aug-30-2019 ", enddate: "Aug-31-2019",
 			lotid: "785", myStatus: 'pending', stepsCompleted: "1/6", status: 'not-completed'
+		},
+		{
+			statedate: "Aug-30-2019 ", enddate: "Aug-31-2019 ",
+			lotid: "369", myStatus: 'completed', stepsCompleted: "3/6", status: 'in-progress'
+		},
+		{
+			statedate: "Aug-30-2019 ", enddate: "Aug-31-2019 ",
+			lotid: "797", myStatus: 'completed', stepsCompleted: "3/3", status: 'completed'
+		},
+		{
+			statedate: "Aug-30-2019 ", enddate: "Aug-31-2019",
+			lotid: "785", myStatus: 'pending', stepsCompleted: "1/6", status: 'not-completed'
+		},
+		{
+			statedate: "Aug-30-2019 ", enddate: "Aug-31-2019 ",
+			lotid: "369", myStatus: 'completed', stepsCompleted: "3/6", status: 'in-progress'
+		},
+		{
+			statedate: "Aug-30-2019 ", enddate: "Aug-31-2019 ",
+			lotid: "797", myStatus: 'completed', stepsCompleted: "3/3", status: 'completed'
+		},
+		{
+			statedate: "Aug-30-2019 ", enddate: "Aug-31-2019",
+			lotid: "785", myStatus: 'pending', stepsCompleted: "1/6", status: 'not-completed'
+		},
+		{
+			statedate: "Aug-30-2019 ", enddate: "Aug-31-2019 ",
+			lotid: "369", myStatus: 'completed', stepsCompleted: "3/6", status: 'in-progress'
+		},
+		{
+			statedate: "Aug-30-2019 ", enddate: "Aug-31-2019 ",
+			lotid: "797", myStatus: 'completed', stepsCompleted: "3/3", status: 'completed'
+		},
+		{
+			statedate: "Aug-30-2019 ", enddate: "Aug-31-2019",
+			lotid: "785", myStatus: 'pending', stepsCompleted: "1/6", status: 'not-completed'
+		},
+		{
+			statedate: "Aug-30-2019 ", enddate: "Aug-31-2019 ",
+			lotid: "369", myStatus: 'completed', stepsCompleted: "3/6", status: 'in-progress'
+		},
+		{
+			statedate: "Aug-30-2019 ", enddate: "Aug-31-2019 ",
+			lotid: "797", myStatus: 'completed', stepsCompleted: "3/3", status: 'completed'
+		},
+		{
+			statedate: "Aug-30-2019 ", enddate: "Aug-31-2019",
+			lotid: "785", myStatus: 'pending', stepsCompleted: "1/6", status: 'not-completed'
 		}
 	]
 	call(s) {
 		console.log("dkdjs", s);
+	}
+	getLotId(l){
+		console.log("this is l :",l);
 	}
 }

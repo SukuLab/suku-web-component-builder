@@ -9,7 +9,6 @@ import { FormGroup } from '@angular/forms';
 export class SukuDisplayTableComponent implements OnInit {
   @Input('table-header') header;
   @Input('table-header-content') headerContent = 'cjkcsnns sjkcs jkkjs kjkjd kjdfkjdf jkdf';
-  @Input('table-items-count') itemsPerPageCount = '10';
   _tableData: any;
   p;
   tableDataKey;
@@ -41,7 +40,8 @@ export class SukuDisplayTableComponent implements OnInit {
   @Input('status-bg-style') colorPallete = ["#a3ded8", "#f8dbb4", "#c7c3fa", "gray"];
   @Input('status') status = ["completed", "not-completed", "pending", 'others'];
   @Output() action = new EventEmitter();
-
+  @Input('display-pagination') showPagination = false;
+  @Input('table-items-count') itemsPerPageCount ;
   constructor() {
   }
 
