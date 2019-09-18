@@ -31,6 +31,7 @@ export class SukuFormTableComponent implements OnInit {
     }
   }
   @Input() typeKey;
+  @Input() type;
   @Input() defaultCount = 2;
   @Input()
   get items() {
@@ -60,6 +61,7 @@ export class SukuFormTableComponent implements OnInit {
   @Output() save = new EventEmitter();
   @Output() remove = new EventEmitter();
   @Output() submitData = new EventEmitter();
+  @Output() formStatus = new EventEmitter();
 
   _null = null;
 
@@ -111,10 +113,6 @@ export class SukuFormTableComponent implements OnInit {
   }
 
   checkValid(list) {
-    const data = [
-      { key: '# of Boxes' },
-      { key: 'test' }
-    ];
     if (this.keyData.length > 0) {
       const result = this.keyData.some(val => {
         return val.key == list;
@@ -167,8 +165,7 @@ export class SukuFormTableComponent implements OnInit {
     }
   }
 
-  patchValue(selection, defaultValue, index) {
-    console.log('selection, defaultValue', selection, defaultValue, index);
+  async patchValue(selection, defaultValue, index) {
     if (selection) {
       this._items[index][this.patchKey] = defaultValue;
     } else {
@@ -178,7 +175,6 @@ export class SukuFormTableComponent implements OnInit {
 
   sendData() {
     const data = this._items;
-    console.log('sendData', data);
     this.submitData.emit(data);
   }
 

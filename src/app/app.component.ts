@@ -611,4 +611,7 @@ export class AppComponent implements OnInit {
 	call(s) {
 		console.log("dkdjs", s);
 	}
+	getLotId(l){
+		console.log("this is l :",l);
+	}
 }

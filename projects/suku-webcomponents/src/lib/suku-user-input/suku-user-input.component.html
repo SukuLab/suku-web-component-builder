@@ -2,7 +2,7 @@
   <span matPrefix class="mr-2" *ngIf="enableUserIcon">
     <mat-icon class="material-icons">account_circle</mat-icon>
   </span>
-  <input matInput [placeholder]="placeholder" [formControl]="usernameControl" name="usernameControl">
+  <input matInput [placeholder]="placeholder" #t [formControl]="usernameControl" name="usernameControl" (change)="onChangeAction.emit(t.value)">
   <mat-error *ngIf="usernameControl.invalid">{{getErrorMessage()}}</mat-error>
   <mat-error *ngIf="usernameControl.hasError('required')">
     {{errorMessageOne}}
