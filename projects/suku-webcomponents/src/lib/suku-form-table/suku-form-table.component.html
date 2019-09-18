@@ -65,8 +65,9 @@
               {{item[list]}}
             </span>
             <!-- input -->
-            <input (keyup)="sendData()" (keyup)="checkSpcialChar($event)" class="form-control" [(ngModel)]="item[list]"
-              [maxLength]="25" type="{{(typeKey[list]=='Number')?'number':'text'}}" pattern="[0-9a-zA-Z]+"
+            <input (keyup)="sendData()" (keypress)="checkSpcialChar($event)" class="form-control"
+              [(ngModel)]="item[list]" [maxLength]="25" type="{{(typeKey[list]=='Number')?'number':'text'}}"
+              pattern="[0-9a-zA-Z]+"
               *ngIf="editable[j] && (list != 'action') && ( typeKey[list]=='String' || typeKey[list]=='Number')" />
 
             <input type="date" (keyup)="sendData()" data-date="" data-date-format="mm/dd/yyyy" class="form-control"
