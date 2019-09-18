@@ -102,11 +102,14 @@
     </suku-form-table>
   </div> -->
   <div class="col-12 pb-5">
-    <suku-form-table [typeKey]="tableKey1" [enableEditIndex]="3" [items]="tabelData1"></suku-form-table>
+    <suku-form-table [typeKey]="tableKey1" type="Producer" (formStatus)="formStatusEv($event)" [enableEditIndex]="3"
+      [items]="tabelData1">
+    </suku-form-table>
   </div>
   <div class="col-12 pb-5">
-    <suku-form-table [typeKey]="tableKey2" [enableControls]="false" [items]="sampleData" [enableHighlighter]="true"
-      [selectionKey]="'selection'" [highlighterKey]="'# of Boxes'" [keyData]="highlightnerArray"></suku-form-table>
+    <suku-form-table [typeKey]="tableKey2" type="Producer" [enableControls]="false" [items]="sampleData"
+      [enableHighlighter]="true" [selectionKey]="'selection'" [highlighterKey]="'# of Boxes'"
+      [keyData]="highlightnerArray"></suku-form-table>
   </div>
   <div class="col-12 pb-5">
     <suku-form-table [typeKey]="tableKey3" [enableControls]="false" [enableSelectAll]="true"
@@ -123,6 +126,7 @@
   </div>
   <div class="col-12 pb-5">
     <suku-message-widget></suku-message-widget>
+    <suku-default-button>back button</suku-default-button>
   </div>
   <br />
   <br />

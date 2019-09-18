@@ -27,7 +27,7 @@ export class TestCompComponent implements OnInit {
   tabelData1 = [
     {
       name: '',
-      'Physical Challenged': false,
+      'Physical Challenged': '',
       dob: '',
       degree: '',
       pet: '',
@@ -35,7 +35,7 @@ export class TestCompComponent implements OnInit {
     },
     {
       name: '',
-      'Physical Challenged': false,
+      'Physical Challenged': '',
       dob: '',
       degree: '',
       pet: '',
@@ -43,7 +43,7 @@ export class TestCompComponent implements OnInit {
     },
     {
       name: '',
-      'Physical Challenged': false,
+      'Physical Challenged': '',
       dob: '',
       degree: '',
       pet: '',
@@ -51,7 +51,7 @@ export class TestCompComponent implements OnInit {
     },
     {
       name: '',
-      'Physical Challenged': false,
+      'Physical Challenged': '',
       dob: '',
       degree: '',
       pet: '',
@@ -881,9 +881,12 @@ export class TestCompComponent implements OnInit {
     return unique_array;
   }
 
-  getAssetArray(e) {
+  async getAssetArray(e) {
     console.log('e', e);
   }
 
+  formStatusEv(e) {
+    console.log('Producer', e);
+  }
 
 }
