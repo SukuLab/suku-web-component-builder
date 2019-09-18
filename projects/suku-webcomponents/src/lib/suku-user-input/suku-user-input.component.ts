@@ -22,8 +22,8 @@ export class SukuUserInputComponent implements OnInit {
   @Input() placeholder = 'Username';
   @Input('custom-class') customClass;
   @Input('enable-user-icon') enableUserIcon = true;
-  @Input('error-message-one') errorMessageOne = 'cannot be blank.';
-  @Input('error-message-two') errorMessageTwo = '';
+  @Input('error-message-one') errorMessageOne = 'Cannot be blank.';
+  @Input('error-message-two') errorMessageTwo = 'Invalid value.';
   @Input('error-message-three') errorMessageThree = '';
   @Input('error-message-four') errorMessageFour = '';
   @Input('enable-required-validator')
@@ -37,7 +37,7 @@ export class SukuUserInputComponent implements OnInit {
   @Input('enable-pattern-validator')
   set enablePatternValidators(val) {
     if (val) {
-      this.usernameControl.setValidators(Validators.pattern(this.pattern));
+      this.usernameControl.setValidators([Validators.required, Validators.pattern(this.pattern)]);
       this.usernameControl.updateValueAndValidity();
     }
   }
@@ -59,7 +59,6 @@ export class SukuUserInputComponent implements OnInit {
   }
   @Output() action = new EventEmitter();
   @Output() onChangeAction = new EventEmitter();
-  email = new FormControl('', [Validators.required, Validators.email]);
 
   matcher = new MyErrorStateMatcher();
   constructor() { }

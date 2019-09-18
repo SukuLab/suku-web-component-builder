@@ -169,6 +169,7 @@ export class SukuFormTableComponent implements OnInit {
     if (selection) {
       this._items[index][this.patchKey] = defaultValue;
     } else {
+      this.selectAll = false;
       this._items[index][this.patchKey] = this._null;
     }
   }
@@ -176,6 +177,22 @@ export class SukuFormTableComponent implements OnInit {
   sendData() {
     const data = this._items;
     this.submitData.emit(data);
+  }
+
+
+  checkSpcialChar(event) {
+    const val = event.target.value;
+    console.log(event, val, (val == 0));
+
+    if (!((event.charCode >= 65) && (event.charCode <= 90) ||
+      (event.charCode >= 97) && (event.charCode <= 122) || (event.charCode >= 48) &&
+      (event.charCode <= 57))) {
+      console.log('test-2');
+      event.returnValue = false;
+      return false;
+    }
+    event.returnValue = true;
+    return true;
   }
 
 }

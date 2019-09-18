@@ -107,9 +107,10 @@
     </suku-form-table>
   </div>
   <div class="col-12 pb-5">
-    <suku-form-table [typeKey]="tableKey2" type="Producer" [enableControls]="false" [items]="sampleData"
+    <suku-form-table [typeKey]="tableKey2" type="Processor" [enableControls]="false" [items]="sampleData"
       [enableHighlighter]="true" [selectionKey]="'selection'" [highlighterKey]="'# of Boxes'"
-      [keyData]="highlightnerArray"></suku-form-table>
+      [keyData]="highlightnerArray" title-content="Please capture the required data for each selected product">
+    </suku-form-table>
   </div>
   <div class="col-12 pb-5">
     <suku-form-table [typeKey]="tableKey3" [enableControls]="false" [enableSelectAll]="true"
@@ -129,6 +130,7 @@
     <suku-default-button>back button</suku-default-button>
   </div>
   <br />
+  <suku-user-input pattern="[a-zA-Z0-9$()+!*'._-]+" [enable-pattern-validator]="true"></suku-user-input>
   <br />
   <br />
 
