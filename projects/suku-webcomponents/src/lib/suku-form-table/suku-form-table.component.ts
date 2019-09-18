@@ -11,6 +11,8 @@ export class SukuFormTableComponent implements OnInit {
   _items = [];
   _itemsKey;
   editable = [];
+  errorvalidationIndex;
+  errorvalidationKey;
   @Input('title-one-id') titleOneId;
   @Input('title-one-size') titleOneSize;
   @Input('title-one-color') titleOneColor = 'white';
@@ -178,7 +180,15 @@ export class SukuFormTableComponent implements OnInit {
     this.submitData.emit(data);
   }
 
+  validate(key,index){
+    console.log("this is key :",key);
+    console.log("this is index :",index);
+    if(key == 0 ){
+      this.errorvalidationIndex = index;
+      this.errorvalidationKey = key;
+    }else{
+      this.errorvalidationIndex = 'N/A';
+      this.errorvalidationKey = 'N/A';
+    }
+  }
 }
-
-
-

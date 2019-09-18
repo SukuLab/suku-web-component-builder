@@ -116,6 +116,14 @@ option {
   color: #555;
 }
 
+.errorMessage{
+  font-family: $suku-secondary-font;
+  font-size: $suku-font-size-1;
+  color: red;
+  padding: 0rem .75rem;
+  margin-top: -6px !important;
+  margin-bottom: 0px !important;
+}
 
 .table th {
   padding: .5rem;
