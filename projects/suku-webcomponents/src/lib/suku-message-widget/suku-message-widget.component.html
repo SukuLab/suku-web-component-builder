@@ -1,2 +1,2 @@
-<textarea class="form-control {{customClass}}" [id]="id" type="text" (keyup)="submitData()"
-  [formControl]="textAreaControl" rows="{{row}}" cols="{{col}}" [maxlength]="maxlength"></textarea>
+<textarea class="form-control {{customClass}}" [id]="id" type="text" (keyup)="submitData(textAreaModel.length)"
+  [formControl]="textAreaControl" [(ngModel)]="textAreaModel" rows="{{row}}" cols="{{col}}" [maxlength]="maxlength"></textarea>

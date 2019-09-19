@@ -151,7 +151,6 @@ export class TestCompComponent implements OnInit {
     }
   ];
 
-
   progressData = [
     {
       name: 'Finca Nueva',
@@ -409,7 +408,6 @@ export class TestCompComponent implements OnInit {
   };
 
   image = '../../assets/icons/group.svg';
-
 
   sampleAssetsData = [
     {
@@ -736,7 +734,6 @@ export class TestCompComponent implements OnInit {
   sampleData = [];
   sampleDataForLogistics = [];
 
-
   tableKeyForLogistics = {
     Sku: 'Number',
     brand: 'String',
@@ -763,6 +760,7 @@ export class TestCompComponent implements OnInit {
       '# of Boxes Received': ''
     }
   ]
+  textcount = 0 ;
   constructor(private fb: FormBuilder) { }
 
   ngOnInit() {
@@ -889,4 +887,7 @@ export class TestCompComponent implements OnInit {
     console.log('Producer', e);
   }
 
+  textCount(e){
+    this.textcount = e;
+  }
 }

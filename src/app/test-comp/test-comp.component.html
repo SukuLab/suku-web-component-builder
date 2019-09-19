@@ -126,7 +126,9 @@
     </suku-form-table>
   </div>
   <div class="col-12 pb-5">
-    <suku-message-widget></suku-message-widget>
+      <suku-heading weight='400' size='14' [id]="'headingWidget'">Message (Optional) {{textcount}}/500
+        </suku-heading>
+    <suku-message-widget (textCount) = "textCount($event)"></suku-message-widget>
     <suku-default-button>back button</suku-default-button>
   </div>
   <br />
