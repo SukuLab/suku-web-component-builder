@@ -39,13 +39,18 @@ export class SukuDisplayTableComponent implements OnInit {
   @Input('data-href') hrefSelection = 'lotid';
   @Input('status-bg-style') colorPallete = ["#a3ded8", "#f8dbb4", "#c7c3fa", "gray"];
   @Input('status') status = ["completed", "not-completed", "pending", 'others'];
-  @Output() action = new EventEmitter();
   @Input('display-pagination') showPagination = false;
-  @Input('table-items-count') itemsPerPageCount ;
+  @Input('table-items-count') itemsPerPageCount;
+  @Output() action = new EventEmitter();
+  @Output() pagination = new EventEmitter();
   constructor() {
   }
 
   ngOnInit() {
+  }
+
+  paginationFun(p) {
+    this.pagination.emit(p);
   }
 
 }
