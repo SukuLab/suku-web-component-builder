@@ -19,8 +19,8 @@
       </tr>
     </thead>
     <tbody>
-      <tr
-        *ngFor="let data of tableData | paginate: { itemsPerPage: [itemsPerPageCount], currentPage: p }  let i = index">
+      <tr *ngFor="let data of tableData | paginate: { itemsPerPage: [itemsPerPageCount], currentPage: p,totalItems:
+        totalItem } let i = index">
         <td *ngFor="let key of tableDataKey;" [style.color]="dataColor" [style.font-size.px]="dataSize"
           [style.font-weight]="dataWeight"
           [style.background-color]="

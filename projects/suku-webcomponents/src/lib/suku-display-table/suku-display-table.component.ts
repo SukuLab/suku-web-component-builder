@@ -41,6 +41,7 @@ export class SukuDisplayTableComponent implements OnInit {
   @Input('status') status = ["completed", "not-completed", "pending", 'others'];
   @Input('display-pagination') showPagination = false;
   @Input('table-items-count') itemsPerPageCount;
+  @Input('total-item') totalItem;
   @Output() action = new EventEmitter();
   @Output() pagination = new EventEmitter();
   constructor() {
