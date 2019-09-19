@@ -14,17 +14,15 @@ export class SukuMessageWidgetComponent implements OnInit {
   @Input() customClass;
   @Input() maxlength = 500;
   @Output() action = new EventEmitter();
-  @Output() textCount = new EventEmitter();
   constructor() { }
 
   ngOnInit() {
   }
 
-  submitData(length) {
+  submitData() {
     const value = this.textAreaControl.value;
     console.log('text', value);
     this.action.emit(value);
-    this.textCount.emit(length)
   }
 
 }
