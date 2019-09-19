@@ -35,7 +35,8 @@
       <thead>
         <tr>
           <th *ngFor="let head of _items[0] | keys" [ngClass]="{'text-center': typeKey[head]=='Checkbox'}">
-            <span>{{head | titlecase }}</span>
+            <span *ngIf="!(head === 'Sku')">{{head | titlecase }}</span>
+            <span *ngIf="head === 'Sku'" class="Sku" >{{head}}</span>
           </th>
         </tr>
       </thead>
