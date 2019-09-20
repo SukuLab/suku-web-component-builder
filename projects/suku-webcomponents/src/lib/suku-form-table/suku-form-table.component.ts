@@ -181,20 +181,20 @@ export class SukuFormTableComponent implements OnInit {
     this.submitData.emit(data);
   }
 
-  validate(key,index){
-    console.log("this is key :",key);
-    console.log("this is index :",index);
-    if(key == 0 ){
+  validate(key, index) {
+    console.log("this is key :", key);
+    console.log("this is index :", index);
+    if (key == 0) {
       this.errorvalidationIndex = index;
       this.errorvalidationKey = key;
-    }else{
+    } else {
       this.errorvalidationIndex = 'N/A';
       this.errorvalidationKey = 'N/A';
     }
   }
 
   checkSpcialChar(event) {
-    console.log(event);
+    console.log(event, event.target.value);
     if (!((event.charCode >= 65) && (event.charCode <= 90) ||
       (event.charCode >= 97) && (event.charCode <= 122) || (event.charCode >= 48) &&
       (event.charCode <= 57))) {

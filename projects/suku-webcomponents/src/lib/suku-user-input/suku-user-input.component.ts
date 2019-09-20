@@ -66,7 +66,21 @@ export class SukuUserInputComponent implements OnInit {
   ngOnInit() {
     this._subscription = this.usernameControl.valueChanges.subscribe(value => {
       if (value) {
-        this.action.emit(value);
+        const controlValue = {
+          dirty: this.usernameControl.dirty,
+          disabled: this.usernameControl.disabled,
+          enabled: this.usernameControl.enabled,
+          errors: this.usernameControl.errors,
+          invalid: this.usernameControl.invalid,
+          pristine: this.usernameControl.pristine,
+          status: this.usernameControl.status,
+          touched: this.usernameControl.touched,
+          untouched: this.usernameControl.untouched,
+          valid: this.usernameControl.valid,
+          validator: this.usernameControl.validator,
+          value: this.usernameControl.value
+        };
+        this.action.emit(controlValue);
       } else {
         // this.usernameControl.
       }

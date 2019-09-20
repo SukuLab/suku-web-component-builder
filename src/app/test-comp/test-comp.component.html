@@ -132,7 +132,8 @@
     <suku-default-button>back button</suku-default-button>
   </div>
   <br />
-  <suku-user-input pattern="[a-zA-Z0-9$()+!*'._-]+" [enable-pattern-validator]="true"></suku-user-input>
+  <suku-user-input pattern="[a-zA-Z0-9$()+!*'._-]+" [enable-pattern-validator]="true" (action)="formStatusEv($event)">
+  </suku-user-input>
   <br />
   <br />
 
