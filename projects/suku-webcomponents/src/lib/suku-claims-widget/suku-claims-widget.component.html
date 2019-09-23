@@ -19,5 +19,10 @@
         </div>
       </div>
     </span>
+    <span *ngIf="claim?.description">
+      <ul *ngFor="let item of claim?.description">
+        <li class="claimDescription">{{item}}</li>
+      </ul>
+    </span>
   </p>
 </div>
