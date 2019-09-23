@@ -195,6 +195,20 @@ export class SukuFormTableComponent implements OnInit {
 
   checkSpcialChar(event) {
     console.log(event, event.target.value);
+    if (event.charCode == 36 ||
+      event.charCode == 95 ||
+      event.charCode == 42 ||
+      event.charCode == 45 ||
+      event.charCode == 43 ||
+      event.charCode == 40 ||
+      event.charCode == 41 ||
+      event.charCode == 39 ||
+      event.charCode == 33
+    ) {
+      event.returnValue = true;
+      return true;
+    }
+
     if (!((event.charCode >= 65) && (event.charCode <= 90) ||
       (event.charCode >= 97) && (event.charCode <= 122) || (event.charCode >= 48) &&
       (event.charCode <= 57))) {

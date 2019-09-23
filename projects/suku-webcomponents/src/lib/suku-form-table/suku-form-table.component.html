@@ -18,14 +18,15 @@
           <h1 [style.font-size.px]="titleOneSize" class="title mt-auto mb-0 {{titleOneCustomClass}}"
             [style.font-weight]="titleOneWeight" [style.color]="titleOneColor" id="{{titleOneId}}">
             {{titleContent}}
+            <span class="pl-5" id="processor">
+              <span [ngClass]="{'align-checkbox': editable[j] }" *ngIf="type == 'Processor'">
+                <mat-checkbox (change)="sendData();" color="primary" [(ngModel)]="selectAll"
+                  (change)="selectAllAction()">
+                  <span class="checkbox">Select All</span>
+                </mat-checkbox>
+              </span>
+            </span>
           </h1>
-        </div>
-        <div class="col" id="processor">
-          <span [ngClass]="{'align-checkbox': editable[j] }" *ngIf="type == 'Processor'">
-            <mat-checkbox (change)="sendData();" color="primary" [(ngModel)]="selectAll" (change)="selectAllAction()">
-              <span class="checkbox">Select All</span>
-            </mat-checkbox>
-          </span>
         </div>
       </div>
     </div>
@@ -36,7 +37,7 @@
         <tr>
           <th *ngFor="let head of _items[0] | keys" [ngClass]="{'text-center': typeKey[head]=='Checkbox'}">
             <span *ngIf="!(head === 'Sku')">{{head | titlecase }}</span>
-            <span *ngIf="head === 'Sku'" class="Sku" >{{head}}</span>
+            <span *ngIf="head === 'Sku'" class="Sku">{{head}}</span>
           </th>
         </tr>
       </thead>
