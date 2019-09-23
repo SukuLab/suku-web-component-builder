@@ -13,6 +13,8 @@ export class SukuMessageWidgetComponent implements OnInit {
   @Input() id = 'message';
   @Input() customClass;
   @Input() maxlength = 500;
+  @Input() readOnly;
+  @Input() value = '';
   @Output() action = new EventEmitter();
   constructor() { }
 

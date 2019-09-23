@@ -8,7 +8,7 @@ import { FormBuilder, FormGroup, FormControl, FormArray } from '@angular/forms';
 })
 export class TestCompComponent implements OnInit {
   form: FormGroup;
-
+  sample = 'tree';
   tableKeyA1 = {
     'Cow ID': 'String',
     'Approx. Age (mths.)': 'Number',
@@ -26,7 +26,7 @@ export class TestCompComponent implements OnInit {
   };
   tabelData1 = [
     {
-      name: '',
+      'name': '10',
       'Physical Challenged': '',
       dob: '',
       degree: '',
@@ -34,7 +34,7 @@ export class TestCompComponent implements OnInit {
       action: ''
     },
     {
-      name: '',
+      name: '10',
       'Physical Challenged': '',
       dob: '',
       degree: '',
@@ -760,7 +760,7 @@ export class TestCompComponent implements OnInit {
       '# of Boxes Received': ''
     }
   ]
-  textcount = 0 ;
+  textcount = 0;
   constructor(private fb: FormBuilder) { }
 
   ngOnInit() {
@@ -887,7 +887,7 @@ export class TestCompComponent implements OnInit {
     console.log('Producer', e);
   }
 
-  textCount(e){
+  textCount(e) {
     this.textcount = e;
   }
 }

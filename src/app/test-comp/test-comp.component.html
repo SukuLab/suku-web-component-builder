@@ -126,13 +126,14 @@
     </suku-form-table>
   </div>
   <div class="col-12 pb-5">
-      <suku-heading weight='400' size='14' [id]="'headingWidget'">Message (Optional) {{textcount}}/500
-        </suku-heading>
-    <suku-message-widget (textCount) = "textCount($event)"></suku-message-widget>
+    <suku-heading weight='400' size='14' [id]="'headingWidget'">Message (Optional) {{textcount}}/500
+    </suku-heading>
+    <suku-message-widget (textCount)="textCount($event)" [readOnly]="true" [value]="sample"></suku-message-widget>
     <suku-default-button>back button</suku-default-button>
   </div>
   <br />
-  <suku-user-input pattern="[a-zA-Z0-9$()+!*'._-]+" [enable-pattern-validator]="true" (action)="formStatusEv($event)">
+  <suku-user-input pattern="[a-zA-Z0-9$()+!*'._-]+" [value]="sample" [enable-pattern-validator]="true"
+    (action)="formStatusEv($event)">
   </suku-user-input>
   <br />
   <br />

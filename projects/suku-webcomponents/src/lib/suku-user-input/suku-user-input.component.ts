@@ -26,6 +26,15 @@ export class SukuUserInputComponent implements OnInit {
   @Input('error-message-two') errorMessageTwo = 'Invalid value.';
   @Input('error-message-three') errorMessageThree = '';
   @Input('error-message-four') errorMessageFour = '';
+  @Input('value') value = '';
+  @Input('disabled')
+  set disable(val) {
+    if (val) {
+      this.usernameControl.disable();
+    } else {
+      this.usernameControl.enable();
+    }
+  }
   @Input('enable-required-validator')
   set enableRequiredValidator(val) {
     console.log('enableRequiredValidator', val);
