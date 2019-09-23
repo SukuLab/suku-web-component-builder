@@ -203,7 +203,8 @@ export class SukuFormTableComponent implements OnInit {
       event.charCode == 40 ||
       event.charCode == 41 ||
       event.charCode == 39 ||
-      event.charCode == 33
+      event.charCode == 33 ||
+      event.charCode == 32
     ) {
       event.returnValue = true;
       return true;
@@ -217,6 +218,17 @@ export class SukuFormTableComponent implements OnInit {
     }
     event.returnValue = true;
     return true;
+  }
+
+  sort(head, type) {
+    if (this._items) {
+      if (!(type == 'Checkbox')) {
+        this._items.sort((a, b) => {
+          return +a[head] - +b[head];
+        });
+      }
+      console.log('sort -', this._items, head, type);
+    }
   }
 
 }

@@ -448,7 +448,7 @@ export class TestCompComponent implements OnInit {
         }
       ],
       _id: '5d7698a7571ca311dd5af90e',
-      skuku: '010',
+      skuku: '050',
       name: 'Asado De Aguja',
       description:
         'This meat comes from cattle of European origin, which complements their diet with the natural antioxidant Sel-Plex making it healthier. Vacuum packed. Weight approx 1.5 Kg (Reference Photo. Products are sold in their original state).',
@@ -493,7 +493,7 @@ export class TestCompComponent implements OnInit {
         }
       ],
       _id: '5d7698a7571ca311dd5af91f',
-      skuku: '013',
+      skuku: '023',
       name: 'Asado Ruso',
       description:
         'This meat comes from cattle of European origin, which complements their diet with the natural antioxidant Sel-Plex making it healthier. Vacuum packed. Weight approx 1.5 Kg (Reference Photo. Products are sold in their original state).',
@@ -661,7 +661,7 @@ export class TestCompComponent implements OnInit {
     },
     {
       _id: '6893733cadef0c3cc831953d',
-      skuku: '017',
+      skuku: '037',
       lotId: '1',
       ids: [
         {
@@ -677,7 +677,7 @@ export class TestCompComponent implements OnInit {
     },
     {
       _id: '7a3c779e8297ca6c3cdbdb2e',
-      skuku: '018',
+      skuku: '030',
       lotId: '1',
       ids: [
         {
@@ -709,7 +709,7 @@ export class TestCompComponent implements OnInit {
     },
     {
       _id: '17cd5c76c1865613b37c7e37',
-      skuku: '020',
+      skuku: '040',
       lotId: '1',
       ids: [
         {
