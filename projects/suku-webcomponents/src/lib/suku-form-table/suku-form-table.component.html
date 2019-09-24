@@ -84,7 +84,7 @@
             <span class="align-checkbox" *ngIf="(typeKey[list]=='Checkbox')">
               <mat-checkbox color="primary"
                 (change)="sendData();patchValue(item[selectionKey], item[highlighterKey], j)"
-                [disabled]="(!editable[j] && (list != selectionKey) )|| tableDisabled" [(ngModel)]="item[list]">
+                [disabled]="(!editable[j] && (list != selectionKey) ) || tableDisabled" [(ngModel)]="item[list]">
               </mat-checkbox>
             </span>
 
@@ -148,7 +148,7 @@
       </tbody>
     </table>
   </div>
-  <div class="col text-right" *ngIf="enableControls">
+  <div class="col text-right" *ngIf="enableControls && !tableDisabled">
     <span class="p-2">
       <a class="secondary-btn" id="addOneRow" [style.font-size.rem]="controlsSize" (click)="addTable(1,_items?.length)"
         color="primary">Add 1 row</a>
