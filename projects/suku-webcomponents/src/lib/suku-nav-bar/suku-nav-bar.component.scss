@@ -249,9 +249,16 @@ ul li a:hover {
   top: -15px;
   right: 12px;
 }
+
 :host {
-  .row{
-    margin-right:0px;
+  .row {
+    margin-right: 0px;
     margin-left: 0px;
   }
+}
+
+.toggle {
+  font-size: 18px;
+  font-family: $suku-primary-font;
+  color: rgba(255, 255, 255, 0.5);
 }

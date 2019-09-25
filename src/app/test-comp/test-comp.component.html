@@ -79,16 +79,14 @@
   </div>
 
   <div class="col">
-    <suku-nav-bar [hide-bell-icon]='false' (action)='something($event)'></suku-nav-bar>
+    <suku-nav-bar [hide-bell-icon]='false' [data]="navData" (action)='something($event)'></suku-nav-bar>
   </div>
 
   <div class="col">
     <suku-username-icon-widget image-title="Welcome Ricardo!">
     </suku-username-icon-widget>
   </div>
-  <div class="col-12 w-100 pt-4">
-    <suku-progress-bar-type-three [data]="progressData"></suku-progress-bar-type-three>
-  </div>
+
 
 
   <div class="col-12 pb-5">

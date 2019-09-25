@@ -4,6 +4,7 @@ import * as jspdf from 'jspdf';
 import { Observable, Observer } from 'rxjs';
 import { FormGroup, FormBuilder } from '@angular/forms';
 import { SukuLoaderService, SukuModalService, SukuWebcomponentsService } from 'projects/suku-webcomponents/src/public_api';
+import { TranslateService } from '@ngx-translate/core';
 // import { SukuModalService, SukuLoaderService } from 'suku-webcomponents';
 @Component({
 	selector: 'app-root',
@@ -19,6 +20,36 @@ export class AppComponent implements OnInit {
 		disabled: false,
 		id: 'Marketplace'
 	};
+	progressData = [
+		{
+			name: 'Finca Nueva',
+			status: 'inProgress',
+			type: 'farmJourney_Lbl',
+			data: '',
+			id: ''
+		},
+		{
+			name: 'Sasmar',
+			status: 'inProgress',
+			type: 'processorJourney_Lbl',
+			data: '',
+			id: ''
+		},
+		{
+			name: 'Esmeralda',
+			status: 'inComplete',
+			type: 'logisticsJourney_Lbl',
+			data: '',
+			id: ''
+		},
+		{
+			name: 'Cedicar',
+			status: 'inComplete',
+			type: 'distributorJourney_Lbl',
+			data: '',
+			id: ''
+		}
+	];
 
 	messageData = [
 		{
@@ -393,10 +424,62 @@ export class AppComponent implements OnInit {
 	expMaxDate: Date;
 	expMinDate: string;
 
-	constructor(private fb: FormBuilder, private sukuModalService: SukuModalService,
-		private sukuLoaderService: SukuLoaderService, private sukuTheme: SukuWebcomponentsService
+	header = [
+		{ id: 'statedate', title: 'startDate_TblColHdr' },
+		{ id: 'enddate', title: 'endDate_TblColHdr' },
+		{ id: 'lname', title: 'lotID_TbldColHdr' },
+		{ id: 'myStatus', title: 'myTaskStatus_TblColHdr' },
+		{ id: 'stepsCompleted', title: 'stepsCompleted_TblColHdr' },
+		{ id: 'Status', title: 'overallStatus_TblColHdr' }
+	];
+
+	facilityAddress = {
+		registeredName: 'Finca Nueva',
+		phone: '+123 456-7654',
+		email: 'info@FincaNueva.com',
+		address: 'Finca Nueva, Calle Augusto Angulo 130, Miraflores, Perú, 15048',
+	};
+	// "complete_TblValue": "complete",
+	// "incomplete_TblValue": "incomplete",
+	// "inProgress_TblValue": "in progress",
+	// "notStarted_TblValue": "not started",
+	data = [
+		{
+			statedate: "Aug-30-2019 ", enddate: "Aug-31-2019 ",
+			lotid: "741", myStatus: 'complete_TblValue', stepsCompleted: "2/5", status: 'incomplete_TblValue'
+		},
+		{
+			statedate: "Aug-30-2019 ", enddate: "Pending",
+			lotid: "021", myStatus: 'notStarted_TblValue', stepsCompleted: "3/5", status: 'incomplete_TblValue'
+		},
+		{
+			statedate: "Aug-30-2019 ", enddate: "Aug-31-2019 ",
+			lotid: "784", myStatus: 'complete_TblValue', stepsCompleted: "5/5", status: 'inProgress_TblValue'
+		},
+		{
+			statedate: "Aug-30-2019 ", enddate: "Aug-31-2019 ",
+			lotid: "369", myStatus: 'complete_TblValue', stepsCompleted: "3/6", status: 'inProgress_TblValue'
+		},
+		{
+			statedate: "Aug-30-2019 ", enddate: "Aug-31-2019 ",
+			lotid: "797", myStatus: 'complete_TblValue', stepsCompleted: "3/3", status: 'inProgress_TblValue'
+		},
+		{
+			statedate: "Aug-30-2019 ", enddate: "Aug-31-2019",
+			lotid: "785", myStatus: 'complete_TblValue', stepsCompleted: "1/6", status: 'incomplete_TblValue'
+		}
+	];
+	colorPallete = ['#a3ded8', '#f8dbb4', '#c7c3fa', '#c2c1c1'];
+	statusKeywords = ['Completed', 'Incomplete', 'In Progress', 'Pending'];
+	statusForDisplayTable = ["complete_TblValue", "incomplete_TblValue", "inProgress_TblValue", 'notStarted_TblValue'];
+	constructor(private fb: FormBuilder,
+		private sukuModalService: SukuModalService,
+		private sukuLoaderService: SukuLoaderService,
+		private sukuTheme: SukuWebcomponentsService,
+		private translate: TranslateService
 	) {
 		this.sukuTheme.setSukuTheme();
+		this.translate.setDefaultLang('en');
 	}
 
 	ngOnInit() {
@@ -473,11 +556,11 @@ export class AppComponent implements OnInit {
 		// this.sukuLoaderService.openLoader(data);
 		this.sukuModalService.openConfirmationDialog(data);
 		this.sukuModalService.onDialogClose.subscribe(res => {
-      // this.closePopup();
-      	if(res == 'cancel') {
-      		console.log('works')
-      	}
-    	})
+			// this.closePopup();
+			if (res == 'cancel') {
+				console.log('works')
+			}
+		})
 		// setTimeout(() => {
 		//   data = {
 		//     'imgSrc': 'http://34.217.89.204/assets/icons/verified_icon.png',
@@ -520,98 +603,21 @@ export class AppComponent implements OnInit {
 		this.sukuModalService.openLicenseModalDialogDialog(data);
 	}
 
-	header = [
-		{ id: 'statedate', title: 'Start Date' },
-		{ id: 'enddate', title: 'End Date' },
-		{ id: 'lname', title: 'Lot ID' },
-		{ id: 'myStatus', title: 'My Task Status ' },
-		{ id: 'stepsCompleted', title: 'Steps Completed ' },
-		{ id: 'Status', title: 'Overall Status' }
-	]
-	facilityAddress = {
-		registeredName: 'Finca Nueva',
-		phone: '+123 456-7654',
-		email: 'info@FincaNueva.com',
-		address: 'Finca Nueva, Calle Augusto Angulo 130, Miraflores, Perú, 15048',
-	};
-	data = [
-		{
-			statedate: "Aug-30-2019 ", enddate: "Aug-31-2019 ",
-			lotid: "741", myStatus: 'completed', stepsCompleted: "2/5", status: 'not-completed'
-		},
-		{
-			statedate: "Aug-30-2019 ", enddate: "Aug-31-2019 ",
-			lotid: "021", myStatus: 'completed', stepsCompleted: "3/5", status: 'not-completed'
-		},
-		{
-			statedate: "Aug-30-2019 ", enddate: "Aug-31-2019 ",
-			lotid: "784", myStatus: 'completed', stepsCompleted: "5/5", status: 'completed'
-		},
-		{
-			statedate: "Aug-30-2019 ", enddate: "Aug-31-2019 ",
-			lotid: "369", myStatus: 'completed', stepsCompleted: "3/6", status: 'in-progress'
-		},
-		{
-			statedate: "Aug-30-2019 ", enddate: "Aug-31-2019 ",
-			lotid: "797", myStatus: 'completed', stepsCompleted: "3/3", status: 'completed'
-		},
-		{
-			statedate: "Aug-30-2019 ", enddate: "Aug-31-2019",
-			lotid: "785", myStatus: 'pending', stepsCompleted: "1/6", status: 'not-completed'
-		},
-		{
-			statedate: "Aug-30-2019 ", enddate: "Aug-31-2019 ",
-			lotid: "369", myStatus: 'completed', stepsCompleted: "3/6", status: 'in-progress'
-		},
-		{
-			statedate: "Aug-30-2019 ", enddate: "Aug-31-2019 ",
-			lotid: "797", myStatus: 'completed', stepsCompleted: "3/3", status: 'completed'
-		},
-		{
-			statedate: "Aug-30-2019 ", enddate: "Aug-31-2019",
-			lotid: "785", myStatus: 'pending', stepsCompleted: "1/6", status: 'not-completed'
-		},
-		{
-			statedate: "Aug-30-2019 ", enddate: "Aug-31-2019 ",
-			lotid: "369", myStatus: 'completed', stepsCompleted: "3/6", status: 'in-progress'
-		},
-		{
-			statedate: "Aug-30-2019 ", enddate: "Aug-31-2019 ",
-			lotid: "797", myStatus: 'completed', stepsCompleted: "3/3", status: 'completed'
-		},
-		{
-			statedate: "Aug-30-2019 ", enddate: "Aug-31-2019",
-			lotid: "785", myStatus: 'pending', stepsCompleted: "1/6", status: 'not-completed'
-		},
-		{
-			statedate: "Aug-30-2019 ", enddate: "Aug-31-2019 ",
-			lotid: "369", myStatus: 'completed', stepsCompleted: "3/6", status: 'in-progress'
-		},
-		{
-			statedate: "Aug-30-2019 ", enddate: "Aug-31-2019 ",
-			lotid: "797", myStatus: 'completed', stepsCompleted: "3/3", status: 'completed'
-		},
-		{
-			statedate: "Aug-30-2019 ", enddate: "Aug-31-2019",
-			lotid: "785", myStatus: 'pending', stepsCompleted: "1/6", status: 'not-completed'
-		},
-		{
-			statedate: "Aug-30-2019 ", enddate: "Aug-31-2019 ",
-			lotid: "369", myStatus: 'completed', stepsCompleted: "3/6", status: 'in-progress'
-		},
-		{
-			statedate: "Aug-30-2019 ", enddate: "Aug-31-2019 ",
-			lotid: "797", myStatus: 'completed', stepsCompleted: "3/3", status: 'completed'
-		},
-		{
-			statedate: "Aug-30-2019 ", enddate: "Aug-31-2019",
-			lotid: "785", myStatus: 'pending', stepsCompleted: "1/6", status: 'not-completed'
-		}
-	]
 	call(s) {
 		console.log("dkdjs", s);
 	}
-	getLotId(l){
-		console.log("this is l :",l);
+
+
+	getLotId(l) {
+		console.log("this is l :", l);
+	}
+
+	languageChange(event) {
+		console.log(event);
+		if (event.checked) {
+			this.translate.use('es-pe');
+		} else {
+			this.translate.use('en');
+		}
 	}
 }

@@ -42,6 +42,9 @@ export class SukuDisplayTableComponent implements OnInit {
   @Input('display-pagination') showPagination = false;
   @Input('table-items-count') itemsPerPageCount;
   @Input('total-item') totalItem;
+  @Input('translator') translator = true;
+  @Input('pagination-previous-label') paginationPreviousLabel = 'Previous';
+  @Input('pagination-next-label') paginationNextLabel = 'Next';
   @Output() action = new EventEmitter();
   @Output() pagination = new EventEmitter();
   constructor() {

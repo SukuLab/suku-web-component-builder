@@ -227,6 +227,22 @@ export class SukuFormTableComponent implements OnInit {
           return +a[head] - +b[head];
         });
       }
+      if (type == 'Number') {
+        this._items.sort((a, b) => {
+          return +a[head] - +b[head];
+        });
+      }
+      if (type == 'String') {
+        this._items.sort(function (a, b) {
+          if (a[head].toLowerCase() < b[head].toLowerCase()) {
+            return -1;
+          }
+          if (a[head].toLowerCase() > b[head].toLowerCase()) {
+            return 1;
+          }
+          return 0;
+        });
+      }
       console.log('sort -', this._items, head, type);
     }
   }

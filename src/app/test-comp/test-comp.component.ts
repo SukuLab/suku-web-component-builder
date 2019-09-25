@@ -151,50 +151,6 @@ export class TestCompComponent implements OnInit {
     }
   ];
 
-  progressData = [
-    {
-      name: 'Finca Nueva',
-      status: 'inProgress',
-      type: 'FARM',
-      data: '',
-      id: ''
-    },
-    {
-      name: 'Sasmar',
-      status: 'inProgress',
-      type: 'PROCESSOR',
-      data: '',
-      id: ''
-    },
-    {
-      name: 'Esmeralda',
-      status: 'inComplete',
-      type: 'LOGISTICS',
-      data: '',
-      id: ''
-    },
-    {
-      name: 'Cedicar',
-      status: 'inComplete',
-      type: 'DISTRIBUTOR',
-      data: '',
-      id: ''
-    },
-    {
-      name: 'Esmeralda',
-      status: 'inComplete',
-      type: 'UNKNOWN',
-      data: '',
-      id: ''
-    },
-    {
-      name: 'Cedicar',
-      status: 'inComplete',
-      type: 'UNKNOWN',
-      data: '',
-      id: ''
-    }
-  ];
 
   buttonData = {
     title: 'Marketplace',
@@ -761,6 +717,20 @@ export class TestCompComponent implements OnInit {
     }
   ]
   textcount = 0;
+  navData = {
+    logo: 'assets/images/Suku_Logo_white.png',
+    Username: '',
+    companyName: '',
+    bellIcon: '',
+    bellIconId: 'notificationIcon',
+    notificationCountId: 'notificationCount',
+    submenu: [
+      {
+        name: 'Logout',
+        subMenu: false
+      }
+    ]
+  };
   constructor(private fb: FormBuilder) { }
 
   ngOnInit() {

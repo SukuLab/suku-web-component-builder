@@ -5,7 +5,7 @@
         <!-- checkbox -->
         <span [ngClass]="{'align-checkbox': editable[j] }" *ngIf="(typeKey[list]=='Checkbox')">
           <mat-checkbox (change)="sendData();" color="primary" [disabled]="!editable[j] && (list != selectionKey)"
-            [(ngModel)]="selectAll" (change)="selectAllAction()"> Select All
+            [(ngModel)]="selectAll" (change)="selectAllAction()"> {{'selectAll_ChkBox' | translate}}
           </mat-checkbox>
         </span>
       </td>
@@ -22,7 +22,7 @@
               <span [ngClass]="{'align-checkbox': editable[j] }" *ngIf="type == 'Processor'">
                 <mat-checkbox (change)="sendData();" color="primary" [(ngModel)]="selectAll"
                   (change)="selectAllAction()">
-                  <span class="checkbox">Select All</span>
+                  <span class="checkbox">{{'selectAll_ChkBox' | translate}}</span>
                 </mat-checkbox>
               </span>
             </span>
@@ -43,16 +43,6 @@
       </thead>
       <tbody>
         <tr *ngFor="let item of _items;let j=index">
-          <!-- '#d2d2d2' f8dbb4 -->
-          <!-- ((list == highlighterKey) ?
-           ((item[selectionKey] && item[highlighterKey] && enableHighlighter) ? '#a3ded8':( !(item[selectionKey] &&
-           enableHighlighter) ?
-           '#d3d9dc' : '#f8dbb4')) : '')
-           ||
-           ((list == patchKey) ?
-           ((item[patchKey]) ? '#a3ded8' :( !(item[selectionKey]) ? '#f8dbb4' : '#d3d9dc')) : '') -->
-          <!-- ((list == patchKey) ?
-            ((item[patchKey]) ? '#a3ded8' :( !(item[selectionKey]) ? '#f8dbb4' : '#d3d9dc')) : '') -->
           <td [ngClass]="{'border-enable': checkValid(list), 'text-center': typeKey[list]=='Checkbox' }"
             *ngFor="let list of item | keys; let i=index" [style.background-color]="(checkValid(list) ?
             ((item[selectionKey] && item[highlighterKey] && enableHighlighter) ? '#a3ded8':( !(item[selectionKey] &&
@@ -127,35 +117,34 @@
             <span class="col p-0 pl-2" (click)="edit(j, item);sendData()" *ngIf="list == 'action' && !editable[j]">
               <span class="secondary-btn controlCustomClass" id="edit{{j}}" [style.font-size.rem]="controlsSize"
                 [ngClass]="{'btn-edit' : editable[j]}">
-                edit
+                {{'edit_TblBtn' | translate}}
               </span>
             </span>
             <span class="col p-0 pl-2" *ngIf="list == 'action' && editable[j]">
               <span class="secondary-btn controlCustomClass" id="edit{{j}}" [style.font-size.rem]="controlsSize"
                 (click)="edit(j, item);sendData()" [ngClass]="{'btn-edit' : editable[j]}">
-                save
+                {{'save_TblBtn' | translate}}
               </span>
             </span>
             <span class="col c-pointer pl-4" *ngIf="list == 'action'">
               <span class="secondary-btn controlCustomClass" id="edit{{j}}" [style.font-size.rem]="controlsSize"
                 (click)="removedata(j, item);sendData()" [ngClass]="{'btn-edit' : editable[j]}">
-                remove
+                {{'remove_TblBtn' | translate}}
               </span>
             </span>
           </td>
         </tr>
-
       </tbody>
     </table>
   </div>
   <div class="col text-right" *ngIf="enableControls">
     <span class="p-2">
       <a class="secondary-btn" id="addOneRow" [style.font-size.rem]="controlsSize" (click)="addTable(1,_items?.length)"
-        color="primary">Add 1 row</a>
+        color="primary">{{'add1Row_TblBtn' | translate}}</a>
     </span>
     <span class="p-2">
       <a class="secondary-btn" id="addTenRow" [style.font-size.rem]="controlsSize"
-        (click)="addTable(10, _items?.length)" color="primary">Add 10 rows</a>
+        (click)="addTable(10, _items?.length)" color="primary">{{'add10Rows_TblBtn' | translate}}</a>
     </span>
   </div>
 </div>

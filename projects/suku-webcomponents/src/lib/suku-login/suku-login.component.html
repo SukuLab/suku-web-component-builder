@@ -7,7 +7,7 @@
             <div class="col pl-lg-4 pr-lg-4 p-xs-0">
               <div class="col-xs-12 f14 pb-lg-3 p-0 col-sm-12 p-xs-0">
                 <div class="col text-center">
-                  <p class="login">Login</p>
+                  <p class="login">{{title}}</p>
                 </div>
                 <div class="col pl-lg-1 pr-lg-1">
                   <div class="col-sm-6 p-5 col-xs-12 offset-sm-3 Rectangle-2 mb-9">
@@ -18,8 +18,8 @@
                             <span matPrefix class="mr-2">
                               <mat-icon>account_circle</mat-icon>
                             </span>
-                            <input matInput matInput autofocus type="text" [id]="userNameId"
-                              [placeholder]="placeholderOne" [formControl]="usernameControl" name="usernameControl">
+                            <input matInput matInput type="text" [id]="userNameId" [placeholder]="placeholderOne"
+                              [formControl]="usernameControl" name="usernameControl">
                             <mat-error *ngIf="usernameControl.hasError('required')">
                               {{errorMessageOne}}
                             </mat-error>
@@ -43,11 +43,11 @@
                             </mat-error>
                           </mat-form-field>
                         </div>
-                        <div class="col-lg-2 col-md-12 d-flex align-items-center text-xs-item-center pl-0 pr-3">
+                        <div class="col-lg-2 col-md-12 d-flex align-items-center text-xs-item-center pl-0 pr-0">
                           <div class="row c-pointer" (click)="hide =! hide">
                             <mat-icon class="toggle-password">
                               {{hide ? 'visibility_off' : 'visibility'}}</mat-icon><span
-                              class="pl-2 view">{{hide ? 'Hide' : 'View'}}</span>
+                              class="pl-2 view">{{hide ? passwordLabelOne : passwordLabelTwo }}</span>
                           </div>
                         </div>
                       </div>
@@ -58,16 +58,16 @@
                           <div class="row">
                             <div class="text-center col-sm-12 col-xs-6 pt-3 pb-3">
                               <suku-checkbox checkbox-id="remeberMe" [checked]="remeberMeChecked"
-                                (action)="remeberMeAction($event)">Remember Me?</suku-checkbox>
+                                (action)="remeberMeAction($event)">{{remembermeLabel}}</suku-checkbox>
                             </div>
                           </div>
                         </div>
                       </div>
                     </div>
                     <div class="col">
-                      <div class="col">
+                      <div class="col p-0">
                         <div class="col-lg-7 col-12 pb-3 justify-content-center m-auto">
-                          <suku-info-button custom-class="w-100" (click)="onSubmit();" id="accountLogin">LOGIN
+                          <suku-info-button custom-class="w-100" (click)="onSubmit();" id="accountLogin">{{buttonLabel}}
                           </suku-info-button>
                         </div>
                       </div>

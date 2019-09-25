@@ -4,7 +4,7 @@
       <img [src]="data?.logo" alt="brand-SUKU" class="btLine {{logoCustomClass}}" />
     </a>
   </div>
-  <div class="collapse navbar-collapse justify-content-end mr-5" id="navbarNav">
+  <div class="collapse navbar-collapse justify-content-end mr-3" id="navbarNav">
     <div *ngFor="let names of data.submenu" class="responseTab">
       <ul class="navbar-nav">
         <li class="pT" (click)="toggle(names)">
@@ -15,13 +15,26 @@
       </ul>
     </div>
   </div>
-  <div class="row d-flex justify-content-around ml-lg-5">
+  <!-- translate slide -->
+  <div class="row d-flex">
+    <div class="col pT text-right align-items-end d-flex justify-content-end align-item-right toggle"
+      *ngIf="enableTranslate">
+      <span class="toggle pr-3">
+        {{language  | uppercase}}
+      </span>
+      <mat-slide-toggle color="{{sliderTheme}}" id="{{sliderId}}" type="checkbox"
+        (change)="languageChange.emit($event)">
+      </mat-slide-toggle>
+    </div>
+  </div>
+  <div class="row d-flex justify-content-around ml-lg-5" *ngIf="hideBellIcon && !hideUserDetail">
+    <!-- user notification and name -->
     <a class="align-items-end d-flex">
       <i *ngIf="hideBellIcon"><img id="notificationBell" src="{{data?.bellIcon}}" id="{{data?.bellIconId}}"></i>
       <span *ngIf="hideBellIcon" class="count" id="{{data?.notificationCountId}}">{{data?.notificationCount}}</span>
     </a>
-    <li class="iconColor"><img [src]="userIcon"></li>
-    <li class="userColor" [style.color]="userNameColor" [style.font-weight]="userNameFontWeight"
+    <li class="iconColor" *ngIf="!hideUserDetail"><img [src]="userIcon"></li>
+    <li class="userColor" *ngIf="!hideUserDetail" [style.color]="userNameColor" [style.font-weight]="userNameFontWeight"
       [style.font-size.rem]="userNameFontSize">{{UserName}}</li>
   </div>
 </nav>
