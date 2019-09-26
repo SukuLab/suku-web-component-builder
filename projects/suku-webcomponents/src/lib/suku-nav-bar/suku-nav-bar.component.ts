@@ -28,6 +28,7 @@ export class SukuNavBarComponent {
 	@Input('language') language = 'Española';
 	@Input('slider-theme') sliderTheme = 'primary';
 	@Input('slider-id') sliderId = 'translateButton';
+	@Input('translator-value') translatorValue = true;
 	@Output() action = new EventEmitter();
 	@Output() languageChange = new EventEmitter();
 	selectedItem: any;
@@ -121,8 +122,9 @@ export class SukuNavBarComponent {
 					}]
 			},
 			{
-				name: 'Logout',
-				subMenu: false
+				name: 'logout_Lbl',
+				subMenu: false,
+				id: 'Logout'
 			}
 		]
 	};

@@ -439,10 +439,6 @@ export class AppComponent implements OnInit {
 		email: 'info@FincaNueva.com',
 		address: 'Finca Nueva, Calle Augusto Angulo 130, Miraflores, Perú, 15048',
 	};
-	// "complete_TblValue": "complete",
-	// "incomplete_TblValue": "incomplete",
-	// "inProgress_TblValue": "in progress",
-	// "notStarted_TblValue": "not started",
 	data = [
 		{
 			statedate: "Aug-30-2019 ", enddate: "Aug-31-2019 ",
@@ -544,13 +540,12 @@ export class AppComponent implements OnInit {
 		console.log('dialog');
 		// 'imgSrc': 'http://34.217.89.204/assets/icons/verified_icon.png',
 		const data = {
-			// 'icon': 'suku-success-icon',
-			// 'message': 'confirm shipment status',
-			// 'description': 'Are you sure you would like to mark this listing/product as shipped?',
-			// 'loader': 'enable',
-			// 'buttonText': 'Action',
-			// 'descriptionOne': 'Note: Once the Listing/Product is marked as shipped, you will not be able to edit the tracking number or comments.',
-			showCloseButton: true,
+			'titleOne': 'claims_PopTitle',
+			'titleTwo': 'claims_PopText',
+			'buttonLableTwo': 'claims_PopBtnYes',
+			'buttonLableOne': 'claims_PopBtnNo',
+			'buttonLableThree': 'claims_PopBtnCancel',
+			'showCloseButton': true,
 			'openDialog': true
 		};
 		// this.sukuLoaderService.openLoader(data);
