@@ -63,8 +63,9 @@
                 [(ngModel)]="item[list]" [maxLength]="25" type="{{(typeKey[list]=='Number')?'number':'text'}}"
                 (change)="validate(item[list],j)" [disabled]="tableDisabled"
                 *ngIf="editable[j] && (list != actionkey) && ( typeKey[list]=='String' || typeKey[list]=='Number')" />
-              *ngIf="(j == errorvalidationIndex) && (item[list] == errorvalidationKey )">value should be greater then
-              0</p>
+              <p id="{{j}}" class="errorMessage"
+                *ngIf="(j == errorvalidationIndex) && (item[list] == errorvalidationKey )">value should be greater then
+                0</p>
             </span>
 
             <input type="date" (keyup)="sendData()" [disabled]="tableDisabled" data-date=""

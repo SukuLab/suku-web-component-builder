@@ -20,7 +20,7 @@
     <div class="col pT text-right align-items-end d-flex justify-content-end align-item-right toggle"
       *ngIf="enableTranslate">
       <span class="toggle pr-3">
-        {{language | translate}}
+        {{language | translate  | uppercase}}
       </span>
       <mat-slide-toggle color="{{sliderTheme}}" id="{{sliderId}}" type="checkbox" (change)="languageChange.emit($event)"
         [checked]="translatorValue">
