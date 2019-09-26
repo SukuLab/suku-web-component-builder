@@ -9,7 +9,7 @@
       <ul class="navbar-nav">
         <li class="pT" (click)="toggle(names)">
           <a [ngClass]="{'active': isActiveFun(names)}" class="{{nameCustomClass}}">
-            {{names.name | uppercase}}
+            {{names.name | translate}}
           </a>
         </li>
       </ul>
@@ -20,10 +20,10 @@
     <div class="col pT text-right align-items-end d-flex justify-content-end align-item-right toggle"
       *ngIf="enableTranslate">
       <span class="toggle pr-3">
-        {{language  | uppercase}}
+        {{language | translate}}
       </span>
-      <mat-slide-toggle color="{{sliderTheme}}" id="{{sliderId}}" type="checkbox"
-        (change)="languageChange.emit($event)">
+      <mat-slide-toggle color="{{sliderTheme}}" id="{{sliderId}}" type="checkbox" (change)="languageChange.emit($event)"
+        [checked]="translatorValue">
       </mat-slide-toggle>
     </div>
   </div>
@@ -44,7 +44,7 @@
       <div class="bgColor1 col-sm-12 wrapper {{submenuCustomClass}}" *ngIf="names?.subMenu">
         <li *ngFor="let name of names?.subMenuData" class="line" (click)="select(name)"
           [ngClass]="{'active1': isActive2(name)}">
-          <a>{{name.name}}</a>
+          <a>{{name.name | translate}}</a>
         </li>
       </div>
     </div>
@@ -62,7 +62,7 @@
         <span id="buy{{i}}" class="nav-item nav-link" data-toggle="collapse" attr.data-target="#collapseOne{{i}}">
           <ul class="navbar-nav">
             <li class="pT" (click)="toggle(names)">
-              <a class="subMenuBgStyle">{{names.name | uppercase}} <i class="fa fa-arrow-down flRight"
+              <a class="subMenuBgStyle">{{names.name | translate}} <i class="fa fa-arrow-down flRight"
                   *ngIf="names.subMenu===true"></i></a>
             </li>
           </ul>
@@ -73,7 +73,7 @@
                 <div *ngIf="names?.visible">
                   <div class="bgColor1 col-sm-12 wrapper" *ngIf="names?.subMenu">
                     <li *ngFor="let name of names?.subMenuData" class="line">
-                      <a>{{name.name}}</a>
+                      <a>{{name.name | translate}}</a>
                     </li>
                   </div>
                 </div>

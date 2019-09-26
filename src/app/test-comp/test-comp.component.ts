@@ -31,7 +31,7 @@ export class TestCompComponent implements OnInit {
       dob: '',
       degree: '',
       pet: '',
-      action: ''
+      'actions_TblColHdr': ''
     },
     {
       name: '10',
@@ -39,7 +39,7 @@ export class TestCompComponent implements OnInit {
       dob: '',
       degree: '',
       pet: '',
-      action: ''
+      'actions_TblColHdr': ''
     },
     {
       name: '',
@@ -47,7 +47,7 @@ export class TestCompComponent implements OnInit {
       dob: '',
       degree: '',
       pet: '',
-      action: ''
+      'actions_TblColHdr': ''
     },
     {
       name: '',
@@ -55,7 +55,7 @@ export class TestCompComponent implements OnInit {
       dob: '',
       degree: '',
       pet: '',
-      action: ''
+      'actions_TblColHdr': ''
     }
     // {
     //   name: 'Roy',
@@ -75,41 +75,41 @@ export class TestCompComponent implements OnInit {
     // }
   ];
   tableKey2 = {
-    selection: 'Checkbox',
+    'selection_TblColHdr': 'Checkbox',
     Sku: 'Number',
-    brand: 'String',
+    'brand_TblColHdr': 'String',
     'product name': 'String',
     '# of Boxes': 'Number'
   };
   tabelData2 = [
     {
-      selection: true,
+      'selection_TblColHdr': true,
       Sku: '123465',
-      brand: 'WONG PREMIUM',
+      'brand_TblColHdr': 'WONG PREMIUM',
       'product name': 'TBONE',
       '# of Boxes': '45',
       temp: '12'
     },
     {
-      selection: true,
+      'selection_TblColHdr': true,
       Sku: '123465',
-      brand: 'WONG PREMIUM',
+      'brand_TblColHdr': 'WONG PREMIUM',
       'product name': 'TBONE',
       '# of Boxes': '5',
       temp: '21'
     },
     {
-      selection: false,
+      'selection_TblColHdr': false,
       Sku: '123465',
-      brand: 'WONG PREMIUM -',
+      'brand_TblColHdr': 'WONG PREMIUM -',
       'product name': 'TBONE',
       '# of Boxes': '',
       temp: '21'
     },
     {
-      selection: false,
+      'selection_TblColHdr': false,
       Sku: '123465',
-      brand: 'WONG PREMIUM',
+      'brand_TblColHdr': 'WONG PREMIUM',
       'product name': 'TBONE',
       '# of Boxes': '2',
       temp: '21'
@@ -117,7 +117,7 @@ export class TestCompComponent implements OnInit {
   ];
   tableKey3 = {
     Sku: 'Number',
-    brand: 'String',
+    'brand_TblColHdr': 'String',
     'product name': 'String',
     '# of Boxes': 'Number',
     'Received All Boxes': 'Checkbox',
@@ -127,7 +127,7 @@ export class TestCompComponent implements OnInit {
   tabelData3 = [
     {
       Sku: '34564',
-      brand: 'WONG PREMIUM',
+      'brand_TblColHdr': 'WONG PREMIUM',
       'product name': 'PICAHNA',
       '# of Boxes': '45',
       'Received All Boxes': false,
@@ -135,7 +135,7 @@ export class TestCompComponent implements OnInit {
     },
     {
       Sku: '34564',
-      brand: 'WONG PREMIUM',
+      'brand_TblColHdr': 'WONG PREMIUM',
       'product name': 'TBONE',
       '# of Boxes': '4',
       'Received All Boxes': false,
@@ -143,7 +143,7 @@ export class TestCompComponent implements OnInit {
     },
     {
       Sku: '34564',
-      brand: 'WONG PREMIUM',
+      'brand_TblColHdr': 'WONG PREMIUM',
       'product name': 'TBONE',
       '# of Boxes': '14',
       'Received All Boxes': false,
@@ -726,7 +726,7 @@ export class TestCompComponent implements OnInit {
     notificationCountId: 'notificationCount',
     submenu: [
       {
-        name: 'Logout',
+        name: 'logout_Lbl',
         subMenu: false
       }
     ]
@@ -751,9 +751,9 @@ export class TestCompComponent implements OnInit {
     setTimeout(() => {
       this.sampleAssetsData.forEach(val => {
         const template = {
-          selection: false,
+          'selection_TblColHdr': false,
           Sku: val.skuku,
-          brand: val.brand.name,
+          'brand_TblColHdr': val.brand.name,
           'product name': val.name
         };
         this.sampleData.push(template);
@@ -777,7 +777,7 @@ export class TestCompComponent implements OnInit {
     this.sampleAssetsDataForLogi.forEach(val => {
       const template = {
         Sku: val.skuku,
-        brand: val.name,
+        'brand_TblColHdr': val.name,
         'product name': val.name,
         '# of Boxes': val.attributes['# of Boxes'],
         'Received All Boxes': false

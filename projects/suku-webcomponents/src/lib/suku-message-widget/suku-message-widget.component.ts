@@ -28,6 +28,7 @@ export class SukuMessageWidgetComponent implements OnInit {
   }
 
   checkSpcialChar(event) {
+    console.log(event)
     if (event.charCode == 36 ||
       event.charCode == 95 ||
       event.charCode == 42 ||
@@ -36,6 +37,7 @@ export class SukuMessageWidgetComponent implements OnInit {
       event.charCode == 40 ||
       event.charCode == 41 ||
       event.charCode == 39 ||
+      event.charCode == 32 ||
       event.charCode == 33
     ) {
       event.returnValue = true;

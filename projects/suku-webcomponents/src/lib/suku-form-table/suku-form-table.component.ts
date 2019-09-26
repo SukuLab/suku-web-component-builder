@@ -35,6 +35,7 @@ export class SukuFormTableComponent implements OnInit {
   @Input() typeKey;
   @Input() type;
   @Input() defaultCount = 2;
+  @Input() actionkey = 'actions_TblColHdr';
   @Input()
   get items() {
     console.log('items ------------');
@@ -88,7 +89,7 @@ export class SukuFormTableComponent implements OnInit {
         }
       });
       if (this.enableControls) {
-        template['action'] = '';
+        template[this.actionkey] = '';
       }
       this._items.push(template);
     }
