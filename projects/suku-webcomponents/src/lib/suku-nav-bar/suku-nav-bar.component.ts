@@ -25,9 +25,10 @@ export class SukuNavBarComponent {
 	@Input('hide-bell-icon') hideBellIcon = true;
 	@Input('hide-user-detail') hideUserDetail = true;
 	@Input('enable-translate') enableTranslate = true;
-	@Input('language') language = 'Española';
+	@Input('language') language = 'language_Btn';
 	@Input('slider-theme') sliderTheme = 'primary';
 	@Input('slider-id') sliderId = 'translateButton';
+	@Input('toggle-label-position') toggleLabelPosition = 'before';
 	@Input('translator-value') translatorValue = true;
 	@Output() action = new EventEmitter();
 	@Output() languageChange = new EventEmitter();
