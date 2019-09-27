@@ -1,5 +1,5 @@
 <form [formGroup]="test">
-  <button (click)="open()">Open Dialog</button>
+  <!-- <button (click)="open()">Open Dialog</button> -->
   <!-- <suku-user-input></suku-user-input> -->
   <!-- <suku-test-chooth></suku-test-chooth> -->
   <!-- <div class="col-sm-10 offset-sm-1"> -->
@@ -40,27 +40,27 @@
   <!-- <suku-date fontSize='40' dateString="2019-08-01 020:00:01" fontColor="#eb4034" fontFamily="secondary"
       fontWeight="800"></suku-date>
   </div> -->
-  <div class="form-group col-12 col-sm-8 col-md-8 col-lg-8 offset-sm-2 pL0R0 Rectangle-2">
+  <!-- <div class="form-group col-12 col-sm-8 col-md-8 col-lg-8 offset-sm-2 pL0R0 Rectangle-2">
     <suku-user-input [enable-user-icon]="false" (onChangeAction)="getLotId($event)" placeholder="Enter Lot #">
     </suku-user-input>
     <suku-user-details widgetTitleSize="16" widgetTitleWeight="600" widgetTitle='User details'
       fullName='{{facilityAddress?.registeredName}}' email='{{facilityAddress?.email}}'
-      phoneNumber='{{facilityAddress?.phone}}' fullAddress='{{facilityAddress?.address}}'></suku-user-details>
+      phoneNumber='{{facilityAddress?.phone}}' fullAddress='{{facilityAddress?.address}}'></suku-user-details> -->
     <!-- <suku-user-input> </suku-user-input> -->
-  </div>
+ <!--  </div>
   <div>
   </div>
-  <app-test-comp></app-test-comp>
+  <app-test-comp></app-test-comp> -->
   <div class="col-12 w-100 pt-4">
     <suku-progress-bar-type-three [data]="progressData"></suku-progress-bar-type-three>
   </div>
-  <div class="col">
+ <div class="col">
     <suku-display-table display-pagination='true' [translator]="true" table-items-count='10' [table-header]='header'
       [pagination-previous-label]="'previous_Page' | translate" [pagination-next-label]="'next_Page' | translate"
       (action)="call($event)" [table-data]="data" [status]="statusForDisplayTable" [colorPallete]="colorPallete">
     </suku-display-table>
   </div>
-  <div class="col p-3 bg-white">
+<!--   <div class="col p-3 bg-white">
     <mat-slide-toggle color="primary" (change)="languageChange($event)">
     </mat-slide-toggle>
   </div>
@@ -68,4 +68,4 @@
     {{'contactUs_Lbl' | translate}}
     {{'logout_Lbl' | translate}}
   </p>
-</form>
+</form> -->
