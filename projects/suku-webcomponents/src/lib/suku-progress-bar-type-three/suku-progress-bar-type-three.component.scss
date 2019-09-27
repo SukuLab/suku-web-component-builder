@@ -234,3 +234,11 @@ button {
   font-weight: 500 !important;
   color: black;
 }
+
+@media only screen and (max-device-width: 480px){
+
+  .p-xs-0{
+    padding:0px !important;
+  }
+
+}

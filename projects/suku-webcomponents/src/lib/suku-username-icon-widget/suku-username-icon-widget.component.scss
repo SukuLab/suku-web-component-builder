@@ -21,3 +21,12 @@
   vertical-align: bottom;
   font-family: $suku-primary-font;
 }
+
+@media only screen and (max-device-width: 480px){
+
+  .title {
+    font-size: 2.1rem!important;
+  } 
+
+}
+

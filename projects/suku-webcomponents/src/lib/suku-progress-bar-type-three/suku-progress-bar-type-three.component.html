@@ -1,5 +1,5 @@
 <div class="col-12 w-100 d-flex flex-column">
-  <ul class="progressbar">
+  <ul class="progressbar p-xs-0">
     <li *ngFor="let data of progressBarData;let i=index">
       <p class="circle" id="progressBar{{i}}" (click)="showDetails(data)" [ngClass]="{ 
     'active' : (data?.status == statusKey[0]), 

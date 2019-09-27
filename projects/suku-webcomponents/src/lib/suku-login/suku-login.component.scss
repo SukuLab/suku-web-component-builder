@@ -80,3 +80,14 @@
     align-self: flex-end;
   }
 }
+
+@media only screen and (max-device-width: 480px){
+
+  .pl-xs-0{
+    padding-left:0rem !important;
+  }
+
+  .pr-xs-0{
+    padding-right:0rem !important;
+  }
+}
