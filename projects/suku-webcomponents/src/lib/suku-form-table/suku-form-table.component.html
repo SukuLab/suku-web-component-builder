@@ -31,10 +31,13 @@
     </div>
   </div>
   <div class="col p-0">
-    <table class="table bg-white table-responsive-sm">
+    <table class="table bg-white table-responsive-sm" 
+    id="table"
+    data-toggle="table"
+    data-sort-order="desc">
       <thead>
         <tr>
-          <th *ngFor="let head of _items[0] | keys" [ngClass]="{'text-center': typeKey[head]=='Checkbox'}">
+          <th *ngFor="let head of _items[0] | keys" [ngClass]="{'text-center': typeKey[head]=='Checkbox'}" data-sortable = "true" >
             <span *ngIf="!(head === 'Sku')">{{head | titlecase }}</span>
             <span *ngIf="head === 'Sku'" class="Sku" >{{head}}</span>
           </th>

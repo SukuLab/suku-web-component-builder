@@ -11,11 +11,14 @@
       </div>
     </div>
   </div>
-  <table class="table table-striped border table-responsive-sm ">
+  <table class="table table-striped border table-responsive-sm "
+   id="table"
+  data-toggle="table"
+  data-sort-order="desc">
     <thead>
       <tr>
         <th [style.color]="headerColor" [style.font-size.px]="headerSize" [style.font-weight]="headerWeight"
-          *ngFor="let header of header;" id="{{header.id}}">{{header.title}}</th>
+          *ngFor="let header of header;" data-sortable = "true" id="{{header.id}}">{{header.title}}</th>
       </tr>
     </thead>
     <tbody>

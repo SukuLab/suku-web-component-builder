@@ -505,25 +505,10 @@ export class AppComponent implements OnInit {
 	//   }
 	//   this.sukuModalService.openLicenseModalDialogDialog(data);
 	// }
-
-	openSomething() {
-		let data = {
-			controlOneRequired: true,
-			controlTwoRequired: true,
-			controlTwoPatternEnabled: true,
-			controlTwoPattern: '[0-9]{9}[a-zA-Z]{1}[0-9]{5,10}$',
-			dateControlOneRequired: true,
-			dateControlTwoRequired: false,
-			startDateMaxDate: new Date(),
-			endDateMinDate: new Date(),
-		}
-		this.sukuModalService.openLicenseModalDialogDialog(data);
-	}
-
 	header = [
-		{ id: 'statedate', title: 'Start Date' },
+		{ id: 'statedate', title: 'Start Date'},
 		{ id: 'enddate', title: 'End Date' },
-		{ id: 'lname', title: 'Lot ID' },
+		{ id: 'lname', title: 'Lot ID',sort: 'false'  },
 		{ id: 'myStatus', title: 'My Task Status ' },
 		{ id: 'stepsCompleted', title: 'Steps Completed ' },
 		{ id: 'Status', title: 'Overall Status' }
