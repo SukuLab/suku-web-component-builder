@@ -8,7 +8,7 @@ import { FormBuilder, FormGroup, FormControl, FormArray } from '@angular/forms';
 })
 export class TestCompComponent implements OnInit {
   form: FormGroup;
-
+  sample = 'tree';
   tableKeyA1 = {
     'Cow ID': 'String',
     'Approx. Age (mths.)': 'Number',
@@ -26,12 +26,20 @@ export class TestCompComponent implements OnInit {
   };
   tabelData1 = [
     {
-      name: '',
+      'name': '10',
       'Physical Challenged': '',
       dob: '',
       degree: '',
       pet: '',
-      action: ''
+      'actions_TblColHdr': ''
+    },
+    {
+      name: '10',
+      'Physical Challenged': '',
+      dob: '',
+      degree: '',
+      pet: '',
+      'actions_TblColHdr': ''
     },
     {
       name: '',
@@ -39,7 +47,7 @@ export class TestCompComponent implements OnInit {
       dob: '',
       degree: '',
       pet: '',
-      action: ''
+      'actions_TblColHdr': ''
     },
     {
       name: '',
@@ -47,15 +55,7 @@ export class TestCompComponent implements OnInit {
       dob: '',
       degree: '',
       pet: '',
-      action: ''
-    },
-    {
-      name: '',
-      'Physical Challenged': '',
-      dob: '',
-      degree: '',
-      pet: '',
-      action: ''
+      'actions_TblColHdr': ''
     }
     // {
     //   name: 'Roy',
@@ -75,41 +75,41 @@ export class TestCompComponent implements OnInit {
     // }
   ];
   tableKey2 = {
-    selection: 'Checkbox',
+    'selection_TblColHdr': 'Checkbox',
     Sku: 'Number',
-    brand: 'String',
+    'brand_TblColHdr': 'String',
     'product name': 'String',
     '# of Boxes': 'Number'
   };
   tabelData2 = [
     {
-      selection: true,
+      'selection_TblColHdr': true,
       Sku: '123465',
-      brand: 'WONG PREMIUM',
+      'brand_TblColHdr': 'WONG PREMIUM',
       'product name': 'TBONE',
       '# of Boxes': '45',
       temp: '12'
     },
     {
-      selection: true,
+      'selection_TblColHdr': true,
       Sku: '123465',
-      brand: 'WONG PREMIUM',
+      'brand_TblColHdr': 'WONG PREMIUM',
       'product name': 'TBONE',
       '# of Boxes': '5',
       temp: '21'
     },
     {
-      selection: false,
+      'selection_TblColHdr': false,
       Sku: '123465',
-      brand: 'WONG PREMIUM -',
+      'brand_TblColHdr': 'WONG PREMIUM -',
       'product name': 'TBONE',
       '# of Boxes': '',
       temp: '21'
     },
     {
-      selection: false,
+      'selection_TblColHdr': false,
       Sku: '123465',
-      brand: 'WONG PREMIUM',
+      'brand_TblColHdr': 'WONG PREMIUM',
       'product name': 'TBONE',
       '# of Boxes': '2',
       temp: '21'
@@ -117,7 +117,7 @@ export class TestCompComponent implements OnInit {
   ];
   tableKey3 = {
     Sku: 'Number',
-    brand: 'String',
+    'brand_TblColHdr': 'String',
     'product name': 'String',
     '# of Boxes': 'Number',
     'Received All Boxes': 'Checkbox',
@@ -127,7 +127,7 @@ export class TestCompComponent implements OnInit {
   tabelData3 = [
     {
       Sku: '34564',
-      brand: 'WONG PREMIUM',
+      'brand_TblColHdr': 'WONG PREMIUM',
       'product name': 'PICAHNA',
       '# of Boxes': '45',
       'Received All Boxes': false,
@@ -135,7 +135,7 @@ export class TestCompComponent implements OnInit {
     },
     {
       Sku: '34564',
-      brand: 'WONG PREMIUM',
+      'brand_TblColHdr': 'WONG PREMIUM',
       'product name': 'TBONE',
       '# of Boxes': '4',
       'Received All Boxes': false,
@@ -143,7 +143,7 @@ export class TestCompComponent implements OnInit {
     },
     {
       Sku: '34564',
-      brand: 'WONG PREMIUM',
+      'brand_TblColHdr': 'WONG PREMIUM',
       'product name': 'TBONE',
       '# of Boxes': '14',
       'Received All Boxes': false,
@@ -151,50 +151,6 @@ export class TestCompComponent implements OnInit {
     }
   ];
 
-  progressData = [
-    {
-      name: 'Finca Nueva',
-      status: 'inProgress',
-      type: 'FARM',
-      data: '',
-      id: ''
-    },
-    {
-      name: 'Sasmar',
-      status: 'inProgress',
-      type: 'PROCESSOR',
-      data: '',
-      id: ''
-    },
-    {
-      name: 'Esmeralda',
-      status: 'inComplete',
-      type: 'LOGISTICS',
-      data: '',
-      id: ''
-    },
-    {
-      name: 'Cedicar',
-      status: 'inComplete',
-      type: 'DISTRIBUTOR',
-      data: '',
-      id: ''
-    },
-    {
-      name: 'Esmeralda',
-      status: 'inComplete',
-      type: 'UNKNOWN',
-      data: '',
-      id: ''
-    },
-    {
-      name: 'Cedicar',
-      status: 'inComplete',
-      type: 'UNKNOWN',
-      data: '',
-      id: ''
-    }
-  ];
 
   buttonData = {
     title: 'Marketplace',
@@ -448,7 +404,7 @@ export class TestCompComponent implements OnInit {
         }
       ],
       _id: '5d7698a7571ca311dd5af90e',
-      skuku: '010',
+      skuku: '050',
       name: 'Asado De Aguja',
       description:
         'This meat comes from cattle of European origin, which complements their diet with the natural antioxidant Sel-Plex making it healthier. Vacuum packed. Weight approx 1.5 Kg (Reference Photo. Products are sold in their original state).',
@@ -493,7 +449,7 @@ export class TestCompComponent implements OnInit {
         }
       ],
       _id: '5d7698a7571ca311dd5af91f',
-      skuku: '013',
+      skuku: '023',
       name: 'Asado Ruso',
       description:
         'This meat comes from cattle of European origin, which complements their diet with the natural antioxidant Sel-Plex making it healthier. Vacuum packed. Weight approx 1.5 Kg (Reference Photo. Products are sold in their original state).',
@@ -661,7 +617,7 @@ export class TestCompComponent implements OnInit {
     },
     {
       _id: '6893733cadef0c3cc831953d',
-      skuku: '017',
+      skuku: '037',
       lotId: '1',
       ids: [
         {
@@ -677,7 +633,7 @@ export class TestCompComponent implements OnInit {
     },
     {
       _id: '7a3c779e8297ca6c3cdbdb2e',
-      skuku: '018',
+      skuku: '030',
       lotId: '1',
       ids: [
         {
@@ -709,7 +665,7 @@ export class TestCompComponent implements OnInit {
     },
     {
       _id: '17cd5c76c1865613b37c7e37',
-      skuku: '020',
+      skuku: '040',
       lotId: '1',
       ids: [
         {
@@ -760,7 +716,21 @@ export class TestCompComponent implements OnInit {
       '# of Boxes Received': ''
     }
   ]
-  textcount = 0 ;
+  textcount = 0;
+  navData = {
+    logo: 'assets/images/Suku_Logo_white.png',
+    Username: '',
+    companyName: '',
+    bellIcon: '',
+    bellIconId: 'notificationIcon',
+    notificationCountId: 'notificationCount',
+    submenu: [
+      {
+        name: 'logout_Lbl',
+        subMenu: false
+      }
+    ]
+  };
   constructor(private fb: FormBuilder) { }
 
   ngOnInit() {
@@ -781,9 +751,9 @@ export class TestCompComponent implements OnInit {
     setTimeout(() => {
       this.sampleAssetsData.forEach(val => {
         const template = {
-          selection: false,
+          'selection_TblColHdr': false,
           Sku: val.skuku,
-          brand: val.brand.name,
+          'brand_TblColHdr': val.brand.name,
           'product name': val.name
         };
         this.sampleData.push(template);
@@ -807,7 +777,7 @@ export class TestCompComponent implements OnInit {
     this.sampleAssetsDataForLogi.forEach(val => {
       const template = {
         Sku: val.skuku,
-        brand: val.name,
+        'brand_TblColHdr': val.name,
         'product name': val.name,
         '# of Boxes': val.attributes['# of Boxes'],
         'Received All Boxes': false
@@ -887,7 +857,7 @@ export class TestCompComponent implements OnInit {
     console.log('Producer', e);
   }
 
-  textCount(e){
+  textCount(e) {
     this.textcount = e;
   }
 }

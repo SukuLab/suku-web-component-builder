@@ -1,23 +1,22 @@
 <div class="col-12 w-100 d-flex flex-column">
-  <ul class="progressbar">
+  <ul class="progressbar p-xs-0">
     <li *ngFor="let data of progressBarData;let i=index">
-      <p class="circle" id="progressBar{{i}}" (click)="showDetails(data)"
-        [ngClass]="{ 
+      <p class="circle" id="progressBar{{i}}" (click)="showDetails(data)" [ngClass]="{ 
     'active' : (data?.status == statusKey[0]), 
     'completed' : (data?.status == statusKey[2]), 
     'toolTip': (data?.status == statusKey[1] && selected == data), 'c-pointer': enablePointer }">
         <span *ngIf="!(data?.status == statusKey[2])">{{i+1}}</span>
         <span class="tipTooltext" [style.visibility]="((selected == data) ? 'visible' : 'hidden')"
           [style.left.rem]="positionTooltipLeft" [style.top.rem]="positionTooltipTop">
-          <span id="progressToolTip">{{tooltipInfo}}</span>
+          <span id="progressToolTip">{{tooltipInfo | translate}}</span>
         </span>
         <span *ngIf="(data?.status == statusKey[2])" class="checkmark"></span>
       </p>
       <span id="progressBarTitle{{i}}">
         <span class="{{customTitleClass}} title" id="title{{i}}"
-          [ngClass]="{'text-bold': data?.status == statusKey[0], 'c-pointer': enablePointer}">{{data?.type}}</span>
+          [ngClass]="{'text-bold': data?.status == statusKey[0], 'c-pointer': enablePointer}">{{data?.type | translate}}</span>
         <p [ngClass]="{'subtitle-bold': data?.status == statusKey[0], 'c-pointer': enablePointer}"
-          class="{{customSubtitleClass}} type mb-1" id="subTitle{{i}}">{{data?.name}}</p>
+          class="{{customSubtitleClass}} type mb-1" id="subTitle{{i}}">{{data?.name | translate}}</p>
       </span>
     </li>
   </ul>

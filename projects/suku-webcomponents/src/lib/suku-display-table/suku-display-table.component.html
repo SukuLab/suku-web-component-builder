@@ -11,17 +11,22 @@
       </div>
     </div>
   </div>
-  <table class="table table-striped border table-responsive-sm "
-   id="table"
+  <table class="table table-striped border table-responsive-sm" 
+  id="table"
   data-toggle="table"
   data-sort-order="desc">
     <thead>
       <tr>
         <th [style.color]="headerColor" [style.font-size.px]="headerSize" [style.font-weight]="headerWeight"
-          *ngFor="let header of header;" data-sortable = "true" id="{{header.id}}">{{header.title}}</th>
+          *ngFor="let header of header;" id="{{header.id}}" data-sortable = "true" >
+          <span *ngIf="!translator">{{header.title}}</span>
+          <span *ngIf="translator">
+            {{ header.title | translate}}
+          </span>
+        </th>
       </tr>
     </thead>
-    <tbody>
+    <tbody> 
       <tr *ngFor="let data of tableData | paginate: { itemsPerPage: [itemsPerPageCount], currentPage: p,totalItems:
         totalItem } let i = index">
         <td *ngFor="let key of tableDataKey;" [style.color]="dataColor" [style.font-size.px]="dataSize"
@@ -29,9 +34,9 @@
           [style.background-color]="
         (data[key] === status[0]) ? colorPallete[0]: (data[key] === status[1]) ? colorPallete[1]: (data[key] === status[2]) ? colorPallete[2] : (data[key] === status[3]) ? colorPallete[3] :(data[key] === status[4]) ? colorPallete[4] : 'white'">
           <span *ngIf="key === hrefSelection" (click)="action.emit(data[key])" class="suku-link c-pointer">
-            {{data[key]}}
+            {{data[key] | translate}}
           </span>
-          <span *ngIf="!(key === hrefSelection)">{{data[key]}}</span>
+          <span *ngIf="!(key === hrefSelection)"> {{data[key] | translate}}</span>
         </td>
       </tr>
     </tbody>
@@ -39,7 +44,8 @@
   <div class="col pt-4 pb-4" *ngIf="showPagination">
     <div class="row">
       <div class="col text-right">
-        <pagination-controls (pageChange)="p = $event;paginationFun(p);"></pagination-controls>
+        <pagination-controls (pageChange)="p = $event;paginationFun(p);" previousLabel="{{paginationPreviousLabel}}"
+          nextLabel="{{paginationNextLabel}}"></pagination-controls>
       </div>
     </div>
   </div>

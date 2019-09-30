@@ -13,11 +13,16 @@
           <span class="info-box title maxWidth" [style.right.rem]="positionTooltipRight"
             [style.bottom.rem]="positionTooltipBottom">
             <span id="claimTooltip{{i}}" class="{{claimTooltipCustomClass}}">
-              <span [innerHTML]="claim?.tooltipInfo"></span>
+              <span>{{claim?.tooltipInfo | translate}}</span>
             </span>
           </span>
         </div>
       </div>
+    </span>
+    <span *ngIf="claim?.description">
+      <ul *ngFor="let item of claim?.description">
+        <li class="claimDescription">{{item}}</li>
+      </ul>
     </span>
   </p>
 </div>

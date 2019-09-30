@@ -13,6 +13,8 @@ export class SukuMessageWidgetComponent implements OnInit {
   @Input() id = 'message';
   @Input() customClass;
   @Input() maxlength = 500;
+  @Input() readOnly;
+  @Input() value = '';
   @Output() action = new EventEmitter();
   constructor() { }
 
@@ -23,6 +25,33 @@ export class SukuMessageWidgetComponent implements OnInit {
     const value = this.textAreaControl.value;
     console.log('text', value);
     this.action.emit(value);
+  }
+
+  checkSpcialChar(event) {
+    console.log(event)
+    if (event.charCode == 36 ||
+      event.charCode == 95 ||
+      event.charCode == 42 ||
+      event.charCode == 45 ||
+      event.charCode == 43 ||
+      event.charCode == 40 ||
+      event.charCode == 41 ||
+      event.charCode == 39 ||
+      event.charCode == 32 ||
+      event.charCode == 33
+    ) {
+      event.returnValue = true;
+      return true;
+    }
+
+    if (!((event.charCode >= 65) && (event.charCode <= 90) ||
+      (event.charCode >= 97) && (event.charCode <= 122) || (event.charCode >= 48) &&
+      (event.charCode <= 57))) {
+      event.returnValue = false;
+      return false;
+    }
+    event.returnValue = true;
+    return true;
   }
 
 }

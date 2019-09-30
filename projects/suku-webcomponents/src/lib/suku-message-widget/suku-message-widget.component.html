@@ -1,2 +1,3 @@
 <textarea class="form-control {{customClass}}" [id]="id" type="text" (keyup)="submitData()"
-  [formControl]="textAreaControl" rows="{{row}}" cols="{{col}}" [maxlength]="maxlength"></textarea>
+  [formControl]="textAreaControl" (keypress)="checkSpcialChar($event)" rows="{{row}}" cols="{{col}}"
+  [maxlength]="maxlength" [value]="value" [readOnly]="readOnly"></textarea>

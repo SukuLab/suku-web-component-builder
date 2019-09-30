@@ -1,3 +1,5 @@
+@import '../theme/theme';
+
 .Rectangle-2 {
   border-radius: 0 0 41px 41px;
   background-color: #ffffff;
@@ -20,7 +22,7 @@
 }
 
 .login {
-  font-family: 'Poppins-light', sans-serif !important;
+  font-family: $suku-primary-font;
   font-size: 30px;
   font-weight: normal;
   font-style: normal;
@@ -32,11 +34,12 @@
 }
 
 .view {
-  font-family: 'Encode Sans', sans-serif;
+  font-family: $suku-secondary-font;
+  font-size: 14px;
 }
 
 .remeberMe {
-  font-family: "Poppins", sans-serif;
+  font-family: $suku-primary-font;
   color: rgba(117, 117, 117, 0.37) !important;
   font-weight: 500;
   font-size: 14px;
@@ -75,5 +78,16 @@
   ::ng-deep .mat-form-field-prefix,
   ::ng-deep .mat-form-field-suffix {
     align-self: flex-end;
+  }
+}
+
+@media only screen and (max-device-width: 480px){
+
+  .pl-xs-0{
+    padding-left:0rem !important;
+  }
+
+  .pr-xs-0{
+    padding-right:0rem !important;
   }
 }

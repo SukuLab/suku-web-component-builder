@@ -24,6 +24,7 @@ export class SukuFormTableComponent implements OnInit {
   @Input('header-weight') headerWeight;
   @Input('status-bg-style') colorPallete = ['#a3ded8', '#f8dbb4', '#c7c3fa', 'gray'];
   @Input('status') status = ['completed', 'not-completed', 'pending', 'others'];
+  @Input('tableDisabled') tableDisabled = false;
   @Input()
   set enableEditIndex(val) {
     if (val) {
@@ -35,6 +36,7 @@ export class SukuFormTableComponent implements OnInit {
   @Input() typeKey;
   @Input() type;
   @Input() defaultCount = 2;
+  @Input() actionkey = 'actions_TblColHdr';
   @Input()
   get items() {
     console.log('items ------------');
@@ -88,7 +90,7 @@ export class SukuFormTableComponent implements OnInit {
         }
       });
       if (this.enableControls) {
-        template['action'] = '';
+        template[this.actionkey] = '';
       }
       this._items.push(template);
     }
@@ -195,6 +197,21 @@ export class SukuFormTableComponent implements OnInit {
 
   checkSpcialChar(event) {
     console.log(event, event.target.value);
+    if (event.charCode == 36 ||
+      event.charCode == 95 ||
+      event.charCode == 42 ||
+      event.charCode == 45 ||
+      event.charCode == 43 ||
+      event.charCode == 40 ||
+      event.charCode == 41 ||
+      event.charCode == 39 ||
+      event.charCode == 33 ||
+      event.charCode == 32
+    ) {
+      event.returnValue = true;
+      return true;
+    }
+
     if (!((event.charCode >= 65) && (event.charCode <= 90) ||
       (event.charCode >= 97) && (event.charCode <= 122) || (event.charCode >= 48) &&
       (event.charCode <= 57))) {
@@ -203,6 +220,33 @@ export class SukuFormTableComponent implements OnInit {
     }
     event.returnValue = true;
     return true;
+  }
+
+  sort(head, type) {
+    if (this._items) {
+      if (!(type == 'Checkbox')) {
+        this._items.sort((a, b) => {
+          return +a[head] - +b[head];
+        });
+      }
+      if (type == 'Number') {
+        this._items.sort((a, b) => {
+          return +a[head] - +b[head];
+        });
+      }
+      if (type == 'String') {
+        this._items.sort(function (a, b) {
+          if (a[head].toLowerCase() < b[head].toLowerCase()) {
+            return -1;
+          }
+          if (a[head].toLowerCase() > b[head].toLowerCase()) {
+            return 1;
+          }
+          return 0;
+        });
+      }
+      console.log('sort -', this._items, head, type);
+    }
   }
 
 }

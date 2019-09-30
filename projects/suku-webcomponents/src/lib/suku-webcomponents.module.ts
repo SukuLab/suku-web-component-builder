@@ -108,7 +108,14 @@ import { SukuConfirmationStatusModalComponent } from './suku-confirmation-status
 import { SukuFormTableComponent } from './suku-form-table/suku-form-table.component';
 import { SukuKeysPipe } from './suku-form-table/suku-key.pipe';
 import { SukuMessageWidgetComponent } from './suku-message-widget/suku-message-widget.component';
+import { HttpClientModule, HttpClient } from '@angular/common/http';
+import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
+import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 
+// AoT requires an exported function for factories
+export function HttpLoaderFactory(http: HttpClient) {
+  return new TranslateHttpLoader(http);
+}
 @NgModule({
   declarations: [
     SukuCardLineComponent,
@@ -244,7 +251,15 @@ import { SukuMessageWidgetComponent } from './suku-message-widget/suku-message-w
     SukuFileUploadModule,
     QuillModule,
     OwlDateTimeModule,
-    OwlNativeDateTimeModule
+    OwlNativeDateTimeModule,
+    HttpClientModule,
+    TranslateModule.forRoot({
+      loader: {
+        provide: TranslateLoader,
+        useFactory: HttpLoaderFactory,
+        deps: [HttpClient]
+      }
+    })
   ],
   providers: [SukuModalService, SukuLoaderService],
   exports: [

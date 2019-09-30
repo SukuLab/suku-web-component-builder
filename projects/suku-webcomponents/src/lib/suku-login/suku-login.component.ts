@@ -12,10 +12,16 @@ export class SukuLoginComponent implements OnInit {
   hide;
   remeberMeValue;
   _enableRequiredValidator = new BehaviorSubject('');
+  @Input() title = 'Login';
   @Input() color = 'primary';
   usernameControl = new FormControl('');
   @Input('placeholder-one') placeholderOne = 'Username';
   @Input('user-name-id') userNameId = 'Username';
+  @Input('password-label-one') passwordLabelOne = 'Hide';
+  @Input('password-label-two') passwordLabelTwo = 'Show';
+  @Input('rememberme-label') remembermeLabel = 'Remember Me?';
+  @Input('button-label') buttonLabel = 'Login';
+  @Input('button-id') buttonId = 'accountLogin';
   passwordControl = new FormControl('');
   @Input('placeholder-two') placeholderTwo = 'Password';
   @Input('password-id') passwordId = 'password';
@@ -46,11 +52,11 @@ export class SukuLoginComponent implements OnInit {
   @Input()
   set value(val) {
     console.log('val', val);
-    if (val){
-    if (val.username && val.password) {
-      this.usernameControl.patchValue(val.username);
-      this.passwordControl.patchValue(val.password);
-    }
+    if (val) {
+      if (val.username && val.password) {
+        this.usernameControl.patchValue(val.username);
+        this.passwordControl.patchValue(val.password);
+      }
     }
   }
   @Output() formSubmit = new EventEmitter();

@@ -4,24 +4,37 @@
       <img [src]="data?.logo" alt="brand-SUKU" class="btLine {{logoCustomClass}}" />
     </a>
   </div>
-  <div class="collapse navbar-collapse justify-content-end mr-5" id="navbarNav">
+  <div class="collapse navbar-collapse justify-content-end mr-3" id="navbarNav">
     <div *ngFor="let names of data.submenu" class="responseTab">
       <ul class="navbar-nav">
         <li class="pT" (click)="toggle(names)">
           <a [ngClass]="{'active': isActiveFun(names)}" class="{{nameCustomClass}}">
-            {{names.name | uppercase}}
+            {{names.name | translate}}
           </a>
         </li>
       </ul>
     </div>
   </div>
-  <div class="row d-flex justify-content-around ml-lg-5">
+  <!-- translate slide -->
+  <div class="row d-flex">
+    <div class="col pT text-right align-items-end d-flex justify-content-end align-item-right toggle"
+      *ngIf="enableTranslate">
+      <mat-slide-toggle [labelPosition]="toggleLabelPosition" color="{{sliderTheme}}" id="{{sliderId}}" type="checkbox"
+        (change)="languageChange.emit($event)" [checked]="translatorValue">
+        <span class="toggle pr-3">
+          {{language | translate | uppercase }}
+        </span>
+      </mat-slide-toggle>
+    </div>
+  </div>
+  <div class="row d-flex justify-content-around ml-lg-5" *ngIf="hideBellIcon && !hideUserDetail">
+    <!-- user notification and name -->
     <a class="align-items-end d-flex">
       <i *ngIf="hideBellIcon"><img id="notificationBell" src="{{data?.bellIcon}}" id="{{data?.bellIconId}}"></i>
       <span *ngIf="hideBellIcon" class="count" id="{{data?.notificationCountId}}">{{data?.notificationCount}}</span>
     </a>
-    <li class="iconColor"><img [src]="userIcon"></li>
-    <li class="userColor" [style.color]="userNameColor" [style.font-weight]="userNameFontWeight"
+    <li class="iconColor" *ngIf="!hideUserDetail"><img [src]="userIcon"></li>
+    <li class="userColor" *ngIf="!hideUserDetail" [style.color]="userNameColor" [style.font-weight]="userNameFontWeight"
       [style.font-size.rem]="userNameFontSize">{{UserName}}</li>
   </div>
 </nav>
@@ -31,7 +44,7 @@
       <div class="bgColor1 col-sm-12 wrapper {{submenuCustomClass}}" *ngIf="names?.subMenu">
         <li *ngFor="let name of names?.subMenuData" class="line" (click)="select(name)"
           [ngClass]="{'active1': isActive2(name)}">
-          <a>{{name.name}}</a>
+          <a>{{name.name | translate}}</a>
         </li>
       </div>
     </div>
@@ -49,7 +62,7 @@
         <span id="buy{{i}}" class="nav-item nav-link" data-toggle="collapse" attr.data-target="#collapseOne{{i}}">
           <ul class="navbar-nav">
             <li class="pT" (click)="toggle(names)">
-              <a class="subMenuBgStyle">{{names.name | uppercase}} <i class="fa fa-arrow-down flRight"
+              <a class="subMenuBgStyle">{{names.name | translate}} <i class="fa fa-arrow-down flRight"
                   *ngIf="names.subMenu===true"></i></a>
             </li>
           </ul>
@@ -60,7 +73,7 @@
                 <div *ngIf="names?.visible">
                   <div class="bgColor1 col-sm-12 wrapper" *ngIf="names?.subMenu">
                     <li *ngFor="let name of names?.subMenuData" class="line">
-                      <a>{{name.name}}</a>
+                      <a>{{name.name | translate}}</a>
                     </li>
                   </div>
                 </div>

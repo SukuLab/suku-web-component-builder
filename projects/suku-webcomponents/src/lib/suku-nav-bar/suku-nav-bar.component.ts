@@ -23,7 +23,15 @@ export class SukuNavBarComponent {
 	@Input('logo-custom-class') logoCustomClass = 'img-width';
 	@Input('name-custom-class') nameCustomClass = '';
 	@Input('hide-bell-icon') hideBellIcon = true;
+	@Input('hide-user-detail') hideUserDetail = true;
+	@Input('enable-translate') enableTranslate = true;
+	@Input('language') language = 'language_Btn';
+	@Input('slider-theme') sliderTheme = 'primary';
+	@Input('slider-id') sliderId = 'translateButton';
+	@Input('toggle-label-position') toggleLabelPosition = 'before';
+	@Input('translator-value') translatorValue = true;
 	@Output() action = new EventEmitter();
+	@Output() languageChange = new EventEmitter();
 	selectedItem: any;
 	@Input() data = {
 		logo: 'assets/images/Suku_Logo_white.png',
@@ -115,8 +123,9 @@ export class SukuNavBarComponent {
 					}]
 			},
 			{
-				name: 'Logout',
-				subMenu: false
+				name: 'logout_Lbl',
+				subMenu: false,
+				id: 'Logout'
 			}
 		]
 	};
