@@ -235,10 +235,33 @@ button {
   color: black;
 }
 
-@media only screen and (max-device-width: 480px){
+@media only screen and (max-device-width: 480px) {
 
-  .p-xs-0{
-    padding:0px !important;
+  .p-xs-0 {
+    padding: 0px !important;
   }
 
+}
+
+@media (max-width: 900px) {
+  .tipTooltext {
+    width: 200px !important;
+    bottom: 130%;
+    left: 11%;
+  }
+}
+
+@media (max-width: 480px) {
+  .tipTooltext {
+    width: 140px !important;
+    bottom: 130%;
+    left: 58%;
+  }
+
+}
+
+@media (max-width: 320px) {
+  .tipTool .tipTooltext {
+    width: 150px !important;
+  }
 }
