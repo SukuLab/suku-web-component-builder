@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, HostListener, EventEmitter } from '@angular/core';
+import { Component, OnInit, Input, HostListener, EventEmitter, Output } from '@angular/core';
 @Component({
   selector: 'suku-progress-bar-type-three',
   templateUrl: './suku-progress-bar-type-three.component.html',
@@ -29,7 +29,7 @@ export class SukuProgressBarTypeThreeComponent implements OnInit {
   @Input('custom-title-class') customTitleClass = '';
   @Input('custom-subtitlee-class') customSubtitleClass = '';
   @Input('enable-pointer') enablePointer = true;
-  @Input() action = new EventEmitter();
+  @Output() action = new EventEmitter();
   constructor() {
   }
 
