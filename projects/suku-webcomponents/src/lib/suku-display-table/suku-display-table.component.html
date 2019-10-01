@@ -20,6 +20,10 @@
           <span *ngIf="translator">
             {{ header.title | translate}}
           </span>
+          <span *ngIf="sortable" class="float-right" >
+              <span (click)="sort(header.id,header.type,'asse');"  class='fas fa-arrow-up'></span>
+              <span (click)="sort(header.id,header.type,'desc');"  class='fas fa-arrow-down'></span>
+           </span>
         </th>
       </tr>
     </thead>

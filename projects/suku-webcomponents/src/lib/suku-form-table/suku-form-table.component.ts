@@ -66,7 +66,8 @@ export class SukuFormTableComponent implements OnInit {
   @Output() remove = new EventEmitter();
   @Output() submitData = new EventEmitter();
   @Output() formStatus = new EventEmitter();
-
+  @Input('table-sortable') sortable = 'false';
+  
   _null = null;
 
   constructor() {
