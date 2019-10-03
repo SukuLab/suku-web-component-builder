@@ -33,12 +33,16 @@
     </div>
   </div>
   <div class="col p-0">
-    <table class="table bg-white table-responsive-sm">
+    <table class="table bg-white table-responsive-sm" >
       <thead>
         <tr>
-          <th *ngFor="let head of _items[0] | keys" [ngClass]="{'text-center': typeKey[head]=='Checkbox'}">
+          <th *ngFor="let head of _items[0] | keys" [ngClass]="{'text-center': typeKey[head]=='Checkbox'}" data-sortable = "true" >
             <span *ngIf="!(head === 'Sku')">{{head  | translate}}</span>
-            <span *ngIf="head === 'Sku'" class="Sku">{{head  | translate}}</span>
+            <span *ngIf="head === 'Sku'" class="Sku">{{head  | translate}}</span> 
+           <span *ngIf="!(typeKey[head] =='Checkbox')"class="float-right c-pointer" >
+              <span *ngIf="sortable" (click)="sort(head,typeKey[head],'asse');" class='fas fa-caret-up displayBlock'></span>
+              <span  *ngIf="sortable" (click)="sort(head,typeKey[head],'desc');"  class='fas fa-caret-down displayBlock lineH'></span>
+           </span>
           </th>
         </tr>
       </thead>

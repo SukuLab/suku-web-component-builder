@@ -66,7 +66,8 @@ export class SukuFormTableComponent implements OnInit {
   @Output() remove = new EventEmitter();
   @Output() submitData = new EventEmitter();
   @Output() formStatus = new EventEmitter();
-
+  @Input('table-sortable') sortable = 'false';
+  
   _null = null;
 
   constructor() {
@@ -222,7 +223,7 @@ export class SukuFormTableComponent implements OnInit {
     return true;
   }
 
-  sort(head, type) {
+  sort(head, type , formate) {
     if (this._items) {
       if (!(type == 'Checkbox')) {
         this._items.sort((a, b) => {
@@ -230,22 +231,32 @@ export class SukuFormTableComponent implements OnInit {
         });
       }
       if (type == 'Number') {
-        this._items.sort((a, b) => {
-          return +a[head] - +b[head];
-        });
-      }
-      if (type == 'String') {
+        // this._items.sort((a, b) => {
+        //   return +a[head] - +b[head];
+        // });
         this._items.sort(function (a, b) {
-          if (a[head].toLowerCase() < b[head].toLowerCase()) {
-            return -1;
-          }
-          if (a[head].toLowerCase() > b[head].toLowerCase()) {
+
+          if (a[head] < b[head] && formate == 'asse') {
             return 1;
+          }
+          if (b[head] < a[head] && formate == 'desc') {
+            return -1;
           }
           return 0;
         });
       }
-      console.log('sort -', this._items, head, type);
+      if (type == 'String') {
+        this._items.sort(function (a, b) {
+          if (a[head].toLowerCase() < b[head].toLowerCase() &&  formate == 'asse') {
+            return -1;
+          }
+          if (b[head].toLowerCase() < a[head].toLowerCase() && formate == 'desc') {
+            return -1;
+          }
+          return 0;
+        });
+      }
+      console.log('sort -', this._items, head, type,formate);
     }
   }
 

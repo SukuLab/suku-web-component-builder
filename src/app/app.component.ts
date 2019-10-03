@@ -425,12 +425,12 @@ export class AppComponent implements OnInit {
 	expMinDate: string;
 
 	header = [
-		{ id: 'statedate', title: 'startDate_TblColHdr' },
-		{ id: 'enddate', title: 'endDate_TblColHdr' },
-		{ id: 'lname', title: 'lotID_TbldColHdr' },
-		{ id: 'myStatus', title: 'myTaskStatus_TblColHdr' },
-		{ id: 'stepsCompleted', title: 'stepsCompleted_TblColHdr' },
-		{ id: 'Status', title: 'overallStatus_TblColHdr' }
+		{ id: 'statedate', title: 'startDate_TblColHdr', type: 'Date'},
+		{ id: 'enddate', title: 'endDate_TblColHdr',  type: 'Date' },
+		{ id: 'lotid', title: 'lotID_TbldColHdr',  type: 'Number'},
+		{ id: 'myStatus', title: 'myTaskStatus_TblColHdr' ,  type: 'String'},
+		{ id: 'stepsCompleted', title: 'stepsCompleted_TblColHdr',  type: 'String' },
+		{ id: 'status', title: 'overallStatus_TblColHdr' ,  type: 'String'}
 	];
 
 	facilityAddress = {
@@ -441,7 +441,7 @@ export class AppComponent implements OnInit {
 	};
 	data = [
 		{
-			statedate: "Aug-30-2019 ", enddate: "Aug-31-2019 ",
+			statedate: "Sep-30-2018 ", enddate: "Aug-31-2019 ",
 			lotid: "741", myStatus: 'complete_TblValue', stepsCompleted: "2/5", status: 'incomplete_TblValue'
 		},
 		{
@@ -449,7 +449,7 @@ export class AppComponent implements OnInit {
 			lotid: "021", myStatus: 'notStarted_TblValue', stepsCompleted: "3/5", status: 'incomplete_TblValue'
 		},
 		{
-			statedate: "Aug-30-2019 ", enddate: "Aug-31-2019 ",
+			statedate: "June-30-2019 ", enddate: "Aug-31-2019 ",
 			lotid: "784", myStatus: 'complete_TblValue', stepsCompleted: "5/5", status: 'inProgress_TblValue'
 		},
 		{
@@ -601,7 +601,6 @@ export class AppComponent implements OnInit {
 	call(s) {
 		console.log("dkdjs", s);
 	}
-
 
 	getLotId(l) {
 		console.log("this is l :", l);

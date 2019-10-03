@@ -47,6 +47,7 @@ export class SukuDisplayTableComponent implements OnInit {
   @Input('pagination-next-label') paginationNextLabel = 'Next';
   @Output() action = new EventEmitter();
   @Output() pagination = new EventEmitter();
+  @Input('table-sortable') sortable = 'false';
   constructor() {
   }
 
@@ -55,6 +56,47 @@ export class SukuDisplayTableComponent implements OnInit {
 
   paginationFun(p) {
     this.pagination.emit(p);
+  }
+  sort(head, type , formate) {
+    if (this._tableData) {
+      if (type == 'Number') {
+        this._tableData.sort(function (a, b) {
+
+          if (a[head] < b[head] && formate == 'asse') {
+            return -1;
+          }
+          if (b[head] < a[head] && formate == 'desc') {
+            return -1;
+          }
+          return 0;
+        });
+      }
+      if (type == 'String') {
+        this._tableData.sort(function (a, b) {
+          if (a[head] < b[head] &&  formate == 'asse') {
+            return -1;
+          }
+          if (b[head] < a[head] && formate == 'desc') {
+            return -1;
+          }
+          return 0;
+        });
+      }
+      if (type == 'Date'){
+        this._tableData.sort(function (a, b) {
+          a = new Date(a[head]);
+          b = new Date(b[head]);
+          if (a < b &&  formate == 'asse') {
+            return -1;
+          }
+          if (b < a && formate == 'desc') {
+            return -1;
+          }
+          return 0;
+        });
+      }
+      console.log('sort -', this._tableData, head, type,formate);
+    }
   }
 
 }
