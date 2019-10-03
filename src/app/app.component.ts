@@ -30,7 +30,7 @@ export class AppComponent implements OnInit {
 		},
 		{
 			name: 'Sasmar',
-			status: 'inProgress',
+			status: 'anotherStep',
 			type: 'processorJourney_Lbl',
 			data: '',
 			id: ''
