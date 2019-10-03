@@ -13,6 +13,7 @@
   "startNewLot_Btn": "Start a New Lot",
   "lotHistory_TblHdr": "HERE IS YOUR LOT HISTORY",
   "startDate_TblColHdr": "start date",
+  "dateFormat": "mm/dd/yyyy",
   "endDate_TblColHdr": "end date",
   "lotID_TbldColHdr": "lot id",
   "myTaskStatus_TblColHdr": "my task status",

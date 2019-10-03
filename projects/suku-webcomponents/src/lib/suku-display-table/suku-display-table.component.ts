@@ -37,8 +37,8 @@ export class SukuDisplayTableComponent implements OnInit {
   @Input('data-color') dataColor;
   @Input('data-weight') dataWeight;
   @Input('data-href') hrefSelection = 'lotid';
-  @Input('status-bg-style') colorPallete = ["#a3ded8", "#f8dbb4", "#c7c3fa", "gray"];
-  @Input('status') status = ["completed", "not-completed", "pending", 'others'];
+  @Input('status-bg-style') colorPallete = ['#a3ded8', '#f8dbb4', '#c7c3fa', 'gray'];
+  @Input('status') status = ['completed', 'not-completed', 'pending', 'others'];
   @Input('display-pagination') showPagination = false;
   @Input('table-items-count') itemsPerPageCount;
   @Input('total-item') totalItem;
@@ -48,6 +48,8 @@ export class SukuDisplayTableComponent implements OnInit {
   @Output() action = new EventEmitter();
   @Output() pagination = new EventEmitter();
   @Input('table-sortable') sortable = 'false';
+  @Input('date-type') dateType = ['enddate'];
+  @Input('enable-date-pipe') enableDatePipe = true;
   constructor() {
   }
 
@@ -57,7 +59,7 @@ export class SukuDisplayTableComponent implements OnInit {
   paginationFun(p) {
     this.pagination.emit(p);
   }
-  sort(head, type , formate) {
+  sort(head, type, formate) {
     if (this._tableData) {
       if (type == 'Number') {
         this._tableData.sort(function (a, b) {
@@ -73,7 +75,7 @@ export class SukuDisplayTableComponent implements OnInit {
       }
       if (type == 'String') {
         this._tableData.sort(function (a, b) {
-          if (a[head] < b[head] &&  formate == 'asse') {
+          if (a[head] < b[head] && formate == 'asse') {
             return -1;
           }
           if (b[head] < a[head] && formate == 'desc') {
@@ -82,11 +84,11 @@ export class SukuDisplayTableComponent implements OnInit {
           return 0;
         });
       }
-      if (type == 'Date'){
+      if (type == 'Date') {
         this._tableData.sort(function (a, b) {
           a = new Date(a[head]);
           b = new Date(b[head]);
-          if (a < b &&  formate == 'asse') {
+          if (a < b && formate == 'asse') {
             return -1;
           }
           if (b < a && formate == 'desc') {
@@ -95,8 +97,13 @@ export class SukuDisplayTableComponent implements OnInit {
           return 0;
         });
       }
-      console.log('sort -', this._tableData, head, type,formate);
+      console.log('sort -', this._tableData, head, type, formate);
     }
   }
+
+  // dateType(key) {
+  //   console.log('key', key);
+  //   return true;
+  // }
 
 }

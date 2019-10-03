@@ -439,32 +439,22 @@ export class AppComponent implements OnInit {
 		email: 'info@FincaNueva.com',
 		address: 'Finca Nueva, Calle Augusto Angulo 130, Miraflores, Perú, 15048',
 	};
-	data = [
-		{
-			statedate: "Sep-30-2018 ", enddate: "Aug-31-2019 ",
-			lotid: "741", myStatus: 'complete_TblValue', stepsCompleted: "2/5", status: 'incomplete_TblValue'
-		},
-		{
-			statedate: "Aug-30-2019 ", enddate: "Pending",
-			lotid: "021", myStatus: 'notStarted_TblValue', stepsCompleted: "3/5", status: 'incomplete_TblValue'
-		},
-		{
-			statedate: "June-30-2019 ", enddate: "Aug-31-2019 ",
-			lotid: "784", myStatus: 'complete_TblValue', stepsCompleted: "5/5", status: 'inProgress_TblValue'
-		},
-		{
-			statedate: "Aug-30-2019 ", enddate: "Aug-31-2019 ",
-			lotid: "369", myStatus: 'complete_TblValue', stepsCompleted: "3/6", status: 'inProgress_TblValue'
-		},
-		{
-			statedate: "Aug-30-2019 ", enddate: "Aug-31-2019 ",
-			lotid: "797", myStatus: 'complete_TblValue', stepsCompleted: "3/3", status: 'inProgress_TblValue'
-		},
-		{
-			statedate: "Aug-30-2019 ", enddate: "Aug-31-2019",
-			lotid: "785", myStatus: 'complete_TblValue', stepsCompleted: "1/6", status: 'incomplete_TblValue'
-		}
-	];
+	data =[
+		{"statedate":"2019-10-03T06:53:33.230Z",
+		"enddate":"-","lotid":"123",
+		"myStatus":"complete_TblValue",
+		"stepsCompleted":"1/4",
+		"status":"inProgress_TblValue"}
+		,{"statedate":"2019-10-03T05:45:45.835Z",
+		"enddate":"2019-10-03T06:01:57.619Z",
+		"lotid":"121","myStatus":"complete_TblValue",
+		"stepsCompleted":"4/4","status":"complete_TblValue"},
+		{"statedate":"2019-10-01T19:26:04.779Z","enddate":"-","lotid":"222",
+		"myStatus":"complete_TblValue","stepsCompleted":"1/4","status":"inProgress_TblValue"},
+		{"statedate":"2019-09-17T13:55:04.161Z","enddate":"-","lotid":"5",
+		"myStatus":"complete_TblValue","stepsCompleted":"1/4","status":"inProgress_TblValue"},
+		{"statedate":"2019-09-10T13:55:04.161Z","enddate":"-","lotid":"4",
+		"myStatus":"complete_TblValue","stepsCompleted":"2/4","status":"inProgress_TblValue"}];
 	colorPallete = ['#a3ded8', '#f8dbb4', '#c7c3fa', '#c2c1c1'];
 	statusKeywords = ['Completed', 'Incomplete', 'In Progress', 'Pending'];
 	statusForDisplayTable = ["complete_TblValue", "incomplete_TblValue", "inProgress_TblValue", 'notStarted_TblValue'];
@@ -475,7 +465,7 @@ export class AppComponent implements OnInit {
 		private translate: TranslateService
 	) {
 		this.sukuTheme.setSukuTheme();
-		this.translate.setDefaultLang('en');
+		this.translate.use('en');
 	}
 
 	ngOnInit() {
