@@ -82,7 +82,8 @@
   background: $suku-sick-green;
 }
 
-.progressbar li.completed:before {
+
+.progressbar li.anotherStep:before {
   color: white;
   background-color: #1c1c1c;
 }
@@ -123,6 +124,27 @@ li {
   background: #1c1c1c;
   width: 12px;
   height: 21px;
+}
+
+.checkmarkForAnotherStep {
+  position: absolute;
+  top: 32%;
+  right: 35.5%;
+  z-index: 5;
+  color: white;
+  /*background: #1c1c1c;*/
+  width: 12px;
+  height: 21px;
+}
+
+.checkmarkForAnotherStep:after {
+  content: '';
+  display: block;
+  width: 8px;
+  height: 15px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  transform: rotate(45deg);
 }
 
 .checkmark:after {
@@ -192,6 +214,11 @@ li {
 }
 
 .active {
+  color: white;
+  background: $suku-sick-green !important;
+}
+
+.anotherStep {
   color: white;
   background: $suku-sick-green !important;
 }
