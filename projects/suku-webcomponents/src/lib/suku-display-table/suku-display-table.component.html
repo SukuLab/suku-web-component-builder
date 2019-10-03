@@ -21,8 +21,8 @@
             {{ header.title | translate}}
           </span>
           <span *ngIf="sortable" class="float-right c-pointer" >
-              <span (click)="sort(header.id,header.type,'asse');"  class='fas fa-arrow-up'></span>
-              <span (click)="sort(header.id,header.type,'desc');"  class='fas fa-arrow-down'></span>
+              <span (click)="sort(header.id,header.type,'asse');"  class='fas fa-caret-left'></span>
+              <span (click)="sort(header.id,header.type,'desc');"  class='fas fa-caret-right pl-1'></span>
            </span>
         </th>
       </tr>

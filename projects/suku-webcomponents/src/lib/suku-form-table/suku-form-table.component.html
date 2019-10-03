@@ -40,8 +40,8 @@
             <span *ngIf="!(head === 'Sku')">{{head  | translate}}</span>
             <span *ngIf="head === 'Sku'" class="Sku">{{head  | translate}}</span> 
            <span *ngIf="!(typeKey[head] =='Checkbox')"class="float-right c-pointer" >
-              <span *ngIf="sortable" (click)="sort(head,typeKey[head],'asse');"  class='fas fa-arrow-up'></span>
-              <span  *ngIf="sortable" (click)="sort(head,typeKey[head],'desc');"  class='fas fa-arrow-down'></span>
+              <span *ngIf="sortable" (click)="sort(head,typeKey[head],'asse');"  class='fas fa-caret-left'></span>
+              <span  *ngIf="sortable" (click)="sort(head,typeKey[head],'desc');"  class='fas fa-caret-right pl-1'></span>
            </span>
           </th>
         </tr>
