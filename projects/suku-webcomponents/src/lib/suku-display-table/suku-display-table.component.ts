@@ -48,8 +48,8 @@ export class SukuDisplayTableComponent implements OnInit {
   @Output() action = new EventEmitter();
   @Output() pagination = new EventEmitter();
   @Input('table-sortable') sortable = 'false';
-  @Input('date-type') dateType = ['enddate'];
-  @Input('enable-date-pipe') enableDatePipe = true;
+  @Input('date-type') dateType = ['startdate', 'enddate'];
+  @Input('enable-date-pipe') enableDatePipe = false;
   constructor() {
   }
 

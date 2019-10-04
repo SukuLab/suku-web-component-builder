@@ -37,12 +37,12 @@
           <span *ngIf="key === hrefSelection" (click)="action.emit(data[key])" class="suku-link c-pointer">
             {{data[key] | translate}}
           </span>
-          <span *ngIf="!(key === hrefSelection)">
-            {{data[key] | translate}}</span>
-          <!-- <span *ngIf="!(key === hrefSelection) && !dateType.includes(key)">
+          <!-- <span *ngIf="!(key === hrefSelection)">
             {{data[key] | translate}}</span> -->
-          <!-- <span *ngIf="!(key === hrefSelection) && dateType.includes(key) && enableDatePipe">
-            {{data[key] | dateLocale: 'dateFormat'}}</span> -->
+          <span *ngIf="!(key === hrefSelection) && !dateType.includes(key)">
+            {{data[key] | translate}}</span>
+          <span *ngIf="!(key === hrefSelection) && dateType.includes(key) && enableDatePipe">
+            {{data[key] | dateLocale: 'dateFormat'}}</span>
         </td>
       </tr>
     </tbody>
