@@ -62,12 +62,13 @@ export class SukuFormTableComponent implements OnInit {
   @Input() keyData = [];
   @Input() controlsSize;
   @Input() controlCustomClass;
+  @Input('error-message-one') errorMessageOne = 'value should be  greater then 0';
   @Output() save = new EventEmitter();
   @Output() remove = new EventEmitter();
   @Output() submitData = new EventEmitter();
   @Output() formStatus = new EventEmitter();
   @Input('table-sortable') sortable = 'false';
-  
+
   _null = null;
 
   constructor() {
@@ -113,8 +114,23 @@ export class SukuFormTableComponent implements OnInit {
   }
 
   removedata(i, item) {
-    this._items.splice(i, 1);
-    this.remove.emit(item);
+    console.log('index', i, this._items.length);
+    if (this._items) {
+      if (this._items.length != 1) {
+        this._items.splice(i, 1);
+        const data = {
+          index: i,
+          data: item
+        };
+        this.remove.emit(data);
+      } else {
+        const data = {
+          index: i,
+          data: item
+        };
+        this.remove.emit(data);
+      }
+    }
   }
 
   checkValid(list) {
@@ -185,8 +201,8 @@ export class SukuFormTableComponent implements OnInit {
   }
 
   validate(key, index) {
-    console.log("this is key :", key);
-    console.log("this is index :", index);
+    console.log('this is key :', key);
+    console.log('this is index :', index);
     if (key == 0) {
       this.errorvalidationIndex = index;
       this.errorvalidationKey = key;
@@ -198,6 +214,15 @@ export class SukuFormTableComponent implements OnInit {
 
   checkSpcialChar(event) {
     console.log(event, event.target.value);
+
+    // if (event.key == '0') {
+    //   if (event.target.value == '0') {
+    //     event.target.value = '';
+    //     event.returnValue = false;
+    //     return false;
+    //   }
+    // }
+
     if (event.charCode == 36 ||
       event.charCode == 95 ||
       event.charCode == 42 ||
@@ -223,7 +248,7 @@ export class SukuFormTableComponent implements OnInit {
     return true;
   }
 
-  sort(head, type , formate) {
+  sort(head, type, formate) {
     if (this._items) {
       if (!(type == 'Checkbox')) {
         this._items.sort((a, b) => {
@@ -247,7 +272,7 @@ export class SukuFormTableComponent implements OnInit {
       }
       if (type == 'String') {
         this._items.sort(function (a, b) {
-          if (a[head].toLowerCase() < b[head].toLowerCase() &&  formate == 'asse') {
+          if (a[head].toLowerCase() < b[head].toLowerCase() && formate == 'asse') {
             return -1;
           }
           if (b[head].toLowerCase() < a[head].toLowerCase() && formate == 'desc') {
@@ -256,7 +281,7 @@ export class SukuFormTableComponent implements OnInit {
           return 0;
         });
       }
-      console.log('sort -', this._items, head, type,formate);
+      console.log('sort -', this._items, head, type, formate);
     }
   }
 

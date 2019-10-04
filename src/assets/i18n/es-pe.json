@@ -13,6 +13,7 @@
   "startNewLot_Btn": "Cree un nuevo lote",
   "lotHistory_TblHdr": "AQUÍ ESTÁ TU HISTORIA DE LOTE",
   "startDate_TblColHdr": "fecha de inicio",
+  "dateFormat": "dd/mm/yyyy",
   "endDate_TblColHdr": "fecha fin",
   "lotID_TbldColHdr": "id del lote",
   "myTaskStatus_TblColHdr": "estado de mis tareas",
