@@ -44,6 +44,7 @@ export class SukuConfirmationStatusModalComponent implements OnInit {
   };
   controlOne = new FormControl('');
   controlTwo = new FormControl('');
+	@Input('disable-value') disableValue: Boolean = true;
   _subscriptionTwo;
   _subscriptionOne;
   constructor(public dialogCustomRef: MatDialogRef<SukuConfirmationStatusModalComponent>,
@@ -87,6 +88,17 @@ export class SukuConfirmationStatusModalComponent implements OnInit {
   close() {
     this.dialogCustomRef.close(true);
   }
+  checkChar(event){
+    // console.log("this is the value", this.controlTwoValue);
+      if(event.length == 0){
+        console.log("no content present ",event.length);
+        this.disableValue = true;
+      }else{
+        console.log("content present ",event.length);
+        this.disableValue = false;
+      }
+  }
+
   submit() {
     console.log("this is called :",this.controlTwo.invalid);
     if (this.controlTwo.invalid) {
