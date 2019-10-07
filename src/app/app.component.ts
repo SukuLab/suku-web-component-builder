@@ -481,6 +481,7 @@ export class AppComponent implements OnInit {
 	}
 
 	ngOnInit() {
+		this.openSomething();
 		this.test = this.fb.group({
 			'controlOne': '',
 			'controlTwo': '',
@@ -630,16 +631,37 @@ export class AppComponent implements OnInit {
 
 	openSomething() {
 		let data = {
-			controlOneRequired: true,
-			controlTwoRequired: true,
-			controlTwoPatternEnabled: true,
-			controlTwoPattern: '[0-9]{9}[a-zA-Z]{1}[0-9]{5,10}$',
-			dateControlOneRequired: true,
-			dateControlTwoRequired: false,
-			startDateMaxDate: new Date(),
-			endDateMinDate: new Date(),
+			'imgSrc': '',
+			'imgId': '',
+			'icon': 'suku-alert-icon',
+			'iconId': 'suku-icon',
+			'iconCustomClass': 'suku-xl',
+			'message': 'confirm shipment status',
+			'description': 'Are you sure you would mark this listing/product as shipped?',
+			'loader': 'disable',
+			'buttonText': '',
+			'messageCustomClass': '',
+			'descriptionCustomClass': '',
+			'descriptionOneCustomClass': '',
+			'descriptionOne': 'Note: Once the listing/Product is marked as shipped, you will not be able to edit the tracking number or comments.',
+			'buttonCustomClass': '',
+			'messageId': '',
+			'buttonId': '',
+			cancelBtnText: 'Cancel',
+			submitBtnTxt: 'Confirm',
+			cancelBtnCustomClass: '',
+			submitBtnCustomClass: '',
+			controlOne: 'controlOne',
+			controlTwo: 'controlTwo',
+			controlOneId: 'contentOne',
+			controlTwoId: 'ContentTwo',
+			controlOnePlaceholder: 'Tracking Number (Optional)',
+			controlTwoPlaceholder: 'Comments*',
+			controlTwoRquiredErrorMsg: 'Cannot be blank.',
+			openDialog: true,
+			controlTwoRequired: true
 		}
-		this.sukuModalService.openLicenseModalDialogDialog(data);
+		this.sukuModalService.openConfirmationStatusModalDialog(data);
 	}
 
 	call(s) {

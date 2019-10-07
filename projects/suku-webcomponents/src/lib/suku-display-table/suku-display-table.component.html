@@ -20,10 +20,10 @@
           <span *ngIf="translator">
             {{ header.title | translate}}
           </span>
-          <span *ngIf="sortable" class="float-right c-pointer">
-            <span (click)="sort(header.id,header.type,'asse');" class='fas fa-caret-up displayBlock '></span>
-            <span (click)="sort(header.id,header.type,'desc');" class='fas fa-caret-down displayBlock lineH'></span>
-          </span>
+          <span *ngIf="sortable" class="float-right c-pointer pl-3" >
+              <span (click)="sort(header.id,header.type,'asse');"  class='fas fa-caret-up displayBlock '></span>
+              <span (click)="sort(header.id,header.type,'desc');"  class='fas fa-caret-down displayBlock lineH' ></span>
+           </span>
         </th>
       </tr>
     </thead>
