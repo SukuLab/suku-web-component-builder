@@ -72,5 +72,8 @@
     {{'contactUs_Lbl' | translate}}
     {{'logout_Lbl' | translate}}
   </p>
+  <suku-dropdown-wfc [disabled]="true" (select)="action($event)" [data]="dropDownData" placeholder="select a lot id"
+    displayKey="lot" keyValue="lot" selectId="lotDropDown" [value]="patchDropDown">
+  </suku-dropdown-wfc>
   <app-test-comp></app-test-comp>
 </form>

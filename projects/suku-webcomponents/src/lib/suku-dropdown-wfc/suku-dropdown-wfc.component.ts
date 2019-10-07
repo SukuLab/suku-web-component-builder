@@ -22,6 +22,7 @@ export class SukuDropdownWfcComponent implements OnInit {
   @Input() icon = 'suku-dropdown-icon';
   @Input('icon-custom-class') iconCustomClass = 'arrow-icon';
   @Input('icon-id') iconId = 'arrow';
+  @Input('disabled') disabled = false;
   @Input()
   set value(val) {
     console.log('val', val);
