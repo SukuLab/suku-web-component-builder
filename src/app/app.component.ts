@@ -481,7 +481,7 @@ export class AppComponent implements OnInit {
 	}
 
 	ngOnInit() {
-		this.openSomething();
+		// this.openSomething();
 		this.test = this.fb.group({
 			'controlOne': '',
 			'controlTwo': '',

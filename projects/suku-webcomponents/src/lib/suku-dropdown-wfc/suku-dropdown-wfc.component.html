@@ -1,8 +1,7 @@
 <span>
   <mat-form-field class="col p-0">
-    <mat-select id="{{selectId}}" [disabled]="disabled" [class]="customSelectClass" #selector
-      [formControl]="dropdownControl" name="dropdownControl" (selectionChange)="select.emit(dropdownControl);"
-      [placeholder]="placeholder">
+    <mat-select id="{{selectId}}" [class]="customSelectClass" #selector [formControl]="dropdownControl"
+      name="dropdownControl" (selectionChange)="select.emit(dropdownControl);" [placeholder]="placeholder">
       <mat-option *ngFor="let item of data;let i=index" value="{{item[keyValue]}}" id="option{{i}}">
         {{item[displayKey]}}
       </mat-option>

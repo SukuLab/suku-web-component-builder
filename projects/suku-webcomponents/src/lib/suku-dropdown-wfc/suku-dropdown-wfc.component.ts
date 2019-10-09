@@ -1,5 +1,5 @@
 import { Component, OnInit, Input, Output, EventEmitter, OnDestroy } from '@angular/core';
-import { FormControl, Validators } from '@angular/forms';
+import { FormControl, Validators, NgForm } from '@angular/forms';
 
 @Component({
   selector: 'suku-dropdown-wfc',
@@ -8,6 +8,7 @@ import { FormControl, Validators } from '@angular/forms';
 })
 export class SukuDropdownWfcComponent implements OnInit {
   _subscription;
+  @Input('form') peerForm: NgForm;
   dropdownControl = new FormControl('');
   @Input() pattern;
   @Input() color = 'primary';
@@ -17,12 +18,20 @@ export class SukuDropdownWfcComponent implements OnInit {
   @Input() placeholder = 'select product from this listing';
   @Input() formSumitAttempt;
   @Input() selectId = 'sttProductTraceability';
-  @Input() errorMsg = 'Cannot be blank';
+  @Input() errorMsg = 'Cannot be blank.';
+  @Input() errorMsgTwo = 'Duplicate lotId.';
   @Input() customSelectClass = '';
   @Input() icon = 'suku-dropdown-icon';
   @Input('icon-custom-class') iconCustomClass = 'arrow-icon';
   @Input('icon-id') iconId = 'arrow';
-  @Input('disabled') disabled = false;
+  @Input()
+  set disabled(val) {
+    if (val) {
+      this.dropdownControl.disable();
+    } else {
+      this.dropdownControl.enable();
+    }
+  }
   @Input()
   set value(val) {
     console.log('val', val);
@@ -30,9 +39,6 @@ export class SukuDropdownWfcComponent implements OnInit {
       this.dropdownControl.patchValue(val);
     }
   }
-  @Output() select = new EventEmitter();
-  @Output() valueChange = new EventEmitter();
-
   @Input('enable-required-validator')
   set enableRequiredValidator(val) {
     console.log('enableRequiredValidator', val);
@@ -41,9 +47,24 @@ export class SukuDropdownWfcComponent implements OnInit {
       this.dropdownControl.updateValueAndValidity();
     }
   }
+  @Output() select = new EventEmitter();
+  @Output() valueChange = new EventEmitter();
   constructor() { }
 
   ngOnInit() {
   }
 
+
+}
+
+export function duplicate(c: FormControl): any {
+  console.log('parent', c);
+  if (c.value) {
+    if (c.parent.controls['amount'].value <= 0 || c.parent.controls['amount'].value > c.parent.controls['balance'].value) {
+      return { duplicate: true };
+    } else {
+      return null;
+    }
+  }
+  return null;
 }

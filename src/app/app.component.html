@@ -56,7 +56,8 @@
   <div class="col">
     <suku-display-table display-pagination='true' [translator]="true" table-items-count='10' [table-header]='header'
       [pagination-previous-label]="'previous_Page' | translate" [pagination-next-label]="'next_Page' | translate"
-      (action)="call($event)" [table-data]="data" [status]="statusForDisplayTable" [colorPallete]="colorPallete" [table-sortable] = "true">
+      (action)="call($event)" [table-data]="data" [status]="statusForDisplayTable" [colorPallete]="colorPallete"
+      [table-sortable]="true">
     </suku-display-table>
   </div>
   -->
@@ -71,8 +72,9 @@
     {{'contactUs_Lbl' | translate}}
     {{'logout_Lbl' | translate}}
   </p>
-  <suku-dropdown-wfc [disabled]="true" (select)="action($event)" [data]="dropDownData" placeholder="select a lot id"
-    displayKey="lot" keyValue="lot" selectId="lotDropDown" [value]="patchDropDown">
+  <!-- [disabled]="true" -->
+  <suku-dropdown-wfc (select)="action($event)" [enable-required-validator]="true" [data]="dropDownData"
+    placeholder="select a lot id" displayKey="lot" keyValue="lot" selectId="lotDropDown">
   </suku-dropdown-wfc>
-  <app-test-comp></app-test-comp>
+  <!-- <app-test-comp></app-test-comp> -->
 </form>
