@@ -16,6 +16,8 @@ export class SukuCheckboxComponent implements OnInit {
   set checked(val) {
     if (val) {
       this.checkBoxControl.patchValue(val);
+    } else {
+      this.checkBoxControl.patchValue(val);
     }
   }
   @Input() indeterminate;
