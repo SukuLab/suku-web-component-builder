@@ -21,6 +21,7 @@ export class SukuDropdownComponent implements OnInit {
 	@Input() icon = 'suku-dropdown-icon';
 	@Input('icon-custom-class') iconCustomClass = 'arrow-icon';
 	@Input('icon-id') iconId = 'arrow';
+	@Input('disabled') disabled = false;
 	@Output() select = new EventEmitter();
 	// @Input() icon = 'suku-arrow-icon';
 	// @Input('icon-custom-class') iconCustomClass = 'arrow-icon';

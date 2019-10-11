@@ -18,12 +18,26 @@ export class TestCompComponent implements OnInit {
   tabelDataA1 = [];
   hiddenKey = ['brand'];
   tableKey1 = {
-    name: 'String',
-    'Physical Challenged': 'Checkbox',
-    dob: 'Date',
-    degree: 'Number',
-    pet: ['cat', 'dog']
+    'id de animal': 'String',
+    'aproximado edad(meses)': 'Number',
+    'aproximado peso(kg)': 'Number',
+    'raza': ['Angus', 'Charolais', 'Hereford', 'Simmental']
   };
+  tabelDataTest1 = [
+    {
+      'id de animal': '11',
+      'aproximado edad (meses)': '11',
+      'aproximado peso (kg)': '11',
+      'raza': 'Charolais',
+      'actions_TblColHdr': ''
+    },
+    {
+      'id de animal': '22',
+      'aproximado edad (meses)': '11',
+      'aproximado peso (kg)': '122',
+      'raza': '',
+      'actions_TblColHdr': ''
+    }]
   tabelData1 = [
     {
       'name': '10',

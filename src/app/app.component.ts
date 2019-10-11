@@ -426,12 +426,12 @@ export class AppComponent implements OnInit {
 	expMinDate: string;
 
 	header = [
-		{ id: 'statedate', title: 'startDate_TblColHdr', type: 'Date'},
-		{ id: 'enddate', title: 'endDate_TblColHdr',  type: 'Date' },
-		{ id: 'lotid', title: 'lotID_TbldColHdr',  type: 'Number'},
-		{ id: 'myStatus', title: 'myTaskStatus_TblColHdr' ,  type: 'String'},
-		{ id: 'stepsCompleted', title: 'stepsCompleted_TblColHdr',  type: 'String' },
-		{ id: 'status', title: 'overallStatus_TblColHdr' ,  type: 'String'}
+		{ id: 'statedate', title: 'startDate_TblColHdr', type: 'Date' },
+		{ id: 'enddate', title: 'endDate_TblColHdr', type: 'Date' },
+		{ id: 'lotid', title: 'lotID_TbldColHdr', type: 'Number' },
+		{ id: 'myStatus', title: 'myTaskStatus_TblColHdr', type: 'String' },
+		{ id: 'stepsCompleted', title: 'stepsCompleted_TblColHdr', type: 'String' },
+		{ id: 'status', title: 'overallStatus_TblColHdr', type: 'String' }
 	];
 
 	facilityAddress = {
@@ -442,33 +442,35 @@ export class AppComponent implements OnInit {
 	};
 	data = [
 		{
-			statedate: "Sep-30-2018 ", enddate: "Aug-31-2019 ",
-			lotid: "741", myStatus: 'complete_TblValue', stepsCompleted: "2/5", status: 'incomplete_TblValue'
-		},
-		{
-			statedate: "Aug-30-2019 ", enddate: "Pending",
-			lotid: "021", myStatus: 'notStarted_TblValue', stepsCompleted: "3/5", status: 'incomplete_TblValue'
-		},
-		{
-			statedate: "June-30-2019 ", enddate: "Aug-31-2019 ",
-			lotid: "784", myStatus: 'complete_TblValue', stepsCompleted: "5/5", status: 'inProgress_TblValue'
-		},
-		{
-			statedate: "Aug-30-2019 ", enddate: "Aug-31-2019 ",
-			lotid: "369", myStatus: 'complete_TblValue', stepsCompleted: "3/6", status: 'inProgress_TblValue'
-		},
-		{
-			statedate: "Aug-30-2019 ", enddate: "Aug-31-2019 ",
-			lotid: "797", myStatus: 'complete_TblValue', stepsCompleted: "3/3", status: 'inProgress_TblValue'
-		},
-		{
-			statedate: "Aug-30-2019 ", enddate: "Aug-31-2019",
-			lotid: "785", myStatus: 'complete_TblValue', stepsCompleted: "1/6", status: 'incomplete_TblValue'
+			'statedate': '2019-10-03T06:53:33.230Z',
+			'enddate': '-', 'lotid': '123',
+			'myStatus': 'complete_TblValue',
+			'stepsCompleted': '1/4',
+			'status': 'inProgress_TblValue'
 		}
-	];
+		, {
+			'statedate': '2019-10-03T05:45:45.835Z',
+			'enddate': '2019-10-03T06:01:57.619Z',
+			'lotid': '121', 'myStatus': 'complete_TblValue',
+			'stepsCompleted': '4/4', 'status': 'complete_TblValue'
+		},
+		{
+			'statedate': '2019-10-01T19:26:04.779Z', 'enddate': '-', 'lotid': '222',
+			'myStatus': 'complete_TblValue', 'stepsCompleted': '1/4', 'status': 'inProgress_TblValue'
+		},
+		{
+			'statedate': '2019-09-17T13:55:04.161Z', 'enddate': '-', 'lotid': '5',
+			'myStatus': 'complete_TblValue', 'stepsCompleted': '1/4', 'status': 'inProgress_TblValue'
+		},
+		{
+			'statedate': '2019-09-10T13:55:04.161Z', 'enddate': '-', 'lotid': '4',
+			'myStatus': 'complete_TblValue', 'stepsCompleted': '2/4', 'status': 'inProgress_TblValue'
+		}];
 	colorPallete = ['#a3ded8', '#f8dbb4', '#c7c3fa', '#c2c1c1'];
 	statusKeywords = ['Completed', 'Incomplete', 'In Progress', 'Pending'];
-	statusForDisplayTable = ["complete_TblValue", "incomplete_TblValue", "inProgress_TblValue", 'notStarted_TblValue'];
+	statusForDisplayTable = ['complete_TblValue', 'incomplete_TblValue', 'inProgress_TblValue', 'notStarted_TblValue'];
+	dropDownData = [];
+	patchDropDown;
 	constructor(private fb: FormBuilder,
 		private sukuModalService: SukuModalService,
 		private sukuLoaderService: SukuLoaderService,
@@ -476,10 +478,11 @@ export class AppComponent implements OnInit {
 		private translate: TranslateService
 	) {
 		this.sukuTheme.setSukuTheme();
-		this.translate.setDefaultLang('en');
+		this.translate.use('en');
 	}
 
 	ngOnInit() {
+		// this.openSomething();
 		this.test = this.fb.group({
 			'controlOne': '',
 			'controlTwo': '',
@@ -510,21 +513,63 @@ export class AppComponent implements OnInit {
 			this.messageArray.push(messageObj);
 		});
 		this.currentdate();
+		const d = new Date();
+
+		if (this.isLeapYear(d.getFullYear())) {
+			for (let i = 1; i <= 53; i++) {
+				this.dropDownData.push({ lot: i });
+			}
+		} else {
+			for (let i = 1; i <= 52; i++) {
+				this.dropDownData.push({ lot: i });
+			}
+		}
+		console.log('this.dropDownData.', this.dropDownData);
+		const year = d.getFullYear();
+		const month = d.getMonth();
+		console.log('this.getWeeksNum.', this.getWeeksNum());
+		this.patchDropDown = '45';
+		console.log('this.patchDropDown.', this.patchDropDown);
 		// this.open();
 	}
+
+	isLeapYear(year) {
+		return (year % 4 == 0 && year % 100 != 0) || (year % 400 == 0);
+	}
+
+	action(e) {
+		console.log('e', e.value);
+	}
+
+	getWeeksNum() {
+		const d = new Date();
+		const date = new Date(d.getTime());
+		date.setHours(0, 0, 0, 0);
+		// Thursday in current week decides the year.
+		date.setDate(date.getDate() + 3 - (date.getDay() + 6) % 7);
+		// January 4 is always in week 1.
+		const week1 = new Date(date.getFullYear(), 0, 4);
+		// Adjust to Thursday in week 1 and count number of weeks from date to week1.
+		return 1 + Math.round(((date.getTime() - week1.getTime()) / 86400000
+			- 3 + (week1.getDay() + 6) % 7) / 7);
+	}
+
+
 	sendMessage(e) {
 		console.log(e);
 	}
+
+
 	sendPublishDate() {
-		console.log("this is publish date value called ");
-		const publishDate = new Date(this.test.controls["publishDate"].value);
+		console.log('this is publish date value called ');
+		const publishDate = new Date(this.test.controls['publishDate'].value);
 		//  this.expMinDate = publishDate;
 		let maxdate = new Date().setDate(publishDate.getDate() + 1);
 		this.expMinDate = new Date(maxdate).toISOString();
 	}
 
 	sendMaxdate(expiryDate) {
-		console.log("this is expirt date", expiryDate)
+		console.log('this is expirt date', expiryDate)
 		this.expMaxDate = new Date(expiryDate);
 	}
 
@@ -534,7 +579,7 @@ export class AppComponent implements OnInit {
 		const day = todayTime.getDate();
 		const year = todayTime.getFullYear();
 		this.mindate = new Date(year, month, day);
-		return year + "-" + month + "-" + day;
+		return year + '-' + month + '-' + day;
 	}
 	
 	checkToogle() {
@@ -592,24 +637,45 @@ export class AppComponent implements OnInit {
 
 	openSomething() {
 		let data = {
-			controlOneRequired: true,
-			controlTwoRequired: true,
-			controlTwoPatternEnabled: true,
-			controlTwoPattern: '[0-9]{9}[a-zA-Z]{1}[0-9]{5,10}$',
-			dateControlOneRequired: true,
-			dateControlTwoRequired: false,
-			startDateMaxDate: new Date(),
-			endDateMinDate: new Date(),
+			'imgSrc': '',
+			'imgId': '',
+			'icon': 'suku-alert-icon',
+			'iconId': 'suku-icon',
+			'iconCustomClass': 'suku-xl',
+			'message': 'confirm shipment status',
+			'description': 'Are you sure you would mark this listing/product as shipped?',
+			'loader': 'disable',
+			'buttonText': '',
+			'messageCustomClass': '',
+			'descriptionCustomClass': '',
+			'descriptionOneCustomClass': '',
+			'descriptionOne': 'Note: Once the listing/Product is marked as shipped, you will not be able to edit the tracking number or comments.',
+			'buttonCustomClass': '',
+			'messageId': '',
+			'buttonId': '',
+			cancelBtnText: 'Cancel',
+			submitBtnTxt: 'Confirm',
+			cancelBtnCustomClass: '',
+			submitBtnCustomClass: '',
+			controlOne: 'controlOne',
+			controlTwo: 'controlTwo',
+			controlOneId: 'contentOne',
+			controlTwoId: 'ContentTwo',
+			controlOnePlaceholder: 'Tracking Number (Optional)',
+			controlTwoPlaceholder: 'Comments*',
+			controlTwoRquiredErrorMsg: 'Cannot be blank.',
+			openDialog: true,
+			controlTwoRequired: true
 		}
-		this.sukuModalService.openLicenseModalDialogDialog(data);
+		this.sukuModalService.openConfirmationStatusModalDialog(data);
 	}
 
 	call(s) {
-		console.log("dkdjs", s);
+		console.log('dkdjs', s);
 	}
 
 	getLotId(l) {
-		console.log("this is l :", l);
+		console.log('this is l :', l);
 	}
 
 	languageChange(event) {

@@ -11,23 +11,23 @@
       </div>
     </div>
   </div>
-  <table class="table table-striped border table-responsive-sm" >
+  <table class="table table-striped border table-responsive-sm">
     <thead>
       <tr>
         <th [style.color]="headerColor" [style.font-size.px]="headerSize" [style.font-weight]="headerWeight"
-          *ngFor="let header of header;" id="{{header.id}}" >
+          *ngFor="let header of header;" id="{{header.id}}">
           <span *ngIf="!translator">{{header.title}}</span>
           <span *ngIf="translator">
             {{ header.title | translate}}
           </span>
-          <span *ngIf="sortable" class="float-right c-pointer" >
+          <span *ngIf="sortable" class="float-right c-pointer pl-3" >
               <span (click)="sort(header.id,header.type,'asse');"  class='fas fa-caret-up displayBlock '></span>
               <span (click)="sort(header.id,header.type,'desc');"  class='fas fa-caret-down displayBlock lineH' ></span>
            </span>
         </th>
       </tr>
     </thead>
-    <tbody> 
+    <tbody>
       <tr *ngFor="let data of tableData | paginate: { itemsPerPage: [itemsPerPageCount], currentPage: p,totalItems:
         totalItem } let i = index">
         <td *ngFor="let key of tableDataKey;" [style.color]="dataColor" [style.font-size.px]="dataSize"
@@ -37,7 +37,12 @@
           <span *ngIf="key === hrefSelection" (click)="action.emit(data[key])" class="suku-link c-pointer">
             {{data[key] | translate}}
           </span>
-          <span *ngIf="!(key === hrefSelection)"> {{data[key] | translate}}</span>
+          <!-- <span *ngIf="!(key === hrefSelection)">
+            {{data[key] | translate}}</span> -->
+          <span *ngIf="!(key === hrefSelection) && !dateType.includes(key)">
+            {{data[key] | translate}}</span>
+          <span *ngIf="!(key === hrefSelection) && dateType.includes(key) && enableDatePipe">
+            {{data[key] | dateLocale: 'dateFormat'}}</span>
         </td>
       </tr>
     </tbody>

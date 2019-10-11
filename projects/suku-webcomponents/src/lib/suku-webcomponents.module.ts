@@ -111,7 +111,8 @@ import { SukuMessageWidgetComponent } from './suku-message-widget/suku-message-w
 import { HttpClientModule, HttpClient } from '@angular/common/http';
 import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
-
+import { DateLocaleFilter } from './suku-display-table/suku-date-pipe';
+import { DatePipe } from '@angular/common';
 // AoT requires an exported function for factories
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http);
@@ -199,6 +200,7 @@ export function HttpLoaderFactory(http: HttpClient) {
     SukuConfirmationStatusModalComponent,
     SukuFormTableComponent,
     SukuKeysPipe,
+    DateLocaleFilter,
     SukuMessageWidgetComponent
   ],
   imports: [
@@ -261,7 +263,7 @@ export function HttpLoaderFactory(http: HttpClient) {
       }
     })
   ],
-  providers: [SukuModalService, SukuLoaderService],
+  providers: [SukuModalService, SukuLoaderService, DatePipe],
   exports: [
     SukuCardLineComponent,
     SukuDashboardProfileComponent,

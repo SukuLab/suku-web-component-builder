@@ -38,8 +38,8 @@
     </div>
 
     <suku-filters [form]="form"></suku-filters>
-    <suku-dropdown-wfc (select)="action($event)" [data]="dropDownData" displayKey="templateName" keyValue="templateName"
-      [value]="value">
+    <suku-dropdown-wfc (select)="action($event)" [disabled]="true" [data]="dropDownData" displayKey="templateName"
+      keyValue="templateName" [value]="value">
     </suku-dropdown-wfc>
 
     <div class="col bg-white">
@@ -100,8 +100,8 @@
     </suku-form-table>
   </div> -->
   <div class="col-12 pb-5">
-    <suku-form-table [typeKey]="tableKey1"  [tableDisabled]="true" type="Producer" (formStatus)="formStatusEv($event)" [enableEditIndex]="3"
-      [items]="tabelData1">
+    <suku-form-table [typeKey]="tableKey1" type="Producer" [tableDisabled]="false" (formStatus)="formStatusEv($event)"
+      [items]="tabelDataTest1">
     </suku-form-table>
   </div>
   <div class="col-12 pb-5">
