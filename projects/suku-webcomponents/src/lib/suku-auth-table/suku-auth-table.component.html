@@ -6,12 +6,12 @@
        <div class="text-center tblBorderRight tblBorderLeft tblBorderTop  {{(i == tableContent.length - 1) ? ('tableEndColor tblBorderBottom') : ('')}}">
         <div class="col row">
           <div class="col-lg-3 col-sm-4 col-xs-5 text-left tblCellBorderRight keyText  pr-3 pt-2 pb-2" [style.font-weight]="keyFontWeight" [style.color]="keyTextColor" [style.font-size]="keyTextSize" [style.background-color]="keyBgColor">
-              {{ getKeyValue(data).key }}
+              {{ getKeyValue(data)['key'] }}
           </div>
           <div class="col-lg-9 col-sm-8 col-xs-7 text-left This-is-a-description  pr-3 pt-2 pb-2" [style.font-weight]="valueFontWeight" [style.color]="valueTextColor" [style.font-size]="valueTextSize" [style.background-color]="valueBgColor">
-           <span *ngIf="!chechIfArray(getKeyValue(data).value)"> {{ getKeyValue(data).value }} </span>
-           <div *ngIf="chechIfArray(getKeyValue(data).value)">
-	          <ul *ngFor="let val of getKeyValue(data).value">
+           <span *ngIf="!chechIfArray(getKeyValue(data)['value'])"> {{ getKeyValue(data)['value'] }} </span>
+           <div *ngIf="chechIfArray(getKeyValue(data)['value'])">
+	          <ul *ngFor="let val of getKeyValue(data)['value']">
 	               <li>{{val}}</li>
 	           </ul>
           </div>
