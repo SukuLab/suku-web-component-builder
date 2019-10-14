@@ -73,3 +73,18 @@
   font-weight: 500;
   color: #1c1c1c !important;
 }
+
+.btn-info.disabled{
+  border: 2px solid;
+  border-color: var(--suku-primary-color);
+  background-color: var(--suku-primary-color);
+  color: grey;
+}
+
+.btn-info.disabled:hover {
+  border: solid 2px;
+  border-color: $suku-sick-green;
+  background-color: white;
+  color: $suku-text-link;
+  cursor: not-allowed;
+}
