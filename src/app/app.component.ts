@@ -21,6 +21,7 @@ export class AppComponent implements OnInit {
 		disabled: false,
 		id: 'Marketplace'
 	};
+	htmlContent = '<h1><b>Hello world<b></h1>'
 	progressData = [
 		{
 			name: 'Finca Nueva',
