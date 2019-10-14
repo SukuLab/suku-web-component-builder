@@ -26,7 +26,7 @@
             <mat-radio-button class="searchData" [color]="color" (click)="selectproducts.emit(products)"
               [value]="productIndex" id="product{{productIndex}}">
               <span class="col p-0 product-label">
-                {{products?.asset?.description}}
+                <span [innerHtml]="products?.asset?.description | safeHtml"></span>
                 <br/>
                 {{products?.asset?.name}}
               </span>
