@@ -96,3 +96,11 @@
   font-family: $suku-primary-font;
   font-weight: 600;
 }
+
+@media (max-width:575px) {
+   .tblCellBorderRight {
+      border-right: none;
+       /*margin: auto;*/
+    }
+
+}
