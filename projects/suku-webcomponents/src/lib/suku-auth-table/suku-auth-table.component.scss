@@ -1,0 +1,98 @@
+@import '../theme/theme';
+
+.tableTopHeader {
+  border-style: solid;
+  border-top-right-radius: 50px;
+  border-color: #303038;
+  font-weight: bold;
+  color: white;
+  background-color: #212529;
+  margin: auto;
+
+}
+
+.tableHeaderColr {
+  background-color: #eaeaea;
+  color: #1c1c1c;
+}
+
+.INTEREST-NAME {
+  font-family: "Encode Sans", sans-serif !important;
+  font-size: 12px;
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: -0.4px;
+}
+
+.This-is-a-description {
+  font-family: "Encode Sans", sans-serif !important;
+  font-size: 15px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.43;
+  letter-spacing: 0px;
+  color: #3e3e3e;
+  word-break: break-word;
+   /*margin: auto;*/
+
+}
+
+.sukuBorderBottom {
+  font-family: $suku-primary-font;
+  border-bottom: 3.5px solid;
+  border-color: #a7bf2e;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.tableContentColor {
+  border-top: solid #eaeaea;
+  border-left: solid #eaeaea;
+  border-right:solid #eaeaea;
+}
+
+.tblBorderRight {
+  border-right:solid #eaeaea;
+   /*margin: auto;*/
+}
+
+.tblCellBorderRight {
+  border-right:solid #eaeaea;
+   /*margin: auto;*/
+}
+
+.marginAuto {
+  margin: auto;
+}
+
+.tblBorderTop {
+  border-top:solid #eaeaea;
+}
+
+.tblBorderLeft {
+  border-left: solid #eaeaea;
+}
+
+.tblBorderBottom {
+  border-bottom: solid #eaeaea;
+}
+
+.tableEndColor {
+  border-bottom-left-radius: 50px;
+}
+
+.pR-0 {
+  padding-right: 0px !important;
+}
+
+.pL-0 {
+  padding-left: 0px !important;
+}
+
+.keyText {
+  font-family: $suku-primary-font;
+  font-weight: 600;
+}
