@@ -39,11 +39,12 @@ export class SukuFundingSourceComponent implements OnInit {
 	};
 	@Input() contentOne = '';
 
-	@Input() labelOneId;
-	@Input() labelOneSize;
-	@Input() labelOneColor;
-	@Input() labelOneWeight;
-	@Input() labelOneCustomClass;
+	// not used 
+	// @Input() labelOneId;
+	// @Input() labelOneSize;
+	// @Input() labelOneColor;
+	// @Input() labelOneWeight;
+	// @Input() labelOneCustomClass;
 
 	/* output--actions */
 	@Output() removeDefault = new EventEmitter();

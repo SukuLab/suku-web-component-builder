@@ -256,20 +256,16 @@ export class SukuFormTableComponent implements OnInit {
         });
       }
       if (type == 'Number') {
-        // this._items.sort((a, b) => {
-        //   return +a[head] - +b[head];
-        // });
-        this._items.sort(function (a, b) {
-
-          if (a[head] < b[head] && formate == 'asse') {
-            return 1;
-          }
-          if (b[head] < a[head] && formate == 'desc') {
-            return -1;
-          }
-          return 0;
-        });
-      }
+        if (formate == 'asse') {
+          this._items.sort(function(a, b){
+            return a[head]-b[head]});
+        }
+        if (formate == 'desc') {
+          this._items.sort(function(a, b){
+            return b[head]-a[head]
+          });
+        }
+    }
       if (type == 'String') {
         this._items.sort(function (a, b) {
           if (a[head].toLowerCase() < b[head].toLowerCase() && formate == 'asse') {

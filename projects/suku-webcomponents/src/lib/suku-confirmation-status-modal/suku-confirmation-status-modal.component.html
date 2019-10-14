@@ -53,7 +53,7 @@
           <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
             <button type="button"
               class="btn btn-info btn btn-info btn-lg col-lg-8 col-md-8 col-sm-12 col-xs-12 {{ dialogData?.submitBtnCustomClass }}"
-              (click)="submit(); " [disabled]="disableValue">{{ dialogData?.submitBtnTxt }}</button>
+              (click)="submit(); " [ngClass]="{'disabled' : disableValue}" [disabled]="disableValue">{{ dialogData?.submitBtnTxt }}</button>
           </div>
         </div>
       </div>
