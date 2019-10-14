@@ -56,19 +56,43 @@
   <div class="col">
     <suku-display-table display-pagination='true' [translator]="true" table-items-count='10' [table-header]='header'
       [pagination-previous-label]="'previous_Page' | translate" [pagination-next-label]="'next_Page' | translate"
-      (action)="call($event)" [table-data]="data" [status]="statusForDisplayTable" [colorPallete]="colorPallete" [table-sortable] = "true">
+      (action)="call($event)" [table-data]="data" [status]="statusForDisplayTable" [colorPallete]="colorPallete"
+      [table-sortable]="true">
     </suku-display-table>
+<<<<<<< HEAD
+  </div> -->
+
+  <suku-checkbox [checked]="checkboxChecked"></suku-checkbox>
+  <button (click)="checkToogle();">click</button>
+
+<!--   <div class="col-12 w-100 pt-4">
+    <suku-progress-bar-type-three [data]="progressData"></suku-progress-bar-type-three>
+  </div> -->
+  <!--   <div class="col p-3 bg-white">
+=======
   </div>
   <div class="col-12 w-100 pt-4">
     <suku-progress-bar-type-three [data]="progressData"></suku-progress-bar-type-three>
   </div>
   <div class="col p-3 bg-white">
+>>>>>>> db3dc0cf3d01393af830c530eae9181ffc416aef
     <mat-slide-toggle color="primary" (change)="languageChange($event)">
     </mat-slide-toggle>
   </div>
   <p>
     {{'contactUs_Lbl' | translate}}
     {{'logout_Lbl' | translate}}
-  </p>
-  <app-test-comp></app-test-comp>
+<<<<<<< HEAD
+  </p> -->
+  <!-- <app-test-comp></app-test-comp> -->
 </form>
+ 
+=======
+  </p>
+  <!-- [disabled]="true" -->
+  <suku-dropdown-wfc (select)="action($event)" [enable-required-validator]="true" [data]="dropDownData"
+    placeholder="select a lot id" displayKey="lot" keyValue="lot" selectId="lotDropDown">
+  </suku-dropdown-wfc>
+  <!-- <app-test-comp></app-test-comp> -->
+</form>
+>>>>>>> db3dc0cf3d01393af830c530eae9181ffc416aef

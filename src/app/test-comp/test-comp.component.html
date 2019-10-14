@@ -38,8 +38,8 @@
     </div>
 
     <suku-filters [form]="form"></suku-filters>
-    <suku-dropdown-wfc (select)="action($event)" [data]="dropDownData" displayKey="templateName" keyValue="templateName"
-      [value]="value">
+    <suku-dropdown-wfc (select)="action($event)" [disabled]="true" [data]="dropDownData" displayKey="templateName"
+      keyValue="templateName" [value]="value">
     </suku-dropdown-wfc>
 
     <div class="col bg-white">

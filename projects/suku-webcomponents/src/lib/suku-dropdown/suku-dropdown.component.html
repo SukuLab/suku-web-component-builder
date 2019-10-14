@@ -1,7 +1,7 @@
 <span [formGroup]="form">
   <mat-form-field class="col p-0">
-    <mat-select id="{{selectId}}" [class]="customSelectClass" #selector formControlName="{{control}}"
-      (selectionChange)="select.emit(selector.value)" [placeholder]="placeholder">
+    <mat-select id="{{selectId}}" [class]="customSelectClass" [disabled]="disabled" #selector
+      formControlName="{{control}}" (selectionChange)="select.emit(selector.value)" [placeholder]="placeholder">
       <mat-option *ngFor="let item of data;let i=index" value="{{item[keyValue]}}" id="option{{i}}">
         {{item[displayKey]}}
       </mat-option>
