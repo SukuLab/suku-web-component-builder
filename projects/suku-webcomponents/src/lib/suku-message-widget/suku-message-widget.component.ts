@@ -35,6 +35,7 @@ export class SukuMessageWidgetComponent implements OnInit {
       event.charCode == 45 ||
       event.charCode == 43 ||
       event.charCode == 40 ||
+      event.charCode == 46 ||
       event.charCode == 41 ||
       event.charCode == 39 ||
       event.charCode == 32 ||

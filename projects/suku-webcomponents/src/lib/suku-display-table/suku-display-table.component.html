@@ -20,15 +20,15 @@
           <span *ngIf="translator">
             {{ header.title | translate}}
           </span>
-          <span *ngIf="sortable" class="float-right c-pointer pl-3" >
-              <span (click)="sort(header.id,header.type,'asse');"  class='fas fa-caret-up displayBlock '></span>
-              <span (click)="sort(header.id,header.type,'desc');"  class='fas fa-caret-down displayBlock lineH' ></span>
-           </span>
+          <span *ngIf="sortable" class="float-right c-pointer pl-3">
+            <span (click)="sort(header.id,header.type,'asse');" class='fas fa-caret-up displayBlock '></span>
+            <span (click)="sort(header.id,header.type,'desc');" class='fas fa-caret-down displayBlock lineH'></span>
+          </span>
         </th>
       </tr>
     </thead>
     <tbody>
-      <tr *ngFor="let data of tableData | paginate: { itemsPerPage: [itemsPerPageCount], currentPage: p,totalItems:
+      <tr *ngFor="let data of tableData | paginate: { itemsPerPage: itemsPerPageCount, currentPage: p,totalItems:
         totalItem } let i = index">
         <td *ngFor="let key of tableDataKey;" [style.color]="dataColor" [style.font-size.px]="dataSize"
           [style.font-weight]="dataWeight"
