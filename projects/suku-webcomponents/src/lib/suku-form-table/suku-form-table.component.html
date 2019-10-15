@@ -66,7 +66,7 @@
             </span>
             <!-- input -->
             <span *ngIf="editable[j] && (list != actionkey) && ( typeKey[list]=='String' || typeKey[list]=='Number')">
-              <input (keyup)="sendData()" (keypress)="checkSpcialChar($event)" class="form-control"
+              <input (keyup)="sendData()" (keypress)="checkSpcialChar($event,typeKey[list])" class="form-control"
                 [(ngModel)]="item[list]" [maxLength]="25" type="{{(typeKey[list]=='Number')?'number':'text'}}"
                 (change)="validate(item[list],j)" [disabled]="tableDisabled" id="{{list | trim}}{{j}}"
                 *ngIf="editable[j] && (list != actionkey) && ( typeKey[list]=='String' || typeKey[list]=='Number')"
