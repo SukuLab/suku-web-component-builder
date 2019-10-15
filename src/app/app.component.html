@@ -1,4 +1,8 @@
 <form [formGroup]="test">
+  <!-- <suku-auth-table ></suku-auth-table> -->
+  <!-- <suku-message-widget></suku-message-widget> -->
+  <!-- <suku-form-table></suku-form-table> -->
+  <!-- <p [innerHtml]="htmlContent"></p> -->
   <!-- <button (click)="open()">Open Dialog</button> -->
   <!-- <suku-user-input></suku-user-input> -->
   <!-- <suku-test-chooth></suku-test-chooth> -->
@@ -51,30 +55,6 @@
   <div>
   </div>
   <app-test-comp></app-test-comp> -->
-  <!-- <app-test-comp></app-test-comp> -->
-
-  <div class="col">
-    <suku-display-table display-pagination='true' [translator]="true" table-items-count='10' [table-header]='header'
-      [pagination-previous-label]="'previous_Page' | translate" [pagination-next-label]="'next_Page' | translate"
-      (action)="call($event)" [table-data]="data" [status]="statusForDisplayTable" [colorPallete]="colorPallete"
-      [table-sortable]="true">
-    </suku-display-table>
-  </div>
-  -->
-  <div class="col-12 w-100 pt-4">
-    <suku-progress-bar-type-three [data]="progressData"></suku-progress-bar-type-three>
-  </div>
-  <div class="col p-3 bg-white">
-    <mat-slide-toggle color="primary" (change)="languageChange($event)">
-    </mat-slide-toggle>
-  </div>
-  <p>
-    {{'contactUs_Lbl' | translate}}
-    {{'logout_Lbl' | translate}}
-  </p>
-  <!-- [disabled]="true" -->
-  <suku-dropdown-wfc (select)="action($event)" [enable-required-validator]="true" [data]="dropDownData"
-    placeholder="select a lot id" displayKey="lot" keyValue="lot" selectId="lotDropDown">
-  </suku-dropdown-wfc>
-  <!-- <app-test-comp></app-test-comp> -->
+  <app-test-comp></app-test-comp>
 </form>
+

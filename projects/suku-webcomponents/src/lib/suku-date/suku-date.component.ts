@@ -6,7 +6,7 @@ import { Component, OnInit, Input, Output, } from '@angular/core';
   styleUrls: ['./suku-date.component.scss']
 })
 export class SukuDateComponent implements OnInit {
-@Input() dateString;
+@Input() dateString = '2008-09-15T15:53:00';
 @Input() fontSize;
 @Input() fontWeight;
 @Input() dateId = 'dateId';

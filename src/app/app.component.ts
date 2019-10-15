@@ -13,6 +13,7 @@ import { TranslateService } from '@ngx-translate/core';
 })
 export class AppComponent implements OnInit {
 	test: FormGroup;
+	checkboxChecked = false;
 	buttonData = {
 		title: 'Marketplace',
 		icon: 'fa fa-shopping-cart',
@@ -20,6 +21,7 @@ export class AppComponent implements OnInit {
 		disabled: false,
 		id: 'Marketplace'
 	};
+	htmlContent = '<h1><b>Hello world<b></h1>'
 	progressData = [
 		{
 			name: 'Finca Nueva',
@@ -579,6 +581,11 @@ export class AppComponent implements OnInit {
 		const year = todayTime.getFullYear();
 		this.mindate = new Date(year, month, day);
 		return year + '-' + month + '-' + day;
+	}
+	
+	checkToogle() {
+		this.checkboxChecked = !this.checkboxChecked;
+		console.log('this.checkboxChecked', this.checkboxChecked)
 	}
 
 	open() {

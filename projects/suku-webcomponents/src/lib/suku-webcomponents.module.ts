@@ -113,6 +113,10 @@ import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { DateLocaleFilter } from './suku-display-table/suku-date-pipe';
 import { DatePipe } from '@angular/common';
+import { SukuAuthTableComponent } from './suku-auth-table/suku-auth-table.component';
+import { SukuTrimPipe } from './suku-form-table/suku-trim.pipe';
+// import { SafeHtmlPipe } from './suku-product-trace-widget/safe-html.pipe';
+
 // AoT requires an exported function for factories
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http);
@@ -201,7 +205,10 @@ export function HttpLoaderFactory(http: HttpClient) {
     SukuFormTableComponent,
     SukuKeysPipe,
     DateLocaleFilter,
-    SukuMessageWidgetComponent
+    SukuMessageWidgetComponent,
+    SukuAuthTableComponent,
+    SukuTrimPipe
+    // SafeHtmlPipe
   ],
   imports: [
     CommonModule,
@@ -349,7 +356,8 @@ export function HttpLoaderFactory(http: HttpClient) {
     SukuClaimsWidgetComponent,
     SukuConfirmationStatusModalComponent,
     SukuFormTableComponent,
-    SukuMessageWidgetComponent
+    SukuMessageWidgetComponent,
+    SukuAuthTableComponent
   ],
   entryComponents: [SukuConfirmationModalComponent, SukuAddLicenseModalComponent, SukuConfirmationStatusModalComponent],
   schemas: [],

@@ -62,16 +62,15 @@ export class SukuDisplayTableComponent implements OnInit {
   sort(head, type, formate) {
     if (this._tableData) {
       if (type == 'Number') {
-        this._tableData.sort(function (a, b) {
-
-          if (a[head] < b[head] && formate == 'asse') {
-            return -1;
+          if (formate == 'asse') {
+            this._tableData.sort(function(a, b){
+              return a[head]-b[head]});
           }
-          if (b[head] < a[head] && formate == 'desc') {
-            return -1;
+          if (formate == 'desc') {
+            this._tableData.sort(function(a, b){
+              return b[head]-a[head]
+            });
           }
-          return 0;
-        });
       }
       if (type == 'String') {
         this._tableData.sort(function (a, b) {
