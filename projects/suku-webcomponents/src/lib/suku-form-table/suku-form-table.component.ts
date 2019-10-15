@@ -1,5 +1,5 @@
 
-import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter, HostListener } from '@angular/core';
 
 @Component({
   selector: 'suku-form-table',
@@ -68,9 +68,19 @@ export class SukuFormTableComponent implements OnInit {
   @Output() submitData = new EventEmitter();
   @Output() formStatus = new EventEmitter();
   @Input('table-sortable') sortable = 'false';
-
   _null = null;
+  @HostListener('paste', ['$event']) blockPaste(e: KeyboardEvent) {
+    console.log('e', e);
+    e.preventDefault();
+  }
 
+  @HostListener('copy', ['$event']) blockCopy(e: KeyboardEvent) {
+    e.preventDefault();
+  }
+
+  @HostListener('cut', ['$event']) blockCut(e: KeyboardEvent) {
+    e.preventDefault();
+  }
   constructor() {
   }
 
@@ -215,33 +225,36 @@ export class SukuFormTableComponent implements OnInit {
   checkSpcialChar(event, type) {
     console.log(event, event.target.value);
 
-    if (event.charCode == 45) {
-      event.returnValue = false;
-      return false;
-    }
     /* disable - e */
     if (type == 'Number') {
       if (event.charCode == 101) {
         event.returnValue = false;
         return false;
       }
+      if (event.charCode == 45) {
+        event.returnValue = false;
+        return false;
+      }
     }
 
     /* validation for string  */
-    /*  if (event.charCode == 36 ||
-       event.charCode == 95 ||
-       event.charCode == 42 ||
-       event.charCode == 45 ||
-       event.charCode == 43 ||
-       event.charCode == 40 ||
-       event.charCode == 41 ||
-       event.charCode == 39 ||
-       event.charCode == 33 ||
-       event.charCode == 32
-     ) {
-       event.returnValue = true;
-       return true;
-     } */
+    if (type == 'String') {
+      if (event.charCode == 36 ||
+        event.charCode == 95 ||
+        event.charCode == 42 ||
+        event.charCode == 45 ||
+        event.charCode == 43 ||
+        event.charCode == 46 ||
+        event.charCode == 40 ||
+        event.charCode == 41 ||
+        event.charCode == 39 ||
+        event.charCode == 33 ||
+        event.charCode == 32
+      ) {
+        event.returnValue = true;
+        return true;
+      }
+    }
 
     if (!((event.charCode >= 65) && (event.charCode <= 90) ||
       (event.charCode >= 97) && (event.charCode <= 122) || (event.charCode >= 48) &&
