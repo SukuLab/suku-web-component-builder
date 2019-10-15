@@ -97,6 +97,10 @@
   font-weight: 600;
 }
 
+.tableBorderBottomRadius {
+  border-bottom-left-radius: 2rem;
+}
+
 @media (max-width:575px) {
    .tblCellBorderRight {
       border-right: none;
