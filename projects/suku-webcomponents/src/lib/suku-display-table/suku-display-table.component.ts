@@ -10,7 +10,7 @@ export class SukuDisplayTableComponent implements OnInit {
   @Input('table-header') header;
   @Input('table-header-content') headerContent = 'cjkcsnns sjkcs jkkjs kjkjd kjdfkjdf jkdf';
   _tableData: any;
-  p = 0;
+  p;
   tableDataKey;
 
   @Input('table-data')
@@ -62,15 +62,16 @@ export class SukuDisplayTableComponent implements OnInit {
   sort(head, type, formate) {
     if (this._tableData) {
       if (type == 'Number') {
-          if (formate == 'asse') {
-            this._tableData.sort(function(a, b){
-              return a[head]-b[head]});
-          }
-          if (formate == 'desc') {
-            this._tableData.sort(function(a, b){
-              return b[head]-a[head]
-            });
-          }
+        if (formate == 'asse') {
+          this._tableData.sort(function (a, b) {
+            return a[head] - b[head]
+          });
+        }
+        if (formate == 'desc') {
+          this._tableData.sort(function (a, b) {
+            return b[head] - a[head]
+          });
+        }
       }
       if (type == 'String') {
         this._tableData.sort(function (a, b) {
