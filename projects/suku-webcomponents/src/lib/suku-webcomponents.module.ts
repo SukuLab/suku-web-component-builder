@@ -114,6 +114,7 @@ import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { DateLocaleFilter } from './suku-display-table/suku-date-pipe';
 import { DatePipe } from '@angular/common';
 import { SukuAuthTableComponent } from './suku-auth-table/suku-auth-table.component';
+import { SukuTrimPipe } from './suku-form-table/suku-trim.pipe';
 // import { SafeHtmlPipe } from './suku-product-trace-widget/safe-html.pipe';
 
 // AoT requires an exported function for factories
@@ -206,6 +207,7 @@ export function HttpLoaderFactory(http: HttpClient) {
     DateLocaleFilter,
     SukuMessageWidgetComponent,
     SukuAuthTableComponent,
+    SukuTrimPipe
     // SafeHtmlPipe
   ],
   imports: [

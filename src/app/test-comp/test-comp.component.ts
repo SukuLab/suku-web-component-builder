@@ -19,8 +19,8 @@ export class TestCompComponent implements OnInit {
   hiddenKey = ['brand'];
   tableKey1 = {
     'id de animal': 'String',
-    'aproximado edad(meses)': 'Number',
-    'aproximado peso(kg)': 'Number',
+    'aproximado edad (meses)': 'Number',
+    'aproximado peso (kg)': 'Number',
     'raza': ['Angus', 'Charolais', 'Hereford', 'Simmental']
   };
   tabelDataTest1 = [
