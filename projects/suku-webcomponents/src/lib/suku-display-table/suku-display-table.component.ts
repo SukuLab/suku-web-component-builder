@@ -10,7 +10,7 @@ export class SukuDisplayTableComponent implements OnInit {
   @Input('table-header') header;
   @Input('table-header-content') headerContent = 'cjkcsnns sjkcs jkkjs kjkjd kjdfkjdf jkdf';
   _tableData: any;
-  p;
+  p = 0;
   tableDataKey;
 
   @Input('table-data')
