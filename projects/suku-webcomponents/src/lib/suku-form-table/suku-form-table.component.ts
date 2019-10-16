@@ -39,12 +39,27 @@ export class SukuFormTableComponent implements OnInit {
   @Input() actionkey = 'actions_TblColHdr';
   @Input()
   get items() {
-    console.log('items ------------');
-    return this._items;
+    console.log('items ------------', this.items);
+    const data = this.items;
+    if (data) {
+      data.filter(val => {
+        console.log('val', val);
+        delete val['undefined'];
+        return val;
+      });
+    }
+    return data;
   }
   set items(val) {
     if (val) {
       console.log('_items', val);
+      if (val) {
+        val.filter(el => {
+          console.log('val', el);
+          delete el['undefined'];
+          return el;
+        });
+      }
       this._items = val;
     }
     if (this._items[0]) {
@@ -296,8 +311,12 @@ export class SukuFormTableComponent implements OnInit {
           return 0;
         });
       }
+      this._items.forEach(val => {
+        delete val['undefined'];
+      });
       console.log('sort -', this._items, head, type, formate);
     }
   }
+
 
 }

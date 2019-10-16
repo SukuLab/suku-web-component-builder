@@ -67,10 +67,9 @@
             <!-- input -->
             <span *ngIf="editable[j] && (list != actionkey) && ( typeKey[list]=='String' || typeKey[list]=='Number')">
               <input (keyup)="sendData()" (keypress)="checkSpcialChar($event,typeKey[list])" class="form-control"
-                [(ngModel)]="item[list]" [maxLength]="25" type="{{(typeKey[list]=='Number')?'number':'text'}}"
+                [(ngModel)]="item[list]" min="0" [maxLength]="25" type="{{(typeKey[list]=='Number')?'number':'text'}}"
                 (change)="validate(item[list],j)" [disabled]="tableDisabled" id="{{list | trim}}{{j}}"
-                *ngIf="editable[j] && (list != actionkey) && ( typeKey[list]=='String' || typeKey[list]=='Number')"
-                min="0" />
+                *ngIf="editable[j] && (list != actionkey) && ( typeKey[list]=='String' || typeKey[list]=='Number')" />
               <p id="{{j}}" class="errorMessage" *ngIf="(item[list]  && item[list] == 0)">
                 {{errorMessageOne | translate}}
               </p>
@@ -103,8 +102,8 @@
                     (keyup)="sendData()" [ngClass]="{'disabled': !item[selectionKey]}"
                     [disabled]="!item[selectionKey] || tableDisabled" class="form-control sample"
                     id="{{list | trim}}{{j}}" [(ngModel)]="item[data.key]" (change)="validate(item[data.key],dataIndex)"
-                    *ngIf="checkValid(list) && (list != actionkey) && highlighterKey" min="0"
-                    (keypress)="checkSpcialChar($event,typeKey[list])" />
+                    *ngIf="checkValid(list) && (list != actionkey) && highlighterKey"
+                    (keypress)="checkSpcialChar($event,typeKey[list])" min="0" />
                 </span>
                 <p id="{{dataIndex}}" class="errorMessage" *ngIf="(item[data.key]  && item[data.key] == 0)">
                   {{errorMessageOne  | translate}}</p>
@@ -119,7 +118,7 @@
               item[selectionKey]}" [disabled]="item[selectionKey] || tableDisabled" class="form-control sample"
                 [(ngModel)]="item[patchKey]" *ngIf="(list == patchKey) && (list != actionkey)
               && patchKey" id="{{selectionKey | trim}}{{j}}Patch" (change)="validate(item[patchKey],selectionKey)"
-                min="0" (keypress)="checkSpcialChar($event,typeKey[list])" />
+                min="0" [maxLength]="10" (keypress)="checkSpcialChar($event,typeKey[list]);" />
               <p id="asset{{j}}{{selectionKey}}" class="errorMessage" *ngIf="(item[patchKey]  && item[patchKey] == 0)">
                 {{errorMessageOne  | translate}}
               </p>
