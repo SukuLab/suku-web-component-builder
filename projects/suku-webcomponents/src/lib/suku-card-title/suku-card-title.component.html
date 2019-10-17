@@ -24,5 +24,10 @@
       [style.color]="cardContentcolor">
       {{ displayKey  ? item[displayKey] : (item | titlecase)}}
     </h2>
+    <h2 *ngIf="!cardContentName.length" [style.font-size.px]="cardContentsize"
+      class="{{customContentClass}} mb-0" id="{{cardContentId}}" [style.font-weight]="cardContentweight"
+      [style.color]="cardContentcolor">
+      N/A
+    </h2>
   </section>
 </div>
