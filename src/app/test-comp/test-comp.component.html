@@ -106,9 +106,19 @@
   </div>
   <div class="col-12 pb-5">
     <suku-form-table [typeKey]="tableKey2" type="Processor" [enableControls]="false" [items]="sampleData"
-      [enableHighlighter]="true" [selectionKey]="'selection'" [highlighterKey]="'# of Boxes'"
-      [keyData]="highlightnerArray" title-content="Please capture the required data for each selected product">
+      [enableHighlighter]="true" [selectionKey]="'selection_TblColHdr'" [highlighterKey]="'# of Boxes'"
+      [tableDisabled]="false" [keyData]="highlightnerArray"
+      title-content="Please capture the required data for each selected product">
     </suku-form-table>
+
+    <!-- <suku-form-table *ngIf="prviewFaciltyType == 'Processor'" type="Processor" [tableDisabled]="notEditable"
+               [title-content]="'step2ProductInfo_TblHdr' | translate" title-one-size="14"
+               [error-message-one]="'greaterThan0_ErrMsg' | translate" [typeKey]="tableKeyForProcessor"
+               [controlsSize]="1.25" [items]="dataForProcessor" [enableHighlighter]="true"
+               [selectionKey]="'selection_TblColHdr'" [highlighterKey]="'# of
+                Boxes'" [enableControls]="false" [keyData]="highlightnerArray" (submitData)="getAssetArray($event)">
+             </suku-form-table> -->
+
   </div>
   <div class="col-12 pb-5">
     <suku-form-table [typeKey]="tableKey3" [enableControls]="false" [enableSelectAll]="true"

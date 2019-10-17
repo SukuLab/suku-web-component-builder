@@ -39,12 +39,27 @@ export class SukuFormTableComponent implements OnInit {
   @Input() actionkey = 'actions_TblColHdr';
   @Input()
   get items() {
-    console.log('items ------------');
-    return this._items;
+    console.log('items ------------', this.items);
+    const data = this.items;
+    if (data) {
+      data.filter(val => {
+        console.log('val', val);
+        delete val['undefined'];
+        return val;
+      });
+    }
+    return data;
   }
   set items(val) {
     if (val) {
       console.log('_items', val);
+      if (val) {
+        val.filter(el => {
+          console.log('val', el);
+          delete el['undefined'];
+          return el;
+        });
+      }
       this._items = val;
     }
     if (this._items[0]) {
@@ -62,6 +77,7 @@ export class SukuFormTableComponent implements OnInit {
   @Input() keyData = [];
   @Input() controlsSize;
   @Input() controlCustomClass;
+  @Input() patchEmpty = 'Processor';
   @Input('error-message-one') errorMessageOne = 'value should be  greater then 0';
   @Output() save = new EventEmitter();
   @Output() remove = new EventEmitter();
@@ -196,12 +212,16 @@ export class SukuFormTableComponent implements OnInit {
     }
   }
 
-  async patchValue(selection, defaultValue, index) {
+  async patchValue(selection, defaultValue, index, key?) {
+    console.log('patchValue', selection, defaultValue, index, key);
     if (selection) {
       this._items[index][this.patchKey] = defaultValue;
     } else {
       this.selectAll = false;
       this._items[index][this.patchKey] = this._null;
+      if (this.type == this.patchEmpty) {
+        this._items[index][key] = this._null;
+      }
     }
   }
 
@@ -296,8 +316,12 @@ export class SukuFormTableComponent implements OnInit {
           return 0;
         });
       }
+      this._items.forEach(val => {
+        delete val['undefined'];
+      });
       console.log('sort -', this._items, head, type, formate);
     }
   }
+
 
 }
