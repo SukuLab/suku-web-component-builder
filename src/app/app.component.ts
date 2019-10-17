@@ -542,6 +542,10 @@ export class AppComponent implements OnInit {
 		console.log('e', e.value);
 	}
 
+	printValue(e) {
+		console.log('xxxxxxxxxxxxxxxxxxx', e)
+	}
+
 	getWeeksNum() {
 		const d = new Date();
 		const date = new Date(d.getTime());

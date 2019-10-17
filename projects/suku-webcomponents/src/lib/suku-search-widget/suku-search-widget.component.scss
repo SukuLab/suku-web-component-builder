@@ -1,0 +1,36 @@
+@import '../theme/theme';
+
+.suku-info {
+  border-top-right-radius: 1rem;
+  border: solid 2px;
+  border-color: $suku-sick-green;
+  background-color: $suku-default-bg;
+  color: $suku-text-heading;
+  font-family: $suku-primary-font;
+}
+
+.inputStyle {
+	border-bottom-left-radius: 1rem;
+	border: 2px solid #bcbaba;
+}
+
+.suku-info:focus {
+    outline-width: 0;
+}
+
+.inputStyle:focus {
+    outline-width: 0;
+}
+
+@media (max-width:575px) {
+   .suku-info {
+      border-bottom-left-radius: 1rem;
+      border-top-right-radius: 0rem;
+    }
+
+    .inputStyle {
+		border-top-right-radius: 1rem;
+		border-bottom-left-radius: 0rem;
+	}
+
+}

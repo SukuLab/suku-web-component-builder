@@ -1,0 +1,5 @@
+<div class="col row mt-3 ml-0">
+	<input type="search" class="col-lg-11 col-md-11 col-sm-8 col-xs-8 p-1 inputStyle pl-3"  [style.font-weight]="searchFieldFontWeight" [formControl]="searchControl" [style.font-size.px]="searchFieldFontSize" [style.color]="searchFieldFontColor" placeholder="{{searchFiledPlaceHolder}}" id="searchControl" name="searchControl"
+	aria-label="Search through site content">
+	<button type="button" id="{{buttonId}}" class="col-lg-1 col-md-1 col-sm-4 col-xs-8 suku-info" [disabled]="!searchControl?.value" [style.font-size.px]="buttonFontSize" [style.font-weight]="buttonFontWeight" (click)="getValue();">Search</button>
+</div>

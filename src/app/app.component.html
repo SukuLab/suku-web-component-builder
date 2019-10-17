@@ -1,4 +1,5 @@
 <form [formGroup]="test">
+  <suku-search-widget (action)="printValue($event);" value="new value" buttonFontSize="14" buttonFontWeight="bold"></suku-search-widget>
   <!-- <suku-auth-table ></suku-auth-table> -->
   <!-- <suku-message-widget></suku-message-widget> -->
   <!-- <suku-form-table></suku-form-table> -->
@@ -55,5 +56,5 @@
   <div>
   </div>
   <app-test-comp></app-test-comp> -->
-  <app-test-comp></app-test-comp>
+  <!-- <app-test-comp></app-test-comp> -->
 </form>
