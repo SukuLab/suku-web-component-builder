@@ -82,7 +82,7 @@
             <!-- checkbox -->
             <span class="align-checkbox" *ngIf="(typeKey[list]=='Checkbox')">
               <mat-checkbox color="primary" id="{{list | trim}}{{j}}"
-                (change)="sendData();patchValue(item[selectionKey], item[highlighterKey], j)"
+                (change)="sendData();patchValue(item[selectionKey], item[highlighterKey], j, highlighterKey)"
                 [disabled]="(!editable[j] && (list != selectionKey) ) || tableDisabled" [(ngModel)]="item[list]">
               </mat-checkbox>
             </span>

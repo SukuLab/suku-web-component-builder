@@ -77,6 +77,7 @@ export class SukuFormTableComponent implements OnInit {
   @Input() keyData = [];
   @Input() controlsSize;
   @Input() controlCustomClass;
+  @Input() patchEmpty = 'Processor';
   @Input('error-message-one') errorMessageOne = 'value should be  greater then 0';
   @Output() save = new EventEmitter();
   @Output() remove = new EventEmitter();
@@ -211,12 +212,16 @@ export class SukuFormTableComponent implements OnInit {
     }
   }
 
-  async patchValue(selection, defaultValue, index) {
+  async patchValue(selection, defaultValue, index, key?) {
+    console.log('patchValue', selection, defaultValue, index, key);
     if (selection) {
       this._items[index][this.patchKey] = defaultValue;
     } else {
       this.selectAll = false;
       this._items[index][this.patchKey] = this._null;
+      if (this.type == this.patchEmpty) {
+        this._items[index][key] = this._null;
+      }
     }
   }
 
