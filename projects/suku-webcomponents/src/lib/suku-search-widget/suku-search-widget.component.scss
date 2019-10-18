@@ -38,3 +38,46 @@
 .buttonHeight {
 	height: 100%;
 }
+
+.suku-info:focus,
+.suku-info.focus {
+  border: solid 2px;
+  border-color: $suku-sick-green;
+  background-color: $suku-sick-green;
+  color: white;
+}
+
+.suku-info:active:hover,
+.suku-info.active:hover,
+.open>.dropdown-toggle.suku-info:hover,
+.suku-info:active:focus,
+.suku-info.active:focus,
+.open>.dropdown-toggle .suku-info:focus,
+.suku-info:active.focus,
+.suku-info.active.focus,
+.open>.dropdown-toggle .suku-info.focus {
+  border: solid 2px;
+  border-color: $suku-sick-green;
+  background-color: $suku-sick-green;
+  color: white;
+  cursor: pointer;
+}
+
+.suku-info:not(:disabled):not(.disabled).active,
+.suku-info:not(:disabled):not(.disabled):active,
+.show>.suku-info.dropdown-toggle {
+  color: #fff;
+  background-color: $suku-sick-green;
+  border-color: $suku-sick-green;
+}
+
+.suku-info.focus,
+.suku-info:focus {
+  box-shadow: none !important;
+}
+
+.suku-info:not(:disabled):not(.disabled).active:focus,
+.suku-info:not(:disabled):not(.disabled):active:focus,
+.show>.suku-info.dropdown-toggle:focus {
+  box-shadow: none !important;
+}

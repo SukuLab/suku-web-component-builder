@@ -76,6 +76,7 @@ export class SukuSearchWidgetComponent implements OnInit {
     }
   }
   @Output() action = new EventEmitter();
+  @Output() getValue = new EventEmitter();
   @Output() onChangeAction = new EventEmitter();
 
   constructor() { }
@@ -111,9 +112,9 @@ export class SukuSearchWidgetComponent implements OnInit {
         '';
   }
 
-  getValue() {
+  getFieldValue() {
   	const value = this.searchControl.value;
-  	this.action.emit(value)
+  	this.getValue.emit(value)
   }
 
   ngDestroy() {
