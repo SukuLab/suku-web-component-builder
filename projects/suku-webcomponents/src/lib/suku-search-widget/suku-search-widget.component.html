@@ -1,9 +1,9 @@
 <div class="col row mt-3 ml-0">
 	<div class="col-lg-10 col-md-9 col-sm-8 p-0">
-	<input type="search" class="w-100 p-1 inputStyle pl-3"  [style.font-weight]="searchFieldFontWeight" [formControl]="searchControl" [style.font-size.px]="searchFieldFontSize" (keyup.enter)="getFieldValue()" [style.color]="searchFieldFontColor" placeholder="{{searchFiledPlaceHolder}}" id="searchControl" name="searchControl"
+	<input type="text" class="w-100 p-1 inputStyle pl-3"  [style.font-weight]="searchFieldFontWeight" [formControl]="searchControl" [style.font-size.px]="searchFieldFontSize" (keyup.enter)="getFieldValue()" [style.color]="searchFieldFontColor" placeholder="{{searchFiledPlaceHolder}}" id="searchControl" name="searchControl"
 	aria-label="Search through site content">
 	</div>
 	<div class="col-lg-2 col-md-3 col-sm-4 p-0">
-	<button type="button" id="{{buttonId}}" class="col suku-info buttonHeight" [disabled]="!searchControl?.value" [style.font-size.px]="buttonFontSize" [style.font-weight]="buttonFontWeight" (click)="getFieldValue();">Search</button>
+	<button type="button" id="{{buttonId}}" class="w-100 suku-info buttonHeight" [disabled]="!searchControl?.value" [style.font-size.px]="buttonFontSize" [style.font-weight]="buttonFontWeight" (click)="getFieldValue();">Search</button>
 	</div>
 </div>
