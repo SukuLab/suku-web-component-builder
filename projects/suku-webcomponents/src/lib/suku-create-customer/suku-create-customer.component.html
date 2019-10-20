@@ -23,14 +23,14 @@
       </div>
     </div>
     <div formArrayName="{{formArrayNameValue}}">
-      <div class="form-group col-xs-12 col-sm-12 col-md-12 col-lg-12"
+      <div class="form-group col-xs-12 col-sm-12 col-md-12 col-lg-12 p-0"
         *ngFor="let detail of form.get(formArrayNameValue)['controls']; let i=index" [formGroupName]="i">
         <!-- personal acc -->
         <div class="col-sm-10 col-xs-12 offset-sm-1 p-0" *ngIf="accountTypeChk ==  'Personal'">
           <div class="col-sm-12 pt-3">
             <span class="header pL30">Personal Information</span>
           </div>
-          <div class="col">
+          <div class="col p-0">
             <div class="row">
               <div class="col-6">
                 <div class="col-sm-12 form-group">
