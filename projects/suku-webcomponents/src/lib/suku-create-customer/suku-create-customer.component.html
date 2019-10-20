@@ -8,13 +8,175 @@
     <span class="Account-Setup">Customer Creation</span>
   </div>
   <br>
-  <div class="col Rectangle-2" id="createCustomer"> 
+
+  <div class="col Rectangle-2" id="createCustomer">
+    <div class="col-10 offset-lg-1 p-0">
+      <div class="col-sm-12 pt-5 ">
+        <span class="header pL30">Account Type</span>
+      </div>
+      <div class="col pt-2">
+        <mat-radio-group formControlName="{{accountTypeControl}}" name="{{accountTypeControl}}">
+          <mat-radio-button color="primary" (change)="accountTypeAction($event)" class="pr-5 heading"
+            *ngFor="let type of accountType" value="{{type?.value}}">{{type?.name}}
+          </mat-radio-button>
+        </mat-radio-group>
+      </div>
+    </div>
     <div formArrayName="{{formArrayNameValue}}">
       <div class="form-group col-xs-12 col-sm-12 col-md-12 col-lg-12"
         *ngFor="let detail of form.get(formArrayNameValue)['controls']; let i=index" [formGroupName]="i">
-        <div class="col-sm-10 col-xs-12 offset-sm-1">
+        <!-- personal acc -->
+        <div class="col-sm-10 col-xs-12 offset-sm-1 p-0" *ngIf="accountTypeChk ==  'Personal'">
+          <div class="col-sm-12 pt-3">
+            <span class="header pL30">Personal Information</span>
+          </div>
+          <div class="col">
+            <div class="row">
+              <div class="col-6">
+                <div class="col-sm-12 form-group">
+                  <div class="col flexCol p-0">
+                    <mat-form-field>
+                      <input matInput type="text" name="firstName" formControlName="firstName" id="firstName"
+                        placeholder="First name">
+                    </mat-form-field>
+                    <mat-error>
+                      <span *ngIf="getControl.get('firstName').touched">
+                        <span *ngIf="getControl.hasError('pattern',['firstName'])">
+                          Invalid firstName
+                        </span>
+                      </span>
+                    </mat-error>
+                  </div>
+                </div>
+                <div class="col-sm-12 form-group">
+                  <div class="col flexCol p-0">
+                    <mat-form-field>
+                      <input matInput type="text" name="lastName" formControlName="lastName" id="lastName"
+                        placeholder="Last name">
+                    </mat-form-field>
+                    <mat-error>
+                      <span *ngIf="getControl.get('lastName').touched">
+                        <span *ngIf="getControl.hasError('pattern',['lastName'])">
+                          Invalid lastName
+                        </span>
+                      </span>
+                    </mat-error>
+                  </div>
+                </div>
+                <div class="col-sm-12 form-group">
+                  <div class="col flexCol p-0">
+                    <mat-form-field>
+                      <input matInput type="text" name="email" formControlName="email" id="email" placeholder="e-mail">
+                    </mat-form-field>
+                    <mat-error>
+                      <span *ngIf="getControl.get('email').touched">
+                        <span *ngIf="getControl.hasError('pattern',['email'])">
+                          Invalid email
+                        </span>
+                      </span>
+                    </mat-error>
+                  </div>
+                </div>
+                <div class="col-sm-12 form-group">
+                  <div class="col flexCol p-0">
+                    <mat-form-field>
+                      <input matInput [matDatepicker]="picker" [max]="maxDate" placeholder="Date of Birth"
+                        id="dateOfBirth" formControlName="dateOfBirth">
+                      <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                      <mat-datepicker #picker></mat-datepicker>
+                    </mat-form-field>
+                  </div>
+                </div>
+                <div class="col-sm-12 form-group">
+                  <div class="col flexCol p-0">
+                    <mat-form-field>
+                      <input matInput type="text" name="ssn" formControlName="ssn" id="ssn" [placeholder]="_ssnLimit">
+                    </mat-form-field>
+                    <mat-error>
+                      <span *ngIf="getControl.get('controller').get('ssn').touched">
+                        <span *ngIf="getControl.get('controller').hasError('pattern',['ssn'])">
+                          Invalid SSN
+                        </span>
+                      </span>
+                    </mat-error>
+                  </div>
+                </div>
+              </div>
+              <div class="col-6">
+                <div class="col-sm-12 form-group">
+                  <div class="col flexCol p-0">
+                    <mat-form-field>
+                      <input matInput type="text" name="address1" formControlName="address1" id="address1"
+                        placeholder="Address">
+                    </mat-form-field>
+                    <mat-error>
+                      <span *ngIf="getControl.get('address1').touched">
+                        <span *ngIf="getControl.hasError('pattern',['address1'])">
+                          Invalid Address
+                        </span>
+                      </span>
+                    </mat-error>
+                  </div>
+                </div>
+                <div class="col-sm-12 form-group">
+                  <div class="col flexCol p-0">
+                    <mat-form-field>
+                      <input matInput type="text" name="city" formControlName="city" id="city" placeholder="City">
+                    </mat-form-field>
+                    <mat-error>
+                      <span *ngIf="getControl.get('city').touched">
+                        <span *ngIf="getControl.hasError('pattern',['city'])">
+                          Invalid City
+                        </span>
+                      </span>
+                    </mat-error>
+                  </div>
+                </div>
+                <div class="col-sm-12 form-group">
+                  <div class="col flexCol p-0">
+                    <mat-form-field>
+                      <input matInput type="text" name="state" formControlName="state" id="state" placeholder="State">
+                    </mat-form-field>
+                    <mat-error>
+                      <span *ngIf="getControl.get('state').touched">
+                        <span *ngIf="getControl.hasError('pattern',['state'])">
+                          Invalid State
+                        </span>
+                      </span>
+                    </mat-error>
+                  </div>
+                </div>
+                <div class="col-sm-12 form-group">
+                  <div class="col flexCol p-0">
+                    <mat-form-field>
+                      <input matInput type="text" name="postalCode" formControlName="postalCode" id="postalCode"
+                        placeholder="Postal-code">
+                    </mat-form-field>
+                    <mat-error>
+                      <span *ngIf="getControl.get('postalCode').touched">
+                        <span *ngIf="getControl.hasError('pattern',['postalCode'])">
+                          Invalid postalCode
+                        </span>
+                      </span>
+                    </mat-error>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+
+
+
+
+
+
+        </div>
+          <!-- personal acc end-->
+        <div class="col-sm-10 col-xs-12 offset-sm-1" *ngIf="accountTypeChk ==  'Business'">
           <div class="row">
-            <div class="col-sm-6 p-0 mt-sm-5">
+            <div class="col-sm-6 p-0 mt-sm-3">
               <div class="col-sm-12 pt-3">
                 <span class="header pL30">Business Information</span>
               </div>
@@ -197,7 +359,7 @@
               </div>
             </div>
             <!-- controller -->
-            <div class="col-sm-6 p-0 mt-sm-5" formGroupName="controller">
+            <div class="col-sm-6 p-0 mt-sm-3" formGroupName="controller">
               <div class="col-sm-12 pb-5 pt-3">
                 <span class="header pL30">Controller Information</span>
               </div>

@@ -4,7 +4,7 @@ import { FormGroup, FormBuilder, FormsModule, FormControl, Validators } from '@a
 @Component({
 	selector: 'suku-create-customer',
 	templateUrl: './suku-create-customer.component.html',
-	styleUrls: [ './suku-create-customer.component.scss' ]
+	styleUrls: ['./suku-create-customer.component.scss']
 })
 export class SukuCreateCustomerComponent implements OnInit {
 	_data;
@@ -31,15 +31,27 @@ export class SukuCreateCustomerComponent implements OnInit {
 	@Input() businessTypeValue;
 	@Input() industryTypeValue;
 	@Input() businessClassificationValue;
+	@Input() accountTypeChk;
+	@Input() accountTypeControl;
+	@Input() accountType = [
+		{
+			name: 'Personal',
+			value: 1
+		},
+		{
+			name: 'Business',
+			value: 2
+		}
+	];
 	@Input()
 	get ssnLimit() {
 		return this._ssnLimit;
 	}
 	set ssnLimit(val) {
-    console.log(val)
-    this._ssnLimit = val;
+		console.log(val)
+		this._ssnLimit = val;
 	}
-	constructor(private fb: FormBuilder) {}
+	constructor(private fb: FormBuilder) { }
 
 	ngOnInit() {
 		this.DwollaTOSformValid = true;
@@ -56,7 +68,7 @@ export class SukuCreateCustomerComponent implements OnInit {
 			};
 			this.countrySelect.emit(data);
 		}
-  }
+	}
 
 	industryTypeFunAction(val) {
 		if (val) {
@@ -79,7 +91,7 @@ export class SukuCreateCustomerComponent implements OnInit {
 		} else {
 			this.validateType = false;
 		}
-  }
+	}
 
 	action1() {
 		const controlName1 = this.CRDwollaTOSControl;
@@ -91,18 +103,28 @@ export class SukuCreateCustomerComponent implements OnInit {
 	}
 
 	GetFormattedDate() {
-    const todayTime = new Date();
-    const year = (todayTime.getFullYear());
-    const LeapYear = year % 4;
-    if (LeapYear == 0) {
-      // This is Leap Year
-      this.currentDate = new Date().setDate(todayTime.getDate() - 6575)
-    } else {
-      // This is not leap year
+		const todayTime = new Date();
+		const year = (todayTime.getFullYear());
+		const LeapYear = year % 4;
+		if (LeapYear == 0) {
+			// This is Leap Year
+			this.currentDate = new Date().setDate(todayTime.getDate() - 6575)
+		} else {
+			// This is not leap year
 			this.currentDate = new Date().setDate(todayTime.getDate() - 6574)
-			console.log("cxcxcxcx" + 	this.currentDate)
-    }
+			console.log("cxcxcxcx" + this.currentDate)
+		}
 		this.maxDate = new Date(this.currentDate).toISOString();
+	}
+
+	accountTypeAction(e) {
+		if(e.value == 1) {
+			this.accountTypeChk = 'Personal';
+		} else {
+			this.accountTypeChk = 'Business';
+		}
+
+		console.log('e', e);
 	}
 
 }

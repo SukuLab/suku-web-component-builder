@@ -2,6 +2,17 @@
   <div class="col-lg-8 col-md-8 offset-md-2 offset-lg-2 col-sm-12 ">
   <suku-search-widget (getValue)="printValue($event);" value="new value" buttonFontSize="14" buttonFontWeight="bold"></suku-search-widget>
 </div>
+
+<div class="col p-4">
+  <suku-create-customer [form]="test" formArrayNameValue="customer"
+  (submitData)="CreateCustomerSubmit()" (onSubmit)="onSubmit()" accountTypeControl="accountType" CRDwollaTOSControl="CitizensReserveTOSCheck" ></suku-create-customer>
+</div>
+<!-- <suku-create-customer [ssnLimit]="ssnPlaceHolder" [form]="createCustomer" formArrayNameValue="customer"
+[countriesList]="countriesList" [statesList]="statesList" (countrySelect)="fetchAllStatesCreateCustomer($event)"
+(submitData)="CreateCustomerSubmit()" (onSubmit)="onSubmit()" (industryTypeFun)="industryTypeFun($event)"
+[businessTypeValue]="businessType" CRDwollaTOSControl="CitizensReserveTOSCheck"
+*ngIf="customerCreationState?.creation" [industryTypeValue]="industryType"
+[businessClassificationValue]="businessClassificationList"></suku-create-customer> -->
   <!-- <suku-auth-table ></suku-auth-table> -->
   <!-- <suku-message-widget></suku-message-widget> -->
   <!-- <suku-form-table></suku-form-table> -->

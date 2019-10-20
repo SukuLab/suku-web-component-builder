@@ -1,9 +1,22 @@
+@import '../theme/theme';
+
 .logo {
     position: absolute;
     font-size: 50px;
     opacity: 0;
     right: 0;
     top: 0;
+}
+
+.heading {
+    font-family: $suku-secondary-font !important;
+    font-size: 15px;
+    font-weight: 500;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: 0.1px;
+    color: #1d1d1d;
 }
 
 .hide-details {

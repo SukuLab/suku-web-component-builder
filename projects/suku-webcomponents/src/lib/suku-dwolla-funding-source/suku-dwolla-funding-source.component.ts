@@ -50,7 +50,6 @@ export class SukuDwollaFundingSourceComponent implements OnInit {
 				}
 			}
 			console.log('triggered', this._iavToken);
-			dwolla.configure('sandbox');
 			dwolla.iav.start(
 				this._iavToken,
 				{
