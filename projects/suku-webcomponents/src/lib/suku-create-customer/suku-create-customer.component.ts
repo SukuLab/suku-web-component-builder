@@ -33,6 +33,7 @@ export class SukuCreateCustomerComponent implements OnInit {
 	@Input() businessClassificationValue;
 	@Input() accountTypeChk;
 	@Input() accountTypeControl;
+	@Input() disableBtn = false;
 	@Input() accountType = [
 		{
 			name: 'Personal',
@@ -118,7 +119,7 @@ export class SukuCreateCustomerComponent implements OnInit {
 	}
 
 	accountTypeAction(e) {
-		if(e.value == 1) {
+		if (e.value == 1) {
 			this.accountTypeChk = 'Personal';
 		} else {
 			this.accountTypeChk = 'Business';

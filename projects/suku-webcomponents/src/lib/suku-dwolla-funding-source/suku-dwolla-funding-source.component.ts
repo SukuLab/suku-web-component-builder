@@ -4,7 +4,7 @@ import { MatSnackBar } from '@angular/material';
 @Component({
 	selector: 'suku-dwolla-funding-source',
 	templateUrl: './suku-dwolla-funding-source.component.html',
-	styleUrls: [ './suku-dwolla-funding-source.component.scss' ]
+	styleUrls: ['./suku-dwolla-funding-source.component.scss']
 })
 export class SukuDwollaFundingSourceComponent implements OnInit {
 	_iavToken;
@@ -13,6 +13,7 @@ export class SukuDwollaFundingSourceComponent implements OnInit {
 		button: false
 	};
 
+	@Input('type') type = 'Production';
 	@Input('iav-token')
 	get iavToken() {
 		return this._iavToken;
@@ -37,9 +38,9 @@ export class SukuDwollaFundingSourceComponent implements OnInit {
 
 	@Output() action = new EventEmitter();
 
-	constructor(private snackBar: MatSnackBar) {}
+	constructor(private snackBar: MatSnackBar) { }
 
-	ngOnInit() {}
+	ngOnInit() { }
 
 	getDwollaHtml() {
 		if (this._iavToken) {
@@ -50,11 +51,14 @@ export class SukuDwollaFundingSourceComponent implements OnInit {
 				}
 			}
 			console.log('triggered', this._iavToken);
+			if (this.type != 'Production') {
+				dwolla.configure('sandbox');
+			}
 			dwolla.iav.start(
 				this._iavToken,
 				{
 					container: 'iavContainer',
-					stylesheets: [ 'https://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext' ],
+					stylesheets: ['https://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext'],
 					microDeposits: true,
 					backButton: true,
 					fallbackToMicroDeposits: true

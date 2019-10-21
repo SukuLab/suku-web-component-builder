@@ -173,7 +173,7 @@
 
 
         </div>
-          <!-- personal acc end-->
+        <!-- personal acc end-->
         <div class="col-sm-10 col-xs-12 offset-sm-1" *ngIf="accountTypeChk ==  'Business'">
           <div class="row">
             <div class="col-sm-6 p-0 mt-sm-3">
@@ -546,8 +546,9 @@
         </span>
       </div>
       <div class="col d-flex justify-content-center mt-4 mb-3  pB40">
-        <button class="btn btn-info" [disabled]="CitizensReserveTOSformValid"
-          [ngClass]="{'disabled': CitizensReserveTOSformValid}" (click)="submitData.emit(); onSubmit.emit();">Agree
+        <button class="btn btn-info" [disabled]="!(!CitizensReserveTOSformValid && disableBtn)"
+          [ngClass]="{'disabled': !(!CitizensReserveTOSformValid && disableBtn)}"
+          (click)="submitData.emit(); onSubmit.emit();">Agree
           & Continue</button>
       </div>
     </div>
