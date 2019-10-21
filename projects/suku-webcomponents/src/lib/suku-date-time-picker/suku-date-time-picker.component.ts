@@ -26,7 +26,7 @@ export class SukuDateTimePickerComponent implements OnInit {
   constructor() { }
 
   ngOnInit() { }
-  
+
 	isFieldValid(field: string) {
 		return (
 			(!this.form.get(field).valid && this.form.get(field).touched) ||
@@ -36,7 +36,7 @@ export class SukuDateTimePickerComponent implements OnInit {
 
   selectedDate(val) {
     console.log('this is value ',val._selected);
-    const selectedDate = val._selected
+    const selectedDate = val._selected;
     this.dateSelect.emit(selectedDate);
   }
 }

@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import html2canvas from 'html2canvas';
 import * as jspdf from 'jspdf';
 import { Observable, Observer } from 'rxjs';
-import { FormGroup, FormBuilder } from '@angular/forms';
+import { FormGroup, FormBuilder, FormArray, Validators, FormControl } from '@angular/forms';
 import { SukuLoaderService, SukuModalService, SukuWebcomponentsService } from 'projects/suku-webcomponents/src/public_api';
 import { TranslateService } from '@ngx-translate/core';
 // import { SukuModalService, SukuLoaderService } from 'suku-webcomponents';
@@ -485,18 +485,21 @@ export class AppComponent implements OnInit {
 	ngOnInit() {
 		// this.openSomething();
 		this.test = this.fb.group({
+			customer: this.fb.array([]),
 			'controlOne': '',
 			'controlTwo': '',
 			'controlThree': '',
 			'controlFour': '',
 			publishDate: '',
 			expiryDate: '',
+			accountType: '',
+			CitizensReserveTOSCheck: ''
 		});
 		const userInfo = {
 			userId: 474,
 			userName: 'Abigail'
 		};
-
+		(<FormArray>this.test.get('customer')).push(this.CreateCustomercontrols());
 		this.messageData.forEach((data) => {
 			const messageObj = {
 				message: data.message,
@@ -534,12 +537,111 @@ export class AppComponent implements OnInit {
 		// this.open();
 	}
 
+	CreateCustomercontrols(): FormGroup {
+		return this.fb.group({
+			userId: new FormControl(''),
+			firstName: new FormControl('', [
+				Validators.pattern('[a-z/A-Z]*'),
+				Validators.minLength(3),
+				Validators.maxLength(60)
+			]),
+			lastName: new FormControl('', [
+				Validators.pattern('[a-z/A-Z]*'),
+				Validators.minLength(3),
+				Validators.maxLength(60)
+			]),
+			email: new FormControl('', [
+				Validators.pattern('^[a-zA-Z0-9.]+@[a-zA-Z0-9]+(.)?[a-zA-Z0-9]{2,6}?.[a-zA-Z]{2,6}$')
+			]),
+			ipAddress: new FormControl(''),
+			address1: new FormControl('', [Validators.minLength(3), Validators.maxLength(50)]),
+			city: new FormControl('', [Validators.minLength(1), Validators.maxLength(25)]),
+			state: new FormControl('', [
+				Validators.pattern('[a-z/A-Z]*'),
+				Validators.minLength(2),
+				Validators.maxLength(2)
+			]),
+			postalCode: new FormControl('', [Validators.pattern('[0-9]{5}')]),
+			businessClassification: new FormControl(''),
+			businessType: new FormControl(''),
+			type: new FormControl(''),
+			ein: new FormControl('', [Validators.pattern('[0-9]{2}[0-9]{7}')]),
+			businessName: new FormControl('', [Validators.minLength(3), Validators.maxLength(50)]),
+			dateOfBirth: new FormControl(''),
+			ssn: new FormControl('', [Validators.pattern('[0-9]{4}')]),
+			controller: this.fb.group({
+				firstName: new FormControl('', [
+					Validators.pattern('[a-z/A-Z]*'),
+					Validators.minLength(3),
+					Validators.maxLength(60)
+				]),
+				lastName: new FormControl('', [
+					Validators.pattern('[a-z/A-Z]*'),
+					Validators.minLength(3),
+					Validators.maxLength(60)
+				]),
+				title: new FormControl('', [Validators.minLength(3), Validators.maxLength(60)]),
+				ssn: new FormControl('', [Validators.pattern('[0-9]{4}')]),
+				dateOfBirth: new FormControl(''),
+				address: this.fb.group({
+					address1: new FormControl('', [Validators.minLength(3), Validators.maxLength(60)]),
+					address2: new FormControl('', [Validators.minLength(3), Validators.maxLength(60)]),
+					city: new FormControl('', [Validators.minLength(1), Validators.maxLength(60)]),
+					stateProvinceRegion: new FormControl({ value: '', disabled: true }),
+					country: new FormControl(''),
+					postalCode: new FormControl('', [Validators.pattern('[0-9]{5}')])
+				})
+			})
+		});
+	}
+
+	CreateCustomerSubmit(s) {
+		console.log('CreateCustomerSubmit', s, this.test.value);
+		// const userinfo = this.ls.get('userInfo');
+		const payLoad = this.test.value;
+		const index = 0;
+		// payLoad.customer[index].controller.address.country = this.countryNamev;
+		payLoad.customer[index].ipAddress = window.origin;
+		// payLoad.customer[index].userId = userinfo.userId;
+		// payLoad.customer[index].type = this.industryTypeName;
+		// we are doing this later should add type 'which type of account should we create'
+		payLoad.customer[index].type = 'personal';
+		// payLoad.customer[index].dateOfBirth = this.datePipe.transform(
+		// 	payLoad.customer[index].dateOfBirth,
+		// 	'yyyy-MM-dd'
+		// );
+			const Mappayload = [
+				{
+					userId: payLoad.customer[index].userId,
+					firstName: payLoad.customer[index].firstName,
+					lastName: payLoad.customer[index].lastName,
+					email: payLoad.customer[index].email,
+					type: payLoad.customer[index].type,
+					address1: payLoad.customer[index].address1,
+					city: payLoad.customer[index].city,
+					state: payLoad.customer[index].state,
+					postalCode: payLoad.customer[index].postalCode,
+					dateOfBirth: payLoad.customer[index].dateOfBirth,
+					ssn: payLoad.customer[index].ssn
+				}
+			];
+			console.log('onSubmit', Mappayload);
+	}
+
+	onSubmit(s) {
+		console.log('onSubmit', s);
+	}
+
 	isLeapYear(year) {
 		return (year % 4 == 0 && year % 100 != 0) || (year % 400 == 0);
 	}
 
 	action(e) {
 		console.log('e', e.value);
+	}
+
+	printValue(e) {
+		console.log('xxxxxxxxxxxxxxxxxxx', e)
 	}
 
 	getWeeksNum() {
@@ -582,7 +684,7 @@ export class AppComponent implements OnInit {
 		this.mindate = new Date(year, month, day);
 		return year + '-' + month + '-' + day;
 	}
-	
+
 	checkToogle() {
 		this.checkboxChecked = !this.checkboxChecked;
 		console.log('this.checkboxChecked', this.checkboxChecked)
