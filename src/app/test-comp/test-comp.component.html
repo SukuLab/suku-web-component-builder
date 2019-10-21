@@ -37,7 +37,9 @@
       <suku-select-input customclass="default"></suku-select-input>
     </div>
 
-    <suku-filters [form]="form"></suku-filters>
+    <suku-filters filterHeading="TRANSACTIONS" filterSubHeading="Transaction Date"
+      [statusTypesDynamic]="statusTypesDynamic" [form]="form">
+    </suku-filters>
     <suku-dropdown-wfc (select)="action($event)" [disabled]="true" [data]="dropDownData" displayKey="templateName"
       keyValue="templateName" [value]="value">
     </suku-dropdown-wfc>

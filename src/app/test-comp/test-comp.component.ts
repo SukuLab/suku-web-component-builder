@@ -8,6 +8,76 @@ import { FormBuilder, FormGroup, FormControl, FormArray } from '@angular/forms';
 })
 export class TestCompComponent implements OnInit {
   form: FormGroup;
+  statusTypesDynamic = [
+    {
+      displayName: 'Interest Status',
+      key: 'Interest Status',
+      checked: true,
+      level: 0,
+      label: true,
+      hasSub: true,
+      sub: [
+        {
+          displayName: 'Draft',
+          key: 'Draft',
+          level: 0,
+          checked: false,
+          hasSub: false,
+          sub: []
+        },
+        {
+          displayName: 'Pending',
+          key: 'Pending',
+          checked: false,
+          level: 0,
+          hasSub: false,
+          sub: []
+        },
+        {
+          displayName: 'Active',
+          key: 'Active',
+          checked: false,
+          level: 0,
+          hasSub: false,
+          sub: []
+        },
+        {
+          displayName: 'Expired',
+          key: 'Expired',
+          checked: false,
+          level: 0,
+          hasSub: false,
+          sub: []
+        }
+      ]
+    },
+    {
+      displayName: 'Includes Matches',
+      key: 'Includes Matches',
+      checked: true,
+      level: 0,
+      label: true,
+      hasSub: true,
+      sub: [
+        {
+          displayName: 'Read',
+          key: 'Read',
+          checked: false,
+          level: 1,
+          hasSub: true,
+          sub: []
+        },
+        {
+          displayName: 'Unread',
+          key: 'Unread',
+          checked: false,
+          level: 1,
+          hasSub: false,
+          sub: []
+        }
+      ]
+    }
+  ];
   sample = 'tree';
   tableKeyA1 = {
     'Cow ID': 'String',

@@ -456,7 +456,12 @@ fieldset[disabled] .btn-info.focus {
 
 .filterSubHeading {
   font-size: 16px;
-  font-family: Roboto,"Helvetica Neue",sans-serif;
+  font-family: $suku-primary-font !important;
+  letter-spacing: .2px;
+}
+
+.filterSubHeadingLabel {
+  font-family: $suku-secondary-font !important;
   letter-spacing: .2px;
 }
 
@@ -515,21 +520,15 @@ fieldset[disabled] .btn-info.focus {
 }
 
 /deep/.mat-checkbox-checked .mat-checkbox-layout .mat-checkbox-label {
-  font-family: Roboto, "Helvetica Neue", sans-serif;
-  font-size: 15px;
   letter-spacing: 0.2px;
   color: black !important;
 }
 
 /deep/.mat-checkbox-layout .mat-checkbox-label {
-  font-family: Roboto, "Helvetica Neue", sans-serif;
-  font-size: 15px;
   letter-spacing: 0.2px;
   color: #757575a6 !important;
 }
 
 .mat-checkbox-label {
-  font-family: Roboto, "Helvetica Neue", sans-serif;
-  font-size: 15px;
   letter-spacing: 0.2px;
 }
