@@ -1,4 +1,4 @@
-<button type="btnType" class="suku-p suku-primary c-pointer {{customClass}}" [ngClass]="{'disabled' : disableValue}"
+<button type="{{btnType}}" class="suku-p suku-primary c-pointer {{customClass}}" [ngClass]="{'disabled' : disableValue}"
   [style.font-size.rem]="size" [style.color]="color" [style.font-weight]="weight" [disabled]="disableValue" [id]="id"
   (click)="action.emit()">
   <ng-content></ng-content>
