@@ -815,6 +815,37 @@ export class TestCompComponent implements OnInit {
       }
     ]
   };
+  progressData = [
+    {
+      name: 'Finca Nueva',
+      status: 'inProgress',
+      type: 'farmJourney_Lbl',
+      data: '',
+      id: ''
+    },
+    {
+      name: 'Sasmar',
+      status: 'anotherStep',
+      type: 'processorJourney_Lbl',
+      data: '',
+      id: ''
+    },
+    {
+      name: 'Esmeralda',
+      status: 'inComplete',
+      type: 'logisticsJourney_Lbl',
+      data: '',
+      id: ''
+    },
+    {
+      name: 'Cedicar',
+      status: 'inComplete',
+      type: 'distributorJourney_Lbl',
+      data: '',
+      id: ''
+    }
+  ];
+
   constructor(private fb: FormBuilder) { }
 
   ngOnInit() {

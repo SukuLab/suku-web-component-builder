@@ -262,13 +262,20 @@ button {
   color: black;
 }
 
-@media only screen and (max-device-width: 480px) {
+@media only screen and (max-width: 480px) {
 
   .p-xs-0 {
     padding: 0px !important;
   }
 
 }
+
+@media (min-width: 1440px) {
+  .progressbar li:after {
+    height: 2px;
+  }
+}
+
 
 @media (max-width: 900px) {
   .tipTooltext {

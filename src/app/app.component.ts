@@ -21,7 +21,7 @@ export class AppComponent implements OnInit {
 		disabled: false,
 		id: 'Marketplace'
 	};
-	htmlContent = '<h1><b>Hello world<b></h1>'
+	htmlContent = '<h1><b>Hello world<b></h1>';
 	progressData = [
 		{
 			name: 'Finca Nueva',
@@ -610,22 +610,22 @@ export class AppComponent implements OnInit {
 		// 	payLoad.customer[index].dateOfBirth,
 		// 	'yyyy-MM-dd'
 		// );
-			const Mappayload = [
-				{
-					userId: payLoad.customer[index].userId,
-					firstName: payLoad.customer[index].firstName,
-					lastName: payLoad.customer[index].lastName,
-					email: payLoad.customer[index].email,
-					type: payLoad.customer[index].type,
-					address1: payLoad.customer[index].address1,
-					city: payLoad.customer[index].city,
-					state: payLoad.customer[index].state,
-					postalCode: payLoad.customer[index].postalCode,
-					dateOfBirth: payLoad.customer[index].dateOfBirth,
-					ssn: payLoad.customer[index].ssn
-				}
-			];
-			console.log('onSubmit', Mappayload);
+		const Mappayload = [
+			{
+				userId: payLoad.customer[index].userId,
+				firstName: payLoad.customer[index].firstName,
+				lastName: payLoad.customer[index].lastName,
+				email: payLoad.customer[index].email,
+				type: payLoad.customer[index].type,
+				address1: payLoad.customer[index].address1,
+				city: payLoad.customer[index].city,
+				state: payLoad.customer[index].state,
+				postalCode: payLoad.customer[index].postalCode,
+				dateOfBirth: payLoad.customer[index].dateOfBirth,
+				ssn: payLoad.customer[index].ssn
+			}
+		];
+		console.log('onSubmit', Mappayload);
 	}
 
 	onSubmit(s) {
