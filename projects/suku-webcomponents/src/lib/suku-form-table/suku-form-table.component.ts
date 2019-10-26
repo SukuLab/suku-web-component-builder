@@ -255,6 +255,10 @@ export class SukuFormTableComponent implements OnInit {
         event.returnValue = false;
         return false;
       }
+      if (event.charCode == 69) {
+        event.returnValue = false;
+        return false;
+      }
     }
 
     /* validation for string  */

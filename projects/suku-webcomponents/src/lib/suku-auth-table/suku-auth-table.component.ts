@@ -6,9 +6,9 @@ import { Component, OnInit, Input } from '@angular/core';
   styleUrls: ['./suku-auth-table.component.scss']
 })
 export class SukuAuthTableComponent implements OnInit {
-  
+
   @Input('tableHeading') tableHeading = 'Table Heading';
-  @Input('tableContent') tableContent = [{ 'blocknumber': '11'}, {'blocknumber2': '11'}, {'claim': ['hello', 'wor']  }]
+  @Input('tableContent') tableContent = [{ 'blocknumber': '11' }, { 'blocknumber2': '11' }, { 'claim': ['hello', 'wor'] }]
   @Input('headingFontWeight') headingFontWeight;
   @Input('headingTextColor') headingTextColor;
   @Input('headingTextSize') headingTextSize;
@@ -28,22 +28,22 @@ export class SukuAuthTableComponent implements OnInit {
   }
 
   getKeyValue(obj) {
-  	let formatedObject =  {};
-  	Object.keys(obj).forEach(key => {
-  		formatedObject = {
-  			key: key,
-  			value: obj[key]
-  		}
-	});
-  	return formatedObject
+    let formatedObject = {};
+    Object.keys(obj).forEach(key => {
+      formatedObject = {
+        key: key,
+        value: obj[key]
+      }
+    });
+    return formatedObject
   }
 
   chechIfArray(data) {
-  	console.log(data);
-  	if (typeof(data) == 'object') {
-  		return true;
-  	} else {
-  		return false;
-  	}
+    console.log(data);
+    if (typeof (data) == 'object') {
+      return true;
+    } else {
+      return false;
+    }
   }
 }

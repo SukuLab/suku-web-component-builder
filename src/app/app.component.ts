@@ -479,7 +479,7 @@ export class AppComponent implements OnInit {
 		private translate: TranslateService
 	) {
 		this.sukuTheme.setSukuTheme();
-		this.translate.use('en');
+		this.translate.use('es-pe');
 	}
 
 	ngOnInit() {
