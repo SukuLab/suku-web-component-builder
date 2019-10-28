@@ -25,6 +25,8 @@ export class SukuUserDetailsComponent implements OnInit {
 @Input() state;
 @Input() zip;
 @Input() country ;
+companyIconSize = 1.3;
+companyIconColor = "#a7bf2e"
   constructor() { }
 
   ngOnInit() {
