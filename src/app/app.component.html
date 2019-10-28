@@ -1,4 +1,10 @@
 <form [formGroup]="test">
+
+    <suku-user-details widgetTitleSize="16" widgetTitleWeight="600" widgetTitle='User details'
+    fullName='{{facilityAddress?.registeredName}}' email='{{facilityAddress?.email}}'
+    phoneNumber='{{facilityAddress?.phone}}' fullAddress='{{facilityAddress?.address}}'></suku-user-details>
+
+
   <div class="col-lg-8 col-md-8 offset-md-2 offset-lg-2 col-sm-12 ">
     <suku-search-widget (getValue)="printValue($event);" value="new value" buttonFontSize="14" buttonFontWeight="bold">
     </suku-search-widget>
@@ -68,13 +74,12 @@
   <!-- <div class="form-group col-12 col-sm-8 col-md-8 col-lg-8 offset-sm-2 pL0R0 Rectangle-2">
     <suku-user-input [enable-user-icon]="false" (onChangeAction)="getLotId($event)" placeholder="Enter Lot #">
     </suku-user-input>
-    <suku-user-details widgetTitleSize="16" widgetTitleWeight="600" widgetTitle='User details'
-      fullName='{{facilityAddress?.registeredName}}' email='{{facilityAddress?.email}}'
-      phoneNumber='{{facilityAddress?.phone}}' fullAddress='{{facilityAddress?.address}}'></suku-user-details> -->
+ -->
   <!-- <suku-user-input> </suku-user-input> -->
   <!--  </div>
   <div>
   </div>
   <app-test-comp></app-test-comp> -->
+ 
   <app-test-comp></app-test-comp>
 </form>
