@@ -32,4 +32,4 @@ companyIconColor = "#a7bf2e"
   ngOnInit() {
   }
 
-}
+} 
