@@ -5,7 +5,7 @@
         <!-- checkbox -->
         <span [ngClass]="{'align-checkbox': editable[j] }" *ngIf="(typeKey[list]=='Checkbox')">
           <mat-checkbox (change)="sendData();" color="primary"
-            [disabled]="!editable[j] && (list != selectionKey) || tableDisabled" [(ngModel)]="selectAll"
+            [disabled]="!editable[j] && (list != selectionKey) || tableDisabled[j]" [(ngModel)]="selectAll"
             (change)="selectAllAction()"> {{'selectAll_ChkBox' | translate}}
           </mat-checkbox>
         </span>
@@ -21,8 +21,8 @@
             {{titleContent}}
             <span class="pl-5" id="processor">
               <span [ngClass]="{'align-checkbox': editable[j] }" *ngIf="type == 'Processor'">
-                <mat-checkbox (change)="sendData();" color="primary" [disabled]="tableDisabled" [(ngModel)]="selectAll"
-                  (change)="selectAllAction()">
+                <mat-checkbox (change)="sendData();" color="primary" [disabled]="tableDisabled[j]"
+                  [(ngModel)]="selectAll" (change)="selectAllAction()">
                   <span class="checkbox">{{'selectAll_ChkBox' | translate}}</span>
                 </mat-checkbox>
               </span>
@@ -68,14 +68,14 @@
             <span *ngIf="editable[j] && (list != actionkey) && ( typeKey[list]=='String' || typeKey[list]=='Number')">
               <input (keyup)="sendData()" (keypress)="checkSpcialChar($event,typeKey[list])" class="form-control"
                 [(ngModel)]="item[list]" min="0" [maxLength]="25" type="{{(typeKey[list]=='Number')?'number':'text'}}"
-                (change)="validate(item[list],j)" [disabled]="tableDisabled" id="{{list | trim}}{{j}}"
+                (change)="validate(item[list],j)" [disabled]="tableDisabled[j]" id="{{list | trim}}{{j}}"
                 *ngIf="editable[j] && (list != actionkey) && ( typeKey[list]=='String' || typeKey[list]=='Number')" />
               <p id="{{j}}" class="errorMessage" *ngIf="(item[list]  && item[list] == 0)">
                 {{errorMessageOne | translate}}
               </p>
             </span>
 
-            <input type="date" (keyup)="sendData()" [disabled]="tableDisabled" data-date=""
+            <input type="date" (keyup)="sendData()" [disabled]="tableDisabled[j]" data-date=""
               data-date-format="mm/dd/yyyy" class="form-control" id="{{list | trim}}{{j}}"
               *ngIf="editable[j] && (list != actionkey) && typeKey[list]=='Date'" [(ngModel)]="item[list]" />
 
@@ -83,12 +83,12 @@
             <span class="align-checkbox" *ngIf="(typeKey[list]=='Checkbox')">
               <mat-checkbox color="primary" id="{{list | trim}}{{j}}"
                 (change)="sendData();patchValue(item[selectionKey], item[highlighterKey], j, highlighterKey)"
-                [disabled]="(!editable[j] && (list != selectionKey) ) || tableDisabled" [(ngModel)]="item[list]">
+                [disabled]="(!editable[j] && (list != selectionKey) ) || tableDisabled[j]" [(ngModel)]="item[list]">
               </mat-checkbox>
             </span>
 
             <!-- select -->
-            <select class="form-control" (change)="sendData()" [disabled]="tableDisabled" *ngIf="editable[j] && (list != actionkey) 
+            <select class="form-control" (change)="sendData()" [disabled]="tableDisabled[j]" *ngIf="editable[j] && (list != actionkey) 
             && ( typeKey[list]!='String' && typeKey[list]!='Number' && typeKey[list]!='Checkbox' &&
             typeKey[list] !='Date')" [(ngModel)]="item[list]">
               <option *ngFor="let c of typeKey[list];let k=index" id="asset{{k}}" [ngValue]="c"> {{c}} </option>
@@ -100,7 +100,7 @@
                 <span *ngIf="(list == data.key)">
                   <input type="{{(typeKey[list]=='Number')?'number':'text'}}" id="asset{{j}}{{dataIndex}}"
                     (keyup)="sendData()" [ngClass]="{'disabled': !item[selectionKey]}"
-                    [disabled]="!item[selectionKey] || tableDisabled" class="form-control sample"
+                    [disabled]="!item[selectionKey] || tableDisabled[j]" class="form-control sample"
                     id="{{list | trim}}{{j}}" [(ngModel)]="item[data.key]" (change)="validate(item[data.key],dataIndex)"
                     *ngIf="checkValid(list) && (list != actionkey) && highlighterKey"
                     (keypress)="checkSpcialChar($event,typeKey[list])" min="0" />
@@ -115,7 +115,7 @@
             && patchKey">
               <input type="{{(typeKey[list]=='Number')?'number':'text'}}" id="asset{{j}}{{selectionKey}}"
                 (keyup)="sendData();" [ngClass]="{'disabled':
-              item[selectionKey]}" [disabled]="item[selectionKey] || tableDisabled" class="form-control sample"
+              item[selectionKey]}" [disabled]="item[selectionKey] || tableDisabled[j]" class="form-control sample"
                 [(ngModel)]="item[patchKey]" *ngIf="(list == patchKey) && (list != actionkey)
               && patchKey" id="{{selectionKey | trim}}{{j}}Patch" (change)="validate(item[patchKey],selectionKey)"
                 min="0" [maxLength]="10" (keypress)="checkSpcialChar($event,typeKey[list]);" />
@@ -125,19 +125,19 @@
             </span>
 
             <span class="col p-0 pl-2" (click)="edit(j, item);sendData()"
-              *ngIf="list == actionkey && !editable[j] && !tableDisabled">
+              *ngIf="list == actionkey && !editable[j] && !tableDisabled[j]">
               <span class="secondary-btn controlCustomClass" id="edit{{j}}" [style.font-size.rem]="controlsSize"
                 [ngClass]="{'btn-edit' : editable[j]}">
                 {{'edit_TblBtn' | translate}}
               </span>
             </span>
-            <span class="col p-0 pl-2" *ngIf="(list == actionkey) && editable[j]  && !tableDisabled">
+            <span class="col p-0 pl-2" *ngIf="(list == actionkey) && editable[j]  && !tableDisabled[j]">
               <span class="secondary-btn controlCustomClass" id="edit{{j}}" [style.font-size.rem]="controlsSize"
                 (click)="edit(j, item);sendData()" [ngClass]="{'btn-edit' : editable[j]}">
                 {{'save_TblBtn' | translate}}
               </span>
             </span>
-            <span class="col c-pointer pl-4" *ngIf="(list == actionkey) && !tableDisabled">
+            <span class="col c-pointer pl-4" *ngIf="(list == actionkey) && !tableDisabled[j]">
               <span class="secondary-btn controlCustomClass" id="edit{{j}}" [style.font-size.rem]="controlsSize"
                 (click)="removedata(j, item);sendData()" [ngClass]="{'btn-edit' : editable[j]}">
                 {{'remove_TblBtn' | translate}}
@@ -148,7 +148,7 @@
       </tbody>
     </table>
   </div>
-  <div class="col text-right" *ngIf="enableControls && !tableDisabled">
+  <div class="col text-right" *ngIf="enableControls && !tableDisabled[j]">
     <span class="p-2">
       <a class="secondary-btn" id="addOneRow" [style.font-size.rem]="controlsSize" (click)="addTable(1,_items?.length)"
         color="primary">{{'add1Row_TblBtn' | translate}}</a>
