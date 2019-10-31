@@ -19,7 +19,8 @@
            <span *ngIf="!chechIfArray(getKeyValue(data)['value'])"> {{ getKeyValue(data)['value'] }} </span>
            <div *ngIf="chechIfArray(getKeyValue(data)['value'])">
              <ul *ngFor="let val of getKeyValue(data)['value']">
-               <li>{{val}}</li>
+               <li><a href="{{val.url}}" target="_blank" >{{val.name}}</a></li>
+               <!-- <li *ngIf="!(enableLink)">{{val}}disable</li> -->
              </ul>
            </div>
          </div>
