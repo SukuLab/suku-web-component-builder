@@ -147,12 +147,18 @@
   </suku-user-input>
   <br />
   <br />
-
+  <suku-display-table  [table-header]='header' [translator]="true" title-one-size="14" [enable-date-pipe]="'true'"
+    (action)="openJourney($event)"   [status]="statusKeywords" [status-bg-style]="colorPallete"
+    [title-content]="'lotHistory_TblHdr' | translate" [table-data]="data" [id]="'journeyDetailstable'"
+    (pagination)="pagination($event)" display-pagination='true' table-items-count='5' total-item="{{totalJourneyCount}}"
+    [pagination-previous-label]="'previous_Page' | translate" [pagination-next-label]="'next_Page' | translate"
+    [table-sortable]="true">
+  </suku-display-table>
 </form>
 
 
-
-
+<!-- (action-two)='blockchain($event)' -->
+<!-- hrefSelectionOne = "status" -->
 
 
 

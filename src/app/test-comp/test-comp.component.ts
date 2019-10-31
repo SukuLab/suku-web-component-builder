@@ -8,6 +8,7 @@ import { FormBuilder, FormGroup, FormControl, FormArray } from '@angular/forms';
 })
 export class TestCompComponent implements OnInit {
   form: FormGroup;
+  data = [{"startdate":"2019-10-31T06:53:54.091Z","enddate":"-","lotid":"8","myStatus":"incomplete_TblValue","stepsCompleted":"3/4","status":"inProgress_TblValue"},{"startdate":"2019-10-31T06:38:03.752Z","enddate":"2019-10-31T07:37:47.038Z","lotid":"43","myStatus":"complete_TblValue","stepsCompleted":"4/4","status":"complete_TblValue"},{"startdate":"2019-10-31T05:15:05.780Z","enddate":"2019-10-31T11:40:18.024Z","lotid":"44","myStatus":"complete_TblValue","stepsCompleted":"4/4","status":"complete_TblValue"},{"startdate":"2019-10-16T20:35:35.908Z","enddate":"-","lotid":"5","myStatus":"notStarted_TblValue","stepsCompleted":"1/4","status":"inProgress_TblValue"},{"startdate":"2019-10-09T20:35:35.907Z","enddate":"-","lotid":"4","myStatus":"notStarted_TblValue","stepsCompleted":"2/4","status":"inProgress_TblValue"}]
   statusTypesDynamic = [
     {
       displayName: 'Interest Status',
@@ -235,7 +236,6 @@ export class TestCompComponent implements OnInit {
     }
   ];
 
-
   buttonData = {
     title: 'Marketplace',
     icon: 'fa fa-shopping-cart',
@@ -257,130 +257,130 @@ export class TestCompComponent implements OnInit {
     '_id': '5ce64d0147433300124d4df7',
     'templateName': 'UHF Ear Tag for cattle '
   }];
-  data = [
-    {
-      '_id': '5cdc3f51d104e7003b518653',
-      'asset': {
-        'id': '1011',
-        'name': 'Beef Rolled',
-        'description': 'Beef Rolled',
-        'bidId': '1007',
-        'transactionId': '1010'
-      },
-      'uid': 'a1ab6609-3dd1-9c2f-8799-323c7aa1688f'
-    },
-    {
-      '_id': '5cdd0a7a34dabd003c7a08de',
-      'asset': {
-        'id': '1022',
-        'name': 'Beef Rolled',
-        'description': 'Beef Rolled',
-        'bidId': '1006',
-        'transactionId': '1011'
-      },
-      'uid': 'bb97e7f8-e93d-a932-f9ea-bed6f24e10b1'
-    },
-    {
-      '_id': '5cde58f387614f003018b958',
-      'asset': {
-        'id': '1101',
-        'name': 'Beef Rolled',
-        'description': 'Beef Rolled',
-        'bidId': '1022',
-        'transactionId': '1023'
-      },
-      'uid': '8f1c40f0-5e2d-46aa-4bd0-8c5963e24930'
-    },
-    {
-      '_id': '5ce6380a07527b0047cf738d',
-      'asset': {
-        'id': '1341',
-        'name': 'Beef Rolled',
-        'description': 'Beef Rolled'
-      },
-      'uid': '96c031e9-b12b-ad2b-6014-f8893b036967'
-    },
-    {
-      '_id': '5ce69d37ef5444003ce43fb7',
-      'asset': {
-        'id': '1365',
-        'name': 'Beef Rolled',
-        'description': 'Beef Rolled'
-      },
-      'uid': '4701474c-d0e3-eced-6f98-e321174b4505'
-    },
-    {
-      '_id': '5ceb75a0ef5444003ce43fb8',
-      'asset': {
-        'id': '1452',
-        'name': 'Beef Rolled',
-        'description': 'Beef, the flesh of mature cattle, as distinguished from veal, the flesh of calves. The best beef is obtained from early maturing, special beef breeds. High-quality beef has firm, velvety, fine-grained lean, bright red in colour and well-marbled. The fat is smooth, creamy white, and well distributed. In young beef the bones are soft, porous, and red; the less desirable mature beef has hard white bones. Beef tenderness and flavour are improved by ageing; in one common ageing method the carcass is '
-      },
-      'uid': '6c7c9a15-2115-9d1e-3f60-9906822183f4'
-    },
-    {
-      '_id': '5cfdf1b932124b003b0f7fed',
-      'asset': {
-        'id': '1701',
-        'name': 'Beef roll meat',
-        'description': 'Beef roll meat',
-        'bidId': '1168',
-        'transactionId': '1045'
-      },
-      'uid': 'a66851ea-9bb1-e273-11c6-c6a23c149474'
-    },
-    {
-      '_id': '5d06987afbd76a0028fc91a4',
-      'asset': {
-        'id': '1763',
-        'name': 'Beef Rolled',
-        'description': 'Beef Rolled',
-        'bidId': '1196',
-        'transactionId': '1057'
-      },
-      'uid': '6ded257d-7aa8-98ab-beef-a3710e5fa1ab'
-    },
-    {
-      '_id': '5d0892c8b6e7490028eb42cc',
-      'asset': {
-        'id': '1782',
-        'name': 'Beef Rolled',
-        'description': 'Beef Rolled',
-        'bidId': '1221',
-        'transactionId': '1070'
-      },
-      'uid': '8d9a51ec-4bcd-d67c-fcb2-7400e0726c94'
-    },
-    {
-      '_id': '5d0dc73a71017f0029f7eae7',
-      'asset': {
-        'id': '1811',
-        'name': 'Beef Rolled 2206',
-        'description': 'Beef Rolled 2206',
-        'bidId': '1224',
-        'transactionId': '1072'
-      },
-      'uid': '965f1251-34be-49ed-32ab-a253615ab1a5'
-    },
-    {
-      '_id': '5d109c4a7e7ad7002835eca0',
-      'asset': {
-        'id': '1823',
-        'name': 'Beef Rolled',
-        'description': 'Beef Rolled'
-      },
-      'uid': '2def0a86-2840-82fd-2ff9-38bd46e32c5f'
-    },
-    {
-      '_id': '5d3075489fcf200028d29724',
-      'asset': {
-        'id': '1994',
-        'name': 'Beef Rolled',
-        'description': 'Beef Rolled'
-      },
-      'uid': 'c652cc38-5d9b-bc15-ee51-9016653c1ff5'
-    }
-  ];
+  // data = [
+  //   {
+  //     '_id': '5cdc3f51d104e7003b518653',
+  //     'asset': {
+  //       'id': '1011',
+  //       'name': 'Beef Rolled',
+  //       'description': 'Beef Rolled',
+  //       'bidId': '1007',
+  //       'transactionId': '1010'
+  //     },
+  //     'uid': 'a1ab6609-3dd1-9c2f-8799-323c7aa1688f'
+  //   },
+  //   {
+  //     '_id': '5cdd0a7a34dabd003c7a08de',
+  //     'asset': {
+  //       'id': '1022',
+  //       'name': 'Beef Rolled',
+  //       'description': 'Beef Rolled',
+  //       'bidId': '1006',
+  //       'transactionId': '1011'
+  //     },
+  //     'uid': 'bb97e7f8-e93d-a932-f9ea-bed6f24e10b1'
+  //   },
+  //   {
+  //     '_id': '5cde58f387614f003018b958',
+  //     'asset': {
+  //       'id': '1101',
+  //       'name': 'Beef Rolled',
+  //       'description': 'Beef Rolled',
+  //       'bidId': '1022',
+  //       'transactionId': '1023'
+  //     },
+  //     'uid': '8f1c40f0-5e2d-46aa-4bd0-8c5963e24930'
+  //   },
+  //   {
+  //     '_id': '5ce6380a07527b0047cf738d',
+  //     'asset': {
+  //       'id': '1341',
+  //       'name': 'Beef Rolled',
+  //       'description': 'Beef Rolled'
+  //     },
+  //     'uid': '96c031e9-b12b-ad2b-6014-f8893b036967'
+  //   },
+  //   {
+  //     '_id': '5ce69d37ef5444003ce43fb7',
+  //     'asset': {
+  //       'id': '1365',
+  //       'name': 'Beef Rolled',
+  //       'description': 'Beef Rolled'
+  //     },
+  //     'uid': '4701474c-d0e3-eced-6f98-e321174b4505'
+  //   },
+  //   {
+  //     '_id': '5ceb75a0ef5444003ce43fb8',
+  //     'asset': {
+  //       'id': '1452',
+  //       'name': 'Beef Rolled',
+  //       'description': 'Beef, the flesh of mature cattle, as distinguished from veal, the flesh of calves. The best beef is obtained from early maturing, special beef breeds. High-quality beef has firm, velvety, fine-grained lean, bright red in colour and well-marbled. The fat is smooth, creamy white, and well distributed. In young beef the bones are soft, porous, and red; the less desirable mature beef has hard white bones. Beef tenderness and flavour are improved by ageing; in one common ageing method the carcass is '
+  //     },
+  //     'uid': '6c7c9a15-2115-9d1e-3f60-9906822183f4'
+  //   },
+  //   {
+  //     '_id': '5cfdf1b932124b003b0f7fed',
+  //     'asset': {
+  //       'id': '1701',
+  //       'name': 'Beef roll meat',
+  //       'description': 'Beef roll meat',
+  //       'bidId': '1168',
+  //       'transactionId': '1045'
+  //     },
+  //     'uid': 'a66851ea-9bb1-e273-11c6-c6a23c149474'
+  //   },
+  //   {
+  //     '_id': '5d06987afbd76a0028fc91a4',
+  //     'asset': {
+  //       'id': '1763',
+  //       'name': 'Beef Rolled',
+  //       'description': 'Beef Rolled',
+  //       'bidId': '1196',
+  //       'transactionId': '1057'
+  //     },
+  //     'uid': '6ded257d-7aa8-98ab-beef-a3710e5fa1ab'
+  //   },
+  //   {
+  //     '_id': '5d0892c8b6e7490028eb42cc',
+  //     'asset': {
+  //       'id': '1782',
+  //       'name': 'Beef Rolled',
+  //       'description': 'Beef Rolled',
+  //       'bidId': '1221',
+  //       'transactionId': '1070'
+  //     },
+  //     'uid': '8d9a51ec-4bcd-d67c-fcb2-7400e0726c94'
+  //   },
+  //   {
+  //     '_id': '5d0dc73a71017f0029f7eae7',
+  //     'asset': {
+  //       'id': '1811',
+  //       'name': 'Beef Rolled 2206',
+  //       'description': 'Beef Rolled 2206',
+  //       'bidId': '1224',
+  //       'transactionId': '1072'
+  //     },
+  //     'uid': '965f1251-34be-49ed-32ab-a253615ab1a5'
+  //   },
+  //   {
+  //     '_id': '5d109c4a7e7ad7002835eca0',
+  //     'asset': {
+  //       'id': '1823',
+  //       'name': 'Beef Rolled',
+  //       'description': 'Beef Rolled'
+  //     },
+  //     'uid': '2def0a86-2840-82fd-2ff9-38bd46e32c5f'
+  //   },
+  //   {
+  //     '_id': '5d3075489fcf200028d29724',
+  //     'asset': {
+  //       'id': '1994',
+  //       'name': 'Beef Rolled',
+  //       'description': 'Beef Rolled'
+  //     },
+  //     'uid': 'c652cc38-5d9b-bc15-ee51-9016653c1ff5'
+  //   }
+  // ];
   gallery = [
     {
       index: 'one',
@@ -975,4 +975,14 @@ export class TestCompComponent implements OnInit {
   textCount(e) {
     this.textcount = e;
   }
+  header = [
+    { id: 'startdate', title: 'startDate_TblColHdr', type: 'Date' },
+    { id: 'enddate', title: 'endDate_TblColHdr', type: 'Date' },
+    { id: 'lotid', title: 'lotID_TbldColHdr', type: 'Number' },
+    { id: 'myStatus', title: 'myTaskStatus_TblColHdr', type: 'String' },
+    { id: 'stepsCompleted', title: 'stepsCompleted_TblColHdr', type: 'String' },
+    { id: 'status', title: 'overallStatus_TblColHdr', type: 'String' }
+  ];
+  colorPallete = ['#a3ded8', '#f8dbb4', '#c7c3fa', '#c2c1c1'];
+  statusKeywords = ['Completed', 'Incomplete', 'In Progress', 'Pending'];
 }
