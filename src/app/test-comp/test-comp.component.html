@@ -147,7 +147,7 @@
   </suku-user-input>
   <br />
   <br />
-  <suku-display-table  [table-header]='header' [translator]="true" title-one-size="14" [enable-date-pipe]="'true'"
+  <suku-display-table (action-two)='blockchain($event)' hrefSelectionOne = "status" [table-header]='header' [translator]="true" title-one-size="14" [enable-date-pipe]="'true'"
     (action)="openJourney($event)"   [status]="statusKeywords" [status-bg-style]="colorPallete"
     [title-content]="'lotHistory_TblHdr' | translate" [table-data]="data" [id]="'journeyDetailstable'"
     (pagination)="pagination($event)" display-pagination='true' table-items-count='5' total-item="{{totalJourneyCount}}"
@@ -158,7 +158,7 @@
 
 
 <!-- (action-two)='blockchain($event)' -->
-<!-- hrefSelectionOne = "status" -->
+<!--  -->
 
 
 

@@ -37,7 +37,7 @@
           <span *ngIf="(key === hrefSelection)" (click)="action.emit(data[key])" class="suku-link c-pointer">
             {{data[key] | translate}}
           </span>
-          <span *ngIf="(key === hrefSelectionOne && data[key] === 'complete_TblValue')" (click)="actionTwo.emit(data[key])" class="suku-link c-pointer">
+          <span *ngIf="(key === hrefSelectionOne && data[key] === 'complete_TblValue')" (click)="actionTwo.emit(data[hrefSelection])" class="suku-link c-pointer">
               {{data[key] | translate}}
           </span>
           <!-- <span *ngIf="!(key === hrefSelection)">
