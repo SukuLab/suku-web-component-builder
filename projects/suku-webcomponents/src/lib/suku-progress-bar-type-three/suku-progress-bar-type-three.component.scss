@@ -92,6 +92,10 @@
   background-color: #b3b3b3;
 }
 
+.progressbar li.pending+li:after {
+  background-color: #b3b3b3;
+}
+
 .progressbar li.active+li:after {
   background-color: #b3b3b3;
 }
@@ -224,10 +228,18 @@ li {
 }
 
 .completed {
-  color: white;
+  color: #a7bf2e !important;
+  background-color: #1c1c1c !important;
+}
+.pending {
+   color: #a7bf2e !important;
   background-color: #1c1c1c !important;
 }
 
+.completedAndOther {
+  color: white;
+  background: $suku-sick-green !important;
+}
 button {
   background: none;
   color: inherit;

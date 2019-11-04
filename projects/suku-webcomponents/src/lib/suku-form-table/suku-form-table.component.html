@@ -148,7 +148,7 @@
       </tbody>
     </table>
   </div>
-  <div class="col text-right" *ngIf="enableControls && !tableDisabled[j]">
+  <div class="col text-right" *ngIf="enableControls">
     <span class="p-2">
       <a class="secondary-btn" id="addOneRow" [style.font-size.rem]="controlsSize" (click)="addTable(1,_items?.length)"
         color="primary">{{'add1Row_TblBtn' | translate}}</a>

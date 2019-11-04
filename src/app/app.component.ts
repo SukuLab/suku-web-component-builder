@@ -39,14 +39,14 @@ export class AppComponent implements OnInit {
 		},
 		{
 			name: 'Esmeralda',
-			status: 'inComplete',
+			status: 'pending',
 			type: 'logisticsJourney_Lbl',
 			data: '',
 			id: ''
 		},
 		{
 			name: 'Cedicar',
-			status: 'inComplete',
+			status: 'completedAndOther',
 			type: 'distributorJourney_Lbl',
 			data: '',
 			id: ''
