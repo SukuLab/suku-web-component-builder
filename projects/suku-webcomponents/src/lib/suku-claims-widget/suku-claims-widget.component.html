@@ -11,7 +11,7 @@
         </div>
         <div class="pt-1" *ngIf= claim?.verifiable >
           <span *ngIf= !(claim?.url) class="mt-auto mb-auto pl-2 name {{claimTitleCustomClass}}" id="claimTitle{{i}}">{{claim?.name}} verf</span>
-          <span *ngIf= claim?.url (click)="actionTwo.emit(claim?.url)" class="suku-link c-pointer mt-auto mb-auto pl-2 name {{claimTitleCustomClass}}" id="claimTitle{{i}}">{{claim?.name}} verf</span>
+          <span *ngIf= claim?.url (click)="action.emit(claim?.url)" class="suku-link c-pointer mt-auto mb-auto pl-2 name {{claimTitleCustomClass}}" id="claimTitle{{i}}">{{claim?.name}} verf</span>
         </div>
         <div class="pl-3">
           <span class="info-box title maxWidth" [style.right.rem]="positionTooltipRight"

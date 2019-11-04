@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'suku-claims-widget',
@@ -32,6 +32,7 @@ export class SukuClaimsWidgetComponent implements OnInit {
   // @Input() tooltipInfo = 'This claim has an expired endorsement';
   @Input('position-tooltip-right') positionTooltipRight;
   @Input('position-tooltip-bottom') positionTooltipBottom;
+  @Output() action = new EventEmitter();
   constructor() { }
 
   ngOnInit() {
