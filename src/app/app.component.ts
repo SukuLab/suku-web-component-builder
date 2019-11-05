@@ -52,6 +52,17 @@ export class AppComponent implements OnInit {
 			id: ''
 		}
 	];
+	header = [
+		{ id: 'startdate', title: 'startDate_TblColHdr' },
+		{ id: 'enddate', title: 'endDate_TblColHdr' },
+		{ id: 'lname', title: 'lotID_TbldColHdr' },
+		{ id: 'myStatus', title: 'myTaskStatus_TblColHdr' },
+		{ id: 'actualStepsCompleted', title: 'myProductsProduced_TblColHdr' },
+		{ id: 'stepsCompleted', title: 'productsProduced_TblColHdr' },
+		{ id: 'Status', title: 'animalProcessing_TblColHdr' }
+	];
+
+
 
 	messageData = [
 		{
@@ -426,14 +437,14 @@ export class AppComponent implements OnInit {
 	expMaxDate: Date;
 	expMinDate: string;
 
-	header = [
-		{ id: 'statedate', title: 'startDate_TblColHdr', type: 'Date' },
-		{ id: 'enddate', title: 'endDate_TblColHdr', type: 'Date' },
-		{ id: 'lotid', title: 'lotID_TbldColHdr', type: 'Number' },
-		{ id: 'myStatus', title: 'myTaskStatus_TblColHdr', type: 'String' },
-		{ id: 'stepsCompleted', title: 'stepsCompleted_TblColHdr', type: 'String' },
-		{ id: 'status', title: 'overallStatus_TblColHdr', type: 'String' }
-	];
+	// header = [
+	// 	{ id: 'statedate', title: 'startDate_TblColHdr', type: 'Date' },
+	// 	{ id: 'enddate', title: 'endDate_TblColHdr', type: 'Date' },
+	// 	{ id: 'lotid', title: 'lotID_TbldColHdr', type: 'Number' },
+	// 	{ id: 'myStatus', title: 'myTaskStatus_TblColHdr', type: 'String' },
+	// 	{ id: 'stepsCompleted', title: 'stepsCompleted_TblColHdr', type: 'String' },
+	// 	{ id: 'status', title: 'overallStatus_TblColHdr', type: 'String' }
+	// ];
 
 	facilityAddress = {
 		registeredName: 'Finca Nueva',

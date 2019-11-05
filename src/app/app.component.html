@@ -1,6 +1,6 @@
 <form [formGroup]="test">
 
-    <suku-user-details widgetTitleSize="16" widgetTitleWeight="600" widgetTitle='User details'
+  <suku-user-details widgetTitleSize="16" widgetTitleWeight="600" widgetTitle='User details'
     fullName='{{facilityAddress?.registeredName}}' email='{{facilityAddress?.email}}'
     phoneNumber='{{facilityAddress?.phone}}' fullAddress='{{facilityAddress?.address}}'></suku-user-details>
 
@@ -80,6 +80,8 @@
   <div>
   </div>
   <app-test-comp></app-test-comp> -->
- 
+
   <app-test-comp></app-test-comp>
+
+  <suku-display-table [table-header]='header' [typeKey]="header" [table-data]="data"></suku-display-table>
 </form>
