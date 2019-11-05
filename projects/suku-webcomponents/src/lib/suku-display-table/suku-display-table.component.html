@@ -34,12 +34,15 @@
           dataSize" [style.font-weight]="dataWeight"
           [style.background-color]="
         (data[key] === status[0]) ? colorPallete[0]: (data[key] === status[1]) ? colorPallete[1]: (data[key] === status[2]) ? colorPallete[2] : (data[key] === status[3]) ? colorPallete[3] :(data[key] === status[4]) ? colorPallete[4] : 'white'">
-          <span *ngIf="key === hrefSelection" (click)="action.emit(data[key])" class="suku-link c-pointer">
+          <span *ngIf="(key === hrefSelection)" (click)="action.emit(data[key])" class="suku-link c-pointer">
             {{data[key] | translate}}
+          </span>
+          <span *ngIf="(key === hrefSelectionOne && data[key] === 'complete_TblValue')" (click)="actionTwo.emit(data[hrefSelection])" class="suku-link c-pointer">
+              {{data[key] | translate}}
           </span>
           <!-- <span *ngIf="!(key === hrefSelection)">
             {{data[key] | translate}}</span> -->
-          <span *ngIf="!(key === hrefSelection) && !dateType.includes(key)">
+          <span *ngIf="!((key === hrefSelection) || (key === hrefSelectionOne && data[key] === 'complete_TblValue')) && !dateType.includes(key)">
             {{data[key] | translate}}</span>
           <span *ngIf="!(key === hrefSelection) && dateType.includes(key) && enableDatePipe">
             {{data[key] | dateLocale: 'dateFormat'}}</span>
