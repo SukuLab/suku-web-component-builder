@@ -37,6 +37,7 @@ export class SukuDisplayTableComponent implements OnInit {
   @Input('data-color') dataColor;
   @Input('data-weight') dataWeight;
   @Input('data-href') hrefSelection = 'lotid';
+  @Input() hrefSelectionOne;
   @Input('status-bg-style') colorPallete = ['#a3ded8', '#f8dbb4', '#c7c3fa', 'gray'];
   @Input('status') status = ['completed', 'not-completed', 'pending', 'others'];
   @Input('display-pagination') showPagination = false;
@@ -47,6 +48,7 @@ export class SukuDisplayTableComponent implements OnInit {
   @Input('pagination-next-label') paginationNextLabel = 'Next';
   @Output() action = new EventEmitter();
   @Output() pagination = new EventEmitter();
+  @Output('action-two')actionTwo = new EventEmitter();
   @Input('table-sortable') sortable = 'false';
   @Input('date-type') dateType = ['startdate', 'enddate'];
   @Input('enable-date-pipe') enableDatePipe = false;
