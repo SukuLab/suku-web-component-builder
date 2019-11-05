@@ -4,8 +4,8 @@
       <td *ngFor="let list of _items[0] | keys; let i=index" [ngClass]="{'text-center': typeKey[list]=='Checkbox'}">
         <!-- checkbox -->
         <span [ngClass]="{'align-checkbox': editable[j] }" *ngIf="(typeKey[list]=='Checkbox')">
-          <mat-checkbox (change)="sendData();" color="primary"
-            [disabled]="!editable[j] && (list != selectionKey) || tableDisabled[j]" [(ngModel)]="selectAll"
+          {{!editable[j] && (list != selectionKey) || tableDisabled[j] && disableSelectAll}}
+          <mat-checkbox (change)="sendData();" color="primary" [disabled]="disableSelectAll" [(ngModel)]="selectAll"
             (change)="selectAllAction()"> {{'selectAll_ChkBox' | translate}}
           </mat-checkbox>
         </span>
@@ -21,7 +21,7 @@
             {{titleContent}}
             <span class="pl-5" id="processor">
               <span [ngClass]="{'align-checkbox': editable[j] }" *ngIf="type == 'Processor'">
-                <mat-checkbox (change)="sendData();" color="primary" [disabled]="tableDisabled[j]"
+                <mat-checkbox (change)="sendData();" color="primary" [disabled]="disableSelectAll"
                   [(ngModel)]="selectAll" (change)="selectAllAction()">
                   <span class="checkbox">{{'selectAll_ChkBox' | translate}}</span>
                 </mat-checkbox>
@@ -51,7 +51,9 @@
       </thead>
       <tbody>
         <tr *ngFor="let item of _items;let j=index">
-          <td [ngClass]="{'border-enable': checkValid(list), 'text-center': typeKey[list]=='Checkbox' }"
+          <td
+            [style.width.%]="((type == 'Producer') ? '' : ((typeKey[list] == 'Checkbox') ? list?.length * 0.45 : list?.length * 1 ))"
+            [ngClass]="{'border-enable': checkValid(list), 'text-center': typeKey[list]=='Checkbox' }"
             *ngFor="let list of item | keys; let i=index" [style.background-color]="(checkValid(list) ?
             ((item[selectionKey] && item[highlighterKey] && enableHighlighter) ? '#a3ded8':( !(item[selectionKey] &&
             enableHighlighter) ?
@@ -148,7 +150,7 @@
       </tbody>
     </table>
   </div>
-  <div class="col text-right" *ngIf="enableControls && !tableDisabled[j]">
+  <div class="col text-right" *ngIf="enableControls">
     <span class="p-2">
       <a class="secondary-btn" id="addOneRow" [style.font-size.rem]="controlsSize" (click)="addTable(1,_items?.length)"
         color="primary">{{'add1Row_TblBtn' | translate}}</a>
