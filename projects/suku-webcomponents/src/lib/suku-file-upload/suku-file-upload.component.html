@@ -4,7 +4,7 @@
       <div class="dropzone" dropZone [style.width.rem]="dropZoneWidth" (hovered)="toggleHover($event)"
         (dropped)="startUpload($event)" [class.hovering]="isHovering" (click)="upload($event)">
         <h1 class=" title {{customClass}}" [style.font-size.rem]="titleSize" [style.font-weight]="titleWeight"
-          [style.color]="titleColor" [id]="titleId">Verify the authenticity of a document by uploading it here</h1>
+          [style.color]="titleColor" [id]="titleId"> {{title}}</h1>
         <div class="file">
           <label class="file-label" [style.height.rem]="dropZoneHeight">
             <span class="file-cta">

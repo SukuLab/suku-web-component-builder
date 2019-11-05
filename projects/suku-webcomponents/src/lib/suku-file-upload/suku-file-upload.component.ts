@@ -23,6 +23,7 @@ export class SukuFileUploadComponent implements OnInit {
   @Input('icon-id') iconId = '';
   @Input('icon-custom-class') iconCustomClass = '';
   @Input('file-input-id') fileInputId = 'file';
+  @Input()title = 'Verify the authenticity of a document by uploading it here';
   @Output() action = new EventEmitter();
   constructor(private snackBar: MatSnackBar) { }
 
