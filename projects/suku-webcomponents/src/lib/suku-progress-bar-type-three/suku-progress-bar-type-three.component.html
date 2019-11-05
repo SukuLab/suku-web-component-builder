@@ -3,17 +3,20 @@
     <li *ngFor="let data of progressBarData;let i=index">
       <p class="circle" id="progressBar{{i}}" (click)="showDetails(data)" [ngClass]="{ 
     'active' : (data?.status == statusKey[0]), 
-    'completed' : (data?.status == statusKey[2]), 
-    'anotherStep' : (data?.status == statusKey[3]), 
+    'completed' : (data?.status == statusKey[2]),
+    'pending' : (data?.status == statusKey[4]),
+    'anotherStep' : (data?.status == statusKey[3]),
+    'completedAndOther': (data?.status == statusKey[5]),
     'toolTip': (data?.status == statusKey[1] && selected == data), 'c-pointer': enablePointer }">
-        <span *ngIf="!(data?.status == statusKey[2]) && !(data?.status == statusKey[3])">{{i+1}}</span>
+        <span *ngIf="!(data?.status == statusKey[2]) && !(data?.status == statusKey[3]) && !(data?.status == statusKey[4]) && ! (data?.status == statusKey[5])">{{i+1}}</span>
         <span class="tipTooltext" [style.visibility]="((selected == data) ? 'visible' : 'hidden')"
           [style.left.rem]="positionTooltipLeft" [style.top.rem]="positionTooltipTop">
           <span id="progressToolTip">{{tooltipInfo | translate}}</span>
         </span>
-        <span *ngIf="(data?.status == statusKey[2])" class="checkmark"></span>
-        <span *ngIf="(data?.status == statusKey[3])" class="checkmarkForAnotherStep"></span>
-
+        <span *ngIf="(data?.status == statusKey[4])"><i class="fas fa-clock"></i></span>
+        <span *ngIf="(data?.status == statusKey[3])"><i class="fas fa-clock"></i></span>
+        <span *ngIf="(data?.status == statusKey[2])"><i class="fa fa-check" aria-hidden="true"></i></span>
+        <span *ngIf="(data?.status == statusKey[5])"><i class="fa fa-check" aria-hidden="true"></i></span>
       </p>
       <span id="progressBarTitle{{i}}">
         <span class="{{customTitleClass}} title" id="title{{i}}"

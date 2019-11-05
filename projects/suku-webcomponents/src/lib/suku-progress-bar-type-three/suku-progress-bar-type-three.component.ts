@@ -8,7 +8,7 @@ export class SukuProgressBarTypeThreeComponent implements OnInit {
   progressBarData;
   selected;
   enableToolTip = [];
-  @Input('status-Key') statusKey = ['inProgress', 'inComplete', 'complete', 'anotherStep'];
+  @Input('status-Key') statusKey = ['inProgress', 'inComplete', 'complete', 'anotherStep', 'pending', 'completedAndOther'];
   @Input()
   set data(val) {
     if (val) {

@@ -87,6 +87,7 @@ export class TestCompComponent implements OnInit {
     Breed: ['Aungus', 'Charolais', 'Hereford', 'Simmental'],
   };
   tabelDataA1 = [];
+
   hiddenKey = ['brand'];
   tableKey1 = {
     'id de animal': 'String',
@@ -589,7 +590,7 @@ export class TestCompComponent implements OnInit {
   sampleAssetsDataForLogi = [
     {
       _id: '67e7dff46a1231e9e505dcc8',
-      skuku: '001',
+      skuku: '235894',
       lotId: '1',
       ids: [
         {

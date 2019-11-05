@@ -24,7 +24,7 @@ export class SukuFormTableComponent implements OnInit {
   @Input('header-weight') headerWeight;
   @Input('status-bg-style') colorPallete = ['#a3ded8', '#f8dbb4', '#c7c3fa', 'gray'];
   @Input('status') status = ['completed', 'not-completed', 'pending', 'others'];
-  @Input('tableDisabled') tableDisabled = false;
+  @Input('tableDisabled') tableDisabled = [];
   @Input()
   set enableEditIndex(val) {
     if (val) {
@@ -77,6 +77,7 @@ export class SukuFormTableComponent implements OnInit {
   @Input() keyData = [];
   @Input() controlsSize;
   @Input() controlCustomClass;
+  @Input() disableSelectAll = false;
   @Input() patchEmpty = 'Processor';
   @Input('error-message-one') errorMessageOne = 'value should be  greater then 0';
   @Output() save = new EventEmitter();
