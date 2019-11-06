@@ -40,9 +40,9 @@
     <suku-filters filterHeading="TRANSACTIONS" filterSubHeading="Transaction Date"
       [statusTypesDynamic]="statusTypesDynamic" [form]="form">
     </suku-filters>
-    <suku-dropdown-wfc (select)="action($event)" [disabled]="true" [data]="dropDownData" displayKey="templateName"
+    <!-- <suku-dropdown-wfc (select)="action($event)" [disabled]="true" [data]="dropDownData" displayKey="templateName"
       keyValue="templateName" [value]="value">
-    </suku-dropdown-wfc>
+    </suku-dropdown-wfc> -->
 
     <div class="col bg-white">
       <suku-dropdown [form]="form" control="productId"></suku-dropdown>
@@ -147,13 +147,13 @@
   </suku-user-input>
   <br />
   <br />
-  <suku-display-table (action-two)='blockchain($event)' hrefSelectionOne = "status" [table-header]='header' [translator]="true" title-one-size="14" [enable-date-pipe]="'true'"
+  <!-- <suku-display-table (action-two)='blockchain($event)' hrefSelectionOne = "status" [table-header]='header' [translator]="true" title-one-size="14" [enable-date-pipe]="'true'"
     (action)="openJourney($event)"   [status]="statusKeywords" [status-bg-style]="colorPallete"
     [title-content]="'lotHistory_TblHdr' | translate" [table-data]="data" [id]="'journeyDetailstable'"
     (pagination)="pagination($event)" display-pagination='true' table-items-count='5' total-item="{{totalJourneyCount}}"
     [pagination-previous-label]="'previous_Page' | translate" [pagination-next-label]="'next_Page' | translate"
     [table-sortable]="true">
-  </suku-display-table>
+  </suku-display-table> -->
 </form>
 
 
