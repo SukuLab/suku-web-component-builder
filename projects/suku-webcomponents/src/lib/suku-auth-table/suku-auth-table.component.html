@@ -16,7 +16,7 @@
          <div class="col-lg-9 col-sm-8 col-xs-7 text-left This-is-a-description  pr-3 pt-2 pb-2"
            [style.font-weight]="valueFontWeight" [style.color]="valueTextColor" [style.font-size]="valueTextSize"
            [style.background-color]="valueBgColor">
-           <span *ngIf="!chechIfArray(getKeyValue(data)['value'])"> {{ getKeyValue(data)['value'] }} </span>
+           <span class="c-pointer" *ngIf="!chechIfArray(getKeyValue(data)['value'])" (click)="action.emit(getKeyValue(data))"> {{ getKeyValue(data)['value'] }} </span>
            <div *ngIf="chechIfArray(getKeyValue(data)['value'])">
              <ul *ngFor="let val of getKeyValue(data)['value']">
                <li *ngIf="val.url"><a href="{{val.url}}" target="_blank" >{{val.name}}</a></li>
