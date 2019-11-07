@@ -79,6 +79,7 @@ export class SukuFormTableComponent implements OnInit {
   @Input() controlCustomClass;
   @Input() disableSelectAll = false;
   @Input() patchEmpty = 'Processor';
+  @Input() hideErrorMsg = false;
   @Input('error-message-one') errorMessageOne = 'value should be  greater then 0';
   @Output() save = new EventEmitter();
   @Output() remove = new EventEmitter();
