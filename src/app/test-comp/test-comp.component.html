@@ -123,16 +123,17 @@
 
   </div>
   <div class="col-12 pb-5">
-    <suku-form-table [typeKey]="tableKey3" [enableControls]="false" [enableSelectAll]="true"
+    <suku-form-table [typeKey]="tableKey3" [tableDisabled]="editable" [enableControls]="false" [enableSelectAll]="true"
       [items]="sampleDataForLogistics" [selectionKey]="'Received All Boxes'" [highlighterKey]="'# of Boxes'"
       [keyData]="highlightnerArray" [patchKey]="'# of Boxes Received'">
     </suku-form-table>
   </div>
   <div class="col-12 pb-5">
-    <suku-form-table type="Distributor" title-content="Select the products that you have received" title-one-size="14"
-      [enableControls]="false" [enableSelectAll]="true" [typeKey]="tableKeyForLogistics" [controlsSize]="1.25"
-      [items]="dataForDistributor" [highlighterKey]="'# of Boxes'" [selectionKey]="'Received All Boxes'"
-      [patchKey]="'# of Boxes Received'" [keyData]="highlightnerLogisticsArray" (submitData)="getAssetArray($event)">
+    <suku-form-table type="Distributor" [tableDisabled]="editable"
+      title-content="Select the products that you have received" title-one-size="14" [enableControls]="false"
+      [enableSelectAll]="true" [typeKey]="tableKeyForLogistics" [controlsSize]="1.25" [items]="dataForDistributor"
+      [highlighterKey]="'# of Boxes'" [selectionKey]="'Received All Boxes'" [patchKey]="'# of Boxes Received'"
+      [keyData]="highlightnerLogisticsArray" (submitData)="getAssetArray($event)">
     </suku-form-table>
   </div>
   <div class="col-12 pb-5">

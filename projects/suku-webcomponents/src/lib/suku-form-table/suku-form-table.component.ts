@@ -178,24 +178,34 @@ export class SukuFormTableComponent implements OnInit {
       this._items.forEach((element, mainIndex) => {
         Object.keys(element).forEach((key, index) => {
           if (key == this.selectionKey) {
-            console.log('element', element[key], index, mainIndex, this._items);
-            element[key] = true;
-            element[this.patchKey] = element[this.highlighterKey];
-            this._items[mainIndex][this.patchKey] = this._items[mainIndex][this.highlighterKey];
+            console.log('element', element[key], index, mainIndex, this._items[mainIndex][this.patchKey]);
+            if (!this.tableDisabled[mainIndex]) {
+              element[key] = true;
+              if (!element[this.patchKey]) {
+                element[this.patchKey] = element[this.highlighterKey];
+              }
+              if (!this._items[mainIndex][this.patchKey]) {
+                this._items[mainIndex][this.patchKey] = this._items[mainIndex][this.highlighterKey];
+              }
+            }
           }
         });
         console.log('data', element);
       });
     } else {
-      this._items.forEach(element => {
+      this._items.forEach((element, index) => {
         Object.keys(element).forEach((key) => {
           if (key == this.selectionKey) {
             console.log('element', element[key]);
-            element[key] = false;
+            if (!this.tableDisabled[index]) {
+              element[key] = false;
+            }
           }
           if (key == this.patchKey) {
             console.log('element', element[key]);
-            element[key] = '';
+            if (!this.tableDisabled[index]) {
+              element[key] = '';
+            }
           }
         });
         console.log('data', element);
@@ -219,7 +229,9 @@ export class SukuFormTableComponent implements OnInit {
     if (selection) {
       this._items[index][this.patchKey] = defaultValue;
     } else {
-      this.selectAll = false;
+      if (!this.tableDisabled[index] && !this._items[index][this.patchKey]) {
+        this.selectAll = false;
+      }
       this._items[index][this.patchKey] = this._null;
       if (this.type == this.patchEmpty) {
         this._items[index][key] = this._null;
