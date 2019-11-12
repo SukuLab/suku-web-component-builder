@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'suku-auth-table',
@@ -22,6 +22,7 @@ export class SukuAuthTableComponent implements OnInit {
   @Input('valueTextSize') valueTextSize;
   @Input('valueBgColor') valueBgColor;
   @Input('tableBgColor') tableBgColor = 'white';
+  @Output() action = new EventEmitter();
   constructor() { }
 
   ngOnInit() {
