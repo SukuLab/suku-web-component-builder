@@ -107,9 +107,9 @@
     </suku-form-table>
   </div>
   <div class="col-12 pb-5">
-    <suku-form-table [typeKey]="tableKey2" type="Processor" [enableControls]="false" [items]="sampleData"
-      [enableHighlighter]="true" [selectionKey]="'selection_TblColHdr'" [highlighterKey]="'# of Boxes'"
-      [tableDisabled]="false" [keyData]="highlightnerArray"
+    <suku-form-table [typeKey]="tableKey2" type="Processor" [tableDisabled]="editable" [enableControls]="false"
+      [items]="sampleData" [enableHighlighter]="true" [selectionKey]="'selection_TblColHdr'"
+      [highlighterKey]="'# of Boxes'" [tableDisabled]="false" [keyData]="highlightnerArray"
       title-content="Please capture the required data for each selected product">
     </suku-form-table>
 

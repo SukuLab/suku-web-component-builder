@@ -8,7 +8,7 @@ import { FormBuilder, FormGroup, FormControl, FormArray } from '@angular/forms';
 })
 export class TestCompComponent implements OnInit {
   form: FormGroup;
-  editable = [true, true];
+  editable = [true, false];
   data = [{ "startdate": "2019-10-31T06:53:54.091Z", "enddate": "-", "lotid": "8", "myStatus": "incomplete_TblValue", "stepsCompleted": "3/4", "status": "inProgress_TblValue" }, { "startdate": "2019-10-31T06:38:03.752Z", "enddate": "2019-10-31T07:37:47.038Z", "lotid": "43", "myStatus": "complete_TblValue", "stepsCompleted": "4/4", "status": "complete_TblValue" }, { "startdate": "2019-10-31T05:15:05.780Z", "enddate": "2019-10-31T11:40:18.024Z", "lotid": "44", "myStatus": "complete_TblValue", "stepsCompleted": "4/4", "status": "complete_TblValue" }, { "startdate": "2019-10-16T20:35:35.908Z", "enddate": "-", "lotid": "5", "myStatus": "notStarted_TblValue", "stepsCompleted": "1/4", "status": "inProgress_TblValue" }, { "startdate": "2019-10-09T20:35:35.907Z", "enddate": "-", "lotid": "4", "myStatus": "notStarted_TblValue", "stepsCompleted": "2/4", "status": "inProgress_TblValue" }]
   statusTypesDynamic = [
     {
@@ -883,8 +883,12 @@ export class TestCompComponent implements OnInit {
           if (!isPresent) {
             this.highlightnerArray.push({ 'key': value });
           }
-          this.sampleData.map(vals => {
-            vals[value] = '';
+          this.sampleData.map((vals, index) => {
+            if (index % 2 == 0) {
+              vals[value] = '10';
+            } else {
+              vals[value] = '';
+            }
           });
         });
         console.log('val', val);

@@ -204,11 +204,19 @@ export class SukuFormTableComponent implements OnInit {
           if (key == this.patchKey) {
             console.log('element', element[key]);
             if (!this.tableDisabled[index]) {
-              element[key] = '';
+              element[this.patchKey] = '';
+            }
+          }
+          if (this.type == 'Processor') {
+            if (key == this.highlighterKey) {
+              console.log('element', element[key]);
+              if (!this.tableDisabled[index]) {
+                element[this.highlighterKey] = '';
+              }
             }
           }
         });
-        console.log('data', element);
+        console.log('data', element, this.patchKey);
       });
     }
   }
