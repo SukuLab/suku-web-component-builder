@@ -1,7 +1,7 @@
 <div class="col">
   <div class="col text-center p-0" [ngClass]="{'upload-container': enableContainer}">
     <div class="text-center col-sm-12 p-4">
-      <div class="dropzone" dropZone [style.width.rem]="dropZoneWidth" (hovered)="toggleHover($event)"
+      <div class="dropzone p-4" dropZone [style.width.rem]="dropZoneWidth" (hovered)="toggleHover($event)"
         (dropped)="startUpload($event)" [class.hovering]="isHovering" (click)="upload($event)">
         <h1 class=" title {{customClass}}" [style.font-size.rem]="titleSize" [style.font-weight]="titleWeight"
           [style.color]="titleColor" [id]="titleId"> {{title}}</h1>
