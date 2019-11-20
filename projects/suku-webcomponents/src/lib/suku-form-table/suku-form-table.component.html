@@ -4,7 +4,6 @@
       <td *ngFor="let list of _items[0] | keys; let i=index" [ngClass]="{'text-center': typeKey[list]=='Checkbox'}">
         <!-- checkbox -->
         <span [ngClass]="{'align-checkbox': editable[j] }" *ngIf="(typeKey[list]=='Checkbox')">
-          {{!editable[j] && (list != selectionKey) || tableDisabled[j] && disableSelectAll}}
           <mat-checkbox (change)="sendData();" color="primary" [disabled]="disableSelectAll" [(ngModel)]="selectAll"
             (change)="selectAllAction()"> {{'selectAll_ChkBox' | translate}}
           </mat-checkbox>
