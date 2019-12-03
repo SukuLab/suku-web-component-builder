@@ -102,16 +102,16 @@
     </suku-form-table>
   </div> -->
   <div class="col-12 pb-5">
-    <suku-form-table [typeKey]="tableKey1" type="Producer" [tableDisabled]="false" (formStatus)="formStatusEv($event)"
-      [items]="tabelDataTest1" [enableEditIndex]="0">
+    <suku-form-table [typeKey]="tableKey1" type="Producer" [tableDisabled]="prodData"
+      (formStatus)="formStatusEv($event)" [items]="tabelDataTest1" [enableEditIndex]="0">
     </suku-form-table>
   </div>
   <div class="col-12 pb-5">
-    <suku-form-table [typeKey]="tableKey2" type="Processor" [tableDisabled]="editable" [enableControls]="false"
+    <!-- <suku-form-table [typeKey]="tableKey2" type="Processor" [tableDisabled]="editable" [enableControls]="false"
       [items]="sampleData" [enableHighlighter]="true" [selectionKey]="'selection_TblColHdr'"
-      [highlighterKey]="'# of Boxes'" [tableDisabled]="false" [keyData]="highlightnerArray"
+      [highlighterKey]="'# of Boxes'" [disableHighlightKey]="true" [tableDisabled]="false" [keyData]="highlightnerArray"
       title-content="Please capture the required data for each selected product">
-    </suku-form-table>
+    </suku-form-table> -->
 
     <!-- <suku-form-table *ngIf="prviewFaciltyType == 'Processor'" type="Processor" [tableDisabled]="notEditable"
                [title-content]="'step2ProductInfo_TblHdr' | translate" title-one-size="14"
@@ -123,10 +123,10 @@
 
   </div>
   <div class="col-12 pb-5">
-    <suku-form-table [typeKey]="tableKey3" [tableDisabled]="editable" [enableControls]="false" [enableSelectAll]="true"
+    <!-- <suku-form-table [typeKey]="tableKey3" [tableDisabled]="editable" [enableControls]="false" [enableSelectAll]="true"
       [items]="sampleDataForLogistics" [selectionKey]="'Received All Boxes'" [highlighterKey]="'# of Boxes'"
       [keyData]="highlightnerArray" [patchKey]="'# of Boxes Received'">
-    </suku-form-table>
+    </suku-form-table> -->
   </div>
   <div class="col-12 pb-5">
     <suku-form-table type="Distributor" [tableDisabled]="editable"

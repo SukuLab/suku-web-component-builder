@@ -25,6 +25,7 @@ export class SukuFormTableComponent implements OnInit {
   @Input('status-bg-style') colorPallete = ['#a3ded8', '#f8dbb4', '#c7c3fa', 'gray'];
   @Input('status') status = ['completed', 'not-completed', 'pending', 'others'];
   @Input('tableDisabled') tableDisabled = [];
+  @Input('disableHighlightKey') disableHighlightKey = false;
   @Input()
   set enableEditIndex(val) {
     if (val) {
@@ -66,6 +67,8 @@ export class SukuFormTableComponent implements OnInit {
       this._itemsKey = Object.keys(this._items[0]);
     }
   }
+  @Input() uniqueKey = 'Sku';
+  @Input() disabledArrayKey = ['487141', '744511'];
   @Input() selectionKey;
   @Input() highlighterKey;
   @Input() patchKey;
@@ -229,6 +232,22 @@ export class SukuFormTableComponent implements OnInit {
       return result;
     } else {
       return false;
+    }
+  }
+
+  chkDisable(key) {
+    if (this.type == 'Producer') {
+      if (this.tableDisabled.length > 0) {
+        return true;
+      } else {
+        return false;
+      }
+    } else {
+      const result = this.disabledArrayKey.some(el => {
+        return el === key;
+      });
+      console.log('result', result, key, this.disabledArrayKey);
+      return result;
     }
   }
 
