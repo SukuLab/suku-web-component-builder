@@ -14,7 +14,7 @@
   "lotHistory_TblHdr": "HERE IS YOUR LOT HISTORY",
   "startDate_TblColHdr": "start date (mm/dd/yy)",
   "endDate_TblColHdr": "end date (mm/dd/yy)",
-  "dateFormat": "MM/dd/yy",
+  "dateFormat": "MM/dd/yy hh:mm",
   "lotID_TbldColHdr": "lot id",
   "myTaskStatus_TblColHdr": "my task status",
   "myProductsProduced_TblColHdr": "completed steps",

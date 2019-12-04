@@ -198,3 +198,45 @@ table {
   }
 
 }
+
+.ml {
+  margin-left: 0.8rem;
+}
+
+.ellipsis {
+  position: relative;
+}
+
+.ellipsis:before {
+  content: '&nbsp;';
+  visibility: hidden;
+}
+
+.ellipsis span.hovertxt {
+  position: absolute;
+  left: 0.85rem;
+  right: 1.8rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.ellipsis span.hovertxt:hover {
+  background: white;
+  box-shadow: 1.2px 2px #f2f2f2;
+  position: absolute;
+  width: -webkit-fit-content;
+  width: fit-content;
+  max-width: 300px;
+  z-index: 4;
+  margin-top: -1rem;
+  padding: 1rem;
+  border-radius: 3px;
+  white-space: normal !important;
+  word-break: break-word;
+  left: 0rem !important;
+  // box-shadow: 0px 1px 4px 0 rgba(0, 0, 100, .08);
+  -webkit-box-shadow: 0px 3px 4px 0px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0px 3px 4px 0px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 3px 4px 0px rgba(0, 0, 0, 0.2);
+}

@@ -208,7 +208,7 @@ export class TestCompComponent implements OnInit {
     Sku: "Number",
     brand_TblColHdr: "String",
     "product name": "String",
-    "# of Boxes": "Number",
+    "# de unidades": "Number",
     date: "Date"
   };
   tabelData2 = [
@@ -252,7 +252,7 @@ export class TestCompComponent implements OnInit {
     "# of Boxes": "Number",
     "Received All Boxes": "Checkbox",
     "# of Boxes Received": "Number",
-    temp: ""
+    date: "Date"
   };
   tabelData3 = [
     {
@@ -822,7 +822,7 @@ export class TestCompComponent implements OnInit {
   sampleDataForLogistics = [];
 
   tableKeyForLogistics = {
-    Sku: "Number",
+    sku: "Number",
     brand: "String",
     "product name": "String",
     "# of Boxes": "Number",
@@ -910,36 +910,37 @@ export class TestCompComponent implements OnInit {
     });
     (<FormArray>this.form.get("owner")).push(this.control());
     this.value = "Beef (Rolled)-0515";
-    setTimeout(() => {
-      this.sampleAssetsData.forEach(val => {
-        const template = {
-          selection_TblColHdr: false,
-          Sku: val.ids[0].id,
-          brand_TblColHdr: val.brand.name,
-          "product name": val.name
-        };
-        this.sampleData.push(template);
-        Object.keys(val.version[0]).forEach(value => {
-          console.log("val-- test", value);
-          const isPresent = this.highlightnerArray.some(ele => {
-            return ele.key == value;
-          });
-          console.log("isPresent", isPresent);
-          if (!isPresent) {
-            this.highlightnerArray.push({ key: value });
-          }
-          this.sampleData.map((vals, index) => {
-            if (index % 2 == 0) {
-              vals[value] = "10";
-            } else {
-              vals[value] = "";
-            }
-            vals["date"] = "2019-10-16T20:35:35.908Z";
-          });
-        });
-        console.log("val", val);
-      });
-    }, 2000);
+    // setTimeout(() => {
+    //   this.sampleAssetsData.forEach(val => {
+    //     const template = {
+    //       selection_TblColHdr: false,
+    //       Sku: val.ids[0].id,
+    //       brand_TblColHdr: val.brand.name,
+    //       "product name": val.name
+    //     };
+    //     this.sampleData.push(template);
+    //     Object.keys(val.version[0]).forEach(value => {
+    //       console.log("val-- test", value);
+    //       const isPresent = this.highlightnerArray.some(ele => {
+    //         return ele.key == value;
+    //       });
+    //       console.log("isPresent", isPresent);
+    //       if (!isPresent) {
+    //         this.highlightnerArray.push({ key: value });
+    //       }
+    //       this.sampleData.map((vals, index) => {
+    //         if (index % 2 == 0) {
+    //           vals[value] = "10";
+    //           vals["date"] = "2019-10-16T20:35:35.908Z";
+    //         } else {
+    //           vals["date"] = "2019-12-03T07:46:24.279Z";
+    //           vals[value] = "";
+    //         }
+    //       });
+    //     });
+    //     console.log("val", val);
+    //   });
+    // }, 2000);
     /* logistics */
     this.sampleAssetsDataForLogi.forEach(val => {
       const template = {
@@ -953,8 +954,10 @@ export class TestCompComponent implements OnInit {
       this.sampleDataForLogistics.map((vals, index) => {
         if (index % 2 == 0) {
           vals["# of Boxes Received"] = "10";
+          vals["date"] = "2019-10-16T20:35:35.908Z";
         } else {
           vals["# of Boxes Received"] = "";
+          vals["date"] = "2019-12-03T07:46:24.279Z";
         }
       });
       // Object.keys(val.version[0]).forEach(value => {
@@ -975,6 +978,168 @@ export class TestCompComponent implements OnInit {
     // unique_array = Array.from(new Set(unique_array));
     console.log("sampleDataForLogistics", this.sampleDataForLogistics);
     console.log("this.sampleData", this.sampleData, unique_array);
+    this.sampleData = [
+      {
+        "selection_TblColHdr": true,
+        "sku": "744518",
+        "brand_TblColHdr": "Wong Premium",
+        "productName_TblColHdr": "Cowboy Steak",
+        "# de unidades": "10",
+        "date": "2019-12-03T07:45:46.591Z"
+      },
+      {
+        "selection_TblColHdr": true,
+        "sku": "487196",
+        "brand_TblColHdr": "Wong Premium",
+        "productName_TblColHdr": "Lomo Fino",
+        "# de unidades": "20",
+        "date": "2019-12-03T07:45:46.599Z"
+      },
+      {
+        "selection_TblColHdr": true,
+        "sku": "487201",
+        "brand_TblColHdr": "Wong Premium",
+        "productName_TblColHdr": "Entrecostilla",
+        "# de unidades": "2000",
+        "date": "2019-12-04T07:36:45.575Z"
+      },
+      {
+        "selection_TblColHdr": true,
+        "sku": "488479",
+        "brand_TblColHdr": "Wong Premium",
+        "productName_TblColHdr": "Bife De Chorizo",
+        "# de unidades": "",
+        "date": "-"
+      },
+      {
+        "selection_TblColHdr": false,
+        "sku": "744519",
+        "brand_TblColHdr": "Wong Premium",
+        "productName_TblColHdr": "Tomahawk",
+        "# de unidades": "",
+        "date": "-"
+      },
+      {
+        "selection_TblColHdr": false,
+        "sku": "744520",
+        "brand_TblColHdr": "Wong Premium",
+        "productName_TblColHdr": "Asado de Tira c/hueso",
+        "# de unidades": "",
+        "date": "-"
+      },
+      {
+        "selection_TblColHdr": false,
+        "sku": "487178",
+        "brand_TblColHdr": "Wong Premium",
+        "productName_TblColHdr": "Asado Pejerrey",
+        "# de unidades": "",
+        "date": "-"
+      },
+      {
+        "selection_TblColHdr": false,
+        "sku": "487182",
+        "brand_TblColHdr": "Wong Premium",
+        "productName_TblColHdr": "Bife Ancho",
+        "# de unidades": "",
+        "date": "-"
+      },
+      {
+        "selection_TblColHdr": false,
+        "sku": "744522",
+        "brand_TblColHdr": "Wong Premium",
+        "productName_TblColHdr": "French Ossobuco",
+        "# de unidades": "",
+        "date": "-"
+      },
+      {
+        "selection_TblColHdr": true,
+        "sku": "487141",
+        "brand_TblColHdr": "Wong Premium",
+        "productName_TblColHdr": "Asado De Aguja",
+        "# de unidades": "11",
+        "date": "2019-12-03T07:48:26.651Z"
+      },
+      {
+        "selection_TblColHdr": true,
+        "sku": "487142",
+        "brand_TblColHdr": "Wong Premium",
+        "productName_TblColHdr": "Asado Ruso",
+        "# de unidades": "15",
+        "date": "2019-12-04T07:35:58.314Z"
+      },
+      {
+        "selection_TblColHdr": false,
+        "sku": "487165",
+        "brand_TblColHdr": "Wong Premium",
+        "productName_TblColHdr": "Asado De Tira",
+        "# de unidades": "",
+        "date": "-"
+      },
+      {
+        "selection_TblColHdr": false,
+        "sku": "487167",
+        "brand_TblColHdr": "Wong Premium",
+        "productName_TblColHdr": "Entraña Fina",
+        "# de unidades": "",
+        "date": "-"
+      },
+      {
+        "selection_TblColHdr": false,
+        "sku": "487170",
+        "brand_TblColHdr": "Wong Premium",
+        "productName_TblColHdr": "Bife De Vacio",
+        "# de unidades": "",
+        "date": "-"
+      },
+      {
+        "selection_TblColHdr": true,
+        "sku": "487171",
+        "brand_TblColHdr": "Wong Premium",
+        "productName_TblColHdr": "Colita De Cuadril",
+        "# de unidades": "14",
+        "date": "2019-12-03T07:47:34.612Z"
+      },
+      {
+        "selection_TblColHdr": true,
+        "sku": "487172",
+        "brand_TblColHdr": "Wong Premium",
+        "productName_TblColHdr": "Bife Angosto",
+        "# de unidades": "15",
+        "date": "2019-12-03T07:47:34.627Z"
+      },
+      {
+        "selection_TblColHdr": false,
+        "sku": "487175",
+        "brand_TblColHdr": "Wong Premium",
+        "productName_TblColHdr": "Picanha",
+        "# de unidades": "",
+        "date": "-"
+      },
+      {
+        "selection_TblColHdr": false,
+        "sku": "487176",
+        "brand_TblColHdr": "Wong Premium",
+        "productName_TblColHdr": "T-Bone",
+        "# de unidades": "",
+        "date": "-"
+      },
+      {
+        "selection_TblColHdr": true,
+        "sku": "744521",
+        "brand_TblColHdr": "Wong Premium",
+        "productName_TblColHdr": "Costillar Parrillero",
+        "# de unidades": "19",
+        "date": "2019-12-03T07:46:24.279Z"
+      },
+      {
+        "selection_TblColHdr": true,
+        "sku": "487199",
+        "brand_TblColHdr": "Wong Premium",
+        "productName_TblColHdr": "Malaya",
+        "# de unidades": "20",
+        "date": "2019-12-03T09:45:28.625Z"
+      }
+    ];
   }
 
   search() {

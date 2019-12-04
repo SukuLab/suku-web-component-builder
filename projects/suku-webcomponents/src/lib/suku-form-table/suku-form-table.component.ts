@@ -13,6 +13,7 @@ export class SukuFormTableComponent implements OnInit {
   editable = [];
   errorvalidationIndex;
   errorvalidationKey;
+  disableArrList = [744518];
   @Input('title-one-id') titleOneId;
   @Input('title-one-size') titleOneSize;
   @Input('title-one-color') titleOneColor = 'white';
@@ -26,6 +27,7 @@ export class SukuFormTableComponent implements OnInit {
   @Input('status') status = ['completed', 'not-completed', 'pending', 'others'];
   @Input('tableDisabled') tableDisabled = [];
   @Input('disableHighlightKey') disableHighlightKey = false;
+  keyLength: number;
   @Input()
   set enableEditIndex(val) {
     if (val) {
@@ -38,13 +40,26 @@ export class SukuFormTableComponent implements OnInit {
   @Input() type;
   @Input() defaultCount = 2;
   @Input() actionkey = 'actions_TblColHdr';
+  @Input() disabledArrayKey = [];
   @Input()
   get items() {
     console.log('items ------------', this.items);
     const data = this.items;
     if (data) {
-      data.filter(val => {
+      data.filter((val, index) => {
         console.log('val', val);
+        // if (this.disabledArrayKey) {
+        //   const result = this.disabledArrayKey.some(el => {
+        //     return el == val[this.uniqueKey];
+        //   });
+        //   console.log('result', result);
+        //   if (result) {
+        //     this.tableDisabled[index] = true;
+        //   } else {
+        //     this.tableDisabled[index] = false;
+        //   }
+        // }
+        // console.log(' this.tableDisabled', this.tableDisabled)
         delete val['undefined'];
         return val;
       });
@@ -55,8 +70,21 @@ export class SukuFormTableComponent implements OnInit {
     if (val) {
       console.log('_items', val);
       if (val) {
-        val.filter(el => {
+        val.filter((el, index) => {
           console.log('val', el);
+          console.log('val', val);
+          // if (this.disabledArrayKey) {
+          //   const result = this.disabledArrayKey.some(el => {
+          //     return el === val[this.uniqueKey];
+          //   });
+          //   console.log('result', result);
+          //   if (result) {
+          //     this.tableDisabled[index] = true;
+          //   } else {
+          //     this.tableDisabled[index] = false;
+          //   }
+          // }
+          console.log(' this.tableDisabled', this.tableDisabled)
           delete el['undefined'];
           return el;
         });
@@ -65,10 +93,11 @@ export class SukuFormTableComponent implements OnInit {
     }
     if (this._items[0]) {
       this._itemsKey = Object.keys(this._items[0]);
+      this.keyLength = Object.keys(this._itemsKey).length;
     }
   }
-  @Input() uniqueKey = 'Sku';
-  @Input() disabledArrayKey = ['487141', '744511'];
+  @Input() uniqueKey = 'sku';
+
   @Input() selectionKey;
   @Input() highlighterKey;
   @Input() patchKey;
@@ -235,22 +264,6 @@ export class SukuFormTableComponent implements OnInit {
     }
   }
 
-  chkDisable(key) {
-    if (this.type == 'Producer') {
-      if (this.tableDisabled.length > 0) {
-        return true;
-      } else {
-        return false;
-      }
-    } else {
-      const result = this.disabledArrayKey.some(el => {
-        return el === key;
-      });
-      console.log('result', result, key, this.disabledArrayKey);
-      return result;
-    }
-  }
-
   async patchValue(selection, defaultValue, index, key?) {
     console.log('patchValue', selection, defaultValue, index, key);
     if (selection) {
@@ -268,6 +281,8 @@ export class SukuFormTableComponent implements OnInit {
 
   sendData() {
     const data = this._items;
+
+    console.log('this.disableArrList', this.disableArrList);
     this.submitData.emit(data);
   }
 
@@ -331,7 +346,8 @@ export class SukuFormTableComponent implements OnInit {
     return true;
   }
 
-  sort(head, type, formate) {
+  sort(head, type, sortOption) {
+    console.log('D', head, type, sortOption);
     if (this._items) {
       if (!(type == 'Checkbox')) {
         this._items.sort((a, b) => {
@@ -339,12 +355,12 @@ export class SukuFormTableComponent implements OnInit {
         });
       }
       if (type == 'Number') {
-        if (formate == 'asse') {
+        if (sortOption == 'asse') {
           this._items.sort(function (a, b) {
             return a[head] - b[head]
           });
         }
-        if (formate == 'desc') {
+        if (sortOption == 'desc') {
           this._items.sort(function (a, b) {
             return b[head] - a[head]
           });
@@ -352,19 +368,71 @@ export class SukuFormTableComponent implements OnInit {
       }
       if (type == 'String') {
         this._items.sort(function (a, b) {
-          if (a[head].toLowerCase() < b[head].toLowerCase() && formate == 'asse') {
+          if (a[head].toLowerCase() < b[head].toLowerCase() && sortOption == 'asse') {
             return -1;
           }
-          if (b[head].toLowerCase() < a[head].toLowerCase() && formate == 'desc') {
+          if (b[head].toLowerCase() < a[head].toLowerCase() && sortOption == 'desc') {
             return -1;
           }
           return 0;
         });
       }
+      if (type == 'Date') {
+
+        this._items.sort((a, b) => {
+          if (sortOption == 'asse') {
+            if (b[head] == '-') {
+              return -1;
+            }
+            return (<any>new Date(b[head]) - <any>new Date(a[head]));
+          }
+          if (sortOption == 'desc') {
+            if (a[head] == '-') {
+              return -1;
+            }
+            return (<any>new Date(a[head]) - <any>new Date(b[head]));
+          }
+
+          // if (a == '-') {
+          //   return 0;
+          // }
+          // if (sortOption == 'asse') {
+          //   if (new Date(a[head]) < new Date(b[head])) {
+          //     return -1;
+          //   }
+          // }
+          // if (sortOption == 'desc') {
+          //   if (new Date(b[head]) < new Date(a[head])) {
+          //     return -1;
+          //   }
+          // }
+        });
+      }
       this._items.forEach(val => {
         delete val['undefined'];
       });
-      console.log('sort -', this._items, head, type, formate);
+      const data = this._items;
+      if (data) {
+        data.filter((val, index) => {
+          console.log('val', val);
+          if (this.disabledArrayKey) {
+            const result = this.disabledArrayKey.some(el => {
+              console.log('el', el, val[this.uniqueKey]);
+              return el == val[this.uniqueKey];
+            });
+            console.log('result', result);
+            if (result) {
+              this.tableDisabled[index] = true;
+            } else {
+              this.tableDisabled[index] = false;
+            }
+          }
+          console.log(' this.tableDisabled', this.tableDisabled)
+          delete val['undefined'];
+          return val;
+        });
+      }
+      console.log('sort -', this._items, head, type, sortOption);
     }
   }
 

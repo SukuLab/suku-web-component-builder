@@ -48,7 +48,7 @@ export class SukuDisplayTableComponent implements OnInit {
   @Input('pagination-next-label') paginationNextLabel = 'Next';
   @Output() action = new EventEmitter();
   @Output() pagination = new EventEmitter();
-  @Output('action-two')actionTwo = new EventEmitter();
+  @Output('action-two') actionTwo = new EventEmitter();
   @Input('table-sortable') sortable = 'false';
   @Input('date-type') dateType = ['startdate', 'enddate'];
   @Input('enable-date-pipe') enableDatePipe = false;
@@ -61,15 +61,15 @@ export class SukuDisplayTableComponent implements OnInit {
   paginationFun(p) {
     this.pagination.emit(p);
   }
-  sort(head, type, formate) {
+  sort(head, type, sortOption) {
     if (this._tableData) {
       if (type == 'Number') {
-        if (formate == 'asse') {
+        if (sortOption == 'asse') {
           this._tableData.sort(function (a, b) {
             return a[head] - b[head]
           });
         }
-        if (formate == 'desc') {
+        if (sortOption == 'desc') {
           this._tableData.sort(function (a, b) {
             return b[head] - a[head]
           });
@@ -77,10 +77,10 @@ export class SukuDisplayTableComponent implements OnInit {
       }
       if (type == 'String') {
         this._tableData.sort(function (a, b) {
-          if (a[head] < b[head] && formate == 'asse') {
+          if (a[head] < b[head] && sortOption == 'asse') {
             return -1;
           }
-          if (b[head] < a[head] && formate == 'desc') {
+          if (b[head] < a[head] && sortOption == 'desc') {
             return -1;
           }
           return 0;
@@ -88,24 +88,28 @@ export class SukuDisplayTableComponent implements OnInit {
       }
       if (type == 'Date') {
         this._tableData.sort(function (a, b) {
+          if (sortOption == 'asse') {
+            if (b == '-') {
+              return -1;
+            }
+          }
+          if (sortOption == 'desc') {
+            if (a == '-') {
+              return -1;
+            }
+          }
           a = new Date(a[head]);
           b = new Date(b[head]);
-          if (a < b && formate == 'asse') {
+          if (a < b && sortOption == 'asse') {
             return -1;
           }
-          if (b < a && formate == 'desc') {
+          if (b < a && sortOption == 'desc') {
             return -1;
           }
           return 0;
         });
       }
-      console.log('sort -', this._tableData, head, type, formate);
+      console.log('sort -', this._tableData, head, type, sortOption);
     }
   }
-
-  // dateType(key) {
-  //   console.log('key', key);
-  //   return true;
-  // }
-
 }

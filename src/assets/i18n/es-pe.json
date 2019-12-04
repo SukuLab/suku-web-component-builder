@@ -14,7 +14,7 @@
   "lotHistory_TblHdr": "AQUÍ ESTÁ TU HISTORIA DE LOTE",
   "startDate_TblColHdr": "fecha de inicio (dd/mm/aa)",
   "endDate_TblColHdr": "fecha fin (dd/mm/aa)",
-  "dateFormat": "dd/MM/yy",
+  "dateFormat": "dd/MM/yy hh:mm",
   "lotID_TbldColHdr": "id del lote",
   "myTaskStatus_TblColHdr": "estado de mis tareas",
   "myProductsProduced_TblColHdr": "completed steps",

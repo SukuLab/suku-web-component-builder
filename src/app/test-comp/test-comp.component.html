@@ -101,17 +101,17 @@
     <suku-form-table [typeKey]="tableKeyA1" [items]="tabelDataA1" (submitData)="getAssetArray($event)">
     </suku-form-table>
   </div> -->
-  <div class="col-12 pb-5">
+  <!-- <div class="col-12 pb-5">
     <suku-form-table [typeKey]="tableKey1" type="Producer" [tableDisabled]="prodData"
       (formStatus)="formStatusEv($event)" [items]="tabelDataTest1" [enableEditIndex]="0">
     </suku-form-table>
-  </div>
-  <div class="col-12 pb-5">
-    <!-- <suku-form-table [typeKey]="tableKey2" type="Processor" [tableDisabled]="editable" [enableControls]="false"
+  </div> -->
+  <div class="col-10 offset-lg-1 pb-5">
+    <suku-form-table [typeKey]="tableKey2" type="Processor" [tableDisabled]="editable" [enableControls]="false"
       [items]="sampleData" [enableHighlighter]="true" [selectionKey]="'selection_TblColHdr'"
       [highlighterKey]="'# of Boxes'" [disableHighlightKey]="true" [tableDisabled]="false" [keyData]="highlightnerArray"
       title-content="Please capture the required data for each selected product">
-    </suku-form-table> -->
+    </suku-form-table>
 
     <!-- <suku-form-table *ngIf="prviewFaciltyType == 'Processor'" type="Processor" [tableDisabled]="notEditable"
                [title-content]="'step2ProductInfo_TblHdr' | translate" title-one-size="14"
@@ -129,12 +129,12 @@
     </suku-form-table> -->
   </div>
   <div class="col-12 pb-5">
-    <suku-form-table type="Distributor" [tableDisabled]="editable"
+    <!-- <suku-form-table type="Distributor" [tableDisabled]="editable"
       title-content="Select the products that you have received" title-one-size="14" [enableControls]="false"
       [enableSelectAll]="true" [typeKey]="tableKeyForLogistics" [controlsSize]="1.25" [items]="dataForDistributor"
       [highlighterKey]="'# of Boxes'" [selectionKey]="'Received All Boxes'" [patchKey]="'# of Boxes Received'"
       [keyData]="highlightnerLogisticsArray" (submitData)="getAssetArray($event)">
-    </suku-form-table>
+    </suku-form-table> -->
   </div>
   <div class="col-12 pb-5">
     <suku-heading weight='400' size='14' [id]="'headingWidget'">Message (Optional) {{textcount}}/500
