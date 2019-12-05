@@ -22,6 +22,7 @@ export class SukuAuthTableComponent implements OnInit {
   @Input('valueTextSize') valueTextSize;
   @Input('valueBgColor') valueBgColor;
   @Input('tableBgColor') tableBgColor = 'white';
+  @Input() linkKey = [];
   @Output() action = new EventEmitter();
   constructor() { }
 
@@ -36,7 +37,7 @@ export class SukuAuthTableComponent implements OnInit {
         value: obj[key]
       }
     });
-    return formatedObject
+    return formatedObject;
   }
 
   chechIfArray(data) {
@@ -45,6 +46,14 @@ export class SukuAuthTableComponent implements OnInit {
       return true;
     } else {
       return false;
+    }
+  }
+
+  chkKeyLink(key) {
+    if (this.linkKey) {
+      return this.linkKey.some(k => {
+        return k === key;
+      });
     }
   }
 }

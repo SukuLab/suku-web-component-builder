@@ -2,7 +2,8 @@
   <table>
     <tr *ngIf="enableSelectAll && _items[0]">
       <td *ngFor="let list of _items[0] | keys; let i = index"
-        [ngClass]="{ 'text-center': typeKey[list] == 'Checkbox' }">
+        [ngClass]="{ 'text-center': typeKey[list] == 'Checkbox' }" [style.width.%]="(list==uniqueKey) ? 8 :
+        92/keyLength">
         <!-- checkbox -->
         <span [ngClass]="{ 'align-checkbox': editable[j] }" *ngIf="typeKey[list] == 'Checkbox'">
           <mat-checkbox (change)="sendData()" color="primary" [disabled]="disableSelectAll" [(ngModel)]="selectAll"

@@ -47,19 +47,6 @@ export class SukuFormTableComponent implements OnInit {
     const data = this.items;
     if (data) {
       data.filter((val, index) => {
-        console.log('val', val);
-        // if (this.disabledArrayKey) {
-        //   const result = this.disabledArrayKey.some(el => {
-        //     return el == val[this.uniqueKey];
-        //   });
-        //   console.log('result', result);
-        //   if (result) {
-        //     this.tableDisabled[index] = true;
-        //   } else {
-        //     this.tableDisabled[index] = false;
-        //   }
-        // }
-        // console.log(' this.tableDisabled', this.tableDisabled)
         delete val['undefined'];
         return val;
       });
@@ -71,20 +58,6 @@ export class SukuFormTableComponent implements OnInit {
       console.log('_items', val);
       if (val) {
         val.filter((el, index) => {
-          console.log('val', el);
-          console.log('val', val);
-          // if (this.disabledArrayKey) {
-          //   const result = this.disabledArrayKey.some(el => {
-          //     return el === val[this.uniqueKey];
-          //   });
-          //   console.log('result', result);
-          //   if (result) {
-          //     this.tableDisabled[index] = true;
-          //   } else {
-          //     this.tableDisabled[index] = false;
-          //   }
-          // }
-          console.log(' this.tableDisabled', this.tableDisabled)
           delete el['undefined'];
           return el;
         });
