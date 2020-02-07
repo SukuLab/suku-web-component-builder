@@ -32,7 +32,7 @@ pipeline {
             }
         }
 
-        /* stage("build docker image") {
+        stage("build docker image") {
             steps {
                 sh "docker build -t test-lib:ci_latest ."
             }
@@ -43,13 +43,13 @@ pipeline {
               sh "docker run --name gitpush -e $BUILD_TAG=${BUILD_TAG} -e BRANCH_NAME=${BRANCH_NAME} -e GIT_USERNAME=${GIT_USERNAME} -e EMAIL_ID=${EMAIL_ID} test-lib:ci_latest"
             }
         }
-    } */
+    }
 
     post {
-        /*always {
+        always {
              sh "docker rm -f gitpush"
              sh "docker rmi -f test-lib:ci_latest"
-        }*/
+        }
 
         success {
              setBuildStatus("Build succeeded", "SUCCESS");
@@ -61,5 +61,4 @@ pipeline {
              slackSend (color: '#FF0000', message: "FAILED: Job '${env.JOB_NAME} [${env.BUILD_NUMBER}]' (${env.BUILD_URL})")
         }
     }
-  }
 }
