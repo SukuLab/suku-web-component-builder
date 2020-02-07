@@ -20,7 +20,7 @@
           <span *ngIf="translator" class="hovertxt">
             {{ header.title | translate}}
           </span>
-          <span *ngIf="sortable" class="float-right c-pointer pl-3">
+          <span *ngIf="sortable" class="float-right c-pointer pl-3 ml">
             <span (click)="sort(header.id,header.type,'asse');" class='fas fa-caret-up displayBlock '></span>
             <span (click)="sort(header.id,header.type,'desc');" class='fas fa-caret-down displayBlock lineH'></span>
           </span>
@@ -31,18 +31,22 @@
       <tr *ngFor="let data of tableData | paginate: { itemsPerPage: itemsPerPageCount, currentPage: p,totalItems:
         totalItem } let i = index">
         <td *ngFor="let key of tableDataKey;" [style.color]="dataColor" [style.font-size.px]="
-          dataSize" [style.font-weight]="dataWeight"
-          [style.background-color]="
-        (data[key] === status[0]) ? colorPallete[0]: (data[key] === status[1]) ? colorPallete[1]: (data[key] === status[2]) ? colorPallete[2] : (data[key] === status[3]) ? colorPallete[3] :(data[key] === status[4]) ? colorPallete[4] : 'white'">
+          dataSize" [style.font-weight]="dataWeight" [style.background-color]="
+         (data[key] === status[0]) ? colorPallete[0]: 
+        (data[key] === status[1]) ? colorPallete[1]: 
+        (data[key] === status[2]) ? colorPallete[2] :
+         (data[key] === status[3]) ? colorPallete[3] : (key==statusKey && data[key]) ? colorPallete[4] : 'white' ">
           <span *ngIf="(key === hrefSelection)" (click)="action.emit(data[key])" class="suku-link c-pointer">
             {{data[key] | translate}}
           </span>
-          <span *ngIf="(key === hrefSelectionOne && data[key] === 'complete_TblValue')" (click)="actionTwo.emit(data[hrefSelection])" class="suku-link c-pointer">
-              {{data[key] | translate}}
+          <span *ngIf="(key === hrefSelectionOne && data[key] === 'complete_TblValue')"
+            (click)="actionTwo.emit(data[hrefSelection])" class="suku-link c-pointer">
+            {{data[key] | translate}}
           </span>
           <!-- <span *ngIf="!(key === hrefSelection)">
             {{data[key] | translate}}</span> -->
-          <span *ngIf="!((key === hrefSelection) || (key === hrefSelectionOne && data[key] === 'complete_TblValue')) && !dateType.includes(key)">
+          <span
+            *ngIf="!((key === hrefSelection) || (key === hrefSelectionOne && data[key] === 'complete_TblValue')) && !dateType.includes(key)">
             {{data[key] | translate}}</span>
           <span *ngIf="!(key === hrefSelection) && dateType.includes(key) && enableDatePipe">
             {{data[key] | dateLocale: 'dateFormat'}}</span>

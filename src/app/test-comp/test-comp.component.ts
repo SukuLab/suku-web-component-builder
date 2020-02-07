@@ -954,10 +954,10 @@ export class TestCompComponent implements OnInit {
       this.sampleDataForLogistics.map((vals, index) => {
         if (index % 2 == 0) {
           vals["# of Boxes Received"] = "10";
-          vals["date"] = "2019-10-16T20:35:35.908Z";
+          vals["date"] = "-";
         } else {
           vals["# of Boxes Received"] = "";
-          vals["date"] = "2019-12-03T07:46:24.279Z";
+          vals["date"] = "-";
         }
       });
       // Object.keys(val.version[0]).forEach(value => {
@@ -985,7 +985,7 @@ export class TestCompComponent implements OnInit {
         "brand_TblColHdr": "Wong Premium",
         "productName_TblColHdr": "Cowboy Steak",
         "# de unidades": "10",
-        "date": "2019-12-03T07:45:46.591Z"
+        "date": "-"
       },
       {
         "selection_TblColHdr": true,
@@ -993,7 +993,7 @@ export class TestCompComponent implements OnInit {
         "brand_TblColHdr": "Wong Premium",
         "productName_TblColHdr": "Lomo Fino",
         "# de unidades": "20",
-        "date": "2019-12-03T07:45:46.599Z"
+        "date": "-"
       },
       {
         "selection_TblColHdr": true,
@@ -1001,7 +1001,7 @@ export class TestCompComponent implements OnInit {
         "brand_TblColHdr": "Wong Premium",
         "productName_TblColHdr": "Entrecostilla",
         "# de unidades": "2000",
-        "date": "2019-12-04T07:36:45.575Z"
+        "date": "-"
       },
       {
         "selection_TblColHdr": true,
@@ -1057,7 +1057,7 @@ export class TestCompComponent implements OnInit {
         "brand_TblColHdr": "Wong Premium",
         "productName_TblColHdr": "Asado De Aguja",
         "# de unidades": "11",
-        "date": "2019-12-03T07:48:26.651Z"
+        "date": "-"
       },
       {
         "selection_TblColHdr": true,
@@ -1065,7 +1065,7 @@ export class TestCompComponent implements OnInit {
         "brand_TblColHdr": "Wong Premium",
         "productName_TblColHdr": "Asado Ruso",
         "# de unidades": "15",
-        "date": "2019-12-04T07:35:58.314Z"
+        "date": "-"
       },
       {
         "selection_TblColHdr": false,
@@ -1097,7 +1097,7 @@ export class TestCompComponent implements OnInit {
         "brand_TblColHdr": "Wong Premium",
         "productName_TblColHdr": "Colita De Cuadril",
         "# de unidades": "14",
-        "date": "2019-12-03T07:47:34.612Z"
+        "date": "-"
       },
       {
         "selection_TblColHdr": true,
@@ -1105,7 +1105,7 @@ export class TestCompComponent implements OnInit {
         "brand_TblColHdr": "Wong Premium",
         "productName_TblColHdr": "Bife Angosto",
         "# de unidades": "15",
-        "date": "2019-12-03T07:47:34.627Z"
+        "date": "-"
       },
       {
         "selection_TblColHdr": false,
@@ -1129,7 +1129,7 @@ export class TestCompComponent implements OnInit {
         "brand_TblColHdr": "Wong Premium",
         "productName_TblColHdr": "Costillar Parrillero",
         "# de unidades": "19",
-        "date": "2019-12-03T07:46:24.279Z"
+        "date": "-"
       },
       {
         "selection_TblColHdr": true,
@@ -1137,7 +1137,7 @@ export class TestCompComponent implements OnInit {
         "brand_TblColHdr": "Wong Premium",
         "productName_TblColHdr": "Malaya",
         "# de unidades": "20",
-        "date": "2019-12-03T09:45:28.625Z"
+        "date": "-"
       }
     ];
   }

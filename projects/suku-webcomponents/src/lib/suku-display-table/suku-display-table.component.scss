@@ -14,7 +14,6 @@
 .table {
   font-family: $suku-primary-font;
   box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.1);
-  font-size: 1.45rem;
 }
 
 .c-pointer {
@@ -32,7 +31,7 @@
 }
 
 .lineH {
-  line-height: 0.1;
+  line-height: 0.2;
 }
 
 // .ellipsis:before {
@@ -49,6 +48,16 @@
 //   text-overflow: ellipsis;
 // }
 
+.fas {
+  font-size: 18px;
+}
+
+.ml {
+  margin-left: 0.8rem;
+  position: relative;
+  top: -4px;
+}
+
 .ellipsis {
   position: relative;
 }
@@ -61,7 +70,7 @@
 .ellipsis span.hovertxt {
   position: absolute;
   left: 0.85rem;
-  right: 1.8rem;
+  right: 2.5rem;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;

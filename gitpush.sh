@@ -1,5 +1,5 @@
 #!/bin/bash
-git clone https://$GIT_USERNAME:f2ce3177e90ca08b64b82c95e57233a8229dca4c@github.com/SukuLab/suku-web-components-library.git -b $BRANCH_NAME
+git clone https://f2fd9489142d5c7db74a70a45273e33620cb4cf8@github.com/SukuLab/suku-web-components-library.git -b $BRANCH_NAME
 cd suku-web-components-library
 git rm -r *
 cd /app/dist/suku-webcomponents/

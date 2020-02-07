@@ -329,57 +329,58 @@ export class SukuFormTableComponent implements OnInit {
       }
       if (type == 'Number') {
         if (sortOption == 'asse') {
-          this._items.sort(function (a, b) {
+          this._items.sort((a, b) => {
             return a[head] - b[head]
           });
         }
         if (sortOption == 'desc') {
-          this._items.sort(function (a, b) {
+          this._items.sort((a, b) => {
             return b[head] - a[head]
           });
         }
       }
       if (type == 'String') {
-        this._items.sort(function (a, b) {
+        this._items.sort((a, b) => {
           if (a[head].toLowerCase() < b[head].toLowerCase() && sortOption == 'asse') {
             return -1;
           }
           if (b[head].toLowerCase() < a[head].toLowerCase() && sortOption == 'desc') {
             return -1;
           }
+
+          if (a[head].toLowerCase() > b[head].toLowerCase() && sortOption == 'asse') {
+            return 1;
+          }
+          if (b[head].toLowerCase() > a[head].toLowerCase() && sortOption == 'desc') {
+            return 1;
+          }
+
           return 0;
         });
       }
       if (type == 'Date') {
-
-        this._items.sort((a, b) => {
-          if (sortOption == 'asse') {
-            if (b[head] == '-') {
-              return -1;
-            }
-            return (<any>new Date(b[head]) - <any>new Date(a[head]));
-          }
-          if (sortOption == 'desc') {
-            if (a[head] == '-') {
-              return -1;
-            }
-            return (<any>new Date(a[head]) - <any>new Date(b[head]));
-          }
-
-          // if (a == '-') {
-          //   return 0;
-          // }
-          // if (sortOption == 'asse') {
-          //   if (new Date(a[head]) < new Date(b[head])) {
-          //     return -1;
-          //   }
-          // }
-          // if (sortOption == 'desc') {
-          //   if (new Date(b[head]) < new Date(a[head])) {
-          //     return -1;
-          //   }
-          // }
+        const sortable = this._items.some((dataVal) => {
+          return dataVal[head] !== '-';
         });
+        console.log({ sortable });
+
+        if (sortable) {
+          this._items.sort((a, b) => {
+            if (sortOption == 'asse') {
+              if (b[head] == '-') {
+                return -1;
+              }
+              return (<any>new Date(b[head]) - <any>new Date(a[head]));
+            }
+            if (sortOption == 'desc') {
+              if (a[head] == '-') {
+                return -1;
+              }
+              return (<any>new Date(a[head]) - <any>new Date(b[head]));
+            }
+          });
+        }
+
       }
       this._items.forEach(val => {
         delete val['undefined'];

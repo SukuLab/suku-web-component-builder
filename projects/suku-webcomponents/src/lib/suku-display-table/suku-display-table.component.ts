@@ -38,7 +38,7 @@ export class SukuDisplayTableComponent implements OnInit {
   @Input('data-weight') dataWeight;
   @Input('data-href') hrefSelection = 'lotid';
   @Input() hrefSelectionOne;
-  @Input('status-bg-style') colorPallete = ['#a3ded8', '#f8dbb4', '#c7c3fa', 'gray'];
+  @Input('status-bg-style') colorPallete = ['#a3ded8', '#f8dbb4', '#c7c3fa', '#c2c1c1', '#c7c3fa'];
   @Input('status') status = ['completed', 'not-completed', 'pending', 'others'];
   @Input('display-pagination') showPagination = false;
   @Input('table-items-count') itemsPerPageCount;
@@ -52,6 +52,7 @@ export class SukuDisplayTableComponent implements OnInit {
   @Input('table-sortable') sortable = 'false';
   @Input('date-type') dateType = ['startdate', 'enddate'];
   @Input('enable-date-pipe') enableDatePipe = false;
+  @Input() statusKey = '';
   constructor() {
   }
 
@@ -61,54 +62,68 @@ export class SukuDisplayTableComponent implements OnInit {
   paginationFun(p) {
     this.pagination.emit(p);
   }
+
   sort(head, type, sortOption) {
     if (this._tableData) {
       if (type == 'Number') {
         if (sortOption == 'asse') {
-          this._tableData.sort(function (a, b) {
+          this._tableData.sort((a, b) => {
             return a[head] - b[head]
           });
         }
         if (sortOption == 'desc') {
-          this._tableData.sort(function (a, b) {
+          this._tableData.sort((a, b) => {
             return b[head] - a[head]
           });
         }
       }
+
       if (type == 'String') {
-        this._tableData.sort(function (a, b) {
-          if (a[head] < b[head] && sortOption == 'asse') {
+        this._tableData.sort((a, b) => {
+
+          if (a[head].toLowerCase() < b[head].toLowerCase() && sortOption == 'asse') {
             return -1;
           }
-          if (b[head] < a[head] && sortOption == 'desc') {
+          if (b[head].toLowerCase() < a[head].toLowerCase() && sortOption == 'desc') {
             return -1;
           }
+
+          if (a[head].toLowerCase() > b[head].toLowerCase() && sortOption == 'asse') {
+            return 1;
+          }
+          if (b[head].toLowerCase() > a[head].toLowerCase() && sortOption == 'desc') {
+            return 1;
+          }
+
           return 0;
         });
       }
+
+
       if (type == 'Date') {
-        this._tableData.sort(function (a, b) {
-          if (sortOption == 'asse') {
-            if (b == '-') {
-              return -1;
-            }
-          }
-          if (sortOption == 'desc') {
-            if (a == '-') {
-              return -1;
-            }
-          }
-          a = new Date(a[head]);
-          b = new Date(b[head]);
-          if (a < b && sortOption == 'asse') {
-            return -1;
-          }
-          if (b < a && sortOption == 'desc') {
-            return -1;
-          }
-          return 0;
+        const sortable = this._tableData.some((dataVal) => {
+          return dataVal[head] !== '-';
         });
+        console.log({ sortable });
+
+        if (sortable) {
+          this._tableData.sort((a, b) => {
+            if (sortOption == 'asse') {
+              if (b[head] == '-') {
+                return -1;
+              }
+              return (<any>new Date(b[head]) - <any>new Date(a[head]));
+            }
+            if (sortOption == 'desc') {
+              if (a[head] == '-') {
+                return -1;
+              }
+              return (<any>new Date(a[head]) - <any>new Date(b[head]));
+            }
+          });
+        }
       }
+
       console.log('sort -', this._tableData, head, type, sortOption);
     }
   }

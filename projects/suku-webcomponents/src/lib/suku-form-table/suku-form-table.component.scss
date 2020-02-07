@@ -179,7 +179,11 @@ table {
 }
 
 .lineH {
-  line-height: 0.1;
+  line-height: 0.12;
+}
+
+.fas {
+  font-size: 18px;
 }
 
 :host {
@@ -201,6 +205,8 @@ table {
 
 .ml {
   margin-left: 0.8rem;
+  position: relative;
+  top: -4px;
 }
 
 .ellipsis {
@@ -215,7 +221,7 @@ table {
 .ellipsis span.hovertxt {
   position: absolute;
   left: 0.85rem;
-  right: 1.8rem;
+  right: 2.5rem;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;

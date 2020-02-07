@@ -12,7 +12,7 @@
     "build:lib:schematics": "tsc -p ./projects/suku-webcomponents/tsconfig.schematics.json",
     "build:lib:scss": "scss-bundle -c scss-bundle.config.json",
     "copy:collection": "copyfiles --flat projects/suku-webcomponents/collection.json dist/suku-webcomponents",
-    "build:package": "npm run build:lib && npm run build:lib:schematics && npm run build:lib:scss && npm run copy:collection",
+    "build:package": "npm run build:lib && npm run build:lib:scss && npm run copy:collection",
     "gen-icon": "icon-font-generator ./src/assets/icons/*.svg -o ./src/assets/suku-icons -n=suku -p=suku"
   },
   "private": true,
