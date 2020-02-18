@@ -90,7 +90,9 @@ export class SukuFormTableComponent implements OnInit {
   @Output() remove = new EventEmitter();
   @Output() submitData = new EventEmitter();
   @Output() formStatus = new EventEmitter();
+  @Output() limit = new EventEmitter();
   @Input('table-sortable') sortable = 'false';
+  @Input() maxRowLength = 1;
   _null = null;
   @HostListener('paste', ['$event']) blockPaste(e: KeyboardEvent) {
     console.log('e', e);
@@ -111,6 +113,18 @@ export class SukuFormTableComponent implements OnInit {
   }
 
   addTable(val, editIndex) {
+    if (this._items.length === this.maxRowLength) {
+      this.limit.emit(true);
+      return;
+    }
+
+    if (val === 10) {
+      if (this._items.length + val !== this.maxRowLength) {
+        this.limit.emit(true);
+        return;
+      }
+    }
+
     for (let i = 0; i < val; i++) {
       this.editable[editIndex + i] = true;
       const template = {};
@@ -129,6 +143,7 @@ export class SukuFormTableComponent implements OnInit {
       }
       this._items.push(template);
     }
+
     console.log('_items', this._items);
   }
 
