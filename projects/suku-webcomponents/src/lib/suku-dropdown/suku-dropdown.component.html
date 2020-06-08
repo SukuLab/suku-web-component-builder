@@ -1,0 +1,23 @@
+<span [formGroup]="form">
+  <mat-form-field class="col p-0">
+    <mat-select id="{{selectId}}" [class]="customSelectClass" [disabled]="disabled" #selector
+      formControlName="{{control}}" (selectionChange)="select.emit(selector.value)" [placeholder]="placeholder">
+      <mat-option *ngFor="let item of data;let i=index" value="{{item[keyValue]}}" id="option{{i}}">
+        {{item[displayKey]}}
+      </mat-option>
+    </mat-select>
+    <span id="dropdown-arrow-icon" matSuffix>
+      <mat-icon>
+        <span>
+          <i [id]="iconId" class="{{iconCustomClass}} {{icon}}"></i>
+          <!-- <img [id]="iconId" class="{{iconCustomClass}}" height="23" src="{{icon}}" width="20"> -->
+        </span>
+      </mat-icon>
+    </span>
+    <mat-error>
+      <span class="err_style">
+        <span *ngIf="form.hasError('required',[control])" id="countryReq">{{errorMsg}}</span>
+      </span>
+    </mat-error>
+  </mat-form-field>
+</span>

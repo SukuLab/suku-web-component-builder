@@ -1,0 +1,83 @@
+@import '../../theme/theme';
+
+.suku-p {
+  border: 2px solid $suku-sick-green;
+  background-color: $suku-bg-secondary;
+  color: $suku-text-label-two;
+  font-family: $suku-secondary-font;
+  font-weight: 600;
+  font-size: 14px;
+  padding: 1rem 2rem;
+  border-radius: 12px 28px 23px 30px;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: -0.25px;
+  text-align: center;
+
+  &:hover {
+    cursor: pointer;
+    background-color: $suku-sick-green !important;
+    color: $suku-text-label-two;
+  }
+
+  &:focus {
+    color: $suku-text-label-two;
+    background-color: $suku-sick-green !important;
+    outline: none !important;
+    box-shadow: none !important;
+  }
+}
+
+.suku-p.disabled:hover {
+  background-color: $suku-bg-secondary;
+  color: #1d1d1d;
+  cursor: not-allowed;
+}
+
+.suku-primary.disabled {
+  background-color: $suku-bg-secondary;
+  color: grey;
+  opacity: 0.65;
+}
+
+.suku-primary.disabled:hover,
+.suku-primary[disabled]:hover,
+fieldset[disabled] .suku-primary:hover,
+.suku-primary.disabled:focus,
+.suku-primary[disabled]:focus,
+fieldset[disabled] .suku-primary:focus,
+.suku-primary.disabled.focus,
+.suku-primary[disabled].focus,
+fieldset[disabled] .suku-primary.focus {
+  background-color: $suku-bg-secondary !important;
+  color: grey;
+}
+
+.suku-primary:focus,
+.suku-primary.focus {
+  background-color: $suku-sick-green;
+  color: $suku-text-label-two;
+}
+
+.suku-primary:active:hover,
+.suku-primary.active:hover,
+.open>.dropdown-toggle.suku-primary:hover,
+.suku-primary:active:focus,
+.suku-primary.active:focus,
+.open>.dropdown-toggle .suku-primary:focus,
+.suku-primary:active.focus,
+.suku-primary.active.focus,
+.open>.dropdown-toggle .suku-primary.focus {
+  background-color: $suku-sick-green;
+  color: $suku-text-label-two;
+}
+
+
+.suku-primary:not(:disabled):not(.disabled).active,
+.suku-primary:not(:disabled):not(.disabled):active,
+.show>.suku-primary.dropdown-toggle {
+  color: #fff;
+  background-color: $suku-sick-green;
+  border-color: $suku-sick-green;
+}

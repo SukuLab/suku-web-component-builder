@@ -1,0 +1,25 @@
+@import '../theme/theme';
+
+.filterResult {
+  margin-top: 170px;
+}
+
+.response-title {
+  font-family: $suku-primary-font;
+  font-weight: 300;
+}
+
+.description {
+  font-family: $suku-primary-font;
+  color: #979797;
+  width: 350px;
+}
+
+.imgCustomClass {
+  height: 70px;
+  width: 70px;
+}
+
+.icon-1x {
+  font-size: 4em;
+}

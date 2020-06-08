@@ -1,0 +1,11 @@
+<div class="{{customClass}} filterResult text-center col p-0" [style.background-color]="bgColor">
+  <div [class]="subCustomClass">
+    <p class="response-title {{titleCustomClass}} mb-1" id="{{titleId}}" [style.font-size.rem]="titleSize"
+      [style.color]="titleColor" [style.font-weight]="titleWeight">{{title}}</p>
+    <img [src]="sukuResponseLogo" [class]="imgCustomClass" alt="no-data-search-icon" *ngIf="sukuResponseLogo">
+    <i class="{{icon}} {{iconCustomClass}} icon-1x m-2" *ngIf="icon" id="{{iconId}}"></i>
+    <p class="text-justify text-center mx-auto description {{descriptionCustomClass}}" id="{{descriptionId}}"
+      [style.font-size.res]="descriptionSize" [style.color]="descriptionColor" [style.font-weight]="descriptionWeight">
+      {{description}}</p>
+  </div>
+</div>

@@ -1,0 +1,66 @@
+/* --------------------------------
+
+suku-icons - v1.0.0
+
+-------------------------------- */
+i {
+    display: inline-block;
+    background-repeat: no-repeat;
+    height: 25px;
+    width: 25px;
+}
+
+.suku-plus-icon {
+    background-image: url(./suku-icons/plus-icon.svg)
+}
+
+.suku-alarm-icon {
+    background-image: url(./suku-icons/alarm-icon.svg)
+}
+
+i .suku-group {
+    background-image: url(./suku-icons/group.svg)
+}
+
+i .suku-mail-icon {
+    background-image: url(./suku-icons/mail-light.svg)
+}
+
+i .suku-map-pin {
+    background-image: url(./suku-icons/map-pin.svg)
+}
+
+i .suku-phone-icon {
+    background-image: url(./suku-icons/phone-light.svg)
+}
+
+i .suku-star-badge {
+    background-image: url(./suku-icons/star-badge.svg)
+}
+
+i .suku-star-icon {
+    background-image: url(./suku-icons/star-full.svg)
+}
+
+i .suku-star-empty-icon {
+    background-image: url(./suku-icons/star-empty.svg)
+}
+
+i .suku-view-icon {
+    background-image: url(./suku-icons/view-icon.svg)
+}
+
+.suku-sm {
+    width: 1rem;
+    height: 1rem;
+}
+
+.suku-md {
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+.suku-lg {
+    width: 2rem;
+    height: 2rem;
+}

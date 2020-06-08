@@ -1,0 +1,24 @@
+<div class="{{bidtagclass}}">
+  <div class="col">
+    <span class="row pr-1 pl-3">
+      <h1 [style.font-size.px]="prizeSize" [class]="prizeCustomClass" [style.font-weight]="prizeWeight"
+        [style.color]="prizeColor" [id]="prizeId">
+        {{prize}}
+      </h1>
+      <h2 [style.font-size.px]="unitSize" [class]="unitCustomClass" [id]="unitId" [style.font-weight]="unitWeight"
+        [style.color]="unitColor">
+        {{unit}}
+      </h2>
+    </span>
+    <span>
+      <h1 [style.font-size.px]="qSize" [class]="qCustomClass" [style.font-weight]="qWeight" [style.color]="qColor"
+        [id]="quantityId">
+        {{qContent}}
+      </h1>
+      <h1 [style.font-size.px]="pSize" [class]="pCustomClass" [style.font-weight]="pWeight" [style.color]="pColor"
+        [id]="totalPrizeId">
+        {{pContent}}
+      </h1>
+    </span>
+  </div>
+</div>

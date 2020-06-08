@@ -1,0 +1,40 @@
+  <div class="text-center p-0">
+    <div class="col text-center">
+      <div class="row justify-content-center">
+        <div class="modalproduct-boxContent">
+          <div class="col pl-lg-4 pt-1 pb-2">
+            <div class="row">
+              <div class="col mt-2 mb-2">
+                <div class="col mb-3">
+                  <img [src]="dialogData?.imgSrc" id="{{dialogData?.imgId}}" *ngIf="dialogData?.imgSrc" />
+                  <i class="{{dialogData?.icon}} {{dialogData?.iconCustomClass}}" id="{{dialogData?.iconId}}"
+                    *ngIf="dialogData?.icon"></i>
+                </div>
+                <span id="{{ dialogData?.messageId }}"
+                  class="modalcolor {{ dialogData?.messageCustomClass }} pb-1 mt-3 mb-3">
+                  {{ dialogData?.message | translate }}
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <h2 class="col-sm-10 modalFontStyle mt-4 mb-2 text-center {{ dialogData?.descriptionCustomClass }}">
+          {{ dialogData?.description | translate }}
+        </h2>
+        <div class="col-sm-12 pt-2 d-flex justify-content-center" *ngIf="(dialogData?.loader == 'enable')">
+          <mat-spinner diameter="45"></mat-spinner>
+        </div>
+      </div>
+    </div>
+    <div class="col text-center p-3">
+      <div class="row mb-3 mt-3">
+        <div class="col-lg-4 col-md-6 offset-md-3 offset-sm-4	 col-sm-4 col-xs-10 offset-lg-4 pl-lg-0 pr-lg-0">
+          <button tabindex="1" (click)="close()" [disabled]="(dialogData?.loader == 'enable')"
+            id="{{ dialogData?.buttonId }}"
+            class="btn btn-info center-block width100 {{ dialogData?.buttonCustomClass }}">
+            {{ dialogData?.buttonText | translate }}
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>

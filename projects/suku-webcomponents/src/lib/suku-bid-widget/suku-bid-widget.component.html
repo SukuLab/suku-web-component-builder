@@ -1,0 +1,42 @@
+<div [class]="customClass">
+    <div class="{{articleAlignmentCustomClass}} selected">
+      <div class="title-txt" [style.color]="titleFontColor" [style.font-size.rem]="titleFontSize"
+        [style.font-weight]="titleFontWeight">{{titleText}}</div>
+      <aside [style.backgroundColor]="asideBgColor">
+        <div class="prize"> <span [style.color]="priceFontColor" [style.font-size.rem]="priceFontSize"
+            [style.font-weight]="priceFontWeight"> {{(paymentMethod == 'USD') ? '$': ''}}{{productPrice}}</span>
+          <sub>{{(paymentMethod != 'USD') ? paymentMethod : ''}} / UNIT</sub>
+        </div>
+        <ul class="bulletPoint" [style.color]="listFontColor" [style.font-size.rem]="listFontSize"
+          [style.font-weight]="listFontWeight">
+          <li>{{totalPriceLabel}}: {{(paymentMethod == 'USD') ? '$': ''}}{{productTotalPrice}}
+            {{(paymentMethod != 'USD') ? paymentMethod : ''}}</li>
+          <li>{{quantityLabel}}: {{productQuantity}}</li>
+          <li *ngIf="minQtyLabel">{{minQtyLabel}}: {{minimumQuantity}}</li>
+        </ul>
+      </aside>
+      <div class="list">
+        <ul class="pl-4 {{productPaymentCustomClass}}">
+          <li>
+            <span class="bid-title" [style.color]="bidTitleFontColor" [style.font-weight]="bidTitleFontWeight"
+              [style.font-size.rem]="bidTitleFontSize">{{paymentMethodLabel}}:</span>
+            <span class="{{bidDetailCustomClass}} ml-2" [style.font-weight]="bidDetailFontWeight" [style.color]="bidDetailFontColor"
+              [style.font-size.rem]="bidDetailFontSize"> {{paymentMethod}}</span>
+          </li>
+          <li>
+            <span class="bid-title" [style.color]="bidTitleFontColor" [style.font-weight]="bidTitleFontWeight"
+              [style.font-size.rem]="bidTitleFontSize">{{paymentTermsLabel}}:</span>
+            <span class="{{bidDetailCustomClass}} ml-2" [style.font-weight]="bidDetailFontWeight" [style.color]="bidDetailFontColor"
+              [style.font-size.rem]="bidDetailFontSize"> {{paymentTerms}}</span>
+          </li>
+          <li>
+            <span class="bid-title" [style.color]="bidTitleFontColor" [style.font-weight]="bidTitleFontWeight"
+              [style.font-size.rem]="bidTitleFontSize">{{deliveryTermsLabel}}:</span>
+            <span class="{{bidDetailCustomClass}} ml-2" [style.font-weight]="bidDetailFontWeight" [style.color]="bidDetailFontColor"
+              [style.font-size.rem]="bidDetailFontSize"> {{deliveryTerms}} {{ deliveryTerms > 1 ? '
+                days' : ' day'}}</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>

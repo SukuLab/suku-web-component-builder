@@ -1,0 +1,60 @@
+<div class="col d-flex p-0">
+  <div class="col-12 p-0">
+    <div class="col-sm-12 {{customClass}}">
+      <p [class]="transactionHistoryTittle">{{transactionHistory | uppercase}}</p>
+    </div>
+    <div class="col-sm-12 table-responsive {{bgCustomClass}}" id="transactionTable">
+      <div class="col-sm-12 p-5" *ngIf="!transactionDetails">
+        <div class="col-sm-12 d-flex {{spinnerCustomClass}}">
+          <mat-spinner color="{{spinnerColor}}" diameter="{{spinnerRadius}}"></mat-spinner>
+        </div>
+        <div [class]="loadingCustomClass">
+          <span [style.font-size.rem]="loadingSize" id="loading" [style.color]="loadingColor"
+            [style.font-weight]="loadingWeight">{{loaderMessage}}</span>
+        </div>
+      </div>
+      <table class="col-sm-12 table table-striped {{tableBgColor}} responsive" *ngIf="transactionDetails"
+        id="transactionHisTable">
+        <thead>
+          <tr>
+            <th scope="col" [class]="tableHeaderCustomClass" id="{{typeId}}">{{heading.type}}</th>
+            <th scope="col" [class]="tableHeaderCustomClass" id="{{myAccountId}}">{{heading.myAccount}}</th>
+            <th scope="col" [class]="tableHeaderCustomClass" id="{{counterPartyId}}">{{heading.counterparty}}</th>
+            <th scope="col" [class]="tableHeaderCustomClass" id="{{amountId}}">{{heading.amount}}</th>
+            <th scope="col" [class]="tableHeaderCustomClass" id="{{statusId}}">{{heading.status}}</th>
+            <th scope="col" [class]="tableHeaderCustomClass" id="{{dateCreatedId}}">{{heading.dateInitiated}}</th>
+            <th scope="col" [class]="tableHeaderCustomClass" id="{{dateCreatedId}}">{{heading.dateCreated}}</th>
+            <th scope="col" [class]="tableHeaderCustomClass" id="{{paymentManagementId}}">{{heading.paymentManagement}}
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr id="{{transactionDetailsId}}" *ngFor="let transaction of transactionDetails">
+            <td scope="row"
+              class=" {{tableBodyCustomClass}} {{( (transaction?.type) == 'outgoing') ? 'outgoing' : 'incoming'}}">
+              <span class="pl-4">{{transaction?.type || 'Not available'}}</span></td>
+            <td scope="row" [class]="tableBodyCustomClass"><span
+                class="pl-4">{{transaction?.accountName || 'Not available'}}</span>
+            </td>
+            <td scope="row" [class]="tableBodyCustomClass"><span
+                class="pl-4">{{transaction?.counterParty || 'Not available'}}</span>
+            </td>
+            <td scope="row" [class]="tableBodyCustomClass"><span
+                class="pl-4">${{transaction?.amount || 'Not available'}}</span></td>
+            <td scope="row"
+              class=" {{tableBodyCustomClass}} {{( (transaction.status) == 'Failed') ? 'falied' : 'incoming'}}">
+              <span class="pl-4">{{transaction?.status || 'Not available'}}</span></td>
+            <td scope="row" [class]="tableBodyCustomClass"><span
+                class="pl-4">{{transaction?.created | date:'d MMM yyyy h:mm:s a'  || 'Not available'}}</span>
+            </td>
+            <td scope="row" [class]="tableBodyCustomClass"><span class="pl-4">
+                {{(transaction?.completedOn | date:'d MMM yyyy h:mm:s a') || 'Not available'}}</span>
+            </td>
+            <td [class]="tableBodyCustomClass"><button id="{{cancelId}}" *ngIf="transaction?.status=='pending'"
+                (click)="action.emit(transaction);" [class]="buttonCustomClass">{{cancelBtnLabel}}</button></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

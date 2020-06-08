@@ -1,0 +1,32 @@
+<div [class]="productBoxContentCustomClass" [style.backgroundColor]="productBoxContentBgColor">
+  <div class="col pl-lg-5 pt-3 pb-3">
+    <div class="row">
+      <div class="col pl-lg-3">
+        <h1 [style.font-size.rem]="titleOneSize" [class]="titleOneCustomClass" [style.font-weight]="titleOneWeight"
+          [style.color]="titleOneColor" id="{{titleOneId}}">{{titleOne}}</h1>
+        <h2 [style.font-size.rem]="contentOneSize" [class]="contentOneCustomClass"
+          [style.font-weight]="contentOneWeight" [style.color]="contentOneColor" id="{{contentOneId}}">{{contentOne}}
+        </h2>
+      </div>
+      <div class="col pl-lg-5">
+        <h1 [style.font-size.rem]="titleTwoSize" [class]="titleTwoCustomClass" [style.font-weight]="titleTwoWeight"
+          [style.color]="titleTwoColor" id="{{titleTwoId}}">{{titleTwo}}</h1>
+        <h2 (click)="action.emit()" [style.font-size.rem]="contentTwoSize" [class]="contentTwoCustomClass"
+          [style.font-weight]="contentTwoWeight" [style.color]="contentTwoColor" id="{{contentTwoId}}">{{contentTwo}}
+        </h2>
+      </div>
+      <div class="col pl-lg-5">
+        <h1 [style.font-size.rem]="titleThreeSize" [class]="titleThreeCustomClass"
+          [style.font-weight]="titleThreeWeight" [style.color]="titleThreeColor" id="{{titleThreeId}}">{{titleThree}}
+        </h1>
+        <h2 *ngIf="(_enableTimer == 'false')" [style.font-size.rem]="contentThreeSize" [class]="contentThreeCustomClass"
+          [style.font-weight]="contentThreeWeight" [style.color]="contentThreeColor" id="{{contentThreeId}}">
+          {{contentThree}}
+        </h2>
+        <h2 *ngIf="(_enableTimer == 'true')">
+          <countdown-timer [end]="_date"></countdown-timer>
+        </h2>
+      </div>
+    </div>
+  </div>
+</div>

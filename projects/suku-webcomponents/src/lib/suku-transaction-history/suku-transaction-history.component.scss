@@ -1,0 +1,136 @@
+@import '../theme/theme';
+
+.cancelText {
+  font-size: 12px;
+  color: $suku-warning-color;
+}
+
+.outgoing {
+  color: $suku-warning-color
+}
+
+.incoming {
+  color: $suku-filter-label-selected;
+}
+
+.falied {
+  color: $suku-warning-color;
+}
+
+.defaultDiv {
+  background-color: $suku-yellow-green;
+  border-radius: 30px;
+}
+
+.responsive {
+  overflow-x: auto;
+}
+
+.mT-35 {
+  margin-top: 18%;
+}
+
+#transactionTable {
+  max-height: 287px;
+  overflow-x: auto;
+  overflow-y: auto;
+}
+
+#transactionHisTable {
+  white-space: nowrap;
+}
+
+.fontPoppins {
+  font-family: $suku-primary-font !important;
+}
+
+.btn {
+  border: solid 2px $suku-primary-border-color;
+  border-radius: 28px 76px 63px;
+  background-color: $suku-homepage-bg;
+  color: $suku-filter-label-selected;
+  padding: .375rem .75rem;
+  font-size: 10px;
+  font-weight: bold;
+  font-family: $suku-primary-font !important;
+}
+
+.btnCancel {
+  border: solid 2px $suku-primary-border-color;
+  border-radius: 28px 76px 63px;
+  background-color: $suku-homepage-bg;
+  color: $suku-warning-color;
+  padding: 0.475rem 2.95rem;
+  font-size: 10px;
+  font-weight: bold;
+  font-family: $suku-primary-font !important;
+}
+
+.btn:hover {
+  border: solid 2px $suku-primary-border-color;
+  border-radius: 28px 76px 63px;
+  background-color: $suku-sick-green;
+  color: $suku-text-label-two;
+}
+
+.btn:focus {
+  outline: none !important;
+  box-shadow: none !important;
+  color: $suku-filter-label-selected;
+}
+
+.tableBg {
+  background-color: $suku-homepage-bg;
+}
+
+.pT-5 {
+  padding-top: 2%
+}
+
+.historyWidget {
+  @include suku-box();
+}
+
+.box-shadows {
+  box-shadow: 0 12px 14px 0 rgba(0, 0, 0, 0.05);
+  background-color: $suku-homepage-bg;
+}
+
+.pop {
+  font-family: $suku-primary-font;
+  font-weight: 600;
+  font-size: 20px;
+}
+
+.table {
+  font-family: $suku-primary-font;
+}
+
+td {
+  border: none;
+}
+
+.table-striped tbody tr:nth-of-type(odd) {
+  background-color: rgba(0, 0, 0, .03);
+}
+
+::-webkit-scrollbar {
+  width: 3px;
+  height: 3px;
+}
+
+::-webkit-scrollbar:vertical {
+  width: 3px !important;
+}
+
+::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 10px 5px 6px #27272f36;
+  border-radius: 10px;
+  box-shadow: inset 10px 5px 6px #27272f36;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 32px;
+  box-shadow: 0 0 0 #000;
+  -webkit-box-shadow: inset 28px 28px 28px 28px #2b30348f;
+}

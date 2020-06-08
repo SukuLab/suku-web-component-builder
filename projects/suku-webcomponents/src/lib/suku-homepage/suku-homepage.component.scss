@@ -1,0 +1,9 @@
+@import '../theme/theme';
+
+.homepage {
+	padding: 30px 0 40px;
+	font-family: $suku-primary-font;
+	background: $suku-homepage-bg;
+	box-shadow: 0 12px 14px 0 rgba(0, 0, 0, 0.05);
+	border-radius: $suku-secondary-border-radius;
+}

@@ -1,0 +1,81 @@
+@import '../theme/theme';
+
+$starMargin: 5px;
+$fullStarColor: $suku-star-full-bg;
+$emptyStarColor:$suku-star-empty-bg;
+
+h2 {
+  font-family: $suku-secondary-font;
+  font-size: $suku-font-size-2;
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: -0.2px;
+  color: $suku-text-label-one;
+  word-break: break-word !important;
+}
+
+.card-line-bg {
+  background-color: $suku-default-bg;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.05);
+}
+
+.card-line-img {
+  border: 1px solid #e3dbdb36 !important;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.06);
+}
+
+.border-top-box {
+  border-top: 1px solid #dee2e670 !important;
+}
+
+.c-pointer {
+  cursor: pointer;
+}
+
+.starSize {
+  font-size: $suku-star-size !important;
+}
+
+.img-res {
+  height: auto;
+  max-width: 100%;
+  max-height: 100%;
+  padding: 6px 5px 6px 5px;
+}
+
+.emptyStar {
+  color: $emptyStarColor;
+  margin-right: $starMargin;
+}
+
+.fullStar {
+  color: $fullStarColor;
+  margin-right: $starMargin;
+}
+
+.halfStarLeft {
+  color: $fullStarColor;
+  position: relative;
+  left: 1px;
+}
+
+.halfStarRight {
+  color: $emptyStarColor;
+  position: relative;
+  right: 1px;
+}
+
+.f20 {
+  font-size: 20px;
+}
+
+.user {
+  cursor: pointer;
+}
+
+.user:hover {
+  color: black !important;
+  font-weight: 700 !important;
+}

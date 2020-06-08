@@ -1,0 +1,83 @@
+@import '../theme/theme';
+
+.dialog-title-box {
+  width: 100%;
+  float: left;
+  @include suku-title-box();
+}
+
+.title {
+  font-family: $suku-primary-font;
+  color: $suku-text-label-two;
+  font-size: 20px;
+  font-weight: 300;
+}
+
+.icon {
+  font-size: 50px;
+  color: $suku-sick-green;
+}
+
+.width100 {
+  width: 100%;
+}
+
+.maincontent {
+  font-family: $suku-primary-font;
+  font-size: $suku-font-size-5;
+  letter-spacing: 0.4px;
+  font-weight: 700;
+}
+
+.subcontent {
+  font-family: $suku-primary-font;
+  font-size: $suku-font-size-5;
+  letter-spacing: 0.4px;
+  font-weight: 300;
+}
+
+::ng-deep mat-dialog-container {
+  padding: 0px !important;
+  overflow: hidden !important;
+}
+
+:host {
+  ::ng-deep mat-dialog-content {
+    max-height: 91% !important;
+    overflow-y: none !important;
+    margin: 0px !important;
+    height: 100% !important;
+  }
+
+  ::ng-deep mat-dialog-actions {
+    margin: 5px 10px 5px 10px !important;
+  }
+
+}
+
+/* scroll-bar */
+
+/deep/div {
+  ::-webkit-scrollbar {
+    width: 4px !important;
+    /* for vertical scrollbars */
+  }
+
+  ::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.1);
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: rgba(0, 0, 0, 0.8);
+  }
+}
+
+.spinnerStyle {
+  font-size: 50px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.w-70 {
+  min-width: 70%;
+}

@@ -1,0 +1,167 @@
+@import '../theme/theme';
+
+.primary {
+  font-family: $suku-secondary-font;
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: 0px;
+  color: $suku-text-label-one;
+  margin-bottom: 1px;
+}
+
+.secondary {
+  font-family: $suku-primary-font;
+  font-size: $suku-font-size-5;
+  font-weight: 900;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: -0.2px;
+  color: #1d1d1d;
+}
+
+.type-1 {
+  font-family: $suku-secondary-font;
+  font-size: $suku-font-size-5;
+  font-weight: 900;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: -0.2px;
+}
+
+$header-font: 23px;
+$info-button-width: 23px;
+$info-message-width: 300px;
+$suku-light-green: #d8f40b;
+$suku-dark-grey: #303030;
+
+.homepage-section {
+  font-family: 'Poppins', sans-serif;
+}
+
+.title {
+  font-size: $header-font;
+  font-weight: 700;
+}
+
+.italic {
+  font-weight: 400;
+}
+
+.info {
+  text-align: center;
+  height: $info-button-width;
+  width: $info-button-width;
+  border-radius: 100px;
+  position: absolute;
+
+  &:hover .info-box {
+    display: block;
+  }
+}
+
+.info-box {
+  z-index: 100;
+  width: $info-message-width;
+  border-radius: 6px;
+  word-wrap: break-word;
+  background: black;
+  display: none;
+  position: relative;
+  bottom: -10px;
+  right: 100%;
+  text-align: left;
+  padding: 20px;
+  font-size: 13px;
+  font-family: "Encode Sans", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.45;
+  letter-spacing: 0.4px;
+  color: #b6b6b6;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: -10px;
+    left: 35px;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent transparent #191922 transparent;
+    font-style: normal;
+    font-stretch: normal;
+  }
+}
+
+.infoIcon {
+  font-size: 20px;
+}
+
+// tool tip start
+.tipTool {
+  position: relative;
+  display: inline-block;
+  height: 0px;
+  text-align: center;
+  border-radius: 15px 15px 15px 15px;
+  background-color: #d8d8d8a8 transparent;
+  font-size: 18px;
+  color: #757575;
+  font-weight: bold;
+  font-style: italic;
+  font-stretch: normal;
+  letter-spacing: 0.5px;
+}
+
+.tipTool .tipTooltext {
+  visibility: hidden;
+  background-color: #000000eb;
+  text-align: left;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  bottom: -75px;
+  left: -2.6rem;
+  margin-left: -60px;
+  font-style: normal;
+  font-stretch: normal;
+  padding-left: 18px;
+  padding-right: 18px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  font-size: 13px;
+  font-family: $suku-secondary-font;
+  font-weight: 500;
+  line-height: 1.45;
+  letter-spacing: 0.4px;
+  color: #b6b6b6;
+  width: 250px;
+}
+
+.tipTool .tipTooltext::after {
+  content: "";
+  position: absolute;
+  top: -9px;
+  left: 42.5%;
+  margin-left: 0px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #191922 transparent transparent transparent;
+  font-style: normal;
+  font-stretch: normal;
+  transform: rotate(-180deg)
+}
+
+.tipTool:hover .tipTooltext {
+  visibility: visible;
+}
+
+.tooltip-info-content {
+  font-family: $suku-secondary-font;
+}

@@ -1,0 +1,207 @@
+@import '../../theme/theme';
+
+.suku-i {
+  border: solid 2px;
+  border-radius: 28px 76px 63px;
+  color: #3e3e3e;
+  font-family: $suku-secondary-font;
+  font-size: $suku-font-size-3;
+  font-weight: 600;
+  padding: 0.55rem 2rem;
+}
+
+.suku-i:hover {
+  color: white;
+  cursor: pointer;
+}
+
+.suku-i:focus {
+  outline: none !important;
+}
+
+.suku.disabled:hover {
+  border: solid 2px;
+  border-color: $suku-sick-green;
+  background-color: white;
+  color: $suku-text-link;
+  cursor: not-allowed;
+}
+
+//suku-info css
+.suku-info {
+  border: solid 2px;
+  border-color: $suku-sick-green;
+  background-color: $suku-default-bg;
+  color: $suku-text-heading;
+}
+
+.suku-info:hover {
+  border: solid 2px;
+  border-color: $suku-sick-green;
+  background-color: $suku-sick-green;
+  color: white;
+}
+
+.suku-info:active {
+  border: solid 2px;
+  border-color: $suku-sick-green;
+  background-color: $suku-sick-green;
+  color: white;
+}
+
+.suku-info.disabled {
+  border: solid 2px;
+  border-color: $suku-sick-green;
+  background-color: $suku-sick-green;
+  color: grey;
+}
+
+.suku-info.disabled:hover,
+.suku-info[disabled]:hover,
+fieldset[disabled] .suku-info:hover,
+.suku-info.disabled:focus,
+.suku-info[disabled]:focus,
+fieldset[disabled] .suku-info:focus,
+.suku-info.disabled.focus,
+.suku-info[disabled].focus,
+fieldset[disabled] .suku-info.focus {
+  border: solid 2px;
+  border-color: $suku-sick-green;
+  background-color: $suku-sick-green;
+  color: grey;
+  cursor: not-allowed;
+}
+
+.suku-info:focus,
+.suku-info.focus {
+  border: solid 2px;
+  border-color: $suku-sick-green;
+  background-color: $suku-sick-green;
+  color: white;
+}
+
+.suku-info:active:hover,
+.suku-info.active:hover,
+.open>.dropdown-toggle.suku-info:hover,
+.suku-info:active:focus,
+.suku-info.active:focus,
+.open>.dropdown-toggle .suku-info:focus,
+.suku-info:active.focus,
+.suku-info.active.focus,
+.open>.dropdown-toggle .suku-info.focus {
+  border: solid 2px;
+  border-color: $suku-sick-green;
+  background-color: $suku-sick-green;
+  color: white;
+}
+
+.suku-info:not(:disabled):not(.disabled).active,
+.suku-info:not(:disabled):not(.disabled):active,
+.show>.suku-info.dropdown-toggle {
+  color: #fff;
+  background-color: $suku-sick-green;
+  border-color: $suku-sick-green;
+}
+
+.suku-info.focus,
+.suku-info:focus {
+  box-shadow: none !important;
+}
+
+.suku-info:not(:disabled):not(.disabled).active:focus,
+.suku-info:not(:disabled):not(.disabled):active:focus,
+.show>.suku-info.dropdown-toggle:focus {
+  box-shadow: none !important;
+}
+
+// suku-default
+.suku-default {
+  border: solid 2px;
+  border-color: $suku-text-info;
+  background-color: $suku-default-bg;
+  color: $suku-text-heading;
+}
+
+.suku-default:hover {
+  border: solid 2px;
+  border-color: $suku-text-info;
+  background-color: $suku-text-info;
+  color: white;
+}
+
+.suku-default:active {
+  border: solid 2px;
+  border-color: $suku-text-info;
+  background-color: $suku-text-info;
+  color: white;
+}
+
+.suku-default.disabled {
+  border: solid 2px;
+  border-color: $suku-text-info;
+  background-color: $suku-text-info;
+  color: #c4c4c4;
+  opacity: 0.7;
+}
+
+.suku-default.disabled:hover,
+.suku-default[disabled]:hover,
+fieldset[disabled] .suku-default:hover,
+.suku-default.disabled:focus,
+.suku-default[disabled]:focus,
+fieldset[disabled] .suku-default:focus,
+.suku-default.disabled.focus,
+.suku-default[disabled].focus,
+fieldset[disabled] .suku-default.focus {
+  border: solid 2px;
+  border-color: $suku-text-info;
+  background-color: $suku-text-info;
+  color: #c4c4c4;
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.suku-default:focus,
+.suku-default.focus {
+  border: solid 2px;
+  border-color: $suku-text-info;
+  background-color: $suku-text-info;
+  color: white;
+}
+
+.suku-default:active:hover,
+.suku-default.active:hover,
+.open>.dropdown-toggle.suku-default:hover,
+.suku-default:active:focus,
+.suku-default.active:focus,
+.open>.dropdown-toggle .suku-default:focus,
+.suku-default:active.focus,
+.suku-default.active.focus,
+.open>.dropdown-toggle .suku-default.focus {
+  border: solid 2px;
+  border-color: $suku-text-info;
+  background-color: $suku-text-info;
+  color: white;
+}
+
+.suku-default:not(:disabled):not(.disabled).active,
+.suku-default:not(:disabled):not(.disabled):active,
+.show>.suku-default.dropdown-toggle {
+  color: #fff;
+  background-color: $suku-text-info;
+  border-color: $suku-text-info;
+}
+
+.suku-default.focus,
+.suku-default:focus {
+  box-shadow: none !important;
+}
+
+.suku-default:not(:disabled):not(.disabled).active:focus,
+.suku-default:not(:disabled):not(.disabled):active:focus,
+.show>.suku-default.dropdown-toggle:focus {
+  box-shadow: none !important;
+}
+.w-80{
+  width: 80% !important;
+}

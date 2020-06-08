@@ -1,0 +1,18 @@
+<div [class]="customclass">
+  <div class="col pointer text-center p-0">
+    <div class="pt-4">
+      <span [class]="notificationValueCustomClass" [style.color]="notificationValueColor"
+        [style.font-size.rem]="notificationValueFontSize">
+        {{ notificationValue > 9 ? ' ' :
+          '0'}}{{ notificationValue === 0 ? 0 :
+          ''}}{{notificationValue}}
+      </span>
+      <p class="pb-3 n-m mb-0">
+        <a [class]="notificationTitleCustomClass" id="{{id}}" [style.font-size.rem]="notificationTitleColor"
+          [style.color]="notificationTitleFontSize">
+          {{notificationTitle || 'review bids' }}
+        </a>
+      </p>
+    </div>
+  </div>
+</div>

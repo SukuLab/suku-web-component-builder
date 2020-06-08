@@ -1,0 +1,13 @@
+<div class="col flex" [formGroup]="form">
+  <mat-form-field class="col p-0">
+    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+    <owl-date-time #picker (afterPickerClosed)="selectedDate(picker)" [startAt]="startAt"></owl-date-time>
+    <input matInput id="{{dateId}}" formControlName="{{control}}" placeholder="{{placeholder}}" [min]="min" [max]="max"
+      [owlDateTimeTrigger]="picker" [owlDateTime]="picker">
+    <mat-error>
+      <span class="err_style">
+        <span *ngIf="form.hasError('required',[control])" id="errorMsg{{dateId}}">{{errorMsg}}</span>
+      </span>
+    </mat-error>
+  </mat-form-field>
+</div>

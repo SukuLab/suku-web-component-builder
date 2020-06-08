@@ -1,0 +1,20 @@
+<span>
+  <mat-form-field class="col p-0">
+    <mat-select id="{{selectId}}" [class]="customSelectClass" #selector [formControl]="dropdownControl"
+      name="dropdownControl" (selectionChange)="select.emit(dropdownControl);" [placeholder]="placeholder">
+      <mat-option *ngFor="let item of data;let i=index" value="{{item[keyValue]}}" id="option{{i}}">
+        {{item[displayKey]}}
+      </mat-option>
+    </mat-select>
+    <span matSuffix>
+      <mat-icon>
+        <span>
+          <i [id]="iconId" class="{{iconCustomClass}} dropdown-icon {{icon}}"></i>
+        </span>
+      </mat-icon>
+    </span>
+    <mat-error *ngIf="dropdownControl.hasError('required')">
+      {{errorMsg}}
+    </mat-error>
+  </mat-form-field>
+</span>

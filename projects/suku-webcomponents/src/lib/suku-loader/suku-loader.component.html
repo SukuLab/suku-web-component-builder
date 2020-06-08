@@ -1,0 +1,42 @@
+<div class="col p-0">
+  <div class="col text-center">
+    <div class="row justify-content-center">
+      <div class="dialog-title-box {{dialogData?.titleBoxCustomClass}}">
+        <div class="col">
+          <div class="row">
+            <div class="col pt-3">
+              <img class="logo {{dialogData?.logoCustomClass}}" [id]="dialogData?.iconId" [src]="dialogData?.logo"
+                class="mb-3" aria-hidden="true" />
+            </div>
+          </div>
+          <div class="row">
+            <div class="col pb-3 pt-3">
+              <span id="{{ dialogData?.titleOneId }}" class="title pb-1 mt-3 mb-3 {{dialogData?.titleOneCustomClass}}">
+                {{ dialogData?.titleOne }}
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<mat-dialog-content class="mat-typography">
+  <div class="col p-0">
+    <h2 class="col maincontent pt-3 text-center {{dialogData?.titleTwoCustomClass}}" id="{{ dialogData?.titleTwoId }}">
+      {{ dialogData?.titleTwo }}
+    </h2>
+    <h2 class=" col subcontent mb-2 text-center {{dialogData?.titleThreeCustomClass}}"
+      id="{{ dialogData?.titleThreeId }}">
+      <div class="col spinnerStyle text-center">
+        <i class="{{dialogData?.icon}} icon {{dialogData?.iconCustomClass}}" [id]="dialogData?.iconId"></i>
+      </div>
+    </h2>
+  </div>
+  <div class="col">
+    <h2 class="col subcontent pt-2 pb-3 text-center {{dialogData?.titleThreeCustomClass}}"
+      id="{{ dialogData?.titleThreeId }}">
+      {{ dialogData?.titleThree }}
+    </h2>
+  </div>
+</mat-dialog-content>

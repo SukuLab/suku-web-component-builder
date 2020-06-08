@@ -1,0 +1,56 @@
+<div class="col-12 text-left border d-flex Rectangle-2 p-3 bgWhite">
+  <div class="col-12 m-3 pl-2 pr-2">
+    <p class="title {{titleCustomClass}}" [id]="titleId">{{title}}</p>
+    <b class="text-black {{subTitleCustomClass}}" [id]="subTitleId">{{subTitle}}</b>
+    <div class="col-12 text-left p-0 help-Content mb-5 {{descriptionCustomClass}}" [id]="descriptionId">
+      <ng-content></ng-content>
+    </div>
+    <div class="col mt-2 mb-2 p-0 pt-3">
+      <span class="add-owner c-pointer {{labelOneCustomClass}}" [id]="labelOneId" (click)="add.emit()">
+        <i class="{{icon}} pr-3 icon" [id]="iconId"></i>{{labelOne}}</span>
+    </div>
+  </div>
+</div>
+
+
+<!-- old code data -->
+<!-- <p>The SUKU Platform utilizes a payment provider, Dwolla, to enable ACH Payments. Please reach out to the SUKU
+    help mailbox at support@suku.world if you have any questions regarding payments.</p>
+  <b>What is Dwolla?</b>
+  <p>Dwolla is a powerful payments platform that securely connects to bank or credit union accounts to enable the
+    transfer of money for any individual or organization in the U.S.</p>
+
+  <b>Why is my transaction still pending?</b>
+  <p>A bank or credit union transaction usually takes 3–4 business days to complete via the Automated Clearing House
+    network (ACH) used by banks to transfer funds. Please note that transfers take longer to complete if over a
+    weekend or a holiday.</p>
+
+  <b>Why did the transaction fail?</b>
+  <p>Sometimes transactions to or from a bank or credit union can fail. Here are a few reasons why a transaction can
+    fail:</p>
+  <ul>
+    <li>Insufficient funds: There are insufficient funds in the sending bank or credit union account to complete the
+      transaction.</li>
+    <li>Frozen account: A bank or credit union account has been frozen.</li>
+    <li>Other reasons: A bank or credit union rejects the transaction for some other reason.</li>
+  </ul>
+  <p>If a transaction fails, please contact your bank or credit union to check on the status of your account. Then
+    either re-initiate the transaction or ask your financial institution why the transaction may not be processed.
+  </p>
+
+  <b>Why am I being asked for more documentation?</b>
+  <p>If we ask for a photo ID:</p>
+  <p>Additional information is needed to verify your identity. Please upload one of the following forms of
+    identification: An unexpired, current, state-issued driver’s license or identification card OR An unexpired,
+    current U.S. passport</p>
+
+  <p>If we ask for a bank statement:</p>
+  <p>Additional information is needed to verify that you are an authorized signer on your connected bank or credit
+    union account. Please upload a copy of a recent statement.</p>
+
+  <b>How does Dwolla protect customers’ data?</b>
+  <p>At Dwolla, we take protecting data seriously. Dwolla maintains compliance with the SOC 2 framework. This
+    framework provides an independent, third-party assurance that we are taking the appropriate steps to protect our
+    systems and your data. Learn more about Dwolla’s security practices <a
+      href="https://www.dwolla.com/security/" target="_blank">here</a>.</p>
+       -->

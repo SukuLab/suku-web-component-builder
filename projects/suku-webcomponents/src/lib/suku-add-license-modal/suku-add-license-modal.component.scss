@@ -1,0 +1,125 @@
+.btn-info {
+  border: solid 2px #a7bf2e;
+  border-radius: 28px 76px 63px;
+  background-color: white;
+  color: black;
+}
+
+.headerFont{
+  font-family: 'Poppins', sans-serif;
+  letter-spacing: 0;
+  margin-top: 8px;
+  color: #aba4a4e0;
+  font-size: 2.5rem;
+}
+
+.pointer{
+  cursor: pointer;
+}
+
+.bT {
+  border:2px solid #e6e1e18c !important;
+  background-color: #f7f3f354 !important;
+  margin-right: 24px;
+}
+
+.card-header {
+  background-color: #272727;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.5);
+  color: white;
+}
+
+.licNum{
+  
+    position: absolute;
+    top: 44px;
+    right: 267px;
+    font-size: 12px;
+    margin-left: 50px;
+    color: #000000ad;
+  font-family: 'Encode Sans', sans-serif !important;
+  
+}
+
+::ng-deep mat-dialog-container {
+  padding: 0px !important;
+  overflow: hidden !important;
+}
+
+:host {
+  ::ng-deep mat-dialog-content {
+    max-height: 91% !important;
+    overflow-y: none !important;
+    margin: 0px !important;
+    height: 100% !important;
+  }
+
+  ::ng-deep mat-dialog-actions {
+    margin: 5px 10px 5px 10px !important;
+  }
+
+}
+
+.btn-default {
+  border: solid 2px #757575;
+  border-radius: 28px 76px 63px;
+  background-color: white;
+  color: black;
+}
+
+.btn-default:hover {
+  border: solid 2px #757575;
+  border-radius: 28px 76px 63px;
+  background-color: #757575;
+  color: white;
+}
+
+.btn-default:click {
+  border: solid 2px #757575;
+  border-radius: 28px 76px 63px;
+  background-color: #757575 !important;
+  color: white;
+}
+
+.btn-default:active {
+  border: solid 2px #757575;
+  border-radius: 28px 76px 63px;
+  background-color: #757575;
+  color: white;
+}
+
+.bgWhite {
+  background-color: white !important;
+}
+
+.btn-info:hover {
+  border: solid 2px #a7bf2e;
+  border-radius: 28px 76px 63px;
+  background-color: #a7bf2e;
+  color: white;
+}
+
+.btn-info:click {
+  border: solid 2px #a7bf2e;
+  border-radius: 28px 76px 63px;
+  background-color: #a7bf2e !important;
+  color: white;
+}
+
+.btn-info:active {
+  border: solid 2px #a7bf2e;
+  border-radius: 28px 76px 63px;
+  background-color: #a7bf2e;
+  color: white;
+}
+
+.btn-info.disabled {
+  border: solid 2px #a7bf2e;
+  border-radius: 28px 76px 63px;
+  background-color: white;
+  color: grey;
+}
+
+.whiteSpace{
+  white-space: nowrap;
+} 

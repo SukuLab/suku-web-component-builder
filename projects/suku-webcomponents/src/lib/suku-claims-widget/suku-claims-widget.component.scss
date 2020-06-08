@@ -1,0 +1,77 @@
+@import '../theme/theme';
+
+.title {
+  font-family: $suku-secondary-font;
+  font-size: $suku-font-size-3;
+}
+
+.name {
+  font-family: $suku-secondary-font;
+  font-size: $suku-font-size-3;
+}
+
+.info {
+
+  &:hover .info-box {
+    display: block;
+  }
+}
+
+.maxWidth {
+  max-width: 75%;
+}
+
+.info-box {
+  z-index: 100;
+  width: inherit;
+  border-radius: 6px;
+  word-wrap: break-word;
+  background: black;
+  display: none;
+  position: absolute;
+  bottom: 0;
+  /*right: 32%;*/
+  text-align: left;
+  padding: 20px;
+  font-size: 13px;
+  font-family: "Encode Sans", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.45;
+  letter-spacing: 0.4px;
+  color: #b6b6b6;
+
+  &::after {
+    content: "";
+    position: absolute;
+    /*top: 30px;*/
+    left: -0.5%;
+    top: 2rem;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent transparent #191922 transparent;
+    font-style: normal;
+    font-stretch: normal;
+    transform: rotate(-90deg);
+  }
+}
+
+.claimDescription {
+  font-family: $suku-secondary-font;
+  font-size: $suku-font-size-3;
+}
+
+ul {
+  list-style-type: circle;
+}
+
+.c-pointer {
+  cursor: pointer !important;
+}
+
+.suku-link {
+  color: #1d1d1d;
+  text-decoration: underline;
+}

@@ -1,0 +1,120 @@
+@import '../theme/theme';
+$starMargin: 4px;
+$fullStarColor: $suku-star-full-bg;
+$emptyStarColor: $suku-star-empty-bg;
+
+.emptyStar {
+  color: $emptyStarColor;
+  margin: $starMargin;
+  font-size: $suku-star-size;
+}
+
+.fullStar {
+  color: $fullStarColor;
+  margin: $starMargin;
+  font-size: $suku-star-size;
+}
+
+.halfStarLeft {
+  color: $fullStarColor;
+  position: relative;
+  left: 1px;
+  font-size: $suku-star-size;
+}
+
+.halfStarRight {
+  color: $emptyStarColor;
+  position: relative;
+  right: 1px;
+  font-size: $suku-star-size;
+}
+
+.profileBox {
+  background-color: $suku-profile-bg-color;
+  box-shadow: 0 6px 8px 0 rgba(0, 0, 0, .09);
+}
+
+.mL {
+  margin-left: 40px !important;
+}
+
+.circle {
+  height: 150px;
+  width: 150px;
+  border-radius: 100%;
+}
+
+.rounded-circle {
+  background-color: black;
+  width: 150px;
+  height: 150px;
+}
+
+.userName {
+  font-family: $suku-primary-font;
+  font-size: 1.8rem;
+  font-weight: 700;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: -.2px;
+  color: $suku-text-label-two;
+  word-break: break-all !important;
+}
+
+.accountType {
+  font-family: $suku-primary-font;
+  font-size: 1.1rem;
+  font-weight: 700;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: -.2px;
+  color: $suku-profile-text-one;
+  word-break: break-all !important;
+}
+
+.ratingValue {
+  font-family: $suku-primary-font;
+  font-size: 25px;
+  color: $suku-text-info;
+  font-weight: 700;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: -.2px;
+  word-break: break-all !important;
+}
+
+.ratingDetails {
+  font-family: $suku-primary-font;
+  color: $suku-profile-text-two;
+  font-size: 0.8rem;
+  font-weight: 700;
+  word-break: break-all !important;
+}
+
+// .container[_ngcontent-pnj-c26] .slide_img[_ngcontent-pnj-c26] .prev[_ngcontent-pnj-c26] span[_ngcontent-pnj-c26],
+// .container[_ngcontent-pnj-c26] .slide_img[_ngcontent-pnj-c26] .next[_ngcontent-pnj-c26] span[_ngcontent-pnj-c26]{
+//     position: absolute;
+//     width: 0px;
+//     height: 0px;
+//     border: solid 15px;
+//     top: 50%;
+//     transform: translateY(-50%);
+//     left: 10px;
+// }
+
+// .container[_ngcontent-pnj-c26] .slide_img[_ngcontent-pnj-c26] .prev[_ngcontent-pnj-c26],
+// .container[_ngcontent-pnj-c26] .slide_img[_ngcontent-pnj-c26] .next[_ngcontent-pnj-c26]{
+//       width: 8%;
+//       height: 14%;
+//       position: absolute;
+//       top: 50%;
+//       background-color: rgba(175, 172, 172, 0.2);
+//       z-index: 99;
+//       transition: .45s;
+//       cursor: pointer;
+//       text-align: center;
+//       border-radius: 50%;
+// }

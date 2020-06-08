@@ -1,0 +1,97 @@
+@import '../theme/theme';
+
+.header {
+  @include suku-box();
+}
+
+.title {
+  font-family: $suku-primary-font;
+  font-weight: 600;
+  font-size: $suku-font-size-6;
+  text-transform: uppercase;
+}
+
+.table {
+  font-family: $suku-primary-font;
+  box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.1);
+}
+
+.c-pointer {
+  cursor: pointer !important;
+}
+
+.suku-link {
+  color: #1d1d1d;
+  text-decoration: underline;
+}
+
+
+.displayBlock {
+  display: block;
+}
+
+.lineH {
+  line-height: 0.2;
+}
+
+// .ellipsis:before {
+//   content: '&nbsp;';
+//   visibility: hidden;
+// }
+
+// .ellipsis span {
+//   position: absolute;
+//   left: 0;
+//   right: 0;
+//   white-space: nowrap;
+//   overflow: hidden;
+//   text-overflow: ellipsis;
+// }
+
+.fas {
+  font-size: 18px;
+}
+
+.ml {
+  margin-left: 0.8rem;
+  position: relative;
+  top: -4px;
+}
+
+.ellipsis {
+  position: relative;
+}
+
+.ellipsis:before {
+  content: '&nbsp;';
+  visibility: hidden;
+}
+
+.ellipsis span.hovertxt {
+  position: absolute;
+  left: 0.85rem;
+  right: 2.5rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.ellipsis span.hovertxt:hover {
+  background: white;
+  box-shadow: 1.2px 2px #f2f2f2;
+  position: absolute;
+  width: -webkit-fit-content;
+  width: fit-content;
+  max-width: 300px;
+  z-index: 4;
+  margin-top: -1rem;
+  padding: 1rem;
+  border-radius: 3px;
+  white-space: normal !important;
+  word-break: break-word;
+  left: 0rem !important;
+  // box-shadow: 0px 1px 4px 0 rgba(0, 0, 100, .08);
+  -webkit-box-shadow: 0px 3px 4px 0px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0px 3px 4px 0px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 3px 4px 0px rgba(0, 0, 0, 0.2);
+}

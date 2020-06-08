@@ -1,0 +1,41 @@
+:host {
+  ::ng-deep.mat-select-trigger {
+    height: 1.7em !important;
+    padding-bottom: 0.5em !important;
+  }
+}
+
+::ng-deep .mat-select-arrow {
+  border: 0 !important;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+.mat-select-panel {
+  margin-left: 10px !important;
+
+  &:focus {
+    outline: none !important;
+  }
+}
+
+.mat-select-trigger:focus {
+  outline: none !important;
+}
+
+.mat-select-arrow+i.dropdown-icon {
+  float: right;
+  margin-top: -30px;
+  margin-right: 4px;
+  pointer-events: none;
+  padding-right: -7px;
+  font-size: large;
+}
+
+::ng-deep mat-select:focus {
+  outline: none !important;
+}
+
+.arrow-icon {
+  font-size: 2.5em;
+}

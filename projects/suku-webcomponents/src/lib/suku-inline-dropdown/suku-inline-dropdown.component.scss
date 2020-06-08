@@ -1,0 +1,25 @@
+@import '../theme/theme';
+
+h2 {
+  font-family: $suku-secondary-font;
+  font-size: $suku-font-size-2;
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: -0.4px;
+  color: $suku-text-label-one;
+  word-break: break-all !important;
+}
+
+h2:hover {
+  color: #a8a8a8 !important;
+}
+
+.f17 {
+  font-size: $suku-font-size-5;
+}
+
+.c-pointer {
+  cursor: pointer !important;
+}

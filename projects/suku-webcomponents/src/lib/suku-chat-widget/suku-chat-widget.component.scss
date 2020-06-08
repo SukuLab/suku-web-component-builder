@@ -1,0 +1,312 @@
+@import '../theme/theme';
+
+/* text */
+.title {
+  color: #fafaf8;
+  font-size: 26px;
+  font-family: $suku-primary-font;
+  font-weight: 200 !important;
+}
+
+h1 {
+  color: #fafaf8;
+  font-size: $suku-font-size-5;
+  font-family: $suku-primary-font;
+  font-weight: 200 !important;
+}
+
+h2 {
+  color: $suku-text-sub-heading;
+  font-size: $suku-font-size-3;
+  font-family: $suku-primary-font;
+  font-weight: 200;
+  letter-spacing: 0.15px;
+}
+
+.source-title {
+  font-family: $suku-primary-font;
+  font-weight: 700;
+  font-size: $suku-font-size-3;
+}
+
+.pop-bold {
+  font-family: $suku-primary-font;
+  font-weight: 600 !important;
+  font-size: $suku-font-size-5;
+}
+
+.pop-bold:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.c-pointer {
+  cursor: pointer;
+  text-transform: capitalize;
+}
+
+.f22 {
+  font-size: 22px;
+}
+
+/* chat-box */
+
+.borderChat {
+  height: 400.59306px;
+  margin-bottom: 25px;
+  border-top: 4px solid $suku-sick-green;
+  border-bottom: 4px solid $suku-sick-green;
+}
+
+.chat-header {
+  background: #2f2e2e;
+  border-left: 5px solid $suku-sick-green;
+  border-radius: 0 40px 0 0;
+  padding: 10px 5px 0px 15px;
+  margin: 0 0 0px 0;
+}
+
+.box-shadows {
+  box-shadow: 0 12px 14px 0 rgba(0, 0, 0, 0.05);
+  background-color: #ffffff;
+}
+
+.user-icon {
+  vertical-align: middle;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.messageStyle {
+  display: flex;
+  width: 100%;
+}
+
+.chatBox {
+  height: 300px !important;
+  overflow-x: hidden !important;
+}
+
+.msg-content {
+  font-family: $suku-primary-font;
+  font-weight: 400;
+  font-size: $suku-font-size-3;
+}
+
+.chatMessage {
+  font-family: $suku-primary-font;
+  font-weight: 400;
+  font-size: $suku-font-size-3;
+}
+
+.bg-light {
+  background-color: #f2f2f2 !important;
+}
+
+/* alignment */
+
+.rightFloat {
+  justify-content: flex-end !important;
+}
+
+
+.mct-12 {
+  margin-top: 12px;
+}
+
+.mcb-10 {
+  margin-bottom: 10px;
+}
+
+.align-end {
+  align-self: flex-end;
+}
+
+/* msg-content-color */
+.senderColor {
+  background-color: $suku-sick-green !important;
+  border-radius: 0.8rem;
+  color: white;
+  padding-left: .75rem !important;
+  padding-right: .75rem !important;
+  float: right;
+  box-shadow: 0px 5px 20px -15px rgba(0, 0, 0, 0.8);
+}
+
+.receiverColor {
+  background-color: #2f2e2e !important;
+  border-radius: 0.8rem;
+  color: white;
+  padding-left: .75rem !important;
+  padding-right: .75rem !important;
+  float: left;
+  box-shadow: 0px 5px 20px -15px rgba(0, 0, 0, 0.8);
+}
+
+/* chat-input */
+.form-control {
+  background: white;
+  font-size: 13px;
+}
+
+.form-control:focus {
+  background-color: #fff !important;
+  border-color: none;
+  outline: 0;
+  box-shadow: none !important;
+}
+
+#timeStamp {
+  color: #716868;
+  font-family: $suku-primary-font;
+  font-size: 10px;
+  padding-top: 0.30rem;
+  padding-left: 0.45rem;
+  padding-right: 0.45rem;
+  opacity: 0.0;
+  -webkit-transition: .6 ease;
+  -moz-transition: .6 ease;
+  -ms-transition: .6 ease;
+  -o-transition: .6 ease;
+  transition: .6 ease;
+  z-index: 10;
+  line-height: 15px;
+}
+
+
+/* message-styles */
+
+.messageContainerRgt {
+  float: right !important;
+  width: 80%;
+}
+
+.messageContainerLft {
+  float: left !important;
+  width: 80%;
+}
+
+#messageBlock:hover+#timeStamp {
+  opacity: 1.0;
+  background-color: #efeeee;
+  color: #726868;
+  border-radius: 5px;
+}
+
+
+/* send-icon */
+
+.rotateIcon {
+  width: 34px;
+  height: 34px;
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+/* scroll-bar */
+
+::-webkit-scrollbar-thumb {
+  background: #726868;
+  border-radius: 6px;
+}
+
+#scrollDiv::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 0px 0px #726868;
+  border-radius: 6px;
+}
+
+#scrollDiv::-webkit-scrollbar {
+  width: 8px;
+}
+
+#scrollDiv::-webkit-scrollbar-thumb {
+  border-radius: 6px;
+  -webkit-box-shadow: inset 0 0 3px #726868;
+  box-shadow: 0px 0px 0px rgb(114, 104, 104);
+}
+
+.scrollbar {
+  float: left;
+  height: 390px;
+  overflow-y: scroll;
+}
+
+::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 10px 5px 6px #f2f2f2;
+  border-radius: 0px !important;
+  box-shadow: inset 10px 5px 6px #f2f2f2 !important;
+}
+
+.scrollDown {
+  color: #716868;
+  padding: 5px;
+  width: 35px;
+  height: 35px;
+  border-radius: 4px;
+  text-decoration: none;
+  border-radius: 50%;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -webkit-transition: all 0.3s linear;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  border: none;
+  background: none;
+}
+
+.scrollDown:hover {
+  cursor: pointer;
+}
+
+.scroll-down-icon {
+  font-size: 17px;
+  color: #716868;
+  -webkit-transition: all 0.3s linear;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.scrollDown:hover>.scroll-down-icon {
+  -webkit-transition: all 0.5s linear;
+  -moz-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  font-size: 18px;
+}
+
+button:focus {
+  outline: none;
+}
+
+#ScrollDownbutton {
+  position: absolute;
+  right: 3px;
+  bottom: 78px;
+}
+
+#ScrollDownbutton:hover {
+  position: absolute;
+  right: 3px;
+  bottom: 70px;
+  -webkit-transition: all 0.5s linear;
+  -moz-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+@media only screen and (max-width:425) {
+  .p-xs-0 {
+    padding: 0rem !important;
+  }
+}

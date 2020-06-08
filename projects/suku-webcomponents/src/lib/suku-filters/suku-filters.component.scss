@@ -1,0 +1,534 @@
+@import '../theme/theme';
+
+.side-bar {
+  width: 100%;
+  float: left;
+  padding: 0 15px 0 0;
+}
+
+.side-bar .filter-title {
+  color: #c5af79;
+}
+
+.side-bar .filter-title a {
+  color: #b6b6b6;
+  text-decoration: none;
+}
+
+.side-bar .box {
+  width: 100%;
+  float: left;
+  background: #ffffff;
+  box-shadow: rgba(0, 0, 0, 0.070) 0 10px 20px;
+  border-radius: 0 0 30px 30px;
+  padding: 25px 0 15px 0;
+}
+
+.side-bar .box .filter-list {
+  width: 100%;
+  float: left;
+  padding: 0 20px 0px 20px;
+}
+
+.side-bar .box .filter-list:last-child {
+  padding-bottom: 0;
+}
+
+.side-bar .box .filter-list h2 {
+  font-family: $suku-primary-font;
+  font-size: 15px !important;
+  color: #b6b6b6;
+  border-bottom: 1px solid #ececec;
+  padding: 0 0 15px 0;
+  margin: 0 0 15px 0;
+}
+
+.side-bar .box .filter-links {
+  width: 100%;
+  float: left;
+  border-top: 1px solid #ececec;
+  padding: 10px 0 0 30px;
+}
+
+.side-bar .box .filter-links p {
+  font-family: $suku-secondary-font;
+  font-size: $suku-font-size-3;
+  line-height: 14px;
+  text-transform: lowercase;
+  padding: 0;
+}
+
+.side-bar .box .filter-links p a {
+  color: #1d1d1d;
+  text-decoration: underline;
+  margin: 0 15px 0 0;
+}
+
+.side-bar .box .filter-links p a:hover {
+  color: #02b3e3;
+}
+
+.side-bar .box .add-btn {
+  width: 100%;
+  float: left;
+  padding: 0 20px 20px 20px;
+}
+
+.side-bar .collapse {
+  width: 100%;
+  float: left;
+  margin: 0;
+  padding: 0;
+}
+
+@media (min-width: 992px) {
+  .side-bar .filter-title a {
+    pointer-events: none;
+  }
+
+  .side-bar .collapse-filter {
+    height: auto !important;
+    display: block !important;
+    overflow: visible !important;
+    visibility: visible !important;
+  }
+}
+
+@media (max-width: 991px) {
+  .side-bar {
+    padding: 0;
+    margin: 0 0 30px 0;
+  }
+
+  .side-bar .filter-title {
+    height: auto;
+    line-height: normal;
+    border-bottom: 1px solid #ccc;
+    padding: 0 0 15px 0;
+  }
+
+  .side-bar .filter-title a {
+    width: 100%;
+    float: left;
+    font-size: 16px;
+    text-transform: uppercase;
+    text-decoration: none;
+    position: relative;
+    margin: 0;
+    padding: 0;
+  }
+
+  .side-bar .filter-title a:before {
+    content: "\f056";
+    float: right;
+    font-weight: 300;
+    font-size: 20px;
+    color: #c5af79;
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+
+  .side-bar .filter-title a.collapsed:before {
+    content: "\f055";
+  }
+
+  .side-bar .collapse-filter {
+    width: 100%;
+    float: left;
+    margin: 0;
+    padding: 0;
+  }
+
+  .mat-form-field {
+    display: flow-root;
+  }
+
+  .btn {
+    font-size: 10px !important;
+    padding: 5px 5px 5px 5px !important;
+  }
+}
+
+.btn-p {
+  border: solid 2px $suku-sick-green;
+  border-radius: 10px 20px 15px 20px;
+  background-color: #343a40 !important;
+  color: white;
+  font-family: $suku-secondary-font;
+  font-weight: 600;
+  font-size: 14px;
+  padding: 0.75rem 2.1rem;
+}
+
+.btn-p:hover {
+  border: solid 2px $suku-sick-green;
+  border-radius: 10px 20px 15px 20px;
+  background-color: $suku-sick-green;
+  color: white;
+}
+
+.btn-primary:hover {
+  border: 2px solid $suku-sick-green;
+  border-radius: 10px 20px 15px;
+  background-color: $suku-sick-green;
+  color: #fff;
+}
+
+.btn-p:hover {
+  border: 2px solid $suku-sick-green;
+  border-radius: 10px 20px 15px;
+  background-color: $suku-sick-green !important;
+  color: #fff;
+}
+
+.btn-p-p.disabled:hover {
+  border: solid 2px $suku-sick-green !important;
+  border-radius: 10px 20px 15px 20px;
+  background-color: white;
+  color: #1d1d1d;
+}
+
+.zeplin_button {
+  height: 40px;
+  color: #f2f2f2;
+  border: solid 2px $suku-sick-green;
+  background-color: #272727 !important;
+}
+
+.zeplin_button:hover {
+  background-color: $suku-sick-green !important;
+}
+
+.zeplin_button1 {
+  height: 40px;
+  color: #f2f2f2 !important;
+  border: solid 2px #757575a6 !important;
+  background-color: #272727 !important;
+}
+
+.btn_zep1:hover {
+  background-color: #757575a6 !important;
+}
+
+.REVIEW-BIDS {
+  font-family: 'Encode Sans', sans-serif !important;
+  font-size: 14px;
+  font-weight: 300;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: -0.2px;
+  text-align: center;
+  color: white;
+}
+
+.btn-primary {
+  border: solid 2px $suku-sick-green;
+  border-radius: 10px 20px 15px 20px;
+}
+
+.btn-primary:hover {
+  border: solid 2px $suku-sick-green;
+  border-radius: 10px 20px 15px 20px;
+  background-color: $suku-sick-green;
+  color: white;
+}
+
+.btn-primary:active {
+  border: solid 2px $suku-sick-green;
+  border-radius: 10px 20px 15px 20px;
+  background-color: $suku-sick-green;
+  color: white;
+}
+
+.btn-primary.disabled {
+  border: solid 2px $suku-sick-green;
+  border-radius: 10px 20px 15px 20px;
+  background-color: white;
+  color: grey;
+}
+
+.btn-primary.disabled:hover,
+.btn-primary[disabled]:hover,
+fieldset[disabled] .btn-primary:hover,
+.btn-primary.disabled:focus,
+.btn-primary[disabled]:focus,
+fieldset[disabled] .btn-primary:focus,
+.btn-primary.disabled.focus,
+.btn-primary[disabled].focus,
+fieldset[disabled] .btn-primary.focus {
+  border: solid 2px $suku-sick-green;
+  border-radius: 10px 20px 15px 20px;
+  background-color: white !important;
+  color: grey;
+}
+
+.btn-primary:focus,
+.btn-primary.focus {
+  border: solid 2px $suku-sick-green;
+  border-radius: 10px 20px 15px 20px;
+  background-color: $suku-sick-green;
+  color: white;
+}
+
+.btn-primary:active:hover,
+.btn-primary.active:hover,
+.open>.dropdown-toggle.btn-primary:hover,
+.btn-primary:active:focus,
+.btn-primary.active:focus,
+.open>.dropdown-toggle .btn-primary:focus,
+.btn-primary:active.focus,
+.btn-primary.active.focus,
+.open>.dropdown-toggle .btn-primary.focus {
+  border: solid 2px $suku-sick-green;
+  border-radius: 10px 20px 15px 20px;
+  background-color: $suku-sick-green;
+  color: white;
+}
+
+.btn-primary:not(:disabled):not(.disabled).active,
+.btn-primary:not(:disabled):not(.disabled):active,
+.show>.btn-primary.dropdown-toggle {
+  color: #fff;
+  background-color: $suku-sick-green;
+  border-color: $suku-sick-green;
+}
+
+.btn-primary.focus,
+.btn-primary:focus {
+  box-shadow: 0 0 0 0.2rem $suku-sick-green;
+}
+
+.btn-primary:not(:disabled):not(.disabled).active:focus,
+.btn-primary:not(:disabled):not(.disabled):active:focus,
+.show>.btn-primary.dropdown-toggle:focus {
+  box-shadow: 0 0 0 0.2rem $suku-sick-green;
+}
+
+//button css
+
+.btn {
+  border: solid 2px $suku-sick-green;
+  border-radius: 28px 76px 63px;
+  background-color: white;
+  color: black;
+  font-family: 'Encode Sans', sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  padding: .55rem .85rem;
+}
+
+.btn:hover {
+  border: solid 2px $suku-sick-green;
+  border-radius: 28px 76px 63px;
+  background-color: $suku-sick-green;
+  color: white;
+}
+
+.btn.disabled:hover {
+  border: solid 2px $suku-sick-green !important;
+  border-radius: 28px 76px 63px;
+  background-color: white;
+  color: black;
+}
+
+.btn-info {
+  border: solid 2px $suku-sick-green;
+  border-radius: 28px 76px 63px;
+  background-color: white;
+  color: black;
+}
+
+.btn-info:hover {
+  border: solid 2px $suku-sick-green;
+  border-radius: 28px 76px 63px;
+  background-color: $suku-sick-green;
+  color: white;
+}
+
+.btn-info:active {
+  border: solid 2px $suku-sick-green;
+  border-radius: 28px 76px 63px;
+  background-color: $suku-sick-green;
+  color: white;
+}
+
+.btn-info.disabled {
+  border: solid 2px $suku-sick-green;
+  border-radius: 28px 76px 63px;
+  background-color: white;
+  color: grey;
+}
+
+.btn-info.disabled:hover,
+.btn-info[disabled]:hover,
+fieldset[disabled] .btn-info:hover,
+.btn-info.disabled:focus,
+.btn-info[disabled]:focus,
+fieldset[disabled] .btn-info:focus,
+.btn-info.disabled.focus,
+.btn-info[disabled].focus,
+fieldset[disabled] .btn-info.focus {
+  border: solid 2px $suku-sick-green;
+  border-radius: 28px 76px 63px;
+  background-color: white !important;
+  color: grey;
+}
+
+.btn-info:focus,
+.btn-info.focus {
+  border: solid 2px $suku-sick-green;
+  border-radius: 28px 76px 63px;
+  background-color: $suku-sick-green;
+  color: white;
+}
+
+.btn-info:active:hover,
+.btn-info.active:hover,
+.open>.dropdown-toggle.btn-info:hover,
+.btn-info:active:focus,
+.btn-info.active:focus,
+.open>.dropdown-toggle .btn-info:focus,
+.btn-info:active.focus,
+.btn-info.active.focus,
+.open>.dropdown-toggle .btn-info.focus {
+  border: solid 2px $suku-sick-green;
+  border-radius: 28px 76px 63px;
+  background-color: $suku-sick-green;
+  color: white;
+}
+
+.btn-info:not(:disabled):not(.disabled).active,
+.btn-info:not(:disabled):not(.disabled):active,
+.show>.btn-info.dropdown-toggle {
+  color: #fff;
+  background-color: $suku-sick-green;
+  border-color: $suku-sick-green;
+}
+
+.btn-info.focus,
+.btn-info:focus {
+  box-shadow: 0 0 0 0.2rem $suku-sick-green;
+}
+
+.btn-info:not(:disabled):not(.disabled).active:focus,
+.btn-info:not(:disabled):not(.disabled):active:focus,
+.show>.btn-info.dropdown-toggle:focus {
+  box-shadow: 0 0 0 0.2rem $suku-sick-green;
+}
+
+.default-btn {
+  font-family: 'Encode Sans', sans-serif;
+  font-size: 14px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.43;
+  letter-spacing: -0.4px;
+  color: #ffffff !important;
+}
+
+.secondary-btn {
+  font-family: 'Encode Sans', sans-serif;
+  font-size: 14px;
+  font-weight: 800;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.43;
+  letter-spacing: -0.4px;
+  color: #1c1c1c !important;
+  border-bottom: 3.5px solid $suku-sick-green;
+}
+
+.clearAll {
+  font-family: "abelregular", Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: -0.3px;
+  color: #1d1d1d;
+  text-decoration: underline;
+  text-transform: uppercase
+}
+
+.filterSubHeading {
+  font-size: 16px;
+  font-family: $suku-primary-font !important;
+  letter-spacing: .2px;
+}
+
+.filterSubHeadingLabel {
+  font-family: $suku-secondary-font !important;
+  letter-spacing: .2px;
+}
+
+/deep/.mat-checkbox-frame {
+  background-color: transparent;
+  transition: border-color 90ms cubic-bezier(0, 0, .2, .1);
+  border-width: 0px !important;
+  border-style: solid;
+  border-color: #5c4a4aa6;
+}
+
+.mat-checkbox-background,
+.mat-checkbox-frame {
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  position: absolute;
+  border-radius: 2px;
+  box-sizing: border-box;
+  pointer-events: none;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #757575a6;
+}
+
+/deep/.mat-checkbox-background,
+.mat-checkbox-frame {
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  position: absolute;
+  border-radius: 2px;
+  box-sizing: border-box;
+  pointer-events: none;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #757575a6;
+}
+
+.mat-checkbox-frame {
+  background-color: transparent;
+  transition: border-color 90ms cubic-bezier(0, 0, .2, .1);
+  border-width: 0px !important;
+  border-style: solid;
+  border-color: #757575a6;
+}
+
+/deep/.mat-checkbox-checked.mat-primary .mat-checkbox-background {
+  background-color: #ffffff;
+}
+
+/deep/.mat-checkbox-checkmark-path {
+  stroke: #0f0f0f !important;
+}
+
+/deep/.mat-checkbox-checked .mat-checkbox-layout .mat-checkbox-label {
+  letter-spacing: 0.2px;
+  color: black !important;
+}
+
+/deep/.mat-checkbox-layout .mat-checkbox-label {
+  letter-spacing: 0.2px;
+  color: #757575a6 !important;
+}
+
+.mat-checkbox-label {
+  letter-spacing: 0.2px;
+}

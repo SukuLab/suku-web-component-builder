@@ -1,0 +1,16 @@
+<form [formGroup]="termsandcondition">
+  <div class=" d-flex flex-column">
+    <div class="pb-2" [style.color]="titleColor" [style.font-weight]="titleWeight"
+      [style.font-size.rem]="titleSize">
+      <b>{{title}}</b></div>
+    <div class="d-flex flex-row">
+      <mat-checkbox color="{{checkBoxColor}}" type="checkbox" #t (change)="action1()" id="contractTerms"
+        formControlName="{{control}}" name="{{control}}" class="mT">
+      </mat-checkbox>
+      <span class="col {{descriptionCustomClass}} pl-2 pr-0"> {{description}}
+        <a class="{{linkCustomClass}} ws" href="{{linkOne}}" target="_blank">{{linkOneTitle}}</a>
+        <a class="{{linkCustomClass}} ws" href="{{linkTwo}}" target="_blank">{{linkTwoTitle}}</a>
+      </span>
+    </div>
+  </div>
+</form> 

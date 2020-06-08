@@ -1,0 +1,21 @@
+/* You can add global styles to this file, and also import other style files */
+@import '../projects/suku-webcomponents/src/lib/theme/theme';
+@import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
+// @import '../node_modules/suku-webcomponents/suku-theme';
+
+/* svg css */
+@import '../node_modules/suku-icons-library/suku-icons.css';
+
+/* webfont */
+// @import './assets/suku-icons/suku.css';
+
+@import "~ng-pick-datetime/assets/style/picker.min.css";
+
+:root {
+  font-size: 15px !important;
+}
+
+body {
+  font-size: 1rem;
+  background-color: #f2f2f2 !important;
+}

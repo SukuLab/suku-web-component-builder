@@ -1,0 +1,41 @@
+<div class="col p-0">
+  <div class="row card-line-bg p-3 m-3 {{customclass}}" [style.background-color]="bgColor">
+    <div [class]="imageColSize">
+      <img [class]="customImgclass" src="{{image}}" alt="card-img" width="55px" height="46px">
+    </div>
+    <span class="col d-lg-flex d-md-flex p-0 pt-1">
+      <div [class]="txtcolsize">
+        <h2 [style.font-size.px]="titleOneSize" [class]="titleOnecustomclass" [style.font-weight]="titleOneWeight"
+          [style.color]="titleOneColor">{{titleOne}}</h2>
+        <h2 [style.font-size.px]="contentOneSize" [class]="contentOnecustomclass" [style.font-weight]="contentOneWeight"
+          [style.color]="contentOneColor">{{contentOne}}</h2>
+      </div>
+      <div class="col-sm-4 d-flex pt-2 flex-column" (click)="action.emit()" *ngIf="true">
+        <h2 [style.font-size.px]="ratingtitleSize" [class]="ratingtitlecustomclass"
+          [style.font-weight]="ratingtitleWeight" [style.color]="ratingtitleColor">{{ratingTitle}}</h2>
+        <p class="mb-0">
+          <span class="starSize">
+            <div class="pl-1">
+              <span class="suku-star-icon fullStar starSize" *ngFor="let star of fullStarsArray"> </span>
+              <span class="fa fa-star-half halfStarLeft starSize" *ngIf="halfStar == 1"> </span>
+              <span class="fa fa-star-half fa-flip-horizontal halfStarRight starSize" *ngIf="halfStar == 1"> </span>
+              <span class="suku-star-empty-icon emptyStar starSize" *ngFor="let star of emptyStarsArray"> </span>
+            </div>
+          </span>
+        </p>
+      </div>
+      <div [class]="txttwocolsize">
+        <h2 [style.font-size.px]="subTitleTwoSize" [class]="subTitleTwocustomclass"
+          [style.font-weight]="subTitleTwoWeight" [style.color]="subTitleTwoColor">{{subTitleTwo}}</h2>
+        <h2 [style.font-size.px]="contentTwoSize" (click)="userAction.emit()" [class]="contentTwocustomclass"
+          [style.font-weight]="contentTwoWeight" [style.color]="contentTwoColor">{{contentTwo}}</h2>
+      </div>
+      <div [class]="txtthreecolsize">
+        <h2 [style.font-size.px]="subTitleThreeSize" [class]="subTitleThreeClass"
+          [style.font-weight]="subTitleThreeWeight" [style.color]="subTitleThreecolor">{{subTitleThree}}</h2>
+        <h2 [style.font-size.px]="contentThreeSize" [class]="contentThreecustomclass"
+          [style.font-weight]="contentThreeWeight" [style.color]="contentThreeColor">{{contentThree}}</h2>
+      </div>
+    </span>
+  </div>
+</div>

@@ -1,0 +1,57 @@
+@import '../theme/theme';
+
+.circle {
+  background-color: #f2f2f2;
+  height: 150px;
+  width: 150px;
+  border-radius: 100%;
+}
+
+.profileBox {
+  width: 200px;
+  height: 487px;
+  border-radius: 0 0 30px 30px;
+  background-color: #fff;
+  box-shadow: 0 6px 8px 0 rgba(0, 0, 0, .09);
+}
+
+.b-line {
+  opacity: 0.09;
+  border: solid 1px #97979796;
+}
+
+.userName {
+  font-family: 'Poppins', sans-serif;
+  font-size: 17px;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: -0.2px;
+  color: #1d1d1d;
+  text-transform: capitalize;
+  word-break: break-all !important;
+}
+
+.create-interest-listing {
+  font-family: 'Encode sans', sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: -0.4px;
+  color: #b6b6b6;
+  word-break: break-all !important;
+}
+
+.default {
+  width: 170px;
+  height: 274px;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.03);
+  background-color: #ffffff;
+}
+
+.c-pointer {
+  cursor: pointer !important;
+}

@@ -1,0 +1,53 @@
+<span [formGroup]="form">
+  <div class="product-boxContent col-lg-12">
+    <div class="col-lg-12 traceMethod {{labelOneCustomClass}} pl-0" [id]="labelOneId">
+      {{labelOne}}
+    </div>
+    <div class="col-lg-12 traceSearchType {{labelTwoCustomClass}} pl-0 mb-2" [id]="labelTwoId">
+      {{labelTwo}}
+    </div>
+  </div>
+  <div class="col-sm-12 mt-2 pt-4 pb-4 traceBox {{traceBoxCustomClass}}">
+    <div class="col-sm-12 productName pb-1 {{labelThreeCustomClass}}" [id]="labelThree">
+      {{labelThree}}
+    </div>
+    <div class="col-sm-12 pl-3 pb-2 pt-2 p-0 searchBorderBox">
+      <input type="text" [id]="searchInputId" class="searchbox" formControlName="{{control}}" name="{{control}}"
+        (keyup)="searchFun.emit(isSearch)" (keyup.enter)="btnOneAction.emit()">
+      <span class="float-right pr-3"><i class="fa fa-search {{searchIconCustomClass}}"></i></span>
+    </div>
+    <p class="resultCount" *ngIf="_result == 'true'">{{productdetails?.length}} {{messageOne}}.
+    </p>
+    <div *ngIf="_visible == 'false'">
+      <p class="responseInfo" *ngIf="productdetails?.length > 0 ? true : false ">{{messageTwo}}</p>
+      <div class="heightTab" id="scrollDiv">
+        <mat-radio-group class="example-radio-group" [formControlName]="radioFormControl">
+          <div class="col" *ngFor="let products of productdetails;let productIndex=index">
+            <mat-radio-button class="searchData" [color]="color" (click)="selectproducts.emit(products)"
+              [value]="productIndex" id="product{{productIndex}}">
+              <span class="col p-0 product-label">
+                <p  class="mb-1" [innerHtml]="products?.asset?.description"></p>
+                {{products?.asset?.name}}
+              </span>
+            </mat-radio-button>
+            <hr>
+          </div>
+        </mat-radio-group>
+      </div>
+    </div>
+    <div class="col-sm-12 mb-2 text-center pt-3 mt-3 pb-1">
+      <span class="pt-2">
+        <button *ngIf="_visible == 'true'" class="suku-i suku-{{btnType}} {{btnOneCustomClass}}"
+          [ngClass]="{'disabled' : btnOneDisable}" [disabled]="btnOneDisable" [style.font-size.rem]="btnOneSize"
+          [style.font-weight]="btnOneWeight" [id]="btnOneId" (click)="btnOneAction.emit()">
+          {{btnLabelOne}}
+        </button>
+        <button *ngIf="_visible == 'false'" class="suku-i suku-{{btnType}} {{btnTwoCustomClass}}"
+          [ngClass]="{'disabled' : btnTwoDisable}" [disabled]="btnTwoDisable" [style.font-size.rem]="btnTwoSize"
+          [style.font-weight]="btnTwoWeight" [id]="btnTwoId" (click)="btnTwoAction.emit()">
+          {{btnLabelTwo}}
+        </button>
+      </span>
+    </div>
+  </div>
+</span>

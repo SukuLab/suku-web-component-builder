@@ -1,0 +1,12 @@
+@import '../theme/theme';
+
+.header {
+  @include suku-box();
+}
+
+.title {
+  font-family: $suku-primary-font;
+  font-weight: 600;
+  font-size: $suku-font-size-6;
+  text-transform: uppercase;
+}

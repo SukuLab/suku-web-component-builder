@@ -1,0 +1,104 @@
+<div class="col p-0 bgColor">
+  <div class="col-sm-12 pt1 pt-top">
+    <div class="col pl-lg-5">
+      <div class="row">
+        <div class="col mt-4 p-md-0 pl-lg-2">
+          <div class="col-sm-8 pt-2 col-md-12 col-lg-12">
+            <div class="row">
+              <div class="col-sm-5 col-md-5">
+                <img [src]="profileImage" class="rounded-circle img-circle" alt="profile" width="150" height="150">
+              </div>
+              <div class="col-sm-7 pl-lg-1 col-md-7" id="profileDetails">
+                <h1 [style.font-size.px]="nameSize" [class]="nameCustomClass" [style.font-weight]="nameWeight"
+                  [style.color]="nameColor" id="{{userNameId}}">
+                  {{userName}}
+                </h1>
+                <span>
+                  <div class="pt-2 pl-1" *ngIf="ratingPrivacy">
+                    <span class="fa fa-star fullStar f22" *ngFor="let star of fullStarsArray"> </span>
+                    <span class="fa fa-star-half halfStarLeft f22" *ngIf="halfStar == 1"> </span>
+                    <span class="fa fa-star-half fa-flip-horizontal halfStarRight f22" *ngIf="halfStar == 1"> </span>
+                    <span class="fa fa-star emptyStar f22" *ngFor="let star of emptyStarsArray"> </span>
+                  </div>
+                </span>
+                <h2 [style.font-size.px]="rateDetailSize" *ngIf="ratingPrivacy" [class]="rateDetailsCustomClass"
+                  id="{{rateDetailsId}}" [style.font-weight]="ratingDetailWeight" [style.color]="rateDetailColor">
+                  {{rateDetails}}
+                </h2>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-7 col-md-12 col-lg-6 pl-lg-0">
+          <div class="col-sm-12 pt-lg-0 pl-lg-0" id="detailsBlock">
+            <div class="col-sm-12 pt-lg-5 pl-lg-0 p-xs-2" id="editsBlock">
+              <div class="col-sm-12 pt-lg-4" [ngClass]="{'mb-lg-5': !editvisibility }" id="editBlock"
+                [style.visibility]="editvisibility">
+                <div class="row">
+                  <div class="col-sm-12 col-lg-4 offset-lg-4 text-lg-right col-md-3 text-md-center col-xs-12 p-xs-0"
+                    *ngIf="editvisibility">
+                    <a class="profilePercentage colorGrey" id="{{subHeadingOneId}}"
+                      [style.visibility]="editvisibility ? 'visible' : 'hidden'"
+                      (click)="editAccount()">{{subHeadingOne}}</a>
+                  </div>
+                  <div class="col-sm-3 col-md-3 p-md-0 col-lg-4 text-lg-center col-xs-12 p-xs-0"
+                    *ngIf="changePasswordvisibility">
+                    <a class=" profilePercentage colorGrey" id="{{subHeadingTwoId}}"
+                      [style.visibility]="changePasswordvisibility ? 'visible' : 'hidden'"
+                      (click)="changePass()">{{subHeadingTwo}}</a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-12 pt-3 mt-2 pl-md-0">
+                <div class="row">
+                  <div class="col-sm-6">
+                    <div>
+                      <span class="row pb-2">
+                        <img [src]="mailIcon" [class]="mailIconClass" *ngIf="mailIcon">
+                        <i class="{{iconOne}} {{iconOneCustomClass}}" id="iconOneId" *ngIf="iconOne"></i>
+                        <h2 [style.font-size.px]="mailTxtSize" [class]="mailcustomClass" id="{{mailId}}"
+                          [style.font-weight]="mailWeight" [style.color]="mailTextColor">
+                          {{mail}}
+                        </h2>
+                      </span>
+                    </div>
+                    <div class="pt-2 pb-2">
+                      <span class="row pb-2">
+                        <img [src]="phNumberIcon" height="20px" class="mt-1">
+                        <i class="{{iconTwo}} {{iconTwoCustomClass}}" id="iconTwoId" *ngIf="iconTwo"></i>
+                        <h2 [style.font-size.px]="phnumberSize" [class]="phnumberCustomClass" id="{{phoneId}}"
+                          [style.font-weight]="phnumberWeight" [style.color]="phnumberColor">
+                          {{number}}
+                        </h2>
+                      </span>
+                    </div>
+                  </div>
+                  <div class="col-sm-6 pr-2">
+                    <div class="row">
+                      <div class="col-sm-8">
+                        <span class="row pb-2">
+                          <img [src]="addressIcon">
+                          <i class="{{iconThree}} {{iconThreeCustomClass}}" id="iconThreeId" *ngIf="iconThree"></i>
+                          <h2 [style.font-size.px]="addressSize" [class]="addressCustomClass" id="{{addressId}}"
+                            [style.font-weight]="addressWeight" [style.color]="addressColor">
+                            {{address}}
+                          </h2>
+                        </span>
+                      </div>
+                      <div class="col-sm-4">
+                        <a id="editProfCont" (click)="samIconAction.emit()" [hidden]="!editvisibility">
+                          <i class="{{iconFour}} {{iconFourCustomClass}}" id="iconFourId" *ngIf="iconFour"></i>
+                          <img [src]="samBadgeIcon" alt="sam badge" [class]="samBadgeClass" height="50px" width="50px"  *ngIf="samBadgeIcon">
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,99 @@
+@import '../theme/theme';
+
+h2 {
+  font-family: $suku-secondary-font;
+  font-size: $suku-font-size-2;
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: -0.2px;
+  color: $suku-text-label-one;
+  word-break: break-word !important;
+}
+
+.card-line-bg {
+  background-color: #fff;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.05);
+}
+
+.card-line-img {
+  border: 1px solid #e3dbdb36 !important;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.06);
+}
+
+.border-top-box {
+  border-top: 1px solid #dee2e670 !important;
+}
+
+.c-pointer {
+  cursor: pointer;
+}
+
+// tool tip start
+.tipTool {
+  position: relative;
+  display: inline-block;
+  height: 0px;
+  text-align: center;
+  border-radius: 15px 15px 15px 15px;
+  background-color: #d8d8d8a8 transparent;
+  font-size: 18px;
+  color: #757575;
+  font-weight: bold;
+  font-style: italic;
+  font-stretch: normal;
+  letter-spacing: 0.5px;
+}
+
+.tipTool .tipTooltext {
+  visibility: hidden;
+  width: max-content;
+  background-color: #000000eb;
+  text-align: left;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  bottom: 150%;
+  left: 70%;
+  margin-left: -60px;
+  font-style: normal;
+  font-stretch: normal;
+  padding-left: 18px;
+  padding-right: 18px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  font-size: 13px;
+  font-family: $suku-secondary-font;
+  font-weight: 500;
+  line-height: 1.45;
+  letter-spacing: 0.4px;
+  color: #b6b6b6;
+}
+
+.tipTool .tipTooltext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 37.5%;
+  margin-left: 0px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #191922 transparent transparent transparent;
+  font-style: normal;
+  font-stretch: normal;
+}
+
+.tipTool:hover .tipTooltext {
+  visibility: visible;
+}
+
+.user {
+  cursor: pointer !important;
+}
+
+.user:hover {
+  color: black !important;
+  font-weight: 700 !important;
+}

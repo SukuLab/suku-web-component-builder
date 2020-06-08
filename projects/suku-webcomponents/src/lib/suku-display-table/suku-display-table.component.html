@@ -1,0 +1,66 @@
+<div class="col content">
+  <div class="header">
+    <div class="col pt-4 pb-4">
+      <div class="row">
+        <div class="col">
+          <h1 [style.font-size.px]="titleOneSize" class="title mt-auto mb-0 {{titleOneCustomClass}}"
+            [style.font-weight]="titleOneWeight" [style.color]="titleOneColor" id="{{titleOneId}}">
+            {{titleContent}}
+          </h1>
+        </div>
+      </div>
+    </div>
+  </div>
+  <table class="table table-striped table-bordered table-responsive-sm">
+    <thead>
+      <tr>
+        <th [style.color]="headerColor" [style.font-size.px]="headerSize" [style.font-weight]="headerWeight"
+          *ngFor="let header of header;" id="{{header.id}}" class="ellipsis">
+          <span *ngIf="!translator" class="hovertxt">{{header.title}}</span>
+          <span *ngIf="translator" class="hovertxt">
+            {{ header.title | translate}}
+          </span>
+          <span *ngIf="sortable" class="float-right c-pointer pl-3 ml">
+            <span (click)="sort(header.id,header.type,'asse');" class='fas fa-caret-up displayBlock '></span>
+            <span (click)="sort(header.id,header.type,'desc');" class='fas fa-caret-down displayBlock lineH'></span>
+          </span>
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let data of tableData | paginate: { itemsPerPage: itemsPerPageCount, currentPage: p,totalItems:
+        totalItem } let i = index">
+        <td *ngFor="let key of tableDataKey;" [style.color]="dataColor" [style.font-size.px]="
+          dataSize" [style.font-weight]="dataWeight" [style.background-color]="
+         (data[key] === status[0]) ? colorPallete[0]: 
+        (data[key] === status[1]) ? colorPallete[1]: 
+        (data[key] === status[2]) ? colorPallete[2] :
+         (data[key] === status[3]) ? colorPallete[3] : (key==statusKey && data[key]) ? colorPallete[4] : 'white' ">
+          <span *ngIf="(key === hrefSelection)" (click)="action.emit(data[key])" class="suku-link c-pointer">
+            {{data[key] | translate}}
+          </span>
+          <span *ngIf="(key === hrefSelectionOne && data[key] === 'complete_TblValue')"
+            (click)="actionTwo.emit(data[hrefSelection])" class="suku-link c-pointer">
+            {{data[key] | translate}}
+          </span>
+          <!-- <span *ngIf="!(key === hrefSelection)">
+            {{data[key] | translate}}</span> -->
+          <span
+            *ngIf="!((key === hrefSelection) || (key === hrefSelectionOne && data[key] === 'complete_TblValue')) && !dateType.includes(key)">
+            {{data[key] | translate}}</span>
+          <span *ngIf="!(key === hrefSelection) && dateType.includes(key) && enableDatePipe">
+            {{data[key] | dateLocale: 'dateFormat'}}</span>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <div class="col pt-4 pb-4" *ngIf="showPagination">
+    <div class="row">
+      <div class="col text-right">
+        <pagination-controls (pageChange)="p = $event;paginationFun(p);" previousLabel="{{paginationPreviousLabel}}"
+          nextLabel="{{paginationNextLabel}}"></pagination-controls>
+      </div>
+    </div>
+  </div>
+
+</div>

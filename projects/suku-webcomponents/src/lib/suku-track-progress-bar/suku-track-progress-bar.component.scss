@@ -1,0 +1,68 @@
+@import '../theme/theme';
+
+.progressActive {
+  width: 50px !important;
+  height: 50px;
+  color: $suku-text-label-two;
+  background: $suku-progressbar-active-bg;
+  -moz-border-radius: 50% !important;
+  -webkit-border-radius: 50% !important;
+  border-radius: 50% !important;
+  font-family: $suku-primary-font;
+}
+
+.progressUpcoming {
+  width: 50px !important;
+  height: 50px !important;
+  color: rgb(168, 166, 166);
+  background: $suku-progressbar-upcoming-bg;
+  -moz-border-radius: 50% !important;
+  -webkit-border-radius: 50% !important;
+  border-radius: 50% !important;
+  font-family: $suku-primary-font;
+}
+
+.progressCompleted {
+  width: 50px !important;
+  height: 50px !important;
+  color: $suku-text-label-two;
+  background-color: $suku-progressbar-completed-bg;
+  -moz-border-radius: 50% !important;
+  -webkit-border-radius: 50% !important;
+  border-radius: 50% !important;
+  font-family: $suku-primary-font;
+}
+
+.progressTitle {
+  font-family: $suku-secondary-font;
+  font-size: 12px;
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: -0.4px;
+  text-align: center;
+  color: $suku-text-label-one;
+}
+
+.tickSign {
+  color: $suku-yellow-green;
+}
+
+
+tr#txt {
+  td {
+    width: 20%;
+  }
+}
+
+@media only screen and (max-width:425px) {
+  .responsive {
+    margin-left: 30px;
+    margin-right: 30px;
+  }
+}
+
+.c-pointer {
+  cursor: pointer;
+}

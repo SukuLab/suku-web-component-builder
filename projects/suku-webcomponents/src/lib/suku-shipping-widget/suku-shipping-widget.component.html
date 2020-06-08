@@ -1,0 +1,37 @@
+<div class="col p-0">
+  <div class="row card-line-bg p-3 m-3 c-pointer center" [style.background-color]="bgColor">
+    <div [class]="imageColSize">
+      <img [class]="customclass" src="{{image}}" alt="card-img" width="55px" height="46px">
+    </div>
+      <div *ngIf="msgPaymentStatus=='Paid'" class="padlf">
+        <img [class]="customIconclass" src="{{amountPaid}}" alt="amount-paid" width="50px" height="50px">
+      </div>
+      <div *ngIf="msgPaymentStatus=='unPaid'" class="padlf">
+        <img [class]="customIconclass" src="{{amountUnPaid}}" alt="amount-unpaid" width="50px" height="50px">
+      </div>
+      <div *ngIf="msgShipmentStatus=='shipped'">
+        <img [class]="customIconclass" src="{{shippedIcon}}" alt="Shipped" width="50px" height="50px">
+      </div>
+      <div *ngIf="msgShipmentStatus=='unShipped'">
+        <img [class]="customIconclass" src="{{unShippedIcon}}" alt="unshipped" width="50px" height="50px">
+      </div>
+    <div [class]="txtcolsize">
+      <h2 [style.font-size.px]="titleOneSize" [class]="titleOnecustomclass" [style.font-weight]="titleOneWeight"
+        [style.color]="titleOneColor">{{titleOne}}</h2>
+      <h2 [style.font-size.px]="contentOneSize" [class]="contentOnecustomclass" [style.font-weight]="contentOneWeight"
+        [style.color]="contentOneColor">{{contentOne}}</h2>
+    </div>
+    <div [class]="txttwocolsize">
+      <h2 [style.font-size.px]="subTitleTwoSize" [class]="subTitleTwocustomclass" [style.font-weight]="subTitleTwoWeight"
+        [style.color]="subTitleTwoColor">{{subTitleTwo}}</h2>
+      <h2 [style.font-size.px]="contentTwoSize" [class]="contentTwocustomclass" [style.font-weight]="contentTwoWeight"
+        [style.color]="contentTwoColor">{{contentTwo}}</h2>
+    </div>
+    <div [class]="txtthreecolsize">
+      <h2 [style.font-size.px]="subTitleThreeSize" [class]="subTitleThreeClass" [style.font-weight]="subTitleThreeWeight"
+        [style.color]="subTitleThreecolor">{{subTitleThree}}</h2>
+      <h2 [style.font-size.px]="contentThreeSize" [class]="contentThreecustomclass" [style.font-weight]="contentThreeWeight"
+        [style.color]="contentThreeColor">{{contentThree}}</h2>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,15 @@
+@import '../../theme/theme';
+
+.secondary-btn {
+    font-family: $suku-secondary-font;
+    font-size: $suku-font-size-3;
+    font-weight: 600;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.43;
+    letter-spacing: -0.4px;
+    color: $suku-text-heading;
+    border-bottom: 3.5px solid;
+    border-color: $suku-sick-green;
+    word-break: break-word;
+}

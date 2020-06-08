@@ -1,0 +1,313 @@
+@import '../theme/theme';
+
+.progressActive {
+  width: 50px !important;
+  height: 50px;
+  color: white;
+  background: $suku-sick-green;
+  -moz-border-radius: 50% !important;
+  -webkit-border-radius: 50% !important;
+  border-radius: 50% !important;
+  font-family: $suku-primary-font;
+}
+
+.progressUpcoming {
+  width: 50px !important;
+  height: 50px !important;
+  color: white;
+  background: #757575;
+  -moz-border-radius: 50% !important;
+  -webkit-border-radius: 50% !important;
+  border-radius: 50% !important;
+  font-family: $suku-primary-font;
+}
+
+
+.progressCompleted {
+  width: 50px !important;
+  height: 50px !important;
+  color: white;
+  background-color: #1c1c1c;
+  -moz-border-radius: 50% !important;
+  -webkit-border-radius: 50% !important;
+  border-radius: 50% !important;
+  font-family: $suku-primary-font;
+}
+
+
+.progressbar li {
+  float: left;
+  width: calc(92%/var(--suku-progress-bar-count));
+  position: relative;
+  text-align: center;
+}
+
+.progressbar {
+  counter-reset: step;
+}
+
+.progressbar li .circle {
+  content: counter(step);
+  counter-increment: step;
+  width: 50px;
+  height: 50px;
+  display: block;
+  margin: 0 auto 10px auto;
+  border-radius: 50%;
+  line-height: 50px;
+  background: #757575;
+  color: white;
+  text-align: center;
+  font-weight: 400;
+  font-size: 14px;
+  font-family: $suku-primary-font;
+  z-index: 10;
+  position: relative;
+}
+
+.progressbar li:after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  color: white;
+  background: #b3b3b3;
+  top: 25px;
+  left: -50%;
+  z-index: 0;
+}
+
+.progressbar li.active:before {
+  color: white;
+  background: $suku-sick-green;
+}
+
+
+.progressbar li.anotherStep:before {
+  color: white;
+  background-color: #1c1c1c;
+}
+
+.progressbar li.completed+li:after {
+  background-color: #b3b3b3;
+}
+
+.progressbar li.pending+li:after {
+  background-color: #b3b3b3;
+}
+
+.progressbar li.active+li:after {
+  background-color: #b3b3b3;
+}
+
+.progressbar li:first-child:after {
+  content: none;
+}
+
+li {
+  list-style: none;
+}
+
+li {
+  font-family: $suku-secondary-font;
+  font-size: 14px;
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: -0.4px;
+  text-align: center;
+  color: #b6b6b6;
+}
+
+.checkmark {
+  position: absolute;
+  top: 32%;
+  right: 35.5%;
+  z-index: 5;
+  background: #1c1c1c;
+  width: 12px;
+  height: 21px;
+}
+
+.checkmarkForAnotherStep {
+  position: absolute;
+  top: 32%;
+  right: 35.5%;
+  z-index: 5;
+  color: white;
+  /*background: #1c1c1c;*/
+  width: 12px;
+  height: 21px;
+}
+
+.checkmarkForAnotherStep:after {
+  content: '';
+  display: block;
+  width: 8px;
+  height: 15px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  transform: rotate(45deg);
+}
+
+.checkmark:after {
+  content: '';
+  display: block;
+  width: 8px;
+  height: 15px;
+  border: solid #d8fc40;
+  border-width: 0 3px 3px 0;
+  transform: rotate(45deg);
+}
+
+/* tooltip */
+// tool tip start
+.tipTool {
+  position: relative;
+  display: inline-block;
+  height: 0px;
+  text-align: center;
+  border-radius: 15px 15px 15px 15px;
+  background-color: #d8d8d8a8 transparent;
+  font-size: 18px;
+  color: #757575;
+  font-weight: bold;
+  font-style: italic;
+  font-stretch: normal;
+  letter-spacing: 0.5px;
+}
+
+.tipTooltext {
+  // visibility: hidden;
+  width: max-content;
+  background-color: #000000eb;
+  text-align: left;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  bottom: 130%;
+  left: -60%;
+  margin-left: -60px;
+  font-style: normal;
+  font-stretch: normal;
+  padding-left: 18px;
+  padding-right: 18px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  font-size: 13px;
+  font-family: $suku-secondary-font;
+  font-weight: 500;
+  line-height: 1.45;
+  letter-spacing: 0.4px;
+  color: #b6b6b6;
+}
+
+.tipTooltext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 36.5%;
+  margin-left: 0px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #191922 transparent transparent transparent;
+  font-style: normal;
+  font-stretch: normal;
+}
+
+.active {
+  color: white;
+  background: $suku-sick-green !important;
+}
+
+.anotherStep {
+  color: white;
+  background: $suku-sick-green !important;
+}
+
+.completed {
+  color: $suku-sick-green !important;
+  background-color: #1c1c1c !important;
+}
+.pending {
+   color: $suku-sick-green !important;
+  background-color: #1c1c1c !important;
+}
+
+.completedAndOther {
+  color: white;
+  background: $suku-sick-green !important;
+}
+button {
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit;
+}
+
+.c-pointer {
+  cursor: pointer !important;
+}
+
+.text-bold {
+  font-weight: 600 !important;
+  color: black !important
+}
+
+.type {
+  font-family: $suku-secondary-font;
+  font-size: $suku-font-size-2;
+}
+
+.title {
+  font-family: $suku-secondary-font;
+  font-size: $suku-font-size-2;
+}
+
+.subtitle-bold {
+  font-weight: 500 !important;
+  color: black;
+}
+
+@media only screen and (max-width: 480px) {
+
+  .p-xs-0 {
+    padding: 0px !important;
+  }
+
+}
+
+@media (min-width: 1440px) {
+  .progressbar li:after {
+    height: 2.8px;
+  }
+}
+
+
+@media (max-width: 900px) {
+  .tipTooltext {
+    width: 200px !important;
+    bottom: 130%;
+    left: 11%;
+  }
+}
+
+@media (max-width: 480px) {
+  .tipTooltext {
+    width: 140px !important;
+    bottom: 130%;
+    left: 58%;
+  }
+
+}
+
+@media (max-width: 320px) {
+  .tipTool .tipTooltext {
+    width: 150px !important;
+  }
+}

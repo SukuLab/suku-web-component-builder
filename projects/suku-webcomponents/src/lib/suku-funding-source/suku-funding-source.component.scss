@@ -1,0 +1,216 @@
+@import '../theme/theme';
+
+.title {
+  color: #fafaf8;
+  font-size: 28px;
+  font-family: $suku-primary-font;
+  font-weight: 200 !important;
+}
+
+.funding-box-widget {
+  width: 100%;
+  float: left;
+  background: #2f2e2e;
+  border-left: 5px solid $suku-sick-green;
+  border-radius: 0 40px 0 0;
+  box-shadow: -4px 4px 5px 0px rgba(0, 0, 0, 0.08);
+  padding: 10px 5px 0px 15px;
+  margin: 0 0 0px 0;
+}
+
+.card-body {
+  padding: 0px;
+}
+
+.card {
+  background: #2f2e2e;
+  border-left: 5px solid $suku-sick-green;
+  border-radius: 0 40px 0 0;
+  box-shadow: -4px 4px 5px 0px rgba(0, 0, 0, 0.08);
+  padding: 20px 5px 0px 15px;
+  margin: 0 0 0px 0;
+  color: white;
+  height: 160px;
+}
+
+.card::after {
+  background: linear-gradient(to right,
+      rgba(255, 255, 255, 0) 0%,
+      rgba(255, 255, 255, 0) 77%,
+      rgba(255, 255, 255, 0) 92%,
+      rgba(255, 255, 255, 0) 100%);
+  left: 50px
+}
+
+.card-footer {
+  padding: .2rem 1.25rem;
+  background-color: #2f2e2e !important;
+  border-top: none !important;
+}
+
+.icon:hover {
+  vertical-align: middle;
+  border-style: none;
+  width: 26px;
+  -webkit-box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 1);
+  -moz-box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 1);
+  box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.25);
+  box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 1);
+  border-radius: 27px;
+  height: 26px;
+}
+
+h1 {
+  color: #fafaf8;
+  font-size: 24px;
+  font-family: $suku-primary-font;
+  font-weight: 200 !important;
+}
+
+h2 {
+  color: #cccccc;
+  font-size: 15px;
+  font-family: $suku-primary-font;
+  font-weight: 600;
+  letter-spacing: 0.15px;
+}
+
+.source-title {
+  font-family: $suku-primary-font;
+  font-weight: 700;
+  font-size: 15px !important;
+}
+
+.pop-light {
+  font-family: $suku-primary-font;
+  font-weight: 200 !important;
+  font-size: 16px;
+}
+
+.c-pointer {
+  cursor: pointer;
+  text-transform: capitalize;
+}
+
+.box-shadows {
+  box-shadow: 0 12px 14px 0 rgba(0, 0, 0, 0.05);
+  background-color: #ffffff;
+}
+
+.pop {
+  font-family: $suku-primary-font;
+  font-weight: 800;
+}
+
+.sub-title {
+  font-family: $suku-primary-font;
+  font-weight: 700;
+  font-size: 22px !important;
+}
+
+.flex {
+  margin-left: 0%;
+  flex: 0 0 100%;
+  max-width: 100%;
+}
+
+.f16 {
+  font-size: 16px;
+}
+
+.content-font {
+  font-family: $suku-primary-font;
+  font-weight: 200 !important;
+}
+
+.btn-default {
+  border: solid 1px #e9e9e900;
+  border-radius: 28px 76px 63px;
+  background-color: #e9e9e9bd;
+  color: black;
+  padding: 0.675rem 0.75rem;
+  font-size: 12px;
+  font-family: $suku-primary-font;
+  font-weight: 700;
+}
+
+.btn-default:hover {
+  border-radius: 28px 76px 63px;
+  padding: 0.675rem 0.75rem;
+  font-size: 12px;
+  font-family: $suku-primary-font;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.btn {
+  border: solid 1px $suku-sick-green;
+  border-radius: 28px 76px 63px;
+  background-color: $suku-sick-green;
+  color: white;
+  padding: 0.675rem 0.75rem;
+  font-size: 12px;
+  font-family: $suku-primary-font;
+  font-weight: 600;
+}
+
+.btn:hover {
+  border: solid 1px $suku-sick-green;
+  border-radius: 28px 76px 63px;
+  background-color: $suku-sick-green;
+  color: #2f2e2e
+}
+
+.btn:focus {
+  border: solid 1px $suku-sick-green;
+  border-radius: 28px 76px 63px;
+  background-color: $suku-sick-green;
+  color: black;
+}
+
+.icon-size {
+  font-size: 74px !important;
+  color: #a6bf2e;
+}
+
+@media only screen and (max-width:768px) {
+  .source-title {
+    font-size: 14px !important;
+  }
+
+  .content-font {
+    font-size: 14px !important;
+  }
+
+  .sub-title {
+    font-size: 18px !important;
+  }
+}
+
+@media only screen and (max-width:568px) {
+  .pl-xs-0 {
+    padding-left: 0px !important;
+  }
+
+  .pr-xs-0 {
+    padding-right: 0px !important;
+  }
+
+  .p-xs-0 {
+    padding: 0px !important;
+  }
+}
+
+@media only screen and (max-width:1100px) {
+  .custom-width {
+    max-width: 100% !important;
+    flex: 0 0 50%;
+  }
+}
+
+@media only screen and (max-width:992px) {
+  .custom-width {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+}

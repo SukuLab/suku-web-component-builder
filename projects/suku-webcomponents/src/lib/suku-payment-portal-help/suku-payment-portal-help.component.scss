@@ -1,0 +1,54 @@
+@import '../theme/theme';
+
+.help-Content {
+  font-family: $suku-secondary-font;
+  font-size: 15px;
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: -0.4px;
+  text-align: center;
+  color: $suku-text-label-one;
+}
+
+.bgWhite {
+  background-color: white;
+}
+
+.linkA {
+  cursor: pointer;
+}
+
+.title {
+  font-family: $suku-primary-font;
+  font-size: $suku-font-size-5;
+  font-weight: 600;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: -0.3px;
+  word-break: break-word !important;
+  overflow: hidden;
+  text-overflow: ellipsis !important;
+  white-space: nowrap;
+}
+
+.add-owner {
+  font-family: $suku-primary-font;
+  font-size: $suku-font-size-5;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: -0.3px;
+  word-break: break-word !important;
+  overflow: hidden;
+  text-overflow: ellipsis !important;
+  white-space: nowrap;
+}
+
+.icon {
+  color: $suku-sick-green;
+  font-size: $suku-font-size-6;
+}

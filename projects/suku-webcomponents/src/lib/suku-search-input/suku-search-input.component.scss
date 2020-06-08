@@ -1,0 +1,52 @@
+@import '../theme/theme';
+
+#search_container {
+  border-radius: $suku-search-border-radius;
+}
+
+.stretch {
+  flex-grow: 1;
+  border: 2px solid $suku-text-label-three;
+  border-radius: $suku-search-border-radius;
+}
+
+.default {
+  width: 245px;
+}
+
+.c-pointer {
+  cursor: pointer !important;
+}
+
+input#search {
+  height: 40px;
+  font-family: $suku-secondary-font;
+  font-size: $suku-font-size-3;
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1;
+  letter-spacing: -0.4px;
+  padding-right: 33px;
+  padding-left: 15px;
+  position: relative;
+  width: 80%;
+}
+
+input:focus {
+  outline: none !important;
+}
+
+::placeholder {
+  color: #3e3e3e;
+  font-size: $suku-font-size-3;
+}
+
+.searchIcon {
+  position: absolute;
+  width: 17px;
+  top: 10px;
+  right: 10px;
+  margin: 1px;
+  background: $suku-homepage-bg;
+}

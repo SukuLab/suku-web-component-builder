@@ -1,0 +1,27 @@
+<div [class]="mainCustomClass">
+  <div class="row d-flex justify-content-start {{subCustomClass}}">
+    <img src="{{image}}" class="rounded-circle image mt-2 " alt="profile">
+    <div class="mL">
+      <h1 [style.font-size.rem]="nameSize" class="{{nameCustomClass}}} userName pl-2" [style.font-weight]="nameWeight"
+        [style.color]="nameColor" id="{{id}}">
+        {{userName}}
+      </h1>
+      <h2 [style.font-size.rem]="accountSize" class="{{accountCustomClass}} accountType" id="{{id}}"
+        [style.font-weight]="accountWeight" [style.color]="accountColor">
+        {{accountType}}
+      </h2>
+      <div class="pt-3">
+        <span (change)="action.emit()">
+          <span class="fa fa-star fullStar pl-2" *ngFor="let star of fullStarsArray"> </span>
+          <span class="fa fa-star-half halfStarLeft" *ngIf="halfStar == 1"> </span>
+          <span class="fa fa-star-half fa-flip-horizontal halfStarRight" *ngIf="halfStar == 1"> </span>
+          <span class="fa fa-star emptyStar" *ngFor="let star of emptyStarsArray"> </span>
+        </span>
+      </div>
+      <h2 [style.font-size.rem]="accountSize" class="{{rDustomClass}} ratingDetails" id="{{id}}"
+        [style.font-weight]="ratingWeight" [style.color]="rateColor">
+        {{rateDetails}}
+      </h2>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,112 @@
+@import '../theme/theme';
+
+.terms {
+    font-family: $suku-secondary-font;
+    font-size: 15px;
+}
+
+.bg {
+    border-radius: 0 0 41px 41px;
+    background-color: $suku-default-bg;
+    box-shadow: 0 12px 14px 0 rgba(0, 0, 0, 0.05);
+}
+
+label {
+    font-family: $suku-primary-font;
+    font-size: $suku-font-size-6;
+    font-weight: bold;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: 0.1px;
+    color: #1d1d1d;
+}
+
+
+/* button css */
+
+.suku {
+    border: solid 2px $suku-sick-green;
+    padding: 10px 32px 10px 32px;
+    background-color: white;
+    color: black;
+    border-radius: 29px 77px 61px;
+    font-weight: 900;
+    font-family: $suku-primary-font;
+    font-size: 1.5rem;
+}
+
+
+.suku-info {
+    border: solid 2px $suku-sick-green;
+    padding: 10px 32px 10px 32px;
+    background-color: white;
+    color: #00000099;
+}
+
+.suku-info:hover {
+    border: solid 2px $suku-sick-green;
+    padding: 10px 32px 10px 32px;
+    background-color: $suku-sick-green;
+    color: white;
+}
+
+
+.suku-info:active {
+    border: solid 2px $suku-sick-green;
+    padding: 10px 32px 10px 32px;
+    background-color: $suku-sick-green;
+    color: white;
+}
+
+.suku-info.disabled {
+    border: solid 2px $suku-sick-green;
+    padding: 10px 32px 10px 32px;
+    background-color: white;
+    color: grey;
+}
+
+.suku-info.disabled:hover,
+.suku-info[disabled]:hover,
+fieldset[disabled] .suku-info:hover,
+.suku-info.disabled:focus,
+.suku-info[disabled]:focus,
+fieldset[disabled] .suku-info:focus,
+.suku-info.disabled.focus,
+.suku-info[disabled].focus,
+fieldset[disabled] .suku-info.focus {
+    border: solid 2px $suku-sick-green;
+    padding: 10px 32px 10px 32px;
+    background-color: white !important;
+    color: grey;
+    box-shadow: none !important;
+}
+
+.suku-info:focus,
+.suku-info.focus {
+    border: solid 2px $suku-sick-green;
+    padding: 10px 32px 10px 32px;
+    background-color: $suku-sick-green;
+    color: white;
+    box-shadow: none !important;
+}
+
+.suku-info:active:hover,
+.suku-info.active:hover,
+.open>.dropdown-toggle.suku-info:hover,
+.suku-info:active:focus,
+.suku-info.active:focus,
+.open>.dropdown-toggle .suku-info:focus,
+.suku-info:active.focus,
+.suku-info.active.focus,
+.open>.dropdown-toggle .suku-info.focus {
+    border: solid 2px $suku-sick-green;
+    padding: 10px 32px 10px 32px;
+    background-color: $suku-sick-green;
+    color: white;
+    box-shadow: none !important;
+}
+
+.disabled {
+    cursor: not-allowed !important;
+}

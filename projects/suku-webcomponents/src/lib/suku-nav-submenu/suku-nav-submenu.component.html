@@ -1,0 +1,16 @@
+<div class="header-main">
+  <div class="sub-menu-bar navBarRes" *ngIf="true">
+    <div class="container">
+      <div class="sub-menu">
+        <nav>
+          <ul class="mt-2 pt-1" id="subMenu">
+            <li [ngClass]="{'active': selectedItem == item}"
+              (click)="subMenuSelected($event, item);" *ngFor="let item of subMenuList" >
+              <a class="c-pointer">{{ item.name }} {{item.path}}</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </div>
+</div>

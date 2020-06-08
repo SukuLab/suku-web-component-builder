@@ -1,0 +1,65 @@
+<table class="col-sm-10 offset-sm-1">
+  <tr class="pt-3">
+    <td class="{{progressStyleOne}} text-center" id="{{progressBarIconId?.IconOneId}}"
+      (click)="progressOneAction.emit()" [ngClass]="{'c-pointer': enablePointer}">
+      <span *ngIf="(progressStyleOne == 'progressCompleted')" class="checkmark pt-2"></span>
+      <span *ngIf="!(progressStyleOne == 'progressCompleted')">1</span>
+    </td>
+    <td>
+      <hr class="hrLine">
+    </td>
+    <td class="{{progressStyleTwo}} text-center" id="{{progressBarIconId?.IconTwoId}}"
+      (click)="progressTwoAction.emit()" [ngClass]="{'c-pointer': enablePointer}">
+      <span *ngIf="(progressStyleTwo == 'progressCompleted')" class="checkmark pt-2"></span>
+      <span *ngIf="!(progressStyleTwo == 'progressCompleted')">2</span>
+    </td>
+    <td>
+      <hr class="hrLine">
+    </td>
+    <td class="{{progressStyleThree}} text-center" id="{{progressBarIconId?.IconThreeId}}"
+      (click)="progressThreeAction.emit()" [ngClass]="{'c-pointer': enablePointer}">
+      <span *ngIf="(progressStyleThree == 'progressCompleted')" class="checkmark pt-2"></span>
+      <span *ngIf="!(progressStyleThree == 'progressCompleted')">3</span>
+    </td>
+    <td>
+      <hr class="hrLine">
+    </td>
+    <td class="{{progressStyleFour}} text-center" id="{{progressBarIconId?.IconFourId}}"
+      (click)="progressFourAction.emit()" [ngClass]="{'c-pointer': enablePointer}">
+      <span *ngIf="(progressStyleFour == 'progressCompleted')" class="checkmark pt-2"></span>
+      <span *ngIf="!(progressStyleFour == 'progressCompleted')">4</span>
+    </td>
+    <td>
+      <hr class="hrLine">
+    </td>
+    <td class="{{progressStyleFive}} text-center" id="{{progressBarIconId?.IconFiveId}}"
+      (click)="progressFiveAction.emit()" [ngClass]="{'c-pointer': enablePointer}">
+      <span *ngIf="(progressStyleFive == 'progressCompleted')" class="checkmark pt-2"></span>
+      <span *ngIf="!(progressStyleFive == 'progressCompleted')">5</span>
+    </td>
+  </tr>
+</table>
+<table class="col-sm-12 text-center mt-2">
+  <tr id="txt" class="pt-3">
+    <td class="progressTitle" id="{{progressBarTitleId?.labelOneId}}">
+      <span class="pl-4 p-xs-0 {{customHeadingOneClass}}" [ngClass]="{'c-pointer': enablePointer}"
+        (click)="progressOneAction.emit()">{{progressBarLabels?.labelOne}}</span>
+    </td>
+    <td class="progressTitle" id="{{progressBarTitleId?.labelTwoId}}">
+      <span class="{{customHeadingTwoClass}} pl-4 p-xs-0" [ngClass]="{'c-pointer': enablePointer}"
+        (click)="progressTwoAction.emit()">{{progressBarLabels?.labelTwo}}</span>
+    </td>
+    <td class="progressTitle" id="{{progressBarTitleId?.labelThreeId}}">
+      <span class="{{customHeadingThreeClass}} p-xs-0" [ngClass]="{'c-pointer': enablePointer}"
+        (click)="progressThreeAction.emit()">{{progressBarLabels?.labelThree}}</span>
+    </td>
+    <td class="progressTitle" id="{{progressBarTitleId?.labelFourId}}">
+      <span class="pr-3 {{customHeadingFourClass}} p-xs-0" [ngClass]="{'c-pointer': enablePointer}"
+        (click)="progressFourAction.emit()">{{progressBarLabels?.labelFour}}</span>
+    </td>
+    <td class="progressTitle" id="{{progressBarTitleId?.labelFiveId}}">
+      <span class="pr-4 {{customHeadingFiveClass}} p-xs-0" [ngClass]="{'c-pointer': enablePointer}"
+        (click)="progressFiveAction.emit()">{{progressBarLabels?.labelFive}}</span>
+    </td>
+  </tr>
+</table>

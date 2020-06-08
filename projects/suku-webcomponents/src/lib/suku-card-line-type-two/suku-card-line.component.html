@@ -1,0 +1,43 @@
+<div class="col p-0">
+  <div class="row card-line-bg p-3 m-2 {{customClass}}" [style.background-color]="bgColor">
+    <div [class]="imageColSize">
+      <img [class]="customImgclass" src="{{image}}" alt="card-img" width="55px" height="46px">
+    </div>
+    <div class="col-sm-1">
+      <span class="tipTool">
+        <span class="tipTooltext">
+          <span class="uncheckedTextContent">{{iconOneInfo}}</span>
+        </span>
+        <i class="{{customIconClass}} {{iconOne}}" id="{{iconOneId}}"></i>
+        <!-- <img [class]="customIconClass" [src]="iconOne" [id]="iconOneId" alt="card-img" width="50px" height="50px"> -->
+      </span>
+    </div>
+    <div class="col-sm-1">
+      <span class="tipTool">
+        <span class="tipTooltext">
+          <span class="uncheckedTextContent">{{iconTwoInfo}}</span>
+        </span>
+        <i class="{{customIconClass}} {{iconTwo}}" id="{{iconTwoId}}"></i>
+        <!-- <img [class]="customIconClass" [src]="iconTwo" [id]="iconTwoId" alt="card-img" width="50px" height="50px"> -->
+      </span>
+    </div>
+    <div [class]="txtcolsize">
+      <h2 [style.font-size.px]="titleOneSize" [class]="titleOnecustomclass" [style.font-weight]="titleOneWeight"
+        [style.color]="titleOneColor">{{titleOne}}</h2>
+      <h2 [style.font-size.px]="contentOneSize" [class]="contentOnecustomclass" [style.font-weight]="contentOneWeight"
+        [style.color]="contentOneColor">{{contentOne}}</h2>
+    </div>
+    <div [class]="txttwocolsize">
+      <h2 [style.font-size.px]="subTitleTwoSize" [class]="subTitleTwocustomclass"
+        [style.font-weight]="subTitleTwoWeight" [style.color]="subTitleTwoColor">{{subTitleTwo}}</h2>
+      <h2 [style.font-size.px]="contentTwoSize" (click)="userAction.emit()" [class]="contentTwocustomclass"
+        [style.font-weight]="contentTwoWeight" [style.color]="contentTwoColor">{{contentTwo}}</h2>
+    </div>
+    <div [class]="txtthreecolsize">
+      <h2 [style.font-size.px]="subTitleThreeSize" [class]="subTitleThreeClass"
+        [style.font-weight]="subTitleThreeWeight" [style.color]="subTitleThreecolor">{{subTitleThree}}</h2>
+      <h2 [style.font-size.px]="contentThreeSize" [class]="contentThreecustomclass"
+        [style.font-weight]="contentThreeWeight" [style.color]="contentThreeColor">{{contentThree}}</h2>
+    </div>
+  </div>
+</div>

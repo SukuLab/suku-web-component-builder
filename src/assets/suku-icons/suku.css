@@ -1,0 +1,56 @@
+@font-face {
+    font-family: "suku";
+    src: url("./suku.eot?c68d03af8c46374c9d251e463319752c?#iefix") format("embedded-opentype"),
+url("./suku.woff2?c68d03af8c46374c9d251e463319752c") format("woff2"),
+url("./suku.woff?c68d03af8c46374c9d251e463319752c") format("woff"),
+url("./suku.ttf?c68d03af8c46374c9d251e463319752c") format("truetype"),
+url("./suku.svg?c68d03af8c46374c9d251e463319752c#suku") format("svg");
+}
+
+i[class^="suku-"]:before, i[class*=" suku-"]:before {
+    font-family: suku !important;
+    font-style: normal;
+    font-weight: normal !important;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.suku-add-circular-outlined-button:before {
+    content: "\f101";
+}
+.suku-alarm-icon:before {
+    content: "\f102";
+}
+.suku-group:before {
+    content: "\f103";
+}
+.suku-mail-iconx:before {
+    content: "\f104";
+}
+.suku-mail-light:before {
+    content: "\f105";
+}
+.suku-map-pin:before {
+    content: "\f106";
+}
+.suku-phone-light:before {
+    content: "\f107";
+}
+.suku-plus-icon:before {
+    content: "\f108";
+}
+.suku-shape-copy-4:before {
+    content: "\f109";
+}
+.suku-shape-copy-5:before {
+    content: "\f10a";
+}
+.suku-star:before {
+    content: "\f10b";
+}
+.suku-view-icon:before {
+    content: "\f10c";
+}

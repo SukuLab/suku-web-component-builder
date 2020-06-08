@@ -1,0 +1,37 @@
+@import '../theme/theme';
+
+.suku-big-tag {
+  background-color: $suku-bg-ternary;
+  border-radius: $suku-primary-border-radius;
+  border-left: 6px solid;
+  border-color: $suku-sick-green;
+}
+
+.suku-big-tag-org {
+  background-color: $suku-bg-ternary;
+  border-radius: $suku-primary-border-radius;
+  border-left: 6px solid black;
+}
+
+h1 {
+  font-family: $suku-primary-font;
+  font-size: $suku-font-size-5;
+  font-weight: 400 !important;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: -0.3px;
+  word-break: break-word !important;
+}
+
+h2 {
+  font-family: $suku-primary-font;
+  font-size: $suku-font-size-5;
+  font-weight: 400;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: -0.4px;
+  color: $suku-text-label-one;
+  word-break: break-word !important;
+}

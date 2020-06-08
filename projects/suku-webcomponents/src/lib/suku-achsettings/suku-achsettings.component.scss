@@ -1,0 +1,226 @@
+@import '../theme/theme';
+
+.redText {
+	color: red;
+	font-size: $suku-font-size-2;
+}
+
+.f12 {
+	font-size: $suku-font-size-2;
+}
+
+.textBold {
+	font-weight: bold;
+}
+
+
+.achsetting-box {
+	@include suku-container();
+}
+
+.title {
+	font-family: $suku-primary-font;
+}
+
+.poppinsFont {
+	font-family: $suku-primary-font;
+}
+
+.owner {
+	font-family: $suku-primary-font;
+	font-size: 1rem;
+}
+
+@media (max-width:320px) {
+	.owner {
+		font-size: 0.75rem;
+		padding: 0.3rem 0rem !important;
+		margin: 0.45rem !important;
+	}
+}
+
+.font20 {
+	font-size: 25px;
+}
+
+.subTitle {
+	font-weight: bold !important;
+	font-family: $suku-primary-font;
+}
+
+.statusUnverified {
+	color: red;
+	letter-spacing: 0.3px;
+}
+
+.statusVerified {
+	color: #99c002 !important;
+	letter-spacing: 0.3px;
+}
+
+.docLabel {
+	font-family: $suku-primary-font !important;
+	letter-spacing: 0.1px;
+}
+
+.document {
+	background-color: #e0e0e059 !important;
+	color: rgba(0, 0, 0, .87) !important;
+	border-radius: 0px !important;
+	border-left: 3px solid !important;
+	border-color: $suku-sick-green !important;
+	min-height: 40px !important;
+}
+
+#document {
+	p {
+		font-size: 1.5rem;
+	}
+}
+
+@media screen and (max-width: 575px) {
+	#document {
+		p {
+			font-size: 1.4rem;
+		}
+	}
+}
+
+.card-line {
+	background-color: #ffffff;
+	color: #2c2727;
+	height: 46px;
+	border-radius: 2px;
+	letter-spacing: 0.5px;
+	box-shadow: 0 1px 5px 0px rgba(0, 0, 0, 0.2);
+	border-top: 3px solid #bfd131c9;
+}
+
+.display-2 {
+	font-size: 6.2rem !important;
+	line-height: 1.5 !important;
+}
+
+.icon {
+	font-size: 1.5rem !important;
+	color: #ccda5c !important;
+}
+
+/* button css */
+
+.suku {
+	border: solid 2px $suku-sick-green;
+	padding: 10px 32px 10px 32px;
+	background-color: white;
+	color: black;
+	border-radius: 29px 77px 61px;
+	font-weight: 900;
+	font-family: $suku-primary-font;
+	font-size: 1.3rem;
+}
+
+.suku-info {
+	border: solid 2px $suku-sick-green;
+	padding: 10px 32px 10px 32px;
+	background-color: white;
+	color: #00000099;
+}
+
+.suku-info:hover {
+	border: solid 2px $suku-sick-green;
+	padding: 10px 32px 10px 32px;
+	background-color: $suku-sick-green;
+	color: white;
+}
+
+.suku-info:active {
+	border: solid 2px $suku-sick-green;
+	padding: 10px 32px 10px 32px;
+	background-color: $suku-sick-green;
+	color: white;
+}
+
+.suku-info.disabled {
+	border: solid 2px $suku-sick-green;
+	padding: 10px 32px 10px 32px;
+	background-color: white;
+	color: grey;
+}
+
+.suku-info.disabled:hover,
+.suku-info[disabled]:hover,
+fieldset[disabled] .suku-info:hover,
+.suku-info.disabled:focus,
+.suku-info[disabled]:focus,
+fieldset[disabled] .suku-info:focus,
+.suku-info.disabled.focus,
+.suku-info[disabled].focus,
+fieldset[disabled] .suku-info.focus {
+	border: solid 2px $suku-sick-green;
+	padding: 10px 32px 10px 32px;
+	background-color: white !important;
+	color: grey;
+	box-shadow: none !important;
+}
+
+.suku-info:focus,
+.suku-info.focus {
+	border: solid 2px $suku-sick-green;
+	padding: 10px 32px 10px 32px;
+	background-color: $suku-sick-green;
+	color: white;
+	box-shadow: none !important;
+}
+
+.suku-info:active:hover,
+.suku-info.active:hover,
+.open>.dropdown-toggle.suku-info:hover,
+.suku-info:active:focus,
+.suku-info.active:focus,
+.open>.dropdown-toggle .suku-info:focus,
+.suku-info:active.focus,
+.suku-info.active.focus,
+.open>.dropdown-toggle .suku-info.focus {
+	border: solid 2px $suku-sick-green;
+	padding: 10px 32px 10px 32px;
+	background-color: $suku-sick-green;
+	color: white;
+	box-shadow: none !important;
+}
+
+.upload-suku {
+	color: black;
+	font-weight: 900;
+	font-family: $suku-primary-font;
+	font-size: 1.3rem;
+	border-bottom: 3px solid $suku-sick-green;
+}
+
+.secondary-btn {
+	font-family: $suku-primary-font;
+	font-size: 14px;
+	font-weight: 800;
+	font-style: normal;
+	font-stretch: normal;
+	line-height: 1.43;
+	letter-spacing: -0.4px;
+	color: #1c1c1c !important;
+	border-bottom: 3.5px solid $suku-sick-green;
+}
+
+.secondary-btn:hover {
+	cursor: pointer !important;
+}
+
+.encode-font {
+	font-family: $suku-secondary-font;
+}
+
+
+.plc-5 {
+	padding-left: 2.35rem !important;
+}
+
+.prc-5 {
+	padding-right: 2rem !important;
+}

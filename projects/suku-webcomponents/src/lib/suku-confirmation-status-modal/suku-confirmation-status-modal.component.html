@@ -1,0 +1,62 @@
+<div class="text-center p-0">
+  <div class="col text-center">
+    <div class="row justify-content-center">
+      <div class="modalproduct-boxContent">
+        <div class="col pl-lg-4 pt-1 pb-2">
+          <div class="row">
+            <div class="col mt-2 mb-2">
+              <div class="col mb-3">
+                <img [src]="dialogData?.imgSrc" id="{{dialogData?.imgId}}" *ngIf="dialogData?.imgSrc" />
+                <i class="{{dialogData?.icon}} {{dialogData?.iconCustomClass}}" id="{{dialogData?.iconId}}"
+                  *ngIf="dialogData?.icon"></i>
+              </div>
+              <span id="{{ dialogData?.messageId }}"
+                class="modalcolor {{ dialogData?.messageCustomClass }} pb-1 mt-3 mb-3">
+                {{ dialogData?.message }}
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <h2 class="col-sm-10 modalFontStyle mt-4 mb-2 text-left {{ dialogData?.descriptionCustomClass }}">
+        {{ dialogData?.description }}
+      </h2>
+
+      <h2 class="col-sm-10 modalNoteStyle mt-4 mb-2 text-left {{ dialogData?.descriptionOneCustomClass }}">
+        {{ dialogData?.descriptionOne }}
+      </h2>
+
+      <mat-form-field class="col-sm-10">
+        <input matInput placeholder="{{ dialogData?.controlOnePlaceholder }}" [formControl]="controlOne"
+          name="{{dialogData?.controlOne}}" id="{{ dialogData?.controlOneId }}">
+          <!-- <input matInput placeholder="Tracking Number (Optional)"> -->
+      </mat-form-field>
+      <mat-form-field class="col-sm-10">
+        <textarea matInput placeholder="{{ dialogData?.controlTwoPlaceholder }}" [formControl]="controlTwo"
+          name="{{dialogData?.controlTwo}}" id="{{ dialogData?.controlTwoId }}" #g (change)="checkChar(g.value)" (keydown)="checkChar(g.value)">
+          <mat-error *ngIf="controlTwo.hasError('required')">
+            {{ dialogData?.controlTwoRquiredErrorMsg }}
+          </mat-error>
+        </textarea>
+      </mat-form-field>
+    </div>
+  </div>
+  <div class="col text-center p-3">
+    <div class="row d-flex justify-content-around">
+      <div class="col-lg-10 col-md-10">
+        <div class="row">
+          <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12
+            mb-lg-0 mb-md-0 mb-sm-2 mb-xs-2">
+            <button type="button" (click)="close()"
+              class="btn btn-secondary btn-default btn-lg col-lg-8 col-md-8 {{ dialogData?.cancelBtnCustomClass }}">{{ dialogData?.cancelBtnText }}</button>
+          </div>
+          <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+            <button type="button"
+              class="btn btn-info btn btn-info btn-lg col-lg-8 col-md-8 col-sm-12 col-xs-12 {{ dialogData?.submitBtnCustomClass }}"
+              (click)="submit(); " [ngClass]="{'disabled' : disableValue}" [disabled]="disableValue">{{ dialogData?.submitBtnTxt }}</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

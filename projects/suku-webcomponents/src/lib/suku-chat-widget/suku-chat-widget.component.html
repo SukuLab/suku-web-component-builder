@@ -1,0 +1,67 @@
+<div class="col p-0" [ngClass]="{'disabled': chatStatus }">
+  <div class="col p-0">
+    <div class="col-sm-12 chat-header p-3">
+      <div class="col p-0">
+        <div class="col p-0">
+          <div class="col-sm-12">
+            <h1 class="title" id="{{chat?.labelOneId}}">{{chat?.labelOne}}
+            </h1>
+          </div>
+          <div class="col-sm-12">
+            <h2 id="{{chat?.labelTwoId}}">{{chat?.labelTwo}}
+              <span class="pl-lg-2 pop-bold" (click)="action()" id="{{toUserNameId}}">{{toUserName || 'N/A'}}</span>
+            </h2>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="form-group box-shadows col-xs-12 col-sm-12 p-0">
+      <!-- auto scroll  `scrollMe [scrollTop]=scrollMe.scrollHeight` disabled  -->
+      <div id="scrollDiv" class="chatBox p-1"  (scroll)="scrollHandler($event)">
+        <div class="blockChat" *ngFor="let item of messageData; let i=index" scrollToBottom>
+          <div class="col d-flex" [class.messageContainerRgt]="item?.userId == item?.sender?.userId"
+            [class.messageContainerLft]="item?.userId != item?.sender?.userId">
+            <div class="messageStyle mb-1" [class.rightFloat]="item?.userId == item?.sender?.userId">
+              <span class="mcb-10 p-2 align-end"
+                [ngClass]="{'order-last ml-2': item?.userId == item?.sender?.userId, 'mr-2': item?.userId != item?.sender?.userId }">
+                <img [src]="((item?.userId == item?.sender?.userId)? _userImg : _toUserImg) || _imgPlaceholder"
+                  alt="Avatar" class="user-icon">
+              </span>
+              <span class="d-flex" [class.rightFloat]="item?.userId == item?.sender?.userId"
+                class="msg-content hoverable">
+                <div class="d-flex" [class.rightFloat]="item?.userId == item?.sender?.userId" id="messageBlock">
+                  <span class="mb-0" id="chatMessage{{i}}">
+                    <p class="p-2 mb-0 mct-12 "
+                      [ngClass]="{'senderColor': item?.userId == item?.sender?.userId, 'receiverColor': item?.userId != item?.sender?.userId }">
+                      <span class="chatMessage">{{item?.message}}</span>
+                    </p>
+                  </span>
+                </div>
+                <p class="mb-0" id="timeStamp"
+                  [ngClass]="{ 'float-right': item?.userId == item?.sender?.userId, 'float-left': item?.userId != item?.sender?.userId }">
+                  {{item?.timestamp | date:'medium'}}</p>
+              </span>
+            </div>  
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <!-- to scroll down -->
+        <div id="ScrollDownbutton" (click)="scrollToBottom()" *ngIf="_showScrollDownIcon">
+          <button class="scrollDown"><span class="fa fa-angle-double-down scroll-down-icon mt-1"></span></button>
+        </div>
+        <div class="row p-3 bg-light">
+          <div style="text-align: center;" class="col-lg-10 col-sm-10 col-10 pl-1 pr-1">
+            <input class="form-control" [disabled]="chatStatus" [ngClass]="{'disabled': chatStatus }" autofocus="autofocus" #messageValue
+              type="text" name="message " id="message" placeholder="type message here... "
+              (keyup.enter)="sendMessage(messageValue?.value);messageValue.value = ''">
+          </div>
+          <div class="col-sm-2 col-2 p-xs-0 mx-auto f22 c-pointer" [ngClass]="{'disabled': chatStatus }"
+            (click)="sendMessage(messageValue?.value);messageValue.value = ''">
+            <img [src]="sendMessageIconSrc" alt="send-icon" class="rotateIcon">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
